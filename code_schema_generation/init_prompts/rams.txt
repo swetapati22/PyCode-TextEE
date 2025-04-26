@@ -1,0 +1,1063 @@
+@dataclass
+class government_agreements_violateagreement(Event):
+    mention: str
+    violator: List
+    place: List
+    otherparticipant: List
+
+@dataclass
+class personnel_elect_Na(Event):
+    mention: str
+    voter: List
+    candidate: List
+    place: List
+
+@dataclass
+class movement_transportperson_preventexit(Event):
+    mention: str
+    origin: List
+    passenger: List
+    preventer: List
+    destination: List
+    transporter: List
+
+@dataclass
+class personnel_endposition_firinglayoff(Event):
+    mention: str
+    placeofemployment: List
+    place: List
+    employee: List
+
+@dataclass
+class movement_transportperson_hide(Event):
+    mention: str
+    origin: List
+    passenger: List
+    hidingplace: List
+    vehicle: List
+    transporter: List
+
+@dataclass
+class contact_commitmentpromiseexpressintent_correspondence(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class justice_judicialconsequences_Na(Event):
+    mention: str
+    crime: List
+    judgecourt: List
+    defendant: List
+    place: List
+
+@dataclass
+class transaction_transferownership_purchase(Event):
+    mention: str
+    giver: List
+    recipient: List
+    artifact: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class contact_commitmentpromiseexpressintent_meet(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class personnel_endposition_Na(Event):
+    mention: str
+    placeofemployment: List
+    place: List
+    employee: List
+
+@dataclass
+class contact_discussion_Na(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class contact_commandorder_correspondence(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class contact_threatencoerce_meet(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class conflict_attack_Na(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class justice_initiatejudicialprocess_chargeindict(Event):
+    mention: str
+    crime: List
+    prosecutor: List
+    judgecourt: List
+    defendant: List
+    place: List
+
+@dataclass
+class contact_prevarication_broadcast(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class justice_investigate_investigatecrime(Event):
+    mention: str
+    crime: List
+    investigator: List
+    defendant: List
+    place: List
+
+@dataclass
+class transaction_transfermoney_payforservice(Event):
+    mention: str
+    giver: List
+    money: List
+    recipient: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class justice_arrestjaildetain_arrestjaildetain(Event):
+    mention: str
+    jailer: List
+    crime: List
+    place: List
+    detainee: List
+
+@dataclass
+class conflict_attack_selfdirectedbattle(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class inspection_sensoryobserve_physicalinvestigateinspect(Event):
+    mention: str
+    inspector: List
+    place: List
+    inspectedentity: List
+
+@dataclass
+class life_die_Na(Event):
+    mention: str
+    victim: List
+    place: List
+
+@dataclass
+class contact_commandorder_broadcast(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class movement_transportartifact_Na(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class life_injure_illnessdegradationhungerthirst(Event):
+    mention: str
+    victim: List
+    place: List
+
+@dataclass
+class life_injure_illnessdegradationphysical(Event):
+    mention: str
+    victim: List
+
+@dataclass
+class conflict_demonstrate_Na(Event):
+    mention: str
+    place: List
+    demonstrator: List
+
+@dataclass
+class contact_threatencoerce_broadcast(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class transaction_transfermoney_Na(Event):
+    mention: str
+    giver: List
+    money: List
+    recipient: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class transaction_transaction_embargosanction(Event):
+    mention: str
+    giver: List
+    recipient: List
+    preventer: List
+    place: List
+    artifactmoney: List
+
+@dataclass
+class contact_funeralvigil_meet(Event):
+    mention: str
+    participant: List
+    deceased: List
+    place: List
+
+@dataclass
+class conflict_attack_bombing(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class disaster_fireexplosion_fireexplosion(Event):
+    mention: str
+    instrument: List
+    place: List
+    fireexplosionobject: List
+
+@dataclass
+class government_agreements_acceptagreementcontractceasefire(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class movement_transportperson_smuggleextract(Event):
+    mention: str
+    origin: List
+    passenger: List
+    vehicle: List
+    destination: List
+    transporter: List
+
+@dataclass
+class government_agreements_rejectnullifyagreementcontractceasefire(Event):
+    mention: str
+    rejecternullifier: List
+    place: List
+    otherparticipant: List
+
+@dataclass
+class contact_requestadvise_broadcast(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class government_legislate_legislate(Event):
+    mention: str
+    place: List
+    law: List
+    governmentbody: List
+
+@dataclass
+class manufacture_artifact_createmanufacture(Event):
+    mention: str
+    manufacturer: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class life_injure_injurycausedbyviolentevents(Event):
+    mention: str
+    victim: List
+    injurer: List
+    instrument: List
+    place: List
+
+@dataclass
+class life_injure_Na(Event):
+    mention: str
+    place: List
+    victim: List
+    injurer: List
+
+@dataclass
+class government_spy_spy(Event):
+    mention: str
+    spy: List
+    beneficiary: List
+    place: List
+    observedentity: List
+
+@dataclass
+class transaction_transfermoney_embargosanction(Event):
+    mention: str
+    giver: List
+    money: List
+    recipient: List
+    preventer: List
+    place: List
+
+@dataclass
+class contact_commandorder_meet(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class justice_initiatejudicialprocess_trialhearing(Event):
+    mention: str
+    crime: List
+    prosecutor: List
+    judgecourt: List
+    defendant: List
+    place: List
+
+@dataclass
+class personnel_startposition_hiring(Event):
+    mention: str
+    placeofemployment: List
+    place: List
+    employee: List
+
+@dataclass
+class contact_discussion_meet(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class conflict_yield_surrender(Event):
+    mention: str
+    surrenderer: List
+    place: List
+    recipient: List
+
+@dataclass
+class movement_transportperson_evacuationrescue(Event):
+    mention: str
+    origin: List
+    passenger: List
+    vehicle: List
+    destination: List
+    transporter: List
+
+@dataclass
+class life_die_deathcausedbyviolentevents(Event):
+    mention: str
+    killer: List
+    victim: List
+    instrument: List
+    place: List
+
+@dataclass
+class transaction_transferownership_embargosanction(Event):
+    mention: str
+    giver: List
+    recipient: List
+    preventer: List
+    artifact: List
+    place: List
+
+@dataclass
+class manufacture_artifact_Na(Event):
+    mention: str
+    manufacturer: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class inspection_sensoryobserve_Na(Event):
+    mention: str
+    place: List
+    observer: List
+    observedentity: List
+
+@dataclass
+class transaction_transaction_transfercontrol(Event):
+    mention: str
+    giver: List
+    territoryorfacility: List
+    recipient: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class movement_transportperson_Na(Event):
+    mention: str
+    origin: List
+    passenger: List
+    vehicle: List
+    destination: List
+    transporter: List
+
+@dataclass
+class artifactexistence_damagedestroy_destroy(Event):
+    mention: str
+    destroyer: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class contact_threatencoerce_Na(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class transaction_transaction_giftgrantprovideaid(Event):
+    mention: str
+    giver: List
+    recipient: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class contact_funeralvigil_Na(Event):
+    mention: str
+    participant: List
+    deceased: List
+    place: List
+
+@dataclass
+class contact_publicstatementinperson_broadcast(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class inspection_sensoryobserve_monitorelection(Event):
+    mention: str
+    monitor: List
+    place: List
+    monitoredentity: List
+
+@dataclass
+class movement_transportperson_fall(Event):
+    mention: str
+    passenger: List
+    destination: List
+    origin: List
+
+@dataclass
+class justice_judicialconsequences_execute(Event):
+    mention: str
+    crime: List
+    executioner: List
+    defendant: List
+    place: List
+
+@dataclass
+class transaction_transfermoney_borrowlend(Event):
+    mention: str
+    giver: List
+    money: List
+    recipient: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class contact_requestadvise_correspondence(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class artifactexistence_damagedestroy_damage(Event):
+    mention: str
+    damager: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class conflict_attack_airstrikemissilestrike(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class transaction_transaction_Na(Event):
+    mention: str
+    beneficiary: List
+    participant: List
+    place: List
+
+@dataclass
+class contact_prevarication_correspondence(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class contact_commitmentpromiseexpressintent_broadcast(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class contact_negotiate_correspondence(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class conflict_attack_hanging(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class contact_commandorder_Na(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class transaction_transferownership_Na(Event):
+    mention: str
+    giver: List
+    recipient: List
+    artifact: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class movement_transportartifact_grantentry(Event):
+    mention: str
+    origin: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class contact_collaborate_correspondence(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class movement_transportartifact_disperseseparate(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class government_formation_Na(Event):
+    mention: str
+    founder: List
+    gpe: List
+    place: List
+
+@dataclass
+class contact_requestadvise_Na(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class transaction_transfermoney_giftgrantprovideaid(Event):
+    mention: str
+    giver: List
+    recipient: List
+    money: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class movement_transportartifact_preventexit(Event):
+    mention: str
+    origin: List
+    preventer: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class government_vote_Na(Event):
+    mention: str
+    voter: List
+    result: List
+    ballot: List
+    candidate: List
+    place: List
+
+@dataclass
+class transaction_transfermoney_purchase(Event):
+    mention: str
+    giver: List
+    money: List
+    recipient: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class movement_transportperson_grantentryasylum(Event):
+    mention: str
+    origin: List
+    passenger: List
+    granter: List
+    destination: List
+    transporter: List
+
+@dataclass
+class government_vote_violationspreventvote(Event):
+    mention: str
+    voter: List
+    preventer: List
+    ballot: List
+    candidate: List
+    place: List
+
+@dataclass
+class transaction_transferownership_borrowlend(Event):
+    mention: str
+    giver: List
+    recipient: List
+    artifact: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class personnel_startposition_Na(Event):
+    mention: str
+    placeofemployment: List
+    place: List
+    employee: List
+
+@dataclass
+class contact_collaborate_meet(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class contact_discussion_correspondence(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class contact_mediastatement_Na(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class justice_judicialconsequences_extradite(Event):
+    mention: str
+    origin: List
+    crime: List
+    extraditer: List
+    defendant: List
+    destination: List
+
+@dataclass
+class contact_prevarication_meet(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class justice_investigate_Na(Event):
+    mention: str
+    investigator: List
+    place: List
+    defendant: List
+
+@dataclass
+class contact_negotiate_meet(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class artifactexistence_damagedestroy_Na(Event):
+    mention: str
+    artifact: List
+    instrument: List
+    place: List
+    damagerdestroyer: List
+
+@dataclass
+class contact_threatencoerce_correspondence(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class movement_transportperson_selfmotion(Event):
+    mention: str
+    destination: List
+    transporter: List
+    origin: List
+
+@dataclass
+class life_die_nonviolentdeath(Event):
+    mention: str
+    victim: List
+    place: List
+
+@dataclass
+class personnel_endposition_quitretire(Event):
+    mention: str
+    placeofemployment: List
+    place: List
+    employee: List
+
+@dataclass
+class movement_transportartifact_receiveimport(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class contact_publicstatementinperson_Na(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class contact_commitmentpromiseexpressintent_Na(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class movement_transportartifact_prevententry(Event):
+    mention: str
+    origin: List
+    preventer: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class contact_mediastatement_broadcast(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class contact_prevarication_Na(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class contact_collaborate_Na(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class movement_transportartifact_smuggleextract(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class manufacture_artifact_build(Event):
+    mention: str
+    manufacturer: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class conflict_attack_invade(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class movement_transportperson_disperseseparate(Event):
+    mention: str
+    origin: List
+    passenger: List
+    vehicle: List
+    destination: List
+    transporter: List
+
+@dataclass
+class inspection_sensoryobserve_inspectpeopleorganization(Event):
+    mention: str
+    inspector: List
+    place: List
+    inspectedentity: List
+
+@dataclass
+class justice_initiatejudicialprocess_Na(Event):
+    mention: str
+    crime: List
+    prosecutor: List
+    judgecourt: List
+    defendant: List
+    place: List
+
+@dataclass
+class government_vote_castvote(Event):
+    mention: str
+    voter: List
+    result: List
+    ballot: List
+    candidate: List
+    place: List
+
+@dataclass
+class movement_transportartifact_sendsupplyexport(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class conflict_attack_stabbing(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class disaster_accidentcrash_accidentcrash(Event):
+    mention: str
+    driverpassenger: List
+    vehicle: List
+    crashobject: List
+    place: List
+
+@dataclass
+class movement_transportartifact_nonviolentthrowlaunch(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    artifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class contact_requestadvise_meet(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class government_agreements_Na(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class personnel_elect_winelection(Event):
+    mention: str
+    voter: List
+    candidate: List
+    place: List
+
+@dataclass
+class transaction_transferownership_giftgrantprovideaid(Event):
+    mention: str
+    giver: List
+    recipient: List
+    artifact: List
+    beneficiary: List
+    place: List
+
+@dataclass
+class movement_transportartifact_hide(Event):
+    mention: str
+    origin: List
+    hidingplace: List
+    vehicle: List
+    artifact: List
+    transporter: List
+
+@dataclass
+class movement_transportperson_prevententry(Event):
+    mention: str
+    origin: List
+    passenger: List
+    preventer: List
+    destination: List
+    transporter: List
+
+@dataclass
+class conflict_yield_Na(Event):
+    mention: str
+    yielder: List
+    place: List
+    recipient: List
+
+@dataclass
+class government_formation_startgpe(Event):
+    mention: str
+    founder: List
+    gpe: List
+    place: List
+
+@dataclass
+class contact_negotiate_Na(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class movement_transportperson_bringcarryunload(Event):
+    mention: str
+    origin: List
+    passenger: List
+    vehicle: List
+    destination: List
+    transporter: List
+
+@dataclass
+class justice_judicialconsequences_convict(Event):
+    mention: str
+    crime: List
+    judgecourt: List
+    defendant: List
+    place: List
+
+@dataclass
+class conflict_attack_setfire(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class conflict_attack_stealrobhijack(Event):
+    mention: str
+    target: List
+    attacker: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class conflict_yield_retreat(Event):
+    mention: str
+    destination: List
+    retreater: List
+    origin: List
+
+@dataclass
+class conflict_attack_biologicalchemicalpoisonattack(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class conflict_attack_strangling(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class movement_transportartifact_fall(Event):
+    mention: str
+    destination: List
+    origin: List
+    artifact: List
+
+@dataclass
+class manufacture_artifact_createintellectualproperty(Event):
+    mention: str
+    manufacturer: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class conflict_demonstrate_marchprotestpoliticalgathering(Event):
+    mention: str
+    place: List
+    demonstrator: List
+
+@dataclass
+class government_formation_mergegpe(Event):
+    mention: str
+    participant: List
+    place: List
+
+@dataclass
+class conflict_attack_firearmattack(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class movement_transportartifact_bringcarryunload(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    artifact: List
+    destination: List
+    transporter: List
+

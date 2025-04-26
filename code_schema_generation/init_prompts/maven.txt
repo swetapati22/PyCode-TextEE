@@ -1,0 +1,672 @@
+@dataclass
+class Military_operation(Event):
+    mention: str
+
+@dataclass
+class Bearing_arms(Event):
+    mention: str
+
+@dataclass
+class Hostile_encounter(Event):
+    mention: str
+
+@dataclass
+class Becoming_a_member(Event):
+    mention: str
+
+@dataclass
+class Bodily_harm(Event):
+    mention: str
+
+@dataclass
+class Using(Event):
+    mention: str
+
+@dataclass
+class Conquering(Event):
+    mention: str
+
+@dataclass
+class Self_motion(Event):
+    mention: str
+
+@dataclass
+class Participation(Event):
+    mention: str
+
+@dataclass
+class Surrendering(Event):
+    mention: str
+
+@dataclass
+class Bringing(Event):
+    mention: str
+
+@dataclass
+class Confronting_problem(Event):
+    mention: str
+
+@dataclass
+class Causation(Event):
+    mention: str
+
+@dataclass
+class Process_start(Event):
+    mention: str
+
+@dataclass
+class Being_in_operation(Event):
+    mention: str
+
+@dataclass
+class Recovering(Event):
+    mention: str
+
+@dataclass
+class Cause_to_make_progress(Event):
+    mention: str
+
+@dataclass
+class Process_end(Event):
+    mention: str
+
+@dataclass
+class Sign_agreement(Event):
+    mention: str
+
+@dataclass
+class Writing(Event):
+    mention: str
+
+@dataclass
+class Legal_rulings(Event):
+    mention: str
+
+@dataclass
+class Change_of_leadership(Event):
+    mention: str
+
+@dataclass
+class Defending(Event):
+    mention: str
+
+@dataclass
+class Escaping(Event):
+    mention: str
+
+@dataclass
+class Creating(Event):
+    mention: str
+
+@dataclass
+class Response(Event):
+    mention: str
+
+@dataclass
+class Collaboration(Event):
+    mention: str
+
+@dataclass
+class Change(Event):
+    mention: str
+
+@dataclass
+class Getting(Event):
+    mention: str
+
+@dataclass
+class Quarreling(Event):
+    mention: str
+
+@dataclass
+class Perception_active(Event):
+    mention: str
+
+@dataclass
+class Convincing(Event):
+    mention: str
+
+@dataclass
+class Communication(Event):
+    mention: str
+
+@dataclass
+class Damaging(Event):
+    mention: str
+
+@dataclass
+class Cause_to_amalgamate(Event):
+    mention: str
+
+@dataclass
+class Cause_change_of_position_on_a_scale(Event):
+    mention: str
+
+@dataclass
+class Cause_change_of_strength(Event):
+    mention: str
+
+@dataclass
+class Motion(Event):
+    mention: str
+
+@dataclass
+class Coming_to_be(Event):
+    mention: str
+
+@dataclass
+class Achieve(Event):
+    mention: str
+
+@dataclass
+class Catastrophe(Event):
+    mention: str
+
+@dataclass
+class Destroying(Event):
+    mention: str
+
+@dataclass
+class Reporting(Event):
+    mention: str
+
+@dataclass
+class Influence(Event):
+    mention: str
+
+@dataclass
+class Having_or_lacking_access(Event):
+    mention: str
+
+@dataclass
+class Expansion(Event):
+    mention: str
+
+@dataclass
+class Removing(Event):
+    mention: str
+
+@dataclass
+class Competition(Event):
+    mention: str
+
+@dataclass
+class Sending(Event):
+    mention: str
+
+@dataclass
+class Preventing_or_letting(Event):
+    mention: str
+
+@dataclass
+class Becoming(Event):
+    mention: str
+
+@dataclass
+class Agree_or_refuse_to_act(Event):
+    mention: str
+
+@dataclass
+class Traveling(Event):
+    mention: str
+
+@dataclass
+class Commerce_pay(Event):
+    mention: str
+
+@dataclass
+class Social_event(Event):
+    mention: str
+
+@dataclass
+class Hold(Event):
+    mention: str
+
+@dataclass
+class Recording(Event):
+    mention: str
+
+@dataclass
+class Name_conferral(Event):
+    mention: str
+
+@dataclass
+class Arriving(Event):
+    mention: str
+
+@dataclass
+class Motion_directional(Event):
+    mention: str
+
+@dataclass
+class Lighting(Event):
+    mention: str
+
+@dataclass
+class Presence(Event):
+    mention: str
+
+@dataclass
+class Attack(Event):
+    mention: str
+
+@dataclass
+class Departing(Event):
+    mention: str
+
+@dataclass
+class Killing(Event):
+    mention: str
+
+@dataclass
+class Supply(Event):
+    mention: str
+
+@dataclass
+class Arranging(Event):
+    mention: str
+
+@dataclass
+class Rewards_and_punishments(Event):
+    mention: str
+
+@dataclass
+class Receiving(Event):
+    mention: str
+
+@dataclass
+class Expressing_publicly(Event):
+    mention: str
+
+@dataclass
+class Hindering(Event):
+    mention: str
+
+@dataclass
+class Earnings_and_losses(Event):
+    mention: str
+
+@dataclass
+class Award(Event):
+    mention: str
+
+@dataclass
+class Action(Event):
+    mention: str
+
+@dataclass
+class Adducing(Event):
+    mention: str
+
+@dataclass
+class Practice(Event):
+    mention: str
+
+@dataclass
+class Create_artwork(Event):
+    mention: str
+
+@dataclass
+class Come_together(Event):
+    mention: str
+
+@dataclass
+class Statement(Event):
+    mention: str
+
+@dataclass
+class Vocalizations(Event):
+    mention: str
+
+@dataclass
+class Judgment_communication(Event):
+    mention: str
+
+@dataclass
+class Arrest(Event):
+    mention: str
+
+@dataclass
+class Request(Event):
+    mention: str
+
+@dataclass
+class Preserving(Event):
+    mention: str
+
+@dataclass
+class Check(Event):
+    mention: str
+
+@dataclass
+class Theft(Event):
+    mention: str
+
+@dataclass
+class Change_sentiment(Event):
+    mention: str
+
+@dataclass
+class Assistance(Event):
+    mention: str
+
+@dataclass
+class Aiming(Event):
+    mention: str
+
+@dataclass
+class Cause_to_be_included(Event):
+    mention: str
+
+@dataclass
+class Control(Event):
+    mention: str
+
+@dataclass
+class Emptying(Event):
+    mention: str
+
+@dataclass
+class Choosing(Event):
+    mention: str
+
+@dataclass
+class Placing(Event):
+    mention: str
+
+@dataclass
+class Testing(Event):
+    mention: str
+
+@dataclass
+class Extradition(Event):
+    mention: str
+
+@dataclass
+class Building(Event):
+    mention: str
+
+@dataclass
+class Education_teaching(Event):
+    mention: str
+
+@dataclass
+class Supporting(Event):
+    mention: str
+
+@dataclass
+class Filling(Event):
+    mention: str
+
+@dataclass
+class Death(Event):
+    mention: str
+
+@dataclass
+class Change_event_time(Event):
+    mention: str
+
+@dataclass
+class Employment(Event):
+    mention: str
+
+@dataclass
+class Dispersal(Event):
+    mention: str
+
+@dataclass
+class Research(Event):
+    mention: str
+
+@dataclass
+class Know(Event):
+    mention: str
+
+@dataclass
+class GiveUp(Event):
+    mention: str
+
+@dataclass
+class Surrounding(Event):
+    mention: str
+
+@dataclass
+class Connect(Event):
+    mention: str
+
+@dataclass
+class Reforming_a_system(Event):
+    mention: str
+
+@dataclass
+class Manufacturing(Event):
+    mention: str
+
+@dataclass
+class Legality(Event):
+    mention: str
+
+@dataclass
+class Deciding(Event):
+    mention: str
+
+@dataclass
+class Forming_relationships(Event):
+    mention: str
+
+@dataclass
+class Body_movement(Event):
+    mention: str
+
+@dataclass
+class Warning(Event):
+    mention: str
+
+@dataclass
+class Cost(Event):
+    mention: str
+
+@dataclass
+class Use_firearm(Event):
+    mention: str
+
+@dataclass
+class Commerce_sell(Event):
+    mention: str
+
+@dataclass
+class Giving(Event):
+    mention: str
+
+@dataclass
+class Openness(Event):
+    mention: str
+
+@dataclass
+class Rescuing(Event):
+    mention: str
+
+@dataclass
+class Coming_to_believe(Event):
+    mention: str
+
+@dataclass
+class Wearing(Event):
+    mention: str
+
+@dataclass
+class Carry_goods(Event):
+    mention: str
+
+@dataclass
+class Commitment(Event):
+    mention: str
+
+@dataclass
+class Violence(Event):
+    mention: str
+
+@dataclass
+class Criminal_investigation(Event):
+    mention: str
+
+@dataclass
+class Institutionalization(Event):
+    mention: str
+
+@dataclass
+class Commerce_buy(Event):
+    mention: str
+
+@dataclass
+class Besieging(Event):
+    mention: str
+
+@dataclass
+class Expend_resource(Event):
+    mention: str
+
+@dataclass
+class Cure(Event):
+    mention: str
+
+@dataclass
+class Rite(Event):
+    mention: str
+
+@dataclass
+class Imposing_obligation(Event):
+    mention: str
+
+@dataclass
+class Submitting_documents(Event):
+    mention: str
+
+@dataclass
+class GetReady(Event):
+    mention: str
+
+@dataclass
+class Kidnapping(Event):
+    mention: str
+
+@dataclass
+class Releasing(Event):
+    mention: str
+
+@dataclass
+class Committing_crime(Event):
+    mention: str
+
+@dataclass
+class Resolve_problem(Event):
+    mention: str
+
+@dataclass
+class Publishing(Event):
+    mention: str
+
+@dataclass
+class Temporary_stay(Event):
+    mention: str
+
+@dataclass
+class Containing(Event):
+    mention: str
+
+@dataclass
+class Exchange(Event):
+    mention: str
+
+@dataclass
+class Limiting(Event):
+    mention: str
+
+@dataclass
+class Scouring(Event):
+    mention: str
+
+@dataclass
+class Ingestion(Event):
+    mention: str
+
+@dataclass
+class Telling(Event):
+    mention: str
+
+@dataclass
+class Terrorism(Event):
+    mention: str
+
+@dataclass
+class Protest(Event):
+    mention: str
+
+@dataclass
+class Robbery(Event):
+    mention: str
+
+@dataclass
+class Scrutiny(Event):
+    mention: str
+
+@dataclass
+class Justifying(Event):
+    mention: str
+
+@dataclass
+class Suspicion(Event):
+    mention: str
+
+@dataclass
+class Reveal_secret(Event):
+    mention: str
+
+@dataclass
+class Revenge(Event):
+    mention: str
+
+@dataclass
+class Renting(Event):
+    mention: str
+
+@dataclass
+class Patrolling(Event):
+    mention: str
+
+@dataclass
+class Prison(Event):
+    mention: str
+
+@dataclass
+class Hiding_objects(Event):
+    mention: str
+
+@dataclass
+class Emergency(Event):
+    mention: str
+
+@dataclass
+class Risk(Event):
+    mention: str
+
+@dataclass
+class Incident(Event):
+    mention: str
+
+@dataclass
+class Labeling(Event):
+    mention: str
+
+@dataclass
+class Ratification(Event):
+    mention: str
+
+@dataclass
+class Breathing(Event):
+    mention: str
+
+@dataclass
+class Change_tool(Event):
+    mention: str
+

@@ -1,0 +1,357 @@
+{
+    "Die(LifeEvent)": {
+        "description": "A DIE Event occurs whenever the life of a PERSON Entity ends. DIE Events can be accidental, intentional or self-inflicted.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'assassinate', 'kill', 'slain', 'killed', 'assassination', 'late', 'dead', 'deaths', 'died', 'fatal', 'suicide',...",
+            "place": "Where the death takes place.",
+            "victim": "The person(s) who died.",
+            "agent": "The attacking agent/The killer.",
+            "instrument": "The device used to kill.",
+            "time": "When the death takes place."
+        }
+    },
+    "Injure(LifeEvent)": {
+        "description": "An INJURE Event occurs whenever a PERSON Entity experiences physical harm. INJURE Events can be accidental, intentional or self-inflicted.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: ' wounded', 'injured', 'hurt', 'wounded', 'hospitalized', 'disabled',...",
+            "victim": "The harmed person(s).",
+            "place": "Where the injuring takes place.",
+            "agent": "The attacking agent / The one that enacts the harm.",
+            "instrument": "The device used to inflict the harm.",
+            "time": "When the injuring takes place."
+        }
+    },    
+    "Attack(ConflictEvent)": {
+        "description": "An ATTACK Event is defined as a violent physical act causing harm or damage. ATTACK Events include any such Event not covered by the INJURE or DIE subtypes, including Events where there is no stated agent.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'bomb', 'exploded', 'gunfire', 'clashes', 'coup', 'attacks','blew','firing','threw','battle',...",
+            "place": "Where the attack takes place.",
+            "target": "The target of the attack (including unintended targets).",
+            "attacker": "The attacking/instigating agent.",
+            "instrument": "The instrument used in the attack.",
+            "time": "When the attack takes place."
+        }
+    },
+    "Transport(MovementEvent)": {
+        "description": "A TRANSPORT Event occurs whenever an ARTIFACT (WEAPON or VEHICLE) or a PERSON is moved from one PLACE (GPE, FACILITY, LOCATION) to another.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'transport', 'moved', 'remove', 'travel',...",
+            "origin": "Where the transporting originated.",
+            "artifact": "The person doing the traveling or the artifact being transported.",
+            "agent": "The agent responsible for the transport Event.",
+            "destination": "Where the transporting is directed.",
+            "vehicle": "The vehicle used to transport the person or artifact.",
+            "price": "The price of transporting the person or artifact",
+            "time": "When the transporting takes place."
+        }
+    },
+    "Meet(ContactEvent)": {
+        "description": "A MEET Event occurs whenever two or more Entities come together at a single location and interact with one another face-to-face. MEET Events include talks, summits, conferences, meetings, visits, and any other Event where two or more parties get together at some location.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'meeting', 'meet', 'summit',...",
+            "entity": "The agents who are meeting.",
+            "place": "Where the meeting takes place.",
+            "time": "When the meeting takes place."
+        }
+    },
+    "ArrestJail(JusticeEvent)": {
+        "description": "A JAIL Event occurs whenever the movement of a PERSON is constrained by a state actor (a GPE, its ORGANIZATION subparts, or its PERSON representatives). An ARREST Event occurs whenever a state actor (GPE, ORGANIZATION subpart, or PERSON representative) takes official custody of a PERSON Entity for the purposes of evaluating legal liability in a criminal activity.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'jailed', 'incarcerated', 'imprisoned', 'arrested', 'arrest',...",
+            "place": "Where the person is arrested or where they are in jail.",
+            "agent": "the jailer or the arresting agent.",
+            "person": "the person who is jailed or arrested.",
+            "crime": "The CRIME for which the PERSON-ARG is being jailed or arrested.",
+            "time": "When the person is arrested or sent to jail."
+        }
+    },
+    "StartPosition(PersonnelEvent)": {
+        "description": "A START-POSITION Event occurs whenever a PERSON Entity begins working for (or changes offices within) an ORGANIZATION or GPE. This includes government officials starting their terms, whether elected or appointed.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'hired', 'joined', 'started office',...",
+            "entity": "the employer.",
+            "place": "Where the employment relationship begins.",
+            "person": "the employee.",
+            "position": "The JOB-TITLE for the position being started",
+            "time": "When the employment relationship begins."
+        }
+    },
+    "TransferMoney(TransactionEvent)": {
+        "description": "TRANSFER-MONEY Events refer to the giving, receiving, borrowing, or lending money when it is not in the context of purchasing something. The canonical examples are: (1) people giving money to organizations (and getting nothing tangible in return); and (2) organizations lending money to people or other orgs.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'giving', 'donations', 'borrowed',...",
+            "recipient": "The recipient agent.",
+            "place": "Where the transaction takes place.",
+            "giver": "The donating agent.",
+            "beneficiary": "The agent that benefits from the transfer.",
+            "money": "The amount given, donated or loaned.",
+            "time": "When the amount is transferred."
+        }
+    },
+    "StartOrg(BusinessEvent)": {
+        "description": "A START-ORG Event occurs whenever a new ORGANIZATION is created.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'founded', 'launched', 'organize',...",
+            "place": "Where the Event takes place.",
+            "agent": "The agent responsible for the START-ORG Event (the ‘founder’).",
+            "org": "The ORGANIZATION that is started.",
+            "time": "When the Event takes place."
+        }
+    },
+    "Marry(LifeEvent)": {
+        "description": "MARRY Events are official Events, where two people are married under the legal definition.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: ' married', 'marriages',...",
+            "place": "Where the marriage takes place.",
+            "person": "The people who are married.",
+            "time": "When the marriage takes place."
+        }
+    },
+    "Sue(JusticeEvent)": {
+        "description": "A SUE Event occurs whenever a court proceeding has been initiated for the purposes of determining the liability of a PERSON, ORGANIZATION or GPE accused of committing a crime or neglecting a commitment. It can have a CRIME attribute filled by a string from the text. It is not important that the PLAINTIFF-ARG be a state actor (a GPE, an ORGANIZATION subpart or a PERSON representing them).",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'suit', 'sue', 'lawsuit',...",
+            "place": "Where the suit takes place.",
+            "adjudicator": "the judge or court.",
+            "plaintiff": "The suing agent.",
+            "defendant": "The agent being sued.",
+            "crime": "The CRIME (or offense) for which the DEFENDANTARG is being sued.",
+            "time": "When the suit takes place ."
+        }
+    },
+    "ChargeIndict(JusticeEvent)": {
+        "description": "A CHARGE Event occurs whenever a PERSON, ORGANIZATION or GPE is accused of a crime by a state actor (GPE, an ORGANIZATION subpart of a GPE or a PERSON representing a GPE). An INDICT Event occurs whenever a state actor (GPE, ORG subpart of a GPE or PERSON agent of a GPE) takes official legal action to follow up on an accusation. A CHARGE-INDICT Event can have a CRIME-ARG attribute filled by a string from the text.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'indicted', 'indictment', 'charged',...",
+            "prosecutor": "the agent bringing charges or executing the indictment.",
+            "place": "Where the indictment takes place.",
+            "adjudicator": "the judge or court.",
+            "defendant": "the agent that is indicted.",
+            "crime": "The CRIME for which the DEFENDANT-ARG is being indicted.",
+            "time": "When the indictment takes place."
+        }
+    },
+    "Convict(JusticeEvent)": {
+        "description": "A CONVICT Event occurs whenever a TRY Event ends with a successful prosecution of the DEFENDANT-ARG. In other words, a PERSON, ORGANIZATION or GPE Entity is convicted whenever that Entity has been found guilty of a CRIME. It can have a CRIME attribute filled by a string from the text. CONVICT Events will also include guilty pleas.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'convicted', 'guilty',...",
+            "place": "Where the conviction takes place.",
+            "adjudicator": "The judge or court.",
+            "defendant": "The convicted agent(s).",
+            "crime": "The CRIME for which the DEFENDANT-ARG has been convicted.",
+            "time": "When the conviction takes place."
+        }
+    },
+    "Sentence(JusticeEvent)": {
+        "description": "A SENTENCE Event takes place whenever the punishment (particularly incarceration) for the DEFENDANT-ARG of a TRY Event is issued by a state actor (a GPE, an ORGANIZATION subpart or a PERSON representing them). It can have a CRIME-ARG attribute filled by a CRIME Value and a SENTENCEARG attribute filled by a SENTENCE Value.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'sentenced',...",
+            "place": "Where the sentencing takes place.",
+            "adjudicator": "The judge or court.",
+            "defendant": "The agent who is sentenced.",
+            "crime": "The CRIME for which the PERSON-ARG is being sentenced.",
+            "sentence": "The sentence.",
+            "time": "the time of the sentencing Event."
+        }
+    },
+    "TransferOwnership(TransactionEvent)": {
+        "description": "TRANSFER-OWNERSHIP Events refer to the buying, selling, loaning, borrowing, giving, or receiving of artifacts or organizations. .",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: ' purchased', 'acquired', 'got', 'purchase', 'sell', 'buying', 'buy', 'acquire',...",
+            "place": "Where the sale takes place.",
+            "artifact": "The item or ORGANIZATION that was bought or sold.",
+            "beneficiary": "The agent that benefits from the transaction.",
+            "seller": "The selling agent.",
+            "buyer": "The buying agent.",
+            "price":"The sale price of the ARTIFACT-ARG.",
+            "time": "When the sale takes place."
+        }
+    },
+    "Fine(JusticeEvent)": {
+        "description": "A FINE Event takes place whenever a state actor issues a financial punishment to a GPE, PERSON or ORGANIZATION Entity, typically as a result of court proceedings. It can have a CRIME attribute filled by a string from the text. Please note that settlements between two parties will not be annotated as FINE Events, but rather as TRANSFER-MONEY Events. This will be true even when the settlement is brought about by some other JUSTICE Event (such as a SUE Event).",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'fined', 'fine',...",
+            "entity": "the Entity that was fined.",
+            "place": "Where the fining Event takes place.",
+            "adjudicator": "the Entity doing the fining.",
+            "crime": "The CRIME (or offence) for which the ENTITY-ARG is being fined.",
+            "money": "The amount of the fine.",
+            "time": "When the fining Event takes place."
+        }
+    },
+    "EndPosition(PersonnelEvent)": {
+        "description": "An END-POSITION Event occurs whenever a PERSON Entity stops working for (or changes offices within) an ORGANIZATION or GPE. The change of office case will only be taggable when the office being left is explicitly mentioned within the scope of the Event. This includes government officials ending terms, whether elected or appointed.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'fired', 'laid off',...",
+            "entity": "the employer.",
+            "place": "Where the employment relationship ends.",
+            "person": "the employee.",
+            "position": "The JOB-TITLE for the position being ended.",
+            "time": "When the employment relationship ends."
+        }
+    },
+    "PhoneWrite(ContactEvent)": {
+        "description": "A PHONE-WRITE Event occurs when two or more people directly engage in discussion which does not take place ‘face-to-face’. To make this Event less open-ended, we limit it to written or telephone communication where at least two parties are specified.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'sent', 'discussed', 'teleconference', 'called', 'dash', 'communicate', 'interact',...",
+            "entity": "The communicating agents.",
+            "place": "When the communication takes place.",
+            "time": "Where the communication takes place."
+        }
+    },
+    "Appeal(JusticeEvent)": {
+        "description": "An APPEAL Event occurs whenever the decision of a court is taken to a higher court for review.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'appeal',...",
+            "place": "Where the appeal takes place.",
+            "adjudicator": "Description of adjudicator.",
+            "plaintiff": "Description of plaintiff.",
+            "crime": "The CRIME which is the subject of the appeal.",
+            "time": "When the appeal takes place."
+        }
+    },
+    "TrialHearing(JusticeEvent)": {
+        "description": "A TRIAL Event occurs whenever a court proceeding has been initiated for the purposes of determining the guilt or innocence of a PERSON, ORGANIZATION or GPE accused of committing a crime. A HEARING Event occurs whenever a state actor (GPE, ORGANIZATION subpart, or PERSON representative) officially gathers to discuss some criminal legal matter. A TRIAL-HEARING Event can have a CRIME attribute filled by a string from the text. It is important that the PROSECUTER-ARG be a state actor (GPE, ORGANIZATION subpart or PERSON representing them).",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'tried', 'trial',...",
+            "prosecutor": "The prosecuting agent.",
+            "place": "Where the trial takes place.",
+            "adjudicator": "the judge or court.",
+            "defendant": "the agent on trial.",
+            "crime": "The CRIME for which the DEFENDANT-ARG is being tried.",
+            "time": "When the trial takes place."
+        }
+    },
+    "ReleaseParole(JusticeEvent)": {
+        "description": "A RELEASE Event occurs whenever a state actor (GPE, ORGANIZATION subpart, or PERSON representative) ends its custody of a PERSON Entity. This can be because the sentence has ended, because the charges are dropped, or because parole has been granted. .",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'released', 'freed', 'hearing',...",
+            "entity": "the former captor agent(s).",
+            "place": "Where the release takes place.",
+            "person": "the person who is released.",
+            "crime": "The CRIME for which the released PERSON was being held.",
+            "time": "When the release takes place."
+        }
+    },
+    "Acquit(JusticeEvent)": {
+        "description": "An ACQUIT Event occurs whenever a trial ends but fails to produce a conviction. This will include cases where the charges are dropped by the PROSECUTORARG.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'acquitted',...",
+            "adjudicator": "the judge or court.",
+            "defendant": "The agent being acquitted.",
+            "crime": "The CRIME of which the DEFENDANT-ARG is being.",
+            "place": "Where the acquittal takes place.",
+            "time": "When the acquittal takes place."
+        }
+    },
+    "Pardon(JusticeEvent)": {
+        "description": "A PARDON Event occurs whenever a head-of-state or their appointed representative lifts a sentence imposed by the judiciary.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'pardon',...",
+            "place": "Where the pardon takes place.",
+            "adjudicator": "the state official who does the pardoning.",
+            "defendant": "The agent being pardoned.",
+            "crime": "The CRIME of which the DEFENDANT-ARG is being pardoned.",
+            "time": "When the pardon takes place."
+        }
+    },
+    "BeBorn(LifeEvent)": {
+        "description": "A BE-BORN Event occurs whenever a PERSON Entity is given birth to. Please note that we do not include the birth of other things or ideas.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: ' born', 'birth',...",
+            "place": "Where the birth takes place.",
+            "person": "The person who is born.",
+            "time": "When the birth takes place."
+        }
+    },
+    "Demonstrate(ConflictEvent)": {
+        "description": "A DEMONSRATE Event occurs whenever a large number of people come together in a public area to protest or demand some sort of official action. DEMONSTRATE Events include, but are not limited to, protests, sit-ins, strikes, and riots.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'rioted', 'strike', 'rallied', 'rioting', 'demonstrated', 'protesting','protests','walkout','stoppage',...",
+            "entity": "The demonstrating agent.",
+            "place": "Where the demonstration takes place.",
+            "time": "When the demonstration takes place."
+        }
+    },
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": "A DECLARE-BANKRUPTCY Event will occur whenever an Entity officially requests legal protection from debt collection due to an extremely negative balance sheet..",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'bankrupt', 'bankruptcy',...",
+            "place": "Where the declaration takes place.",
+            "org": "The ORGANIZATION declaring bankruptcy.",
+            "time": "When the bankruptcy is declared."
+        }
+    },
+    "EndOrg(BusinessEvent)": {
+        "description": "An END-ORG Event occurs whenever an ORGANIZATION ceases to exist (in other words ‘goes out of business’).",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'folded',...",
+            "place": "Where the Event takes place.",
+            "org": "The ORGANIZATION that is ended.",
+            "time": "When the Event takes place."
+        }
+    },
+    "Elect(PersonnelEvent)": {
+        "description": "An ELECT Event occurs whenever a candidate wins an election designed to determine the PERSON argument of a START-POSITION Event.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'elected', 'elect',...",
+            "entity": "the voting agent(s).",
+            "place": "Where the election takes place.",
+            "person": "the person elected.",
+            "position": "The JOB-TITLE for the position being nominated to.",
+            "time": "When the election takes place."
+        }
+    },
+    "Execute(JusticeEvent)": {
+        "description": "An EXECUTE Event occurs whenever the life of a PERSON is taken by a state actor (a GPE, its ORGANIZATION subparts, or PERSON representatives). It can have a CRIME attribute filled by a string from the text.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'executed', 'executions',...",
+            "place": "Where the execution takes place.",
+            "agent": "The agent responsible for carrying out the execution.",
+            "person": "The person executed.",
+            "crime": "The CRIME for which the PERSON-ARG is being executed.",
+            "time": "When the execution takes place."
+        }
+    },
+    "MergeOrg(BusinessEvent)": {
+        "description": "A MERGE-ORG Event occurs whenever two or more ORGANIZATION Entities come together to form a new ORGANIZATION Entity. This Event applies to any kind of ORGANIZATION, including government agencies. It also includes joint ventures.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'mergers', 'merger', 'merged',...",
+            "place": "Where the merger takes place.",
+            "org": "The ORGANIZATIONs that are merged.",
+            "time": "When the merger takes place."
+        }
+    },
+    "Nominate(PersonnelEvent)": {
+        "description": "A NOMINATE Event occurs whenever a PERSON is proposed for a STARTPOSITION Event by the appropriate PERSON, through official channels.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'nominated', 'nominations',...",
+            "person": "the person(s) nominated.",
+            "place": "Where the nomination takes place.",
+            "agent": "the nominating agent.",
+            "position": "The JOB-TITLE for the position being nominated to.",
+            "time": "When the nomination takes place."
+        }
+    },
+    "Divorce(LifeEvent)": {
+        "description": "A DIVORCE Event occurs whenever two people are officially divorced under the legal definition of divorce. We do not include separations or church annulments.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: ' divorced', 'divorce',...",
+            "place": "Where the divorce takes place.",
+            "person": "The people who are divorced.",
+            "time": "When the divorce takes place."
+        }
+    },
+    "Extradite(JusticeEvent)": {
+        "description": "An EXTRADITE Event occurs whenever a PERSON is sent by a state actor from one PLACE (normally the GPE associated with the state actor, but sometimes a FACILITY under its control) to another place (LOCATION, GPE or FACILITY) for the purposes of legal proceedings there. .",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as: 'extradited', 'extradition',...",
+            "agent": "the extraditing agent.",
+            "origin": "The original location of the person being extradited (rare … only when explicitly mentioned).",
+            "destination": "Where the person is extradited to, the destination.",
+            "person": "The person being extradicted.",
+            "crime": "The CRIME for which the PERSON-ARG is being extradited.",
+            "time": "When the extradition takes place."
+        }
+    }
+}

@@ -1,0 +1,463 @@
+{
+    "Movement_Transportation_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "destination": "Placeholder for attribute description.",
+            "origin": "Placeholder for attribute description.",
+            "passengerartifact": "Placeholder for attribute description.",
+            "transporter": "Placeholder for attribute description.",
+            "vehicle": "Placeholder for attribute description."
+        }
+    },
+    "Medical_Intervention_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "patient": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "treater": "Placeholder for attribute description."
+        }
+    },
+    "Life_Die_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "killer": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "victim": "Placeholder for attribute description."
+        }
+    },
+    "Cognitive_Inspection_SensoryObserve(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "instrument": "Placeholder for attribute description.",
+            "observedentity": "Placeholder for attribute description.",
+            "observer": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Contact_Contact_Broadcast(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "communicator": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description.",
+            "topic": "Placeholder for attribute description."
+        }
+    },
+    "Conflict_Attack_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "attacker": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "target": "Placeholder for attribute description."
+        }
+    },
+    "Justice_ChargeIndict_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "defendant": "Placeholder for attribute description.",
+            "judgecourt": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "prosecutor": "Placeholder for attribute description."
+        }
+    },
+    "Contact_Contact_Meet(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "participant": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "topic": "Placeholder for attribute description."
+        }
+    },
+    "Contact_Contact_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "participant": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "topic": "Placeholder for attribute description."
+        }
+    },
+    "Life_Infect_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "victim": "Placeholder for attribute description."
+        }
+    },
+    "Transaction_ExchangeBuySell_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "acquiredentity": "Placeholder for attribute description.",
+            "giver": "Placeholder for attribute description.",
+            "paymentbarter": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description."
+        }
+    },
+    "GenericCrime_GenericCrime_GenericCrime(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "perpetrator": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "victim": "Placeholder for attribute description."
+        }
+    },
+    "Justice_Sentence_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "defendant": "Placeholder for attribute description.",
+            "judgecourt": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Justice_ArrestJailDetain_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "detainee": "Placeholder for attribute description.",
+            "jailer": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Life_Injure_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "bodypart": "Placeholder for attribute description.",
+            "injurer": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description.",
+            "victim": "Placeholder for attribute description."
+        }
+    },
+    "Conflict_Attack_DetonateExplode(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "attacker": "Placeholder for attribute description.",
+            "explosivedevice": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "target": "Placeholder for attribute description."
+        }
+    },
+    "ArtifactExistence_DamageDestroyDisableDismantle_DisableDefuse(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "artifact": "Placeholder for attribute description.",
+            "disabler": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description."
+        }
+    },
+    "Justice_InvestigateCrime_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "defendant": "Placeholder for attribute description.",
+            "investigator": "Placeholder for attribute description.",
+            "observedentity": "Placeholder for attribute description.",
+            "observer": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "ArtifactExistence_DamageDestroyDisableDismantle_Destroy(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "artifact": "Placeholder for attribute description.",
+            "destroyer": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Contact_RequestCommand_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "communicator": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description."
+        }
+    },
+    "Cognitive_IdentifyCategorize_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "identifiedobject": "Placeholder for attribute description.",
+            "identifiedrole": "Placeholder for attribute description.",
+            "identifier": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Contact_Contact_Correspondence(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "participant": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "topic": "Placeholder for attribute description."
+        }
+    },
+    "Movement_Transportation_Evacuation(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "destination": "Placeholder for attribute description.",
+            "origin": "Placeholder for attribute description.",
+            "passengerartifact": "Placeholder for attribute description.",
+            "transporter": "Placeholder for attribute description."
+        }
+    },
+    "Justice_TrialHearing_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "defendant": "Placeholder for attribute description.",
+            "judgecourt": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "prosecutor": "Placeholder for attribute description."
+        }
+    },
+    "Contact_RequestCommand_Meet(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "communicator": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description."
+        }
+    },
+    "ArtifactExistence_ManufactureAssemble_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "artifact": "Placeholder for attribute description.",
+            "components": "Placeholder for attribute description.",
+            "manufacturerassembler": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Justice_Convict_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "defendant": "Placeholder for attribute description.",
+            "judgecourt": "Placeholder for attribute description."
+        }
+    },
+    "Conflict_Demonstrate_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "demonstrator": "Placeholder for attribute description.",
+            "target": "Placeholder for attribute description.",
+            "topic": "Placeholder for attribute description."
+        }
+    },
+    "Justice_ReleaseParole_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "defendant": "Placeholder for attribute description.",
+            "judgecourt": "Placeholder for attribute description."
+        }
+    },
+    "ArtifactExistence_DamageDestroyDisableDismantle_Damage(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "artifact": "Placeholder for attribute description.",
+            "damager": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Personnel_EndPosition_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "employee": "Placeholder for attribute description.",
+            "placeofemployment": "Placeholder for attribute description."
+        }
+    },
+    "Personnel_StartPosition_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "employee": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "placeofemployment": "Placeholder for attribute description.",
+            "position": "Placeholder for attribute description."
+        }
+    },
+    "Cognitive_TeachingTrainingLearning_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "learner": "Placeholder for attribute description.",
+            "teachertrainer": "Placeholder for attribute description."
+        }
+    },
+    "Contact_ThreatenCoerce_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "communicator": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description."
+        }
+    },
+    "Contact_ThreatenCoerce_Correspondence(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "communicator": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description."
+        }
+    },
+    "Conflict_Defeat_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "defeated": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "victor": "Placeholder for attribute description."
+        }
+    },
+    "Control_ImpedeInterfereWith_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "impeder": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Cognitive_Research_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "place": "Placeholder for attribute description.",
+            "researcher": "Placeholder for attribute description.",
+            "subject": "Placeholder for attribute description."
+        }
+    },
+    "ArtifactExistence_DamageDestroyDisableDismantle_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "artifact": "Placeholder for attribute description.",
+            "damagerdestroyer": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Movement_Transportation_IllegalTransportation(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "destination": "Placeholder for attribute description.",
+            "passengerartifact": "Placeholder for attribute description.",
+            "transporter": "Placeholder for attribute description.",
+            "vehicle": "Placeholder for attribute description."
+        }
+    },
+    "Justice_Acquit_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "defendant": "Placeholder for attribute description."
+        }
+    },
+    "Contact_RequestCommand_Correspondence(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "communicator": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description.",
+            "topic": "Placeholder for attribute description."
+        }
+    },
+    "ArtifactExistence_DamageDestroyDisableDismantle_Dismantle(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "artifact": "Placeholder for attribute description.",
+            "components": "Placeholder for attribute description.",
+            "dismantler": "Placeholder for attribute description.",
+            "instrument": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description."
+        }
+    },
+    "Movement_Transportation_PreventPassage(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "destination": "Placeholder for attribute description.",
+            "origin": "Placeholder for attribute description.",
+            "passengerartifact": "Placeholder for attribute description.",
+            "preventer": "Placeholder for attribute description.",
+            "transporter": "Placeholder for attribute description.",
+            "vehicle": "Placeholder for attribute description."
+        }
+    },
+    "Conflict_Demonstrate_DemonstrateWithViolence(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "demonstrator": "Placeholder for attribute description.",
+            "regulator": "Placeholder for attribute description."
+        }
+    },
+    "Disaster_Crash_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "crashobject": "Placeholder for attribute description.",
+            "place": "Placeholder for attribute description.",
+            "vehicle": "Placeholder for attribute description."
+        }
+    },
+    "Contact_RequestCommand_Broadcast(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "communicator": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description."
+        }
+    },
+    "Disaster_DiseaseOutbreak_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "place": "Placeholder for attribute description.",
+            "victim": "Placeholder for attribute description."
+        }
+    },
+    "Contact_ThreatenCoerce_Broadcast(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "communicator": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description."
+        }
+    },
+    "Transaction_Donation_Unspecified(Event)": {
+        "description": "Placeholder for event description.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "artifactmoney": "Placeholder for attribute description.",
+            "giver": "Placeholder for attribute description.",
+            "recipient": "Placeholder for attribute description."
+        }
+    }
+}

@@ -1,0 +1,171 @@
+@dataclass
+class Blood_vessel_development(Event):
+    mention: str
+    theme: List
+    atloc: List
+    fromloc: List
+
+@dataclass
+class Breakdown(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Regulation(Event):
+    mention: str
+    site: List
+    csite: List
+    theme: List
+    cause: List
+
+@dataclass
+class Planned_process(Event):
+    mention: str
+    theme2: List
+    instrument2: List
+    theme: List
+    instrument: List
+
+@dataclass
+class Negative_regulation(Event):
+    mention: str
+    site: List
+    csite: List
+    theme: List
+    cause: List
+
+@dataclass
+class Growth(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Localization(Event):
+    mention: str
+    toloc: List
+    fromloc: List
+    theme: List
+    atloc: List
+
+@dataclass
+class Gene_expression(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Positive_regulation(Event):
+    mention: str
+    theme: List
+    theme2: List
+    csite: List
+    site: List
+    cause: List
+
+@dataclass
+class Cell_proliferation(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Binding(Event):
+    mention: str
+    theme2: List
+    theme: List
+    site: List
+
+@dataclass
+class Transcription(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Development(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Remodeling(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Metabolism(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Synthesis(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Catabolism(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Pathway(Event):
+    mention: str
+    participant3: List
+    participant4: List
+    participant2: List
+    participant: List
+
+@dataclass
+class Death(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Phosphorylation(Event):
+    mention: str
+    theme: List
+    site: List
+
+@dataclass
+class Dephosphorylation(Event):
+    mention: str
+    theme: List
+    site: List
+
+@dataclass
+class Reproduction(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Protein_processing(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Translation(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Cell_division(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Dissociation(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class DNA_methylation(Event):
+    mention: str
+    theme: List
+    site: List
+
+@dataclass
+class Acetylation(Event):
+    mention: str
+    theme: List
+
+@dataclass
+class Ubiquitination(Event):
+    mention: str
+    theme: List
+

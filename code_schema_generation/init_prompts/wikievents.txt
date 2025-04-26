@@ -1,0 +1,361 @@
+@dataclass
+class Movement_Transportation_Unspecified(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    passengerartifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class Life_Die_Unspecified(Event):
+    mention: str
+    killer: List
+    victim: List
+    place: List
+
+@dataclass
+class Life_Infect_Unspecified(Event):
+    mention: str
+    victim: List
+
+@dataclass
+class Cognitive_Inspection_SensoryObserve(Event):
+    mention: str
+    observer: List
+    instrument: List
+    place: List
+    observedentity: List
+
+@dataclass
+class Contact_Contact_Broadcast(Event):
+    mention: str
+    recipient: List
+    communicator: List
+    instrument: List
+    place: List
+    topic: List
+
+@dataclass
+class Justice_ChargeIndict_Unspecified(Event):
+    mention: str
+    prosecutor: List
+    judgecourt: List
+    defendant: List
+    place: List
+
+@dataclass
+class Conflict_Attack_Unspecified(Event):
+    mention: str
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class Conflict_Attack_DetonateExplode(Event):
+    mention: str
+    explosivedevice: List
+    target: List
+    attacker: List
+    instrument: List
+    place: List
+
+@dataclass
+class ArtifactExistence_DamageDestroyDisableDismantle_Destroy(Event):
+    mention: str
+    destroyer: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class Life_Injure_Unspecified(Event):
+    mention: str
+    bodypart: List
+    injurer: List
+    instrument: List
+    victim: List
+
+@dataclass
+class Justice_TrialHearing_Unspecified(Event):
+    mention: str
+    prosecutor: List
+    judgecourt: List
+    defendant: List
+    place: List
+
+@dataclass
+class Justice_ArrestJailDetain_Unspecified(Event):
+    mention: str
+    jailer: List
+    place: List
+    detainee: List
+
+@dataclass
+class Justice_ReleaseParole_Unspecified(Event):
+    mention: str
+    judgecourt: List
+    defendant: List
+
+@dataclass
+class Contact_Contact_Meet(Event):
+    mention: str
+    participant: List
+    place: List
+    topic: List
+
+@dataclass
+class Justice_Sentence_Unspecified(Event):
+    mention: str
+    place: List
+    judgecourt: List
+    defendant: List
+
+@dataclass
+class Justice_Convict_Unspecified(Event):
+    mention: str
+    judgecourt: List
+    defendant: List
+
+@dataclass
+class Justice_InvestigateCrime_Unspecified(Event):
+    mention: str
+    investigator: List
+    observer: List
+    defendant: List
+    place: List
+    observedentity: List
+
+@dataclass
+class Cognitive_IdentifyCategorize_Unspecified(Event):
+    mention: str
+    identifiedrole: List
+    place: List
+    identifiedobject: List
+    identifier: List
+
+@dataclass
+class Conflict_Demonstrate_Unspecified(Event):
+    mention: str
+    target: List
+    topic: List
+    demonstrator: List
+
+@dataclass
+class ArtifactExistence_ManufactureAssemble_Unspecified(Event):
+    mention: str
+    components: List
+    manufacturerassembler: List
+    artifact: List
+    place: List
+
+@dataclass
+class ArtifactExistence_DamageDestroyDisableDismantle_Dismantle(Event):
+    mention: str
+    components: List
+    dismantler: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class Movement_Transportation_Evacuation(Event):
+    mention: str
+    origin: List
+    passengerartifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class Contact_ThreatenCoerce_Unspecified(Event):
+    mention: str
+    communicator: List
+    recipient: List
+
+@dataclass
+class Conflict_Defeat_Unspecified(Event):
+    mention: str
+    place: List
+    defeated: List
+    victor: List
+
+@dataclass
+class ArtifactExistence_DamageDestroyDisableDismantle_Unspecified(Event):
+    mention: str
+    artifact: List
+    instrument: List
+    place: List
+    damagerdestroyer: List
+
+@dataclass
+class Movement_Transportation_IllegalTransportation(Event):
+    mention: str
+    vehicle: List
+    passengerartifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class Transaction_ExchangeBuySell_Unspecified(Event):
+    mention: str
+    acquiredentity: List
+    giver: List
+    recipient: List
+    paymentbarter: List
+
+@dataclass
+class ArtifactExistence_DamageDestroyDisableDismantle_Damage(Event):
+    mention: str
+    damager: List
+    artifact: List
+    instrument: List
+    place: List
+
+@dataclass
+class Contact_Contact_Unspecified(Event):
+    mention: str
+    participant: List
+    place: List
+    topic: List
+
+@dataclass
+class Movement_Transportation_PreventPassage(Event):
+    mention: str
+    origin: List
+    vehicle: List
+    preventer: List
+    passengerartifact: List
+    destination: List
+    transporter: List
+
+@dataclass
+class GenericCrime_GenericCrime_GenericCrime(Event):
+    mention: str
+    perpetrator: List
+    place: List
+    victim: List
+
+@dataclass
+class Contact_RequestCommand_Unspecified(Event):
+    mention: str
+    communicator: List
+    place: List
+    recipient: List
+
+@dataclass
+class Contact_ThreatenCoerce_Broadcast(Event):
+    mention: str
+    communicator: List
+    recipient: List
+
+@dataclass
+class Conflict_Demonstrate_DemonstrateWithViolence(Event):
+    mention: str
+    regulator: List
+    demonstrator: List
+
+@dataclass
+class Medical_Intervention_Unspecified(Event):
+    mention: str
+    patient: List
+    place: List
+    treater: List
+
+@dataclass
+class Disaster_DiseaseOutbreak_Unspecified(Event):
+    mention: str
+    victim: List
+    place: List
+
+@dataclass
+class Disaster_Crash_Unspecified(Event):
+    mention: str
+    crashobject: List
+    place: List
+    vehicle: List
+
+@dataclass
+class Cognitive_TeachingTrainingLearning_Unspecified(Event):
+    mention: str
+    teachertrainer: List
+    learner: List
+
+@dataclass
+class Personnel_StartPosition_Unspecified(Event):
+    mention: str
+    placeofemployment: List
+    position: List
+    place: List
+    employee: List
+
+@dataclass
+class Control_ImpedeInterfereWith_Unspecified(Event):
+    mention: str
+    impeder: List
+    place: List
+
+@dataclass
+class Cognitive_Research_Unspecified(Event):
+    mention: str
+    researcher: List
+    place: List
+    subject: List
+
+@dataclass
+class ArtifactExistence_DamageDestroyDisableDismantle_DisableDefuse(Event):
+    mention: str
+    disabler: List
+    instrument: List
+    artifact: List
+
+@dataclass
+class Contact_Contact_Correspondence(Event):
+    mention: str
+    participant: List
+    place: List
+    topic: List
+
+@dataclass
+class Personnel_EndPosition_Unspecified(Event):
+    mention: str
+    placeofemployment: List
+    employee: List
+
+@dataclass
+class Justice_Acquit_Unspecified(Event):
+    mention: str
+    defendant: List
+
+@dataclass
+class Contact_RequestCommand_Meet(Event):
+    mention: str
+    communicator: List
+    recipient: List
+
+@dataclass
+class Contact_ThreatenCoerce_Correspondence(Event):
+    mention: str
+    communicator: List
+    recipient: List
+
+@dataclass
+class Contact_RequestCommand_Correspondence(Event):
+    mention: str
+    communicator: List
+    topic: List
+    recipient: List
+
+@dataclass
+class Contact_RequestCommand_Broadcast(Event):
+    mention: str
+    communicator: List
+    recipient: List
+
+@dataclass
+class Transaction_Donation_Unspecified(Event):
+    mention: str
+    giver: List
+    artifactmoney: List
+    recipient: List
+
