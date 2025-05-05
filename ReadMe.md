@@ -1,5 +1,10 @@
-# 🧠 PyCode-TextEE  
+# 🧠 Annotation Guidelines xxx PyCode-TextEE 
 > Efficient and extensible Event Extraction with prompt optimization — built on top of [TextEE](https://github.com/ej0cl6/TextEE)
+> This repository includes (1) PyCode-textEE .. code format... built on top of [TextEE](https://github.com/ej0cl6/TextEE) and (2) source code to reproduce [our work on annotation guideline-improved XXX](URL).
+>
+> If you find out work helpful, please cite:
+> bib
+
 
 ---
 
@@ -30,6 +35,11 @@ While **TextEE** standardizes 10+ event extraction datasets into a unified JSON 
 
 > ✨ We transform TextEE-formatted data into **code-style prompts**—a format that is both readable and executable by LLMs and ideal for structured evaluation.
 
+TODO: add some background about annotation guidelines.
+add a screenshot showing 1) python code 2) what's annotation guideline
+point people to paper again
+
+
 ---
 
 ### 🚀 What’s New in PyCode-TextEE?
@@ -37,13 +47,16 @@ While **TextEE** standardizes 10+ event extraction datasets into a unified JSON 
 - **CodePrompt Format Conversion**  
   We convert event structures (event triggers, arguments—if available) into Python-like prompts (e.g., `Attack(mention="...", attacker=[...], target=[...])`) to help LLMs handle structured outputs.
 
+- **annotation guidelines**
+...
+  
 - **Plug-and-Play with TextEE**  
   Directly load standardized datasets from TextEE and transform them with one command into training-ready CodePrompts.
 
 - **Evaluation Toolkit for Prompted LLMs**  
   We provide exact-match evaluation utilities that compute **precision, recall, and F1 scores** over structured LLM outputs.
 
-- **Upcoming Paper-Compatible Training Pipelines**  
+- **Code to produce XXXX**  
   Includes all data transformations and training scripts used in a paper currently under submission to a major NLP conference. Code for that will live in `LLaMAEvents/`.
 
 <a id="updates"></a>
@@ -225,6 +238,9 @@ Our pipeline is divided into two main stages:
 
 ---
 
+### Step 0
+
+
 ### 🌱 Step 1 — [Optional] Generate Code Schema
 
 If you're working with custom datasets (or want to regenerate schemas for the 15 supported ones), you'll first convert them into **TextEE format** and generate the corresponding **Python-style event definitions**.
@@ -285,6 +301,9 @@ export PYTHONPATH=$PYCODE_HOME:$PYCODE_HOME:$PYTHONPATH
 cd ../../ # redirect the terminal to PyCode home directory
 ```
 Run the following:
+
+TODO: placeholders for dataset name and guideline-file
+TODO: clarify that --annotate_schema is optional
 
 ```bash
 cd code_prompts
