@@ -1,9 +1,0 @@
-@dataclass
-class Dummy(Event):
-    mention: str
-    perpind: List
-    target: List
-    perporg: List
-    weapon: List
-    victim: List
-
