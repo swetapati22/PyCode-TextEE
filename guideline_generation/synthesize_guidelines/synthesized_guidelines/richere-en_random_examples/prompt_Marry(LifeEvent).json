@@ -1,0 +1,28 @@
+{
+    "Marry(LifeEvent)": {
+        "description": [
+            "The event is triggered by the act of entering into a marriage or civil union. Example triggers include 'marry', 'married', 'marriage', and 'remarried'.",
+            "The event is characterized by the formal union of two individuals recognized by law, religion, or social norms. It involves a commitment to a long-term relationship.",
+            "Unlike the Divorce event, which signifies the dissolution of a marriage, the Marry event signifies the beginning or continuation of a marital relationship.",
+            "Triggers such as 'divorce' or 'separate' are indicative of the Divorce event type, not the Marry event type. The Marry event focuses on the union rather than the separation.",
+            "The outcome of the Marry event is the establishment or reaffirmation of a marital relationship, which can be contrasted with events like 'Engage' that signify a promise to marry in the future but not the actual union."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'bride', 'groom', 'spouse', 'partner', 'individuals'. This argument identifies the people involved in the marriage.",
+            "The role of the 'person' argument is to specify who is getting married. It is crucial for understanding the participants in the event.",
+            "In cases where multiple people are mentioned, such as 'couples' or 'groups', each individual involved in the marriage should be identified.",
+            "Edge cases include situations where the person is referred to indirectly, such as 'the couple' or 'the newlyweds'. These should still be annotated as 'person'.",
+            "Domain knowledge: In some cultures, arranged marriages may involve terms like 'bride' and 'groom' even if the individuals are not explicitly named in the text."
+        ],
+        "place": [
+            "Examples are 'church', 'city hall', 'beach', 'destination'. This argument identifies the location where the marriage takes place.",
+            "The role of the 'place' argument is to provide context about where the marriage event occurs. It helps in understanding the setting of the event.",
+            "In cases where the place is not explicitly mentioned but can be inferred, such as 'they got married in their hometown', the inferred location should be annotated.",
+            "Edge cases include virtual or online marriages, where the 'place' might be a platform or service rather than a physical location.",
+            "Domain knowledge: Some places are traditionally associated with marriages, such as 'Las Vegas' for quick weddings or 'church' for religious ceremonies."
+        ]
+    }
+}

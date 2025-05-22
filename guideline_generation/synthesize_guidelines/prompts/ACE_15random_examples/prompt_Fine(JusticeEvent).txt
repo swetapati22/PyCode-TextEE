@@ -1,0 +1,356 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Fine which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Fine which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> adjudicator
+Argument 2 -> entity
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+In a verdict handed down on Saturday, the judge also ordered Ranjha to pay a fine of 50,000 rupees (about 870 US dollars), they said.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['Ranjha']
+For argument "adjudicator" extracted spans ['judge']
+
+Example 2
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+In a separate action against the Monitor, security officials went to its editorial offices on Thursday night and told the management that it was being closed until it paid a fine of 15 million Sudanese pounds (about US$6,000) that was outstanding from a court conviction last year.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['Monitor']
+For argument "place" extracted spans ['offices']
+
+Example 3
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+Under terms of the agreement, to be submitted as early as Monday to a judge presiding over the case, MCI would agree to pay the largest fine imposed so far by the SEC on a company that is not a broker-dealer, the Journal said, citing sources close to the matter.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['MCI']
+For argument "adjudicator" extracted spans ['judge', 'SEC']
+
+Example 4
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+The report did not give the amount of the fine, but said it would be "exponentially larger" than the historic 10 million dollars Xerox paid the SEC last year.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['SEC']
+
+Example 5
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+Last month, the SEC slapped fines totaling 1.4 billion dollars on 10 Wall Street brokerages to settle charges of conflicts of interest between analysts and investors.
+### Event Trigger ###
+fines
+### Event Arguments ###
+For argument "entity" extracted spans ['brokerages']
+For argument "adjudicator" extracted spans ['SEC']
+
+Example 6
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+The Khartoum Monitor may not appear for two months and must pay a fine of 1 million Sudanese pounds (about US$400), lawyer Ngor Olang Ngor told The Associated Press.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['Khartoum Monitor']
+
+Example 7
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+Failure to pay the fine would result in a two-month extension of the suspension.
+### Event Trigger ###
+fine
+### Event Arguments ###
+
+Example 8
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+Ngor said the paper would pay the fine but it would also appeal the verdict.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['paper']
+
+Example 9
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+he's also being fined $3 million and was ordered to pay $1.2 million in restitution to the new york state tax commission.
+### Event Trigger ###
+fined
+### Event Arguments ###
+For argument "entity" extracted spans ['he']
+
+Example 10
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+he's also being fined $3 million and was ordered to pay $1.2 million in restitution to the new york state tax commission.
+### Event Trigger ###
+pay
+### Event Arguments ###
+For argument "entity" extracted spans ['he']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Attack(ConflictEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+killed
+### Event Arguments ###
+For argument "attacker" extracted spans ['mob']
+For argument "place" extracted spans ['area']
+For argument "target" extracted spans ['them']
+For argument "instrument" extracted spans ['machetes', 'spears']
+
+Example 12
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+The waiver of extradition that she signed simply means that if she skips out and goes to another state, she can't contest the right of the original court to have her hauled back to its jurisdiction, and that the court won't have to initiate the time-consuming process of extraditing her.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['she']
+For argument "origin" extracted spans ['state']
+For argument "destination" extracted spans ['jurisdiction']
+For argument "agent" extracted spans ['court']
+
+Example 13
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Prison authorities have given the nod for Anwar to be taken home later in the afternoon to marry his eldest daughter, Nurul Izzah, to engineer Raja Ahmad Sharir Iskandar in a traditional Malay ceremony, he said.
+### Event Trigger ###
+marry
+### Event Arguments ###
+For argument "person" extracted spans ['daughter', 'Raja Ahmad Sharir Iskandar']
+For argument "place" extracted spans ['home']
+
+Example 14
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+Of course outspoken organizations such as Planned Parenthood, which gives a lot of money to Democrats, will fight with everything they've got to keep the Democratic platform as liberal as possible.
+### Event Trigger ###
+gives
+### Event Arguments ###
+For argument "giver" extracted spans ['Planned Parenthood']
+For argument "beneficiary" extracted spans ['Democrats']
+For argument "recipient" extracted spans ['Democrats']
+
+Example 15
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Putin, who enjoyed a warm relationship with former Chinese president Jiang Zeming, has made efforts to nurture ties with Hu and was the first world leader to go to Beijing to meet him in December when he was president-in-waiting.
+### Event Trigger ###
+former
+### Event Arguments ###
+For argument "person" extracted spans ['president']
+For argument "place" extracted spans ['Chinese']
+For argument "entity" extracted spans ['Chinese']
+
+Example 16
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Everyone has heard the story: Beatriz Marinello was elected USCF President on August 11, 2003 in Los Angeles.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['Beatriz Marinello']
+For argument "place" extracted spans ['Los Angeles']
+For argument "entity" extracted spans ['USCF']
+
+Example 17
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+telephone
+### Event Arguments ###
+For argument "place" extracted spans ['Agartala']
+For argument "entity" extracted spans ['spokesman']
+
+Example 18
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+an oklahoma city judge has ruled prosecutors presented enough evidence at a preliminary hearing to try nichols on murder charges for the other 160 victims of the attack.
+### Event Trigger ###
+hearing
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+For argument "defendant" extracted spans ['nichols']
+For argument "prosecutor" extracted spans ['prosecutors']
+For argument "place" extracted spans ['oklahoma city']
+
+Example 19
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Larry Klayman, chairman of Judicial Watch, which represent 14 survivors and victims' relatives who have filed a $1.5 billion federal lawsuit against Iraq in Washington, said his organization had served a subpoena on Al-Douri twice, on March 26 and March 28, but said he has not responded.
+### Event Trigger ###
+lawsuit
+### Event Arguments ###
+For argument "defendant" extracted spans ['Iraq']
+For argument "place" extracted spans ['Washington']
+For argument "plaintiff" extracted spans ['relatives', 'survivors']
+
+Example 20
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+Some 70 people were arrested Saturday as demonstrators clashed with police at the end of a major peace rally here, as at least 200,000 anti-war protesters took to the streets across the United States and Canada.
+### Event Trigger ###
+rally
+### Event Arguments ###
+For argument "place" extracted spans ['here']
+For argument "entity" extracted spans ['protesters']
+
+Example 21
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+In last year's trial, the paper was convicted of defaming the government for publishing that trains running to and from southern Sudan were used to transport abducted women and children.
+### Event Trigger ###
+transport
+### Event Arguments ###
+For argument "vehicle" extracted spans ['trains']
+For argument "artifact" extracted spans ['women', 'children']
+For argument "destination" extracted spans ['Sudan']
+For argument "origin" extracted spans ['Sudan']
+
+Example 22
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange, plans to follow up its May Day launching by opening a "sex Disneyland" here, the Melbourne-based bordello announced Wednesday.
+### Event Trigger ###
+opening
+### Event Arguments ###
+For argument "org" extracted spans ['Disneyland']
+For argument "agent" extracted spans ['Daily Planet Ltd']
+For argument "place" extracted spans ['here']
+
+Example 23
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.
+### Event Trigger ###
+charges
+### Event Arguments ###
+For argument "defendant" extracted spans ['client']
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "place" extracted spans ['court']
+
+Example 24
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "place" extracted spans ['united states']
+For argument "org" extracted spans ['worldcom']
+
+Example 25
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In December 2001, a Manhattan jury convicted Sotheby's main shareholder and former chairman Alfred Taubman of entering into a price-fixing agreement with Christie's.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Alfred Taubman']
+For argument "place" extracted spans ['Manhattan']
+For argument "adjudicator" extracted spans ['jury']

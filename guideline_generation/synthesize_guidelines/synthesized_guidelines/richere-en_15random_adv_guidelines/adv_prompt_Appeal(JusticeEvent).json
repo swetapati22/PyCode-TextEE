@@ -1,0 +1,12 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": "The Appeal event in the justice system is triggered by actions or processes where a decision made by a lower court or authority is challenged and reviewed by a higher court or authority. This event involves a defendant seeking to overturn or modify a previous judgment and an adjudicator who reviews the case. It is characterized by legal proceedings and formal requests for reconsideration, distinct from the initial judgment and sentencing. The outcome typically involves the higher court either upholding, reversing, or modifying the original decision, differentiating it from events like Convict or Sue.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the authority or body that reviews the appeal and makes a decision on the case. This can be a higher court, a panel of judges, or an individual judge. Examples include 'Supreme court', 'bench', 'court', and 'He'. The adjudicator has the power to uphold, reverse, or modify the original decision and is not a party to the case but rather the authority that reviews and decides on the appeal.",
+            "defendant": "The defendant is the individual or entity appealing the original decision, seeking a different outcome from the higher authority. Examples include 'i', 'his', 'Rodriguez', and 'Alex Rodriguez'. The defendant is central to the Appeal event as they challenge the original judgment and are distinct from the adjudicator or prosecutor.",
+            "place": "The place is the location where the appeal is being made or reviewed, providing context for the Appeal event. This can be a specific court, city, or country. Examples include 'U.S.', 'London', and 'Supreme court'. The place is not a party to the case but rather the location where the legal proceedings occur.",
+            "prosecutor": "The prosecutor is the individual or entity representing the state or the party opposing the appeal, seeking to uphold the original decision. Examples include 'representative', 'he', and 'Justice Department'. The prosecutor plays a key role in arguing against the appeal and is distinct from the adjudicator or defendant."
+        }
+    }
+}

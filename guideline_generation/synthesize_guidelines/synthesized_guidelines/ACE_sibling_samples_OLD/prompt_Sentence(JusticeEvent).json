@@ -1,0 +1,35 @@
+{
+  "Sentence(JusticeEvent)": {
+    "description": [
+      "The event is triggered by an action or decision in which a formal punishment or penalty is assigned to a defendant by a legal authority. Examples of triggers include 'sentence,' 'sentenced,' and 'imposed.'",
+      "This event involves the adjudication of a legal judgment, typically specifying the defendant, the adjudicator responsible for delivering the sentence, and optionally, the location of the judgment.",
+      "Unlike Convict, which focuses on the determination of guilt, Sentence emphasizes the assignment of penalties or punishments following a conviction.",
+      "Triggers like 'sentences' or 'imposed penalties' are indicative of this event type, as opposed to 'convicted,' which highlights the determination of criminal liability.",
+      "The event captures the culmination of a legal process where a defendant is formally given a punishment, often involving jail time, fines, or other penalties."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "adjudicator": [
+      "Examples are the legal authorities or institutions delivering the sentence, such as 'courts' or 'Supreme Court'.",
+      "This argument identifies the entity responsible for assigning the penalty, emphasizing the role of judicial authority in the event.",
+      "Adjudicators are critical for distinguishing Sentence from extrajudicial punishments, as they provide formal legal context.",
+      "Unlike defendants, adjudicators are neutral entities tasked with executing the judicial process rather than being involved in the alleged offense.",
+      "In ambiguous cases, the adjudicator may be inferred from references to legal systems or institutions, such as 'judge' or 'jury.'"
+    ],
+    "defendant": [
+      "Examples are individuals or entities receiving the sentence, such as 'smugglers' or 'Anwar Ibrahim'.",
+      "Defendants are the primary recipients of the punishment or penalty delivered in the sentencing process.",
+      "This argument is crucial for identifying the party held accountable for the crime or violation being addressed.",
+      "Unlike adjudicators, defendants are directly involved in the offense or case, and their actions or behavior are central to the legal outcome.",
+      "In cases involving multiple defendants, all explicitly mentioned individuals should be annotated, provided they are clearly tied to the sentencing."
+    ],
+    "place": [
+      "Examples are locations where the sentencing event occurs, such as 'Indonesian' (referring to courts in Indonesia).",
+      "The place argument situates the sentencing within a geographical or judicial context, adding specificity to the event.",
+      "Unlike adjudicators, which are institutions or individuals, the place refers to physical or geopolitical settings of the sentencing.",
+      "Places are optional and may not always be mentioned; however, they should be annotated when explicitly provided.",
+      "In cases with multiple locations, prioritize the one most directly linked to the adjudication or delivery of the sentence."
+    ]
+  }
+}

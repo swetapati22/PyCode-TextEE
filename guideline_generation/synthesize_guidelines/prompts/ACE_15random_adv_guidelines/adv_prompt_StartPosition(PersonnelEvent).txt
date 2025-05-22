@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_StartPosition(PersonnelEvent)
+```json
+{
+    "StartPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by a person starting a new position or role within an organization or entity. Example triggers include 'replace', 'took on', 'begins', 'become', 'took office', 'appointed', 'becoming', and 'became'.",
+            "The event is characterized by the initiation of a new role or position by an individual, often marked by formal or official language indicating the start of responsibilities. Key characteristics include the mention of the new role, the individual assuming the role, and sometimes the location or entity associated with the role.",
+            "Unlike the 'EndPosition' event, which signifies the conclusion of a role, the 'StartPosition' event focuses on the commencement of duties. For example, 'begins' indicates the start of a new job, whereas 'resigns' would indicate the end of a job.",
+            "Triggers such as 'appointed' and 'took office' are indicative of the 'StartPosition' event type, not events like 'EndPosition' or 'TransferPosition'. The outcome of this event is the individual assuming new responsibilities, as opposed to leaving or transferring from a position.",
+            "The event scope includes various contexts such as corporate, political, academic, and other professional settings where a person starts a new role. Negative examples include events like 'BeBorn' or 'Die', which are life events unrelated to professional roles."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'unit', 'operations', 'London School of Economics', 'Palestinian', 'Israel', 'Beijing', 'China', 'parliament'. The entity argument refers to the organization, department, or specific role that the person is starting.",
+            "The entity is crucial as it provides context to the new position being assumed. For instance, 'operations' in 'took on the role at the top of Vivendi's US entertainment operations' specifies the department.",
+            "In cases where the entity is a well-known organization or institution, it helps in understanding the significance of the position. For example, 'London School of Economics' indicates a prestigious academic role.",
+            "The entity can sometimes be a broader term like 'unit' or 'operations', which requires additional context from the text to fully understand the role. For example, 'unit' in 'replace Diller as chairman and chief executive of US unit' refers to a specific division within a company.",
+            "Edge cases include instances where the entity might be implied or not explicitly stated. In such cases, the surrounding context should be used to infer the entity. For example, 'operations' might be inferred from 'took on the role at the top of Vivendi's US entertainment operations'."
+        ],
+        "person": [
+            "Examples are 'Jean-Rene Fourtou', 'Diller', 'Callum McCarthy', 'Davies', 'Roh Moo-Hyun', 'minister', 'he', 'Hu Jintao', 'I'. The person argument refers to the individual who is starting the new position.",
+            "The person is the central figure in the event, as they are the one assuming the new role. For instance, 'Jean-Rene Fourtou' in 'Jean-Rene Fourtou will replace Diller' is the person starting the new position.",
+            "In some cases, the person might be referred to by a pronoun or a title, such as 'he' or 'minister'. It is important to identify the correct individual from the context. For example, 'he' in 'he took office as Israel's foreign minister' refers to the person starting the position.",
+            "The person argument is essential for understanding who is taking on the new responsibilities. For example, 'Callum McCarthy' in 'Callum McCarthy begins what is one of the most important jobs' specifies the individual starting the job.",
+            "Edge cases include instances where the person might be mentioned indirectly or through a title. In such cases, additional context from the text should be used to identify the person. For example, 'minister' in 'recently appointed Palestinian prime minister' refers to the person starting the position."
+        ],
+        "place": [
+            "Examples are 'Paris', 'Serbia and Montenegro'. The place argument refers to the location where the new position is being assumed.",
+            "The place provides geographical context to the event, indicating where the new role is being started. For instance, 'Paris' in 'In Paris, the French media group said' specifies the location of the event.",
+            "In some cases, the place might be a country, city, or specific institution. For example, 'Serbia and Montenegro' in 'failed to become a deputy in the parliament of Serbia and Montenegro' specifies the location of the new role.",
+            "The place argument helps in understanding the broader context of the event, especially in cases where the location is significant to the role. For example, 'Paris' in 'In Paris, the French media group said' indicates the location of the media group.",
+            "Edge cases include instances where the place might be implied or not explicitly stated. In such cases, the surrounding context should be used to infer the place. For example, 'Serbia and Montenegro' might be inferred from 'failed to become a deputy in the parliament of Serbia and Montenegro'."
+        ]
+    }
+}
+```

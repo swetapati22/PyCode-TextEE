@@ -1,0 +1,49 @@
+{
+    "Movement_Transportation_Unspecified(Event)": {
+        "description": [
+            "The event type 'Movement_Transportation_Unspecified' refers to any instance where an entity (person, object, or group) is moved or transported from one location to another without specifying the means or purpose of transportation. The event can be triggered by verbs such as 'move', 'transfer', 'send', 'ship', 'drive', 'flee', 'run', etc. The event can be triggered by various contexts, including but not limited to, logistics, travel, evacuation, and escape scenarios.",
+            "The event type 'Movement_Transportation_Unspecified' captures the action of moving or transporting an entity from one place to another. This can include people, objects, or animals. The event can be triggered by verbs like 'move', 'transport', 'send', 'ship', 'drive', 'flee', 'run', etc. The event can be triggered by various contexts, including but not limited to, logistics, travel, evacuation, and escape scenarios.",
+            "The 'Movement_Transportation_Unspecified' event type involves the relocation of an entity from one location to another. This can include people, objects, or animals. The event can be triggered by verbs such as 'move', 'transfer', 'send', 'ship', 'drive', 'flee', 'run', etc. The event can be triggered by various contexts, including but not limited to, logistics, travel, evacuation, and escape scenarios.",
+            "The 'Movement_Transportation_Unspecified' event type refers to the action of moving or transporting an entity from one place to another. This can include people, objects, or animals. The event can be triggered by verbs like 'move', 'transfer', 'send', 'ship', 'drive', 'flee', 'run', etc. The event can be triggered by various contexts, including but not limited to, logistics, travel, evacuation, and escape scenarios.",
+            "The 'Movement_Transportation_Unspecified' event type captures the action of relocating an entity from one location to another. This can include people, objects, or animals. The event can be triggered by verbs such as 'move', 'transfer', 'send', 'ship', 'drive', 'flee', 'run', etc. The event can be triggered by various contexts, including but not limited to, logistics, travel, evacuation, and escape scenarios."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "destination": [
+            "The 'destination' argument refers to the end location where the entity is being moved or transported to. Examples are 'the trade center', 'Federal Medical Detention', 'prison medical facility', 'Perth Amboy', 'New Jersey'.",
+            "The 'destination' argument specifies the final location to which the entity is being transported. Examples are 'the trade center', 'Federal Medical Detention', 'prison medical facility', 'Perth Amboy', 'New Jersey'.",
+            "The 'destination' argument indicates the endpoint of the transportation or movement. Examples are 'the trade center', 'Federal Medical Detention', 'prison medical facility', 'Perth Amboy', 'New Jersey'.",
+            "The 'destination' argument denotes the final place where the entity is being moved to. Examples are 'the trade center', 'Federal Medical Detention', 'prison medical facility', 'Perth Amboy', 'New Jersey'.",
+            "The 'destination' argument represents the location where the entity is intended to arrive. Examples are 'the trade center', 'Federal Medical Detention', 'prison medical facility', 'Perth Amboy', 'New Jersey'."
+        ],
+        "origin": [
+            "The 'origin' argument refers to the starting location from where the entity is being moved or transported. Examples are 'Hudson River', 'hospital'.",
+            "The 'origin' argument specifies the initial location from which the entity is being transported. Examples are 'Hudson River', 'hospital'.",
+            "The 'origin' argument indicates the starting point of the transportation or movement. Examples are 'Hudson River', 'hospital'.",
+            "The 'origin' argument denotes the initial place from where the entity is being moved. Examples are 'Hudson River', 'hospital'.",
+            "The 'origin' argument represents the location where the entity begins its journey. Examples are 'Hudson River', 'hospital'."
+        ],
+        "passengerartifact": [
+            "The 'passengerartifact' argument refers to the entity (person, object, or group) that is being moved or transported. Examples are 'Suspect', 'Dzhokhar Tsarnaev', 'Tsarnaev', 'He', 'items', 'who'.",
+            "The 'passengerartifact' argument specifies the entity that is being transported. Examples are 'Suspect', 'Dzhokhar Tsarnaev', 'Tsarnaev', 'He', 'items', 'who'.",
+            "The 'passengerartifact' argument indicates the entity that is being moved. Examples are 'Suspect', 'Dzhokhar Tsarnaev', 'Tsarnaev', 'He', 'items', 'who'.",
+            "The 'passengerartifact' argument denotes the entity that is being relocated. Examples are 'Suspect', 'Dzhokhar Tsarnaev', 'Tsarnaev', 'He', 'items', 'who'.",
+            "The 'passengerartifact' argument represents the entity that is being transported. Examples are 'Suspect', 'Dzhokhar Tsarnaev', 'Tsarnaev', 'He', 'items', 'who'."
+        ],
+        "transporter": [
+            "The 'transporter' argument refers to the entity (person, group, or organization) responsible for moving or transporting the passengerartifact. Examples are 'They'.",
+            "The 'transporter' argument specifies the entity that is carrying out the transportation. Examples are 'They'.",
+            "The 'transporter' argument indicates the entity responsible for the movement. Examples are 'They'.",
+            "The 'transporter' argument denotes the entity that is facilitating the transportation. Examples are 'They'.",
+            "The 'transporter' argument represents the entity that is conducting the transportation. Examples are 'They'."
+        ],
+        "vehicle": [
+            "The 'vehicle' argument refers to the means of transportation used to move the passengerartifact. Examples are 'the van'.",
+            "The 'vehicle' argument specifies the mode of transport used in the movement. Examples are 'the van'.",
+            "The 'vehicle' argument indicates the transportation medium used. Examples are 'the van'.",
+            "The 'vehicle' argument denotes the conveyance used for the transportation. Examples are 'the van'.",
+            "The 'vehicle' argument represents the means of transport used. Examples are 'the van'."
+        ]
+    }
+}

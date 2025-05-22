@@ -1,0 +1,49 @@
+{
+    "Conflict_Attack_DetonateExplode(Event)": {
+        "description": [
+            "The Conflict_Attack_DetonateExplode event refers to an incident where an explosive device is intentionally detonated or exploded, causing damage, injury, or death. The event can be triggered by words such as 'exploded', 'detonated', 'blew up', 'bombing', 'attack', and 'explosion'. This event type is a subset of the broader Conflict_Attack event category.",
+            "Conflict_Attack_DetonateExplode involves the deliberate detonation or explosion of an explosive device, typically resulting in harm to people or property. The event can be triggered by terms like 'exploded', 'detonated', 'went off', 'bombing', 'attack', and 'explosion'. It is a specific type of Conflict_Attack event.",
+            "This event type, Conflict_Attack_DetonateExplode, captures scenarios where an explosive device is set off intentionally, leading to destruction or casualties. Triggers for this event include 'exploded', 'detonated', 'blew up', 'bombing', 'attack', and 'explosion'. It falls under the Conflict_Attack category.",
+            "Conflict_Attack_DetonateExplode describes events where an explosive device is purposefully detonated, causing damage or injury. Common triggers for this event are 'exploded', 'detonated', 'went off', 'bombing', 'attack', and 'explosion'. This event is a specific instance of Conflict_Attack.",
+            "The Conflict_Attack_DetonateExplode event involves the intentional explosion of an explosive device, resulting in harm or damage. It can be triggered by words such as 'exploded', 'detonated', 'blew up', 'bombing', 'attack', and 'explosion'. This event type is a subset of the broader Conflict_Attack category."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "attacker": [
+            "The 'attacker' argument refers to the individual or group responsible for carrying out the detonation or explosion. Examples are 'Jihadist', 'Ahmad Khan Rahami', 'a foreigner'.",
+            "The 'attacker' is the person or entity that orchestrates the explosion. Examples include 'terrorists', 'militants', 'suspect'.",
+            "In the context of Conflict_Attack_DetonateExplode, the 'attacker' is the party that initiates the explosion. Examples are 'extremists', 'bombers', 'perpetrators'.",
+            "The 'attacker' argument identifies who is behind the explosion. Examples include 'insurgents', 'criminals', 'culprits'.",
+            "The 'attacker' refers to the entity responsible for the explosion. Examples are 'radicals', 'assailants', 'offenders'."
+        ],
+        "explosivedevice": [
+            "The 'explosivedevice' argument refers to the specific explosive used in the event. Examples are 'bomb', 'pressure cooker bomb', 'time bomb'.",
+            "The 'explosivedevice' is the type of explosive that was detonated. Examples include 'IED', 'grenade', 'explosive device'.",
+            "In the Conflict_Attack_DetonateExplode event, the 'explosivedevice' is the object that exploded. Examples are 'pipe bomb', 'car bomb', 'suicide vest'.",
+            "The 'explosivedevice' argument specifies the explosive involved in the detonation. Examples include 'landmine', 'dynamite', 'explosive charge'.",
+            "The 'explosivedevice' refers to the explosive material or device used in the attack. Examples are 'bomb', 'explosive', 'detonator'."
+        ],
+        "instrument": [
+            "The 'instrument' argument refers to any tool or device used to facilitate the explosion. Examples are 'gun', 'cell phones', 'electric igniters'.",
+            "The 'instrument' is any object used in conjunction with the explosive device. Examples include 'triggering devices', 'circuit board', 'fuses'.",
+            "In the context of Conflict_Attack_DetonateExplode, the 'instrument' is an item that aids in the detonation. Examples are 'remote control', 'timer', 'detonator'.",
+            "The 'instrument' argument identifies tools used to set off the explosive. Examples include 'wires', 'batteries', 'switch'.",
+            "The 'instrument' refers to any device or tool used to trigger the explosion. Examples are 'cell phones', 'electric igniters', 'remote control'."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the explosion occurred. Examples are 'France', 'New York', 'Seaside Park'.",
+            "The 'place' is the geographical location of the explosion. Examples include 'Bangkok', 'Chelsea', 'Chao Praya river'.",
+            "In the Conflict_Attack_DetonateExplode event, the 'place' is where the detonation took place. Examples are 'Thailand', 'Elizabeth', 'Lyon'.",
+            "The 'place' argument specifies the site of the explosion. Examples include 'Erawan Shrine', 'Perth Amboy', 'Sathorn pier'.",
+            "The 'place' refers to the specific location affected by the explosion. Examples are 'Bangkok', 'Chelsea', 'Chao Praya river'."
+        ],
+        "target": [
+            "The 'target' argument refers to the entity that was intended to be harmed by the explosion. Examples are 'people', 'officers', 'civilians'.",
+            "The 'target' is the intended victim or object of the explosion. Examples include 'crowd', 'police', 'military patrols'.",
+            "In the Conflict_Attack_DetonateExplode event, the 'target' is who or what the attacker aimed to harm. Examples are 'public', 'bystanders', 'security forces'.",
+            "The 'target' argument identifies the intended recipient of the explosion's impact. Examples include 'citizens', 'authorities', 'passersby'.",
+            "The 'target' refers to the intended victim or group affected by the explosion. Examples are 'people', 'officers', 'civilians'."
+        ]
+    }
+}

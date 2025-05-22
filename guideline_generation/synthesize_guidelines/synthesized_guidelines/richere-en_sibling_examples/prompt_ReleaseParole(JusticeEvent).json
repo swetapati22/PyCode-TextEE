@@ -1,0 +1,35 @@
+{
+    "ReleaseParole(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of releasing an individual from custody, typically under specific conditions such as parole or bail. Example triggers include 'release', 'parole', 'bail', 'let free', and 'paroled'.",
+            "The event is characterized by the transition of a person from a state of confinement to a state of conditional freedom. This can involve legal or judicial decisions and often includes stipulations like house arrest or electronic monitoring.",
+            "Unlike the 'Sentence' event, which involves the imposition of a penalty, the 'ReleaseParole' event focuses on the conditional freedom granted to an individual who was previously confined.",
+            "Triggers such as 'sentence' or 'convicted' are indicative of the 'Sentence' or 'Convict' event types, not the 'ReleaseParole' event type. The 'ReleaseParole' event is specifically about the act of granting conditional freedom.",
+            "The outcomes of the 'ReleaseParole' event include the individual being allowed to leave custody under certain conditions, which is different from events like 'Pardon' where the individual is absolved of their crime or 'Acquit' where the individual is found not guilty."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'Marianne B. Bowler' in the context of a judge or legal authority responsible for granting parole or bail. The agent is the entity that authorizes the release.",
+            "The agent plays a crucial role in the event as they are the decision-makers who have the authority to release the individual. This can include judges, parole boards, or other legal authorities.",
+            "In cases where the agent is not explicitly mentioned, it can be inferred from the context, such as 'they' referring to a parole board or legal body.",
+            "Unlike the 'adjudicator' in the 'Sentence' event, the agent in the 'ReleaseParole' event is specifically involved in the act of releasing the individual rather than imposing a sentence.",
+            "Edge cases include scenarios where the agent is a collective entity, such as 'lawyers for the defense and prosecution' working together to request parole."
+        ],
+        "person": [
+            "Examples are 'Phillipos', 'criminal', 'she', 'Georges Cipriani', and 'he'. The person is the individual who is being released from custody.",
+            "The person is central to the event as they are the subject of the release. This can include individuals on bail, parole, or other forms of conditional release.",
+            "In some cases, the person may be referred to by pronouns such as 'he' or 'she', and the context will help identify the specific individual.",
+            "Unlike the 'defendant' in the 'Convict' event, the person in the 'ReleaseParole' event is not being judged or sentenced but is being granted conditional freedom.",
+            "Edge cases include scenarios where the person is part of a group, such as 'two women' or 'a former militant', and the context will help identify the specific individuals involved."
+        ],
+        "place": [
+            "Examples are 'Massachusetts', 'US', 'prison', and 'Ensisheim'. The place is the location where the release or parole is taking place or where the individual is being released from.",
+            "The place provides context to the event, indicating where the legal or judicial action is occurring. This can include specific locations like a court, a prison, or a broader geographical area.",
+            "In some cases, the place may be implied rather than explicitly stated, such as 'left prison' indicating the place of release.",
+            "Unlike the 'place' in the 'Extradite' event, which involves the origin and destination of the transfer, the place in the 'ReleaseParole' event is focused on the location of the release.",
+            "Edge cases include scenarios where the place is a general area, such as 'US', or a specific institution, such as 'an open prison near Strasbourg'."
+        ]
+    }
+}

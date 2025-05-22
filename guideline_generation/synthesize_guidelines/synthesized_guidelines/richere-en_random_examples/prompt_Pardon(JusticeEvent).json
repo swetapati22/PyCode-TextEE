@@ -1,0 +1,35 @@
+{
+    "Pardon(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of officially forgiving someone for a crime, often resulting in the removal of any remaining penalties or punishments. Example triggers include 'pardoned', 'pardons', and 'pardon'.",
+            "The event is characterized by an authoritative figure or body (adjudicator) granting forgiveness to an individual (defendant) for a crime. This event typically involves legal or governmental contexts.",
+            "Unlike the 'Acquit' event, which indicates a legal decision that someone is not guilty of a crime, the 'Pardon' event involves forgiving someone who has already been convicted. Triggers such as 'acquitted' are indicative of the 'Acquit' event, not the 'Pardon' event.",
+            "The outcome of a 'Pardon' event is the absolution of the defendant from the legal consequences of their crime, which differs from the 'Sentence' event where the outcome is the imposition of a penalty.",
+            "The 'Pardon' event can occur posthumously, meaning it can be granted after the defendant's death, which is not applicable to events like 'Sentence' or 'Acquit'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'The state of Alabama', 'Ford', and 'governors'. The adjudicator is the authoritative figure or body that grants the pardon. This role is crucial as it signifies the source of the legal forgiveness.",
+            "The adjudicator can be a government official, such as a governor or president, or a legal body, such as a court. For instance, 'Gov. Andrew Cuomo' in the context of granting pardons.",
+            "In some cases, the adjudicator may be a collective entity, such as 'the state of Alabama'. This highlights the involvement of a broader governmental or legal authority.",
+            "The adjudicator is responsible for the decision to pardon, which distinguishes this role from other participants in the justice system, such as prosecutors or defense attorneys.",
+            "Unlike the 'defendant', who is the recipient of the pardon, the adjudicator is the entity that has the power to grant the pardon. For example, 'Ford' pardoning 'Nixon'."
+        ],
+        "defendant": [
+            "Examples are 'Nixon', 'elites', and 'they'. The defendant is the individual or group that receives the pardon. This role is essential as it identifies who is being forgiven for their crime.",
+            "The defendant can be a single person, such as 'Nixon', or a group of people, such as 'the Scottsboro Boys'. This highlights the flexibility in the scope of the pardon.",
+            "In some cases, the defendant may be referred to by pronouns, such as 'he' or 'they', which requires careful context analysis to identify the correct entity.",
+            "The defendant is the party that benefits from the pardon, which distinguishes this role from other participants, such as victims or witnesses.",
+            "Unlike the 'adjudicator', who grants the pardon, the defendant is the recipient of the pardon. For example, 'Nixon' being pardoned by 'Ford'."
+        ],
+        "place": [
+            "Examples are 'Alabama', 'London', and 'Afghanistan'. The place is the location where the pardon is granted or relevant to the event. This role is important as it provides geographical context to the event.",
+            "The place can be a specific location, such as a city or state, where the pardon is issued. For instance, 'Alabama' in the context of pardoning the Scottsboro Boys.",
+            "In some cases, the place may be implied or not explicitly mentioned, requiring inference from the context. For example, 'London' in the context of a pardon event involving a London jury.",
+            "The place helps to situate the event within a legal or governmental jurisdiction, which is crucial for understanding the authority behind the pardon.",
+            "Unlike the 'adjudicator' or 'defendant', the place is not an active participant but rather a contextual element that provides additional information about the event. For example, 'Alabama' as the place where the pardon was granted."
+        ]
+    }
+}

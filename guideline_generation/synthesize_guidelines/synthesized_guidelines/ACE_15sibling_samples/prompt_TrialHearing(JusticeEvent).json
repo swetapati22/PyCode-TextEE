@@ -1,0 +1,42 @@
+{
+    "TrialHearing(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal proceedings where a case is being heard or tried in a court of law. Example triggers include 'hearing', 'trial', 'case', and 'tried'.",
+            "The event is characterized by the presence of an adjudicator, a defendant, and often a prosecutor, and it takes place in a specific location such as a court or city.",
+            "Unlike related events such as 'Appeal' or 'Sentence', this event focuses on the process of hearing or trying a case rather than the outcome or subsequent legal actions.",
+            "Triggers such as 'appealed' or 'sentences' are indicative of 'Appeal' or 'Sentence' events, not this event type. The focus here is on the ongoing legal process.",
+            "The outcome of this event is not the final judgment or sentence but the process of presenting evidence, arguments, and legal proceedings in front of an adjudicator."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'judge', 'court', or 'jury'. The adjudicator is the authority presiding over the trial or hearing, responsible for making legal decisions.",
+            "The adjudicator's role is crucial as they ensure the trial or hearing is conducted fairly and according to the law. For instance, 'judge' in 'an oklahoma city judge has ruled'.",
+            "In some cases, the adjudicator may be a panel or a specific court, such as 'Supreme Court' or 'District Court'.",
+            "Unlike the 'prosecutor' or 'defendant', the adjudicator is neutral and does not represent either party in the trial or hearing.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from the context, such as 'the court said'."
+        ],
+        "defendant": [
+            "Examples are 'nichols', 'Anwar Ibrahim', or 'Markovic'. The defendant is the individual or entity being tried or heard in the legal proceedings.",
+            "The defendant's role is to respond to the charges or claims brought against them. For instance, 'nichols' in 'to try nichols on murder charges'.",
+            "In some cases, there may be multiple defendants, such as 'officials' in 'Markovic will be tried along with 10 other Milosevic-era officials'.",
+            "Unlike the 'prosecutor', the defendant is the party accused or charged in the trial or hearing.",
+            "Edge cases include situations where the defendant is not explicitly named but can be inferred from the context, such as 'the wife' in 'Milosevic's wife will go on trial'."
+        ],
+        "place": [
+            "Examples are 'oklahoma city', 'Belgrade', or 'New York'. The place is the location where the trial or hearing is taking place.",
+            "The place is important as it provides context for the jurisdiction and legal authority overseeing the trial or hearing. For instance, 'oklahoma city' in 'an oklahoma city judge has ruled'.",
+            "In some cases, the place may be a specific court or city, such as 'Belgrade district court' or 'federal court in New York'.",
+            "Unlike the 'adjudicator' or 'defendant', the place is a geographical location and not a person or entity involved in the trial or hearing.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context, such as 'the court' in 'the court said'."
+        ],
+        "prosecutor": [
+            "Examples are 'prosecutors', 'lawyer', or 'prosecution'. The prosecutor is the individual or entity presenting the case against the defendant in the trial or hearing.",
+            "The prosecutor's role is to provide evidence and arguments to prove the defendant's guilt or liability. For instance, 'prosecutors' in 'prosecutors presented enough evidence'.",
+            "In some cases, the prosecutor may be a specific individual or a team, such as 'lawyer' or 'prosecution'.",
+            "Unlike the 'defendant', the prosecutor represents the state or the party bringing the charges or claims in the trial or hearing.",
+            "Edge cases include situations where the prosecutor is not explicitly named but can be inferred from the context, such as 'the prosecution' in 'following an agreement with the prosecution'."
+        ]
+    }
+}

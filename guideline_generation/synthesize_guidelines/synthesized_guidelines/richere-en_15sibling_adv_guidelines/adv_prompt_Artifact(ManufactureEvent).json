@@ -1,0 +1,11 @@
+{
+    "Artifact(ManufactureEvent)": {
+        "description": "The Artifact(ManufactureEvent) is triggered by the creation or construction of a tangible object or structure. This event involves an agent responsible for the creation, an artifact being created, and optionally a place where the creation occurs. It focuses on the process of making or manufacturing a new item, distinguishing it from events like PurchaseEvent, which involves acquiring an existing item, or RepairEvent, which focuses on fixing an existing item. Example triggers include 'building', 'makes', 'produce', and 'built'. The outcome of this event is the existence of a new artifact that did not exist before the event.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity responsible for the creation of the artifact. It can be an individual, group, or organization, and is the doer of the action that results in the creation. Examples include 'they' in 'they've been building schools', 'Diebold' in 'Diebold no longer makes voting machines', and 'district' in 'The district built a planetarium'. The agent may sometimes be implied rather than explicitly mentioned, but it is crucial for understanding who is responsible for the creation process.",
+            "artifact": "The artifact is the object or structure being created, and it is the focus of the creation process. Examples include 'schools' in 'they've been building schools', 'complex' in 'building this Muslim complex', and 'planetarium' in 'The district built a planetarium'. Artifacts can vary widely, from buildings and machines to smaller items like software or pharmaceuticals. The artifact distinguishes this event from other types, as it is the created object resulting from the event.",
+            "place": "The place is the location where the creation of the artifact occurs, providing geographical context for the event. Examples include 'country' in 'they've been building schools modularly in my country'. The place can be a specific location like a city or country, or a more general area. It may sometimes be inferred from the context, such as 'The factory produced new cars' implying the place is the factory. The place is important for understanding where the artifact is being created."
+        }
+    }
+}

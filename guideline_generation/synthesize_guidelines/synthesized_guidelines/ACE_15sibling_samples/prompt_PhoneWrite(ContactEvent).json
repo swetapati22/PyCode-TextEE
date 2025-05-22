@@ -1,0 +1,28 @@
+{
+    "PhoneWrite(ContactEvent)": {
+        "description": [
+            "The event is triggered by any form of communication made via telephone or similar devices, such as a phone call, telephone conversation, or message. Examples include 'called', 'spoke by phone', 'telephoned', and 'discussed over the phone'.",
+            "The event is characterized by the exchange of information or messages between two or more entities through a phone or similar device. Key characteristics include the presence of a communication device and the act of conveying information.",
+            "Unlike other ContactEvent types such as 'Meet' or 'Email', the PhoneWrite event specifically involves real-time or near-real-time communication through a phone or similar device. For instance, 'met' or 'emailed' would not trigger a PhoneWrite event.",
+            "Triggers such as 'called', 'spoke by phone', and 'telephoned' are indicative of the PhoneWrite event type, whereas triggers like 'met', 'emailed', or 'messaged' are indicative of other ContactEvent types.",
+            "The outcome of a PhoneWrite event is the successful exchange of information or messages between entities via a phone or similar device. This differs from other ContactEvent types where the medium of communication is different, such as face-to-face meetings or written correspondence."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are the individuals or groups involved in the phone communication. For instance, in 'The spokesman said by telephone from Agartala', 'spokesman' is the entity.",
+            "The entity argument represents the participants in the phone communication. In 'French President Jacques Chirac received a call from Bush', both 'Jacques Chirac' and 'Bush' are entities.",
+            "Entities are crucial as they identify who is involved in the communication. For example, in 'US President George W. Bush told Canadian Prime Minister Jean Chretien by telephone', 'George W. Bush' and 'Jean Chretien' are the entities.",
+            "In cases where pronouns are used, the entities should be resolved to their proper nouns. For example, in 'he called Bush', 'he' should be resolved to the specific individual it refers to.",
+            "Entities can include titles or roles, such as 'President', 'Prime Minister', or 'spokesman', as long as they clearly identify the participants in the phone communication."
+        ],
+        "place": [
+            "Examples are the locations from which the phone communication is made or received. For instance, in 'The spokesman said by telephone from Agartala', 'Agartala' is the place.",
+            "The place argument indicates the geographical location associated with the phone communication. In 'He called from his office in New York', 'New York' is the place.",
+            "Places are important as they provide context to the communication. For example, in 'She spoke by phone from Paris', 'Paris' is the place.",
+            "In some cases, the place may be implied rather than explicitly stated. For example, 'He called from home' implies a residential location, which can be inferred if necessary.",
+            "The place can also refer to broader locations such as countries or cities, as long as they provide relevant context to the phone communication. For instance, 'He called from France' uses 'France' as the place."
+        ]
+    }
+}

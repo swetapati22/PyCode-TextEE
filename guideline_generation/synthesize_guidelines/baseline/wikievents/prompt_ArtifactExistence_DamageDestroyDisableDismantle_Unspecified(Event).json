@@ -1,0 +1,42 @@
+{
+    "ArtifactExistence_DamageDestroyDisableDismantle_Unspecified(Event)": {
+        "description": [
+            "The event ArtifactExistence_DamageDestroyDisableDismantle_Unspecified refers to any occurrence where an artifact is damaged, destroyed, disabled, or dismantled without specifying the exact nature of the action. The event can be triggered by verbs or nouns indicating destruction, damage, or disablement, such as 'destroyed', 'damaged', 'dismantled', 'devastation', 'blown', 'suffered', etc. This event type captures the general notion of harm or destruction to an artifact without detailing the specific method or extent of the damage.",
+            "ArtifactExistence_DamageDestroyDisableDismantle_Unspecified is an event type that captures instances where an artifact undergoes damage, destruction, disablement, or dismantling. The event can be triggered by terms like 'wrecked', 'demolished', 'ruined', 'crippled', 'downed', etc. It encompasses a broad range of destructive actions without specifying the exact nature of the action.",
+            "This event type, ArtifactExistence_DamageDestroyDisableDismantle_Unspecified, involves any form of harm, destruction, or disablement to an artifact. The event can be triggered by words such as 'obliterated', 'shattered', 'wrecked', 'sabotaged', 'vandalized', etc. It is used to annotate general destructive actions affecting artifacts.",
+            "ArtifactExistence_DamageDestroyDisableDismantle_Unspecified refers to events where an artifact is subjected to damage, destruction, disablement, or dismantling. The event can be triggered by expressions like 'annihilated', 'broken', 'crippled', 'demolished', 'wrecked', etc. This event type is used when the specific nature of the destructive action is not detailed.",
+            "The event type ArtifactExistence_DamageDestroyDisableDismantle_Unspecified captures occurrences where an artifact is harmed, destroyed, disabled, or dismantled. The event can be triggered by terms such as 'devastated', 'damaged', 'destroyed', 'disabled', 'dismantled', etc. It is used to annotate general destructive actions without specifying the exact method or extent of the damage."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifact": [
+            "The 'artifact' argument refers to the object or entity that is being damaged, destroyed, disabled, or dismantled in the event. Examples are 'installations', 'drone', 'sleepers', 'Smithfield bus station', 'York Road railway terminus', 'Botanic Avenue', 'Antrim Road', 'centre'. This argument identifies the target of the destructive action.",
+            "The 'artifact' argument denotes the item or entity that suffers damage, destruction, disablement, or dismantling. Examples are 'VBIEDs', 'bombs', 'cars', 'houses', 'shopping centre', 'bridge', 'parapet'. It specifies what is being affected by the event.",
+            "In the context of this event, the 'artifact' argument is the object or entity that is harmed, destroyed, disabled, or dismantled. Examples are 'military bases', 'weapons', 'supplies', 'security installations', 'checkpoints', 'government forces'. It indicates the target of the destructive action.",
+            "The 'artifact' argument represents the object or entity that undergoes damage, destruction, disablement, or dismantling. Examples are 'bus station', 'railway terminus', 'bread van', 'York Hotel', 'Cavehill Road Shopping Centre'. This argument identifies what is being impacted by the event.",
+            "The 'artifact' argument is the object or entity that is damaged, destroyed, disabled, or dismantled in the event. Examples are 'Oxford Street bus station', 'Smithfield bus station', 'York Road railway terminus', 'Botanic Avenue', 'Antrim Road - Limeston Road corner'. It specifies the target of the destructive action."
+        ],
+        "damagerdestroyer": [
+            "The 'damagerdestroyer' argument refers to the entity or agent responsible for causing the damage, destruction, disablement, or dismantling of the artifact. Examples are 'The group', 'police', 'terrorists', 'bombers', 'attackers'. This argument identifies who or what is causing the destructive action.",
+            "The 'damagerdestroyer' argument denotes the person, group, or entity that inflicts damage, destruction, disablement, or dismantling on the artifact. Examples are 'Al Shabaab', 'IRA', 'military forces', 'vandals', 'saboteurs'. It specifies the agent responsible for the event.",
+            "In this event, the 'damagerdestroyer' argument is the entity or agent that causes the artifact to be damaged, destroyed, disabled, or dismantled. Examples are 'terrorist group', 'military', 'police', 'insurgents', 'rebels'. This argument identifies the perpetrator of the destructive action.",
+            "The 'damagerdestroyer' argument represents the entity or agent responsible for the damage, destruction, disablement, or dismantling of the artifact. Examples are 'attackers', 'bombers', 'military forces', 'terrorists', 'vandals'. It specifies who or what is causing the event.",
+            "The 'damagerdestroyer' argument is the person, group, or entity that causes the artifact to be damaged, destroyed, disabled, or dismantled. Examples are 'Al Shabaab', 'IRA', 'police', 'military', 'terrorists'. This argument identifies the agent responsible for the destructive action."
+        ],
+        "instrument": [
+            "The 'instrument' argument refers to the tool, device, or method used to cause the damage, destruction, disablement, or dismantling of the artifact. Examples are 'VBIEDs', 'bombs', 'drone', 'explosives', 'hijacked vehicle'. This argument specifies what is used to carry out the destructive action.",
+            "The 'instrument' argument denotes the means or method by which the artifact is damaged, destroyed, disabled, or dismantled. Examples are 'car bomb', 'IED', 'explosive device', 'hijacked lorry', 'bag left on the bridge'. It identifies the tool or method used in the event.",
+            "In this event, the 'instrument' argument is the tool, device, or method used to inflict damage, destruction, disablement, or dismantling on the artifact. Examples are 'explosives', 'drone', 'bomb', 'car bomb', 'hijacked vehicle'. This argument specifies what is used to cause the event.",
+            "The 'instrument' argument represents the tool, device, or method used to cause the damage, destruction, disablement, or dismantling of the artifact. Examples are 'VBIEDs', 'bombs', 'explosives', 'drone', 'hijacked vehicle'. It identifies the means used to carry out the destructive action.",
+            "The 'instrument' argument is the tool, device, or method used to cause the damage, destruction, disablement, or dismantling of the artifact. Examples are 'car bomb', 'IED', 'explosive device', 'hijacked lorry', 'bag left on the bridge'. This argument specifies what is used to carry out the event."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the artifact is damaged, destroyed, disabled, or dismantled. Examples are 'capital', 'Mogadishu', 'Somalia', 'Caracas', 'Belfast'. This argument identifies where the destructive action takes place.",
+            "The 'place' argument denotes the geographical location where the artifact undergoes damage, destruction, disablement, or dismantling. Examples are 'military base', 'government building', 'shopping centre', 'bus station', 'railway terminus'. It specifies the location of the event.",
+            "In this event, the 'place' argument is the location where the artifact is damaged, destroyed, disabled, or dismantled. Examples are 'Somalia', 'Mogadishu', 'Caracas', 'Belfast', 'York Hotel'. This argument identifies where the event occurs.",
+            "The 'place' argument represents the location where the artifact is damaged, destroyed, disabled, or dismantled. Examples are 'capital', 'military base', 'government building', 'shopping centre', 'bus station'. It specifies the geographical location of the destructive action.",
+            "The 'place' argument is the location where the artifact is damaged, destroyed, disabled, or dismantled. Examples are 'Mogadishu', 'Somalia', 'Caracas', 'Belfast', 'York Hotel'. This argument identifies where the event takes place."
+        ]
+    }
+}

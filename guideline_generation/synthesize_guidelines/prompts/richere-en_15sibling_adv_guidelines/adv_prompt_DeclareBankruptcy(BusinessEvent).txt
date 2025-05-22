@@ -1,0 +1,78 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_DeclareBankruptcy(BusinessEvent)
+```json
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": [
+            "The event is triggered by a company or organization formally declaring its inability to pay its debts, often leading to legal proceedings. Example triggers include 'bankruptcy', 'filed for bankruptcy', and 'entered bankruptcy reorganization'.",
+            "The event is characterized by the financial failure of an organization, resulting in legal protection from creditors. Key characteristics include the involvement of legal processes and the impact on stakeholders such as employees and shareholders.",
+            "Unlike events such as StartOrg or MergeOrg, this event does not involve the creation or combination of organizations but rather the cessation of their financial viability. Triggers such as 'open' or 'merge' are indicative of StartOrg and MergeOrg events, respectively, not this event type.",
+            "The outcomes of this event typically include legal proceedings, asset liquidation, and significant financial losses for stakeholders. This contrasts with EndOrg events, which may involve voluntary closure without financial insolvency.",
+            "Triggers such as 'bankruptcy' and 'filed for bankruptcy' are specific to this event type and indicate a formal declaration of financial insolvency. Unlike EndOrg events, this event involves legal protection from creditors and is not merely a cessation of operations."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "The 'org' argument refers to the organization or company that is declaring bankruptcy. Examples are 'company' in 'the once highflying company slid into bankruptcy in 2001'.",
+            "This argument is crucial as it identifies the entity undergoing financial failure. Examples are 'which' in 'Patriot, which entered bankruptcy reorganization last year'.",
+            "The 'org' argument can be any entity, including companies, non-profits, or other organizations. Examples are 'recipient' in 'a manufacturer of batteries for electric vehicles and recipient of Stimulus largesse, filed for bankruptcy'.",
+            "In some cases, the 'org' argument may be implied or referred to indirectly. Examples are 'Recipient' in 'Yet Another Green Energy Stimulus Recipient Hits the Skids'.",
+            "The 'org' argument distinguishes the entity from other participants in the event, such as creditors or stakeholders. Examples are 'Jesuits' in 'the Jesuits on the west coast are still living high off the hog despite the many bankruptcies'."
+        ]
+    }
+}
+```

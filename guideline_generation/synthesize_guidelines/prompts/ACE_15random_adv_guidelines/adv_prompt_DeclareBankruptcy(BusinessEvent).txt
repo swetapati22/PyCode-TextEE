@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_DeclareBankruptcy(BusinessEvent)
+```json
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": [
+            "The event is triggered by a company or organization declaring bankruptcy, indicating financial insolvency. Example triggers include 'bankruptcy', 'filed for bankruptcy', and 'chapter 11'.",
+            "The event is characterized by the formal process of a business entity being unable to meet its debt obligations and seeking legal relief. Key characteristics include legal filings and financial distress.",
+            "Unlike other BusinessEvents such as mergers or acquisitions, DeclareBankruptcy specifically involves the cessation of normal business operations due to financial failure. Triggers such as 'merger' or 'acquisition' are indicative of other BusinessEvents, not this event type.",
+            "Triggers and outcomes for DeclareBankruptcy differ from events like 'TransferOwnership' or 'Sue'. While 'TransferOwnership' involves the transfer of assets or control, and 'Sue' involves legal action, DeclareBankruptcy focuses on financial insolvency and legal protection from creditors.",
+            "The event is not triggered by general financial difficulties or restructuring efforts unless they explicitly involve legal bankruptcy proceedings. For example, 'financial trouble' or 'restructuring' without mention of bankruptcy does not trigger this event type."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'worldcom', 'Enron Corp', 'united', 'amr', 'usairways', 'american', 'company', 'airline'. The 'org' argument identifies the organization or company declaring bankruptcy.",
+            "The 'org' argument is crucial as it specifies the entity undergoing financial insolvency. It helps in understanding the scope and impact of the bankruptcy event.",
+            "In cases where the organization is referred to by a pronoun such as 'it', the context should clearly indicate the entity. For example, 'american says it will file for bankruptcy' where 'it' refers to 'american'.",
+            "Unlike events involving individuals or non-business entities, the 'org' argument in DeclareBankruptcy always refers to a business or corporate entity. For instance, 'Jean-Rene Fourtou' in a personnel event is not applicable here.",
+            "Edge cases include situations where the organization is part of a larger conglomerate or subsidiary. The specific entity declaring bankruptcy should be identified, such as 'Enron Corp' rather than just 'Enron'."
+        ],
+        "place": [
+            "Examples are 'united states', 'Manhattan', 'court'. The 'place' argument identifies the location where the bankruptcy event is taking place or being filed.",
+            "The 'place' argument is important as it provides geographical context to the bankruptcy event, indicating where legal proceedings or business operations are affected.",
+            "In cases where the location is not explicitly mentioned, the broader context should be considered. For example, 'filed in federal bankruptcy court' implies a legal location even if not named.",
+            "Unlike events that occur in non-legal settings, the 'place' argument in DeclareBankruptcy often involves legal or corporate locations. For instance, 'Paris' in a personnel event is not applicable here.",
+            "Edge cases include multinational corporations where the place of bankruptcy filing might differ from the primary location of business operations. The specific legal jurisdiction should be identified, such as 'Manhattan' for a court filing."
+        ]
+    }
+}
+```

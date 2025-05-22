@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_TransferMoney(TransactionEvent)
+```json
+{
+    "TransferMoney(TransactionEvent)": {
+        "description": [
+            "The event is triggered by actions involving the transfer of money from one entity to another. Example triggers include 'pay', 'give', 'settle', 'funded', and 'cost'.",
+            "The event is characterized by the movement of monetary value, typically involving a giver and a recipient. It is distinct from other transaction events that may involve the transfer of goods or services.",
+            "Unlike TransferOwnership, this event does not involve the transfer of physical or intellectual property. Triggers such as 'providing' and 'selling' are indicative of TransferOwnership, not TransferMoney.",
+            "The event often involves financial transactions, settlements, fines, or payments, and can occur in various contexts such as legal settlements, donations, or commercial transactions.",
+            "The outcome of the event is the successful transfer of money, which can be identified by the presence of monetary amounts and the entities involved in the transaction."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "beneficiary": [
+            "The beneficiary is the entity that ultimately benefits from the transfer of money. Examples are 'Democrats' in the context of donations or 'neighbor' in the context of compensation.",
+            "The beneficiary is often the recipient of the financial gain, but not necessarily the direct recipient of the money. For instance, in a donation, the beneficiary could be the organization that benefits from the funds.",
+            "In legal contexts, the beneficiary might be the party awarded damages or compensation. For example, 'clients' in a settlement case.",
+            "The beneficiary can be an individual, organization, or group. Examples include 'research center' funded by a donation or 'neighbor' compensated for distress.",
+            "Unlike the recipient, the beneficiary is the one who gains from the transaction, which may not always be the direct receiver of the funds."
+        ],
+        "giver": [
+            "The giver is the entity that provides the money in the transaction. Examples are 'Planned Parenthood' in a donation or 'girls' in a compensation case.",
+            "The giver is responsible for initiating the transfer of money, whether voluntarily or as a result of a legal obligation. For instance, 'Sotheby's' in a settlement agreement.",
+            "In commercial contexts, the giver could be a business or individual making a payment. Examples include 'houses' in an auction settlement or 'Mikhail Gorbachev' funding a research center.",
+            "The giver can be an individual, organization, or group. Examples include 'Christie's' in a settlement or 'clients' paying a fine.",
+            "Unlike the beneficiary, the giver is the source of the funds being transferred, regardless of the reason for the transfer."
+        ],
+        "place": [
+            "The place is the location where the transaction occurs or is relevant. Examples are 'Colorado' in a legal ruling or 'United States' in an auction settlement.",
+            "The place can refer to the jurisdiction or geographical area associated with the transaction. For instance, 'Belgrade' in a property transfer case.",
+            "In some cases, the place may be implied by the context of the transaction, such as 'outside the United States' in an international settlement.",
+            "The place is important for understanding the legal and contextual background of the transaction. Examples include 'Colorado' in a court ruling or '34 countries' where a company operates.",
+            "Unlike the giver or recipient, the place is a geographical reference that provides context to the transaction but does not directly participate in the transfer."
+        ],
+        "recipient": [
+            "The recipient is the entity that directly receives the money in the transaction. Examples are 'Democrats' in a donation or 'neighbor' in a compensation case.",
+            "The recipient is the immediate receiver of the funds, which may or may not be the ultimate beneficiary. For instance, 'center' funded by a donation from 'Mikhail Gorbachev'.",
+            "In legal contexts, the recipient might be the party receiving the payment as part of a settlement. Examples include 'firms' receiving a fine payment.",
+            "The recipient can be an individual, organization, or group. Examples include 'neighbor' in a compensation case or 'center' funded by a donation.",
+            "Unlike the beneficiary, the recipient is the direct receiver of the funds, which may be passed on to the ultimate beneficiary."
+        ]
+    }
+}
+```

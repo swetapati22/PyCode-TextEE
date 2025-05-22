@@ -1,0 +1,28 @@
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": [
+            "The event is triggered by a company or organization formally declaring its inability to pay its debts, often through legal proceedings. Example triggers include 'bankruptcy', 'filed for bankruptcy', and 'declared bankrupt'.",
+            "The event is characterized by the financial failure of an organization, leading to legal actions such as filing for bankruptcy protection. Key characteristics include legal filings and financial distress.",
+            "The event involves an organization undergoing a legal process to manage its debts and obligations, often resulting in reorganization or liquidation. Unlike events like 'MergeOrg', this event focuses on financial insolvency rather than structural changes.",
+            "Triggers such as 'bankruptcy' and 'filed for bankruptcy' are indicative of this event type, not events like 'EndOrg' which involve the dissolution of an organization without necessarily involving financial insolvency.",
+            "The outcome of this event typically includes legal proceedings, potential reorganization, or liquidation of the organization's assets. This differs from 'StartOrg', which involves the creation of a new organization, not the financial failure of an existing one."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'worldcom', 'Enron Corp', 'united', and 'amr'. The 'org' argument identifies the organization that is declaring bankruptcy. It is crucial as it specifies the entity undergoing financial distress.",
+            "The 'org' argument is the primary subject of the bankruptcy event. For instance, in 'worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states', 'worldcom' is the organization declaring bankruptcy.",
+            "In cases where multiple organizations are mentioned, the 'org' argument should focus on the one directly associated with the bankruptcy trigger. For example, 'Bankrupt energy giant Enron Corp' clearly identifies 'Enron Corp' as the organization.",
+            "The 'org' argument can also be inferred from context if not explicitly mentioned. For example, 'despite operating under bankruptcy laws, united posted the best on time performance' implies 'united' as the organization.",
+            "Edge cases include scenarios where the organization is part of a larger group or subsidiary. The 'org' argument should still identify the specific entity declaring bankruptcy, such as 'amr' in 'amr will have to file for bankruptcy'."
+        ],
+        "place": [
+            "Examples are 'united states'. The 'place' argument identifies the geographical location where the bankruptcy event is taking place. It provides context to the event's jurisdiction.",
+            "The 'place' argument is important for understanding the legal and economic environment of the bankruptcy. For instance, 'worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states' specifies 'united states' as the location.",
+            "In cases where the location is not explicitly mentioned, it can sometimes be inferred from the context or other details in the text. For example, 'filed a pair of motions in federal bankruptcy court in Manhattan' implies 'Manhattan' as the place.",
+            "The 'place' argument can also include broader regions or countries, depending on the context. For example, 'the largest corporate bankruptcy in the united states' clearly identifies the country.",
+            "Edge cases include multinational organizations where the bankruptcy might affect multiple locations. The 'place' argument should focus on the primary location of the legal proceedings or the most relevant jurisdiction."
+        ]
+    }
+}

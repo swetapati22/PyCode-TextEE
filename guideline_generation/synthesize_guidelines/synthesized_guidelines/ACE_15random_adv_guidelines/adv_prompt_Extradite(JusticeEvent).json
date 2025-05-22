@@ -1,0 +1,12 @@
+{
+    "Extradite(JusticeEvent)": {
+        "description": "The Extradite event is triggered by the legal process of transferring a person from one jurisdiction to another for legal proceedings, such as facing charges or serving a sentence. This event involves formal actions by legal authorities and the movement of the individual across jurisdictions. Key triggers include terms like 'extradite', 'extradition', and 'extraditing'. It is distinct from events like 'ArrestJail' and 'ReleaseParole', as it specifically involves cross-jurisdictional transfer rather than initial detention or release from custody.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the authority or entity responsible for initiating or carrying out the extradition process, typically a legal or governmental body. Examples include 'court', 'government', and 'police department'.",
+            "destination": "The destination is the place to which the person is being extradited, where they will face legal proceedings or serve a sentence. Examples include 'jurisdiction', 'Hague', and 'state'.",
+            "origin": "The origin is the place from which the person is being extradited, where they are currently held or from where they are being transferred. Examples include 'state' and 'headquarters'.",
+            "person": "The person is the individual being extradited, the subject of the legal transfer. Examples include 'she', 'him', and 'her'."
+        }
+    }
+}

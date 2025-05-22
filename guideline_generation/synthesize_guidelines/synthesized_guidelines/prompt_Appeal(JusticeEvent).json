@@ -1,0 +1,35 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions or processes where a party formally requests a higher authority to review and change a decision made by a lower authority. Example triggers include 'appealed', 'appeal', and 'appeals'.",
+            "The event is triggered by the act of seeking a judicial review of a decision, typically in a legal context. Key characteristics include the involvement of a higher court or authority and the presence of a prior decision that is being contested.",
+            "The event is triggered by formal requests for reconsideration of a legal decision, often involving terms like 'appeal', 'filed an appeal', or 'appeals'. Unlike the 'Execute' event, this event does not involve carrying out a sentence but rather contesting it.",
+            "The event is triggered by legal actions aimed at overturning or modifying a previous judgment. Triggers such as 'appeal' and 'appeals' indicate this event type, not to be confused with 'ChargeIndict' which involves initiating legal charges.",
+            "The event is triggered by the process of challenging a legal decision in a higher court. Unlike 'Convict' or 'Sentence', which involve the determination of guilt or punishment, this event focuses on the review and potential reversal of such decisions."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'Supreme Court', 'Federal Court', 'court'. The adjudicator is the authority or body that reviews the appeal. It is crucial as it represents the higher authority that has the power to overturn or uphold the decision.",
+            "Examples are 'Supreme Court', 'court of appeal', 'judge'. The adjudicator is the entity responsible for making the final decision on the appeal. This argument is important as it identifies the reviewing authority.",
+            "Examples are 'Supreme Court', 'Federal Court', 'court'. The adjudicator is the judicial body or official that hears the appeal. This argument is essential as it indicates the level of judicial review being sought.",
+            "Examples are 'Supreme Court', 'court', 'judge'. The adjudicator is the higher court or judicial authority that the appeal is directed to. This argument is significant as it denotes the authority capable of altering the original decision.",
+            "Examples are 'Supreme Court', 'Federal Court', 'court'. The adjudicator is the legal body that has the jurisdiction to review and decide on the appeal. This argument is key as it highlights the entity with the power to change the outcome of the case."
+        ],
+        "place": [
+            "Examples are 'Indonesia', 'court', 'Federal Court'. The place is the location where the appeal is filed or heard. It is important as it provides context to the jurisdiction and venue of the appeal process.",
+            "Examples are 'Indonesia', 'court', 'Federal Court'. The place indicates the geographical or institutional setting of the appeal. This argument is crucial as it situates the event within a specific legal framework.",
+            "Examples are 'Indonesia', 'court', 'Federal Court'. The place refers to the physical or organizational location where the appeal is processed. This argument is significant as it helps identify the jurisdiction involved.",
+            "Examples are 'Indonesia', 'court', 'Federal Court'. The place denotes the venue where the appeal is lodged or adjudicated. This argument is essential as it provides the setting for the legal proceedings.",
+            "Examples are 'Indonesia', 'court', 'Federal Court'. The place is the specific location or institution where the appeal takes place. This argument is important as it contextualizes the event within a particular legal environment."
+        ],
+        "plaintiff": [
+            "Examples are 'five', 'their', 'offender'. The plaintiff is the party that initiates the appeal. This argument is crucial as it identifies who is seeking the review of the decision.",
+            "Examples are 'five', 'their', 'convict'. The plaintiff is the individual or group appealing the decision. This argument is important as it highlights the party contesting the original judgment.",
+            "Examples are 'five', 'their', 'Anwar'. The plaintiff is the person or entity that files the appeal. This argument is significant as it denotes the party challenging the decision.",
+            "Examples are 'five', 'their', 'his'. The plaintiff is the appellant seeking a review of the decision. This argument is essential as it identifies the party requesting the higher authority's intervention.",
+            "Examples are 'five', 'their', 'He'. The plaintiff is the party appealing the decision. This argument is key as it indicates who is dissatisfied with the original ruling and is seeking a change."
+        ]
+    }
+}

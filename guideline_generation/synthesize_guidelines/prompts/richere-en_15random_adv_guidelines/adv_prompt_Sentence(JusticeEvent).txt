@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Sentence(JusticeEvent)
+```json
+{
+    "Sentence(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the imposition of a judicial punishment or penalty on a defendant. Example triggers include 'sentence', 'got', 'served', 'punishment', and 'sentenced'.",
+            "The event is characterized by the formal declaration of a punishment by an adjudicator, typically a court or judge, directed at a defendant. This can include various forms of punishment such as imprisonment, fines, or other penalties.",
+            "Unlike the Convict event, which focuses on the determination of guilt, the Sentence event specifically pertains to the punishment phase following a conviction. For example, 'convicted' is indicative of the Convict event, not the Sentence event.",
+            "Triggers such as 'sentence' and 'sentenced' are indicative of the Sentence event, which involves the final decision on the punishment to be imposed on the defendant. This is distinct from the ChargeIndict event, which involves the formal accusation of a crime.",
+            "The outcome of the Sentence event is the imposition of a specific penalty on the defendant, which can vary in severity and type. This event does not include the process of appealing or overturning the sentence, which would be covered by the Appeal event."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', or any legal authority responsible for issuing the sentence. The adjudicator plays a crucial role in determining the appropriate punishment for the defendant.",
+            "The adjudicator is the entity that has the legal authority to impose a sentence. For instance, in 'The court sentenced him to 10 years in prison', 'court' is the adjudicator.",
+            "In cases where the adjudicator is not explicitly mentioned, it can often be inferred from the context. For example, 'He was sentenced to life in prison' implies a judicial authority as the adjudicator.",
+            "The adjudicator can be a specific judge or a general term like 'court'. For example, 'Judge Smith sentenced the defendant to community service' and 'The court sentenced him to probation' both identify the adjudicator.",
+            "Unlike the prosecutor or defense attorney, the adjudicator is the neutral party responsible for delivering the sentence. For example, 'The jury found him guilty, and the judge sentenced him to 5 years' highlights the judge as the adjudicator."
+        ],
+        "defendant": [
+            "Examples are 'mayor', 'he', 'guy', 'man', or any individual who is receiving the sentence. The defendant is the person being punished for a crime.",
+            "The defendant is the individual who has been found guilty and is now facing the consequences of their actions. For instance, in 'The defendant was sentenced to 3 years in prison', 'defendant' is the person being sentenced.",
+            "In some cases, the defendant may be referred to by a pronoun or a descriptive term. For example, 'He got 7 years' and 'The man was sentenced to probation' both identify the defendant.",
+            "The defendant is the subject of the sentence and is distinct from other parties involved in the judicial process, such as the victim or the prosecutor. For example, 'The court sentenced the defendant to community service' clearly identifies the defendant.",
+            "Unlike the plaintiff or the victim, the defendant is the one who is being punished. For example, 'The judge sentenced him to 10 years' highlights 'him' as the defendant."
+        ],
+        "place": [
+            "Examples are 'Salonika', 'Greece', 'court', or any location where the sentencing takes place. The place provides context for where the judicial event is occurring.",
+            "The place can refer to the city, country, or specific court where the sentence is issued. For instance, in 'The court in New York sentenced him to 5 years', 'New York' is the place.",
+            "In some cases, the place may be implied rather than explicitly stated. For example, 'He was sentenced to life in prison' may imply a specific court or jurisdiction.",
+            "The place is important for understanding the legal context and jurisdiction of the sentence. For example, 'The court in Los Angeles sentenced the defendant to community service' identifies 'Los Angeles' as the place.",
+            "Unlike the location of the crime or the residence of the defendant, the place in the Sentence event specifically refers to where the sentencing occurs. For example, 'The judge in Chicago sentenced him to probation' highlights 'Chicago' as the place."
+        ]
+    }
+}
+```

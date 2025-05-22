@@ -1,0 +1,62 @@
+{
+    "Attack(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions or events involving physical harm or destruction caused by a deliberate act, such as 'killed,' 'raping,' or 'blast.'",
+            "The event is characterized by a direct and intentional action aimed at a specific target, often resulting in casualties or damage.",
+            "Triggers for this event type often include violent verbs or nouns related to assault or harm, such as 'explosion,' 'bombing,' or 'attacked.'",
+            "Unlike Demonstrate(ConflictEvent), which focuses on protests or collective gatherings, Attack(ConflictEvent) is focused on physical violence or destruction aimed at specific entities or locations.",
+            "The outcome of this event type is generally a tangible impact on victims or targets, distinguishing it from events with purely symbolic or communicative actions like Demonstrate."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event is triggered by explicit verbs or nouns indicating violent actions, such as 'killed,' 'raping,' or 'explosion.'",
+            "Triggers often describe the action's intensity and the method used, such as 'tore through' or 'detonated.'",
+            "Edge cases include events where harm is implied but not explicitly stated, such as 'attacked' versus 'clashed'—the former suggests direct violence.",
+            "Triggers like 'bomb' and 'blast' indicate Attack, while similar terms like 'protest' are not triggers for this event type.",
+            "Complex cases like 'shooting spree' may serve as valid triggers, provided there is an identifiable target or victim."
+        ],
+        "agent": [
+            "Examples are the entity responsible for initiating the attack, such as 'luster' in a sexual assault or 'mob' in a violent mob action.",
+            "The agent often has a clear role as the instigator, distinguishing them from incidental participants.",
+            "Agents can be individuals ('terrorist') or groups ('militia'), emphasizing their active role in the attack.",
+            "Unlike the attacker, the agent may refer to a broader orchestrating body behind the action.",
+            "In ambiguous contexts, the agent can be inferred when explicitly stated actors are absent, e.g., 'government forces' in shelling cases."
+        ],
+        "attacker": [
+            "Examples are the specific individual or group carrying out the attack, such as 'mob' in Example 1.",
+            "The attacker must have a direct involvement in the physical act, distinguishing them from the broader 'agent.'",
+            "Edge cases include scenarios where the attacker is indirectly implied, such as in covert operations.",
+            "Unlike the victim, the attacker is always the perpetrator, even if the victim retaliates later.",
+            "In cases of multiple attackers, all involved entities are valid as 'attacker,' e.g., 'mob and accomplices.'"
+        ],
+        "instrument": [
+            "Examples are the tools or weapons used in the attack, such as 'machetes' and 'spears' in Example 1.",
+            "Instruments can range from physical objects ('gun,' 'knife') to less tangible entities ('poison,' 'explosive device').",
+            "Complex cases include indirect instruments, like 'biological weapons,' where the harm is mediated through secondary means.",
+            "Unlike the agent, the instrument is passive and serves as the means to carry out the attack.",
+            "Events involving no physical instrument may exclude this argument entirely, e.g., verbal or psychological abuse."
+        ],
+        "place": [
+            "Examples are the specific location where the attack occurred, such as 'airport' or 'shed' in Examples 3 and 4.",
+            "Places must be geographically identifiable and relevant to the event, excluding vague terms like 'nearby.'",
+            "Unlike the target, the place refers to the broader location rather than the entity directly affected.",
+            "Ambiguities in overlapping locations, such as a 'city' versus a 'building,' should be resolved based on context.",
+            "In cases of cross-location attacks, all significant places can be mentioned, e.g., 'bus terminal and airport.'"
+        ],
+        "target": [
+            "Examples are the direct entities affected by the attack, such as 'them' or 'terminal' in Examples 1 and 5.",
+            "Targets are specific and directly impacted by the action, distinguishing them from the place or victim.",
+            "Edge cases include implied targets, such as when only damage is mentioned ('infrastructure').",
+            "Unlike the victim, the target can be non-living entities like 'building' or 'vehicle.'",
+            "Multiple targets should be clearly enumerated, especially in large-scale attacks."
+        ],
+        "victim": [
+            "Examples are individuals or groups harmed as a result of the attack, such as 'women' in Example 2.",
+            "Victims must be directly impacted by the attack and may include physical or psychological harm.",
+            "Unlike the target, the victim is always human or animate, emphasizing the harm suffered.",
+            "Complex cases include indirect harm victims, such as 'bystanders' injured in collateral damage.",
+            "Multiple victims should be clearly listed, including their specific roles if applicable (e.g., 'civilians and soldiers')."
+        ]
+    }
+}

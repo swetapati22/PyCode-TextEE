@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_StartOrg(BusinessEvent)
+```json
+{
+    "StartOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the initiation or establishment of an organization, such as a business, foundation, or government entity. Example triggers include 'open', 'set up', 'create', 'launches', 'founders', 'established', and 'creation'.",
+            "The event is characterized by the formation of a new entity that did not previously exist. This can include the opening of a new store, the creation of a new foundation, or the establishment of a new government body.",
+            "Unlike the MergeOrg event, which involves the combination of existing organizations, the StartOrg event focuses on the creation of a new, standalone entity. Triggers such as 'merge' are indicative of the MergeOrg event, not the StartOrg event.",
+            "The outcomes of the StartOrg event include the presence of a new organization that begins operations or activities. This is different from the EndOrg event, where an organization ceases to exist or operate.",
+            "The StartOrg event can occur in various contexts, including business, non-profit, and governmental sectors. It is important to identify the agent responsible for the creation, the organization being created, and the place where the organization is established."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "The agent is the individual or entity responsible for initiating or establishing the organization. Examples include 'dealer', 'people', 'he', 'Blair', 'one', 'founders', and 'states'.",
+            "The agent plays a crucial role in the StartOrg event as they are the driving force behind the creation of the new organization. For instance, in the sentence 'Blair launches faith foundation', 'Blair' is the agent.",
+            "In some cases, the agent may be a collective entity, such as a government or a group of people. For example, 'states' in 'states set up militia' is a collective agent.",
+            "The agent can also be implied or not explicitly mentioned in the text. For example, in 'the creation of the World Zionist Organization', the agent is implied to be the individuals or groups involved in the creation.",
+            "It is important to distinguish the agent from other participants in the event. Unlike the org argument, which refers to the organization being created, the agent is the one initiating the creation."
+        ],
+        "org": [
+            "The org is the organization that is being created or established in the StartOrg event. Examples include 'store', 'businesses', 'foundation', 'Mad City Rollers', 'militia', 'World Zionist Organization', and 'UNSCOP'.",
+            "The org is the primary focus of the StartOrg event as it represents the new entity that comes into existence. For instance, in 'set up a new faith foundation', 'foundation' is the org.",
+            "The org can be a business, non-profit, governmental body, or any other type of organization. For example, 'militia' in 'states set up militia' is a type of governmental organization.",
+            "In some cases, the org may be a specific named entity, such as 'Mad City Rollers' or 'World Zionist Organization'. These names help to identify the unique organization being created.",
+            "It is important to distinguish the org from other arguments in the event. Unlike the agent, which refers to the initiator, the org is the entity that is being brought into existence."
+        ],
+        "place": [
+            "The place is the location where the organization is being established or created. Examples include 'mall' and 'property'.",
+            "The place provides context for the StartOrg event by indicating where the new organization will operate or be based. For instance, in 'open up a store in the same strip mall', 'mall' is the place.",
+            "The place can be a specific physical location, such as a building, city, or country. For example, 'property' in 'set up private businesses on their property' is a specific location.",
+            "In some cases, the place may not be explicitly mentioned in the text. For example, in 'create a central government', the place is implied to be the area governed by the new entity.",
+            "It is important to distinguish the place from other arguments in the event. Unlike the org, which refers to the organization being created, the place is the location where the creation occurs."
+        ]
+    }
+}
+```

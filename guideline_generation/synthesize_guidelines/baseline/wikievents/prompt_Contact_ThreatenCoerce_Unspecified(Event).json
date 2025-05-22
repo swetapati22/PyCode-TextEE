@@ -1,0 +1,28 @@
+{
+    "Contact_ThreatenCoerce_Unspecified(Event)": {
+        "description": [
+            "The Contact_ThreatenCoerce_Unspecified event involves a situation where one party (the communicator) threatens or coerces another party (the recipient) without specifying the exact nature of the threat or coercion. The event can be triggered by words or actions that imply harm, punishment, or negative consequences if certain conditions are not met.",
+            "The Contact_ThreatenCoerce_Unspecified event occurs when an individual or group (communicator) makes a threat or uses coercion against another individual or group (recipient) without detailing the specific threat. The event can be triggered by terms like 'threaten', 'coerce', 'intimidate', or similar expressions.",
+            "The Contact_ThreatenCoerce_Unspecified event is characterized by a communicator issuing a threat or coercive statement towards a recipient, where the exact nature of the threat is not detailed. The event can be triggered by phrases indicating potential harm or negative outcomes.",
+            "The Contact_ThreatenCoerce_Unspecified event involves a communicator making a threat or coercive statement towards a recipient, with the specifics of the threat left unspecified. The event can be triggered by language that suggests intimidation, coercion, or threats.",
+            "The Contact_ThreatenCoerce_Unspecified event is defined by a communicator threatening or coercing a recipient without specifying the exact nature of the threat. The event can be triggered by any form of communication that implies a threat or coercion."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "communicator": [
+            "The communicator is the individual or group that issues the threat or coercive statement. Examples are 'Terrorist', 'Al Shabaab', 'they', 'United States', 'authorities'. The communicator can be any entity that has the power or intent to threaten or coerce.",
+            "The communicator refers to the party that makes the threat or coercive statement. Examples are 'Terrorist', 'Al Shabaab', 'they', 'United States', 'authorities'. The communicator can be an individual, organization, or government.",
+            "The communicator is the entity that delivers the threat or coercive message. Examples are 'Terrorist', 'Al Shabaab', 'they', 'United States', 'authorities'. The communicator can be any person or group capable of issuing threats.",
+            "The communicator is the source of the threat or coercive statement. Examples are 'Terrorist', 'Al Shabaab', 'they', 'United States', 'authorities'. The communicator can be any individual or collective entity.",
+            "The communicator is the party responsible for making the threat or coercive statement. Examples are 'Terrorist', 'Al Shabaab', 'they', 'United States', 'authorities'. The communicator can be any entity that poses a threat."
+        ],
+        "recipient": [
+            "The recipient is the individual or group that is the target of the threat or coercive statement. Examples are 'Police', 'the Somali Federal Government', 'them', 'voters', 'Venezuela'. The recipient can be any entity that is being threatened or coerced.",
+            "The recipient refers to the party that is threatened or coerced by the communicator. Examples are 'Police', 'the Somali Federal Government', 'them', 'voters', 'Venezuela'. The recipient can be an individual, organization, or government.",
+            "The recipient is the entity that receives the threat or coercive message. Examples are 'Police', 'the Somali Federal Government', 'them', 'voters', 'Venezuela'. The recipient can be any person or group that is the target of the threat.",
+            "The recipient is the target of the threat or coercive statement. Examples are 'Police', 'the Somali Federal Government', 'them', 'voters', 'Venezuela'. The recipient can be any individual or collective entity.",
+            "The recipient is the party that is the focus of the threat or coercive statement. Examples are 'Police', 'the Somali Federal Government', 'them', 'voters', 'Venezuela'. The recipient can be any entity that is being threatened."
+        ]
+    }
+}

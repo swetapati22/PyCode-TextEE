@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Pardon(JusticeEvent)
+```json
+{
+    "Pardon(JusticeEvent)": {
+        "description": [
+            "The event is triggered by an official act of forgiving or excusing a person from a legal penalty or punishment. Example triggers include 'pardoned', 'pardons', and 'pardon'.",
+            "The event is characterized by the involvement of an adjudicator who grants the pardon and a defendant who receives it. The place where the pardon is granted may also be specified.",
+            "Unlike the 'ReleaseParole' event, which involves conditional freedom, the 'Pardon' event completely absolves the defendant of the legal consequences of their actions.",
+            "Triggers such as 'commute' or 'release' are indicative of related events like 'Sentence' or 'ReleaseParole', not the 'Pardon' event type.",
+            "The outcome of a 'Pardon' event is the removal of legal penalties for the defendant, distinguishing it from events like 'Convict' or 'Sentence', which impose legal penalties."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are the person or entity that grants the pardon, such as a governor, president, or state. In 'The state of Alabama posthumously pardoned three black men', 'Alabama' is the adjudicator.",
+            "The adjudicator is crucial as they hold the authority to forgive the defendant's legal penalties. For instance, 'When Ford pardoned Nixon', 'Ford' is the adjudicator.",
+            "In cases where the adjudicator is a collective entity, such as a government or court, the entity itself is annotated. For example, 'The government pardoned the activists', 'government' is the adjudicator.",
+            "The adjudicator can also be an individual acting in an official capacity, like 'Governor Smith pardoned the prisoner', where 'Governor Smith' is the adjudicator.",
+            "In some contexts, the adjudicator may be implied or not explicitly mentioned, but inferred from the context, such as 'He was later pardoned', where the adjudicator is implied."
+        ],
+        "defendant": [
+            "Examples are the person or persons who receive the pardon, such as 'Nixon' in 'When Ford pardoned Nixon'.",
+            "The defendant is the individual or group absolved of legal penalties. For instance, 'The state of Alabama posthumously pardoned three black men', 'three black men' are the defendants.",
+            "In cases where the defendant is a collective group, such as 'The activists were pardoned', 'activists' is the defendant.",
+            "The defendant can also be a specific individual, like 'He was later pardoned and freed', where 'He' is the defendant.",
+            "In some contexts, the defendant may be referred to by a pronoun or implied, such as 'They were later pardoned', where 'they' is the defendant."
+        ],
+        "place": [
+            "Examples are the location where the pardon is granted, such as 'Alabama' in 'The state of Alabama posthumously pardoned three black men'.",
+            "The place is important as it provides the geographical context of the pardon event. For instance, 'The governor of California pardoned the prisoner', 'California' is the place.",
+            "In cases where the place is a specific city or region, such as 'The mayor of New York pardoned the activist', 'New York' is the place.",
+            "The place can also be a country or state, like 'The president of France pardoned the convict', where 'France' is the place.",
+            "In some contexts, the place may be implied or not explicitly mentioned, but inferred from the context, such as 'He was later pardoned and freed', where the place is not specified."
+        ]
+    }
+}
+```

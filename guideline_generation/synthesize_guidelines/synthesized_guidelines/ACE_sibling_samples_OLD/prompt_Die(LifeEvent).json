@@ -1,0 +1,49 @@
+{
+    "Die(LifeEvent)": {
+        "description": [
+            "The event is triggered by the occurrence of a death, whether it is a single individual or multiple people. Example triggers include 'killed', 'death', 'fallen', and 'suicide'.",
+            "The event is characterized by the cessation of life, often involving a victim and sometimes an agent or instrument. It can occur in various contexts such as accidents, attacks, or natural causes.",
+            "Unlike related events such as 'Injure', this event specifically denotes the end of life rather than harm or injury. For instance, 'wounding' indicates an injury event, not a death event.",
+            "Triggers such as 'marry' or 'divorce' are indicative of other life events and not related to the 'Die' event type. The 'Die' event is solely focused on the end of life.",
+            "The outcome of this event is the death of the person(s) involved, distinguishing it from events like 'BeBorn' which signify the beginning of life. For example, 'birth' is a trigger for 'BeBorn', not 'Die'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are the entity causing the death, such as 'bomber' in 'A suicide bomber detonated explosives'.",
+            "The agent is often the perpetrator in cases of homicide or attacks. For instance, 'shooter' in 'The shooter killed three people'.",
+            "In some contexts, the agent can be an abstract entity like 'disease' in 'Cancer claimed his life'.",
+            "The agent is crucial for understanding the cause of death, distinguishing it from natural causes. For example, 'assailant' in 'The assailant stabbed the victim'.",
+            "Unlike the 'victim', the agent is the one initiating the action leading to death. For instance, 'driver' in 'The driver ran over the pedestrian'."
+        ],
+        "instrument": [
+            "Examples are the means or tools used to cause death, such as 'explosives' in 'A suicide bomber detonated explosives'.",
+            "The instrument can be a weapon or any object used in the act of killing. For example, 'knife' in 'He was killed with a knife'.",
+            "In some cases, the instrument can be a method, like 'poison' in 'She died from poison'.",
+            "The instrument helps in identifying the manner of death, which is different from the agent. For instance, 'gun' in 'The victim was shot with a gun'.",
+            "Unlike the 'place', the instrument is the specific means used to cause death. For example, 'fire' in 'The fire caused multiple deaths'."
+        ],
+        "person": [
+            "Examples are the individuals who are directly involved in the event, such as 'comrades' in 'bodies of fallen comrades'.",
+            "The person argument is used to identify those who are deceased in the context of the event. For instance, 'victims' in 'The victims were found in the rubble'.",
+            "In some cases, the person can be referred to collectively, like 'people' in '19 people were killed'.",
+            "The person argument is essential for specifying who has died, distinguishing it from the agent or instrument. For example, 'soldiers' in 'The soldiers were killed in action'.",
+            "Unlike the 'place', the person argument focuses on the individuals who have died. For instance, 'passengers' in 'The passengers died in the crash'."
+        ],
+        "place": [
+            "Examples are the locations where the death event occurs, such as 'mall' in 'A suicide bomber detonated explosives at the entrance to a crowded mall'.",
+            "The place argument helps in identifying the geographical context of the death event. For instance, 'airport' in '19 people were killed in the airport blast'.",
+            "In some cases, the place can be a broader area, like 'city' in 'The city witnessed multiple deaths'.",
+            "The place is crucial for understanding the setting of the event, distinguishing it from the agent or instrument. For example, 'battlefield' in 'Many soldiers died on the battlefield'.",
+            "Unlike the 'person', the place argument specifies where the death occurred. For instance, 'hospital' in 'He died in the hospital'."
+        ],
+        "victim": [
+            "Examples are the individuals who have died as a result of the event, such as 'bomber' in 'killing the bomber'.",
+            "The victim is often the focus of the death event, highlighting those who have lost their lives. For instance, 'people' in '19 people were killed'.",
+            "In some contexts, the victim can be referred to in a collective sense, like 'shoppers' in 'killing at least four shoppers'.",
+            "The victim argument is essential for identifying who has died, distinguishing it from the agent or instrument. For example, 'civilians' in 'The civilians were killed in the attack'.",
+            "Unlike the 'agent', the victim is the one who suffers the consequence of the death event. For instance, 'passengers' in 'The passengers were the victims of the crash'."
+        ]
+    }
+}

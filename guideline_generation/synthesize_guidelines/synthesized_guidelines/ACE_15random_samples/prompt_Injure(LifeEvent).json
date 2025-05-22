@@ -1,0 +1,42 @@
+{
+    "Injure(LifeEvent)": {
+        "description": [
+            "The event is triggered by terms indicating physical harm or injury to individuals, such as 'wounded', 'injured', 'harm', or 'injuries'.",
+            "The event is characterized by the infliction of physical damage or pain to one or more individuals, often resulting from violent actions or accidents.",
+            "Unlike the 'Die' event type, the 'Injure' event does not result in the death of the victim but rather in non-fatal physical harm.",
+            "Triggers such as 'killed' or 'dead' are indicative of the 'Die' event type, not the 'Injure' event type.",
+            "The outcome of the 'Injure' event is the victim sustaining physical injuries, which may vary in severity but do not lead to death."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are the person or entity causing the injury, such as 'bomber' in 'A suicide bomber detonated explosives'.",
+            "The agent is responsible for the action that leads to the injury, such as 'attacker' or 'shooter'.",
+            "In cases where the injury is accidental, the agent might be an inanimate object or natural force, like 'falling debris' or 'earthquake'.",
+            "The agent can be an individual or a group, such as 'insurgents' or 'terrorists'.",
+            "In some contexts, the agent might be implied rather than explicitly stated, such as 'the injured were taken to the hospital' where the cause of injury is understood from context."
+        ],
+        "instrument": [
+            "Examples are the tools or means used to inflict the injury, such as 'explosives' in 'A suicide bomber detonated explosives'.",
+            "The instrument can be a weapon or object, like 'gun', 'knife', or 'vehicle'.",
+            "In some cases, the instrument might be a natural element, such as 'fire' or 'flood'.",
+            "The instrument is crucial in understanding the nature of the injury, such as 'chemical' in 'chemical burns'.",
+            "In some instances, the instrument might be part of the environment, like 'falling rocks' or 'collapsing building'."
+        ],
+        "place": [
+            "Examples are the location where the injury occurred, such as 'mall' in 'A suicide bomber detonated explosives at the entrance to a crowded mall'.",
+            "The place can be a specific building or area, like 'airport', 'school', or 'park'.",
+            "In some cases, the place might be a broader geographical location, such as 'city' or 'country'.",
+            "The place helps contextualize the event, providing information about where the injury took place, such as 'battlefield' or 'hospital'.",
+            "In some contexts, the place might be implied or understood from the surrounding text, such as 'the injured were taken to the nearest hospital'."
+        ],
+        "victim": [
+            "Examples are the individuals who sustained injuries, such as '20' in 'wounding 20 in the fifth such attack'.",
+            "The victim can be a single person or multiple individuals, like 'people', 'children', or 'civilians'.",
+            "In some cases, the victim might be described by their role or identity, such as 'soldiers', 'protesters', or 'bystanders'.",
+            "The victim is the recipient of the injury, and their description can provide insight into the severity and impact of the event, such as 'severely injured' or 'minor injuries'.",
+            "In some contexts, the victim might be implied or understood from the surrounding text, such as 'the injured were taken to the hospital'."
+        ]
+    }
+}

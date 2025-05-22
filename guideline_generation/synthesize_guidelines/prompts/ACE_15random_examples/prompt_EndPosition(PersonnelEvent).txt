@@ -1,0 +1,358 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type EndPosition which is a child event type of super class PersonnelEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+EndPosition which is a child event type of super class PersonnelEvent
+Arguments:
+Argument 1 -> entity
+Argument 2 -> person
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Putin, who enjoyed a warm relationship with former Chinese president Jiang Zeming, has made efforts to nurture ties with Hu and was the first world leader to go to Beijing to meet him in December when he was president-in-waiting.
+### Event Trigger ###
+former
+### Event Arguments ###
+For argument "person" extracted spans ['president']
+For argument "place" extracted spans ['Chinese']
+For argument "entity" extracted spans ['Chinese']
+
+Example 2
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Media tycoon Barry Diller on Wednesday quit as chief of Vivendi Universal Entertainment, the entertainment unit of French giant Vivendi Universal whose future appears up for grabs.
+### Event Trigger ###
+quit
+### Event Arguments ###
+For argument "person" extracted spans ['Barry Diller']
+For argument "entity" extracted spans ['Vivendi Universal Entertainment']
+
+Example 3
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Vivendi, in a statement, said that Diller had, "in full agreement with Vivendi Universal," announced that he was "ending his temporary assignment as CEO of Vivendi Universal Entertainment."
+### Event Trigger ###
+ending
+### Event Arguments ###
+For argument "person" extracted spans ['his']
+For argument "entity" extracted spans ['Vivendi Universal Entertainment']
+
+Example 4
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Vivendi Universal, the world's second-largest media group after AOL Time Warner of the United States, has been digging out from under a mountain of debt since the removal of expansionist boss Jean-Marie Messier last July, largely through asset sales.
+### Event Trigger ###
+removal
+### Event Arguments ###
+For argument "person" extracted spans ['Jean-Marie Messier']
+For argument "entity" extracted spans ['Vivendi Universal']
+
+Example 5
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Powell, the most moderate member of the Bush cabinet, said he fully agreed with the president's policy on Iraq and had no plans to leave.
+### Event Trigger ###
+leave
+### Event Arguments ###
+For argument "person" extracted spans ['he']
+
+Example 6
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Former senior banker Callum McCarthy begins what is one of the most important jobs in London's financial world in September, when incumbent Howard Davies steps down.
+### Event Trigger ###
+Former
+### Event Arguments ###
+For argument "person" extracted spans ['Callum McCarthy']
+
+Example 7
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Former senior banker Callum McCarthy begins what is one of the most important jobs in London's financial world in September, when incumbent Howard Davies steps down.
+### Event Trigger ###
+steps down
+### Event Arguments ###
+For argument "person" extracted spans ['Howard Davies']
+For argument "place" extracted spans ['London']
+
+Example 8
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Davies is leaving to become chairman of the London School of Economics, one of the best-known parts of the University of London.
+### Event Trigger ###
+leaving
+### Event Arguments ###
+For argument "person" extracted spans ['Davies']
+
+Example 9
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+As well as previously holding senior positions at Barclays Bank, BZW and Kleinwort Benson, McCarthy was formerly a top civil servant at the Department of Trade and Industry.
+### Event Trigger ###
+previously
+### Event Arguments ###
+For argument "person" extracted spans ['McCarthy']
+For argument "entity" extracted spans ['Barclays Bank', 'BZW', 'Kleinwort Benson']
+
+Example 10
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+As well as previously holding senior positions at Barclays Bank, BZW and Kleinwort Benson, McCarthy was formerly a top civil servant at the Department of Trade and Industry.
+### Event Trigger ###
+formerly
+### Event Arguments ###
+For argument "person" extracted spans ['McCarthy']
+For argument "entity" extracted spans ['Department of Trade and Industry']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+Indonesian courts have increasingly handed out severe sentences, including death, for drug smugglers.
+### Event Trigger ###
+sentences
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['courts']
+For argument "defendant" extracted spans ['smugglers']
+For argument "place" extracted spans ['Indonesian']
+
+Example 12
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Everyone has heard the story: Beatriz Marinello was elected USCF President on August 11, 2003 in Los Angeles.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['Beatriz Marinello']
+For argument "place" extracted spans ['Los Angeles']
+For argument "entity" extracted spans ['USCF']
+
+Example 13
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+Police arrested her in Abilene, Texas, Saturday where she had moved with a friend June 2.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "person" extracted spans ['her']
+For argument "place" extracted spans ['Abilene']
+For argument "agent" extracted spans ['Police']
+
+Example 14
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+an oklahoma city judge has ruled prosecutors presented enough evidence at a preliminary hearing to try nichols on murder charges for the other 160 victims of the attack.
+### Event Trigger ###
+hearing
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+For argument "defendant" extracted spans ['nichols']
+For argument "prosecutor" extracted spans ['prosecutors']
+For argument "place" extracted spans ['oklahoma city']
+
+Example 15
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange, plans to follow up its May Day launching by opening a "sex Disneyland" here, the Melbourne-based bordello announced Wednesday.
+### Event Trigger ###
+opening
+### Event Arguments ###
+For argument "org" extracted spans ['Disneyland']
+For argument "agent" extracted spans ['Daily Planet Ltd']
+For argument "place" extracted spans ['here']
+
+Example 16
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.
+### Event Trigger ###
+charges
+### Event Arguments ###
+For argument "defendant" extracted spans ['client']
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "place" extracted spans ['court']
+
+Example 17
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+Of course outspoken organizations such as Planned Parenthood, which gives a lot of money to Democrats, will fight with everything they've got to keep the Democratic platform as liberal as possible.
+### Event Trigger ###
+gives
+### Event Arguments ###
+For argument "giver" extracted spans ['Planned Parenthood']
+For argument "beneficiary" extracted spans ['Democrats']
+For argument "recipient" extracted spans ['Democrats']
+
+Example 18
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+wounding
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['20']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 19
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+telephone
+### Event Arguments ###
+For argument "place" extracted spans ['Agartala']
+For argument "entity" extracted spans ['spokesman']
+
+Example 20
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+The Pakistani supreme court last year aquitted Ayub Masih, who had denied uttering any word against Islam or the Prophet Mohammad.
+### Event Trigger ###
+aquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Ayub Masih']
+For argument "adjudicator" extracted spans ['court']
+
+Example 21
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+and the pope will reportedly name a new head of the troubled boston archdiocese this week.
+### Event Trigger ###
+name
+### Event Arguments ###
+For argument "person" extracted spans ['head']
+For argument "agent" extracted spans ['pope']
+
+Example 22
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat.
+### Event Trigger ###
+talks
+### Event Arguments ###
+For argument "place" extracted spans ['retreat']
+For argument "entity" extracted spans ['Blair', 'Bush']
+
+Example 23
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+In Paris, the French media group said parent company chairman Jean-Rene Fourtou will replace Diller as chairman and chief executive of US unit.
+### Event Trigger ###
+replace
+### Event Arguments ###
+For argument "person" extracted spans ['Jean-Rene Fourtou']
+For argument "place" extracted spans ['Paris']
+For argument "entity" extracted spans ['unit']
+
+Example 24
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+Some 70 people were arrested Saturday as demonstrators clashed with police at the end of a major peace rally here, as at least 200,000 anti-war protesters took to the streets across the United States and Canada.
+### Event Trigger ###
+rally
+### Event Arguments ###
+For argument "place" extracted spans ['here']
+For argument "entity" extracted spans ['protesters']
+
+Example 25
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In December 2001, a Manhattan jury convicted Sotheby's main shareholder and former chairman Alfred Taubman of entering into a price-fixing agreement with Christie's.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Alfred Taubman']
+For argument "place" extracted spans ['Manhattan']
+For argument "adjudicator" extracted spans ['jury']

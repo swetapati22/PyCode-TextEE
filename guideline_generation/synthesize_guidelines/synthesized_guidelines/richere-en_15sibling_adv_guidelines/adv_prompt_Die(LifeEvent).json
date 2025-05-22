@@ -1,0 +1,12 @@
+{
+    "Die(LifeEvent)": {
+        "description": "The Die event is triggered by the occurrence of a death, whether natural, accidental, or intentional. It specifically involves the cessation of life of one or more individuals, distinguishing it from events that involve harm but not death. Triggers include terms like 'murder', 'killing', 'suicide', and 'blown up'. The event outcomes include the death of the victim(s) and may involve agents responsible for the death, instruments used, and the place where the death occurred. It is strictly related to the end of life and does not include events like 'divorce' or 'born'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity responsible for causing the death, which can be an individual, group, or organization. Examples include 'bombers', 'government', 'terrorists', and 'killers'. In cases of suicide, the agent and victim may be the same entity. The agent is more relevant in intentional or accidental deaths and is not always present in natural death cases.",
+            "instrument": "The instrument is the means or tool used to cause the death, such as 'bombers', 'hot wires', and 'explosives'. It helps in understanding the method of death and is more relevant in homicides, suicides, and accidents. The instrument provides context to the nature of the death and is not applicable in natural death cases.",
+            "place": "The place is the location where the death occurred, providing geographical context to the event. Examples include 'mainland', 'downtown Manhattan', and 'Palermo'. The place can be a specific location, city, or broader geographical area and helps in understanding the scope and impact of the death event.",
+            "victim": "The victim is the individual or group who died, central to identifying the affected parties in the event. Examples include 'bombers', 'bunch', 'children', 'family', 'magistrate', 'foreigners', 'Americans', and 'victims'. The victim can be a single person or multiple individuals and is not always the same as the agent. In cases of mass casualties, the victim may refer to a large group."
+        }
+    }
+}

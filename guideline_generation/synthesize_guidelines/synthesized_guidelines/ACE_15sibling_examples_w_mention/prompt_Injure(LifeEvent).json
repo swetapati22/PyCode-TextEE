@@ -1,0 +1,48 @@
+{
+    "Injure(LifeEvent)": {
+        "description": [
+            "The event is triggered by actions or incidents that result in physical harm or injury to individuals. Example triggers include 'wounding', 'injured', and 'injuries'.",
+            "The event is characterized by the occurrence of harm or damage to a person's body, often as a result of violence, accidents, or other harmful actions.",
+            "Unlike the 'Die' event type, which involves fatal outcomes, the 'Injure' event type specifically refers to non-fatal physical harm.",
+            "Triggers such as 'wounded' and 'injured' indicate the 'Injure' event type, whereas terms like 'killed' or 'dead' are indicative of the 'Die' event type.",
+            "The event encompasses various scenarios where individuals suffer physical harm, including but not limited to accidents, attacks, and natural disasters."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of the injury. Examples include 'wounding', 'injured', and 'injuries'.",
+            "Triggers such as 'wounded' and 'injured' are valid indicators of the 'Injure' event type. For instance, '114 people were wounded' clearly signals an injury event.",
+            "Edge cases include phrases like 'no reports of injuries', which still indicate the potential for an injury event even if no injuries occurred.",
+            "Triggers must specifically denote physical harm. For example, 'hurt' can be ambiguous and may not always indicate a physical injury.",
+            "Unlike terms like 'killed' or 'dead', which indicate fatal outcomes, 'wounded' and 'injured' are specific to non-fatal physical harm."
+        ],
+        "agent": [
+            "The agent is the entity responsible for causing the injury. Examples are 'bomber' in 'A suicide bomber detonated explosives'.",
+            "The agent can be a person, group, or even an abstract entity like 'terrorists' or 'attackers'.",
+            "In cases where the agent is not explicitly mentioned, it can be inferred from context, such as 'explosives' implying a bomber.",
+            "The agent is crucial for understanding the cause of the injury. For instance, 'police' in 'police shot the suspect' indicates the police as the agent.",
+            "Unlike the 'Die' event type, where the agent might be the cause of death, in the 'Injure' event type, the agent is specifically linked to causing non-fatal harm."
+        ],
+        "instrument": [
+            "The instrument is the tool or means used to inflict the injury. Examples are 'explosives' in 'detonated explosives'.",
+            "Instruments can include weapons, vehicles, or any object used to cause harm, such as 'knife', 'gun', or 'car'.",
+            "The instrument helps to detail the nature of the injury. For example, 'stabbed with a knife' provides specific information about the injury.",
+            "In some cases, the instrument may be implied rather than explicitly stated, such as 'shot' implying a gun.",
+            "Unlike the 'Die' event type, where the instrument might be the cause of death, in the 'Injure' event type, the instrument is specifically linked to causing non-fatal harm."
+        ],
+        "place": [
+            "The place is the location where the injury occurred. Examples are 'mall' in 'at the entrance to a crowded mall'.",
+            "Places can range from specific locations like 'airport' to broader areas like 'city' or 'region'.",
+            "The place provides context for the event, helping to understand where the injury took place. For instance, 'in northern Israel' specifies the region.",
+            "In some cases, the place may be inferred from context, such as 'hospital' indicating where the injured are being treated.",
+            "Unlike the 'Die' event type, where the place might be the location of death, in the 'Injure' event type, the place is specifically linked to where the injury occurred."
+        ],
+        "victim": [
+            "The victim is the individual or group who suffered the injury. Examples are '20' in 'wounding 20'.",
+            "Victims can be identified by specific numbers, groups, or descriptions, such as 'people', 'shoppers', or 'civilians'.",
+            "The victim is crucial for understanding the impact of the injury event. For instance, '50 wounded' indicates the number of people affected.",
+            "In some cases, the victim may be implied rather than explicitly stated, such as 'injured list' implying those who are injured.",
+            "Unlike the 'Die' event type, where the victim might be the deceased, in the 'Injure' event type, the victim is specifically linked to those who suffered non-fatal harm."
+        ]
+    }
+}

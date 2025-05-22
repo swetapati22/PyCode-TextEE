@@ -1,0 +1,35 @@
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions that result in the detention or imprisonment of an individual. Example triggers include 'arrested', 'busted', 'locked away', and 'jail'.",
+            "The event is characterized by the physical apprehension and confinement of a person by an authority figure or law enforcement. It involves the deprivation of liberty as a consequence of legal or illegal activities.",
+            "Unlike the 'Fine' event type, which involves monetary penalties, the 'ArrestJail' event type involves physical detention. For example, 'fined' is indicative of a 'Fine' event, not an 'ArrestJail' event.",
+            "Triggers such as 'convicted' or 'sentenced' are indicative of 'Convict' or 'Sentence' events, not 'ArrestJail'. The 'ArrestJail' event focuses on the act of detaining or imprisoning rather than the legal judgment or sentencing.",
+            "The outcome of the 'ArrestJail' event is the confinement of the person in a specific place, such as a jail or prison, often following an arrest by law enforcement agents."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are law enforcement officers, police, or any authority figure responsible for the arrest or detention. For instance, 'mounties' in 'busted up by the mounties' or 'they' in 'they have arrested'.",
+            "The agent is the entity that carries out the arrest or detention. It is crucial for identifying who is responsible for the action. For example, 'police' in 'the police arrested him'.",
+            "In some cases, the agent may be implied or not explicitly mentioned. For example, 'arrested' in 'he was arrested' implies law enforcement as the agent.",
+            "The agent can be a group or organization, such as 'FBI' in 'the FBI busted the ring'.",
+            "Unlike the 'defendant' in 'ChargeIndict' events, the agent in 'ArrestJail' events is the one performing the arrest, not the one being charged."
+        ],
+        "person": [
+            "Examples are individuals or groups who are being arrested or detained. For instance, 'Koresh' and 'others' in 'arrest Koresh and others'.",
+            "The person is the target of the arrest or detention. It is essential for identifying who is being deprived of liberty. For example, 'sheriff' in 'the sheriff just got busted'.",
+            "The person can be a collective group, such as 'bunch' in 'a bunch of hacks at the Sun were arrested'.",
+            "In some cases, the person may be referred to by a role or title, such as 'wannabees' in 'busted wannabees'.",
+            "Unlike the 'adjudicator' in 'Sentence' events, the person in 'ArrestJail' events is the one being detained, not the one making the legal decision."
+        ],
+        "place": [
+            "Examples are locations where the arrest or detention takes place. For instance, 'Rapid City' in 'arrested over 300 for DUI in Rapid City'.",
+            "The place is the geographical location associated with the arrest or detention. It helps contextualize where the event occurred. For example, 'county' in 'overturn an election in Lee County'.",
+            "The place can be a specific facility, such as 'prison' in 'locked away in prison'.",
+            "In some cases, the place may be implied or not explicitly mentioned. For example, 'busted' in 'busted up by the mounties' implies a location where the bust occurred.",
+            "Unlike the 'origin' or 'destination' in 'Extradite' events, the place in 'ArrestJail' events is where the arrest or detention happens, not where the person is being moved from or to."
+        ]
+    }
+}

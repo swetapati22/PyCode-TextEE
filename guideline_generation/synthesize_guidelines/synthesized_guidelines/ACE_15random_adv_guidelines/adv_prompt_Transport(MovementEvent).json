@@ -1,0 +1,15 @@
+{
+    "Transport(MovementEvent)": {
+        "description": "The Transport event involves the movement of people, objects, or entities from one location to another, typically facilitated by an agent or vehicle. This event is characterized by a clear origin and destination, and the successful relocation of the artifact or victim. Example triggers include 'transport', 'drive', 'fly', 'bring', 'head', 'deliver', and 'send'. The focus is on the process of movement rather than the completion of the journey.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity responsible for initiating or facilitating the transport, which can be a person, group, or organization. Examples include 'forces', 'troops', and 'parents'. The agent is distinct from the vehicle and may sometimes be implied, such as 'medical teams carting away victims'.",
+            "artifact": "The artifact is the entity being transported, which can be a person, group, or object. Examples include 'women', 'children', 'troops', and 'tanks'. The artifact is central to the event and distinct from the agent. Multiple artifacts may be involved, such as 'bringing in more troops and tanks'.",
+            "destination": "The destination is the endpoint of the transport, where the artifact is being moved to. Examples include 'Sudan', 'Iraq', and 'home'. The destination is crucial for defining the scope of the event and is distinct from the origin.",
+            "origin": "The origin is the starting point of the transport, where the artifact begins its movement. Examples include 'Sudan', 'Pennsylvania', and 'Fort Hood'. The origin provides the initial location of the artifact and is distinct from the destination.",
+            "place": "The place is a location relevant to the transport event, which may not necessarily be the origin or destination. Examples include 'Iraq', 'streets', and 'airfield'. The place provides additional context for the event and may overlap with the origin or destination.",
+            "vehicle": "The vehicle is the means of transport used to move the artifact from the origin to the destination. Examples include 'trains', 'car', and 'airplane'. The vehicle is essential for understanding how the transport is carried out and is distinct from the agent.",
+            "victim": "The victim is the entity being transported, often in a context where they are moved against their will or in a vulnerable state. Examples include 'who', 'victims', and 'soldiers'. The victim is central to the event and distinct from the agent, and may sometimes be implied."
+        }
+    }
+}

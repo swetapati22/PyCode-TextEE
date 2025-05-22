@@ -1,0 +1,11 @@
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": "The EndPosition(PersonnelEvent) is triggered by the termination or conclusion of a person's role or position within an organization or entity. This event is characterized by explicit language indicating the end of a tenure, such as 'quit', 'ending', 'removal', 'leave', 'steps down', 'formerly', and 'previously'. It encompasses various scenarios including voluntary resignation, retirement, or being replaced, and is distinct from the StartPosition event, which marks the beginning of a role. The outcome of this event is that the person no longer holds their previous position, regardless of the reason for the cessation.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as specific words or phrases indicating the end of a position.",
+            "entity": "The organization or entity from which the person is ending their position. Examples include 'Vivendi Universal Entertainment', 'Barclays Bank', and 'Department of Trade and Industry'. The entity provides context to the position being vacated and can sometimes be implied or indirectly referenced.",
+            "person": "The individual whose position is ending. Examples include 'Barry Diller', 'Jean-Marie Messier', and 'Callum McCarthy'. The person is the central figure in the event, and may be referred to by name, pronoun, title, or inferred from context.",
+            "place": "The geographical location associated with the end of the position. Examples include 'Chinese' and 'London'. The place provides additional context to the event, indicating where the position was held or where the person is leaving from, and can sometimes be implied or part of a larger entity."
+        }
+    }
+}

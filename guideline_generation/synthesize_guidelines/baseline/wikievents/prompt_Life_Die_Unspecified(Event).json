@@ -1,0 +1,35 @@
+{
+    "Life_Die_Unspecified(Event)": {
+        "description": [
+            "The Life_Die_Unspecified event refers to any instance where an individual or group of individuals lose their life due to unspecified reasons. The event can be triggered by words such as 'died', 'killed', 'dead', 'fatally', etc. The event can occur in various contexts, including natural causes, accidents, or violence. Annotators should be cautious of context to ensure the event is correctly identified.",
+            "The Life_Die_Unspecified event captures occurrences where death happens without specifying the exact cause. This event can be triggered by terms like 'died', 'killed', 'dead', 'fatally', and similar expressions. It is important to consider the surrounding context to accurately determine the event. The event is not limited to violent deaths but includes any form of death.",
+            "Life_Die_Unspecified events are those where an individual or group dies, and the cause is not explicitly mentioned. Triggers for this event include 'died', 'killed', 'dead', 'fatally', among others. Annotators should pay attention to the context to ensure the event is correctly annotated, considering both violent and non-violent deaths.",
+            "The Life_Die_Unspecified event involves the death of individuals where the cause is not clearly defined. Common triggers include 'died', 'killed', 'dead', 'fatally', etc. Annotators should carefully examine the context to ensure accurate identification of the event, which can encompass a wide range of death scenarios.",
+            "In the Life_Die_Unspecified event, death occurs without a specified cause. Triggers for this event include words like 'died', 'killed', 'dead', 'fatally', and similar terms. Annotators must consider the context to accurately identify the event, which can include deaths from various causes, both violent and non-violent."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "killer": [
+            "The 'killer' argument refers to the entity responsible for causing the death. This can be a person, group, or even an abstract entity like 'terrorists' or 'police'. Examples are 'agents', 'police', 'sons', 'they', 'terrorist'. Annotators should ensure that the entity identified as the killer is directly linked to the death event.",
+            "The 'killer' argument identifies who or what caused the death. It can be an individual, a group, or an abstract entity. Examples include 'agents', 'police', 'sons', 'they', 'terrorist'. Annotators should verify that the killer is explicitly or implicitly responsible for the death.",
+            "In the Life_Die_Unspecified event, the 'killer' argument denotes the entity that caused the death. This can be a person, group, or abstract entity. Examples are 'agents', 'police', 'sons', 'they', 'terrorist'. Annotators should ensure the killer is clearly connected to the death event.",
+            "The 'killer' argument represents the entity responsible for the death in the Life_Die_Unspecified event. This can include individuals, groups, or abstract entities. Examples include 'agents', 'police', 'sons', 'they', 'terrorist'. Annotators should confirm that the killer is directly associated with the death.",
+            "For the Life_Die_Unspecified event, the 'killer' argument identifies the cause of death, which can be a person, group, or abstract entity. Examples are 'agents', 'police', 'sons', 'they', 'terrorist'. Annotators should ensure the killer is clearly linked to the death event."
+        ],
+        "place": [
+            "The 'place' argument specifies the location where the death occurred. This can be a city, country, specific site, or any identifiable location. Examples are 'Florida', 'Massachusetts', 'Ayer', 'University of Massachusetts Dartmouth', 'Times Square'. Annotators should ensure the place is directly related to the death event.",
+            "The 'place' argument indicates where the death took place. It can be any identifiable location such as a city, country, or specific site. Examples include 'Florida', 'Massachusetts', 'Ayer', 'University of Massachusetts Dartmouth', 'Times Square'. Annotators should verify that the place is relevant to the death event.",
+            "In the Life_Die_Unspecified event, the 'place' argument denotes the location of the death. This can be a city, country, or specific site. Examples are 'Florida', 'Massachusetts', 'Ayer', 'University of Massachusetts Dartmouth', 'Times Square'. Annotators should ensure the place is clearly connected to the death event.",
+            "The 'place' argument represents the location where the death occurred in the Life_Die_Unspecified event. This can include cities, countries, or specific sites. Examples include 'Florida', 'Massachusetts', 'Ayer', 'University of Massachusetts Dartmouth', 'Times Square'. Annotators should confirm that the place is directly associated with the death.",
+            "For the Life_Die_Unspecified event, the 'place' argument identifies the location of the death, which can be a city, country, or specific site. Examples are 'Florida', 'Massachusetts', 'Ayer', 'University of Massachusetts Dartmouth', 'Times Square'. Annotators should ensure the place is clearly linked to the death event."
+        ],
+        "victim": [
+            "The 'victim' argument refers to the individual or group who died. This can be a named person, a group of people, or an abstract entity like 'others'. Examples are 'Ibragim Todashev', 'Tamerlan Tsarnaev', 'people', 'others', 'Bin Laden'. Annotators should ensure that the victim is clearly identified as the entity that died.",
+            "The 'victim' argument identifies who died in the Life_Die_Unspecified event. It can be a specific person, a group, or an abstract entity. Examples include 'Ibragim Todashev', 'Tamerlan Tsarnaev', 'people', 'others', 'Bin Laden'. Annotators should verify that the victim is explicitly or implicitly the entity that died.",
+            "In the Life_Die_Unspecified event, the 'victim' argument denotes the entity that died. This can be a named individual, a group, or an abstract entity. Examples are 'Ibragim Todashev', 'Tamerlan Tsarnaev', 'people', 'others', 'Bin Laden'. Annotators should ensure the victim is clearly connected to the death event.",
+            "The 'victim' argument represents the entity that died in the Life_Die_Unspecified event. This can include individuals, groups, or abstract entities. Examples include 'Ibragim Todashev', 'Tamerlan Tsarnaev', 'people', 'others', 'Bin Laden'. Annotators should confirm that the victim is directly associated with the death.",
+            "For the Life_Die_Unspecified event, the 'victim' argument identifies the entity that died, which can be a person, group, or abstract entity. Examples are 'Ibragim Todashev', 'Tamerlan Tsarnaev', 'people', 'others', 'Bin Laden'. Annotators should ensure the victim is clearly linked to the death event."
+        ]
+    }
+}

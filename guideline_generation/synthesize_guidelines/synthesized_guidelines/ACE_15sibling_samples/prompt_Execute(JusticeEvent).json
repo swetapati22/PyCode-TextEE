@@ -1,0 +1,35 @@
+{
+    "Execute(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of carrying out a death sentence on an individual, typically by a state or legal authority. Example triggers include 'executed', 'execution', 'put to death', and 'death'.",
+            "The event is characterized by the finality of the action, where the individual is killed as a result of a legal decision. This distinguishes it from other JusticeEvents like 'Sentence' or 'Convict', which do not necessarily result in death.",
+            "Unlike 'ArrestJail' or 'Pardon', the 'Execute' event involves the irreversible outcome of death, making it a terminal action within the justice system.",
+            "Triggers such as 'executed' and 'execution' are indicative of the 'Execute' event type, not events like 'Acquit' or 'Appeal', which involve different judicial outcomes.",
+            "The 'Execute' event often involves specific arguments such as the 'agent' (the entity carrying out the execution), the 'person' (the individual being executed), and the 'place' (the location where the execution occurs)."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'texas', 'Indonesia', 'we', 'Pakistan'. The 'agent' is the entity responsible for carrying out the execution, which can be a state, country, or specific group.",
+            "The 'agent' plays a crucial role as it signifies the authority or body enforcing the death sentence. For instance, 'Indonesia' in 'Indonesia will delay the execution' indicates the state authority.",
+            "In some cases, the 'agent' may be a collective or unspecified group, such as 'we' in 'If we execute them now'. This highlights the involvement of a group or organization.",
+            "The 'agent' can also be a legal or governmental body, such as 'the attorney general's office' or 'the supreme court'. These entities are often involved in the legal process leading to the execution.",
+            "Edge cases include scenarios where the 'agent' is implied rather than explicitly stated, such as 'Blasphemy is punishable by death under the Pakistan Penal Code', where 'Pakistan' is the implied agent."
+        ],
+        "person": [
+            "Examples are 'person', 'convicts', 'them', 'six', 'men', 'convict', 'McVeigh', 'delma banks', 'he', 'killer'. The 'person' is the individual who is being executed.",
+            "The 'person' is central to the event as they are the subject of the execution. For instance, 'McVeigh was executed in 2001' clearly identifies 'McVeigh' as the person.",
+            "In some cases, the 'person' may be referred to collectively, such as 'six' in 'President Megawati Sukarnoputri has refused clemency for the six'. This indicates multiple individuals.",
+            "The 'person' can also be identified by their role or status, such as 'convicts' or 'killer'. These terms provide context about the individual's actions or legal status.",
+            "Edge cases include scenarios where the 'person' is referred to indirectly, such as 'he'd be the 11th killer put to death in texas this year', where 'he' and 'killer' both refer to the person being executed."
+        ],
+        "place": [
+            "Examples are 'state', 'Indonesia', 'country', 'texas'. The 'place' is the location where the execution takes place.",
+            "The 'place' provides geographical context to the event, indicating where the execution is carried out. For instance, 'in texas' in 'lawyers in texas are trying to keep their client from becoming the 300th person executed in the state' specifies the location.",
+            "In some cases, the 'place' may be a broader region or country, such as 'Indonesia' in 'Use of the death penalty is rare in Indonesia'. This indicates the national context of the execution.",
+            "The 'place' can also be a specific facility or area within a larger region, though this is less common in the provided examples. It could be a prison, execution chamber, or similar location.",
+            "Edge cases include scenarios where the 'place' is implied rather than explicitly stated, such as 'no blasphemy convict has ever been executed in the country', where 'country' refers to the broader national context."
+        ]
+    }
+}

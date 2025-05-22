@@ -1,0 +1,351 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Injure which is a child event type of super class LifeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Injure which is a child event type of super class LifeEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> instrument
+Argument 3 -> place
+Argument 4 -> victim
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+wounding
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['20']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 2
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+At least 19 people were killed and 114 people were wounded in Tuesday's southern Philippines airport blast, officials said, but reports said the death toll could climb to 30.
+### Event Trigger ###
+wounded
+### Event Arguments ###
+For argument "victim" extracted spans ['people']
+For argument "place" extracted spans ['airport']
+
+Example 3
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+The Davao Medical Center, a regional government hospital, recorded 19 deaths with 50 wounded.
+### Event Trigger ###
+wounded
+### Event Arguments ###
+For argument "victim" extracted spans ['50']
+
+Example 4
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+Medical evacuation workers however said the injured list was around 114, spread out at various hospitals.
+### Event Trigger ###
+injured
+### Event Arguments ###
+
+Example 5
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+There were no reports of injuries in the second blast.
+### Event Trigger ###
+injuries
+### Event Arguments ###
+
+Example 6
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+Television footage showed medical teams carting away dozens of wounded victims with fully armed troops on guard.
+### Event Trigger ###
+wounded
+### Event Arguments ###
+For argument "victim" extracted spans ['victims']
+
+Example 7
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+In the past two years, there have been cases of schoolchildren and a baby, killed or injured by guns.
+### Event Trigger ###
+injured
+### Event Arguments ###
+For argument "instrument" extracted spans ['guns']
+For argument "victim" extracted spans ['schoolchildren', 'baby']
+
+Example 8
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+For that I believe the Marines should handle dead and wounded insurgents by any means necessary to ensure their own safety and prevent a possible ambush.
+### Event Trigger ###
+wounded
+### Event Arguments ###
+For argument "victim" extracted spans ['insurgents']
+
+Example 9
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+State law defines deadly force as that which is likely to cause "death or great bodily harm," such as firing a gun at a person or a vehicle.
+### Event Trigger ###
+harm
+### Event Arguments ###
+For argument "instrument" extracted spans ['gun']
+For argument "victim" extracted spans ['person']
+
+Example 10
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+He said more than 200 Iraqis had been injured, including women, children and other civilians who were being treated at five hospitals in Baghdad.
+### Event Trigger ###
+injured
+### Event Arguments ###
+For argument "victim" extracted spans ['women', 'children', 'civilians', 'Iraqis']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Prison authorities have given the nod for Anwar to be taken home later in the afternoon to marry his eldest daughter, Nurul Izzah, to engineer Raja Ahmad Sharir Iskandar in a traditional Malay ceremony, he said.
+### Event Trigger ###
+marry
+### Event Arguments ###
+For argument "person" extracted spans ['daughter', 'Raja Ahmad Sharir Iskandar']
+For argument "place" extracted spans ['home']
+
+Example 12
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+negotiators say he demanded the release of four prisoners, including ramzi binalshibh, a september 11th suspect apprehended last year in pakistan.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "person" extracted spans ['ramzi binalshibh']
+For argument "entity" extracted spans ['negotiators']
+
+Example 13
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+But after spending 40 days in prison, Jordan's King Abdullah II pardoned the former legislator known for her harsh criticism of the state.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['legislator']
+For argument "place" extracted spans ['Jordan']
+For argument "adjudicator" extracted spans ['Abdullah II']
+
+Example 14
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat.
+### Event Trigger ###
+talks
+### Event Arguments ###
+For argument "place" extracted spans ['retreat']
+For argument "entity" extracted spans ['Blair', 'Bush']
+
+Example 15
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+In the latest edition, staff writer Jeremy M. Lazarus reports that the Legislative Black Caucus celebrated killing a bill that would have merged the Department of Minority Business Enterprise (DMBE) with the Department of Business Assistance (DBA).
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['Department of Minority Business Enterprise', 'Department of Business Assistance']
+
+Example 16
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+knew saddam hussein's rej geemg is no more, the focus in iraq is turning from military action to rebuilding which means the coalition's role in the country will have to change.
+### Event Trigger ###
+is no more
+### Event Arguments ###
+For argument "place" extracted spans ['iraq']
+For argument "org" extracted spans ['rej geemg']
+
+Example 17
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+In Paris, the French media group said parent company chairman Jean-Rene Fourtou will replace Diller as chairman and chief executive of US unit.
+### Event Trigger ###
+replace
+### Event Arguments ###
+For argument "person" extracted spans ['Jean-Rene Fourtou']
+For argument "place" extracted spans ['Paris']
+For argument "entity" extracted spans ['unit']
+
+Example 18
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+Kristin Scott, the mother, told police she gave birth secretly to both babies at her parents' home in Byrds Creek, Richland County, one of unknown sex in April 2001 and the other, a fullterm girl, January 14.
+### Event Trigger ###
+birth
+### Event Arguments ###
+For argument "person" extracted spans ['babies', 'one', 'other']
+For argument "place" extracted spans ['home']
+
+Example 19
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+lawyers in texas are trying to keep their client from becoming the 300th person executed in the state since 1982, when texas resumed capital punishment.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['person']
+For argument "place" extracted spans ['state']
+For argument "agent" extracted spans ['texas']
+
+Example 20
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+telephone
+### Event Arguments ###
+For argument "place" extracted spans ['Agartala']
+For argument "entity" extracted spans ['spokesman']
+
+Example 21
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+Police arrested her in Abilene, Texas, Saturday where she had moved with a friend June 2.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "person" extracted spans ['her']
+For argument "place" extracted spans ['Abilene']
+For argument "agent" extracted spans ['Police']
+
+Example 22
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+Indonesia will delay the execution of six convicts including an Indian on death row after five of them appealed to the Supreme Court for a second review, prosecutors said Thursday.
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "place" extracted spans ['Indonesia']
+For argument "adjudicator" extracted spans ['Supreme Court']
+For argument "plaintiff" extracted spans ['five']
+
+Example 23
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+an oklahoma city judge has ruled prosecutors presented enough evidence at a preliminary hearing to try nichols on murder charges for the other 160 victims of the attack.
+### Event Trigger ###
+hearing
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+For argument "defendant" extracted spans ['nichols']
+For argument "prosecutor" extracted spans ['prosecutors']
+For argument "place" extracted spans ['oklahoma city']
+
+Example 24
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Hunter, 34, filed for divorce in Los Angeles Superior Court, citing irreconcilable differences with the 58-year-old rock star to whom she has been married for nearly 13 years.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['Hunter', 'star']
+For argument "place" extracted spans ['Los Angeles']
+
+Example 25
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['bomber']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']

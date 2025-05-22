@@ -1,0 +1,12 @@
+{
+    "Extradite(JusticeEvent)": {
+        "description": "The Extradite event is triggered by any mention of the legal transfer of an individual from one jurisdiction to another for the purpose of facing trial or punishment. This event involves the formal request and actual process of transferring an accused or convicted person across international or state boundaries, typically for criminal charges or sentencing. Common triggers include terms like 'extradite', 'extradited', and 'extradition'. Unlike other JusticeEvents, Extradite specifically involves cross-jurisdictional transfer and highlights international or inter-state collaboration in law enforcement and justice.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The 'agent' argument identifies the entities or authorities responsible for initiating or carrying out the extradition. This can include specific countries (e.g., 'British', 'U.S.') or organizations (e.g., 'police', 'DEA'), as well as individuals or roles within these organizations (e.g., 'police commissioner', 'head of DEA'). Multiple agents may be involved in complex cases, and each should be annotated if they play a significant role.",
+            "destination": "The 'destination' argument specifies the jurisdictions or locations where the person is being extradited to, such as 'Sweden' or 'United States'. This argument clarifies where legal proceedings against the extradited individual will continue or start, highlighting international legal cooperation. It is essential for understanding the intended end location of the extradition process.",
+            "origin": "The 'origin' argument specifies the countries or states from which the person is extradited, such as 'Colombia' or 'Russia'. This is the jurisdiction surrendering the individual and provides context about the legal and political backdrop from which the extradition is requested. It focuses on the starting point of the extradition.",
+            "person": "The 'person' argument identifies the individuals being extradited, such as 'Assange' or 'Snowden', or described by a role like 'former intelligence contractor'. This argument is central to the extradition event, focusing on the individual subject to legal transfer. Detailed annotation helps differentiate from bystanders or other individuals not directly involved in the extradition."
+        }
+    }
+}

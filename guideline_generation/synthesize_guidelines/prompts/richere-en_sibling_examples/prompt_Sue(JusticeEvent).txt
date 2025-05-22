@@ -1,0 +1,321 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Sue which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Sue which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> adjudicator
+Argument 2 -> defendant
+Argument 3 -> place
+Argument 4 -> plaintiff
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+But I heard the authors sued him over it in England.
+### Event Trigger ###
+sued
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['authors']
+For argument "defendant" extracted spans ['him']
+For argument "place" extracted spans ['England']
+
+Example 2
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+The union also won a court ruling in August establishing Peabodys continued obligations to 3,100 miners and dependents, whose benefits remained with Peabody at the time of the Patriot spinoff.
+### Event Trigger ###
+court
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['union']
+For argument "defendant" extracted spans ['Peabody\x92s']
+For argument "adjudicator" extracted spans ['court']
+
+Example 3
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Also Martin Luther King,again many people are unaware of this, but his family won a civil lawsuit saying there was indeed a conspiracy to kill MLK.
+### Event Trigger ###
+lawsuit
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['family']
+
+Example 4
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Then why did they let the civil suit proceed?
+### Event Trigger ###
+suit
+### Event Arguments ###
+
+Example 5
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+The Great Wiki states Churchill sued for wrongful dismissal and won.
+### Event Trigger ###
+sued
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['Churchill']
+
+Example 6
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Sexual harrassment lawsuits from malingerers cost $$$$.
+### Event Trigger ###
+lawsuits
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['malingerers']
+
+Example 7
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Actually, no one believes them because they usually end up suing for bullshit.
+### Event Trigger ###
+suing
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['they']
+
+Example 8
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+If your problem is with the Banks,then sue the banks and try to get some money out of them.
+### Event Trigger ###
+sue
+### Event Arguments ###
+For argument "defendant" extracted spans ['banks']
+
+Example 9
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+If your problem is with the Banks,then sue the banks and try to get some money out of them.
+### Event Trigger ###
+sue
+### Event Arguments ###
+For argument "defendant" extracted spans ['banks']
+
+Example 10
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Sue them and try to get some money out of them.
+### Event Trigger ###
+Sue
+### Event Arguments ###
+For argument "defendant" extracted spans ['them']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 12
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+In The United States versus Miller, the Court held:
+### Event Trigger ###
+versus
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Court']
+For argument "prosecutor" extracted spans ['United States']
+For argument "defendant" extracted spans ['Miller']
+
+Example 13
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+SEOUL, South Korea - State prosecutors armed with metal detectors raided the Seoul residence of former President Chun Doo-hwan on Tuesday to look for assets of the ex-military dictator who owes South Korea 167.5 billion won ($150 million) in fines but claims to be broke.
+### Event Trigger ###
+fines
+### Event Arguments ###
+For argument "entity" extracted spans ['dictator']
+For argument "place" extracted spans ['South Korea']
+
+Example 14
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']
+
+Example 15
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+In Rapid City, SD they have arrested over 300 for DUI since the first of the year.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "person" extracted spans ['300']
+For argument "place" extracted spans ['Rapid City']
+
+Example 16
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+charged
+### Event Arguments ###
+For argument "defendant" extracted spans ['man']
+For argument "adjudicator" extracted spans ['court']
+For argument "prosecutor" extracted spans ['country']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 17
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 18
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 19
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+sentence
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 20
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Assange, the founder of the anti-secrecy group WikiLeaks, has been holed up for nearly a year in the tiny Ecuadorean Embassy here, stymying British attempts to extradite him to Sweden.
+### Event Trigger ###
+extradite
+### Event Arguments ###
+For argument "agent" extracted spans ['British']
+For argument "person" extracted spans ['him']
+For argument "origin" extracted spans ['Ecuadorean']
+For argument "destination" extracted spans ['Sweden']
+
+Example 21
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']
+
+Example 22
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+In a joint motion, lawyers for the defense and prosecution asked Magistrate Judge Marianne B. Bowler of U.S. District Court in Massachusetts to release Phillipos, 19, on $100,000 bail on the condition that he stay under house arrest and wear an electronic tracking bracelet.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "agent" extracted spans ['Marianne B. Bowler']
+For argument "person" extracted spans ['Phillipos']
+For argument "place" extracted spans ['Massachusetts']

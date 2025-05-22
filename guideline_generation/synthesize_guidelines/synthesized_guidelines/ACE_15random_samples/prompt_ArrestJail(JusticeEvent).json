@@ -1,0 +1,35 @@
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions such as 'arrested', 'held', or 'detained', indicating that a person has been taken into custody by authorities. Example triggers include 'arrested', 'held', 'detained'.",
+            "The event is characterized by the involvement of law enforcement or other authorities taking a person into custody, often in connection with a suspected crime or legal violation.",
+            "Unlike the 'Convict' event, which involves a legal judgment of guilt, the 'ArrestJail' event focuses on the act of taking someone into custody, regardless of whether they have been formally charged or convicted.",
+            "Triggers such as 'arrested' and 'held' are indicative of the 'ArrestJail' event type, not events like 'Sue' or 'Convict', which involve legal proceedings and judgments.",
+            "The outcome of the 'ArrestJail' event is the physical custody of a person by authorities, which differs from events like 'TrialHearing' or 'Sentence' that involve legal processes and decisions."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'Police', 'authorities', 'law enforcement'. The agent is the entity responsible for carrying out the arrest or detention. This argument is crucial as it identifies who is enforcing the law.",
+            "The agent can be a specific organization or a general term for law enforcement, such as 'Police' or 'authorities'. For instance, 'Police arrested the suspect' identifies 'Police' as the agent.",
+            "In some cases, the agent may be implied rather than explicitly stated. For example, 'He was arrested' implies an agent, typically law enforcement.",
+            "The agent is not to be confused with the 'person' being arrested. For example, in 'The police arrested John', 'police' is the agent, not 'John'.",
+            "In edge cases where multiple agents are involved, the primary entity responsible for the arrest should be identified. For example, 'FBI and local police arrested the suspect' would have 'FBI and local police' as the agent."
+        ],
+        "person": [
+            "Examples are 'her', 'people', 'group', 'he', 'Lisa M. Montgomery'. The person is the individual or group being taken into custody. This argument is essential as it identifies who is being arrested or detained.",
+            "The person can be a specific individual or a group of people. For instance, 'Police arrested her' identifies 'her' as the person.",
+            "In some cases, the person may be referred to by a pronoun or a general term. For example, 'They arrested several protesters' identifies 'protesters' as the person.",
+            "The person is not to be confused with the 'agent' making the arrest. For example, in 'The police arrested John', 'John' is the person, not 'police'.",
+            "In edge cases where multiple people are involved, each individual or group should be identified. For example, 'Police arrested John and Mary' would have 'John' and 'Mary' as the person."
+        ],
+        "place": [
+            "Examples are 'Abilene', 'here', 'New York', 'San Francisco'. The place is the location where the arrest or detention occurs. This argument is important as it provides context for where the event took place.",
+            "The place can be a specific city, state, or general location. For instance, 'Police arrested her in Abilene' identifies 'Abilene' as the place.",
+            "In some cases, the place may be implied rather than explicitly stated. For example, 'He was arrested at the scene' implies a location, typically where the incident occurred.",
+            "The place is not to be confused with the 'agent' or 'person' involved in the arrest. For example, in 'The police arrested John in New York', 'New York' is the place, not 'police' or 'John'.",
+            "In edge cases where multiple locations are involved, the primary location of the arrest should be identified. For example, 'Police arrested the suspect in New York and transported him to Los Angeles' would have 'New York' as the place."
+        ]
+    }
+}

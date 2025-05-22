@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Meet(ContactEvent)
+```json
+{
+    "Meet(ContactEvent)": {
+        "description": [
+            "The event is triggered by interactions or gatherings where individuals or groups come together for a specific purpose. Example triggers include 'talks', 'conference', 'forum', 'negotiations', 'meeting', 'brief', and 'discussed'.",
+            "The event is characterized by the presence of multiple entities (people or organizations) and often occurs at a specific location. It involves direct communication or exchange of information between the participants.",
+            "Unlike other ContactEvents such as PhoneWrite, which involves remote communication, the Meet event requires physical presence or direct interaction between the entities involved.",
+            "Triggers such as 'executed' or 'fine' are indicative of JusticeEvents, not this event type. The Meet event focuses on the act of coming together rather than legal or punitive actions.",
+            "The outcome of a Meet event is typically the exchange of ideas, information, or decisions made during the interaction. This differs from ConflictEvents like 'Attack' or 'Demonstrate', which involve confrontation or violence rather than communication."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are individuals or groups participating in the meeting. In the sentence 'Blair and Bush were to hold a joint press conference', 'Blair' and 'Bush' are the entities.",
+            "The entity argument is crucial as it identifies the participants involved in the event. For instance, in 'Several top diplomacy experts told a Kremlin-run forum', 'experts' are the entities.",
+            "Entities can be organizations or countries as well. For example, in 'Negotiations between Washington and Pyongyang', 'Washington' and 'Pyongyang' are the entities.",
+            "In some cases, the entity might be a pronoun referring to a group of people, such as 'They' in 'They are scheduled to meet next in the Russian leader's native city'.",
+            "Entities are not limited to human participants; they can also include roles or titles, such as 'Chief executive Jean-Rene Fourtou' and 'shareholders' in 'Chief executive Jean-Rene Fourtou told shareholders at the group's annual general meeting'."
+        ],
+        "place": [
+            "Examples are locations where the meeting takes place. In the sentence 'Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat', 'retreat' is the place.",
+            "The place argument is important as it provides the context of where the event occurs. For instance, in 'Negotiations between Washington and Pyongyang on their nuclear dispute have been set for April 23 in Bejing', 'Bejing' is the place.",
+            "Places can be specific cities or venues, such as 'Paris' in 'Israeli Foreign Minister Silvan Shalom on Wednesday stressed Qatar's role in the Middle East peace process during talks with his Qatari counterpart Sheikh Hamad bin Jassem bin Jabr al-Thani in Paris'.",
+            "In some cases, the place might be a general location, such as 'city' in 'They are scheduled to meet next in the Russian leader's native city of Saint Petersburg'.",
+            "The place can also be inferred from the context, such as 'Seoul' in 'Kelly, the US assistant secretary for East Asia and Pacific Affairs, arrived in Seoul from Beijing Friday to brief Yoon, the foreign minister'."
+        ]
+    }
+}
+```

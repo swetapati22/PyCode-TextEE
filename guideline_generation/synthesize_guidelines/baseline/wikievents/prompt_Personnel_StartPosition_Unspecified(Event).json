@@ -1,0 +1,42 @@
+{
+    "Personnel_StartPosition_Unspecified(Event)": {
+        "description": [
+            "The Personnel_StartPosition_Unspecified event refers to an individual beginning a new role or job position. The event can be triggered by verbs or phrases such as 'started', 'began', 'took on', 'assumed', 'appointed', 'hired', 'joined', 'became', 'inaugurated', 'elected', 'promoted', 'assigned', 'employed', 'worked', 'is', 'becoming', etc. This event does not specify the exact nature of the position or the circumstances under which the position was started.",
+            "The Personnel_StartPosition_Unspecified event captures the moment when a person starts a new job or role. The event can be triggered by words like 'started', 'began', 'took on', 'assumed', 'appointed', 'hired', 'joined', 'became', 'inaugurated', 'elected', 'promoted', 'assigned', 'employed', 'worked', 'is', 'becoming', etc. This event does not detail the specific conditions or type of position.",
+            "The Personnel_StartPosition_Unspecified event is used to annotate instances where an individual begins a new job or role. The event can be triggered by terms such as 'started', 'began', 'took on', 'assumed', 'appointed', 'hired', 'joined', 'became', 'inaugurated', 'elected', 'promoted', 'assigned', 'employed', 'worked', 'is', 'becoming', etc. This event does not provide specifics about the position or the context of the start.",
+            "The Personnel_StartPosition_Unspecified event marks the commencement of a new job or role by an individual. The event can be triggered by expressions like 'started', 'began', 'took on', 'assumed', 'appointed', 'hired', 'joined', 'became', 'inaugurated', 'elected', 'promoted', 'assigned', 'employed', 'worked', 'is', 'becoming', etc. This event does not specify the exact details of the position or the circumstances.",
+            "The Personnel_StartPosition_Unspecified event identifies when a person starts a new job or role. The event can be triggered by phrases such as 'started', 'began', 'took on', 'assumed', 'appointed', 'hired', 'joined', 'became', 'inaugurated', 'elected', 'promoted', 'assigned', 'employed', 'worked', 'is', 'becoming', etc. This event does not include specific information about the position or the context of the start."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "employee": [
+            "The 'employee' argument refers to the individual who is starting the new position. Examples are 'Tsarnaev', 'Silva', 'Conway', 'she', 'Zaghba'. This argument captures the person who is taking on the new role.",
+            "The 'employee' argument identifies the person who is beginning the new job or role. Examples are 'Tsarnaev', 'Silva', 'Conway', 'she', 'Zaghba'. This argument is used to annotate the individual starting the position.",
+            "The 'employee' argument denotes the individual who is assuming the new position. Examples are 'Tsarnaev', 'Silva', 'Conway', 'she', 'Zaghba'. This argument highlights the person taking on the new role.",
+            "The 'employee' argument specifies the person who is taking on the new job or role. Examples are 'Tsarnaev', 'Silva', 'Conway', 'she', 'Zaghba'. This argument is used to mark the individual starting the position.",
+            "The 'employee' argument represents the individual who is starting the new position. Examples are 'Tsarnaev', 'Silva', 'Conway', 'she', 'Zaghba'. This argument captures the person assuming the new role."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the new position is being started. Examples are 'pool', 'Dublin'. This argument captures the physical location associated with the new role.",
+            "The 'place' argument identifies the location where the individual is starting the new job or role. Examples are 'pool', 'Dublin'. This argument is used to annotate the place associated with the new position.",
+            "The 'place' argument denotes the location where the new position is being assumed. Examples are 'pool', 'Dublin'. This argument highlights the physical place related to the new role.",
+            "The 'place' argument specifies the location where the new job or role is being started. Examples are 'pool', 'Dublin'. This argument is used to mark the place associated with the new position.",
+            "The 'place' argument represents the location where the new position is being started. Examples are 'pool', 'Dublin'. This argument captures the physical location related to the new role."
+        ],
+        "placeofemployment": [
+            "The 'placeofemployment' argument refers to the organization or company where the new position is being started. Examples are 'Dublin'. This argument captures the entity associated with the new role.",
+            "The 'placeofemployment' argument identifies the organization or company where the individual is starting the new job or role. Examples are 'Dublin'. This argument is used to annotate the entity associated with the new position.",
+            "The 'placeofemployment' argument denotes the organization or company where the new position is being assumed. Examples are 'Dublin'. This argument highlights the entity related to the new role.",
+            "The 'placeofemployment' argument specifies the organization or company where the new job or role is being started. Examples are 'Dublin'. This argument is used to mark the entity associated with the new position.",
+            "The 'placeofemployment' argument represents the organization or company where the new position is being started. Examples are 'Dublin'. This argument captures the entity related to the new role."
+        ],
+        "position": [
+            "The 'position' argument refers to the job title or role that the individual is starting. Examples are 'lifeguards'. This argument captures the specific role being assumed by the individual.",
+            "The 'position' argument identifies the job title or role that the individual is beginning. Examples are 'lifeguards'. This argument is used to annotate the specific role being taken on by the individual.",
+            "The 'position' argument denotes the job title or role that the individual is assuming. Examples are 'lifeguards'. This argument highlights the specific role being started by the individual.",
+            "The 'position' argument specifies the job title or role that the individual is taking on. Examples are 'lifeguards'. This argument is used to mark the specific role being assumed by the individual.",
+            "The 'position' argument represents the job title or role that the individual is starting. Examples are 'lifeguards'. This argument captures the specific role being taken on by the individual."
+        ]
+    }
+}

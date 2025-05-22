@@ -1,0 +1,28 @@
+{
+    "Divorce(LifeEvent)": {
+        "description": [
+            "The event is triggered by the legal dissolution of a marriage, often indicated by terms such as 'divorce', 'filed for divorce', 'sued for divorce', or 'divorce settlement'.",
+            "The event is triggered by actions or statements indicating the end of a marital relationship, such as 'filed for divorce', 'divorce case', or 'divorce settlement'.",
+            "The event is triggered by legal proceedings or agreements that formally end a marriage, often involving court actions or settlements.",
+            "The event is triggered by the formal process of ending a marriage, which can be indicated by legal filings, court rulings, or mutual agreements.",
+            "The event is triggered by the termination of a marital relationship through legal means, often involving terms like 'divorce', 'divorce case', or 'divorce settlement'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'Hunter', 'star', 'Michael Crichton', 'Anne-Marie', 'Rod Stewart', 'Rachel Hunter', 'Welches', 'his ex-wife'. These refer to the individuals involved in the divorce, either as the person filing for divorce or the spouse.",
+            "The 'person' argument identifies the individuals whose marriage is being dissolved. This can include both parties in the divorce, such as 'Hunter' and 'star' or 'Anne-Marie' and 'Crichton'.",
+            "Examples are 'Rachel Hunter', 'husband', 'Welches', 'his ex-wife'. This argument captures the names or references to the individuals directly involved in the divorce proceedings.",
+            "The 'person' argument is crucial as it specifies the individuals whose marital relationship is ending. Examples include 'Hunter', 'star', 'Michael Crichton', and 'Anne-Marie'.",
+            "Examples are 'Crichton', 'Anne-Marie', 'Rod Stewart', 'Rachel Hunter'. This argument highlights the people who are part of the divorce event, either as the petitioner or the respondent."
+        ],
+        "place": [
+            "Examples are 'Los Angeles', 'court', 'Los Angeles Superior Court'. This argument specifies the location where the divorce proceedings are taking place or where the divorce is being filed.",
+            "The 'place' argument identifies the geographical or institutional location related to the divorce event. Examples include 'Los Angeles' and 'court'.",
+            "Examples are 'Los Angeles', 'court'. This argument captures the specific place where the divorce is being processed or discussed.",
+            "The 'place' argument is important as it provides context about where the divorce proceedings are occurring. Examples include 'Los Angeles' and 'court'.",
+            "Examples are 'Los Angeles', 'court'. This argument indicates the location associated with the divorce event, such as the city or the court where the divorce is filed."
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "Nominate(PersonnelEvent)": {
+    "description": [
+      "The event is triggered by an action or announcement designating an individual as a candidate or appointee for a role, position, or honor. Examples of triggers include 'nominate,' 'named,' and 'announcement.'",
+      "This event captures the act of putting forward an individual for consideration, typically involving an agent who nominates and a person who is the nominee.",
+      "Unlike StartPosition, which focuses on the assumption of a role, Nominate emphasizes the proposal or recommendation phase prior to formal appointment.",
+      "Triggers such as 'nominated' and 'candidate for nomination' distinguish this event from Elect, which involves a formal selection or voting process.",
+      "This event involves identifying the agent initiating the nomination and the person being nominated, highlighting the recommendation phase in personnel processes."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "agent": [
+      "Examples are individuals or entities responsible for making the nomination, such as 'pope' or 'British Chancellor of the Exchequer Gordon Brown'.",
+      "The agent argument identifies the actor initiating the nomination, emphasizing their role in recommending or proposing the candidate.",
+      "This argument is central to the event, distinguishing the nominator from the person being nominated.",
+      "Unlike the person argument, which focuses on the nominee, the agent refers to the initiator of the nomination process.",
+      "In cases where no explicit agent is mentioned, the argument may be inferred from the broader context of the text."
+    ],
+    "person": [
+      "Examples are individuals being nominated for a role, such as 'head' or 'candidate'.",
+      "The person argument identifies the nominee, who is proposed or recommended for a position or honor.",
+      "This argument is crucial for understanding the focus of the nomination event, differentiating it from related actions involving the role or organization.",
+      "Unlike the agent argument, which identifies the nominator, the person argument refers exclusively to the individual being nominated.",
+      "In cases where multiple nominees are mentioned, annotate all explicitly identified individuals proposed for consideration."
+    ]
+  }
+}

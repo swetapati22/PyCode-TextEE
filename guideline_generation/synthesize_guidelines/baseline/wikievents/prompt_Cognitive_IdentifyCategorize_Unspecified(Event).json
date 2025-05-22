@@ -1,0 +1,42 @@
+{
+    "Cognitive_IdentifyCategorize_Unspecified(Event)": {
+        "description": [
+            "The Cognitive_IdentifyCategorize_Unspecified event involves the act of recognizing, identifying, or categorizing an object, person, or concept without specifying the exact nature of the identification or categorization. The event can be triggered by verbs such as 'identify,' 'recognize,' 'categorize,' 'determine,' and 'investigate.' This event type is used when the specific details of the identification or categorization are not provided.",
+            "Cognitive_IdentifyCategorize_Unspecified refers to the process of identifying or categorizing an entity without detailed specification. The event can be triggered by actions like 'identify,' 'recognize,' 'categorize,' 'determine,' and 'investigate.' This event is applicable when the identification or categorization is mentioned but not elaborated upon.",
+            "This event type, Cognitive_IdentifyCategorize_Unspecified, captures instances where an entity is identified or categorized without specifying the exact criteria or details. The event can be triggered by terms such as 'identify,' 'recognize,' 'categorize,' 'determine,' and 'investigate.' It is used when the identification or categorization is mentioned in a general sense.",
+            "Cognitive_IdentifyCategorize_Unspecified involves the act of identifying or categorizing an entity in a non-specific manner. The event can be triggered by words like 'identify,' 'recognize,' 'categorize,' 'determine,' and 'investigate.' This event type is used when the identification or categorization lacks detailed information.",
+            "The event type Cognitive_IdentifyCategorize_Unspecified pertains to the recognition or categorization of an entity without detailed specification. The event can be triggered by verbs such as 'identify,' 'recognize,' 'categorize,' 'determine,' and 'investigate.' It is used when the identification or categorization is mentioned but not described in detail."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "identifiedobject": [
+            "The 'identifiedobject' argument refers to the entity that is being identified or categorized. Examples are 'object,' 'men,' 'He,' 'suspects,' and 'person.' This argument captures the main subject of the identification or categorization process.",
+            "The 'identifiedobject' argument denotes the entity that is recognized or categorized. Examples are 'object,' 'men,' 'He,' 'suspects,' and 'person.' This argument is used to specify what or who is being identified or categorized.",
+            "The 'identifiedobject' argument represents the entity that is the focus of the identification or categorization. Examples are 'object,' 'men,' 'He,' 'suspects,' and 'person.' This argument identifies the subject of the cognitive process.",
+            "The 'identifiedobject' argument indicates the entity that is being identified or categorized. Examples are 'object,' 'men,' 'He,' 'suspects,' and 'person.' This argument is used to highlight the main subject of the identification or categorization.",
+            "The 'identifiedobject' argument specifies the entity that is identified or categorized. Examples are 'object,' 'men,' 'He,' 'suspects,' and 'person.' This argument captures the primary subject of the identification or categorization."
+        ],
+        "identifiedrole": [
+            "The 'identifiedrole' argument refers to the role or identity assigned to the identified object. Examples are 'a circuit board,' 'Tamerlan Tsarnaev,' 'brother,' 'Dzhokhar Tsarnaev,' and 'student.' This argument captures the specific role or identity attributed to the identified object.",
+            "The 'identifiedrole' argument denotes the role or identity given to the identified object. Examples are 'a circuit board,' 'Tamerlan Tsarnaev,' 'brother,' 'Dzhokhar Tsarnaev,' and 'student.' This argument specifies the particular role or identity assigned to the identified object.",
+            "The 'identifiedrole' argument represents the role or identity attributed to the identified object. Examples are 'a circuit board,' 'Tamerlan Tsarnaev,' 'brother,' 'Dzhokhar Tsarnaev,' and 'student.' This argument highlights the specific role or identity given to the identified object.",
+            "The 'identifiedrole' argument indicates the role or identity assigned to the identified object. Examples are 'a circuit board,' 'Tamerlan Tsarnaev,' 'brother,' 'Dzhokhar Tsarnaev,' and 'student.' This argument captures the particular role or identity attributed to the identified object.",
+            "The 'identifiedrole' argument specifies the role or identity given to the identified object. Examples are 'a circuit board,' 'Tamerlan Tsarnaev,' 'brother,' 'Dzhokhar Tsarnaev,' and 'student.' This argument denotes the specific role or identity assigned to the identified object."
+        ],
+        "identifier": [
+            "The 'identifier' argument refers to the entity that performs the act of identification or categorization. Examples are 'squad,' 'enforcement,' 'who,' and 'police.' This argument captures the agent responsible for the identification or categorization process.",
+            "The 'identifier' argument denotes the entity that carries out the identification or categorization. Examples are 'squad,' 'enforcement,' 'who,' and 'police.' This argument specifies the agent involved in the identification or categorization.",
+            "The 'identifier' argument represents the entity that identifies or categorizes the object. Examples are 'squad,' 'enforcement,' 'who,' and 'police.' This argument highlights the agent responsible for the cognitive process.",
+            "The 'identifier' argument indicates the entity that performs the identification or categorization. Examples are 'squad,' 'enforcement,' 'who,' and 'police.' This argument captures the agent involved in the identification or categorization.",
+            "The 'identifier' argument specifies the entity that carries out the identification or categorization. Examples are 'squad,' 'enforcement,' 'who,' and 'police.' This argument denotes the agent responsible for the identification or categorization."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the identification or categorization occurs. Examples are 'Boston.' This argument captures the geographical context of the identification or categorization process.",
+            "The 'place' argument denotes the location where the identification or categorization takes place. Examples are 'Boston.' This argument specifies the geographical setting of the identification or categorization.",
+            "The 'place' argument represents the location of the identification or categorization. Examples are 'Boston.' This argument highlights the geographical context of the cognitive process.",
+            "The 'place' argument indicates the location where the identification or categorization occurs. Examples are 'Boston.' This argument captures the geographical setting of the identification or categorization.",
+            "The 'place' argument specifies the location where the identification or categorization takes place. Examples are 'Boston.' This argument denotes the geographical context of the identification or categorization."
+        ]
+    }
+}

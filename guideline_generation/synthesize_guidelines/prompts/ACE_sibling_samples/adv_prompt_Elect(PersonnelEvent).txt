@@ -1,0 +1,98 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Elect(PersonnelEvent)
+```json
+{
+    "Elect(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the act of selecting or appointing someone to a position or office through a voting process. Example triggers include 'elected', 're-election', 'elections', and 'by-elections'.",
+            "The event is characterized by the formal process of choosing individuals for specific roles, typically within a political or organizational context. It involves a selection mechanism, often through voting or similar democratic processes.",
+            "Unlike the 'Nominate' event, which involves proposing a candidate for a position, the 'Elect' event signifies the final decision and appointment of the candidate to the position. For instance, 'name' is indicative of 'Nominate', not 'Elect'.",
+            "Triggers such as 'elected' and 're-election' indicate the completion of the selection process, whereas 'Nominate' and 'StartPosition' events involve the initial stages of the process. The outcome of the 'Elect' event is the official appointment of the individual.",
+            "The 'Elect' event is distinct from 'EndPosition' events, which denote the conclusion of an individual's tenure in a position. For example, 'former' is indicative of 'EndPosition', not 'Elect'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'USCF' in 'Beatriz Marinello was elected USCF President'. The entity represents the organization or body for which the election is held.",
+            "The entity is crucial as it specifies the context or domain of the election, such as a company, government body, or association.",
+            "In cases where the entity is not explicitly mentioned, it can often be inferred from the context. For example, 'elected President' implies a governmental or organizational entity.",
+            "The entity helps to distinguish the scope and relevance of the election, providing clarity on the role and responsibilities associated with the elected position.",
+            "Edge cases include scenarios where the entity is a broader concept, such as 'national elections', where the entity is implicitly the nation or state."
+        ],
+        "person": [
+            "Examples are 'Beatriz Marinello' in 'Beatriz Marinello was elected USCF President'. The person is the individual who is being elected to the position.",
+            "The person is the central figure in the event, as the election revolves around their appointment to a specific role or office.",
+            "In some cases, the person may be referred to by a title or role rather than a name, such as 'President' or 'head'.",
+            "The person argument is essential for identifying the individual who will assume the responsibilities and duties of the elected position.",
+            "Edge cases include scenarios where the person is a group or collective entity, such as 'board members' or 'committee members'."
+        ],
+        "place": [
+            "Examples are 'Los Angeles' in 'Beatriz Marinello was elected USCF President in Los Angeles'. The place indicates the location where the election took place or is relevant to the election.",
+            "The place provides geographical context, which can be important for understanding the scope and jurisdiction of the election.",
+            "In some cases, the place may be implied rather than explicitly stated, such as 'national elections' implying the entire country.",
+            "The place helps to situate the event within a specific physical or administrative boundary, adding clarity to the election process.",
+            "Edge cases include virtual or online elections, where the place may be less relevant or represented by a broader term like 'online' or 'virtual'."
+        ]
+    }
+}
+```

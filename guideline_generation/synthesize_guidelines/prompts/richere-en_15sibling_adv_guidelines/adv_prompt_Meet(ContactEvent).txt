@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Meet(ContactEvent)
+```json
+{
+    "Meet(ContactEvent)": {
+        "description": [
+            "The event is triggered by interactions where two or more entities come together in a physical or virtual space. Example triggers include 'meeting', 'discussion', 'approach', and 'asked'.",
+            "The event is characterized by the presence of at least one entity and often a place where the interaction occurs. Unlike Correspondence events, Meet events involve direct interaction rather than communication through intermediaries.",
+            "The event scope includes both planned and spontaneous interactions, such as meetings, discussions, and encounters. It does not include one-sided communications or broadcasts.",
+            "Triggers such as 'meeting' and 'discussion' are indicative of Meet events, whereas triggers like 'addressing' and 'broadcasting' are indicative of Broadcast events, not Meet events.",
+            "The outcome of a Meet event is typically an exchange of information or a social interaction, unlike ContactEvent subtypes like Correspondence, which involve written or electronic communication without physical presence."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'I', 'someone', 'medic', 'lives', 'Condi', 'victim', 'doctor', 'campaigners', 'students', 'one'. The entity argument represents the participants involved in the meeting or interaction.",
+            "The role of the entity is to identify who is involved in the Meet event. It is crucial for understanding the dynamics and context of the interaction.",
+            "Entities can be individuals or groups, and there can be multiple entities in a single Meet event. For example, 'I' and 'doctor' in 'I had about 20 minutes with a doctor'.",
+            "In cases where the entity is not explicitly mentioned, it can be inferred from the context. For instance, 'her' and 'students' in 'I watched her approach a group of students'.",
+            "Unlike other ContactEvent subtypes, the entity in a Meet event is directly involved in the interaction, not just a recipient of information."
+        ],
+        "place": [
+            "Examples are 'Goerkes Corner', 'station'. The place argument represents the location where the meeting or interaction takes place.",
+            "The role of the place is to provide context about where the Meet event occurs, which can be a physical location or a virtual space.",
+            "Places can vary from specific addresses to general areas. For example, 'Goerkes Corner' in 'meeting up with someone there' and 'station' in 'discussion with the campaigners that were standing outside the door of the polling station'.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the context. For instance, 'station' in 'discussion with the campaigners'.",
+            "Unlike other ContactEvent subtypes, the place in a Meet event is where the interaction physically or virtually happens, not just a location mentioned in passing."
+        ]
+    }
+}
+```

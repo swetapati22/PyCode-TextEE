@@ -1,0 +1,10 @@
+{
+    "PhoneWrite(ContactEvent)": {
+        "description": "The PhoneWrite(ContactEvent) is triggered by any form of communication made via telephone or similar devices, such as phone calls, telephone conversations, or messages. This event involves the real-time or near-real-time exchange of information between two or more entities using a communication device. Unlike other ContactEvent types like 'Meet' or 'Email', the PhoneWrite event specifically pertains to phone-based communication. Examples of triggers include 'called', 'spoke by phone', and 'telephoned'. The outcome is the successful exchange of information or messages through a phone or similar device.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "Entities are the individuals or groups involved in the phone communication. They identify the participants in the event, such as 'spokesman' in 'The spokesman said by telephone from Agartala' or 'Jacques Chirac' and 'Bush' in 'French President Jacques Chirac received a call from Bush'. Entities can include titles or roles like 'President' or 'Prime Minister'. Pronouns should be resolved to their proper nouns, for example, 'he' in 'he called Bush' should be resolved to the specific individual.",
+            "place": "The place argument indicates the geographical location associated with the phone communication. Examples include 'Agartala' in 'The spokesman said by telephone from Agartala' or 'New York' in 'He called from his office in New York'. Places provide context to the communication and can be explicitly stated or implied, such as 'home' in 'He called from home'. Broader locations like countries or cities, such as 'France' in 'He called from France', are also valid as long as they provide relevant context."
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "Acquit(JusticeEvent)": {
+        "description": [
+            "The event is triggered by a legal decision where a defendant is found not guilty of the charges against them. Example triggers include 'acquitted', 'walk free', and 'acquittal'.",
+            "The event is characterized by the formal release of a defendant from legal charges, typically by a court or judicial body. Key characteristics include the involvement of a legal adjudicator and a defendant.",
+            "Unlike the 'Convict' event, which results in a guilty verdict, the 'Acquit' event results in a not guilty verdict, leading to the defendant's release. For example, 'acquitted' indicates an 'Acquit' event, not a 'Convict' event.",
+            "Triggers such as 'acquitted' and 'walk free' are indicative of the 'Acquit' event type, not events like 'Convict' or 'Sentence', which imply a guilty verdict and subsequent punishment.",
+            "The outcome of the 'Acquit' event is the defendant's release from legal charges, distinguishing it from events like 'Extradite' or 'ArrestJail', which involve the transfer or detention of individuals."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the word or phrase that indicates the occurrence of the 'Acquit' event. Examples include 'acquitted', 'walk free', and 'acquittal'.",
+            "Valid triggers for the 'Acquit' event include terms that denote a not guilty verdict or release from charges, such as 'acquitted' and 'walk free'.",
+            "Edge cases for the 'mention' argument include phrases like 'found not guilty' or 'cleared of charges', which also indicate an 'Acquit' event.",
+            "Triggers such as 'convicted' or 'sentenced' are not valid for the 'Acquit' event, as they imply a guilty verdict and punishment.",
+            "The 'mention' argument must clearly indicate the defendant's release from legal charges, distinguishing it from related events like 'Convict' or 'Sentence'."
+        ],
+        "adjudicator": [
+            "Examples are the entity or person responsible for delivering the not guilty verdict. This can include judges, courts, or judicial bodies. For instance, 'court' in 'The court acquitted the defendant'.",
+            "The adjudicator plays a crucial role in the 'Acquit' event by making the legal decision to release the defendant. Examples include 'judge', 'jury', and 'supreme court'.",
+            "In cases where multiple adjudicators are involved, such as 'judges Piet Streicher and Mohamed Navsa', all relevant entities should be included.",
+            "Unlike the 'prosecutor' in a 'TrialHearing' event, the 'adjudicator' in an 'Acquit' event is responsible for the final decision of not guilty.",
+            "The adjudicator must be a legal authority capable of delivering a verdict, distinguishing it from other roles like 'prosecutor' or 'defense attorney'."
+        ],
+        "defendant": [
+            "Examples are the individual or entity that is found not guilty and released from legal charges. For instance, 'Ayub Masih' in 'The court acquitted Ayub Masih'.",
+            "The defendant is the central figure in the 'Acquit' event, as they are the one being judged and ultimately released. Examples include 'Wouter Basson' and 'character'.",
+            "In cases where the defendant is referred to generically, such as 'one defendant', the argument should still be annotated as 'defendant'.",
+            "Unlike the 'victim' in an 'Injure' event, the 'defendant' in an 'Acquit' event is the person being judged and released from charges.",
+            "The defendant must be the individual or entity that was on trial and found not guilty, distinguishing them from other roles like 'witness' or 'prosecutor'."
+        ]
+    }
+}

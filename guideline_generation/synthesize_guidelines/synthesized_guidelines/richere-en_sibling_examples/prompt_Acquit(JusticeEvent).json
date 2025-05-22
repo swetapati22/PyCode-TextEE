@@ -1,0 +1,35 @@
+{
+    "Acquit(JusticeEvent)": {
+        "description": [
+            "The event is triggered by a legal decision where a defendant is declared not guilty of the charges against them. Example triggers include 'acquitted', 'cleared of', 'exonerated', 'overturned', and 'dropped'.",
+            "The event is characterized by the formal release of a defendant from legal charges, often following a trial or legal review. Key characteristics include the involvement of a legal authority (adjudicator) and the defendant being the subject of the decision.",
+            "Unlike the 'Convict' event, which results in a guilty verdict, the 'Acquit' event results in a not guilty verdict. Triggers such as 'convicted' are indicative of the 'Convict' event type, not the 'Acquit' event type.",
+            "The 'Acquit' event differs from the 'Pardon' event in that an acquittal occurs when a defendant is found not guilty, whereas a pardon is an act of forgiveness for a crime that was committed. Triggers such as 'pardoned' are indicative of the 'Pardon' event type, not the 'Acquit' event type.",
+            "The outcome of the 'Acquit' event is the defendant being freed from legal charges, whereas the 'Appeal' event involves a request for a higher court to review the decision of a lower court. Triggers such as 'appealed' are indicative of the 'Appeal' event type, not the 'Acquit' event type."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "The adjudicator is the legal authority or body that makes the decision to acquit the defendant. Examples are 'jury', 'judge', 'court'.",
+            "The role of the adjudicator is crucial as they are responsible for evaluating the evidence and determining the outcome of the case. Examples include 'jury' in a trial setting or 'judge' in a bench trial.",
+            "In some cases, the adjudicator may be a higher court that overturns a previous conviction. Examples are 'high judge' or 'appellate court'.",
+            "The adjudicator must be a recognized legal authority with the power to make binding decisions. Examples are 'Supreme Court', 'magistrate'.",
+            "Unlike the 'prosecutor' who brings charges against the defendant, the adjudicator remains impartial and delivers the final verdict. Examples are 'tribunal', 'panel of judges'."
+        ],
+        "defendant": [
+            "The defendant is the individual or entity that is being acquitted of the charges. Examples are 'sisters', 'I', 'he', 'you', 'Drew'.",
+            "The defendant is the central figure in the acquittal event, as they are the ones who benefit from the not guilty verdict. Examples include 'the accused', 'the suspect'.",
+            "In some cases, the defendant may be a group of people or an organization. Examples are 'the company', 'the team'.",
+            "The defendant is distinct from the 'plaintiff' or 'prosecutor', who are the parties bringing the charges. Examples are 'the defendant', 'the accused party'.",
+            "The defendant's identity is crucial for understanding the context of the acquittal. Examples are 'the individual', 'the person on trial'."
+        ],
+        "place": [
+            "The place is the location where the acquittal event occurs. Examples are 'London', 'courtroom', 'Florida'.",
+            "The place provides context for the legal jurisdiction and setting of the acquittal. Examples include 'city', 'state', 'country'.",
+            "In some cases, the place may refer to the specific court or legal venue. Examples are 'Supreme Court', 'district court'.",
+            "The place is important for understanding the legal framework and authority under which the acquittal is granted. Examples are 'jurisdiction', 'legal venue'.",
+            "Unlike the 'origin' or 'destination' in an 'Extradite' event, the place in an 'Acquit' event is where the legal decision is made. Examples are 'court of appeals', 'trial court'."
+        ]
+    }
+}

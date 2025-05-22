@@ -1,0 +1,11 @@
+{
+    "Acquit(JusticeEvent)": {
+        "description": "The Acquit event in the justice system is triggered by a legal decision where a defendant is found not guilty of the charges against them. This event involves the formal release of a defendant from legal charges, often following a trial or legal review, and is characterized by the involvement of a legal adjudicator. The scope of this event includes any legal context where charges are dismissed or a verdict of not guilty is reached, across various legal systems and jurisdictions. Unlike the Convict event, which results in a guilty verdict, the Acquit event results in a not guilty verdict. The outcome of the Acquit event is the defendant's release from legal charges, distinguishing it from events like ChargeIndict, which involve the initiation of legal charges.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the legal authority or body, such as a judge, jury, or court, responsible for making the decision to acquit the defendant. This can include a single judge, a panel of judges, or a jury, and may sometimes be implied rather than explicitly stated. The adjudicator is distinct from the prosecutor or defense attorney and can also include higher courts or appellate bodies, such as the Supreme Court.",
+            "defendant": "The defendant is the individual or group of individuals being acquitted of the charges. This can include a single person or multiple people, and may be referred to by name or pronoun. The defendant is distinct from the victim or plaintiff and can also be a public figure or entity.",
+            "place": "The place is the location where the acquittal occurs, providing context about the jurisdiction or venue of the legal decision. This can be a city, state, or country, and may sometimes be implied rather than explicitly stated. The place is distinct from the location of the crime or the residence of the defendant and can include specific courts or legal bodies, such as the Supreme Court in Washington, D.C."
+        }
+    }
+}

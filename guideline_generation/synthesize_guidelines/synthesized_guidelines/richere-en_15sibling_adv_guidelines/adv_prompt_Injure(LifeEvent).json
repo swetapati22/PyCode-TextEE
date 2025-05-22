@@ -1,0 +1,12 @@
+{
+    "Injure(LifeEvent)": {
+        "description": "The 'Injure' event type is triggered by actions or incidents that result in non-fatal physical harm or injury to a person. This event involves an agent who causes the harm, often using an instrument, and results in physical pain, wounds, or other forms of bodily harm. Example triggers include 'burned', 'shootings', 'mutilation', 'throwing', 'hit', 'shot', 'injuries', and 'impale'. It is distinct from events like 'Die', 'Divorce', 'BeBorn', and 'Marry', which do not involve non-fatal physical injury.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity causing the injury, which can be a person, group, or abstract entity. Examples include 'they' in 'they burned her with hot wires', 'One' in 'One by throwing himself under the wheels', and 'guy' in 'guy who just shot someone else'. The agent is crucial for identifying who or what is responsible for the injury and can sometimes be implicit or inferred from context.",
+            "instrument": "The instrument is the tool or means used to inflict the injury. Examples include 'hot wires' in 'burned her with hot wires' and 'metal spikes' in 'impale anyone who jumps'. The instrument provides context on how the injury was caused and can vary widely, from weapons like 'knives' to objects like 'vehicles' in accidents. It may sometimes be implied rather than explicitly stated.",
+            "place": "The place is the location where the injury occurs. Examples include 'where' in 'locked her in a basement, where they burned her', 'AZ' in 'shootings in AZ', and 'mall' in 'shootings occurred at the mall'. The place situates the event in a specific context and can be a specific site or a broader location like a city or country. It can also be inferred from context.",
+            "victim": "The victim is the entity receiving the injury, which can be a person, group, or even an animal. Examples include 'her' in 'they burned her', 'female' in 'female genital mutilation', and 'someone' in 'shot someone else'. The victim is crucial for identifying who is affected by the injury and can sometimes be implicit or inferred from context."
+        }
+    }
+}

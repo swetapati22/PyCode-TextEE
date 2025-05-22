@@ -1,0 +1,11 @@
+{
+    "Artifact(ManufactureEvent)": {
+        "description": "An Artifact (ManufactureEvent) is triggered by actions related to the creation or production of an artifact. Key triggers include terms like 'building', 'makes', 'produce', and 'built'. This event involves an agent responsible for the creation, a place where the creation occurs, and the artifact being created. For example, 'Diebold no longer makes voting machines' involves 'Diebold' as the agent and 'voting machines' as the artifact. Unlike TransportArtifact events, which involve moving artifacts, Artifact events focus solely on creation or production. The outcome is a new or modified artifact, such as 'The district built a planetarium', resulting in a new planetarium.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity responsible for the creation or production of the artifact. Examples include 'Diebold' in 'Diebold no longer makes voting machines' and 'district' in 'The district built a planetarium'. The agent can be an individual, group, or organization, and may sometimes be implied. Unlike agents in TransportArtifact events, which move artifacts, agents in Artifact events create or produce them.",
+            "artifact": "The artifact is the object being created or produced, such as 'schools' in 'they've been building schools' and 'complex' in 'building this Muslim complex'. It is the central focus of the event and can vary widely in nature, from buildings to machines to products. Sometimes, the artifact may be implied. Unlike artifacts in TransportArtifact events, which are moved, artifacts in Artifact events are created or produced.",
+            "place": "The place is the location where the creation or production occurs, such as 'country' in 'they've been building schools modularly in my country' and 'NYC' in 'building this Muslim complex'. It provides context for the event's scope and impact and can range from specific locations to broader regions. Sometimes, the place may be implied. Unlike places in TransportArtifact events, which indicate the destination, places in Artifact events indicate where the artifact is being created or produced."
+        }
+    }
+}

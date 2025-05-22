@@ -1,0 +1,42 @@
+{
+    "Injure(LifeEvent)": {
+        "description": [
+            "The event is triggered by actions or incidents that result in physical harm or injury to a person. Example triggers include 'burned', 'shootings', 'mutilation', 'throwing', 'hit', 'shot', 'injuries', and 'impale'.",
+            "The event is characterized by the infliction of physical damage or pain to a victim, often involving an agent who causes the harm and sometimes an instrument used to inflict the injury.",
+            "Unlike the 'Die' event type, which results in death, the 'Injure' event type involves non-fatal harm. For example, 'hit' and 'shot' can be triggers for both events, but 'Injure' does not result in death.",
+            "Triggers such as 'divorce' or 'born' are indicative of 'Divorce' and 'BeBorn' event types, respectively, not the 'Injure' event type. The 'Injure' event specifically involves physical harm.",
+            "The outcomes of the 'Injure' event type include physical pain, wounds, or other forms of bodily harm, distinguishing it from events like 'Marry' or 'BeBorn', which do not involve physical injury."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'they' in 'they burned her with hot wires', 'One' in 'One by throwing himself under the wheels', and 'guy' in 'guy who just shot someone else'. The agent is the entity causing the injury.",
+            "The agent is crucial as it identifies who or what is responsible for the injury. For instance, 'they' in 'they burned her' indicates the perpetrators.",
+            "In some cases, the agent may be implicit or inferred from context, such as 'the killer' in 'the killer is now the victim'.",
+            "The agent can be a person, group, or even an abstract entity like 'the system' in cases of systemic abuse.",
+            "Unlike the 'victim', the agent is the one inflicting harm, not receiving it. For example, 'guy' in 'guy who hit' is the agent, while 'people' are the victims."
+        ],
+        "instrument": [
+            "Examples are 'hot wires' in 'burned her with hot wires' and 'metal spikes' in 'impale anyone who jumps'. The instrument is the tool or means used to inflict the injury.",
+            "The instrument provides context on how the injury was caused, such as 'pliers' in 'twisted her skin with pliers'.",
+            "In some cases, the instrument may be implied rather than explicitly stated, such as 'gun' in 'shot someone'.",
+            "The instrument can vary widely, from weapons like 'knives' to objects like 'vehicles' in accidents.",
+            "Unlike the 'agent', the instrument is not the entity causing the harm but the means through which the harm is inflicted. For example, 'hot wires' are the instrument, while 'they' are the agents."
+        ],
+        "place": [
+            "Examples are 'where' in 'locked her in a basement, where they burned her', 'AZ' in 'shootings in AZ', and 'mall' in 'shootings occurred at the mall'. The place is the location where the injury occurs.",
+            "The place is important as it situates the event in a specific context, such as 'basement' in 'burned her in a basement'.",
+            "In some cases, the place may be a broader location, like 'city' or 'country', rather than a specific site.",
+            "The place can also be inferred from context, such as 'outside the prison camp' in 'impale anyone who jumps'.",
+            "Unlike the 'agent' or 'instrument', the place is the setting of the event, not the cause or means of the injury. For example, 'mall' is the place, while 'shootings' is the event."
+        ],
+        "victim": [
+            "Examples are 'her' in 'they burned her', 'female' in 'female genital mutilation', and 'someone' in 'shot someone else'. The victim is the entity receiving the injury.",
+            "The victim is crucial as it identifies who is affected by the injury, such as 'people' in 'hit and killed 2 people'.",
+            "In some cases, the victim may be implicit or inferred from context, such as 'his' in 'discussing his injuries'.",
+            "The victim can be a person, group, or even an animal in some contexts, such as 'dog' in 'kicked the dog'.",
+            "Unlike the 'agent', the victim is the one receiving harm, not causing it. For example, 'her' is the victim, while 'they' are the agents."
+        ]
+    }
+}

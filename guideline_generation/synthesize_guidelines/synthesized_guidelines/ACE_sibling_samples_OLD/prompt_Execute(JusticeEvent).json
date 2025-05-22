@@ -1,0 +1,35 @@
+{
+    "Execute(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of carrying out a death sentence on an individual, typically by a state or legal authority. Example triggers include 'executed', 'execution', 'put to death', and 'death'.",
+            "The event is characterized by the finality of the action, where the individual is killed as a result of a legal decision. This distinguishes it from other JusticeEvents like 'Sentence' or 'Convict', which do not necessarily result in death.",
+            "Unlike 'ArrestJail' or 'Pardon', the 'Execute' event involves the irreversible outcome of death, making it a terminal action within the justice system.",
+            "Triggers such as 'executed' and 'execution' are indicative of the 'Execute' event type, not events like 'ArrestJail' or 'Pardon', which involve detention or release rather than death.",
+            "The event is often associated with legal and judicial contexts, where the death penalty is enforced. It is distinct from extrajudicial killings or murders, which are not sanctioned by legal authorities."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'texas', 'Indonesia', 'we', 'Pakistan'. The agent is the entity responsible for carrying out the execution, often a state, government, or legal authority.",
+            "The agent plays a crucial role as it signifies the authority or body that enforces the death penalty. For instance, 'Indonesia' in 'Indonesia will delay the execution' indicates the state as the agent.",
+            "In some cases, the agent may be implied rather than explicitly stated, such as 'we' in 'If we execute them now', where 'we' refers to the executing authority.",
+            "The agent is important for understanding the source of the execution order. Unlike 'Convict' or 'ArrestJail', where the agent might be a police officer or court, here it is typically a higher authority like a state or government.",
+            "Edge cases include scenarios where the agent is a collective entity, such as 'lawyers in texas' working to prevent an execution, indicating the legal system as the agent."
+        ],
+        "person": [
+            "Examples are 'person', 'convicts', 'them', 'six', 'men', 'McVeigh', 'delma banks', 'he', 'killer'. The person is the individual who is being executed.",
+            "The person is the central figure in the event, as the execution is carried out on them. For example, 'McVeigh was executed' identifies McVeigh as the person.",
+            "In some instances, the person may be referred to collectively, such as 'six' in 'President Megawati Sukarnoputri has refused clemency for the six'.",
+            "The person is distinct from other roles like 'defendant' in 'ChargeIndict' or 'Convict', as it specifically refers to the individual facing execution.",
+            "Edge cases include references to the person by their crime or status, such as 'killer' or 'convict', which still identify the individual being executed."
+        ],
+        "place": [
+            "Examples are 'state', 'Indonesia', 'country', 'texas'. The place is the location where the execution is carried out.",
+            "The place provides context for the event, indicating where the execution is taking place. For instance, 'texas' in 'he'd be the 11th killer put to death in texas this year' specifies the location.",
+            "In some cases, the place may be a broader region or country, such as 'Indonesia' in 'Use of the death penalty is rare in Indonesia'.",
+            "The place is important for understanding the jurisdiction and legal context of the execution. Unlike 'ArrestJail' or 'Extradite', where the place might indicate where someone is detained or sent, here it indicates where the execution occurs.",
+            "Edge cases include references to the place in a more general sense, such as 'country' in 'no blasphemy convict has ever been executed in the country', which still provides the necessary location context."
+        ]
+    }
+}

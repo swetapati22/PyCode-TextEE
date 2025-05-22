@@ -1,0 +1,42 @@
+{
+    "Movement_Transportation_Evacuation(Event)": {
+        "description": [
+            "The Movement_Transportation_Evacuation event involves the relocation of people or objects from one place to another, often due to an emergency or threat. The event can be triggered by verbs such as 'evacuate', 'flee', 'escape', 'brought', and 'elude'. This event type is characterized by the movement of entities from an origin to a destination, often facilitated by a transporter.",
+            "Movement_Transportation_Evacuation refers to the act of moving individuals or items from one location to another, typically in response to a danger or urgent situation. The event can be triggered by terms like 'evacuate', 'flee', 'escape', 'brought', and 'elude'. It involves identifying the origin, destination, and the entities being moved.",
+            "This event type, Movement_Transportation_Evacuation, captures scenarios where people or objects are moved from one place to another, usually due to an emergency. The event can be triggered by words such as 'evacuate', 'flee', 'escape', 'brought', and 'elude'. Key elements include the origin, destination, and the entities being transported.",
+            "Movement_Transportation_Evacuation events involve the transfer of people or objects from one location to another, often under urgent or emergency conditions. The event can be triggered by verbs like 'evacuate', 'flee', 'escape', 'brought', and 'elude'. It includes identifying the starting point, endpoint, and the entities being moved.",
+            "The Movement_Transportation_Evacuation event type involves the relocation of entities from one place to another, typically in response to an emergency or threat. The event can be triggered by terms such as 'evacuate', 'flee', 'escape', 'brought', and 'elude'. It requires identifying the origin, destination, and the entities being transported."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "destination": [
+            "The destination argument refers to the endpoint or final location to which the entities are being moved. Examples are 'city', 'football field', 'Ecuador'. This argument is crucial for understanding where the evacuation or transportation is headed.",
+            "Destination indicates the place where the entities are being transported to. Examples are 'city', 'football field', 'Ecuador'. It helps in identifying the endpoint of the movement.",
+            "The destination is the final location where the entities are being moved. Examples are 'city', 'football field', 'Ecuador'. This argument is essential for determining the endpoint of the evacuation or transportation.",
+            "Destination refers to the endpoint of the movement where the entities are being relocated. Examples are 'city', 'football field', 'Ecuador'. It is important for understanding the final location of the evacuation or transportation.",
+            "The destination argument specifies the final location to which the entities are being transported. Examples are 'city', 'football field', 'Ecuador'. This argument helps in identifying the endpoint of the movement."
+        ],
+        "origin": [
+            "The origin argument refers to the starting point or initial location from which the entities are being moved. Examples are 'Libyan', 'Campus', 'Pine View High'. This argument is crucial for understanding where the evacuation or transportation begins.",
+            "Origin indicates the place from which the entities are being transported. Examples are 'Libyan', 'Campus', 'Pine View High'. It helps in identifying the starting point of the movement.",
+            "The origin is the initial location from which the entities are being moved. Examples are 'Libyan', 'Campus', 'Pine View High'. This argument is essential for determining the starting point of the evacuation or transportation.",
+            "Origin refers to the starting point of the movement where the entities are being relocated from. Examples are 'Libyan', 'Campus', 'Pine View High'. It is important for understanding the initial location of the evacuation or transportation.",
+            "The origin argument specifies the initial location from which the entities are being transported. Examples are 'Libyan', 'Campus', 'Pine View High'. This argument helps in identifying the starting point of the movement."
+        ],
+        "passengerartifact": [
+            "The passengerartifact argument refers to the entities (people or objects) being moved from the origin to the destination. Examples are 'parents', 'students', 'Tsarnaevs'. This argument is crucial for identifying who or what is being transported.",
+            "Passengerartifact indicates the entities being transported. Examples are 'parents', 'students', 'Tsarnaevs'. It helps in identifying the people or objects involved in the movement.",
+            "The passengerartifact is the entities being moved from the origin to the destination. Examples are 'parents', 'students', 'Tsarnaevs'. This argument is essential for determining who or what is being evacuated or transported.",
+            "Passengerartifact refers to the entities being relocated from the origin to the destination. Examples are 'parents', 'students', 'Tsarnaevs'. It is important for understanding who or what is being transported.",
+            "The passengerartifact argument specifies the entities being transported. Examples are 'parents', 'students', 'Tsarnaevs'. This argument helps in identifying who or what is being moved."
+        ],
+        "transporter": [
+            "The transporter argument refers to the entity (person or organization) facilitating the movement of the passengerartifact. Examples are 'he'. This argument is crucial for identifying who is responsible for the transportation.",
+            "Transporter indicates the entity facilitating the movement. Examples are 'he'. It helps in identifying the person or organization responsible for the transportation.",
+            "The transporter is the entity facilitating the movement of the passengerartifact. Examples are 'he'. This argument is essential for determining who is responsible for the evacuation or transportation.",
+            "Transporter refers to the entity facilitating the relocation of the passengerartifact. Examples are 'he'. It is important for understanding who is responsible for the transportation.",
+            "The transporter argument specifies the entity facilitating the movement. Examples are 'he'. This argument helps in identifying who is responsible for the transportation."
+        ]
+    }
+}

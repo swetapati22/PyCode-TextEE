@@ -1,0 +1,35 @@
+{
+    "Transaction_Donation_Unspecified(Event)": {
+        "description": [
+            "The Transaction_Donation_Unspecified event refers to an act where an individual or entity gives money or an artifact to another individual or entity without specifying the exact nature or purpose of the donation. The event can be triggered by verbs such as 'donate', 'give', 'send', 'transfer', or any other action indicating the transfer of money or artifacts from one party to another.",
+            "Transaction_Donation_Unspecified is an event where a giver provides money or an artifact to a recipient without a specified purpose. The event can be triggered by phrases like 'contributed', 'handed over', 'provided', 'bestowed', or similar terms indicating a donation.",
+            "This event type captures instances where a donation of money or artifacts occurs without a specified reason. The event can be triggered by words such as 'offered', 'presented', 'granted', 'delivered', or any other term that implies a donation.",
+            "The Transaction_Donation_Unspecified event involves the transfer of money or artifacts from a giver to a recipient without a clear specification of the donation's purpose. The event can be triggered by terms like 'allocated', 'dispensed', 'endowed', 'supplied', or other similar expressions.",
+            "Transaction_Donation_Unspecified refers to the act of giving money or artifacts from one party to another without detailing the purpose of the donation. The event can be triggered by actions such as 'remitted', 'conveyed', 'distributed', 'passed on', or any other term that signifies a donation."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifactmoney": [
+            "The artifactmoney argument refers to the money or artifact that is being donated in the event. Examples are '$900', 'a gold watch', 'a painting', '1000 euros', 'a rare book'.",
+            "artifactmoney is the object or amount of money that is transferred from the giver to the recipient. Examples are 'a diamond ring', '500 dollars', 'a laptop', 'a car', 'a piece of land'.",
+            "This argument captures the specific item or sum of money that is being donated. Examples are 'a check for $2000', 'a sculpture', 'a collection of stamps', 'a scholarship fund', 'a set of tools'.",
+            "artifactmoney denotes the monetary amount or physical item given in the donation. Examples are 'a donation of $100', 'an antique vase', 'a bicycle', 'a set of books', 'a piece of jewelry'.",
+            "The artifactmoney argument identifies the money or artifact involved in the donation. Examples are 'a sum of $5000', 'a piece of artwork', 'a musical instrument', 'a piece of furniture', 'a batch of clothes'."
+        ],
+        "giver": [
+            "The giver argument refers to the individual or entity that is providing the money or artifact in the donation. Examples are 'Tamerlan Tsarnaev', 'John Doe', 'The Red Cross', 'a local businessman', 'an anonymous donor'.",
+            "giver is the person or organization that donates the money or artifact. Examples are 'Jane Smith', 'a charitable foundation', 'a philanthropist', 'a community group', 'a corporate sponsor'.",
+            "This argument identifies the source of the donation, i.e., the person or entity giving the money or artifact. Examples are 'a wealthy benefactor', 'a non-profit organization', 'a family member', 'a friend', 'a government agency'.",
+            "giver denotes the party that initiates the donation by providing the money or artifact. Examples are 'a generous neighbor', 'a religious institution', 'a social club', 'a celebrity', 'a local council'.",
+            "The giver argument specifies who is making the donation. Examples are 'a kind stranger', 'a university', 'a sports team', 'a tech company', 'a retired couple'."
+        ],
+        "recipient": [
+            "The recipient argument refers to the individual or entity that receives the money or artifact in the donation. Examples are 'Zubeidat', 'a local charity', 'a homeless shelter', 'a school', 'a hospital'.",
+            "recipient is the person or organization that benefits from the donation. Examples are 'a needy family', 'an orphanage', 'a community center', 'a research institute', 'a disaster relief fund'.",
+            "This argument identifies the beneficiary of the donation, i.e., the person or entity receiving the money or artifact. Examples are 'a student', 'a patient', 'a refugee camp', 'a wildlife sanctuary', 'a cultural institution'.",
+            "recipient denotes the party that receives the donation. Examples are 'a veteran', 'a public library', 'a food bank', 'a youth club', 'a conservation project'.",
+            "The recipient argument specifies who is receiving the donation. Examples are 'a single mother', 'a local museum', 'a sports league', 'a community garden', 'a medical clinic'."
+        ]
+    }
+}

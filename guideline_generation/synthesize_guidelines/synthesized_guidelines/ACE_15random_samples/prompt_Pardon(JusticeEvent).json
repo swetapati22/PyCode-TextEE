@@ -1,0 +1,35 @@
+{
+    "Pardon(JusticeEvent)": {
+        "description": [
+            "The event is triggered by an official act of forgiving or excusing a person from a punishment or legal consequence. Example triggers include 'pardoned', 'cleared', and 'forgiven'.",
+            "The event is characterized by the involvement of an adjudicator who grants the pardon, a defendant who receives the pardon, and sometimes a specific place where the pardon is issued.",
+            "Unlike the Convict event, which involves a legal judgment of guilt, the Pardon event involves the nullification or forgiveness of such a judgment.",
+            "Triggers such as 'convicted' or 'sentenced' are indicative of the Convict or Sentence event types, not the Pardon event type.",
+            "The outcome of a Pardon event is the release or forgiveness of the defendant from legal penalties, distinguishing it from events like Execute or Fine, which impose penalties."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'King Abdullah II', 'court', 'board of pardon and paroles'. The adjudicator is the authority or official body that grants the pardon.",
+            "The adjudicator plays a crucial role as they have the power to forgive or excuse the defendant from legal consequences.",
+            "In some cases, the adjudicator may be a single individual, such as a president or governor, while in others, it may be a collective body like a court or parole board.",
+            "The adjudicator must be distinguished from other legal authorities involved in different justice events, such as a judge in a sentencing event.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from context, such as 'the government pardoned the prisoner'."
+        ],
+        "defendant": [
+            "Examples are 'legislator', 'their', 'former chairman Alfred Taubman'. The defendant is the person who is being pardoned.",
+            "The defendant is the individual who benefits from the pardon, being released from legal penalties or forgiven for their actions.",
+            "In some cases, the defendant may be a well-known public figure, while in others, it may be a less prominent individual.",
+            "The defendant must be distinguished from other roles in justice events, such as the plaintiff in an Appeal event or the victim in a Die event.",
+            "Edge cases include situations where the defendant is a group of people, such as 'the prisoners were pardoned'."
+        ],
+        "place": [
+            "Examples are 'Jordan', 'Manhattan', 'Indonesian'. The place is the location where the pardon is issued or takes effect.",
+            "The place provides context for the event, indicating where the legal authority has jurisdiction or where the defendant is located.",
+            "In some cases, the place may be a specific city or country, while in others, it may be a more general region or jurisdiction.",
+            "The place must be distinguished from other locations involved in different events, such as the place of arrest in an ArrestJail event or the place of execution in an Execute event.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from context, such as 'the president pardoned the prisoner in his country'."
+        ]
+    }
+}

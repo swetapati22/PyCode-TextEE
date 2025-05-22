@@ -1,0 +1,28 @@
+{
+  "Marry(LifeEvent)": {
+    "description": [
+      "The event is triggered by an action or state indicating a union or marriage between individuals. Examples of triggers include 'marry,' 'marriage,' and 'wedding.'",
+      "This event focuses on the formation of a marital relationship or references to existing or past marriages, highlighting the participants involved.",
+      "Unlike Divorce, which focuses on the dissolution of a marital relationship, Marry emphasizes the establishment or continuation of a marriage.",
+      "Triggers such as 'wed' and 'marriages' distinguish Marry from related LifeEvents like BeBorn or Die, which focus on different life milestones.",
+      "The event captures the participants (persons getting married) and optionally the location (place) where the marriage occurs or is mentioned."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "person": [
+      "Examples are individuals involved in the marriage, such as 'daughter' and 'Raja Ahmad Sharir Iskandar' or 'Rudolph Giuliani' and 'companion'.",
+      "The person argument identifies the participants forming the marital relationship, emphasizing their roles as the central figures in the event.",
+      "This argument is critical for understanding the primary focus of the Marry event, distinguishing it from related events like Divorce, where the focus is on the separation.",
+      "Unlike the place argument, which situates the event geographically, the person argument exclusively identifies individuals entering or involved in the marital relationship.",
+      "In cases involving multiple individuals, annotate all explicitly mentioned participants of the marriage."
+    ],
+    "place": [
+      "Examples are locations associated with the marriage, such as 'home' or 'Gracie Mansion'.",
+      "The place argument situates the event within a specific geographical or ceremonial context, adding clarity to where the marriage occurs or is mentioned.",
+      "Unlike the person argument, which focuses on the individuals involved, the place provides spatial or contextual information about the event.",
+      "Places are optional and may not always be mentioned; however, they should be annotated when explicitly referenced in the text.",
+      "In cases with ambiguous or multiple locations, prioritize the one most directly associated with the event or participants."
+    ]
+  }
+}

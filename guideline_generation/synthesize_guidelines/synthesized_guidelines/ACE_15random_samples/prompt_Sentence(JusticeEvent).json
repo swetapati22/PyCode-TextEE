@@ -1,0 +1,35 @@
+{
+    "Sentence(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of a judicial body or authority issuing a formal judgment or punishment to a defendant. Example triggers include 'sentenced', 'sentence', and 'handed out sentences'.",
+            "The event is characterized by the presence of an adjudicator (e.g., court, judge), a defendant (e.g., individual or group being sentenced), and sometimes a place (e.g., country, city) where the sentencing occurs.",
+            "Unlike the Convict event, which focuses on the determination of guilt, the Sentence event specifically pertains to the imposition of a penalty or punishment following a conviction.",
+            "Triggers such as 'convicted' are indicative of the Convict event type, not the Sentence event type. The Sentence event focuses on the outcome of the judicial process, not the determination of guilt.",
+            "The event outcomes include various forms of punishment such as imprisonment, fines, or death sentences, which are distinct from the outcomes of other JusticeEvent types like Execute or Extradite."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', 'tribunal'. The adjudicator is the authority that issues the sentence. It is crucial as it represents the legal body responsible for the judgment.",
+            "In the sentence 'The Supreme Court sentenced the defendant to life imprisonment', 'Supreme Court' is the adjudicator.",
+            "The adjudicator can be a specific judge or a general term like 'court'. For instance, 'Judge Smith' or 'the court' can both serve as adjudicators.",
+            "In cases where the adjudicator is not explicitly mentioned, it can be inferred from context, such as 'The defendant was sentenced to five years' where the adjudicator is implied to be the court handling the case.",
+            "Unlike the prosecutor in a ChargeIndict event, the adjudicator in a Sentence event is the entity that delivers the final judgment, not the one bringing charges."
+        ],
+        "defendant": [
+            "Examples are 'individual', 'group', 'organization'. The defendant is the party receiving the sentence. This argument is essential as it identifies who is being punished.",
+            "In the sentence 'The billionaire was sentenced to one year in prison', 'billionaire' is the defendant.",
+            "The defendant can be a specific person or a group, such as 'the smugglers' or 'the company'.",
+            "In some cases, the defendant may be referred to by pronouns, such as 'he' or 'they', as in 'He was sentenced to five years'.",
+            "Unlike the victim in an Injure event, the defendant in a Sentence event is the one being judged and punished by the legal system."
+        ],
+        "place": [
+            "Examples are 'country', 'city', 'province'. The place indicates where the sentencing occurs. It provides context about the jurisdiction and location of the legal proceedings.",
+            "In the sentence 'A Pakistani court in central Punjab province has sentenced a man to life imprisonment', 'central Punjab province' is the place.",
+            "The place can be a specific location like 'New York' or a broader region like 'the United States'.",
+            "In some instances, the place may be implied rather than explicitly stated, such as 'The court sentenced him to ten years' where the place is understood to be the location of the court.",
+            "Unlike the place in an Extradite event, which indicates the origin and destination of the person being extradited, the place in a Sentence event is where the sentencing occurs."
+        ]
+    }
+}

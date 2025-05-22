@@ -1,0 +1,48 @@
+{
+    "Sue(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal actions or proceedings initiated by a party (plaintiff) against another party (defendant) for resolution by an adjudicator. Examples of triggers include 'lawsuit,' 'sued,' and 'litigation.'",
+            "The event involves formal accusations or claims where a plaintiff seeks judicial intervention against a defendant. It is distinct from events like 'Convict' or 'Appeal,' which focus on the outcome or challenge of a judgment, respectively.",
+            "This event centers on the initiation of civil or legal disputes, often expressed through terms indicating lawsuits or legal claims. Unlike 'Fine,' which imposes monetary penalties, this event focuses on the act of initiating the claim.",
+            "Triggers such as 'sued' and 'litigation' represent the legal act of suing and are distinct from 'ArrestJail,' which pertains to the criminal detention of a person.",
+            "The event scope includes the identification of all involved parties—adjudicator, defendant, plaintiff—and the geographical place where the event occurs, distinct from related events where these roles might differ or are absent."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger represents the key term or phrase that signals the occurrence of a 'Sue' event. Examples include 'lawsuit,' 'sued,' and 'litigation.'",
+            "Triggers typically indicate legal disputes initiated in a formal judicial setting. For example, 'pursue' in the context of legal cases is valid, unlike 'pursue' in general pursuits.",
+            "Triggers can be verbs or nouns related to suing, such as 'filed' (when used in 'filed a lawsuit'). Edge cases like 'case' should be validated for their context.",
+            "Unlike triggers for events like 'Appeal,' which indicate a challenge to an existing judgment, triggers for 'Sue' focus on initiating a claim.",
+            "Edge cases like the use of 'litigation' in casual versus legal contexts should be distinguished. Only those in legal contexts qualify as valid triggers."
+        ],
+        "adjudicator": [
+            "The adjudicator refers to the judicial entity or individual responsible for resolving the lawsuit. Examples are 'courts,' 'judges,' or similar legal authorities.",
+            "The adjudicator is a neutral party tasked with ensuring legal resolution. For instance, 'Supreme Court' as an adjudicator emphasizes the authoritative level of judgment.",
+            "Examples include 'arbitration panel' or 'mediator' in non-traditional legal settings. Contexts without a clear judicial authority should not identify an adjudicator.",
+            "Edge cases include ambiguous terms like 'legal system,' which may represent the adjudicator only if contextually specific.",
+            "The adjudicator is distinct from 'prosecutor' in events like 'ChargeIndict,' as the latter represents an accusing entity rather than a neutral arbitrator."
+        ],
+        "defendant": [
+            "The defendant is the individual or entity being sued in the event. Examples include 'Iraq' in a lawsuit or 'Crichton' in a personal legal dispute.",
+            "Defendants are the recipients of the legal action and are contextually distinct from plaintiffs. For instance, 'it' in 'suits by clients' identifies the defendant.",
+            "Examples are organizations or individuals against whom claims are filed, such as 'company' in a corporate dispute. Ambiguous terms must be validated by context.",
+            "Edge cases where multiple entities are referred to as potential defendants require clarification. For example, 'sellers' in auctions can be either plaintiffs or defendants.",
+            "The defendant role is distinct from 'person' in 'ArrestJail' events, as the latter focuses on criminal detention rather than legal accusations."
+        ],
+        "place": [
+            "The place indicates the geographical location where the lawsuit or legal action occurs. Examples include 'Washington' or 'court' locations specified in the context.",
+            "Places are venues of legal proceedings. For instance, 'outside the United States' in auction disputes clarifies the jurisdiction of the event.",
+            "Examples include named cities, countries, or courts directly involved in the legal action. Generic terms like 'region' require additional context for validity.",
+            "Edge cases include references to multiple places, where only the primary venue of the legal action should be annotated.",
+            "Unlike 'origin' or 'destination' in 'Extradite,' the place in 'Sue' refers exclusively to where the legal action unfolds, not the movement of persons or cases."
+        ],
+        "plaintiff": [
+            "The plaintiff is the individual or entity initiating the legal action. Examples include 'Anne-Marie' and 'clients' in respective contexts.",
+            "Plaintiffs are active parties seeking legal resolution, distinct from defendants. For example, 'buyers and sellers' as plaintiffs pursue a legal claim.",
+            "Examples include groups or organizations, such as 'relatives' in victim lawsuits. Ambiguous terms like 'party' need specific context to qualify.",
+            "Edge cases include cases with multiple plaintiffs, where all initiating entities are equally valid and should be annotated.",
+            "Unlike 'prosecutor' in criminal cases, the plaintiff in 'Sue' events is involved in civil legal disputes, seeking compensation or resolution."
+        ]
+    }
+}

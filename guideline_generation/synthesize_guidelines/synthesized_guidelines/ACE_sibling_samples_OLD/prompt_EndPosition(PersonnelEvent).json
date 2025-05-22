@@ -1,0 +1,35 @@
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the termination or conclusion of a person's role or position within an organization or entity. Example triggers include 'quit', 'ending', 'removal', 'leave', 'steps down', 'leaving', 'previously', and 'formerly'.",
+            "The event is characterized by the cessation of duties or responsibilities held by an individual in a professional or official capacity. It often involves a formal or informal announcement of the end of a position.",
+            "Unlike the StartPosition event, which marks the beginning of a role, the EndPosition event signifies the conclusion of a role. For instance, 'replace' is indicative of StartPosition, not EndPosition.",
+            "Triggers such as 'quit' and 'steps down' are indicative of the EndPosition event type, as they denote the voluntary or involuntary departure from a role. This is different from the Nominate event, which involves the selection or appointment of a person to a role.",
+            "The outcomes of the EndPosition event include the individual no longer holding the specified position, which can be due to resignation, termination, or completion of a term. This is distinct from the Elect event, where the outcome is the selection of a person to a new role."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'Vivendi Universal Entertainment', 'Chinese', 'Barclays Bank', 'BZW', 'Kleinwort Benson', and 'Department of Trade and Industry'. The entity argument refers to the organization, company, or institution from which the person is departing.",
+            "The entity is crucial as it provides context about the professional environment or sector affected by the person's departure. For instance, 'Vivendi Universal' in the context of Barry Diller's resignation.",
+            "In cases where multiple entities are involved, such as 'Barclays Bank', 'BZW', and 'Kleinwort Benson', the argument should capture all relevant entities associated with the person's previous roles.",
+            "The entity argument helps distinguish the specific organization or unit within a larger entity, such as 'Department of Trade and Industry' for a civil servant's previous position.",
+            "Unlike the place argument, which denotes a geographical location, the entity argument specifies the professional or organizational context. For example, 'Chinese' as an entity in the context of a former president."
+        ],
+        "person": [
+            "Examples are 'Barry Diller', 'Jean-Marie Messier', 'Callum McCarthy', 'Howard Davies', 'Davies', 'McCarthy', and 'he'. The person argument identifies the individual whose position is ending.",
+            "The person argument is essential as it specifies the subject of the EndPosition event, providing clarity on who is leaving the role. For instance, 'Barry Diller' in the context of quitting as chief of Vivendi Universal Entertainment.",
+            "In cases where pronouns are used, such as 'he' or 'his', the argument should accurately capture the reference to the individual in question.",
+            "The person argument helps differentiate between multiple individuals mentioned in the text, ensuring the correct identification of the person whose position is ending. For example, 'Howard Davies' stepping down from a role.",
+            "Unlike the agent argument in the Nominate event, which identifies the person making the nomination, the person argument in the EndPosition event identifies the individual whose role is concluding."
+        ],
+        "place": [
+            "Examples are 'Chinese' and 'London'. The place argument refers to the geographical location associated with the person's position or the entity they are departing from.",
+            "The place argument provides additional context about the location relevant to the EndPosition event, such as 'London' in the context of Howard Davies stepping down.",
+            "In cases where the place is not explicitly mentioned, the argument may be inferred from the context, such as 'Chinese' in the context of a former president.",
+            "The place argument helps distinguish the geographical aspect of the event, which can be important for understanding the broader implications of the person's departure. For example, 'London' as the financial hub in the context of Callum McCarthy's new role.",
+            "Unlike the entity argument, which specifies the organization, the place argument focuses on the physical location. For instance, 'Paris' in the context of a StartPosition event is not relevant to the EndPosition event."
+        ]
+    }
+}

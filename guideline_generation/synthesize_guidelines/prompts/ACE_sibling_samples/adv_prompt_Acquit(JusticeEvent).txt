@@ -1,0 +1,91 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Acquit(JusticeEvent)
+```json
+{
+    "Acquit(JusticeEvent)": {
+        "description": [
+            "The event is triggered by a legal decision where a defendant is found not guilty of the charges against them. Example triggers include 'acquitted', 'walk free', and 'acquittal'.",
+            "The event is characterized by the formal declaration of a defendant's innocence by an adjudicator, such as a judge or a court. This event signifies the end of legal proceedings against the defendant for the specific charges.",
+            "Unlike the Convict event, which results in a guilty verdict, the Acquit event results in a not guilty verdict, meaning the defendant is cleared of the charges. Triggers such as 'convicted' are indicative of the Convict event, not the Acquit event.",
+            "The outcome of the Acquit event is that the defendant is released from legal liability for the charges in question. This differs from the Pardon event, where a defendant may be forgiven for a crime but not necessarily declared innocent.",
+            "The Acquit event is specific to the judicial process and involves an adjudicator making a formal decision. Unlike the ReleaseParole event, which involves the release of a prisoner, the Acquit event involves a legal judgment of not guilty."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', 'jury', 'Supreme Court'. The adjudicator is the entity responsible for making the legal decision to acquit the defendant. This role is crucial as it signifies the authority behind the acquittal.",
+            "The adjudicator can be an individual or a collective body, such as 'judges Piet Streicher and Mohamed Navsa'. This highlights the formal and authoritative nature of the decision.",
+            "In some cases, the adjudicator may be referred to in a more general sense, such as 'we' in the context of a judicial body or system. This reflects the collective decision-making process in some legal systems.",
+            "The adjudicator's decision is final and binding, meaning the defendant cannot be tried again for the same charges, as seen in 'the highest appeals court in the country'. This underscores the finality of the acquittal.",
+            "Unlike the prosecutor, who brings charges against the defendant, the adjudicator is neutral and responsible for determining the outcome based on the evidence presented."
+        ],
+        "defendant": [
+            "Examples are 'Ayub Masih', 'character', 'defendant', 'Wouter Basson', 'guy', 'Basson'. The defendant is the individual who is being acquitted of the charges. This role is central to the event as it identifies the person who is found not guilty.",
+            "The defendant can be a named individual or referred to in a general sense, such as 'defendant' or 'guy'. This reflects the varying levels of specificity in legal documents and reports.",
+            "In some cases, the defendant may be referred to by their role or status, such as 'character' or 'guy'. This highlights the importance of context in identifying the defendant.",
+            "The defendant is the subject of the legal proceedings and the one who benefits from the acquittal. This distinguishes them from other roles such as the prosecutor or adjudicator.",
+            "Unlike the plaintiff, who brings a lawsuit, the defendant is the one who is defending against the charges. This distinction is crucial in understanding the dynamics of the legal process."
+        ]
+    }
+}
+```

@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Correspondence(ContactEvent)
+```json
+{
+    "Correspondence(ContactEvent)": {
+        "description": [
+            "The event is triggered by actions or communications that involve an exchange of information between entities. Example triggers include 'meet', 'phoned', 'answer', 'asked', 'accused', and 'responding'.",
+            "The event is characterized by the act of one entity reaching out to another entity to convey or request information. This can occur through various mediums such as phone calls, emails, letters, or in-person meetings.",
+            "Unlike the 'Meet' event type, which focuses on the physical gathering of individuals, the 'Correspondence' event type emphasizes the exchange of information, regardless of whether the entities are physically present together.",
+            "Triggers such as 'addressing' are indicative of the 'Broadcast' event type, not the 'Correspondence' event type, as 'Broadcast' involves one entity communicating to a larger audience rather than a direct exchange between entities.",
+            "The outcome of a 'Correspondence' event is typically the transfer of information or a response to a query, distinguishing it from events where the primary goal is to gather or broadcast information to a group."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are individuals or organizations involved in the communication. In the sentence 'Phoned Amtrak on Wednesday', 'Amtrak' is the entity being communicated with.",
+            "The entity argument is crucial as it identifies the participants in the correspondence. For instance, in 'Let's see, you quoted my post', 'you' and 'I' are the entities involved.",
+            "Entities can be multiple, as seen in 'The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities', where 'Ministry of Foreign Affairs of Ecuador' and 'U.K. authorities' are the entities.",
+            "In cases where the entity is implied but not explicitly mentioned, such as 'Phoned online company and got it', 'company' is the entity.",
+            "Entities can also be pronouns, as in 'Do you recall in YOUR thread where you accused me', where 'you' and 'me' are the entities."
+        ],
+        "place": [
+            "Examples are locations where the correspondence takes place. In 'Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague', 'London' is the place.",
+            "The place argument helps contextualize the correspondence event by providing the location. For example, 'Phoned Amtrak on Wednesday' does not specify a place, but 'in London' in the previous example does.",
+            "Places can be specific or general, such as 'at the office' or 'in the city'.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the context, such as 'Phoned online company' where the place is not specified.",
+            "Unlike the 'Broadcast' event type, where the place might be a venue for a speech, the 'Correspondence' event type's place is where the communication occurs or is directed to."
+        ]
+    }
+}
+```

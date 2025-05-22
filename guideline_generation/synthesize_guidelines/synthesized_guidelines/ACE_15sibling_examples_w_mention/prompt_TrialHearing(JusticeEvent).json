@@ -1,0 +1,48 @@
+{
+    "TrialHearing(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal proceedings where a defendant is formally tried or heard in a court of law. Example triggers include 'trial', 'hearing', and 'tried'.",
+            "The event is characterized by the presence of an adjudicator, such as a judge or court, and often involves a prosecutor and a defendant. It typically takes place in a legal setting.",
+            "Unlike the 'ArrestJail' event, which involves the act of detaining a person, the 'TrialHearing' event focuses on the judicial process of determining guilt or innocence.",
+            "Triggers such as 'charges' or 'lawsuit' are indicative of 'ChargeIndict' or 'Sue' events, not 'TrialHearing'. The 'TrialHearing' event specifically involves the formal judicial process.",
+            "The outcome of a 'TrialHearing' event can lead to various judicial decisions, such as conviction, acquittal, or sentencing, distinguishing it from events like 'Appeal' or 'Pardon', which occur post-trial."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of a trial or hearing. Examples include 'trial', 'hearing', and 'tried'.",
+            "Triggers such as 'trial' and 'hearing' are valid indicators of this event type, as they denote the formal judicial process.",
+            "Edge cases include phrases like 'preliminary hearing' or 'bail hearing', which still fall under the 'TrialHearing' event type.",
+            "Unlike 'arrested' or 'charged', which indicate different stages of the justice process, 'trial' and 'hearing' specifically refer to the judicial examination phase.",
+            "Examples are 'The trial will begin next week', 'He attended the hearing', and 'She was tried for the crime'."
+        ],
+        "adjudicator": [
+            "The adjudicator is the person or entity responsible for overseeing the trial or hearing. Examples are 'judge', 'court', and 'jury'.",
+            "The role of the adjudicator is crucial as they ensure the legal process is followed and make rulings based on the evidence presented.",
+            "Examples are 'The judge ruled in favor of the prosecution', 'The court will hear the case', and 'The jury found the defendant guilty'.",
+            "Unlike the 'prosecutor' or 'defendant', the adjudicator is neutral and responsible for maintaining order and fairness in the trial.",
+            "Edge cases include 'magistrate' or 'tribunal', which also serve as adjudicators in specific legal contexts."
+        ],
+        "defendant": [
+            "The defendant is the person or entity being tried or heard in the court of law. Examples are 'Nichols', 'Anwar Ibrahim', and 'Markovic'.",
+            "The defendant is the individual against whom the legal action is brought and who is required to respond to the charges.",
+            "Examples are 'The defendant pleaded not guilty', 'Anwar Ibrahim attended his hearing', and 'Markovic will be tried next week'.",
+            "Unlike the 'prosecutor', who brings the charges, the defendant is the one defending against the accusations.",
+            "Edge cases include multiple defendants being tried together, such as 'officials' in the context of a group trial."
+        ],
+        "place": [
+            "The place is the location where the trial or hearing takes place. Examples are 'Oklahoma City', 'Belgrade', and 'court'.",
+            "The place provides the geographical or institutional context for the event, indicating where the judicial process is occurring.",
+            "Examples are 'The trial was held in Oklahoma City', 'The hearing took place in Belgrade', and 'The court convened in the capital'.",
+            "Unlike the 'origin' or 'destination' in an 'Extradite' event, the place in a 'TrialHearing' event is where the judicial proceedings are conducted.",
+            "Edge cases include virtual or remote hearings, where the place might be described as 'online' or 'virtual court'."
+        ],
+        "prosecutor": [
+            "The prosecutor is the person or entity responsible for presenting the case against the defendant. Examples are 'prosecutors', 'district attorney', and 'state'.",
+            "The prosecutor's role is to prove the defendant's guilt by presenting evidence and arguments in court.",
+            "Examples are 'The prosecutors presented their case', 'The district attorney argued for a harsh sentence', and 'The state is seeking a conviction'.",
+            "Unlike the 'defendant', who defends against the charges, the prosecutor actively seeks to establish the defendant's guilt.",
+            "Edge cases include special prosecutors or independent counsels appointed for specific cases, such as 'special prosecutor'."
+        ]
+    }
+}

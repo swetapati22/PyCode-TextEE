@@ -1,0 +1,221 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Divorce which is a child event type of super class LifeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Divorce which is a child event type of super class LifeEvent
+Arguments:
+Argument 1 -> person
+Argument 2 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Michigan is a no-fault divorce state, so had we have been married longer or if he was laid off before our divorce, could have been responsible for spousal support.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['our']
+For argument "place" extracted spans ['Michigan']
+
+Example 2
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+I come from a middle-class family but after my parents divorced life became more difficult financially.
+### Event Trigger ###
+divorced
+### Event Arguments ###
+For argument "person" extracted spans ['parents']
+
+Example 3
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Unfortunately, the Sharia law is so distorted that it sounds like a cruel system of law to a woman who gets thrown out on the whim of an idiot by calling Talaq three times, female rape victim, an apostate and the blasphemer.
+### Event Trigger ###
+Talaq
+### Event Arguments ###
+For argument "person" extracted spans ['woman', 'idiot']
+
+Example 4
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+But was your divorce really so totally amicable the whole way through?
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['your']
+
+Example 5
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+I have been seperated from my ex for now 2 yrs, we have 2 children together, he seems every fortnight from friday after school till sunday 5 o'clock, and some time more when he wanted them.
+### Event Trigger ###
+seperated
+### Event Arguments ###
+For argument "person" extracted spans ['my', 'ex']
+
+Example 6
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+If they divorce, I think they deserve at least some money as compensation for what they gave up and to help them get back on their feet.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['they']
+
+Example 7
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Person B asks for a divorce 6 months before getting their degree.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['Person']
+
+Example 8
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+My perspective is coming from the fact that I'm divorced and my XH tried to milk me for everything I'm worth, even though he cheated on me.
+### Event Trigger ###
+divorced
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+
+Example 9
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Michigan is a no-fault divorce state, so had we have been married longer or if he was laid off before our divorce, could have been responsible for spousal support.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "place" extracted spans ['Michigan']
+
+Example 10
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+As for his pension, would that not have been sorted when he divorced your mum?
+### Event Trigger ###
+divorced
+### Event Arguments ###
+For argument "person" extracted spans ['he', 'mum']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even the IRA failed to cause as many casualties on mainland Great Britain as Pakistani trained suicide bombers did in one day.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "agent" extracted spans ['bombers']
+For argument "victim" extracted spans ['bombers']
+For argument "place" extracted spans ['mainland']
+For argument "instrument" extracted spans ['bombers']
+
+Example 12
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "victim" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+For argument "place" extracted spans ['where']
+
+Example 13
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Why is it only one of the identified groups is being barred from Civil Marriage (in most places).
+### Event Trigger ###
+Marriage
+### Event Arguments ###
+For argument "person" extracted spans ['groups']
+For argument "place" extracted spans ['places']
+
+Example 14
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']

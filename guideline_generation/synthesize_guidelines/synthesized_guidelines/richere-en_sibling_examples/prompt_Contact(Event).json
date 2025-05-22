@@ -1,0 +1,28 @@
+{
+    "Contact(Event)": {
+        "description": [
+            "The event is triggered by verbal or written communication between entities. Examples include 'stated', 'say', 'claimed', 'conversation', 'told', 'talking', and 'trapped'.",
+            "The event is characterized by the exchange of information, opinions, or directives between one or more entities. It often involves direct or indirect speech acts.",
+            "Unlike Transaction events, which involve the exchange of goods or services, Contact events focus on the exchange of information or communication. For example, 'owes' is indicative of a Transaction event, not a Contact event.",
+            "Triggers such as 'stated', 'say', 'claimed', and 'conversation' indicate a Contact event, where the primary outcome is the dissemination or reception of information.",
+            "The event can occur in various contexts, including formal statements, casual conversations, and directives. The key outcome is the communication itself, not the transfer of physical items or services."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are individuals or groups involved in the communication. In 'Obama stated in ISLAMIC COUNTRIES', 'Obama' is the entity making the statement.",
+            "The entity is the person or group who is either conveying or receiving the information. For instance, in 'Giulio Andreotti had to say something', 'Giulio Andreotti' is the entity.",
+            "Entities can be multiple individuals or groups. In 'police told the man', both 'police' and 'man' are entities involved in the communication.",
+            "The entity can be implied or explicitly mentioned. In 'He claimed', 'He' is the entity making the claim.",
+            "Entities are crucial for identifying the participants in the communication. In 'talking to his friend', both 'he' and 'friend' are entities engaged in the conversation."
+        ],
+        "place": [
+            "Examples are locations where the communication takes place. In 'Obama stated in ISLAMIC COUNTRIES', 'ISLAMIC COUNTRIES' is the place where the statement was made.",
+            "The place provides context for the communication event. It can be a physical location or a more abstract setting. For example, 'in the showers' in 'several people were told in the showers' is the place.",
+            "Places can be specific or general. In 'talking to his friend about it', the place is not explicitly mentioned but can be inferred from the context.",
+            "The place helps to situate the event in a particular setting, which can be important for understanding the context of the communication. For instance, 'in a rational conversation' implies a setting conducive to discussion.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the surrounding text. For example, 'in a 7-11' in 'bought Skittles from a 7-11' provides context for the subsequent communication."
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "Cognitive_Research_Unspecified(Event)": {
+        "description": [
+            "The event type 'Cognitive_Research_Unspecified' refers to any research activity that involves cognitive processes or phenomena but is not specified in detail. The event can be triggered by verbs such as 'study', 'investigate', 'analyze', 'research', 'examine', and similar terms. This event type encompasses a broad range of cognitive research activities, including but not limited to psychological studies, cognitive science experiments, and investigations into cognitive behaviors.",
+            "The event type 'Cognitive_Research_Unspecified' involves activities related to the study or investigation of cognitive processes. This can include research on memory, perception, problem-solving, and other mental functions. The event can be triggered by terms like 'study', 'research', 'investigation', 'analysis', and 'assessment'. It is important to note that the specific details of the research are not provided, making it an unspecified cognitive research event.",
+            "The 'Cognitive_Research_Unspecified' event type captures instances where cognitive research is mentioned without specific details. This can include general references to studies, investigations, or analyses related to cognitive phenomena. Triggers for this event type include words like 'study', 'research', 'investigate', 'analyze', and 'examine'. The event is characterized by its focus on cognitive research activities that are not elaborated upon in the text.",
+            "The 'Cognitive_Research_Unspecified' event type refers to any mention of research activities involving cognitive processes that lack specific details. This can be triggered by verbs such as 'study', 'research', 'investigate', 'analyze', and 'examine'. The event encompasses a wide range of cognitive research activities, including psychological studies and cognitive science experiments, without specifying the exact nature of the research.",
+            "The event type 'Cognitive_Research_Unspecified' pertains to research activities related to cognitive processes that are mentioned in a general or unspecified manner. Triggers for this event include terms like 'study', 'research', 'investigate', 'analyze', and 'examine'. This event type covers a broad spectrum of cognitive research activities, focusing on the investigation of mental functions without providing detailed information about the research."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "place": [
+            "The 'place' argument refers to the location where the cognitive research activity is conducted. Examples are 'school', 'university', 'laboratory', 'conference', and 'field'. This argument helps to identify the physical or virtual setting of the research.",
+            "The 'place' argument indicates the geographical or institutional location where the cognitive research takes place. Examples include 'research center', 'hospital', 'office', 'online platform', and 'library'. This argument provides context about the environment in which the research is carried out.",
+            "The 'place' argument specifies the venue or site of the cognitive research activity. Examples are 'classroom', 'clinic', 'workshop', 'seminar', and 'home'. This argument is crucial for understanding the setting of the research.",
+            "The 'place' argument denotes the specific location associated with the cognitive research event. Examples include 'laboratory', 'conference hall', 'university campus', 'research institute', and 'community center'. This argument helps to situate the research in a particular context.",
+            "The 'place' argument identifies the location where the cognitive research is performed. Examples are 'school', 'university', 'laboratory', 'conference', and 'field'. This argument provides information about the setting of the research activity."
+        ],
+        "researcher": [
+            "The 'researcher' argument refers to the individual or group conducting the cognitive research. Examples are 'police', 'Emma Webb', 'Stanford', 'NYU', and 'Federal Bureau of Investigation'. This argument identifies the entity responsible for carrying out the research.",
+            "The 'researcher' argument indicates the person or organization involved in conducting the cognitive research. Examples include 'scientist', 'analyst', 'professor', 'research team', and 'institution'. This argument helps to identify the researchers involved in the study.",
+            "The 'researcher' argument specifies the entity conducting the cognitive research. Examples are 'academic', 'researcher', 'investigator', 'agency', and 'think tank'. This argument provides information about who is performing the research.",
+            "The 'researcher' argument denotes the individual or group responsible for the cognitive research activity. Examples include 'researcher', 'scientist', 'analyst', 'professor', and 'research team'. This argument helps to identify the researchers involved in the study.",
+            "The 'researcher' argument identifies the person or organization conducting the cognitive research. Examples are 'police', 'Emma Webb', 'Stanford', 'NYU', and 'Federal Bureau of Investigation'. This argument provides information about the entity responsible for the research."
+        ],
+        "subject": [
+            "The 'subject' argument refers to the topic or focus of the cognitive research. Examples are 'bomb', 'jihadists', 'research', 'evidence', and 'databases'. This argument identifies what the research is about.",
+            "The 'subject' argument indicates the main topic or area of investigation in the cognitive research. Examples include 'memory', 'perception', 'problem-solving', 'behavior', and 'cognition'. This argument helps to specify the focus of the research.",
+            "The 'subject' argument specifies the topic or phenomenon being studied in the cognitive research. Examples are 'language', 'decision-making', 'learning', 'attention', and 'emotion'. This argument provides information about the research focus.",
+            "The 'subject' argument denotes the primary focus or topic of the cognitive research activity. Examples include 'intelligence', 'creativity', 'motivation', 'stress', and 'mental health'. This argument helps to identify the subject of the research.",
+            "The 'subject' argument identifies the topic or area of focus in the cognitive research. Examples are 'bomb', 'jihadists', 'research', 'evidence', and 'databases'. This argument provides information about what the research is about."
+        ]
+    }
+}

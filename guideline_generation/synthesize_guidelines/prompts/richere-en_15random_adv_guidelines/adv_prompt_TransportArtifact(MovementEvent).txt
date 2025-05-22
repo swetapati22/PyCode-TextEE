@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_TransportArtifact(MovementEvent)
+```json
+{
+    "TransportArtifact(MovementEvent)": {
+        "description": [
+            "The event is triggered by the movement or transportation of an artifact from one location to another. Example triggers include 'bring', 'deliver', 'take', 'transport', and 'move'.",
+            "The event is characterized by the involvement of an agent who facilitates the movement, an artifact being moved, and often includes the origin and destination locations. For instance, 'Amtrak delivered the package' involves 'Amtrak' as the agent and 'package' as the artifact.",
+            "Unlike other MovementEvents, TransportArtifact specifically involves the transportation of physical objects or artifacts, not people or abstract entities. For example, 'students can bring guns to school' is a TransportArtifact event, whereas 'students can go to school' is not.",
+            "Triggers such as 'sued', 'married', or 'born' are indicative of JusticeEvent or LifeEvent types, not TransportArtifact. For instance, 'the authors sued him' is a JusticeEvent, not a TransportArtifact.",
+            "The outcome of a TransportArtifact event is the successful or attempted relocation of an artifact. This differs from related events like EndPosition, which focuses on the cessation of a role or position, not the movement of objects."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are entities responsible for the transportation of the artifact. For instance, in 'Amtrak delivered the package', 'Amtrak' is the agent.",
+            "The agent can be an individual, group, or organization. For example, 'students' in 'students can bring guns to school' is the agent.",
+            "In some cases, the agent may be implied or not explicitly mentioned. For instance, 'it was delivered next door' implies an agent without specifying it.",
+            "The agent is crucial as it identifies who or what is responsible for the movement. For example, 'locals took all of my money' identifies 'locals' as the agent.",
+            "Unlike the artifact, the agent is the entity performing the action of transportation. For example, 'we're not allowed to leave it with a neighbor' identifies 'we' as the agent."
+        ],
+        "artifact": [
+            "Examples are the objects being transported. For instance, in 'students can bring guns to school', 'guns' is the artifact.",
+            "The artifact is the primary focus of the movement in the event. For example, 'the truck' in 'the truck pulled away from a cafe' is the artifact.",
+            "Artifacts are typically physical objects, not abstract concepts or people. For instance, 'package' in 'Amtrak delivered the package' is a physical object.",
+            "The artifact is essential as it represents what is being moved. For example, 'guns' in 'locals took all of my money and guns' is the artifact.",
+            "Unlike the agent, the artifact is the entity being acted upon. For example, 'it' in 'we're not allowed to leave it with a neighbor' is the artifact."
+        ],
+        "destination": [
+            "Examples are the locations where the artifact is being transported to. For instance, 'school' in 'students can bring guns to school' is the destination.",
+            "The destination is the endpoint of the transportation event. For example, 'next door' in 'it had been delivered next door' is the destination.",
+            "Destinations are typically physical locations. For instance, 'school' in 'students can bring guns to school' is a physical location.",
+            "The destination is important as it indicates where the artifact is intended to go. For example, 'door' in 'it had been delivered next door' is the destination.",
+            "Unlike the origin, the destination is where the artifact ends up. For example, 'school' in 'students can bring guns to school' is the destination."
+        ],
+        "origin": [
+            "Examples are the locations from where the artifact is being transported. For instance, 'cafe' in 'the truck pulled away from a cafe' is the origin.",
+            "The origin is the starting point of the transportation event. For example, 'cafe' in 'the truck pulled away from a cafe' is the origin.",
+            "Origins are typically physical locations. For instance, 'cafe' in 'the truck pulled away from a cafe' is a physical location.",
+            "The origin is important as it indicates where the artifact is coming from. For example, 'cafe' in 'the truck pulled away from a cafe' is the origin.",
+            "Unlike the destination, the origin is where the artifact starts its journey. For example, 'cafe' in 'the truck pulled away from a cafe' is the origin."
+        ]
+    }
+}
+```

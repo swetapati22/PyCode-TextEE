@@ -1,0 +1,12 @@
+{
+    "ChargeIndict(JusticeEvent)": {
+        "description": "The ChargeIndict event is triggered by legal actions where an individual or entity is formally accused of a crime. This event involves legal authorities such as prosecutors or magistrates and focuses on the formal accusation phase, distinct from the trial or sentencing phases. Triggers include terms like 'charged', 'accused', 'prosecuted', and 'indicted'. The event outcomes include the formal recognition of charges, potentially leading to further legal actions such as trials or plea bargains.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is a legal authority or official who oversees the formal recognition and processing of charges. This can include judges, magistrates, or judicial officers. Examples include 'magistrate' in 'The lawyer was reprimanded by a Lusaka magistrate' and 'district attorney' in 'He was charged by the district attorney'. The adjudicator ensures the charges are formally recognized, distinct from the prosecutor who actively pursues the charges.",
+            "defendant": "The defendant is the individual or entity formally accused of a crime, facing legal proceedings. This can include people, organizations, or companies. Examples include 'Christie's' in 'Christie's was not prosecuted' and 'Lisa M. Montgomery' in 'Lisa M. Montgomery was charged with kidnapping'. The defendant is the primary subject of the charges, distinct from the plaintiff in civil lawsuits.",
+            "place": "The place is the location where the legal proceedings or charges occur, providing context and jurisdictional information. This can include cities, countries, or specific courts. Examples include 'United States' in 'He was charged in the United States' and 'New York' in 'The charges were filed in New York'. The place is where the charges are formally recognized, distinct from the origin or destination in an Extradite event.",
+            "prosecutor": "The prosecutor is a legal professional who brings charges against the defendant and pursues legal action. This can include district attorneys, state prosecutors, or other legal representatives. Examples include 'prosecutor' in 'The prosecutor charged him with theft' and 'district attorney' in 'The district attorney indicted the suspect'. The prosecutor represents the state or government, distinct from the adjudicator who oversees the legal process."
+        }
+    }
+}

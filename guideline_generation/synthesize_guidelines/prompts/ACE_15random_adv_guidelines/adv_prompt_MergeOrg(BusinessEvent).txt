@@ -1,0 +1,78 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_MergeOrg(BusinessEvent)
+```json
+{
+    "MergeOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the merging of two or more organizations into a single entity. Example triggers include 'merged', 'merger', 'tying the knot', and 'create'.",
+            "The event is characterized by the combination of separate organizations into one, often to increase efficiency, market share, or resources. Key characteristics include the involvement of multiple organizations and a unification process.",
+            "Unlike the StartOrg event, which involves the creation of a new organization, the MergeOrg event involves the consolidation of existing organizations. Triggers such as 'opening' or 'launching' are indicative of StartOrg, not MergeOrg.",
+            "The MergeOrg event differs from the EndOrg event, which signifies the dissolution or termination of an organization. Triggers like 'is no more' or 'closed' are indicative of EndOrg, not MergeOrg.",
+            "The outcome of a MergeOrg event is a single, unified organization formed from the merging entities. This is distinct from events like TransferOwnership, where ownership changes hands but the organizations remain separate."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'Department of Minority Business Enterprise', 'Department of Business Assistance', 'organizations', 'Warner Communications', 'industries', 'business', 'startups', 'competitors', 'Oracle', 'Peoplesoft', 'sides', 'company'. The 'org' argument represents the organizations involved in the merger.",
+            "The 'org' argument is crucial as it identifies the entities being merged. It can include companies, departments, or any organizational units. For instance, 'Oracle' and 'Peoplesoft' in the context of a merger.",
+            "In cases where the text mentions multiple organizations, all relevant entities should be included in the 'org' argument. For example, 'startups' and 'competitors' in a merger context.",
+            "The 'org' argument should not include entities that are not part of the merger. For example, in a sentence about a merger involving 'Oracle' and 'Peoplesoft', other companies mentioned in a different context should not be included.",
+            "Edge cases include scenarios where the organizations are not explicitly named but referred to in a general sense, such as 'two organizations'. In such cases, the general reference should be captured as the 'org' argument."
+        ]
+    }
+}
+```

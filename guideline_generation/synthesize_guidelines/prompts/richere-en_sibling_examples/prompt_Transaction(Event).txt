@@ -1,0 +1,189 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Transaction which is a child event type of super class Event
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Transaction which is a child event type of super class Event
+Arguments:
+Argument 1 -> beneficiary
+Argument 2 -> giver
+Argument 3 -> place
+Argument 4 -> recipient
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+Nor should my family have to deal with the government in any way other than maybe to prove they exist if the government owes me.
+### Event Trigger ###
+owes
+### Event Arguments ###
+For argument "giver" extracted spans ['government']
+For argument "recipient" extracted spans ['me']
+For argument "beneficiary" extracted spans ['they']
+
+Example 2
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+Every time someone on my campus is mugged, rather a lot, now I that I think about it, the campus police release a report of the incident and highlight the cleary act in the subject line.
+### Event Trigger ###
+mugged
+### Event Arguments ###
+For argument "giver" extracted spans ['someone']
+For argument "place" extracted spans ['campus']
+
+Example 3
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+The Federal Asset Forfeiture Program where people involved in criminal activity have their assets seized and sold by the Federal government is under fire for selling goods far below their actual value and for selling assets...
+### Event Trigger ###
+seized
+### Event Arguments ###
+For argument "giver" extracted spans ['their']
+For argument "recipient" extracted spans ['government']
+
+Example 4
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+The Federal Asset Forfeiture Program where people involved in criminal activity have their assets seized and sold by the Federal government is under fire for selling goods far below their actual value and for selling assets...
+### Event Trigger ###
+sold
+### Event Arguments ###
+For argument "giver" extracted spans ['government']
+
+Example 5
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+The Federal Asset Forfeiture Program where people involved in criminal activity have their assets seized and sold by the Federal government is under fire for selling goods far below their actual value and for selling assets...
+### Event Trigger ###
+selling
+### Event Arguments ###
+For argument "giver" extracted spans ['government']
+
+Example 6
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+Instead of getting a fair amount for seized assets, they are sold off to "friends" for far less than their actual value, without public notice, in secret.
+### Event Trigger ###
+sold
+### Event Arguments ###
+For argument "recipient" extracted spans ['friends']
+
+Example 7
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+The ex-sheriff in my town used to drive around in a fancy Cadillac seized in a drug bust.
+### Event Trigger ###
+seized
+### Event Arguments ###
+For argument "beneficiary" extracted spans ['ex-sheriff']
+
+Example 8
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+But it makes sense, if they take all your stuff not only do they make money but it deprives you of collateral you might need to hire a lawyer that might actually get you off the BS charges.
+### Event Trigger ###
+take
+### Event Arguments ###
+For argument "recipient" extracted spans ['they', 'your']
+
+Example 9
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+When are the pigs going to realize that the shit they are handing out will be shoved straight back in their faces?
+### Event Trigger ###
+handing out
+### Event Arguments ###
+For argument "giver" extracted spans ['they']
+
+Example 10
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+I am personally against the state killing the criminal deliberately, it denies the criminal from living the life, and prevents him from repenting his mistake.... and the blood money does not bring justice, compensation should be there to the victims, but that should be a part of whole punishment.
+### Event Trigger ###
+compensation
+### Event Arguments ###
+For argument "recipient" extracted spans ['victims']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Contact(Event)
+### Input Text ###
+(6) Obama stated in ISLAMIC COUNTRIES that the bond btw American and Israel is unshakable.
+### Event Trigger ###
+stated
+### Event Arguments ###
+For argument "entity" extracted spans ['Obama']
+For argument "place" extracted spans ['COUNTRIES']

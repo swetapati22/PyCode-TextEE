@@ -1,0 +1,42 @@
+{
+    "Cognitive_Inspection_SensoryObserve(Event)": {
+        "description": [
+            "The Cognitive_Inspection_SensoryObserve event involves an entity using sensory perception to examine or inspect another entity or object. The event can be triggered by verbs such as 'investigate', 'search', 'examine', 'observe', 'inspect', 'watch', 'discover', 'collect evidence', and 'recover'. This event typically involves an observer who performs the inspection, an observed entity that is being inspected, and optionally, an instrument used for the inspection and the place where the inspection occurs.",
+            "Cognitive_Inspection_SensoryObserve refers to the act of using sensory means to inspect or observe an entity or object. The event can be triggered by actions like 'investigate', 'search', 'examine', 'observe', 'inspect', 'watch', 'discover', 'collect evidence', and 'recover'. It involves an observer, an observed entity, and may include an instrument and a place.",
+            "The Cognitive_Inspection_SensoryObserve event is characterized by an entity using sensory perception to inspect or observe another entity or object. Triggers for this event include verbs such as 'investigate', 'search', 'examine', 'observe', 'inspect', 'watch', 'discover', 'collect evidence', and 'recover'. Key components of this event are the observer, the observed entity, and optionally, the instrument and place of inspection.",
+            "Cognitive_Inspection_SensoryObserve involves the act of sensory observation or inspection of an entity or object. This event can be triggered by verbs like 'investigate', 'search', 'examine', 'observe', 'inspect', 'watch', 'discover', 'collect evidence', and 'recover'. It includes an observer, an observed entity, and may also involve an instrument and a place.",
+            "The Cognitive_Inspection_SensoryObserve event entails using sensory means to inspect or observe an entity or object. Triggers for this event include 'investigate', 'search', 'examine', 'observe', 'inspect', 'watch', 'discover', 'collect evidence', and 'recover'. The event typically involves an observer, an observed entity, and optionally, an instrument and a place."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "instrument": [
+            "The instrument argument refers to any tool or device used by the observer to aid in the inspection or observation. Examples are 'a robot', 'a magnifying glass', 'a camera', 'a microscope', and 'a drone'. Edge cases include situations where the instrument is implied but not explicitly mentioned.",
+            "Instrument denotes the tool or device utilized by the observer during the inspection. Examples include 'a robot', 'a magnifying glass', 'a camera', 'a microscope', and 'a drone'. In some cases, the instrument may be implied rather than directly stated.",
+            "The instrument is any tool or device that assists the observer in the inspection process. Examples are 'a robot', 'a magnifying glass', 'a camera', 'a microscope', and 'a drone'. Edge cases might involve instruments that are not explicitly mentioned but are understood from context.",
+            "Instrument refers to the tool or device used by the observer to conduct the inspection. Examples include 'a robot', 'a magnifying glass', 'a camera', 'a microscope', and 'a drone'. Sometimes, the instrument may be implied rather than explicitly mentioned.",
+            "The instrument argument is the tool or device used by the observer to facilitate the inspection. Examples are 'a robot', 'a magnifying glass', 'a camera', 'a microscope', and 'a drone'. Edge cases include instruments that are implied but not directly mentioned."
+        ],
+        "observedentity": [
+            "The observedentity argument refers to the entity or object that is being inspected or observed. Examples are 'a circuit board', 'landfill', 'laptop computer', 'devices', and 'fireworks'. Edge cases include situations where the observed entity is a concept or abstract idea rather than a physical object.",
+            "Observedentity denotes the entity or object under inspection or observation. Examples include 'a circuit board', 'landfill', 'laptop computer', 'devices', and 'fireworks'. In some cases, the observed entity might be an abstract concept rather than a tangible object.",
+            "The observedentity is the entity or object that is the focus of the inspection or observation. Examples are 'a circuit board', 'landfill', 'laptop computer', 'devices', and 'fireworks'. Edge cases might involve abstract concepts being observed.",
+            "Observedentity refers to the entity or object being inspected or observed. Examples include 'a circuit board', 'landfill', 'laptop computer', 'devices', and 'fireworks'. Sometimes, the observed entity may be an abstract idea rather than a physical object.",
+            "The observedentity argument is the entity or object that is being inspected or observed. Examples are 'a circuit board', 'landfill', 'laptop computer', 'devices', and 'fireworks'. Edge cases include abstract concepts being observed."
+        ],
+        "observer": [
+            "The observer argument refers to the entity performing the inspection or observation. Examples are 'squad', 'agents', 'Senate', 'police', and 'FBI'. Edge cases include situations where the observer is a group or organization rather than an individual.",
+            "Observer denotes the entity that carries out the inspection or observation. Examples include 'squad', 'agents', 'Senate', 'police', and 'FBI'. In some cases, the observer might be a collective entity or organization.",
+            "The observer is the entity that performs the inspection or observation. Examples are 'squad', 'agents', 'Senate', 'police', and 'FBI'. Edge cases might involve groups or organizations as observers.",
+            "Observer refers to the entity conducting the inspection or observation. Examples include 'squad', 'agents', 'Senate', 'police', and 'FBI'. Sometimes, the observer may be a group or organization.",
+            "The observer argument is the entity performing the inspection or observation. Examples are 'squad', 'agents', 'Senate', 'police', and 'FBI'. Edge cases include groups or organizations as observers."
+        ],
+        "place": [
+            "The place argument refers to the location where the inspection or observation takes place. Examples are 'Boston', 'campus', 'site', 'Boylston Street', and 'Newton'. Edge cases include situations where the place is a virtual or non-physical location.",
+            "Place denotes the location of the inspection or observation. Examples include 'Boston', 'campus', 'site', 'Boylston Street', and 'Newton'. In some cases, the place might be a virtual or abstract location.",
+            "The place is the location where the inspection or observation occurs. Examples are 'Boston', 'campus', 'site', 'Boylston Street', and 'Newton'. Edge cases might involve virtual or non-physical locations.",
+            "Place refers to the location of the inspection or observation. Examples include 'Boston', 'campus', 'site', 'Boylston Street', and 'Newton'. Sometimes, the place may be a virtual or abstract location.",
+            "The place argument is the location where the inspection or observation takes place. Examples are 'Boston', 'campus', 'site', 'Boylston Street', and 'Newton'. Edge cases include virtual or non-physical locations."
+        ]
+    }
+}

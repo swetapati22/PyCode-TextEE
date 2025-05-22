@@ -1,0 +1,311 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type StartOrg which is a child event type of super class BusinessEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Identify the Event Trigger (Mention Argument): 
+    - Define the event trigger ("mention") with 5 specific definitions, and include examples of valid triggers while addressing variations, edge cases, and distinctions from related event types.
+4. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+5. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+6. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "mention": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+StartOrg which is a child event type of super class BusinessEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> org
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange, plans to follow up its May Day launching by opening a "sex Disneyland" here, the Melbourne-based bordello announced Wednesday.
+### Event Trigger ###
+opening
+### Event Arguments ###
+For argument "org" extracted spans ['Disneyland']
+For argument "agent" extracted spans ['Daily Planet Ltd']
+For argument "place" extracted spans ['here']
+
+Example 2
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The ruling Millennium Democratic Party (MDP), founded by former president Kim Dae-Jung, has suffered declining popularity since President Roh Moo-Hyun took office in February.
+### Event Trigger ###
+founded
+### Event Arguments ###
+For argument "org" extracted spans ['Millennium Democratic Party']
+For argument "agent" extracted spans ['Kim Dae-Jung']
+
+Example 3
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+A group of 18 reformist MDP lawmakers, mostly Roh's confidants, demanded late Wednesday that the party be "constructively dissolved" to create a new grouping, MDP officials said.
+### Event Trigger ###
+create
+### Event Arguments ###
+
+Example 4
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+Reformist MDP members, however, vowed to launch a preparatory committee next month and to make "tangible progress" in the process of forging a new party.
+### Event Trigger ###
+forging
+### Event Arguments ###
+For argument "org" extracted spans ['party']
+
+Example 5
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange, plans to follow up its May Day launching by opening a "sex Disneyland" here, the Melbourne-based bordello announced Wednesday.
+### Event Trigger ###
+launching
+### Event Arguments ###
+For argument "org" extracted spans ['Daily Planet Ltd']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 6
+#### Event Type ####
+Attack(ConflictEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+killed
+### Event Arguments ###
+For argument "attacker" extracted spans ['mob']
+For argument "place" extracted spans ['area']
+For argument "target" extracted spans ['them']
+For argument "instrument" extracted spans ['machetes', 'spears']
+
+Example 7
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.
+### Event Trigger ###
+charges
+### Event Arguments ###
+For argument "defendant" extracted spans ['client']
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "place" extracted spans ['court']
+
+Example 8
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+In the latest edition, staff writer Jeremy M. Lazarus reports that the Legislative Black Caucus celebrated killing a bill that would have merged the Department of Minority Business Enterprise (DMBE) with the Department of Business Assistance (DBA).
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['Department of Minority Business Enterprise', 'Department of Business Assistance']
+
+Example 9
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+The waiver of extradition that she signed simply means that if she skips out and goes to another state, she can't contest the right of the original court to have her hauled back to its jurisdiction, and that the court won't have to initiate the time-consuming process of extraditing her.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['she']
+For argument "origin" extracted spans ['state']
+For argument "destination" extracted spans ['jurisdiction']
+For argument "agent" extracted spans ['court']
+
+Example 10
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['bomber']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 11
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+Indonesian courts have increasingly handed out severe sentences, including death, for drug smugglers.
+### Event Trigger ###
+sentences
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['courts']
+For argument "defendant" extracted spans ['smugglers']
+For argument "place" extracted spans ['Indonesian']
+
+Example 12
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+But after spending 40 days in prison, Jordan's King Abdullah II pardoned the former legislator known for her harsh criticism of the state.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['legislator']
+For argument "place" extracted spans ['Jordan']
+For argument "adjudicator" extracted spans ['Abdullah II']
+
+Example 13
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+Kristin Scott, the mother, told police she gave birth secretly to both babies at her parents' home in Byrds Creek, Richland County, one of unknown sex in April 2001 and the other, a fullterm girl, January 14.
+### Event Trigger ###
+birth
+### Event Arguments ###
+For argument "person" extracted spans ['babies', 'one', 'other']
+For argument "place" extracted spans ['home']
+
+Example 14
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Hunter, 34, filed for divorce in Los Angeles Superior Court, citing irreconcilable differences with the 58-year-old rock star to whom she has been married for nearly 13 years.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['Hunter', 'star']
+For argument "place" extracted spans ['Los Angeles']
+
+Example 15
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+telephone
+### Event Arguments ###
+For argument "place" extracted spans ['Agartala']
+For argument "entity" extracted spans ['spokesman']
+
+Example 16
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+and the pope will reportedly name a new head of the troubled boston archdiocese this week.
+### Event Trigger ###
+name
+### Event Arguments ###
+For argument "person" extracted spans ['head']
+For argument "agent" extracted spans ['pope']
+
+Example 17
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Larry Klayman, chairman of Judicial Watch, which represent 14 survivors and victims' relatives who have filed a $1.5 billion federal lawsuit against Iraq in Washington, said his organization had served a subpoena on Al-Douri twice, on March 26 and March 28, but said he has not responded.
+### Event Trigger ###
+lawsuit
+### Event Arguments ###
+For argument "defendant" extracted spans ['Iraq']
+For argument "place" extracted spans ['Washington']
+For argument "plaintiff" extracted spans ['relatives', 'survivors']
+
+Example 18
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Putin, who enjoyed a warm relationship with former Chinese president Jiang Zeming, has made efforts to nurture ties with Hu and was the first world leader to go to Beijing to meet him in December when he was president-in-waiting.
+### Event Trigger ###
+former
+### Event Arguments ###
+For argument "person" extracted spans ['president']
+For argument "place" extracted spans ['Chinese']
+For argument "entity" extracted spans ['Chinese']
+
+Example 19
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+In last year's trial, the paper was convicted of defaming the government for publishing that trains running to and from southern Sudan were used to transport abducted women and children.
+### Event Trigger ###
+transport
+### Event Arguments ###
+For argument "vehicle" extracted spans ['trains']
+For argument "artifact" extracted spans ['women', 'children']
+For argument "destination" extracted spans ['Sudan']
+For argument "origin" extracted spans ['Sudan']
+
+Example 20
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+negotiators say he demanded the release of four prisoners, including ramzi binalshibh, a september 11th suspect apprehended last year in pakistan.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "person" extracted spans ['ramzi binalshibh']
+For argument "entity" extracted spans ['negotiators']

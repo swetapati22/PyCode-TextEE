@@ -1,0 +1,10 @@
+{
+    "EndOrg(BusinessEvent)": {
+        "description": "The EndOrg(BusinessEvent) event is triggered by the termination or dissolution of an organization, marking the complete cessation of its existence or functional operations. This can occur due to various reasons such as political changes, internal decisions, or external pressures. Example triggers include phrases like 'is no more', 'dissolving', 'dismantling', 'crumbled', and 'collapsed'. It is distinct from events that signify changes within an organization, such as StartPosition, and from JusticeEvent types, which involve legal proceedings. The outcomes of this event involve the organization ceasing to exist or operate, unlike events like 'Demonstrate' or 'Attack' that involve conflict but do not necessarily result in the end of an organization.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "org": "The 'org' argument identifies the organization that is ending. It can be any type of organization, such as a political party, regime, or business entity. Examples include 'rej geemg', 'party', 'empire', 'regime', and 'Baath Party'. This argument specifies the entity ceasing to exist or function, distinct from individuals or groups involved in actions. Edge cases include organizations that are part of larger entities, such as 'Vivendi Universal's theme parks' in 'dismantling its entertainment empire'.",
+            "place": "The 'place' argument identifies the location where the organization is ending, providing geographical context for the event. It can be a country, city, or any specific location relevant to the organization's termination. Examples include 'Iraq'. This argument refers to the location associated with the organization's end, distinct from locations of actions or events. Edge cases include situations where the location is implied rather than explicitly stated, such as 'the local Baath Party leadership was crumbling'."
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "TrialHearing(JusticeEvent)": {
+        "description": "A TrialHearing event, a type of JusticeEvent, is triggered by legal proceedings where a case is being heard or adjudicated. This event involves an adjudicator, a defendant, and often a prosecutor, and takes place in a legal setting such as a court. Unlike other JusticeEvents like 'Convict' or 'ArrestJail', this event focuses on the process of hearing and adjudicating a case rather than the outcome or enforcement of a legal decision. Triggers for this event include terms like 'versus', 'v.', 'case', 'go to court', 'proven', and 'overruled'. The outcome is typically a legal decision or ruling, but the event itself centers on the proceedings and arguments presented in court.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the person or body responsible for overseeing the trial or hearing and making legal decisions, such as a 'judge', 'court', or 'magistrate'. They ensure the trial is conducted fairly and according to the law, maintaining order and legality in the proceedings. Edge cases include references to 'tribunal' or 'panel'.",
+            "defendant": "The defendant is the individual or entity against whom the case is brought, such as 'Miller', 'Aymette', 'he', or 'NBP'. They are a key participant in the trial, responding to the charges or claims made against them. Unlike the prosecutor, the defendant defends against the allegations. Edge cases include organizations or groups like 'NBP' or 'State'.",
+            "place": "The place is the location where the trial or hearing is taking place, such as 'Tennessee', 'Palermo', or 'court'. It provides context for the legal proceedings and is important for jurisdictional purposes. In a TrialHearing, it specifically refers to the venue of the legal proceedings. Edge cases include specific courts or legal bodies like 'lower court' or 'higher court'.",
+            "prosecutor": "The prosecutor is the individual or entity bringing the case against the defendant, such as 'United States', 'State', or 'magistrate'. They play a critical role in presenting the case, seeking to prove the defendant's guilt or liability. Unlike the defendant, the prosecutor initiates the legal action and presents evidence and arguments. Edge cases include government entities or officials like 'State' or 'magistrate'."
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "TransportPerson(MovementEvent)": {
+        "description": [
+            "The event is triggered by actions or verbs indicating the movement of a person from one location to another. Examples include 'relocate', 'driving', 'go', 'leaving', 'traveled', 'moved'.",
+            "The event is characterized by the involvement of a person or group of people being transported, often with a specified origin and destination. Key characteristics include the presence of an agent facilitating the movement, an instrument used for transportation, and the locations involved.",
+            "Unlike other MovementEvents, this event specifically involves the transportation of people rather than objects or animals. For example, 'relocate' in the context of moving a person is a TransportPerson event, whereas 'relocate' in the context of moving a company would not be.",
+            "Triggers such as 'merge' or 'won' are indicative of BusinessEvent or PersonnelEvent, not this event type. TransportPerson events focus on physical movement rather than organizational changes or achievements.",
+            "The outcomes of TransportPerson events typically involve a change in the location of the person(s) involved, which can be contrasted with events like Demonstrate or Appeal, where the focus is on actions taken rather than movement."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are entities responsible for initiating or facilitating the movement. In 'the government orders a military member to relocate', 'government' is the agent.",
+            "The agent can be an individual, group, or organization. For instance, in 'Muslims in lower Manhattan go to a mosque', 'Muslims' is the agent.",
+            "In some cases, the agent may be implicit or inferred from context. For example, 'I left after being punched' implies the person themselves as the agent.",
+            "The agent is crucial for understanding who is driving the movement. In 'families moved to England', 'families' is the agent.",
+            "Unlike the person being transported, the agent is the entity causing the movement. For example, 'the government' in 'the government sponsors the spouse to travel' is the agent, not the person traveling."
+        ],
+        "destination": [
+            "Examples are the locations where the person is moving to. In 'relocate to the new base', 'new base' is the destination.",
+            "The destination can be a specific place, city, or country. For instance, 'to Pakistan' in 'I have been on holiday to Pakistan' is the destination.",
+            "In some cases, multiple destinations can be mentioned. For example, 'mosque' and 'room' in 'go to a mosque or prayer room' are both destinations.",
+            "The destination is important for understanding the endpoint of the movement. In 'moved to England', 'England' is the destination.",
+            "Unlike the origin, which is where the movement starts, the destination is where it ends. For example, 'Norway' in 'moved back into Norway' is the destination."
+        ],
+        "instrument": [
+            "Examples are the means or tools used for transportation. In 'driving- almost lost control of the car', 'the car' is the instrument.",
+            "The instrument can be a vehicle, mode of transport, or any tool facilitating movement. For instance, 'the car' in 'driving the car' is the instrument.",
+            "In some cases, the instrument may be implied or context-specific. For example, 'traveling by plane' implies 'plane' as the instrument.",
+            "The instrument is crucial for understanding how the movement is carried out. In 'driving the car', 'car' is the instrument.",
+            "Unlike the agent or person, the instrument is the object used for transportation. For example, 'the car' in 'driving the car' is the instrument, not the person driving."
+        ],
+        "origin": [
+            "Examples are the locations where the person is moving from. In 'relocate from one place to another', 'one place' is the origin.",
+            "The origin can be a specific place, city, or country. For instance, 'Finland' in 'crossed into Finland' is the origin.",
+            "In some cases, the origin may be implied or context-specific. For example, 'leaving the polling place' implies 'polling place' as the origin.",
+            "The origin is important for understanding the starting point of the movement. In 'moved back into Norway', 'Norway' is the origin.",
+            "Unlike the destination, which is where the movement ends, the origin is where it starts. For example, 'place' in 'leaving the polling place' is the origin."
+        ],
+        "person": [
+            "Examples are the individuals being transported. In 'the government orders a military member to relocate', 'member' is the person.",
+            "The person can be an individual or a group. For instance, 'I' in 'I left after being punched' is the person.",
+            "In some cases, multiple people can be mentioned. For example, 'families' and 'grandfather' in 'families who moved to England' are both persons.",
+            "The person is crucial for understanding who is being moved. In 'I have been on holiday to Pakistan', 'I' is the person.",
+            "Unlike the agent, who initiates the movement, the person is the one being transported. For example, 'I' in 'I left after being punched' is the person, not the agent."
+        ]
+    }
+}

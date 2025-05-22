@@ -1,0 +1,353 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Marry which is a child event type of super class LifeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Marry which is a child event type of super class LifeEvent
+Arguments:
+Argument 1 -> person
+Argument 2 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Prison authorities have given the nod for Anwar to be taken home later in the afternoon to marry his eldest daughter, Nurul Izzah, to engineer Raja Ahmad Sharir Iskandar in a traditional Malay ceremony, he said.
+### Event Trigger ###
+marry
+### Event Arguments ###
+For argument "person" extracted spans ['daughter', 'Raja Ahmad Sharir Iskandar']
+For argument "place" extracted spans ['home']
+
+Example 2
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Anne-Marie sued Crichton for divorce in September after their marriage broke down.
+### Event Trigger ###
+marriage
+### Event Arguments ###
+For argument "person" extracted spans ['their']
+
+Example 3
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Malaysia's prison department has agreed to allow jailed politician Anwar Ibrahim to attend his daughter's wedding ceremony Friday after his bail hearing, his lawyer said Thursday.
+### Event Trigger ###
+wedding
+### Event Arguments ###
+For argument "person" extracted spans ['daughter']
+
+Example 4
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Hunter, 34, filed for divorce in Los Angeles Superior Court, citing irreconcilable differences with the 58-year-old rock star to whom she has been married for nearly 13 years.
+### Event Trigger ###
+married
+### Event Arguments ###
+For argument "person" extracted spans ['whom', 'she']
+
+Example 5
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Stewart has said that after two failed marriages, he felt it unrealistic to expect couples to commit to each other for life and suggested that the words "til death do us part" should be removed from the wedding ceremony.
+### Event Trigger ###
+marriages
+### Event Arguments ###
+For argument "person" extracted spans ['Stewart']
+
+Example 6
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Stewart has said that after two failed marriages, he felt it unrealistic to expect couples to commit to each other for life and suggested that the words "til death do us part" should be removed from the wedding ceremony.
+### Event Trigger ###
+wedding
+### Event Arguments ###
+
+Example 7
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Stewart's 1979 marriage to Alana Hamilton lasted five years and produced two children.
+### Event Trigger ###
+marriage
+### Event Arguments ###
+For argument "person" extracted spans ['Stewart', 'Alana Hamilton']
+
+Example 8
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+He also wants to subpoena all documents maintained in Jane Beasley Welch's personnel file by Shearman & Sterling, a prestigious corporate law firm where she worked before she married Welch.
+### Event Trigger ###
+married
+### Event Arguments ###
+For argument "person" extracted spans ['she', 'Welch']
+
+Example 9
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Webb also said details of the breakdowns of the Welches' previous marriages were likely to come up, and cited reports of alleged extramarital affairs by both.
+### Event Trigger ###
+marriages
+### Event Arguments ###
+For argument "person" extracted spans ['Welches']
+
+Example 10
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Rudolph Giuliani will wed his companion, Judith Nathan, on May 24 in the ex-mayor's old home, Gracie Mansion.
+### Event Trigger ###
+wed
+### Event Arguments ###
+For argument "person" extracted spans ['Rudolph Giuliani', 'companion']
+For argument "place" extracted spans ['home']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+Of course outspoken organizations such as Planned Parenthood, which gives a lot of money to Democrats, will fight with everything they've got to keep the Democratic platform as liberal as possible.
+### Event Trigger ###
+gives
+### Event Arguments ###
+For argument "giver" extracted spans ['Planned Parenthood']
+For argument "beneficiary" extracted spans ['Democrats']
+For argument "recipient" extracted spans ['Democrats']
+
+Example 12
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "place" extracted spans ['united states']
+For argument "org" extracted spans ['worldcom']
+
+Example 13
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+In last year's trial, the paper was convicted of defaming the government for publishing that trains running to and from southern Sudan were used to transport abducted women and children.
+### Event Trigger ###
+transport
+### Event Arguments ###
+For argument "vehicle" extracted spans ['trains']
+For argument "artifact" extracted spans ['women', 'children']
+For argument "destination" extracted spans ['Sudan']
+For argument "origin" extracted spans ['Sudan']
+
+Example 14
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Hunter, 34, filed for divorce in Los Angeles Superior Court, citing irreconcilable differences with the 58-year-old rock star to whom she has been married for nearly 13 years.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['Hunter', 'star']
+For argument "place" extracted spans ['Los Angeles']
+
+Example 15
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+In Paris, the French media group said parent company chairman Jean-Rene Fourtou will replace Diller as chairman and chief executive of US unit.
+### Event Trigger ###
+replace
+### Event Arguments ###
+For argument "person" extracted spans ['Jean-Rene Fourtou']
+For argument "place" extracted spans ['Paris']
+For argument "entity" extracted spans ['unit']
+
+Example 16
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange, plans to follow up its May Day launching by opening a "sex Disneyland" here, the Melbourne-based bordello announced Wednesday.
+### Event Trigger ###
+opening
+### Event Arguments ###
+For argument "org" extracted spans ['Disneyland']
+For argument "agent" extracted spans ['Daily Planet Ltd']
+For argument "place" extracted spans ['here']
+
+Example 17
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+wounding
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['20']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 18
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+But after spending 40 days in prison, Jordan's King Abdullah II pardoned the former legislator known for her harsh criticism of the state.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['legislator']
+For argument "place" extracted spans ['Jordan']
+For argument "adjudicator" extracted spans ['Abdullah II']
+
+Example 19
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Putin, who enjoyed a warm relationship with former Chinese president Jiang Zeming, has made efforts to nurture ties with Hu and was the first world leader to go to Beijing to meet him in December when he was president-in-waiting.
+### Event Trigger ###
+former
+### Event Arguments ###
+For argument "person" extracted spans ['president']
+For argument "place" extracted spans ['Chinese']
+For argument "entity" extracted spans ['Chinese']
+
+Example 20
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+Mirjana Markovic, the power behind the scenes during Milosevic's 13-year reign, is accused of illegally providing their grandson's nanny with a state-owned luxury apartment in Belgrade in 2000.
+### Event Trigger ###
+providing
+### Event Arguments ###
+For argument "beneficiary" extracted spans ['nanny']
+For argument "artifact" extracted spans ['apartment']
+For argument "seller" extracted spans ['Mirjana Markovic']
+For argument "place" extracted spans ['Belgrade']
+
+Example 21
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+an oklahoma city judge has ruled prosecutors presented enough evidence at a preliminary hearing to try nichols on murder charges for the other 160 victims of the attack.
+### Event Trigger ###
+hearing
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+For argument "defendant" extracted spans ['nichols']
+For argument "prosecutor" extracted spans ['prosecutors']
+For argument "place" extracted spans ['oklahoma city']
+
+Example 22
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+lawyers in texas are trying to keep their client from becoming the 300th person executed in the state since 1982, when texas resumed capital punishment.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['person']
+For argument "place" extracted spans ['state']
+For argument "agent" extracted spans ['texas']
+
+Example 23
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.
+### Event Trigger ###
+charges
+### Event Arguments ###
+For argument "defendant" extracted spans ['client']
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "place" extracted spans ['court']
+
+Example 24
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+and the pope will reportedly name a new head of the troubled boston archdiocese this week.
+### Event Trigger ###
+name
+### Event Arguments ###
+For argument "person" extracted spans ['head']
+For argument "agent" extracted spans ['pope']
+
+Example 25
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+Some 70 people were arrested Saturday as demonstrators clashed with police at the end of a major peace rally here, as at least 200,000 anti-war protesters took to the streets across the United States and Canada.
+### Event Trigger ###
+rally
+### Event Arguments ###
+For argument "place" extracted spans ['here']
+For argument "entity" extracted spans ['protesters']

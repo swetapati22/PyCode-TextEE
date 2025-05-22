@@ -1,0 +1,28 @@
+{
+    "Justice_Convict_Unspecified(Event)": {
+        "description": [
+            "The event type 'Justice_Convict_Unspecified' refers to the legal determination that an individual (the defendant) is guilty of a crime. The event can be triggered by words such as 'convicted', 'found guilty', 'conviction', etc. This event does not specify the type of crime or the specific legal consequences. The event can be triggered by various legal terms and phrases indicating a guilty verdict. It is important to note that the context should clearly indicate a legal judgment of guilt.",
+            "The event type 'Justice_Convict_Unspecified' involves the formal declaration by a legal authority that a person (the defendant) has committed a crime. This event is typically indicated by terms like 'convicted', 'found guilty', or 'conviction'. The event can be triggered by different legal terms and phrases that signify a guilty verdict. The context should unambiguously point to a legal decision of guilt.",
+            "The 'Justice_Convict_Unspecified' event type denotes the legal process where a defendant is declared guilty of a crime. Triggers for this event include terms such as 'convicted', 'found guilty', and 'conviction'. The event can be triggered by various legal terms and phrases indicating a guilty verdict. The context must clearly indicate a legal judgment of guilt.",
+            "The 'Justice_Convict_Unspecified' event type refers to the legal determination that an individual (the defendant) is guilty of a crime. This event can be triggered by words like 'convicted', 'found guilty', and 'conviction'. The event can be triggered by various legal terms and phrases indicating a guilty verdict. The context should clearly indicate a legal judgment of guilt.",
+            "The event type 'Justice_Convict_Unspecified' involves the formal declaration by a legal authority that a person (the defendant) has committed a crime. This event is typically indicated by terms like 'convicted', 'found guilty', or 'conviction'. The event can be triggered by different legal terms and phrases that signify a guilty verdict. The context should unambiguously point to a legal decision of guilt."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "defendant": [
+            "The 'defendant' argument refers to the individual who has been declared guilty of a crime. Examples are 'Dzhokhar Tsarnaev', 'James \"Whitey\" Bulger', 'Tsarnaev', 'terrorists', 'who'. The defendant is the person against whom the legal judgment is made. Edge cases include situations where the defendant is referred to by a pronoun or a descriptive phrase rather than a proper name.",
+            "The 'defendant' argument is the person who has been found guilty of a crime. Examples are 'Dzhokhar Tsarnaev', 'James \"Whitey\" Bulger', 'Tsarnaev', 'terrorists', 'who'. This individual is the subject of the conviction. Edge cases include instances where the defendant is mentioned indirectly or through a pronoun.",
+            "The 'defendant' argument represents the individual who has been convicted of a crime. Examples are 'Dzhokhar Tsarnaev', 'James \"Whitey\" Bulger', 'Tsarnaev', 'terrorists', 'who'. This person is the one against whom the guilty verdict is issued. Edge cases include references to the defendant using pronouns or descriptive terms.",
+            "The 'defendant' argument denotes the person who has been declared guilty of a crime. Examples are 'Dzhokhar Tsarnaev', 'James \"Whitey\" Bulger', 'Tsarnaev', 'terrorists', 'who'. This individual is the focus of the conviction. Edge cases include situations where the defendant is referred to indirectly or by a pronoun.",
+            "The 'defendant' argument is the individual who has been found guilty of a crime. Examples are 'Dzhokhar Tsarnaev', 'James \"Whitey\" Bulger', 'Tsarnaev', 'terrorists', 'who'. This person is the one who has been legally judged as guilty. Edge cases include references to the defendant using pronouns or descriptive phrases."
+        ],
+        "judgecourt": [
+            "The 'judgecourt' argument refers to the legal authority or body that has declared the defendant guilty. Examples are 'jury', 'court'. This can include judges, juries, or other legal entities responsible for the conviction. Edge cases include situations where the legal authority is implied rather than explicitly mentioned.",
+            "The 'judgecourt' argument is the entity that has issued the guilty verdict. Examples are 'jury', 'court'. This can be a judge, jury, or other legal body. Edge cases include instances where the legal authority is referred to indirectly or is implied.",
+            "The 'judgecourt' argument represents the legal body or authority that has convicted the defendant. Examples are 'jury', 'court'. This can include judges, juries, or other legal entities. Edge cases include references to the legal authority that are implied rather than explicitly stated.",
+            "The 'judgecourt' argument denotes the legal authority that has declared the defendant guilty. Examples are 'jury', 'court'. This can be a judge, jury, or other legal body responsible for the conviction. Edge cases include situations where the legal authority is implied or indirectly mentioned.",
+            "The 'judgecourt' argument is the legal entity that has issued the guilty verdict. Examples are 'jury', 'court'. This can include judges, juries, or other legal bodies. Edge cases include instances where the legal authority is referred to indirectly or is implied."
+        ]
+    }
+}

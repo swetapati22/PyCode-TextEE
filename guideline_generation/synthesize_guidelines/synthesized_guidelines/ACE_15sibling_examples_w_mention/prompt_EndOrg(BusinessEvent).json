@@ -1,0 +1,34 @@
+{
+    "EndOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the termination or dissolution of an organization. Example triggers include 'is no more', 'dissolving', 'dismantling', 'crumbled'.",
+            "The event is characterized by the end of an organization's existence or its operational activities. This can include formal dissolution, collapse, or other forms of termination.",
+            "Unlike events such as StartOrg, which involve the creation or initiation of an organization, EndOrg focuses on the cessation of an organization's activities.",
+            "Triggers and outcomes for EndOrg differ from related events like DeclareBankruptcy, which involves financial insolvency but not necessarily the end of the organization.",
+            "The scope of EndOrg includes any scenario where an organization ceases to exist or operate, whether through formal dissolution, collapse, or other means of termination."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the specific word or phrase that indicates the end of an organization. Examples include 'is no more', 'dissolving', 'dismantling', 'crumbled'.",
+            "Valid triggers for EndOrg include terms that signify the cessation of an organization's activities. For instance, 'dissolved' in 'the party be constructively dissolved'.",
+            "Edge cases include phrases that might imply an end but do not explicitly state it, such as 'facing an internal reformist call for dissolving'.",
+            "Triggers such as 'opening' or 'launching' are indicative of StartOrg, not EndOrg.",
+            "The mention must clearly indicate the end of the organization, distinguishing it from related events like MergeOrg, where organizations combine rather than cease to exist."
+        ],
+        "org": [
+            "The 'org' argument refers to the organization that is ending. Examples are 'rej geemg', 'party', 'empire', 'regime'.",
+            "The role of 'org' is to identify the specific entity that is ceasing to exist or operate. For instance, 'party' in 'dissolving itself to create a new group'.",
+            "In cases where multiple organizations are mentioned, 'org' should be the one directly associated with the end event. For example, 'empire' in 'dismantling its entertainment empire'.",
+            "Unlike the 'agent' argument in StartOrg, which identifies the entity initiating the creation, 'org' in EndOrg identifies the entity that is ending.",
+            "Examples are 'regime' in 'crumbled along with Saddam Hussein's regime'."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the organization is ending. Examples are 'iraq'.",
+            "The role of 'place' is to provide geographical context to the end of the organization. For instance, 'iraq' in 'the focus in iraq is turning from military action to rebuilding'.",
+            "In cases where the location is not explicitly mentioned, 'place' may be inferred from the context. For example, 'united states' in a broader context of a U.S.-based organization ending.",
+            "Unlike the 'place' argument in DeclareBankruptcy, which indicates where the bankruptcy is declared, 'place' in EndOrg indicates where the organization ceases to exist.",
+            "Examples are 'iraq' in 'the focus in iraq is turning from military action to rebuilding'."
+        ]
+    }
+}

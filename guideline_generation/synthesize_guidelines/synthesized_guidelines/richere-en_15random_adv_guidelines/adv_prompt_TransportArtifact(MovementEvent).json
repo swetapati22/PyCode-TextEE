@@ -1,0 +1,12 @@
+{
+    "TransportArtifact(MovementEvent)": {
+        "description": "The TransportArtifact event is triggered by the movement or transportation of a physical object (artifact) from one location to another. Example triggers include verbs such as 'bring', 'deliver', 'take', 'transport', and 'move'. This event involves an agent who facilitates the movement, the artifact being moved, and often includes the origin and destination locations. For instance, in 'Amtrak delivered the package', 'Amtrak' is the agent and 'package' is the artifact. Unlike other MovementEvents, TransportArtifact specifically pertains to the transportation of physical objects, not people or abstract entities. The outcome of this event is the successful or attempted relocation of the artifact, distinguishing it from events like EndPosition, which focus on the cessation of a role or position rather than the movement of objects.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity responsible for the transportation of the artifact. This can be an individual, group, or organization. For example, in 'Amtrak delivered the package', 'Amtrak' is the agent. The agent may sometimes be implied rather than explicitly mentioned, as in 'it was delivered next door'. The agent is crucial as it identifies who or what is responsible for the movement.",
+            "artifact": "The artifact is the object being transported. It is the primary focus of the movement in the event and is typically a physical object, not an abstract concept or person. For instance, in 'students can bring guns to school', 'guns' is the artifact. The artifact represents what is being moved and is acted upon by the agent.",
+            "destination": "The destination is the location where the artifact is being transported to. It is the endpoint of the transportation event and is typically a physical location. For example, 'school' in 'students can bring guns to school' is the destination. The destination indicates where the artifact is intended to go.",
+            "origin": "The origin is the location from where the artifact is being transported. It is the starting point of the transportation event and is typically a physical location. For instance, 'cafe' in 'the truck pulled away from a cafe' is the origin. The origin indicates where the artifact is coming from."
+        }
+    }
+}

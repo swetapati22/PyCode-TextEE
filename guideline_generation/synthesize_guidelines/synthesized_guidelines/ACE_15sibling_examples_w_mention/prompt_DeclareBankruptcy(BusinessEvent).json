@@ -1,0 +1,34 @@
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": [
+            "The event is triggered by a business entity formally declaring its inability to pay off its debts, often leading to legal proceedings. Example triggers include 'bankruptcy', 'filed for bankruptcy', and 'declared bankrupt'.",
+            "The event is characterized by the involvement of a business organization and often a specific location where the bankruptcy is declared or recognized. It typically involves legal and financial contexts.",
+            "Unlike events such as MergeOrg, which involve the combination of two or more organizations, DeclareBankruptcy specifically involves the financial failure of a single organization.",
+            "Triggers such as 'merger' or 'acquisition' are indicative of MergeOrg events, not DeclareBankruptcy. The latter is focused on financial insolvency and legal declarations of bankruptcy.",
+            "The outcomes of DeclareBankruptcy events often include legal proceedings, restructuring, or liquidation of assets, which differ from the outcomes of events like StartOrg, where a new organization is established."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the specific word or phrase that indicates the declaration of bankruptcy. Examples include 'bankruptcy', 'filed for bankruptcy', and 'declared bankrupt'.",
+            "Triggers such as 'bankruptcy' and 'bankrupt' are valid indicators of this event type. For instance, 'The company filed for bankruptcy' clearly signals a DeclareBankruptcy event.",
+            "Edge cases include phrases like 'considering bankruptcy' which may indicate potential but not confirmed events. The context should confirm the actual declaration.",
+            "Unlike triggers for events like MergeOrg ('merged') or EndOrg ('is no more'), DeclareBankruptcy triggers focus on financial insolvency and legal declarations.",
+            "Examples of valid triggers include 'bankruptcy', 'filed for bankruptcy', 'declared bankrupt', and 'under bankruptcy laws'. These phrases clearly indicate the financial failure of an organization."
+        ],
+        "org": [
+            "The 'org' argument refers to the organization that is declaring bankruptcy. Examples are 'worldcom', 'Enron Corp', and 'amr'.",
+            "This argument is crucial as it identifies the entity undergoing financial failure. For instance, 'Enron Corp' in 'Bankrupt energy giant Enron Corp' is the organization declaring bankruptcy.",
+            "In cases where multiple organizations are mentioned, the context should clarify which one is declaring bankruptcy. For example, 'united' in 'operating under bankruptcy laws, united posted the best on time performance'.",
+            "Unlike the 'agent' argument in StartOrg events, which refers to the entity starting a new organization, 'org' in DeclareBankruptcy refers to the entity facing financial insolvency.",
+            "Examples include 'worldcom', 'Enron Corp', 'united', and 'amr'. These organizations are the subjects of the bankruptcy declarations in the provided examples."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the bankruptcy is declared or recognized. Examples are 'united states' in 'went broke on the largest corporate bankruptcy in the united states'.",
+            "This argument helps contextualize the event geographically. For instance, 'united states' indicates where the bankruptcy event is taking place or being recognized.",
+            "In some cases, the place may not be explicitly mentioned. The context should be used to infer the location if possible.",
+            "Unlike the 'place' argument in EndOrg events, which may refer to the location of an organization's end, 'place' in DeclareBankruptcy specifically refers to the location of the bankruptcy declaration.",
+            "Examples include 'united states' and other potential locations where the bankruptcy is declared or recognized. These locations provide geographical context to the event."
+        ]
+    }
+}

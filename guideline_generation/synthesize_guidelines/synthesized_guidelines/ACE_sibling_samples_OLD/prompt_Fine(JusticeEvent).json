@@ -1,0 +1,35 @@
+{
+  "Fine(JusticeEvent)": {
+    "description": [
+      "The event is triggered by the imposition of a financial penalty on an individual or entity, typically as a result of a legal or regulatory decision. Examples of triggers include 'fine,' 'fined,' and 'ordered to pay.'",
+      "This event captures the action of penalizing an entity monetarily, highlighting the entity being fined, the adjudicator imposing the fine, and optionally, the place where the fine is imposed.",
+      "Unlike Sentence, which focuses on assigning penalties like imprisonment, Fine specifically pertains to monetary penalties.",
+      "Triggers such as 'fined' or 'pay a fine' distinguish this event from other JusticeEvents like Convict or ArrestJail, which deal with criminal guilt or detention rather than financial penalties.",
+      "The event provides details about the adjudicator (authority imposing the fine), the entity penalized, and optionally the location, emphasizing the legal or procedural nature of the fine."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "adjudicator": [
+      "Examples are the legal or regulatory authorities imposing the fine, such as 'judge' or 'SEC'.",
+      "The adjudicator argument identifies the official or institution responsible for deciding and enforcing the fine, emphasizing their authoritative role.",
+      "This argument is crucial for distinguishing Fine events from informal or non-legal financial penalties.",
+      "Unlike the entity argument, which refers to the penalized party, the adjudicator identifies the enforcing authority.",
+      "In cases involving multiple adjudicators, annotate all explicitly mentioned entities involved in the decision to impose the fine."
+    ],
+    "entity": [
+      "Examples are individuals or organizations penalized financially, such as 'Ranjha' or 'Monitor'.",
+      "The entity argument identifies the party responsible for paying the fine, emphasizing their role as the recipient of the financial penalty.",
+      "This argument is central to the Fine event, differentiating it from other JusticeEvents where the focus might be on criminal guilt or legal appeals.",
+      "Unlike the adjudicator argument, which identifies the authority imposing the fine, the entity focuses on the penalized individual or organization.",
+      "In cases where multiple entities are fined, annotate all explicitly mentioned parties responsible for paying the penalty."
+    ],
+    "place": [
+      "Examples are locations where the fine is imposed or where the penalized party operates, such as 'offices'.",
+      "The place argument situates the event within a specific geographical or contextual setting, adding clarity to the legal or procedural context.",
+      "Unlike the entity argument, which identifies the fined party, the place provides spatial or jurisdictional information about where the event occurred.",
+      "This argument is optional and may not always be explicitly mentioned; however, it should be annotated when present.",
+      "In cases involving multiple places, prioritize the one most directly associated with the imposition of the fine or the adjudicator."
+    ]
+  }
+}

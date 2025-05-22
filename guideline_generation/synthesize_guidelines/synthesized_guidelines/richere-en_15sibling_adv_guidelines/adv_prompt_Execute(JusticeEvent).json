@@ -1,0 +1,11 @@
+{
+    "Execute(JusticeEvent)": {
+        "description": "The 'Execute' event in the context of justice is defined as the act of carrying out a death sentence on an individual, typically following a legal or judicial process. This event is characterized by the finality and irreversibility of the action, resulting in the individual's death as a form of punishment. It is distinct from other justice-related events such as 'ArrestJail' or 'Sentence', which do not culminate in death. The event involves key participants including the agent responsible for the execution, the person being executed, and the location where the execution occurs. Example triggers for this event include terms like 'execute', 'executed', 'death penalty', and 'killing'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity responsible for carrying out the execution, which could be a legal body, government authority, or any official entity. Examples include 'court', 'state', 'government', 'Attorney', and 'China'. The agent signifies the authority under which the execution is conducted and may sometimes be implicit or inferred from the context. Understanding the agent is crucial for grasping the legitimacy and context of the execution.",
+            "person": "The person is the individual or group of individuals who are being executed. Examples include 'man', 'criminal', 'Uighurs', 'They', 'people', and '3.5%'. The person is the central figure in the event, and in some cases, may refer to a group or be indicated by a non-specific term or percentage. This argument identifies who is subjected to the execution.",
+            "place": "The place is the location where the execution takes place, providing geographical context for the event. Examples include 'Afghanistan', 'Saudi Arabia', 'Kabul', 'Xinjiang', and 'Massachusetts'. The place can be a specific city, region, or country, and may sometimes be inferred from the broader context if not explicitly mentioned."
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "BeBorn(LifeEvent)": {
+        "description": "The BeBorn event, a type of LifeEvent, is triggered by the birth of a person, marking the beginning of their life. This event is characterized by the introduction of a new individual into the world, often specifying the person and the place of birth. Common triggers include terms like 'born', 'births', and 'newborn'. It is distinct from other LifeEvents such as 'Injure' or events related to job roles like 'StartPosition' or 'EndPosition'. The outcome of the BeBorn event is the existence of a new person, differentiating it from legal events like 'Convict' or 'Sentence'.",
+        "attributes": {
+            "mention": "The text span that triggers the BeBorn event, typically words like 'born', 'births', or 'newborn'.",
+            "person": "This argument identifies the individual being born, with examples including 'I', 'they', 'newborn', and 'children'. It is crucial as it specifies the new life being introduced. For instance, 'I' in 'I was born in London' refers to the person. Plural forms like 'children' also refer to individuals being born, e.g., 'children must have the best'. Unlike the 'agent' in events like 'ArrestJail', the 'person' in BeBorn is the subject of the birth, not an actor performing an action.",
+            "place": "This argument specifies the location where the birth occurs, with examples including 'London', 'Canada', 'hospital', and 'here in Canada'. It provides context to the birth event, indicating where the person was born. For instance, 'Canada' in 'born here in Canada' is the place argument. Specific institutions like 'hospital' also qualify as places where births occur, e.g., 'newborn being placed for adoption in a hospital'. Unlike the 'destination' in events like 'TransportArtifact', the 'place' in BeBorn is where the birth happens, not where something is being moved to."
+        }
+    }
+}

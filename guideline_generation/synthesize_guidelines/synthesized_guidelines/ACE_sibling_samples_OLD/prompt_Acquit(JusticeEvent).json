@@ -1,0 +1,28 @@
+{
+    "Acquit(JusticeEvent)": {
+        "description": [
+            "The event is triggered by a legal decision where a defendant is found not guilty of the charges against them. Example triggers include 'acquitted', 'walk free', and 'acquittal'.",
+            "The event is characterized by the formal declaration of a defendant's innocence by an adjudicator, such as a judge or a court. This event falls under the broader category of JusticeEvent.",
+            "Unlike the Convict event, which involves a guilty verdict, the Acquit event specifically involves a not guilty verdict, resulting in the defendant's release from legal charges.",
+            "Triggers such as 'convicted' or 'sentenced' are indicative of the Convict event type, not the Acquit event type. The outcome of the Acquit event is the defendant's freedom from the charges.",
+            "The event is distinct from other JusticeEvents like Extradite or ArrestJail, as it specifically deals with the conclusion of a trial where the defendant is declared not guilty and is released from legal proceedings."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', 'jury'. The adjudicator is the entity responsible for delivering the verdict of not guilty. This role is crucial as it signifies the authority behind the acquittal decision.",
+            "The adjudicator can be a single judge or a panel of judges, as seen in 'The ruling by judges Piet Streicher and Mohamed Navsa'.",
+            "In some cases, the adjudicator might be a jury, as in 'a Manhattan jury acquitted the defendant'.",
+            "The adjudicator's decision is final and legally binding, marking the end of the trial process for the defendant.",
+            "Unlike the agent in an ArrestJail event, who enforces the law by detaining individuals, the adjudicator in an Acquit event releases the defendant from legal charges."
+        ],
+        "defendant": [
+            "Examples are 'Ayub Masih', 'character', 'Wouter Basson'. The defendant is the individual who has been on trial and is declared not guilty.",
+            "The defendant is the central figure in the Acquit event, as their legal status changes from accused to acquitted.",
+            "In some cases, the defendant might be referred to in a general sense, such as 'one defendant was acquitted'.",
+            "The defendant's acquittal means they are no longer subject to the charges brought against them, as seen in 'Basson cannot be tried again and his acquittal stands'.",
+            "Unlike the person in an ArrestJail event, who is taken into custody, the defendant in an Acquit event is released from legal obligations and charges."
+        ]
+    }
+}

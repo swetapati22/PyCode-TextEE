@@ -1,0 +1,11 @@
+{
+    "Elect(PersonnelEvent)": {
+        "description": "The 'Elect' event is triggered by the act of selecting or appointing someone to a position or office through a voting process. It involves a formal mechanism, typically within a political or organizational context, and signifies the final decision and appointment of the candidate. Example triggers include 'elected', 're-election', 'elections', and 'by-elections'. This event is distinct from 'Nominate', which involves proposing a candidate, and 'EndPosition', which denotes the conclusion of an individual's tenure.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'elected' or 're-election'.",
+            "entity": "The organization or body for which the election is held, providing context and relevance to the election. Examples include 'USCF' in 'Beatriz Marinello was elected USCF President'. The entity can sometimes be inferred from the context, such as 'elected President' implying a governmental or organizational entity.",
+            "person": "The individual who is being elected to the position, such as 'Beatriz Marinello' in 'Beatriz Marinello was elected USCF President'. This argument identifies the central figure in the event, who will assume the responsibilities of the elected position. In some cases, the person may be referred to by a title or role, such as 'President'.",
+            "place": "The location where the election took place or is relevant to the election, providing geographical context. Examples include 'Los Angeles' in 'Beatriz Marinello was elected USCF President in Los Angeles'. The place can sometimes be implied, such as 'national elections' implying the entire country. In virtual or online elections, the place may be represented by terms like 'online' or 'virtual'."
+        }
+    }
+}

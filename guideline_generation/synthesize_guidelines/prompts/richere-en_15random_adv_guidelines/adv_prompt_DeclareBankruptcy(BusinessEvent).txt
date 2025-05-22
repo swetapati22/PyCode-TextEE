@@ -1,0 +1,78 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_DeclareBankruptcy(BusinessEvent)
+```json
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": [
+            "The event is triggered by a company or organization formally declaring its inability to pay its debts, often leading to legal proceedings. Example triggers include 'bankruptcy', 'filed for bankruptcy', and 'entered bankruptcy reorganization'.",
+            "The event is characterized by the financial failure of an organization, which may result in restructuring, liquidation, or other legal actions. Key characteristics include the involvement of legal or financial terms related to insolvency.",
+            "Unlike other BusinessEvents such as MergeOrg or EndOrg, DeclareBankruptcy specifically involves the legal declaration of insolvency. Triggers such as 'merge' or 'closed' are indicative of MergeOrg or EndOrg events, not DeclareBankruptcy.",
+            "Triggers and outcomes for DeclareBankruptcy differ from related events like EndOrg, which involves the cessation of operations without necessarily involving insolvency. For example, 'closed' indicates EndOrg, while 'bankruptcy' indicates DeclareBankruptcy.",
+            "The event is triggered by terms indicating financial distress and legal insolvency proceedings. Unlike events such as Transaction or Fine, which involve financial exchanges or penalties, DeclareBankruptcy involves the formal declaration of an inability to meet financial obligations."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'company', 'which', 'recipient', 'Jesuits'. The argument 'org' refers to the organization that is declaring bankruptcy. It is crucial as it identifies the entity undergoing financial distress.",
+            "The 'org' argument is important for understanding the scope and impact of the bankruptcy event. For instance, 'company' in 'the company slid into bankruptcy' specifies the entity affected.",
+            "In cases where the organization is referred to indirectly, such as 'which' in 'Patriot, which entered bankruptcy', the 'org' argument still identifies the entity declaring bankruptcy.",
+            "The 'org' argument can also refer to specific recipients of financial aid or other entities, as in 'recipient' in 'Ener1, a recipient of Stimulus largesse, filed for bankruptcy'.",
+            "Edge cases include organizations with multiple references or indirect mentions. For example, 'Jesuits' in 'the Jesuits on the west coast are still living high off the hog despite the many bankruptcies' identifies the organization involved in the bankruptcy event."
+        ]
+    }
+}
+```

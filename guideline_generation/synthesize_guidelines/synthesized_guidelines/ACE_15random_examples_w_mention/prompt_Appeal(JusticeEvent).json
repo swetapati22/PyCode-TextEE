@@ -1,0 +1,41 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": [
+            "The event is triggered by an individual or group formally requesting a higher court to review and change the decision of a lower court. Example triggers include 'appeal', 'appealed', and 'appeals'.",
+            "The event is characterized by the involvement of a judicial body (adjudicator) and a party seeking the review (plaintiff). The scope includes legal contexts where decisions are contested.",
+            "Unlike the 'Sue' event, which involves initiating a lawsuit, the 'Appeal' event specifically involves challenging an existing decision. Triggers such as 'lawsuit' are indicative of 'Sue', not 'Appeal'.",
+            "The outcome of the 'Appeal' event is a potential review or reversal of a previous decision, whereas events like 'Acquit' or 'Extradite' involve different judicial actions and outcomes.",
+            "The event is distinct from 'DeclareBankruptcy' or 'Marry', which involve financial and personal life events respectively, not judicial reviews. Triggers like 'bankruptcy' or 'marry' are not related to 'Appeal'."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the word or phrase that indicates the appeal action. Examples include 'appeal', 'appealed', and 'appeals'.",
+            "The mention must clearly indicate a request for a judicial review. For instance, 'appealed to the Supreme Court' is valid, while 'discussed the case' is not.",
+            "Variations such as 'filed an appeal' or 'submitted an appeal' are valid triggers. Edge cases like 'considering an appeal' may not be definitive without context.",
+            "The mention should be directly related to the act of appealing. Phrases like 'appeal for clemency' are valid, but 'appeal to emotions' is not.",
+            "Triggers must be in the context of a legal or judicial setting. 'Appeal' in marketing or general persuasion contexts does not qualify."
+        ],
+        "adjudicator": [
+            "Examples are 'Supreme Court', 'Court of Appeals', 'judge'. The adjudicator is the judicial body or official reviewing the appeal.",
+            "The adjudicator must be a recognized legal authority. For instance, 'Supreme Court' is valid, while 'community board' is not.",
+            "In cases where multiple adjudicators are mentioned, the highest authority should be annotated. For example, 'Supreme Court' over 'lower court'.",
+            "The adjudicator's role is to review and potentially change the decision. Non-judicial entities like 'police' or 'government' are not valid adjudicators.",
+            "Edge cases include international bodies like 'International Court of Justice' if they are reviewing a decision. Context is crucial to determine validity."
+        ],
+        "place": [
+            "Examples are 'Indonesia', 'New York', 'Supreme Court'. The place is the location where the appeal is filed or reviewed.",
+            "The place must be a specific location relevant to the judicial process. For instance, 'Supreme Court' is valid, while 'office' is too vague.",
+            "In cases where multiple places are mentioned, the primary location of the judicial review should be annotated. For example, 'Supreme Court' over 'local court'.",
+            "The place should be directly related to the appeal process. Locations mentioned in passing or unrelated contexts are not valid.",
+            "Edge cases include virtual or online courts if explicitly mentioned. The context should clearly indicate the place of judicial review."
+        ],
+        "plaintiff": [
+            "Examples are 'five', 'convict', 'offender'. The plaintiff is the individual or group requesting the appeal.",
+            "The plaintiff must be the party directly involved in the appeal. For instance, 'convict' is valid, while 'lawyer' representing them is not.",
+            "In cases where multiple plaintiffs are mentioned, all relevant parties should be annotated. For example, 'five convicts' includes all five individuals.",
+            "The plaintiff's role is to seek a review of a decision. Non-involved parties like 'witnesses' or 'family members' are not valid plaintiffs unless they are directly appealing.",
+            "Edge cases include organizations or groups acting as plaintiffs. The context should clearly indicate their role in the appeal process."
+        ]
+    }
+}

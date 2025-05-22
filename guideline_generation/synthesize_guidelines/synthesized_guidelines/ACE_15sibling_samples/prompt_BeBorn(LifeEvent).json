@@ -1,0 +1,28 @@
+{
+    "BeBorn(LifeEvent)": {
+        "description": [
+            "The event is triggered by the birth or emergence of a person, typically indicated by terms such as 'born', 'birth', 'gave birth', 'removed', 'cut out', or 'having'.",
+            "The event is characterized by the introduction of a new individual into the world, often specifying the person being born and sometimes the place of birth.",
+            "Unlike other LifeEvents such as 'Die' or 'Marry', the BeBorn event specifically focuses on the beginning of life rather than its end or a significant life change.",
+            "Triggers such as 'suicide', 'marry', or 'wounding' are indicative of other LifeEvents like 'Die', 'Marry', or 'Injure', not the BeBorn event type.",
+            "The outcome of the BeBorn event is the existence of a new person, which is distinct from events like 'Die' where the outcome is the end of a life, or 'Marry' where the outcome is a change in marital status."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'babies', 'one', 'other', 'infant', 'Hunter', 'girl', 'baby', 'that', 'child', 'girls', 'boys'. This argument identifies the individual who is being born.",
+            "The 'person' argument is crucial as it specifies the new individual introduced by the event. It can refer to a specific person or a general term like 'baby' or 'child'.",
+            "In cases where multiple individuals are born, such as 'girls' and 'boys', each individual is considered a separate instance of the 'person' argument.",
+            "Unlike the 'victim' argument in the 'Die' event, the 'person' argument in the BeBorn event refers to the new life rather than someone who has died.",
+            "Edge cases include references to unborn individuals, such as 'fetus' or 'that', which still fall under the 'person' argument as they denote the entity being born."
+        ],
+        "place": [
+            "Examples are 'home', 'New Zealand', 'nation'. This argument identifies the location where the birth takes place.",
+            "The 'place' argument is important as it provides context to the event, indicating where the birth occurred.",
+            "In some instances, the 'place' argument may be implicit or not explicitly mentioned, but when present, it adds significant detail to the event.",
+            "Unlike the 'place' argument in the 'Die' event, which indicates where a death occurred, the 'place' argument in the BeBorn event specifies the location of birth.",
+            "Edge cases include broad or non-specific locations like 'nation', which still qualify as the 'place' argument as they provide a general context for the birth."
+        ]
+    }
+}

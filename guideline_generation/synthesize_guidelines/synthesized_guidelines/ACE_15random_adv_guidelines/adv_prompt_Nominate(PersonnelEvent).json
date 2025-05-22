@@ -1,0 +1,10 @@
+{
+    "Nominate(PersonnelEvent)": {
+        "description": "The 'Nominate' event type is triggered by the act of officially naming or designating someone for a position or role. This event involves an agent (the nominator) and a person (the nominee) who is being proposed for a specific role. Unlike the 'Elect' event type, which involves a voting process, the 'Nominate' event focuses on the act of naming or proposing someone without necessarily involving a vote. Example triggers include 'name', 'nominate', 'select', and 'appoint'. The outcome of this event is the proposal or designation of a person for a role.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity (person or organization) that performs the act of nominating. This can be an individual, such as 'Bush' in 'Bush has been selecting new Cabinet members', or a collective entity, like 'the government' in 'named director by the government'. The agent may also be implied through context, such as 'he' in 'he's making an offer for the company, nominating his own board'. Pronouns like 'you' or 'I' can also serve as agents in certain contexts.",
+            "person": "The person is the individual who is being nominated for a position or role. This can be identified by their role or title, such as 'head' in 'the pope will reportedly name a new head' or 'Chui Sai On' in 'named director of the SARS task force'. The person may also be referred to by a pronoun or a general term, such as 'who' in 'So any thoughts on who you uh you would name?'. In cases where multiple individuals are being nominated, the person argument can refer to a group, such as 'members' in 'selecting new Cabinet members'."
+        }
+    }
+}

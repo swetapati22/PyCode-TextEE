@@ -1,0 +1,42 @@
+{
+    "TrialHearing(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal proceedings where a formal examination of evidence is conducted before a judge, typically in a court setting. Example triggers include 'trial', 'hearing', 'case', and 'tried'.",
+            "The event is characterized by the presence of an adjudicator, a defendant, and often a prosecutor, and it takes place in a specific location. It involves the legal process of determining the guilt or innocence of the defendant.",
+            "Unlike other JusticeEvents such as 'Pardon' or 'Sentence', the TrialHearing event focuses on the process of examining evidence and arguments before a verdict is reached. Triggers such as 'pardoned' or 'sentences' are indicative of different event types.",
+            "The outcomes of a TrialHearing event are not predetermined and can result in various legal decisions, including acquittal, conviction, or mistrial. This differs from events like 'Convict' or 'Sentence', where the outcome is a specific legal judgment.",
+            "The scope of the TrialHearing event includes any formal legal proceeding where evidence is presented and examined, regardless of the specific charges or the legal system in which it occurs. This can include preliminary hearings, bail hearings, and full trials."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'judge', 'court', 'jury'. The adjudicator is the person or body responsible for overseeing the trial or hearing and making legal decisions based on the evidence presented.",
+            "The adjudicator plays a crucial role in ensuring the trial is conducted fairly and according to legal standards. This can include judges, magistrates, or panels of judges in higher courts.",
+            "In some cases, the adjudicator may be a specific individual, such as 'Judge John S. Martin', while in others, it may refer to a collective body, such as 'the court'.",
+            "Unlike the 'prosecutor' or 'defendant', the adjudicator is neutral and does not advocate for either side in the trial. Their role is to interpret and apply the law impartially.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from the context, such as 'the trial will start on March 13' where 'the court' is implied as the adjudicator."
+        ],
+        "defendant": [
+            "Examples are 'nichols', 'Anwar Ibrahim', 'wife', 'Markovic', 'officials'. The defendant is the individual or group of individuals who are being accused or tried in the trial or hearing.",
+            "The defendant is central to the TrialHearing event as the person or entity against whom the legal proceedings are directed. They are the subject of the charges being examined.",
+            "In some cases, there may be multiple defendants, such as 'Markovic and 10 other officials'. Each defendant is individually accountable for the charges brought against them.",
+            "Unlike the 'prosecutor', who represents the state or the accuser, the defendant is the party defending against the accusations. Their role is to contest the charges and present their defense.",
+            "Edge cases include situations where the defendant is not explicitly named but can be inferred from the context, such as 'the trial of the former president's wife' where 'wife' is the defendant."
+        ],
+        "place": [
+            "Examples are 'oklahoma city', 'New York', 'Belgrade'. The place is the location where the trial or hearing is taking place.",
+            "The place is important as it provides context for the legal jurisdiction and the setting of the trial or hearing. It can be a city, a specific court, or a broader geographical area.",
+            "In some cases, the place may be explicitly mentioned, such as 'the Belgrade district court', while in others, it may be inferred from the context, such as 'a federal court in New York'.",
+            "Unlike the 'adjudicator' or 'defendant', the place is a static element that does not change throughout the event. It provides a fixed location for the legal proceedings.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context, such as 'the trial will start on March 13' where the location is implied to be the court handling the case."
+        ],
+        "prosecutor": [
+            "Examples are 'prosecutors', 'the prosecution'. The prosecutor is the legal representative who brings the case against the defendant in a trial or hearing.",
+            "The prosecutor plays a key role in presenting evidence and arguments to prove the defendant's guilt. They represent the state or the accuser in the legal proceedings.",
+            "In some cases, the prosecutor may be a specific individual or a group, such as 'the prosecutors presented enough evidence'. They are responsible for building and presenting the case against the defendant.",
+            "Unlike the 'defendant', who is defending against the charges, the prosecutor's role is to advocate for the conviction of the defendant based on the evidence presented.",
+            "Edge cases include situations where the prosecutor is not explicitly mentioned but can be inferred from the context, such as 'the judge ruled that enough evidence was presented' where 'prosecutors' is implied."
+        ]
+    }
+}

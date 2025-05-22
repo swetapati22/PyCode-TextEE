@@ -1,0 +1,28 @@
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions or gatherings where individuals or groups express their opposition, support, or demand for change, often in a public setting. Example triggers include 'protest', 'demonstration', 'crowded', and 'protesters'.",
+            "The event is characterized by collective actions aimed at making a statement or drawing attention to a cause. It often involves public displays such as marches, sit-ins, or rallies. Key characteristics include the presence of participants (entity) and a specific location (place).",
+            "Unlike other ConflictEvent types such as 'Attack', the Demonstrate event does not involve direct physical violence or harm as its primary focus. Instead, it centers on the act of gathering and expressing dissent or support.",
+            "Triggers such as 'protesters' and 'demonstration' are indicative of the Demonstrate event type, not events like 'Attack' which would use triggers like 'burned' or 'assaulted'. The outcomes of Demonstrate events are typically aimed at raising awareness or influencing public opinion rather than causing physical damage.",
+            "The event is triggered by organized or spontaneous actions where people come together to voice their opinions on social, political, or environmental issues. Examples include 'students crowded', 'organization staged a protest', and 'we held protests'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'protesters', 'students', 'organization', 'we', and 'trouble-makers'. The entity represents the individuals or groups participating in the demonstration. They are the primary actors in the event.",
+            "The entity is crucial as it identifies who is involved in the demonstration. It can range from specific groups like 'students' to more general terms like 'crowd'.",
+            "In some cases, the entity may be a formal organization or an informal group of individuals. For example, 'organization Meu Rio' or 'crowd of protesters'.",
+            "The entity can also include individuals identified by their actions or roles within the demonstration, such as 'trouble-makers' at a protest.",
+            "Edge cases include situations where the entity is implied rather than explicitly stated. For instance, 'we held protests' implies the entity 'we' as the participants."
+        ],
+        "place": [
+            "Examples are 'Yemen/Syrian/Bahrain', 'Sabha', 'house', 'Montreal', and 'Ipanema beach'. The place represents the location where the demonstration occurs.",
+            "The place is important as it provides context and situates the event geographically. It can be a specific location like 'house' or a broader area like 'Montreal'.",
+            "In some cases, the place may be a well-known landmark or public space associated with demonstrations, such as 'Ipanema beach'.",
+            "The place can also include multiple locations if the demonstration spans different areas, as seen in 'Yemen/Syrian/Bahrain'.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context. For example, 'students crowded around Paterno's house' implies the place 'house'."
+        ]
+    }
+}

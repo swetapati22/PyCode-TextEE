@@ -1,0 +1,9 @@
+{
+    "MergeOrg(BusinessEvent)": {
+        "description": "The MergeOrg(BusinessEvent) is triggered by the combination of two or more organizations into a single entity, typically indicated by terms such as 'merge', 'merged', 'merger', and 'mergers'. This event represents a business strategy aimed at consolidating resources, expanding market reach, reducing competition, or enhancing capabilities. It involves formal legal and financial processes to unify separate business entities under a common management and operational structure. Unlike related events such as 'StartOrg' or 'TransferOwnership', 'MergeOrg' specifically denotes the integration of existing organizations rather than the creation of a new entity or the transfer of assets. This event has significant implications for stakeholders, including employees, shareholders, and customers, often resulting in organizational restructuring, changes in service delivery, and shifts in market dynamics.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "org": "The 'org' argument identifies all organizations involved in the merger, including both acquiring and acquired entities. Examples include specific names like 'ABN Amro', 'US Airways', or 'Southwest High', as well as broader categories such as 'airlines' or 'schools' when specific names are not provided. This argument can encompass multiple organizations within a single event instance, and annotations should clearly differentiate entities as separate arguments when they maintain distinct identities in the text, even as they merge into a single organization."
+        }
+    }
+}

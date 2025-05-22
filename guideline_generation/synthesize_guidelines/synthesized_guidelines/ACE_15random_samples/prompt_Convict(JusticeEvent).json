@@ -1,0 +1,35 @@
+{
+    "Convict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the formal declaration of a defendant's guilt in a court of law. Example triggers include 'convicted', 'guilty', and 'conviction'.",
+            "The event is characterized by the involvement of an adjudicator (e.g., judge, jury) who delivers the verdict, a defendant who is found guilty, and often a specific place where the conviction occurs.",
+            "Unlike the 'Acquit' event, which involves a declaration of innocence, the 'Convict' event results in a guilty verdict. Triggers such as 'acquitted' are indicative of the 'Acquit' event type, not this event type.",
+            "The 'Convict' event differs from the 'Sentence' event, which focuses on the punishment given after a conviction. The 'Convict' event centers on the determination of guilt, while the 'Sentence' event centers on the consequences of that guilt.",
+            "The outcome of the 'Convict' event is the formal recognition of the defendant's guilt, which may lead to subsequent events such as sentencing or appeals. This event does not include the actual punishment or the appeal process itself."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'jury', 'judge', 'court'. The adjudicator is the entity responsible for delivering the verdict of guilt. This argument is crucial as it identifies the authority behind the conviction.",
+            "In the context of a jury trial, the adjudicator would be the 'jury'. For example, 'A Manhattan jury convicted Alfred Taubman.'",
+            "In a bench trial, the adjudicator would be the 'judge'. For example, 'Judge Shahid Rafiq found Ranjha Masih guilty.'",
+            "In some cases, the adjudicator may be a collective body such as a 'court'. For example, 'The court convicted the defendant of fraud.'",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from the context. For example, 'The defendant was found guilty,' where the adjudicator is implied to be the judge or jury."
+        ],
+        "defendant": [
+            "Examples are 'Alfred Taubman', 'Ayodhya Prasad Chaubey', 'those'. The defendant is the individual or group found guilty of the crime. This argument is essential as it identifies who has been convicted.",
+            "In cases involving multiple defendants, the argument may refer to a group. For example, 'Five of them are Indonesians convicted of murders.'",
+            "The defendant can be a specific individual. For example, 'Anwar Ibrahim was convicted of sodomy.'",
+            "In some instances, the defendant may be referred to in a general sense. For example, 'Those convicted of murder.'",
+            "Edge cases include situations where the defendant is not explicitly named but can be inferred from the context. For example, 'The man was convicted of blasphemy,' where 'man' is the defendant."
+        ],
+        "place": [
+            "Examples are 'Manhattan', 'Indonesia', 'court'. The place is the location where the conviction occurs. This argument is important as it provides the geographical context of the event.",
+            "The place can be a specific city or region. For example, 'A Manhattan jury convicted Alfred Taubman.'",
+            "In some cases, the place may refer to a country. For example, 'Convicted drug offenders in Indonesia.'",
+            "The place can also be a specific venue such as a court. For example, 'The judge convicted Ayub Masih in the court.'",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context. For example, 'The defendant was convicted,' where the place is implied to be the location of the court proceedings."
+        ]
+    }
+}

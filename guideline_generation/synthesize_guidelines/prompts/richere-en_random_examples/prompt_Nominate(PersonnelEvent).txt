@@ -1,0 +1,358 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Nominate which is a child event type of super class PersonnelEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Nominate which is a child event type of super class PersonnelEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> person
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+The last time something like this happened that I know of; was the republican convention in New York for the renomination of Bush Jr for a second term in office.
+### Event Trigger ###
+renomination
+### Event Arguments ###
+For argument "agent" extracted spans ['republican']
+For argument "person" extracted spans ['Bush Jr']
+For argument "place" extracted spans ['New York']
+
+Example 2
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+Collectively, your party nominated Kerry in 2004 because he voted for the war, and in 2006, you didn't vote out one Senator who had voted for it.
+### Event Trigger ###
+nominated
+### Event Arguments ###
+For argument "agent" extracted spans ['party']
+For argument "person" extracted spans ['Kerry']
+
+Example 3
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+If Romney gets the nomination, he will lose.
+### Event Trigger ###
+nomination
+### Event Arguments ###
+
+Example 4
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+Senior officials in Hamas had earlier denied press reports that Mishaal would nominate himself for chairmanship of the Palestinian national council, or Palestinian parliament in exile, in the upcoming elections.
+### Event Trigger ###
+nominate
+### Event Arguments ###
+For argument "person" extracted spans ['Mishaal']
+
+Example 5
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+“If you want to talk historically about how people get nominated president — there are probably some exceptions to this — you’ve got to win one of the first two [contests],” Giuliani observes.
+### Event Trigger ###
+nominated
+### Event Arguments ###
+For argument "person" extracted spans ['people']
+
+Example 6
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+God help us all if Obama ever got to appoint a liberal inflationist Fed Chairman.
+### Event Trigger ###
+appoint
+### Event Arguments ###
+For argument "person" extracted spans ['Chairman']
+For argument "agent" extracted spans ['Obama']
+
+Example 7
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+obama DID appoint a fed chairman, youi blithering idiot.
+### Event Trigger ###
+appoint
+### Event Arguments ###
+For argument "person" extracted spans ['chairman']
+For argument "agent" extracted spans ['obama']
+
+Example 8
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+Now, the selection of Ryan, only the second Catholic ever nominated for national office by Republicans, all but guarantees a fierce election-year fight for the affections of Catholic voters  or more specifically, whiteCatholics, who form the bulk of the Catholic vote here in this corner of Iowa and across the Rust Belt.
+### Event Trigger ###
+nominated
+### Event Arguments ###
+For argument "person" extracted spans ['Ryan']
+For argument "agent" extracted spans ['Republicans']
+
+Example 9
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+No, I was there in 2004 when George W. Bush (aka "Jr.") was nominated for a second term.
+### Event Trigger ###
+nominated
+### Event Arguments ###
+For argument "person" extracted spans ['Jr.']
+
+Example 10
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+Tears were shed and Hitler was quoted on Wednesday, as ethnic tensions erupted at the State House and threatened to derail Governor Deval Patrick’s nominee for a seat on the Superior Court.
+### Event Trigger ###
+nominee
+### Event Arguments ###
+For argument "person" extracted spans ['nominee']
+For argument "agent" extracted spans ['Deval Patrick']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+And this while the country was receiving generous aid: by May of 2001, Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.
+### Event Trigger ###
+spent
+### Event Arguments ###
+For argument "giver" extracted spans ['E.U.']
+For argument "beneficiary" extracted spans ['country']
+For argument "place" extracted spans ['country']
+
+Example 12
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Loss of 2,400 jobs at Pfizer in Sandwich, Kent....massive impact on employment in local area...loss of confidence in UK...
+### Event Trigger ###
+Loss
+### Event Arguments ###
+For argument "entity" extracted spans ['Pfizer']
+For argument "place" extracted spans ['Sandwich']
+For argument "person" extracted spans ['2,400']
+
+Example 13
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Why is it only one of the identified groups is being barred from Civil Marriage (in most places).
+### Event Trigger ###
+Marriage
+### Event Arguments ###
+For argument "person" extracted spans ['groups']
+For argument "place" extracted spans ['places']
+
+Example 14
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']
+
+Example 15
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+In The United States versus Miller, the Court held:
+### Event Trigger ###
+versus
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Court']
+For argument "prosecutor" extracted spans ['United States']
+For argument "defendant" extracted spans ['Miller']
+
+Example 16
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 17
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 18
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+In Rapid City, SD they have arrested over 300 for DUI since the first of the year.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "person" extracted spans ['300']
+For argument "place" extracted spans ['Rapid City']
+
+Example 19
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+In some places STUDENTS can bring GUNS to school (rifle clubs).
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "agent" extracted spans ['STUDENTS']
+For argument "artifact" extracted spans ['GUNS']
+For argument "destination" extracted spans ['school']
+
+Example 20
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 21
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']
+
+Example 22
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even the IRA failed to cause as many casualties on mainland Great Britain as Pakistani trained suicide bombers did in one day.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "agent" extracted spans ['bombers']
+For argument "victim" extracted spans ['bombers']
+For argument "place" extracted spans ['mainland']
+For argument "instrument" extracted spans ['bombers']
+
+Example 23
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 24
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+He took two small papers with declining circulation in a small city in South Australia and built a media empire and made himself on of the wealthiest men in the world.
+### Event Trigger ###
+took
+### Event Arguments ###
+For argument "person" extracted spans ['He']
+For argument "place" extracted spans ['city']
+For argument "entity" extracted spans ['papers']
+
+Example 25
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Another is that when the government orders a military member through Permanent Change of Station orders (PCS) to relocate from one place to another the military sponsors the spouse to travel and relocate to the new base with their spouse.
+### Event Trigger ###
+relocate
+### Event Arguments ###
+For argument "agent" extracted spans ['government']
+For argument "person" extracted spans ['member']
+For argument "origin" extracted spans ['place']
+For argument "destination" extracted spans ['another']

@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Meet(ContactEvent)
+```json
+{
+    "Meet(ContactEvent)": {
+        "description": [
+            "The event is triggered by interactions where individuals or groups come together for a specific purpose. Example triggers include 'talks', 'conference', 'forum', 'negotiations', 'meeting', 'brief', and 'discussed'.",
+            "The event is characterized by the physical or virtual presence of multiple entities at a specific location or platform. Unlike a 'PhoneWrite' event, which involves communication over a distance without physical presence, a 'Meet' event involves direct interaction.",
+            "The event scope includes formal and informal gatherings, such as diplomatic talks, business meetings, press conferences, and forums. It does not include casual or unplanned encounters.",
+            "Triggers such as 'negotiations' and 'meeting' indicate a 'Meet' event, whereas triggers like 'telephone' or 'email' are indicative of 'PhoneWrite' events, which involve remote communication.",
+            "The outcomes of a 'Meet' event typically involve discussions, decisions, or agreements made during the interaction. Unlike 'PhoneWrite' events, the focus is on the in-person or virtual gathering rather than the mode of communication."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are individuals or groups participating in the meeting. In the sentence 'Blair and Bush were to hold a joint press conference', 'Blair' and 'Bush' are the entities.",
+            "The role of the entity is to represent the participants involved in the event. For instance, in 'Several top diplomacy experts told a Kremlin-run forum', 'experts' are the entities.",
+            "Entities can be organizations, countries, or specific individuals. For example, 'Washington' and 'Pyongyang' in 'Negotiations between Washington and Pyongyang' are entities.",
+            "In cases where the participants are not explicitly named, pronouns or collective nouns can serve as entities. For example, 'They' in 'They are scheduled to meet' refers to the entities.",
+            "Entities are crucial for understanding who is involved in the event. In 'Chief executive Jean-Rene Fourtou told shareholders at the group's annual general meeting', 'Jean-Rene Fourtou' and 'shareholders' are the entities."
+        ],
+        "place": [
+            "Examples are locations where the meeting takes place. In 'Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat', 'retreat' is the place.",
+            "The place provides context for where the event is happening. For instance, 'Bejing' in 'Negotiations between Washington and Pyongyang on their nuclear dispute have been set for April 23 in Bejing' is the place.",
+            "Places can be cities, buildings, or specific venues. For example, 'Paris' in 'Israeli Foreign Minister Silvan Shalom on Wednesday stressed Qatar's role during talks with his Qatari counterpart in Paris' is the place.",
+            "In virtual meetings, the place can be a platform or virtual space. For example, 'forum' in 'Several top diplomacy experts told a Kremlin-run forum' can be considered a virtual place.",
+            "The place is important for understanding the context and setting of the event. In 'They are scheduled to meet next in the Russian leader's native city of Saint Petersburg', 'city' refers to the place."
+        ]
+    }
+}
+```

@@ -1,0 +1,11 @@
+{
+    "StartPosition(PersonnelEvent)": {
+        "description": "The 'StartPosition' event is triggered when an individual begins a new role or position within an organization or entity. This event is characterized by formal or official language indicating the commencement of responsibilities, such as 'appointed', 'took office', 'begins', and 'become'. It is distinct from 'EndPosition' and 'TransferPosition' events, focusing solely on the initiation of duties. The scope includes various professional settings like corporate, political, and academic environments. Negative examples include life events unrelated to professional roles, such as 'BeBorn' or 'Die'.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'appointed', 'took office', or 'begins'.",
+            "entity": "The organization, department, or specific role that the person is starting. Examples include 'unit', 'operations', 'London School of Economics', and 'parliament'. The entity provides context to the new position and may sometimes be implied or require additional context from the text.",
+            "person": "The individual who is starting the new position. Examples include 'Jean-Rene Fourtou', 'Diller', 'minister', and 'he'. The person may be referred to by name, pronoun, or title, and it is essential to identify the correct individual from the context.",
+            "place": "The location where the new position is being assumed. Examples include 'Paris' and 'Serbia and Montenegro'. The place provides geographical context to the event and may sometimes be implied or require additional context from the text."
+        }
+    }
+}

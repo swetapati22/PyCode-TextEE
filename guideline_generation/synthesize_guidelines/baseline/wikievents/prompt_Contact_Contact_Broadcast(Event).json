@@ -1,0 +1,49 @@
+{
+    "Contact_Contact_Broadcast(Event)": {
+        "description": [
+            "The Contact_Contact_Broadcast event involves the dissemination of information from a communicator to a recipient, often through an instrument or medium. The event can be triggered by verbs such as 'send', 'present', 'report', 'say', 'broadcast', and 'announce'. This event type is characterized by the act of sharing information, news, or messages to a broader audience.",
+            "The Contact_Contact_Broadcast event is defined as the act of conveying information from a source (communicator) to an audience (recipient) using various means (instrument). The event can be triggered by words like 'send', 'present', 'report', 'say', 'broadcast', and 'announce'. It typically involves the sharing of news, updates, or messages.",
+            "Contact_Contact_Broadcast refers to the event where a communicator transmits information to recipients, often using an instrument or medium. Triggers for this event include 'send', 'present', 'report', 'say', 'broadcast', and 'announce'. This event is about the distribution of information to a wider audience.",
+            "The Contact_Contact_Broadcast event involves the act of a communicator sharing information with recipients through an instrument or medium. Common triggers for this event are 'send', 'present', 'report', 'say', 'broadcast', and 'announce'. It focuses on the dissemination of messages or news.",
+            "Contact_Contact_Broadcast is an event where information is shared from a communicator to recipients, typically using an instrument or medium. Triggers include 'send', 'present', 'report', 'say', 'broadcast', and 'announce'. This event type is about the act of broadcasting information to a larger audience."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "communicator": [
+            "The communicator is the entity responsible for conveying the information. Examples are 'editors', 'candidates', 'Associated Press', 'she', 'Ray Kelly'. The communicator can be an individual, group, or organization that initiates the broadcast.",
+            "The communicator refers to the person or organization that sends out the information. Examples include 'editors', 'candidates', 'Associated Press', 'she', 'Ray Kelly'. This entity is the source of the broadcasted message.",
+            "The communicator is the source of the information being broadcasted. Examples are 'editors', 'candidates', 'Associated Press', 'she', 'Ray Kelly'. It can be any individual or group responsible for the dissemination of the message.",
+            "The communicator is the entity that originates the broadcast. Examples include 'editors', 'candidates', 'Associated Press', 'she', 'Ray Kelly'. This can be a person, group, or organization that shares the information.",
+            "The communicator is the individual or organization that broadcasts the information. Examples are 'editors', 'candidates', 'Associated Press', 'she', 'Ray Kelly'. This entity is responsible for the content being shared."
+        ],
+        "instrument": [
+            "The instrument is the medium or tool used to broadcast the information. Examples are 'radio', 'TV cadenas'. It can include any form of media or communication channel used to disseminate the message.",
+            "The instrument refers to the means through which the information is broadcasted. Examples include 'radio', 'TV cadenas'. This can be any medium such as television, radio, internet, or print.",
+            "The instrument is the channel or medium used to convey the broadcast. Examples are 'radio', 'TV cadenas'. It encompasses various forms of media used to share the information.",
+            "The instrument is the method or medium used for broadcasting the information. Examples include 'radio', 'TV cadenas'. This can be any communication tool or platform used to disseminate the message.",
+            "The instrument is the medium through which the broadcast is made. Examples are 'radio', 'TV cadenas'. It includes any form of media or communication channel used to share the information."
+        ],
+        "place": [
+            "The place is the location where the broadcast occurs or is relevant to. Examples are 'here', 'Thai'. It can refer to the physical or virtual location associated with the broadcast.",
+            "The place refers to the location related to the broadcast. Examples include 'here', 'Thai'. This can be a specific place where the broadcast is made or where it is relevant.",
+            "The place is the location associated with the broadcast. Examples are 'here', 'Thai'. It can be the site of the broadcast or the area it pertains to.",
+            "The place is the geographical or virtual location connected to the broadcast. Examples include 'here', 'Thai'. This can be where the broadcast is made or the area it concerns.",
+            "The place is the location relevant to the broadcast. Examples are 'here', 'Thai'. It can be the physical site of the broadcast or the area it is related to."
+        ],
+        "recipient": [
+            "The recipient is the entity that receives the broadcasted information. Examples are 'You'. It can be an individual, group, or the general public who are the target audience of the broadcast.",
+            "The recipient refers to the audience or entity that the broadcast is directed towards. Examples include 'You'. This can be any person or group intended to receive the information.",
+            "The recipient is the target audience of the broadcast. Examples are 'You'. It can be any individual or group that the information is meant for.",
+            "The recipient is the entity that the broadcast is aimed at. Examples include 'You'. This can be any person or group who is intended to receive the broadcasted message.",
+            "The recipient is the audience for the broadcasted information. Examples are 'You'. It can be any individual or group that the broadcast is directed towards."
+        ],
+        "topic": [
+            "The topic is the subject matter of the broadcast. Examples are 'news', 'Proposals'. It refers to the content or theme of the information being shared.",
+            "The topic refers to the main subject of the broadcast. Examples include 'news', 'Proposals'. This is the central theme or content of the broadcasted information.",
+            "The topic is the focus of the broadcast. Examples are 'news', 'Proposals'. It is the primary subject matter being communicated.",
+            "The topic is the content or subject of the broadcast. Examples include 'news', 'Proposals'. This is what the broadcast is about.",
+            "The topic is the main theme of the broadcast. Examples are 'news', 'Proposals'. It refers to the subject matter being shared in the broadcast."
+        ]
+    }
+}

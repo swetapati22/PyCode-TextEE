@@ -1,0 +1,35 @@
+{
+    "ArtifactExistence_DamageDestroyDisableDismantle_DisableDefuse(Event)": {
+        "description": [
+            "The event type ArtifactExistence_DamageDestroyDisableDismantle_DisableDefuse refers to actions taken to render an artifact (usually a potentially harmful device) inoperative or harmless. The event can be triggered by verbs such as 'disarm', 'disable', 'defuse', 'prevent', 'suspend', 'recover', 'disorient', and 'fail'. This event type is often associated with contexts involving bombs, explosives, or other dangerous devices. The event can be triggered by actions taken by law enforcement, military personnel, or other entities to neutralize a threat.",
+            "ArtifactExistence_DamageDestroyDisableDismantle_DisableDefuse involves actions aimed at making an artifact, typically a dangerous device, non-functional or safe. The event can be triggered by terms like 'disarm', 'disable', 'defuse', 'prevent', 'suspend', 'recover', 'disorient', and 'fail'. This event is commonly seen in scenarios involving bomb squads, police, or security forces dealing with explosives or hazardous devices. The event can be triggered by efforts to prevent an explosion or other harmful outcomes.",
+            "This event type, ArtifactExistence_DamageDestroyDisableDismantle_DisableDefuse, captures the process of making an artifact, often a hazardous device, safe or inoperative. The event can be triggered by words such as 'disarm', 'disable', 'defuse', 'prevent', 'suspend', 'recover', 'disorient', and 'fail'. It is frequently encountered in contexts where bomb disposal units, police, or security personnel are involved in neutralizing threats posed by explosives or other dangerous items. The event can be triggered by actions taken to ensure public safety.",
+            "ArtifactExistence_DamageDestroyDisableDismantle_DisableDefuse refers to the act of rendering an artifact, usually a dangerous device, harmless or non-functional. The event can be triggered by verbs like 'disarm', 'disable', 'defuse', 'prevent', 'suspend', 'recover', 'disorient', and 'fail'. This event type is often related to situations where law enforcement, military, or security forces are involved in disarming bombs or other hazardous devices. The event can be triggered by measures taken to avert potential harm.",
+            "The event type ArtifactExistence_DamageDestroyDisableDismantle_DisableDefuse involves actions taken to neutralize or render an artifact, typically a dangerous device, inoperative. The event can be triggered by terms such as 'disarm', 'disable', 'defuse', 'prevent', 'suspend', 'recover', 'disorient', and 'fail'. It is commonly associated with scenarios involving bomb disposal, police, or security operations aimed at preventing explosions or other dangerous outcomes. The event can be triggered by interventions to ensure safety."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifact": [
+            "The 'artifact' argument refers to the object or device that is being rendered inoperative or safe. Examples are 'bomb', 'device', 'explosive', 'drone', 'Western line', 'it'. This argument identifies the specific item that is the focus of the disablement or defusal action.",
+            "The 'artifact' argument denotes the item or device that is being neutralized or made safe. Examples are 'bombs', 'device', 'it', 'Western line', 'drone'. This argument specifies the object that is the target of the disabling or defusing action.",
+            "The 'artifact' argument represents the object or device that is being disarmed or rendered harmless. Examples are 'bomb', 'device', 'it', 'Western line', 'drone'. This argument highlights the specific item involved in the disablement or defusal process.",
+            "The 'artifact' argument identifies the object or device that is being made inoperative or safe. Examples are 'bombs', 'device', 'it', 'Western line', 'drone'. This argument points to the item that is the subject of the disabling or defusing action.",
+            "The 'artifact' argument specifies the object or device that is being neutralized or rendered harmless. Examples are 'bomb', 'device', 'it', 'Western line', 'drone'. This argument indicates the particular item that is the focus of the disablement or defusal effort."
+        ],
+        "disabler": [
+            "The 'disabler' argument refers to the entity or person responsible for rendering the artifact inoperative or safe. Examples are 'squad', 'government'. This argument identifies who or what is performing the disabling or defusing action.",
+            "The 'disabler' argument denotes the individual or group that is neutralizing or making the artifact safe. Examples are 'squad', 'government'. This argument specifies the actor involved in the disablement or defusal process.",
+            "The 'disabler' argument represents the person or entity that is disarming or rendering the artifact harmless. Examples are 'squad', 'government'. This argument highlights who is carrying out the disabling or defusing action.",
+            "The 'disabler' argument identifies the individual or organization responsible for making the artifact inoperative or safe. Examples are 'squad', 'government'. This argument points to the actor involved in the disablement or defusal effort.",
+            "The 'disabler' argument specifies the person or group that is neutralizing or rendering the artifact harmless. Examples are 'squad', 'government'. This argument indicates who is performing the disabling or defusing action."
+        ],
+        "instrument": [
+            "The 'instrument' argument refers to the tool or method used to render the artifact inoperative or safe. Examples are 'robot'. This argument identifies the means by which the disabling or defusing action is carried out.",
+            "The 'instrument' argument denotes the device or technique used to neutralize or make the artifact safe. Examples are 'robot'. This argument specifies the tool or method involved in the disablement or defusal process.",
+            "The 'instrument' argument represents the tool or method used to disarm or render the artifact harmless. Examples are 'robot'. This argument highlights the means by which the disabling or defusing action is performed.",
+            "The 'instrument' argument identifies the device or technique used to make the artifact inoperative or safe. Examples are 'robot'. This argument points to the tool or method involved in the disablement or defusal effort.",
+            "The 'instrument' argument specifies the tool or method used to neutralize or render the artifact harmless. Examples are 'robot'. This argument indicates the means by which the disabling or defusing action is carried out."
+        ]
+    }
+}

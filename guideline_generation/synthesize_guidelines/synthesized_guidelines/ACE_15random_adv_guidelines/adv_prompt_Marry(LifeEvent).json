@@ -1,0 +1,10 @@
+{
+    "Marry(LifeEvent)": {
+        "description": "The Marry event is triggered by the act of entering into a marriage or wedding ceremony, characterized by the formal union of two individuals in a recognized relationship. This event involves a ceremony, legal recognition, and social acknowledgment, and can occur in various contexts such as traditional ceremonies, legal proceedings, and informal celebrations. It signifies the formation or celebration of a marriage, distinct from events like Divorce, which indicates the dissolution of a marriage, or Engagement, which signifies the intention to marry. Common triggers include terms like 'marry', 'wedding', 'marriage', 'wed', and 'married'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "person": "The 'person' argument identifies the individuals getting married. Examples include specific names or pronouns referring to the individuals involved, such as 'daughter', 'Raja Ahmad Sharir Iskandar', 'whom', 'she', 'he', 'the bride', or 'the groom'. This argument is crucial for understanding the primary participants in the marriage event.",
+            "place": "The 'place' argument specifies the location where the marriage or wedding ceremony takes place. Examples include specific locations or descriptive terms like 'home', 'Gracie Mansion', 'Los Angeles', 'church', 'beach', 'city hall', or 'destination wedding'. This argument provides context and setting for the marriage event."
+        }
+    }
+}

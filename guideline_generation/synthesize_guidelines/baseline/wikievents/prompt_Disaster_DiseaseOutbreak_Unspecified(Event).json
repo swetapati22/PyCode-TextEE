@@ -1,0 +1,28 @@
+{
+    "Disaster_DiseaseOutbreak_Unspecified(Event)": {
+        "description": [
+            "The Disaster_DiseaseOutbreak_Unspecified event refers to the occurrence of a disease outbreak that is not specified in detail. The event can be triggered by terms such as 'disease', 'virus', 'outbreak', 'fever', or the name of a specific disease. This event involves the spread of a disease affecting a population, often leading to public health concerns and requiring intervention.",
+            "The Disaster_DiseaseOutbreak_Unspecified event captures instances where a disease outbreak occurs without specifying the exact nature of the disease. The event can be triggered by mentions of diseases, viruses, or general terms indicating an outbreak. It typically involves multiple individuals being affected and may prompt public health responses.",
+            "The Disaster_DiseaseOutbreak_Unspecified event is defined as an outbreak of a disease that is not explicitly detailed. The event can be triggered by words like 'disease', 'virus', 'outbreak', or specific disease names. This event type focuses on the spread of disease within a community or region, often leading to significant health impacts.",
+            "The Disaster_DiseaseOutbreak_Unspecified event involves the occurrence of a disease outbreak that lacks specific details about the disease. The event can be triggered by terms such as 'disease', 'virus', 'outbreak', or names of diseases. It generally involves a significant number of people being affected and may lead to public health measures.",
+            "The Disaster_DiseaseOutbreak_Unspecified event refers to an unspecified disease outbreak affecting a population. The event can be triggered by mentions of diseases, viruses, or general outbreak terms. It typically involves the spread of disease, impacting public health and necessitating intervention."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "place": [
+            "The 'place' argument refers to the location where the disease outbreak is occurring. Examples are 'Venezuela', 'country', 'state'. This argument helps to identify the geographical area affected by the outbreak. Edge cases may include mentions of multiple locations or vague references to regions.",
+            "The 'place' argument indicates the geographical area impacted by the disease outbreak. Examples are 'Venezuela', 'country', 'state'. This argument is crucial for understanding the scope and spread of the outbreak. Edge cases might involve ambiguous or broad location references.",
+            "The 'place' argument specifies the location of the disease outbreak. Examples are 'Venezuela', 'country', 'state'. This argument provides context about where the outbreak is happening. Edge cases can include instances where the location is not explicitly mentioned but can be inferred.",
+            "The 'place' argument denotes the area where the disease outbreak is taking place. Examples are 'Venezuela', 'country', 'state'. This argument is essential for identifying the affected region. Edge cases may involve indirect references to the location or multiple affected areas.",
+            "The 'place' argument identifies the location of the disease outbreak. Examples are 'Venezuela', 'country', 'state'. This argument helps to pinpoint the geographical area of the outbreak. Edge cases might include non-specific location mentions or references to larger regions."
+        ],
+        "victim": [
+            "The 'victim' argument refers to the individuals or groups affected by the disease outbreak. Examples are 'people', 'patient', 'victims'. This argument highlights those who are impacted by the disease. Edge cases may include references to specific subgroups or indirect mentions of affected individuals.",
+            "The 'victim' argument indicates the people or groups suffering from the disease outbreak. Examples are 'people', 'patient', 'victims'. This argument is important for identifying the affected population. Edge cases might involve mentions of specific demographics or indirect references to victims.",
+            "The 'victim' argument specifies the individuals or groups impacted by the disease outbreak. Examples are 'people', 'patient', 'victims'. This argument provides information about who is affected by the disease. Edge cases can include indirect mentions or specific subgroups of victims.",
+            "The 'victim' argument denotes the people or groups affected by the disease outbreak. Examples are 'people', 'patient', 'victims'. This argument is crucial for understanding the human impact of the outbreak. Edge cases may involve vague references to victims or specific affected populations.",
+            "The 'victim' argument identifies the individuals or groups suffering from the disease outbreak. Examples are 'people', 'patient', 'victims'. This argument helps to highlight those impacted by the disease. Edge cases might include indirect mentions or specific subgroups of affected individuals."
+        ]
+    }
+}

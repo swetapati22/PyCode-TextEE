@@ -1,0 +1,10 @@
+{
+    "Contact(Event)": {
+        "description": "The 'Contact' event is triggered by verbal or written communication between entities, characterized by the exchange of information, opinions, or directives. It involves direct or indirect speech and is marked by communication verbs such as 'stated', 'say', 'claimed', 'conversation', 'told', 'talking', and 'trapped'. Unlike legal actions like 'Appeal' or 'Extradite', which involve legal proceedings, 'Contact' events focus solely on the act of communication itself, resulting in the transmission of information or directives rather than physical harm or legal judgments.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "Entities are individuals or groups involved in the communication. They can be the initiators or participants in the event. For example, in 'Obama stated in ISLAMIC COUNTRIES', 'Obama' is the entity. Entities can be multiple, such as 'police' and 'man' in 'police told the man'. Identifying entities is crucial as they represent the source or recipient of the communication.",
+            "place": "The place refers to the location where the communication occurs, providing context to the event. For instance, 'ISLAMIC COUNTRIES' in 'Obama stated in ISLAMIC COUNTRIES' is the place. Places can be specific or general, such as 'La Sapienza university' or 'Goerkes Corner'. Sometimes, the place may be inferred from the context, like 'in a small city' in 'He took two small papers'."
+        }
+    }
+}

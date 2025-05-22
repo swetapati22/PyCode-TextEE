@@ -1,0 +1,42 @@
+{
+  "Injure(LifeEvent)": {
+    "description": [
+      "The event is triggered by actions or occurrences that result in physical harm or injury to individuals. Examples of triggers include 'wounded,' 'injured,' and 'harm.'",
+      "This event focuses on the infliction of harm leading to injuries, highlighting the affected individuals (victims) and optionally the agents, instruments, and places involved.",
+      "Unlike Die, which marks the cessation of life, Injure emphasizes non-fatal harm or physical injury sustained by individuals.",
+      "Triggers such as 'harm' and 'wounded' indicate Injure events, distinguishing them from related events like BeBorn, which concerns life creation rather than harm.",
+      "The event captures details about the victim(s) of the injury, the cause (agent or instrument), and the location where the injury occurred."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "agent": [
+      "Examples are individuals or entities responsible for causing the injury, such as 'bomber'.",
+      "The agent argument identifies the initiator of the action leading to the injury, whether intentional or accidental.",
+      "This argument is crucial for understanding causality, distinguishing Injure from self-inflicted harm or accidental injuries without an identifiable agent.",
+      "Unlike the instrument argument, which refers to the means used, the agent refers to the individual or group performing the action.",
+      "In cases where multiple agents are involved, annotate all explicitly mentioned participants responsible for causing the injury."
+    ],
+    "instrument": [
+      "Examples are objects or mechanisms used to inflict the injury, such as 'explosives' or 'guns'.",
+      "The instrument argument identifies the means or tools employed in causing the injury, providing details on how harm was inflicted.",
+      "This argument adds specificity to the event, distinguishing it from Injure cases caused directly by an agent's physical action without external tools.",
+      "Unlike the agent argument, which identifies the actor, the instrument highlights the tool or method used in causing harm.",
+      "In cases with multiple instruments, annotate all explicitly mentioned tools contributing to the injury."
+    ],
+    "place": [
+      "Examples are locations where the injury occurred, such as 'mall' or 'airport'.",
+      "The place argument situates the event within a geographical or contextual setting, adding clarity to the event's location.",
+      "This argument is optional and may not always be explicitly mentioned; however, it should be annotated when present.",
+      "Unlike the victim argument, which focuses on the injured individuals, the place provides spatial information about where the event occurred.",
+      "In cases where multiple places are mentioned, prioritize the one most directly associated with the injury."
+    ],
+    "victim": [
+      "Examples are individuals or groups who sustain injuries, such as '20' or 'women, children, civilians'.",
+      "The victim argument identifies the affected parties, emphasizing those who experience harm during the event.",
+      "This argument is central to the Injure event, as it highlights the individuals who bear the consequences of the injury.",
+      "Unlike the agent argument, which identifies the cause of the injury, the victim focuses on the recipient of the harm.",
+      "In cases involving multiple victims, annotate all explicitly mentioned individuals or groups who were injured."
+    ]
+  }
+}

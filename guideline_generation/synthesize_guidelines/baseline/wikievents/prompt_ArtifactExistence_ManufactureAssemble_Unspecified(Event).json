@@ -1,0 +1,42 @@
+{
+    "ArtifactExistence_ManufactureAssemble_Unspecified(Event)": {
+        "description": [
+            "The event type 'ArtifactExistence_ManufactureAssemble_Unspecified' refers to the creation or assembly of an artifact without specifying the exact nature of the manufacturing or assembly process. The event can be triggered by verbs such as 'manufacture', 'assemble', 'build', 'construct', 'make', 'create', 'produce', 'fabricate', 'form', and 'develop'. This event type captures the general act of bringing together components to form a complete artifact.",
+            "The event type 'ArtifactExistence_ManufactureAssemble_Unspecified' involves the process of creating or putting together an artifact from various components. The event can be triggered by actions like 'manufacture', 'assemble', 'build', 'construct', 'make', 'create', 'produce', 'fabricate', 'form', and 'develop'. This event does not specify the detailed method or purpose of the manufacturing or assembly.",
+            "The 'ArtifactExistence_ManufactureAssemble_Unspecified' event type denotes the act of producing or assembling an artifact, without detailing the specific process or purpose. The event can be triggered by terms such as 'manufacture', 'assemble', 'build', 'construct', 'make', 'create', 'produce', 'fabricate', 'form', and 'develop'. This event captures the general creation or assembly of an artifact from components.",
+            "The 'ArtifactExistence_ManufactureAssemble_Unspecified' event type is used to describe the creation or assembly of an artifact, without specifying the exact process or purpose. The event can be triggered by words like 'manufacture', 'assemble', 'build', 'construct', 'make', 'create', 'produce', 'fabricate', 'form', and 'develop'. This event focuses on the general act of bringing together components to form an artifact.",
+            "The event type 'ArtifactExistence_ManufactureAssemble_Unspecified' refers to the general process of creating or assembling an artifact from various components, without specifying the detailed method or purpose. The event can be triggered by verbs such as 'manufacture', 'assemble', 'build', 'construct', 'make', 'create', 'produce', 'fabricate', 'form', and 'develop'. This event captures the overall act of producing or assembling an artifact."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifact": [
+            "The 'artifact' argument refers to the object that is being created or assembled in the event. Examples are 'drones', 'bombs', 'device', 'it', 'bomb'. This argument identifies the end product of the manufacturing or assembly process.",
+            "The 'artifact' argument denotes the item that results from the manufacturing or assembly process. Examples are 'drones', 'bombs', 'device', 'it', 'bomb'. This argument specifies the object that is being produced or put together.",
+            "The 'artifact' argument is the object that is being manufactured or assembled in the event. Examples are 'drones', 'bombs', 'device', 'it', 'bomb'. This argument highlights the final product of the creation or assembly process.",
+            "The 'artifact' argument represents the item that is created or assembled during the event. Examples are 'drones', 'bombs', 'device', 'it', 'bomb'. This argument identifies the object that is the result of the manufacturing or assembly.",
+            "The 'artifact' argument refers to the object that is the outcome of the manufacturing or assembly process. Examples are 'drones', 'bombs', 'device', 'it', 'bomb'. This argument specifies the end product of the event."
+        ],
+        "components": [
+            "The 'components' argument refers to the parts or materials used to create or assemble the artifact. Examples are 'Explosives', 'plywood'. This argument identifies the individual elements that are brought together to form the final product.",
+            "The 'components' argument denotes the materials or parts that are used in the manufacturing or assembly process. Examples are 'Explosives', 'plywood'. This argument specifies the elements that are combined to create the artifact.",
+            "The 'components' argument is the parts or materials that are used to assemble or manufacture the artifact. Examples are 'Explosives', 'plywood'. This argument highlights the individual elements that make up the final product.",
+            "The 'components' argument represents the materials or parts that are used in the creation or assembly of the artifact. Examples are 'Explosives', 'plywood'. This argument identifies the elements that are brought together to form the artifact.",
+            "The 'components' argument refers to the parts or materials that are used in the manufacturing or assembly process. Examples are 'Explosives', 'plywood'. This argument specifies the individual elements that are combined to create the final product."
+        ],
+        "manufacturerassembler": [
+            "The 'manufacturerassembler' argument refers to the entity (person, group, or organization) responsible for creating or assembling the artifact. Examples are 'ISIS', 'Tamerlan'. This argument identifies who is performing the manufacturing or assembly process.",
+            "The 'manufacturerassembler' argument denotes the person, group, or organization that is responsible for the creation or assembly of the artifact. Examples are 'ISIS', 'Tamerlan'. This argument specifies the entity that is carrying out the manufacturing or assembly.",
+            "The 'manufacturerassembler' argument is the entity (individual, group, or organization) that is responsible for manufacturing or assembling the artifact. Examples are 'ISIS', 'Tamerlan'. This argument highlights who is performing the creation or assembly process.",
+            "The 'manufacturerassembler' argument represents the person, group, or organization that is responsible for creating or assembling the artifact. Examples are 'ISIS', 'Tamerlan'. This argument identifies the entity that is carrying out the manufacturing or assembly.",
+            "The 'manufacturerassembler' argument refers to the entity (person, group, or organization) that is responsible for the creation or assembly of the artifact. Examples are 'ISIS', 'Tamerlan'. This argument specifies who is performing the manufacturing or assembly process."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the artifact is being created or assembled. Examples are 'neighborhood', 'town', 'garage'. This argument identifies the physical setting of the manufacturing or assembly process.",
+            "The 'place' argument denotes the location where the manufacturing or assembly of the artifact takes place. Examples are 'neighborhood', 'town', 'garage'. This argument specifies the place where the creation or assembly occurs.",
+            "The 'place' argument is the location where the artifact is being manufactured or assembled. Examples are 'neighborhood', 'town', 'garage'. This argument highlights the physical setting of the manufacturing or assembly process.",
+            "The 'place' argument represents the location where the creation or assembly of the artifact occurs. Examples are 'neighborhood', 'town', 'garage'. This argument identifies the place where the manufacturing or assembly takes place.",
+            "The 'place' argument refers to the location where the artifact is being created or assembled. Examples are 'neighborhood', 'town', 'garage'. This argument specifies the physical setting of the manufacturing or assembly process."
+        ]
+    }
+}

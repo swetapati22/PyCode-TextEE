@@ -1,0 +1,34 @@
+{
+    "Marry(LifeEvent)": {
+        "description": [
+            "The event is triggered by the act of two individuals entering into a marital union. Example triggers include 'marry', 'marriage', 'wedding', 'married', and 'marriages'.",
+            "The event is characterized by the formalization of a relationship between two people, often involving a ceremony or legal process. Key characteristics include the presence of a couple and often a specific location where the event takes place.",
+            "Unlike the Divorce event, which signifies the dissolution of a marriage, the Marry event signifies the beginning or existence of a marital relationship.",
+            "Triggers such as 'divorce' or 'separation' are indicative of the Divorce event type, not the Marry event type. The Marry event focuses on the union rather than the dissolution.",
+            "The outcome of the Marry event is the establishment of a marital relationship, which is distinct from other LifeEvents like BeBorn or Die, which involve birth and death respectively."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger (mention) is the word or phrase that indicates the occurrence of the Marry event. Examples include 'marry', 'marriage', 'wedding', 'married', and 'marriages'.",
+            "Valid triggers must clearly indicate the act of entering into a marital union. For instance, 'marry' in 'They decided to marry in June' is a valid trigger.",
+            "Edge cases include phrases like 'married life' which may not always indicate the event itself but rather the state of being married. Context is crucial.",
+            "Triggers such as 'divorce' or 'separation' are not valid for this event type as they indicate the end of a marriage, not the beginning.",
+            "Variations in triggers can include different tenses and forms of the word, such as 'marrying' or 'to be married'. Each form should be evaluated in context to ensure it indicates the Marry event."
+        ],
+        "person": [
+            "Examples are the individuals who are entering into the marital union. In 'John and Mary got married', 'John' and 'Mary' are the persons involved.",
+            "The role of the 'person' argument is to identify the participants in the marriage. This is crucial for understanding who is involved in the event.",
+            "In cases where the text refers to one person indirectly, such as 'his wife', the argument should still capture the individual involved.",
+            "Edge cases include references to groups or titles, such as 'the couple' or 'the bride and groom'. These should be annotated as the 'person' argument.",
+            "Unlike other LifeEvents, the 'person' argument in the Marry event specifically refers to those entering into the marriage, not other participants or witnesses."
+        ],
+        "place": [
+            "Examples are the locations where the marriage event takes place. In 'They got married in Paris', 'Paris' is the place.",
+            "The role of the 'place' argument is to provide context about where the marriage occurs, which can be important for understanding the event's setting.",
+            "In cases where the location is implied but not explicitly stated, such as 'They had a beach wedding', the implied location ('beach') should be annotated.",
+            "Edge cases include virtual or non-traditional locations, such as 'online' or 'in their backyard'. These should still be captured as the 'place' argument.",
+            "Unlike other LifeEvents, the 'place' argument in the Marry event is specifically about the location of the marriage ceremony or event, not where the individuals reside or other unrelated locations."
+        ]
+    }
+}

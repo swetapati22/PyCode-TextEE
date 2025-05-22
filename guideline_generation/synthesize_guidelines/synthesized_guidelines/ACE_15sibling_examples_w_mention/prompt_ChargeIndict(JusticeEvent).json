@@ -1,0 +1,48 @@
+{
+    "ChargeIndict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal actions where an individual or entity is formally accused of a crime. Example triggers include 'charged', 'accused', 'prosecuted', and 'indicted'.",
+            "The event is characterized by the formal accusation of a crime, typically involving legal authorities such as prosecutors or magistrates. It is distinct from events like 'ArrestJail' which focus on the physical detention of a person.",
+            "The event involves the initiation of legal proceedings against a defendant, often leading to a trial. Unlike 'Sentence', this event does not involve the final judgment or punishment.",
+            "Triggers such as 'charged' and 'accused' indicate this event type, whereas triggers like 'arrested' or 'convicted' are indicative of 'ArrestJail' and 'Convict' events, respectively.",
+            "The outcome of this event is the formal recognition of charges against the defendant, which may lead to further legal actions such as trials or plea bargains. It differs from 'Acquit' where the defendant is declared not guilty."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the formal accusation of a crime. Examples include 'charged', 'accused', 'prosecuted', and 'indicted'.",
+            "Triggers must clearly indicate the initiation of legal proceedings. For instance, 'charged with theft' is valid, while 'suspected of theft' is not.",
+            "Edge cases include phrases like 'facing charges' which are valid triggers, whereas 'under investigation' is not.",
+            "Triggers should be specific to the formal accusation process. 'Arrested' is not a valid trigger for this event type as it pertains to physical detention.",
+            "Examples of valid triggers: 'charged', 'accused', 'prosecuted', 'indicted'. Invalid triggers: 'arrested', 'convicted', 'sentenced'."
+        ],
+        "adjudicator": [
+            "Examples are 'judge', 'magistrate', 'court'. These are the legal authorities responsible for overseeing the formal accusation process.",
+            "The adjudicator plays a crucial role in the legal proceedings, often making decisions on whether to proceed with charges.",
+            "In some cases, the adjudicator may be implied rather than explicitly mentioned. For example, 'the court charged him' implies the adjudicator is the court.",
+            "Edge cases include situations where the adjudicator is not directly involved in the charging process but is mentioned in the context. For instance, 'the judge reprimanded him for not appearing in court on charges'.",
+            "Unlike 'ArrestJail' where the 'agent' is typically law enforcement, the 'adjudicator' in 'ChargeIndict' is a legal authority."
+        ],
+        "defendant": [
+            "Examples are 'client', 'Christie's', 'Ranjha'. The defendant is the individual or entity being formally accused of a crime.",
+            "The defendant is the primary subject of the charges and is the one facing legal proceedings.",
+            "In some cases, the defendant may be referred to indirectly, such as 'he was charged' where 'he' is the defendant.",
+            "Edge cases include situations where multiple defendants are involved. For example, 'the company and its CEO were charged' includes two defendants.",
+            "Unlike 'Sue' where the 'defendant' is being sued in a civil case, the 'defendant' in 'ChargeIndict' is facing criminal charges."
+        ],
+        "place": [
+            "Examples are 'court', 'United States', 'Faisalabad'. The place indicates the location where the charges are being brought or where the legal proceedings are taking place.",
+            "The place is important as it provides context for the jurisdiction and legal authority involved in the case.",
+            "In some cases, the place may be implied rather than explicitly mentioned. For example, 'charged in court' implies the place is the court.",
+            "Edge cases include situations where the place is mentioned in a broader context. For instance, 'charged in the United States' provides a national context.",
+            "Unlike 'Extradite' where the 'origin' and 'destination' are key, the 'place' in 'ChargeIndict' is typically a single location relevant to the legal proceedings."
+        ],
+        "prosecutor": [
+            "Examples are 'magistrate', 'prosecutors'. The prosecutor is the legal authority responsible for bringing the charges against the defendant.",
+            "The prosecutor plays a key role in the legal process, often representing the state or government in the case.",
+            "In some cases, the prosecutor may be referred to indirectly, such as 'the state charged him' where 'the state' implies the prosecutor.",
+            "Edge cases include situations where the prosecutor is part of a larger legal team. For example, 'the prosecution team charged him' includes multiple prosecutors.",
+            "Unlike 'Sue' where the 'plaintiff' is the one bringing a civil case, the 'prosecutor' in 'ChargeIndict' is bringing criminal charges."
+        ]
+    }
+}

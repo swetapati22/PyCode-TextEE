@@ -1,0 +1,42 @@
+{
+    "TransferMoney(TransactionEvent)": {
+        "description": [
+            "The event is triggered by the act of transferring money from one entity to another. Example triggers include 'give', 'pay', 'fund', 'settle', and 'cost'.",
+            "The event is characterized by the movement of monetary value between parties, often involving a giver and a recipient. It can occur in various contexts such as donations, payments, fines, and settlements.",
+            "Unlike the TransferOwnership event, which involves the transfer of physical or intellectual property, the TransferMoney event specifically involves the transfer of monetary assets.",
+            "Triggers such as 'provide' or 'sell' are indicative of TransferOwnership events, not TransferMoney events, as they involve the transfer of ownership rather than just monetary value.",
+            "The outcome of the TransferMoney event is the change in possession of money, which can be for various purposes such as compensation, donation, or settlement of debts."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "beneficiary": [
+            "The beneficiary is the entity that ultimately benefits from the transfer of money. Examples are 'Democrats' in the context of political donations or 'neighbor' in the context of compensation for distress.",
+            "The beneficiary can be an individual, organization, or group that receives the monetary benefit. For instance, 'clients' in a settlement case.",
+            "In some cases, the beneficiary and the recipient can be the same entity, as seen in donations or payments directly to the beneficiary.",
+            "The role of the beneficiary is crucial as it identifies who gains from the transaction. For example, 'center' funded by 'Mikhail Gorbachev'.",
+            "Edge cases include scenarios where the beneficiary is not explicitly mentioned but can be inferred from the context, such as 'firms' benefiting from a fine paid by clients."
+        ],
+        "giver": [
+            "The giver is the entity that provides the money in the transaction. Examples are 'Planned Parenthood' in a donation context or 'girls' in a compensation context.",
+            "The giver can be an individual, organization, or group responsible for initiating the transfer of money. For instance, 'Sotheby's' and 'Christie's' in a settlement case.",
+            "The giver's role is to identify the source of the monetary transfer. For example, 'Mikhail Gorbachev' funding a research center.",
+            "In some cases, multiple givers can be involved, as seen in joint settlements or payments by multiple entities.",
+            "Edge cases include scenarios where the giver is not explicitly mentioned but can be inferred from the context, such as 'houses' in an auction settlement."
+        ],
+        "place": [
+            "The place is the location where the transfer of money occurs or is relevant. Examples are 'Colorado' in a compensation case or 'United States' in an auction settlement.",
+            "The place can refer to a geographical location, jurisdiction, or venue related to the transaction. For instance, 'outside the United States' in an international settlement.",
+            "The role of the place is to provide context about where the transaction is taking place or has legal relevance. For example, 'Belgrade' in a property transfer case.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the context, such as 'state' in a fine or settlement case.",
+            "Edge cases include scenarios where the place is not directly related to the transaction but provides additional context, such as 'retreat' in a meeting context."
+        ],
+        "recipient": [
+            "The recipient is the entity that directly receives the money in the transaction. Examples are 'Democrats' in a donation context or 'neighbor' in a compensation context.",
+            "The recipient can be an individual, organization, or group that is the direct target of the monetary transfer. For instance, 'center' funded by 'Mikhail Gorbachev'.",
+            "The role of the recipient is to identify who directly gets the money. For example, 'firms' receiving a fine paid by clients.",
+            "In some cases, the recipient and the beneficiary can be the same entity, as seen in direct donations or payments.",
+            "Edge cases include scenarios where the recipient is not explicitly mentioned but can be inferred from the context, such as 'clients' benefiting from a settlement."
+        ]
+    }
+}

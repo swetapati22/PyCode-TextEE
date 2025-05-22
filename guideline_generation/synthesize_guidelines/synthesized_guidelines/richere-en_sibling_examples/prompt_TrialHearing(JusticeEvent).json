@@ -1,0 +1,42 @@
+{
+    "TrialHearing(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal proceedings where a case is being heard or tried in a court of law. Example triggers include 'versus', 'v.', 'case', 'trials', 'go to court', 'proven', and 'overruled'.",
+            "The event is characterized by the involvement of an adjudicator (such as a judge or court), a defendant, and often a prosecutor. It may also specify the place where the trial or hearing is taking place.",
+            "Unlike the 'Sentence' event, which focuses on the outcome of a trial, the 'TrialHearing' event focuses on the process of the trial or hearing itself. For example, 'sentence' indicates the final decision, while 'trial' indicates the ongoing legal process.",
+            "Triggers such as 'appealed' are indicative of the 'Appeal' event type, not the 'TrialHearing' event type. The 'TrialHearing' event is concerned with the initial trial or hearing, not the subsequent appeals process.",
+            "The outcome of a 'TrialHearing' event is not necessarily a conviction or acquittal; it is the process of presenting and examining evidence and arguments in a court of law. This distinguishes it from events like 'Convict' or 'Acquit', which denote specific outcomes of a trial."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'Court', 'judge', 'magistrate'. The adjudicator is the authority presiding over the trial or hearing, responsible for ensuring the legal process is followed and making rulings on the case.",
+            "The adjudicator is crucial as they have the authority to make legal decisions and judgments. For instance, 'The judge ruled in favor of the plaintiff' identifies 'judge' as the adjudicator.",
+            "In some cases, the adjudicator may be a panel or a higher court, such as 'The Supreme Court overruled the decision'. Here, 'Supreme Court' is the adjudicator.",
+            "Unlike the 'prosecutor' or 'defendant', the adjudicator is neutral and does not advocate for either side. For example, 'The magistrate listened to both sides' arguments' shows the adjudicator's impartial role.",
+            "Edge cases include situations where the adjudicator is not explicitly named but implied, such as 'The case was heard in court', where 'court' implicitly refers to the adjudicator."
+        ],
+        "defendant": [
+            "Examples are 'Miller', 'Aymette', 'guys', 'NBP', 'he'. The defendant is the individual or entity being accused or sued in the trial or hearing.",
+            "The defendant is a key participant in the trial, as the case revolves around the accusations or charges against them. For instance, 'The defendant pleaded not guilty' clearly identifies the role of the defendant.",
+            "In some cases, the defendant may be a group or organization, such as 'The company was sued for negligence'. Here, 'company' is the defendant.",
+            "Unlike the 'prosecutor', who brings the charges, the defendant is the one responding to the charges. For example, 'The state prosecuted the defendant' shows the opposing roles.",
+            "Edge cases include situations where the defendant is not explicitly named but referred to by a pronoun, such as 'He was found guilty'. Here, 'he' is the defendant."
+        ],
+        "place": [
+            "Examples are 'Tennessee', 'Palermo', 'court'. The place indicates the location where the trial or hearing is taking place.",
+            "The place is important as it provides context for the jurisdiction and legal framework under which the trial is conducted. For instance, 'The trial was held in New York' specifies the place.",
+            "In some cases, the place may refer to a specific court or city, such as 'The hearing took place in the Supreme Court'. Here, 'Supreme Court' is the place.",
+            "Unlike the 'adjudicator', which refers to the authority, the place refers to the physical or jurisdictional location. For example, 'The case was heard in a lower court' identifies 'lower court' as the place.",
+            "Edge cases include situations where the place is implied rather than explicitly stated, such as 'The trial was moved to a different venue'. Here, 'venue' implies the place."
+        ],
+        "prosecutor": [
+            "Examples are 'United States', 'State', 'magistrate'. The prosecutor is the individual or entity bringing the charges or accusations against the defendant.",
+            "The prosecutor plays a crucial role in presenting the case against the defendant, aiming to prove their guilt. For instance, 'The prosecutor argued for a harsh sentence' clearly identifies the role of the prosecutor.",
+            "In some cases, the prosecutor may be a government entity or official, such as 'The state prosecuted the defendant'. Here, 'state' is the prosecutor.",
+            "Unlike the 'defendant', who responds to the charges, the prosecutor initiates the legal action. For example, 'The prosecutor presented evidence against the defendant' shows the opposing roles.",
+            "Edge cases include situations where the prosecutor is not explicitly named but implied, such as 'The case was brought by the government'. Here, 'government' implies the prosecutor."
+        ]
+    }
+}

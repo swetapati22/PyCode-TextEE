@@ -1,0 +1,11 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": "The Appeal event in the justice system is initiated when an individual or group formally requests a higher court to review and potentially change the decision of a lower court. This event involves a plaintiff seeking a legal review, often involving an adjudicator such as a court or judge. It is distinct from events like 'Execute', which involves carrying out a sentence, and 'ChargeIndict', which involves formally accusing someone of a crime. The outcome of an Appeal event can result in the original decision being upheld, overturned, or modified, differentiating it from events like 'Convict' or 'Sentence' that focus on the initial judgment and punishment. Common triggers for this event include terms like 'appealed', 'appeals', and 'appeal'.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'appealed', 'appeals', or 'appeal'.",
+            "adjudicator": "The adjudicator is the authority or body that reviews the appeal and makes a decision on it. Examples include 'Supreme Court', 'court', and 'Federal Court'. The adjudicator can be a specific judge or a panel of judges and is distinct from the plaintiff. Unlike a prosecutor in a 'ChargeIndict' event, the adjudicator reviews the case impartially.",
+            "place": "The place is the location where the appeal is filed or reviewed, which can be a country, city, or specific court. Examples include 'Indonesia', 'court', and 'Federal Court'. The place provides context for the legal jurisdiction overseeing the appeal and is distinct from the 'origin' or 'destination' in an 'Extradite' event.",
+            "plaintiff": "The plaintiff is the individual or group requesting the appeal, believing the original decision was incorrect. Examples include 'five', 'their', and 'offender'. The plaintiff is distinct from the adjudicator and is actively seeking a change in the legal decision, unlike a defendant in a 'ChargeIndict' event."
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "Sentence(JusticeEvent)": {
+        "description": "The 'Sentence' event in the context of justice is triggered by the formal imposition of a judicial sentence on a defendant by an adjudicator. This event involves the declaration of a punishment or penalty by a court or judge, and it encompasses any legal context where a sentence is formally imposed, such as criminal cases, civil penalties, and administrative rulings. It is distinct from related events like 'Acquit' or 'Appeal', which involve different stages or outcomes in the judicial process. Example triggers include 'sentenced', 'sentence', and 'handed out sentences'.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'sentenced', 'sentence', or 'handed out sentences'.",
+            "adjudicator": "The adjudicator is the authority that imposes the sentence, such as a court, judge, or jury. It represents the legal body making the decision. Examples include 'court', 'judge', and 'Supreme Court'. The adjudicator can be explicitly mentioned or implied, and it is neutral and authoritative, unlike the 'prosecutor' or 'defense attorney'.",
+            "defendant": "The defendant is the individual or group being sentenced, such as 'smugglers', 'billionaire', 'convict', or 'Anwar Ibrahim'. This argument identifies who is receiving the sentence and can refer to a person or an entity like a corporation. The defendant might be mentioned explicitly or referred to by a pronoun, and it is distinct from the 'plaintiff' or 'victim'.",
+            "place": "The place indicates the location where the sentence is imposed, providing context and jurisdiction. Examples include 'Indonesian', 'province', and 'court'. The place can be a country, city, or specific court, and it might be explicitly mentioned or implied through context. It is distinct from the 'origin' or 'destination' in events like 'Extradite'."
+        }
+    }
+}

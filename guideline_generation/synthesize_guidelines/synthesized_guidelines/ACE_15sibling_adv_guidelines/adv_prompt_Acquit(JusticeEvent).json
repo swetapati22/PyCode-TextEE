@@ -1,0 +1,10 @@
+{
+    "Acquit(JusticeEvent)": {
+        "description": "The Acquit event in the justice system is triggered by a legal decision where a defendant is formally declared not guilty of the charges against them. This event signifies the end of legal proceedings for the specific charges, resulting in the defendant being released from legal liability. Unlike the Convict event, which results in a guilty verdict, the Acquit event clears the defendant of the charges. It is distinct from the Pardon event, where a defendant may be forgiven but not necessarily declared innocent. The Acquit event involves a formal judgment by an adjudicator, such as a judge or court, and is specific to the judicial process.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the entity responsible for making the legal decision to acquit the defendant. This can be an individual or a collective body, such as a judge, jury, or court. The adjudicator's decision is final and binding, signifying the authority behind the acquittal and ensuring the defendant cannot be tried again for the same charges. Unlike the prosecutor, the adjudicator is neutral and determines the outcome based on the evidence presented.",
+            "defendant": "The defendant is the individual who is being acquitted of the charges. This role is central to the event, identifying the person found not guilty. The defendant can be a named individual or referred to in a general sense, such as 'defendant' or 'guy'. They are the subject of the legal proceedings and benefit from the acquittal, distinguishing them from other roles such as the prosecutor or adjudicator. Unlike the plaintiff, who brings a lawsuit, the defendant defends against the charges."
+        }
+    }
+}

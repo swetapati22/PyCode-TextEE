@@ -1,0 +1,10 @@
+{
+    "Marry(LifeEvent)": {
+        "description": "The Marry event, a type of LifeEvent, is triggered by the act of entering into a marriage or civil union. It signifies the formal union of two individuals recognized by law, religion, or social norms, involving a commitment to a long-term relationship. This event is distinct from the Divorce event, which indicates the dissolution of a marriage. Triggers for the Marry event include terms like 'marry', 'married', 'marriage', and 'remarried', while terms like 'divorce' or 'separate' are not relevant. The outcome of the Marry event is the establishment or reaffirmation of a marital relationship, contrasting with events like 'Engage' that indicate a future promise to marry but not the actual union.",
+        "attributes": {
+            "mention": "The text span that triggers the Marry event, such as 'marry', 'married', 'marriage', or 'remarried'.",
+            "person": "This argument identifies the individuals involved in the marriage, including terms like 'bride', 'groom', 'spouse', 'partner', and 'individuals'. It specifies who is getting married and is crucial for understanding the participants. In cases where multiple people are mentioned, each individual should be identified. Indirect references like 'the couple' or 'the newlyweds' should also be annotated as 'person'. In some cultures, terms like 'bride' and 'groom' may be used even if the individuals are not explicitly named.",
+            "place": "This argument identifies the location where the marriage takes place, with examples including 'church', 'city hall', 'beach', and 'destination'. It provides context about the setting of the event. If the place is not explicitly mentioned but can be inferred, such as 'they got married in their hometown', the inferred location should be annotated. Edge cases include virtual or online marriages, where the 'place' might be a platform or service rather than a physical location. Some places are traditionally associated with marriages, like 'Las Vegas' for quick weddings or 'church' for religious ceremonies."
+        }
+    }
+}

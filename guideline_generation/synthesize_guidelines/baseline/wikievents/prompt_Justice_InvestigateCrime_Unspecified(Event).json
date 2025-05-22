@@ -1,0 +1,49 @@
+{
+    "Justice_InvestigateCrime_Unspecified(Event)": {
+        "description": [
+            "The event 'Justice_InvestigateCrime_Unspecified' refers to any action or process where an individual or group examines, inquires, or scrutinizes a crime or criminal activity without specifying the exact nature of the crime. The event can be triggered by words such as 'investigate', 'investigation', 'handled', 'search', and 'inquiry'. This event encompasses various stages of the investigative process, including gathering evidence, questioning suspects, and analyzing information. Edge cases include situations where the investigation is mentioned indirectly or where the investigation is part of a larger process.",
+            "The event 'Justice_InvestigateCrime_Unspecified' involves the examination or inquiry into a crime or criminal activity without detailing the specific crime. The event can be triggered by terms like 'investigate', 'investigation', 'handled', 'search', and 'inquiry'. This event includes activities such as collecting evidence, interrogating suspects, and reviewing case details. Edge cases may involve indirect references to the investigation or when the investigation is a subset of broader activities.",
+            "The 'Justice_InvestigateCrime_Unspecified' event pertains to the process of investigating a crime or criminal activity without specifying the crime's nature. Triggers for this event include 'investigate', 'investigation', 'handled', 'search', and 'inquiry'. This event covers actions like evidence collection, suspect interrogation, and case analysis. Edge cases include indirect mentions of the investigation or when the investigation is part of a larger context.",
+            "The 'Justice_InvestigateCrime_Unspecified' event describes the act of investigating a crime or criminal activity without specifying the crime. Triggers for this event can be 'investigate', 'investigation', 'handled', 'search', and 'inquiry'. This event involves steps such as gathering evidence, questioning suspects, and analyzing information. Edge cases include indirect references to the investigation or when the investigation is part of a broader process.",
+            "The event 'Justice_InvestigateCrime_Unspecified' involves the investigation of a crime or criminal activity without specifying the exact crime. Triggers for this event include 'investigate', 'investigation', 'handled', 'search', and 'inquiry'. This event encompasses activities like evidence collection, suspect interrogation, and case analysis. Edge cases may involve indirect mentions of the investigation or when the investigation is part of a larger context."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "defendant": [
+            "The 'defendant' argument refers to the individual or group being investigated or accused of a crime. Examples are 'suspect', 'network', and 'Tsarnaev'. Edge cases include situations where the defendant is mentioned indirectly or where multiple defendants are involved.",
+            "The 'defendant' argument is the person or entity under investigation or accusation. Examples include 'suspect', 'network', and 'Tsarnaev'. Edge cases involve indirect references to the defendant or multiple defendants.",
+            "The 'defendant' argument denotes the individual or group being investigated or accused. Examples are 'suspect', 'network', and 'Tsarnaev'. Edge cases include indirect mentions of the defendant or multiple defendants.",
+            "The 'defendant' argument represents the person or group under investigation or accusation. Examples include 'suspect', 'network', and 'Tsarnaev'. Edge cases involve indirect references to the defendant or multiple defendants.",
+            "The 'defendant' argument refers to the individual or group being investigated or accused. Examples are 'suspect', 'network', and 'Tsarnaev'. Edge cases include situations where the defendant is mentioned indirectly or where multiple defendants are involved."
+        ],
+        "investigator": [
+            "The 'investigator' argument refers to the individual or group conducting the investigation. Examples are 'Dan Collins', 'police', and 'agency'. Edge cases include situations where the investigator is mentioned indirectly or where multiple investigators are involved.",
+            "The 'investigator' argument is the person or entity carrying out the investigation. Examples include 'Dan Collins', 'police', and 'agency'. Edge cases involve indirect references to the investigator or multiple investigators.",
+            "The 'investigator' argument denotes the individual or group conducting the investigation. Examples are 'Dan Collins', 'police', and 'agency'. Edge cases include indirect mentions of the investigator or multiple investigators.",
+            "The 'investigator' argument represents the person or group conducting the investigation. Examples include 'Dan Collins', 'police', and 'agency'. Edge cases involve indirect references to the investigator or multiple investigators.",
+            "The 'investigator' argument refers to the individual or group conducting the investigation. Examples are 'Dan Collins', 'police', and 'agency'. Edge cases include situations where the investigator is mentioned indirectly or where multiple investigators are involved."
+        ],
+        "observedentity": [
+            "The 'observedentity' argument refers to the entity or group being observed or scrutinized during the investigation. Examples are 'al-Qaeda' and 'network'. Edge cases include situations where the observed entity is mentioned indirectly or where multiple entities are observed.",
+            "The 'observedentity' argument is the entity or group under observation during the investigation. Examples include 'al-Qaeda' and 'network'. Edge cases involve indirect references to the observed entity or multiple entities.",
+            "The 'observedentity' argument denotes the entity or group being observed during the investigation. Examples are 'al-Qaeda' and 'network'. Edge cases include indirect mentions of the observed entity or multiple entities.",
+            "The 'observedentity' argument represents the entity or group being observed during the investigation. Examples include 'al-Qaeda' and 'network'. Edge cases involve indirect references to the observed entity or multiple entities.",
+            "The 'observedentity' argument refers to the entity or group being observed or scrutinized during the investigation. Examples are 'al-Qaeda' and 'network'. Edge cases include situations where the observed entity is mentioned indirectly or where multiple entities are observed."
+        ],
+        "observer": [
+            "The 'observer' argument refers to the individual or group observing the investigation. Examples are 'police' and 'system'. Edge cases include situations where the observer is mentioned indirectly or where multiple observers are involved.",
+            "The 'observer' argument is the person or entity observing the investigation. Examples include 'police' and 'system'. Edge cases involve indirect references to the observer or multiple observers.",
+            "The 'observer' argument denotes the individual or group observing the investigation. Examples are 'police' and 'system'. Edge cases include indirect mentions of the observer or multiple observers.",
+            "The 'observer' argument represents the person or group observing the investigation. Examples include 'police' and 'system'. Edge cases involve indirect references to the observer or multiple observers.",
+            "The 'observer' argument refers to the individual or group observing the investigation. Examples are 'police' and 'system'. Edge cases include situations where the observer is mentioned indirectly or where multiple observers are involved."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the investigation is taking place. Examples are 'Mumbai', 'India', and 'Boston'. Edge cases include situations where the place is mentioned indirectly or where multiple places are involved.",
+            "The 'place' argument is the location of the investigation. Examples include 'Mumbai', 'India', and 'Boston'. Edge cases involve indirect references to the place or multiple places.",
+            "The 'place' argument denotes the location where the investigation occurs. Examples are 'Mumbai', 'India', and 'Boston'. Edge cases include indirect mentions of the place or multiple places.",
+            "The 'place' argument represents the location of the investigation. Examples include 'Mumbai', 'India', and 'Boston'. Edge cases involve indirect references to the place or multiple places.",
+            "The 'place' argument refers to the location where the investigation is taking place. Examples are 'Mumbai', 'India', and 'Boston'. Edge cases include situations where the place is mentioned indirectly or where multiple places are involved."
+        ]
+    }
+}

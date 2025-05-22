@@ -1,0 +1,34 @@
+{
+    "PhoneWrite(ContactEvent)": {
+        "description": [
+            "The event is triggered by a communication made via telephone or similar device, where the content of the communication is conveyed in the text. Examples include 'said by telephone', 'called', 'told by phone'.",
+            "The event is triggered by a specific mention of a phone call or telephone communication, indicating a direct verbal exchange. Example triggers include 'telephone call', 'called', 'told by telephone'.",
+            "The event is triggered by the act of discussing or conveying information through a phone call, often involving specific individuals or entities. Example triggers include 'discussed by phone', 'told by telephone', 'said by telephone'.",
+            "The event is triggered by the mention of a phone conversation or communication, highlighting the medium of communication. Example triggers include 'spoke by phone', 'discussed by telephone', 'called'.",
+            "The event is triggered by the explicit mention of a phone-based communication, distinguishing it from other forms of contact such as in-person meetings or written correspondence. Example triggers include 'said by telephone', 'called', 'discussed by phone'."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' refers to the specific word or phrase indicating the phone communication. Examples include 'telephone', 'call', 'told by phone'.",
+            "The event trigger 'mention' is the term that directly indicates the occurrence of a phone-based communication. Examples are 'called', 'said by telephone', 'discussed by phone'.",
+            "The event trigger 'mention' is the explicit reference to the act of communicating via phone. Examples include 'telephone call', 'told by telephone', 'spoke by phone'.",
+            "The event trigger 'mention' is the specific mention of a phone conversation or communication. Examples are 'discussed by telephone', 'called', 'said by phone'.",
+            "The event trigger 'mention' is the term that signifies the use of a phone for communication. Examples include 'telephone', 'called', 'discussed by phone'."
+        ],
+        "entity": [
+            "Examples are the individuals or entities involved in the phone communication. In 'The spokesman said by telephone from Agartala', 'spokesman' is the entity.",
+            "Examples are the people or organizations participating in the phone call. In 'Bush told Chretien by telephone', 'Bush' and 'Chretien' are entities.",
+            "Examples are the participants in the phone conversation. In 'He called Bush', 'He' and 'Bush' are entities.",
+            "Examples are the subjects of the phone communication. In 'The leaders discussed by phone', 'leaders' is the entity.",
+            "Examples are the entities engaged in the phone-based discussion. In 'Chirac called Bush', 'Chirac' and 'Bush' are entities."
+        ],
+        "place": [
+            "Examples are the locations associated with the phone communication. In 'said by telephone from Agartala', 'Agartala' is the place.",
+            "Examples are the places mentioned in relation to the phone call. In 'called from Paris', 'Paris' is the place.",
+            "Examples are the geographical locations linked to the phone conversation. In 'spoke by phone from New York', 'New York' is the place.",
+            "Examples are the specific places where the phone communication is made. In 'discussed by telephone from London', 'London' is the place.",
+            "Examples are the locations referenced in the context of the phone call. In 'told by phone from Tokyo', 'Tokyo' is the place."
+        ]
+    }
+}

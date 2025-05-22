@@ -1,0 +1,190 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type TransportArtifact which is a child event type of super class MovementEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+TransportArtifact which is a child event type of super class MovementEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> artifact
+Argument 3 -> destination
+Argument 4 -> origin
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+In some places STUDENTS can bring GUNS to school (rifle clubs).
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "agent" extracted spans ['STUDENTS']
+For argument "artifact" extracted spans ['GUNS']
+For argument "destination" extracted spans ['school']
+
+Example 2
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+One by throwing himself under the wheels as the truck pulled away from a cafe and another where a young lady, under the influence, had a fight with her boyfriend, demanded that he stop and let her out.
+### Event Trigger ###
+pulled
+### Event Arguments ###
+For argument "artifact" extracted spans ['the truck']
+For argument "origin" extracted spans ['cafe']
+
+Example 3
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+Don't order anything online if Amtrak are delivering it - here's my experience.
+### Event Trigger ###
+delivering
+### Event Arguments ###
+For argument "agent" extracted spans ['Amtrak']
+
+Example 4
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+Advised that it would be delivered by Amtrak on Tuesday.
+### Event Trigger ###
+delivered
+### Event Arguments ###
+For argument "agent" extracted spans ['Amtrak']
+
+Example 5
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+Phoned Amtrak "a card was left on Tuesday as you weren't there" (no it wasn't of course), and "we're not allowed to leave it with a neighbour".
+### Event Trigger ###
+leave
+### Event Arguments ###
+For argument "agent" extracted spans ['we']
+
+Example 6
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+Arranged for another delivery on Saturday.
+### Event Trigger ###
+delivery
+### Event Arguments ###
+
+Example 7
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+Arrived home yesterday - it had been delivered next door yesterday, with a card saying this was their first attempt at delivery...
+### Event Trigger ###
+delivery
+### Event Arguments ###
+For argument "agent" extracted spans ['their']
+
+Example 8
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+Arrived home yesterday - it had been delivered next door yesterday, with a card saying this was their first attempt at delivery...
+### Event Trigger ###
+delivered
+### Event Arguments ###
+For argument "destination" extracted spans ['door']
+
+Example 9
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+Arrived home yesterday - it had been delivered next door yesterday, with a card saying this was their first attempt at delivery...
+### Event Trigger ###
+this
+### Event Arguments ###
+For argument "agent" extracted spans ['their']
+
+Example 10
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+The locals charged me with that same thing in 2002, and took all of my money and guns out the door with my plants.
+### Event Trigger ###
+took
+### Event Arguments ###
+For argument "agent" extracted spans ['locals']
+For argument "artifact" extracted spans ['guns']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Another is that when the government orders a military member through Permanent Change of Station orders (PCS) to relocate from one place to another the military sponsors the spouse to travel and relocate to the new base with their spouse.
+### Event Trigger ###
+relocate
+### Event Arguments ###
+For argument "agent" extracted spans ['government']
+For argument "person" extracted spans ['member']
+For argument "origin" extracted spans ['place']
+For argument "destination" extracted spans ['another']

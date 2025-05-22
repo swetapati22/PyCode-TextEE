@@ -1,0 +1,35 @@
+{
+  "ReleaseParole(JusticeEvent)": {
+    "description": [
+      "The event is triggered by an action or decision in which an individual is released from imprisonment or custody, often with conditions such as parole. Example triggers include 'release,' 'released,' and 'parole.'",
+      "This event involves the formal or conditional liberation of a person from a detention setting, typically authorized by a judicial or administrative entity.",
+      "Unlike events such as Execute or Sentence, which impose penalties, ReleaseParole focuses on the cessation of detention, often contingent upon compliance with specific conditions.",
+      "Triggers such as 'paroled' or 'set free' indicate ReleaseParole, as opposed to 'extradite,' which involves the transfer of custody between jurisdictions, or 'sentence,' which focuses on penalties.",
+      "This event highlights the transition of individuals from incarceration to freedom, capturing details about the released individual, the entity facilitating the release, and optionally, the location."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "entity": [
+      "Examples are individuals or entities responsible for authorizing or facilitating the release, such as 'negotiators'.",
+      "This argument identifies the actors involved in enabling or demanding the release, emphasizing their role in the event.",
+      "Entities are important for distinguishing ReleaseParole from self-initiated escapes or other forms of unauthorized liberation.",
+      "Unlike the person argument, which focuses on the individual being released, entities represent external actors influencing or enabling the event.",
+      "In cases where no specific entity is mentioned, this argument may be omitted or inferred from the context, such as references to legal authorities."
+    ],
+    "person": [
+      "Examples are individuals being released from imprisonment or custody, such as 'ramzi binalshibh' or 'Anwar'.",
+      "The person argument is central to the event, identifying the individual transitioning from incarceration to freedom.",
+      "This argument highlights the affected party in the release process, distinguishing them from agents or entities facilitating the event.",
+      "Unlike entities, the person argument focuses exclusively on the individual whose custody status is being altered.",
+      "In cases involving multiple individuals, all explicitly mentioned released persons should be annotated."
+    ],
+    "place": [
+      "Examples are locations where the release occurs, such as 'center'.",
+      "The place argument situates the release within a specific geographical or institutional context, adding clarity to the event.",
+      "Unlike entities, which are responsible for facilitating the release, the place identifies the physical or geopolitical setting where the release happens.",
+      "Places are optional and may not always be mentioned; however, they should be annotated when explicitly provided in the text.",
+      "In cases with ambiguous or multiple locations, prioritize the one most directly tied to the event of release."
+    ]
+  }
+}

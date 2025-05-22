@@ -1,0 +1,10 @@
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": "The Demonstrate(ConflictEvent) is triggered by actions or gatherings where individuals or groups express their opinions, grievances, or support for a cause, typically in a public setting. This event is characterized by the active participation of entities (individuals or groups) and the location where the demonstration occurs. Unlike other ConflictEvent types such as 'Attack' or 'Injure', this event focuses on the act of demonstrating or protesting without direct physical harm or violence. Common triggers include terms like 'protest', 'demonstration', 'crowded', and 'protesters'. The primary outcomes are raising awareness, influencing public opinion, or prompting action from authorities, rather than causing physical harm or destruction.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'protest' or 'demonstration'.",
+            "entity": "The entity represents the individuals or groups actively participating in the demonstration. Examples include 'protesters', 'students', 'organization', 'we', 'crowd', and 'trouble-makers'. The entity can be a specific group or a more general term, and it highlights the participants of the demonstration.",
+            "place": "The place represents the location where the demonstration occurs. Examples include 'Yemen/Syrian/Bahrain', 'Sabha', 'house', 'Montreal', and 'Ipanema beach'. The place provides geographical context and can be a specific location or a broader area, indicating the public nature of the demonstration."
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Injure(LifeEvent)": {
+        "description": "The 'Injure' event type is triggered by actions or incidents resulting in physical harm to individuals. This event is characterized by the presence of a victim who suffers physical harm, but it does not necessarily result in death. The scope includes any scenario where individuals are harmed, ranging from minor injuries to severe bodily harm. Triggers such as 'wounding' and 'injured' are indicative of this event type. The outcomes typically involve medical attention or treatment for the victims, distinguishing it from non-physical harm events like 'Divorce' or 'Marry'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the person, group, or entity responsible for causing the injury. Examples include individuals like 'bomber' in 'A suicide bomber detonated explosives, wounding 20 people', groups like 'terrorists', or abstract entities like 'forces'. The agent may sometimes be implied rather than explicitly mentioned, as in 'The explosion injured many'. The agent is crucial for understanding the cause of the injury, distinguishing it from the victim who suffers the harm.",
+            "instrument": "The instrument refers to the tools or means used to inflict injury. Examples include weapons or objects like 'explosives' in 'A bomber detonated explosives, wounding 20 people', or natural elements like 'fire' or 'water'. The instrument may sometimes be implied, as in 'He was injured in the blast', suggesting an explosive device. The instrument helps in understanding the method of injury, differentiating it from the agent who causes the harm.",
+            "place": "The place is the location where the injury occurs. Examples include specific locations like 'mall' in 'A bomber detonated explosives at a mall, wounding 20 people', or broader areas like 'city' in 'Many were injured in the city'. The place provides context for where the injury event took place, distinguishing it from the agent or instrument involved in the event.",
+            "victim": "The victim is the individual or individuals who suffer the injury. Examples include '20 people' in 'A bomber detonated explosives, wounding 20 people', or groups like 'children' in 'Children were injured in the blast'. The victim may also be described by their role or identity, such as 'civilians' or 'soldiers'. The victim is crucial for identifying who is affected by the injury, distinguishing them from the agent who inflicts the harm."
+        }
+    }
+}

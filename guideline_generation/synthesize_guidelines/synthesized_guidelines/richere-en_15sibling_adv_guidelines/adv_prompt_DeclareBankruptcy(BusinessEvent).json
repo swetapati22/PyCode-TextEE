@@ -1,0 +1,9 @@
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": "The DeclareBankruptcy event is triggered when a company or organization formally declares its inability to pay its debts, often leading to legal proceedings. This event is characterized by financial failure, legal protection from creditors, and significant impacts on stakeholders such as employees and shareholders. Unlike StartOrg or MergeOrg events, which involve the creation or combination of organizations, this event signifies the cessation of financial viability. Typical outcomes include legal proceedings, asset liquidation, and financial losses. Triggers for this event include phrases like 'bankruptcy', 'filed for bankruptcy', and 'entered bankruptcy reorganization'. This event is distinct from EndOrg events, which may involve voluntary closure without financial insolvency.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'bankruptcy' or 'filed for bankruptcy'.",
+            "org": "The 'org' argument refers to the organization or company declaring bankruptcy. This can include any entity such as companies, non-profits, or other organizations. Examples include 'company' in 'the once highflying company slid into bankruptcy in 2001', 'which' in 'Patriot, which entered bankruptcy reorganization last year', and 'recipient' in 'a manufacturer of batteries for electric vehicles and recipient of Stimulus largesse, filed for bankruptcy'. The 'org' argument may sometimes be implied or referred to indirectly, distinguishing the entity from other participants like creditors or stakeholders."
+        }
+    }
+}

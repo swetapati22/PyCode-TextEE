@@ -1,0 +1,13 @@
+{
+    "Attack(ConflictEvent)": {
+        "description": "An Attack event, classified under ConflictEvent, involves actions where one party inflicts harm or damage on another, typically through physical violence or destruction. Key triggers include terms like 'killed', 'raping', 'explosion', and 'clashed'. This event is characterized by the presence of an aggressor (attacker) and a recipient (victim or target), often involving the use of weapons or instruments in specific locations. Unlike other ConflictEvents such as Demonstrate, which may not involve harm, Attack events specifically entail harm or the intent to harm. Outcomes usually include injury, death, or significant property damage, distinguishing them from non-harmful events like Transport or TransferOwnership.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The entity responsible for initiating the attack, which can be an individual, group, or organization. Examples include 'luster' in 'luster skipped bail during his trial for raping and drugging three women' and 'mob' in 'The mob dragged out three members of a family'.",
+            "attacker": "The party directly executing the harmful action, which can be a group or individual. Examples include 'mob' in 'The mob dragged out three members of a family' and 'demonstrators' in 'demonstrators clashed with police'.",
+            "instrument": "The tools or methods used to carry out the attack, such as 'machetes' and 'spears' in 'killed them with machetes and spears' or 'bomb' in 'A powerful bomb tore through a waiting shed'.",
+            "place": "The specific location where the attack occurs, ranging from broad regions to specific sites. Examples include 'airport' in 'southern Philippines airport blast' and 'shed' in 'A powerful bomb tore through a waiting shed'.",
+            "target": "The entity or object that the attack is directed at, which may not always be harmed."
+        }
+    }
+}

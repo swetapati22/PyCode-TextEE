@@ -1,0 +1,351 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type BeBorn which is a child event type of super class LifeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+BeBorn which is a child event type of super class LifeEvent
+Arguments:
+Argument 1 -> person
+Argument 2 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 2
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+"The reported maternal mortality ratio in Canada has declined from approximately 500 maternal deaths per 100,000 live births in the early 1920s to less than 5 per 100,000 live births in the 1990s1, among the lowest reported maternal mortality ratios in the world." from:
+### Event Trigger ###
+births
+### Event Arguments ###
+For argument "place" extracted spans ['Canada']
+
+Example 3
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+"The reported maternal mortality ratio in Canada has declined from approximately 500 maternal deaths per 100,000 live births in the early 1920s to less than 5 per 100,000 live births in the 1990s1, among the lowest reported maternal mortality ratios in the world." from:
+### Event Trigger ###
+births
+### Event Arguments ###
+For argument "place" extracted spans ['Canada']
+
+Example 4
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+"Since 1991, stillbirth (fetal death) rates in Canada have been fluctuating around 6.0 per 1,000 births.
+### Event Trigger ###
+births
+### Event Arguments ###
+For argument "place" extracted spans ['Canada']
+
+Example 5
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+In 2004, the fetal death rate was 6.1 per 1,000 births [0.6%], representing a decrease of 0.3 from the year before.
+### Event Trigger ###
+births
+### Event Arguments ###
+
+Example 6
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+they were Canadian, in the sence that they were born here in Canada, the oldest, the ring leader, i believe was an immigrant, he preached Hate in a Mississauga mosque.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['they']
+For argument "place" extracted spans ['Canada']
+
+Example 7
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I think my realization that under the present system health care is provided on the basis of one's wealth came about when I went to a private hospital that did not take Medicaid to pick up a newborn being placed for adoption (that child's grandparents were well insured) and I noticed they had valet parking.
+### Event Trigger ###
+newborn
+### Event Arguments ###
+For argument "person" extracted spans ['newborn']
+For argument "place" extracted spans ['hospital']
+
+Example 8
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I think my realization that under the present system health care is provided on the basis of one's wealth came about when I went to a private hospital that did not take Medicaid to pick up a newborn being placed for adoption (that child's grandparents were well insured) and I noticed they had valet parking.
+### Event Trigger ###
+newborn
+### Event Arguments ###
+For argument "person" extracted spans ['newborn']
+For argument "place" extracted spans ['hospital']
+
+Example 9
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I really don't understand people who have children, then insist that the children must have the best of everything, so work all the hours under the sun and moon in order to pay for *the best* when the really best thing for those children is quality time spent with their parents.
+### Event Trigger ###
+have
+### Event Arguments ###
+For argument "person" extracted spans ['children']
+
+Example 10
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+And some people are just unlucky, and end up with damaged prospects through no fault of their own (say if someone was born into a broken family with drug and alcohol problems, and ended up without the level of parental support required to succeed in education and then the workplace).
+### Event Trigger ###
+born
+### Event Arguments ###
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+“The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities that Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague to discuss the case of Julian Assange,” the spokesman said.
+### Event Trigger ###
+meet
+### Event Arguments ###
+For argument "entity" extracted spans ['Patino', 'William Hague']
+For argument "place" extracted spans ['London']
+
+Example 12
+#### Event Type ####
+Artifact(ManufactureEvent)
+### Input Text ###
+In fact, lately in my country they've been building schools modularly so they can be turned into house when the families with young kids in the neighbourhood grow older and don't need them anymore.
+### Event Trigger ###
+building
+### Event Arguments ###
+For argument "artifact" extracted spans ['schools']
+For argument "agent" extracted spans ['they']
+For argument "place" extracted spans ['country']
+
+Example 13
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot, 6 killed.
+### Event Trigger ###
+open
+### Event Arguments ###
+For argument "agent" extracted spans ['dealer']
+For argument "org" extracted spans ['store']
+For argument "place" extracted spans ['mall']
+
+Example 14
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 15
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 16
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+In some places STUDENTS can bring GUNS to school (rifle clubs).
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "agent" extracted spans ['STUDENTS']
+For argument "artifact" extracted spans ['GUNS']
+For argument "destination" extracted spans ['school']
+
+Example 17
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+He took two small papers with declining circulation in a small city in South Australia and built a media empire and made himself on of the wealthiest men in the world.
+### Event Trigger ###
+took
+### Event Arguments ###
+For argument "person" extracted spans ['He']
+For argument "place" extracted spans ['city']
+For argument "entity" extracted spans ['papers']
+
+Example 18
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+To reduce costs last year, the district closed almost half the schools in the city.
+### Event Trigger ###
+closed
+### Event Arguments ###
+For argument "org" extracted spans ['half']
+For argument "place" extracted spans ['city']
+
+Example 19
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+His father having died, he returned to Australia in 1954 to take over his inheritance, the Sunday Mail and The News, both of Adelaide
+### Event Trigger ###
+inheritance
+### Event Arguments ###
+For argument "recipient" extracted spans ['his']
+For argument "giver" extracted spans ['father']
+For argument "thing" extracted spans ['Sunday Mail', 'News']
+For argument "place" extracted spans ['Adelaide']
+
+Example 20
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+sentence
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 21
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+In a joint motion, lawyers for the defense and prosecution asked Magistrate Judge Marianne B. Bowler of U.S. District Court in Massachusetts to release Phillipos, 19, on $100,000 bail on the condition that he stay under house arrest and wear an electronic tracking bracelet.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "agent" extracted spans ['Marianne B. Bowler']
+For argument "person" extracted spans ['Phillipos']
+For argument "place" extracted spans ['Massachusetts']
+
+Example 22
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 23
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Loss of 2,400 jobs at Pfizer in Sandwich, Kent....massive impact on employment in local area...loss of confidence in UK...
+### Event Trigger ###
+Loss
+### Event Arguments ###
+For argument "entity" extracted spans ['Pfizer']
+For argument "place" extracted spans ['Sandwich']
+For argument "person" extracted spans ['2,400']
+
+Example 24
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+In Rapid City, SD they have arrested over 300 for DUI since the first of the year.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "person" extracted spans ['300']
+For argument "place" extracted spans ['Rapid City']
+
+Example 25
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "victim" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+For argument "place" extracted spans ['where']

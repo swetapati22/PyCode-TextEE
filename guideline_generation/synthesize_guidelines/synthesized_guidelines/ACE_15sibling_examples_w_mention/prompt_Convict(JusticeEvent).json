@@ -1,0 +1,41 @@
+{
+    "Convict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by a formal declaration that someone is guilty of a criminal offense. Example triggers include 'convicted', 'found guilty', and 'declared guilty'.",
+            "The event is characterized by the involvement of a judicial body or authority that makes the decision. This can include a jury, judge, or court.",
+            "The scope of the event includes the final judgment of guilt, distinguishing it from events like 'ChargeIndict' which involve accusations but not final judgments.",
+            "Unlike 'Acquit', this event does not result in the defendant being found not guilty. Instead, it confirms their guilt.",
+            "Triggers such as 'convicted' indicate this event type, whereas triggers like 'charged' or 'arrested' are indicative of related but distinct events such as 'ChargeIndict' or 'ArrestJail'."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of the event. Examples include 'convicted', 'found guilty', and 'declared guilty'.",
+            "The trigger must clearly indicate a final judgment of guilt, not just an accusation or suspicion.",
+            "Edge cases include phrases like 'convicted in absentia', which still indicate a final judgment even if the defendant was not present.",
+            "Triggers such as 'charged' or 'accused' are not valid for this event type as they do not indicate a final judgment.",
+            "Examples of valid triggers: 'convicted', 'found guilty', 'declared guilty'."
+        ],
+        "adjudicator": [
+            "The adjudicator is the entity that makes the final judgment of guilt. Examples are 'jury', 'judge', and 'court'.",
+            "The role of the adjudicator is crucial as it represents the authority behind the conviction.",
+            "In some cases, the adjudicator may be a collective body, such as 'jury' or 'panel of judges'.",
+            "Edge cases include situations where the adjudicator is implied but not explicitly mentioned, such as 'the court convicted him'.",
+            "Examples are 'jury', 'judge', 'court'."
+        ],
+        "defendant": [
+            "The defendant is the person or entity that has been found guilty. Examples are 'Alfred Taubman', 'offenders', and 'those'.",
+            "The role of the defendant is central to the event as they are the subject of the conviction.",
+            "In some cases, the defendant may be a group of people, such as 'those convicted of murder'.",
+            "Edge cases include situations where the defendant is referred to by a pronoun or a general term, such as 'he' or 'the accused'.",
+            "Examples are 'Alfred Taubman', 'offenders', 'those'."
+        ],
+        "place": [
+            "The place is the location where the conviction occurs. Examples are 'Manhattan', 'Indonesia', and 'court'.",
+            "The place provides context for the event, indicating where the judicial process took place.",
+            "In some cases, the place may be a broader region or country, such as 'Indonesia'.",
+            "Edge cases include situations where the place is implied but not explicitly mentioned, such as 'the court convicted him' where the court's location is known.",
+            "Examples are 'Manhattan', 'Indonesia', 'court'."
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "Artifact(ManufactureEvent)": {
+        "description": [
+            "The event is triggered by actions related to the creation or production of an artifact. Example triggers include 'building', 'makes', 'produce', and 'built'.",
+            "The event is characterized by the involvement of an agent who is responsible for the creation, a place where the creation occurs, and the artifact that is being created. For instance, 'Diebold no longer makes voting machines' involves 'Diebold' as the agent and 'voting machines' as the artifact.",
+            "Unlike TransportArtifact events, which involve the movement of artifacts from one place to another, Artifact events focus solely on the creation or production of artifacts. For example, 'building this Muslim complex' is an Artifact event, whereas 'bringing guns to school' is a TransportArtifact event.",
+            "Triggers such as 'building' and 'produce' are indicative of Artifact events, not events like TransportArtifact or Correspondence. For instance, 'building schools' is an Artifact event, while 'meeting with Foreign Secretary' is a Correspondence event.",
+            "The outcome of an Artifact event is the existence of a new or modified artifact, unlike events such as EndOrg, which result in the termination of an organization. For example, 'The district built a planetarium' results in a new planetarium, whereas 'the district closed almost half the schools' results in the termination of schools."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'Diebold' in 'Diebold no longer makes voting machines' and 'district' in 'The district built a planetarium'. The agent is the entity responsible for the creation or production of the artifact.",
+            "The agent is crucial as it identifies who or what is responsible for the event. For instance, 'they' in 'they've been building schools' indicates the responsible party.",
+            "In some cases, the agent may be implied or not explicitly mentioned. For example, 'production' in 'pharmaceutics production' implies an agent responsible for the production.",
+            "The agent can be an individual, group, or organization. For example, 'people' in 'Why would people bother to produce anything on time?' refers to a group of individuals.",
+            "Unlike the agent in TransportArtifact events, which moves artifacts, the agent in Artifact events creates or produces artifacts. For instance, 'STUDENTS' in 'STUDENTS can bring GUNS to school' is a TransportArtifact agent, not an Artifact agent."
+        ],
+        "artifact": [
+            "Examples are 'schools' in 'they've been building schools' and 'complex' in 'building this Muslim complex'. The artifact is the object being created or produced.",
+            "The artifact is the central focus of the event, as it is the outcome of the creation or production process. For instance, 'voting machines' in 'Diebold no longer makes voting machines' is the artifact.",
+            "Artifacts can vary widely in nature, from buildings to machines to products. For example, 'planetarium' in 'The district built a planetarium' is a specific type of artifact.",
+            "In some cases, the artifact may be implied or not explicitly mentioned. For example, 'production' in 'pharmaceutics production' implies the creation of pharmaceuticals.",
+            "Unlike artifacts in TransportArtifact events, which are moved from one place to another, artifacts in Artifact events are created or produced. For instance, 'GUNS' in 'STUDENTS can bring GUNS to school' is a TransportArtifact artifact, not an Artifact artifact."
+        ],
+        "place": [
+            "Examples are 'country' in 'they've been building schools modularly in my country' and 'NYC' in 'building this Muslim complex'. The place is the location where the creation or production occurs.",
+            "The place provides context for where the event is happening, which can be important for understanding the scope and impact of the event. For instance, 'school' in 'The district built a planetarium for this school' indicates the location of the new planetarium.",
+            "Places can range from specific locations to broader regions. For example, 'country' in 'they've been building schools modularly in my country' is a broad region, while 'school' is a specific location.",
+            "In some cases, the place may be implied or not explicitly mentioned. For example, 'production' in 'pharmaceutics production' implies a place where the production occurs.",
+            "Unlike places in TransportArtifact events, which indicate the destination of the artifact, places in Artifact events indicate where the artifact is being created or produced. For instance, 'school' in 'STUDENTS can bring GUNS to school' is a TransportArtifact place, not an Artifact place."
+        ]
+    }
+}

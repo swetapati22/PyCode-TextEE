@@ -1,0 +1,349 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Pardon which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Pardon which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> adjudicator
+Argument 2 -> defendant
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']
+
+Example 2
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+Then why is it that our political and financial elites get pardons for their crimes or their crimes aren't even investigated when a country like France doesn't have a problem putting THEIR former president on trial for corruption?
+### Event Trigger ###
+pardons
+### Event Arguments ###
+For argument "defendant" extracted spans ['elites']
+
+Example 3
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+When Ford pardoned Nixon, I think everyone believed (or at least hoped) that Nixon's pardon was a one time exception.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Ford']
+For argument "defendant" extracted spans ['Nixon']
+
+Example 4
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+When Ford pardoned Nixon, I think everyone believed (or at least hoped) that Nixon's pardon was a one time exception.
+### Event Trigger ###
+pardon
+### Event Arguments ###
+For argument "defendant" extracted spans ['Nixon']
+
+Example 5
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+He was later pardoned and freed.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['He']
+
+Example 6
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+Although they were later pardoned and freed, Chun and Roh had failed to pay the 220.5 billion won ($203 million) and 268.8 billion won ($248 million) that they were fined, respectively.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['they']
+
+Example 7
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+Although they were later pardoned and freed, Chun and Roh had failed to pay the 220.5 billion won ($203 million) and 268.8 billion won ($248 million) that they were fined.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['they']
+
+Example 8
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+At one point last year, well over 12,000 state convicts had deportation detainers on them -- meaning that as soon as they complete their sentence or are paroled they are subject to being deported, officials said.
+### Event Trigger ###
+paroled
+### Event Arguments ###
+For argument "defendant" extracted spans ['their']
+
+Example 9
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+ALBANY, N.Y. – While Christmas marks a traditional time during which governors commute the sentences of a handful of prisoners, Gov. Andrew Cuomo has granted none since taking office in 2011.
+### Event Trigger ###
+commute
+### Event Arguments ###
+For argument "defendant" extracted spans ['prisoners']
+For argument "adjudicator" extracted spans ['governors']
+
+Example 10
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+ALBANY, N.Y. – While Christmas marks a traditional time during which governors commute the sentences of a handful of prisoners, Gov. Andrew Cuomo has granted none since taking office in 2011.
+### Event Trigger ###
+granted
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Andrew Cuomo']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+“The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities that Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague to discuss the case of Julian Assange,” the spokesman said.
+### Event Trigger ###
+meet
+### Event Arguments ###
+For argument "entity" extracted spans ['Patino', 'William Hague']
+For argument "place" extracted spans ['London']
+
+Example 12
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 13
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even the IRA failed to cause as many casualties on mainland Great Britain as Pakistani trained suicide bombers did in one day.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "agent" extracted spans ['bombers']
+For argument "victim" extracted spans ['bombers']
+For argument "place" extracted spans ['mainland']
+For argument "instrument" extracted spans ['bombers']
+
+Example 14
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+The last time something like this happened that I know of; was the republican convention in New York for the renomination of Bush Jr for a second term in office.
+### Event Trigger ###
+renomination
+### Event Arguments ###
+For argument "agent" extracted spans ['republican']
+For argument "person" extracted spans ['Bush Jr']
+For argument "place" extracted spans ['New York']
+
+Example 15
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+I tried an alternative route once last year, taking Bluemound in from Goerkes Corner after meeting up with someone there, but it seemed longer and I didn't get out any quicker.
+### Event Trigger ###
+meeting
+### Event Arguments ###
+For argument "entity" extracted spans ['I', 'someone']
+For argument "place" extracted spans ['Goerkes Corner']
+
+Example 16
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot, 6 killed.
+### Event Trigger ###
+open
+### Event Arguments ###
+For argument "agent" extracted spans ['dealer']
+For argument "org" extracted spans ['store']
+For argument "place" extracted spans ['mall']
+
+Example 17
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 18
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+But it also drew protests, including at La Sapienza university, where Gadhafi was addressing a group of few hundred students.
+### Event Trigger ###
+addressing
+### Event Arguments ###
+For argument "entity" extracted spans ['Gadhafi']
+For argument "place" extracted spans ['La Sapienza university']
+For argument "audience" extracted spans ['group']
+
+Example 19
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+sentence
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 20
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+SEOUL, South Korea - State prosecutors armed with metal detectors raided the Seoul residence of former President Chun Doo-hwan on Tuesday to look for assets of the ex-military dictator who owes South Korea 167.5 billion won ($150 million) in fines but claims to be broke.
+### Event Trigger ###
+fines
+### Event Arguments ###
+For argument "entity" extracted spans ['dictator']
+For argument "place" extracted spans ['South Korea']
+
+Example 21
+#### Event Type ####
+Contact(Event)
+### Input Text ###
+(6) Obama stated in ISLAMIC COUNTRIES that the bond btw American and Israel is unshakable.
+### Event Trigger ###
+stated
+### Event Arguments ###
+For argument "entity" extracted spans ['Obama']
+For argument "place" extracted spans ['COUNTRIES']
+
+Example 22
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']
+
+Example 23
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+Employees lost their retirement savings and shareholders lost billions of dollars after the once highflying company slid into bankruptcy in 2001.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['company']
+
+Example 24
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+President Barack Obama won Iowa Catholics, about a quarter of the electorate, by what the exit polls showed was an 18-percentage-point margin.
+### Event Trigger ###
+won
+### Event Arguments ###
+For argument "person" extracted spans ['Barack Obama']
+For argument "agent" extracted spans ['Catholics']
+For argument "place" extracted spans ['Iowa']
+
+Example 25
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']

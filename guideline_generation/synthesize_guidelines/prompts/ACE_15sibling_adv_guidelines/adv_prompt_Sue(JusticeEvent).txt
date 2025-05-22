@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Sue(JusticeEvent)
+```json
+{
+    "Sue(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal actions where one party (plaintiff) initiates a lawsuit against another party (defendant). Example triggers include 'lawsuit', 'sued', 'litigation', 'action', and 'claims'.",
+            "The event is characterized by the formal process of bringing a legal case to court, typically involving a plaintiff and a defendant. It often involves seeking a legal remedy or compensation.",
+            "Unlike other JusticeEvent types such as 'Appeal' or 'Sentence', the 'Sue' event specifically involves the initiation of legal proceedings by a plaintiff against a defendant, rather than the review or outcome of a case.",
+            "Triggers such as 'appealed' or 'sentenced' are indicative of 'Appeal' or 'Sentence' events, not the 'Sue' event type. The 'Sue' event focuses on the commencement of legal action.",
+            "The outcome of a 'Sue' event is the initiation of a legal case, which may lead to further legal processes such as trials, settlements, or judgments. It does not encompass the final judgment or sentencing."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'courts', 'judge', 'jury'. The adjudicator is the entity responsible for overseeing and making decisions in the legal case.",
+            "The adjudicator plays a crucial role in ensuring the legal process is followed and in delivering a verdict or judgment.",
+            "In some cases, the adjudicator may be a specific court or judge, while in others, it may refer to a broader judicial body.",
+            "Unlike the plaintiff or defendant, the adjudicator is neutral and does not have a vested interest in the outcome of the case.",
+            "Edge cases may include situations where the adjudicator is not explicitly mentioned but can be inferred from the context, such as 'the court' or 'the judge'."
+        ],
+        "defendant": [
+            "Examples are 'Iraq', 'Crichton', 'bankers'. The defendant is the party against whom the lawsuit is filed.",
+            "The defendant is typically accused of some wrongdoing or liability and is required to respond to the plaintiff's claims.",
+            "In some cases, the defendant may be an individual, while in others, it may be an organization or government entity.",
+            "Unlike the plaintiff, the defendant is the party that must defend against the legal action and may face penalties or obligations if found liable.",
+            "Edge cases may include situations where the defendant is not explicitly named but can be inferred from the context, such as 'the accused' or 'the respondent'."
+        ],
+        "place": [
+            "Examples are 'Washington', 'United States', 'court'. The place refers to the location where the legal action is filed or takes place.",
+            "The place is important as it determines the jurisdiction and legal framework under which the case is adjudicated.",
+            "In some cases, the place may be a specific court or city, while in others, it may refer to a broader region or country.",
+            "Unlike the adjudicator or parties involved, the place is a geographical reference that provides context for the legal proceedings.",
+            "Edge cases may include situations where the place is not explicitly mentioned but can be inferred from the context, such as 'the local court' or 'the federal court'."
+        ],
+        "plaintiff": [
+            "Examples are 'relatives', 'survivors', 'Enron Corp'. The plaintiff is the party that initiates the lawsuit and seeks legal remedy or compensation.",
+            "The plaintiff is typically the party that claims to have been wronged or harmed and seeks redress through the legal system.",
+            "In some cases, the plaintiff may be an individual, while in others, it may be a group of people or an organization.",
+            "Unlike the defendant, the plaintiff is the party that brings the legal action and must provide evidence to support their claims.",
+            "Edge cases may include situations where the plaintiff is not explicitly named but can be inferred from the context, such as 'the complainant' or 'the claimant'."
+        ]
+    }
+}
+```

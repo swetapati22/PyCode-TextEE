@@ -1,0 +1,28 @@
+{
+    "BeBorn(LifeEvent)": {
+        "description": [
+            "The event is triggered by the birth of a person, indicating the beginning of their life. Example triggers include 'birth', 'born', and 'cut out'.",
+            "The event is characterized by the introduction of a new individual into the world, often specifying the person and sometimes the place of birth.",
+            "Unlike the 'Die' event type, which marks the end of life, the 'BeBorn' event type signifies the start of life. Triggers such as 'death' or 'passed away' are indicative of the 'Die' event type, not 'BeBorn'.",
+            "The 'BeBorn' event type focuses on the moment of birth and the immediate context, whereas events like 'Marry' or 'Divorce' pertain to significant life changes occurring later.",
+            "Triggers and outcomes for 'BeBorn' are distinct from 'Injure' or 'Die' events, which involve harm or death. For instance, 'wounding' or 'suicide' are not related to the 'BeBorn' event type."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'babies', 'one', 'other', 'infant', 'Hunter', 'girl'. This argument identifies the individual who is being born.",
+            "The 'person' argument is crucial as it specifies the new life being introduced. It can refer to a baby, infant, or any newly born individual.",
+            "In cases where multiple individuals are born, each can be identified separately, such as 'one' and 'other' in the context of twins or multiple births.",
+            "The 'person' argument can also include specific names or descriptors, like 'Hunter' or 'girl', to provide clarity on who is being born.",
+            "Edge cases include ambiguous references to the person being born, which should be resolved by context, such as 'child' or 'newborn'."
+        ],
+        "place": [
+            "Examples are 'home', 'New Zealand'. This argument specifies the location where the birth takes place.",
+            "The 'place' argument is important as it provides the geographical context of the birth event, which can range from a specific address to a broader location like a country.",
+            "In some instances, the place may be implied rather than explicitly stated, such as 'at her parents' home' or 'in Byrds Creek'.",
+            "The 'place' argument can also include non-traditional birth locations, like 'in a car' or 'at a hospital', to capture diverse birth scenarios.",
+            "Edge cases involve unclear or multiple locations, which should be clarified by additional context or supporting information in the text."
+        ]
+    }
+}

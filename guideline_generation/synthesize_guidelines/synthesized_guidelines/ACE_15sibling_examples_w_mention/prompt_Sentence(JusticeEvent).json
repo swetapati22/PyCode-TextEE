@@ -1,0 +1,41 @@
+{
+    "Sentence(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of a judicial authority imposing a legal penalty or punishment on an individual or group. Example triggers include 'sentenced', 'sentence', and 'sentences'.",
+            "The event is characterized by the formal declaration of a punishment by a court or judge, typically following a conviction. It involves the adjudicator (e.g., judge, court), the defendant (e.g., individual or group being sentenced), and sometimes the place where the sentencing occurs.",
+            "Unlike the Convict event, which focuses on the determination of guilt, the Sentence event specifically pertains to the imposition of a penalty or punishment. For example, 'convicted' indicates a Convict event, not a Sentence event.",
+            "Triggers such as 'sentenced' and 'sentence' are indicative of the Sentence event type, not related events like Fine or Execute, which involve specific types of penalties or actions following a conviction.",
+            "The Sentence event encompasses various forms of punishment, including imprisonment, fines, and other legal penalties. It is distinct from events like Appeal or Pardon, which involve challenging or altering the imposed sentence."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger ('mention') is the word or phrase that indicates the imposition of a legal penalty. Examples include 'sentenced', 'sentence', and 'sentences'.",
+            "The trigger must clearly indicate the act of sentencing, as opposed to related actions like convicting or charging. For instance, 'sentenced to prison' is a valid trigger, while 'convicted of a crime' is not.",
+            "Edge cases include phrases where the context implies sentencing without explicitly using the word 'sentence'. For example, 'given a prison term' can be considered a valid trigger.",
+            "Triggers should be distinguished from similar terms used in different contexts. For example, 'sentence' in 'a sentence in a book' is not a valid trigger for this event type.",
+            "Variations in tense and form, such as 'will be sentenced' or 'has been sentenced', are valid triggers as long as they indicate the act of imposing a penalty."
+        ],
+        "adjudicator": [
+            "Examples are 'judge', 'court', 'Supreme Court', and 'Appeal Court'. The adjudicator is the authority responsible for imposing the sentence.",
+            "The adjudicator must be a legal or judicial entity. For instance, 'jury' in the context of delivering a sentence is valid, but 'jury' in the context of deliberation is not.",
+            "In cases where multiple adjudicators are involved, such as 'the panel of judges', all relevant entities should be included.",
+            "The role of the adjudicator is crucial as it signifies the authority behind the sentencing decision. For example, 'the judge sentenced him' clearly identifies the adjudicator.",
+            "Edge cases include situations where the adjudicator is implied but not explicitly mentioned. For example, 'sentenced by the court' implies the adjudicator is the court."
+        ],
+        "defendant": [
+            "Examples are 'smugglers', 'billionaire', 'convict', 'Anwar Ibrahim', and 'he'. The defendant is the individual or group being sentenced.",
+            "The defendant must be the recipient of the sentence. For instance, 'the company was sentenced' identifies the company as the defendant.",
+            "In cases where the defendant is referred to by a pronoun, such as 'he' or 'they', the context must clearly indicate that the pronoun refers to the sentenced individual or group.",
+            "The role of the defendant is central to the event, as it identifies who is receiving the punishment. For example, 'the defendant was sentenced to life in prison' clearly identifies the defendant.",
+            "Edge cases include situations where the defendant is part of a larger group. For example, 'the members of the gang were sentenced' identifies the gang members as defendants."
+        ],
+        "place": [
+            "Examples are 'Indonesian', 'court', 'Malaysia', and 'Jordan'. The place is the location where the sentencing occurs.",
+            "The place must be relevant to the sentencing event. For instance, 'sentenced in New York' identifies New York as the place.",
+            "In cases where the place is implied but not explicitly mentioned, the context must clearly indicate the location. For example, 'the court sentenced him' implies the place is the court's location.",
+            "The role of the place is to provide context for where the sentencing occurs. For example, 'sentenced in the Supreme Court' clearly identifies the place.",
+            "Edge cases include situations where the place is part of a larger location. For example, 'sentenced in the federal court in Washington' identifies Washington as the place."
+        ]
+    }
+}

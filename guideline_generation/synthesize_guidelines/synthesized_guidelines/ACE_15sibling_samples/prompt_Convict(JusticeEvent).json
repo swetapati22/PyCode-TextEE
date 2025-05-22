@@ -1,0 +1,35 @@
+{
+    "Convict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the formal declaration of a defendant's guilt in a court of law. Example triggers include 'convicted', 'guilty', and 'conviction'.",
+            "The event is characterized by the legal determination that an individual has committed a crime, typically following a trial or legal proceeding.",
+            "Unlike the 'ChargeIndict' event, which involves the formal accusation of a crime, the 'Convict' event signifies the conclusion of the legal process with a guilty verdict.",
+            "Triggers such as 'charged' or 'indicted' are indicative of the 'ChargeIndict' event type, not the 'Convict' event type, which requires a final judgment of guilt.",
+            "The outcome of the 'Convict' event is the establishment of the defendant's guilt, which may lead to sentencing, unlike the 'Acquit' event, where the defendant is found not guilty."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'jury', 'judge', 'court'. The adjudicator is the entity responsible for delivering the verdict of guilt.",
+            "The adjudicator plays a crucial role in the legal process, as they are the authority that determines the outcome of the trial.",
+            "In some cases, the adjudicator may be a collective body, such as a jury, while in others, it may be an individual, such as a judge.",
+            "The adjudicator's decision is based on the evidence and arguments presented during the trial.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from the context, such as 'the court found him guilty'."
+        ],
+        "defendant": [
+            "Examples are 'Alfred Taubman', 'Five', 'those', 'offenders', 'men', 'Anwar Ibrahim', 'man', 'Ranjha Masih', 'Ayub Masih', 'his'. The defendant is the individual or group of individuals who have been found guilty of a crime.",
+            "The defendant is the central figure in the 'Convict' event, as the event revolves around their legal status.",
+            "In some cases, the defendant may be referred to by a pronoun or a general term, such as 'those convicted'.",
+            "The defendant's identity is crucial for understanding the context and implications of the conviction.",
+            "Edge cases include situations where the defendant is not explicitly named but can be inferred from the context, such as 'the man convicted of murder'."
+        ],
+        "place": [
+            "Examples are 'Manhattan', 'Indonesia', 'city', 'court'. The place is the location where the conviction occurs or is relevant to the event.",
+            "The place provides context for the legal jurisdiction and the setting of the conviction.",
+            "In some cases, the place may be a specific city or country, while in others, it may be a more general location, such as 'court'.",
+            "The place is important for understanding the legal and cultural context of the conviction.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context, such as 'the court in Sahiwal district'."
+        ]
+    }
+}

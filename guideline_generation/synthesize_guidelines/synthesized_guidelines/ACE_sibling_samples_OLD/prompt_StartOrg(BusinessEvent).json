@@ -1,0 +1,35 @@
+{
+  "StartOrg(BusinessEvent)": {
+    "description": [
+      "The event is triggered by the creation, launch, or establishment of an organization, institution, or entity. Examples of triggers include 'founded,' 'launched,' and 'forging.'",
+      "This event marks the formal initiation of an organization’s existence, often involving an agent who facilitates or announces its creation.",
+      "Unlike related events such as MergeOrg or EndOrg, which involve changes or cessation of existing organizations, StartOrg exclusively focuses on the formation or inception of new organizations.",
+      "Triggers such as 'create' or 'opening' signify the start of a new organization, whereas terms like 'merge' or 'dissolve' pertain to organizational restructuring or termination.",
+      "The event highlights the beginning of organizational activity, often including details about the entity itself (org), the initiator (agent), and optionally, the geographical location (place)."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "agent": [
+      "Examples are individuals, groups, or entities responsible for initiating or facilitating the creation of the organization, such as 'Kim Dae-Jung' or 'Daily Planet Ltd'.",
+      "Agents are often explicitly mentioned as founders, leaders, or sponsors of the new organization.",
+      "This argument highlights the entity’s originator or driving force, distinguishing StartOrg from events where the agent is not central to the organizational activity.",
+      "Unlike the org argument, which refers to the entity being created, agents represent the external actors initiating the creation process.",
+      "In cases involving multiple agents, annotate all mentioned entities contributing to the establishment of the organization."
+    ],
+    "org": [
+      "Examples are the names or descriptions of the new organizations being formed, such as 'Millennium Democratic Party' or 'Disneyland'.",
+      "The org argument represents the central entity of the event, emphasizing the organization that is coming into existence.",
+      "This argument is crucial for identifying the focal point of the event, providing clarity on what entity is being established.",
+      "Unlike agents or places, org refers specifically to the entity being created, not those facilitating or hosting the event.",
+      "Edge cases may include generic references (e.g., 'a new party'); annotate the most specific description of the organization available."
+    ],
+    "place": [
+      "Examples are geographical locations where the organization is established or announced, such as 'here' (Melbourne).",
+      "The place argument situates the creation event within a specific physical or geopolitical context, offering additional detail about the organization's origin.",
+      "Unlike the org argument, which focuses on the entity being created, place specifies the geographical setting where the event occurs.",
+      "Places are optional and may not be present if the text does not specify a location; however, they should be annotated when explicitly mentioned.",
+      "In cases with multiple locations, prioritize the location most directly tied to the creation or formal launch of the organization."
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "Injure(LifeEvent)": {
+        "description": "The 'Injure' event type is characterized by the infliction of physical harm or injury to individuals, triggered by terms such as 'wounded', 'injured', 'harm', or 'injuries'. This event involves non-fatal physical damage or pain resulting from violent actions or accidents. Unlike the 'Die' event type, which results in death, the 'Injure' event leads to varying degrees of physical injuries that do not result in death. Examples of triggers that do not apply to this event type include 'killed' or 'dead'.",
+        "attributes": {
+            "mention": "The text span that triggers the event, indicating the occurrence of physical harm or injury.",
+            "agent": "The agent is the person, entity, or force responsible for causing the injury. This can include individuals like 'attacker' or 'shooter', groups such as 'insurgents' or 'terrorists', inanimate objects or natural forces like 'falling debris' or 'earthquake', and sometimes the agent may be implied rather than explicitly stated.",
+            "instrument": "The instrument refers to the tools or means used to inflict the injury. Examples include weapons or objects like 'gun', 'knife', or 'vehicle', natural elements such as 'fire' or 'flood', and environmental factors like 'falling rocks' or 'collapsing building'. The instrument helps in understanding the nature of the injury.",
+            "place": "The place is the location where the injury occurred. It can be a specific building or area like 'mall', 'airport', 'school', or 'park', a broader geographical location such as 'city' or 'country', or implied from the context. The place provides contextual information about where the injury took place.",
+            "victim": "The victim is the individual or individuals who sustained injuries. This can include specific numbers like '20', groups such as 'people', 'children', or 'civilians', or roles like 'soldiers', 'protesters', or 'bystanders'. The description of the victim can provide insight into the severity and impact of the event, and sometimes the victim may be implied from the context."
+        }
+    }
+}

@@ -1,0 +1,98 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_ReleaseParole(JusticeEvent)
+```json
+{
+    "ReleaseParole(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of releasing an individual from custody or imprisonment, often under specific conditions such as parole. Example triggers include 'release', 'released', 'parole', and 'freed'.",
+            "The event is characterized by the transition of a person from a state of confinement to freedom, typically involving legal or administrative actions. Key characteristics include the involvement of legal authorities and the conditional nature of the release.",
+            "Unlike the 'Pardon' event, which involves forgiveness and removal of penalties, the 'ReleaseParole' event specifically involves the conditional release of a person from imprisonment. Triggers such as 'pardoned' are indicative of the 'Pardon' event, not this event type.",
+            "The 'ReleaseParole' event differs from the 'Acquit' event, where the individual is declared not guilty and freed without conditions. In 'ReleaseParole', the individual is released but still under certain conditions or supervision.",
+            "The event is not triggered by the initial act of sentencing or imprisonment but by the subsequent act of releasing the individual. Triggers such as 'sentenced' or 'imprisoned' are indicative of the 'Sentence' or 'ArrestJail' events, not this event type."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'negotiators' in the context of negotiating the release of prisoners. The entity is typically an organization or group involved in the process of securing the release.",
+            "The entity plays a crucial role in facilitating or advocating for the release. For instance, 'lawyers' or 'human rights organizations' can be entities involved in the release process.",
+            "In some cases, the entity may be a governmental body or an international organization, such as 'the United Nations' or 'the parole board'.",
+            "The entity is not the person being released but rather the group or organization that influences or decides the release. For example, 'the parole board' is an entity, not the person on parole.",
+            "Unlike the 'person' argument, the entity is not the individual who is being released but the facilitator or decision-maker in the release process."
+        ],
+        "person": [
+            "Examples are 'ramzi binalshibh', 'Anwar', and 'Pasko'. The person is the individual who is being released from custody or imprisonment.",
+            "The person is the primary subject of the release event, often identified by name or pronoun in the text. For instance, 'he' or 'she' can be used to refer to the person being released.",
+            "In some cases, the person may be referred to by a role or status, such as 'the prisoner' or 'the detainee'.",
+            "The person is the one who transitions from a state of confinement to freedom, often under specific conditions like parole. For example, 'the journalist' in 'the journalist was released on parole'.",
+            "Unlike the 'entity' argument, the person is the individual experiencing the release, not the group or organization facilitating it."
+        ],
+        "place": [
+            "Examples are 'center' in the context of a detention center where individuals are held. The place is the location from which the person is released.",
+            "The place provides context for the release event, indicating where the individual was confined. For instance, 'prison', 'detention center', or 'jail' can be places.",
+            "In some cases, the place may be a specific geographic location, such as 'Pakistan' or 'New York'.",
+            "The place is not the location where the release decision is made but where the individual was held. For example, 'the prison' in 'he was released from the prison'.",
+            "Unlike the 'person' and 'entity' arguments, the place is the physical location associated with the confinement and subsequent release of the individual."
+        ]
+    }
+}
+```

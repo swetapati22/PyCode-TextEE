@@ -1,0 +1,12 @@
+{
+    "TransportArtifact(MovementEvent)": {
+        "description": "The TransportArtifact (MovementEvent) is triggered by the movement or transportation of an artifact from one location to another. This event involves an agent who facilitates the movement, an artifact being moved, and typically includes the origin and destination locations. Unlike TransportPerson events, which involve the movement of individuals, TransportArtifact events specifically involve objects or items. Example triggers include 'bring', 'deliver', 'take', and 'pull'. The outcome of a TransportArtifact event is the successful or attempted relocation of an artifact.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity responsible for initiating or carrying out the movement of the artifact. This can be an individual, group, or organization. Examples include 'STUDENTS' in 'STUDENTS can bring GUNS to school' and 'Amtrak' in 'Amtrak are delivering it'. The agent is the active participant in the event.",
+            "artifact": "The artifact is the object or item being transported from one location to another. Examples include 'GUNS' in 'STUDENTS can bring GUNS to school' and 'the truck' in 'the truck pulled away from a cafe'. The artifact is the passive participant in the event.",
+            "destination": "The destination is the location to which the artifact is being transported. Examples include 'school' in 'STUDENTS can bring GUNS to school' and 'door' in 'it had been delivered next door'. The destination is the endpoint of the movement.",
+            "origin": "The origin is the location from which the artifact is being moved. Examples include 'cafe' in 'the truck pulled away from a cafe' and 'place' in 'relocate from one place to another'. The origin is the starting point of the movement."
+        }
+    }
+}

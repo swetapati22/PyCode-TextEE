@@ -1,0 +1,355 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Elect which is a child event type of super class PersonnelEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Elect which is a child event type of super class PersonnelEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> person
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+President Barack Obama won Iowa Catholics, about a quarter of the electorate, by what the exit polls showed was an 18-percentage-point margin.
+### Event Trigger ###
+won
+### Event Arguments ###
+For argument "person" extracted spans ['Barack Obama']
+For argument "agent" extracted spans ['Catholics']
+For argument "place" extracted spans ['Iowa']
+
+Example 2
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+The head of Diebold said his mission was to see that Bush was re-elected.
+### Event Trigger ###
+re-elected
+### Event Arguments ###
+For argument "person" extracted spans ['Bush']
+
+Example 3
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+To add to what Myriad said, I think that after the election, particularly if Obama is elected, it will be interesting to see what happens to the truth movement.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['Obama']
+
+Example 4
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Our government no longer listens to the people they were elected by.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "agent" extracted spans ['people']
+
+Example 5
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+If i was David Miliband i'd criticise him back, make a statement calling him an unelected fascist dictator and denounce the deaths of protestors as 'barbaric', then withdraw all British diplomats.
+### Event Trigger ###
+unelected
+### Event Arguments ###
+For argument "person" extracted spans ['him']
+
+Example 6
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Adrian was seen as having a fair chance to win here, but in the end he got 15% of the vote which was just over half that earnt each by Labour and the Lib Dems, the latter beating the former by just 310 votes.
+### Event Trigger ###
+win
+### Event Arguments ###
+For argument "person" extracted spans ['Adrian']
+For argument "place" extracted spans ['here']
+
+Example 7
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Hey, you seem to know you stuff, a libertarian stood in an Ealing seat, do you know how I can find out what share of the votes he got?
+### Event Trigger ###
+stood
+### Event Arguments ###
+For argument "person" extracted spans ['libertarian']
+For argument "place" extracted spans ['Ealing']
+
+Example 8
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+(Clearly he didn't win, but its still nice to see what happened.)
+### Event Trigger ###
+win
+### Event Arguments ###
+For argument "person" extracted spans ['he']
+
+Example 9
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+In Norwich south they made an 8% gain which puts them in a prime position to take it in 4 years time.
+### Event Trigger ###
+take
+### Event Arguments ###
+For argument "place" extracted spans ['Norwich south']
+
+Example 10
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+But obviously most importantly they have gained their first ever MP, Caroline Lucas in Brighton Pavilion.
+### Event Trigger ###
+gained
+### Event Arguments ###
+For argument "person" extracted spans ['Caroline Lucas']
+For argument "place" extracted spans ['Brighton']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+charged
+### Event Arguments ###
+For argument "defendant" extracted spans ['man']
+For argument "adjudicator" extracted spans ['court']
+For argument "prosecutor" extracted spans ['country']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 12
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Assange, the founder of the anti-secrecy group WikiLeaks, has been holed up for nearly a year in the tiny Ecuadorean Embassy here, stymying British attempts to extradite him to Sweden.
+### Event Trigger ###
+extradite
+### Event Arguments ###
+For argument "agent" extracted spans ['British']
+For argument "person" extracted spans ['him']
+For argument "origin" extracted spans ['Ecuadorean']
+For argument "destination" extracted spans ['Sweden']
+
+Example 13
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+But it also drew protests, including at La Sapienza university, where Gadhafi was addressing a group of few hundred students.
+### Event Trigger ###
+addressing
+### Event Arguments ###
+For argument "entity" extracted spans ['Gadhafi']
+For argument "place" extracted spans ['La Sapienza university']
+For argument "audience" extracted spans ['group']
+
+Example 14
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+And this while the country was receiving generous aid: by May of 2001, Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.
+### Event Trigger ###
+spent
+### Event Arguments ###
+For argument "giver" extracted spans ['E.U.']
+For argument "beneficiary" extracted spans ['country']
+For argument "place" extracted spans ['country']
+
+Example 15
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+sentence
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 16
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Michigan is a no-fault divorce state, so had we have been married longer or if he was laid off before our divorce, could have been responsible for spousal support.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['our']
+For argument "place" extracted spans ['Michigan']
+
+Example 17
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 18
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 19
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+“The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities that Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague to discuss the case of Julian Assange,” the spokesman said.
+### Event Trigger ###
+meet
+### Event Arguments ###
+For argument "entity" extracted spans ['Patino', 'William Hague']
+For argument "place" extracted spans ['London']
+
+Example 20
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 21
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot, 6 killed.
+### Event Trigger ###
+open
+### Event Arguments ###
+For argument "agent" extracted spans ['dealer']
+For argument "org" extracted spans ['store']
+For argument "place" extracted spans ['mall']
+
+Example 22
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']
+
+Example 23
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even the IRA failed to cause as many casualties on mainland Great Britain as Pakistani trained suicide bombers did in one day.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "agent" extracted spans ['bombers']
+For argument "victim" extracted spans ['bombers']
+For argument "place" extracted spans ['mainland']
+For argument "instrument" extracted spans ['bombers']
+
+Example 24
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']
+
+Example 25
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+I tried an alternative route once last year, taking Bluemound in from Goerkes Corner after meeting up with someone there, but it seemed longer and I didn't get out any quicker.
+### Event Trigger ###
+meeting
+### Event Arguments ###
+For argument "entity" extracted spans ['I', 'someone']
+For argument "place" extracted spans ['Goerkes Corner']

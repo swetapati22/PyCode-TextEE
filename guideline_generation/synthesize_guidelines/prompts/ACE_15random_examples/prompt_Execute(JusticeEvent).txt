@@ -1,0 +1,356 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Execute which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Execute which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> person
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+lawyers in texas are trying to keep their client from becoming the 300th person executed in the state since 1982, when texas resumed capital punishment.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['person']
+For argument "place" extracted spans ['state']
+For argument "agent" extracted spans ['texas']
+
+Example 2
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+Indonesia will delay the execution of six convicts including an Indian on death row after five of them appealed to the Supreme Court for a second review, prosecutors said Thursday.
+### Event Trigger ###
+execution
+### Event Arguments ###
+For argument "agent" extracted spans ['Indonesia']
+For argument "person" extracted spans ['convicts']
+
+Example 3
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+"If we execute them now we can't bring them to life again should their appeals for a review be granted," said Antasari Azhar, spokesman for the attorney general's office.
+### Event Trigger ###
+execute
+### Event Arguments ###
+For argument "agent" extracted spans ['we']
+For argument "person" extracted spans ['them']
+
+Example 4
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+President Megawati Sukarnoputri has refused clemency for the six and asked for a speedy execution.
+### Event Trigger ###
+execution
+### Event Arguments ###
+For argument "person" extracted spans ['six']
+
+Example 5
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+Use of the death penalty is rare in Indonesia, where the last execution was carried out in May 2001 of two men convicted of a murder in 1989.
+### Event Trigger ###
+execution
+### Event Arguments ###
+For argument "person" extracted spans ['men']
+For argument "place" extracted spans ['Indonesia']
+
+Example 6
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+Blasphemy is punishable by death under the Pakistan Penal Code.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['Pakistan']
+
+Example 7
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+However, no blasphemy convict has ever been executed in the country.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['convict']
+For argument "place" extracted spans ['country']
+
+Example 8
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+McVeigh was executed in 2001, and Nichols is serving a life sentence.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['McVeigh']
+
+Example 9
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+they're asking the supreme court to block tonight's scheduled execution of delma banks.
+### Event Trigger ###
+execution
+### Event Arguments ###
+For argument "person" extracted spans ['delma banks']
+
+Example 10
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+he'd be the 11th killer put to death in texas this year.
+### Event Trigger ###
+put to death
+### Event Arguments ###
+For argument "person" extracted spans ['he', 'killer']
+For argument "place" extracted spans ['texas']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+The waiver of extradition that she signed simply means that if she skips out and goes to another state, she can't contest the right of the original court to have her hauled back to its jurisdiction, and that the court won't have to initiate the time-consuming process of extraditing her.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['she']
+For argument "origin" extracted spans ['state']
+For argument "destination" extracted spans ['jurisdiction']
+For argument "agent" extracted spans ['court']
+
+Example 12
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+Kristin Scott, the mother, told police she gave birth secretly to both babies at her parents' home in Byrds Creek, Richland County, one of unknown sex in April 2001 and the other, a fullterm girl, January 14.
+### Event Trigger ###
+birth
+### Event Arguments ###
+For argument "person" extracted spans ['babies', 'one', 'other']
+For argument "place" extracted spans ['home']
+
+Example 13
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+But after spending 40 days in prison, Jordan's King Abdullah II pardoned the former legislator known for her harsh criticism of the state.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['legislator']
+For argument "place" extracted spans ['Jordan']
+For argument "adjudicator" extracted spans ['Abdullah II']
+
+Example 14
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['bomber']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 15
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In December 2001, a Manhattan jury convicted Sotheby's main shareholder and former chairman Alfred Taubman of entering into a price-fixing agreement with Christie's.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Alfred Taubman']
+For argument "place" extracted spans ['Manhattan']
+For argument "adjudicator" extracted spans ['jury']
+
+Example 16
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange, plans to follow up its May Day launching by opening a "sex Disneyland" here, the Melbourne-based bordello announced Wednesday.
+### Event Trigger ###
+opening
+### Event Arguments ###
+For argument "org" extracted spans ['Disneyland']
+For argument "agent" extracted spans ['Daily Planet Ltd']
+For argument "place" extracted spans ['here']
+
+Example 17
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+negotiators say he demanded the release of four prisoners, including ramzi binalshibh, a september 11th suspect apprehended last year in pakistan.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "person" extracted spans ['ramzi binalshibh']
+For argument "entity" extracted spans ['negotiators']
+
+Example 18
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+Indonesia will delay the execution of six convicts including an Indian on death row after five of them appealed to the Supreme Court for a second review, prosecutors said Thursday.
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "place" extracted spans ['Indonesia']
+For argument "adjudicator" extracted spans ['Supreme Court']
+For argument "plaintiff" extracted spans ['five']
+
+Example 19
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+Some 70 people were arrested Saturday as demonstrators clashed with police at the end of a major peace rally here, as at least 200,000 anti-war protesters took to the streets across the United States and Canada.
+### Event Trigger ###
+rally
+### Event Arguments ###
+For argument "place" extracted spans ['here']
+For argument "entity" extracted spans ['protesters']
+
+Example 20
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+The Pakistani supreme court last year aquitted Ayub Masih, who had denied uttering any word against Islam or the Prophet Mohammad.
+### Event Trigger ###
+aquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Ayub Masih']
+For argument "adjudicator" extracted spans ['court']
+
+Example 21
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Hunter, 34, filed for divorce in Los Angeles Superior Court, citing irreconcilable differences with the 58-year-old rock star to whom she has been married for nearly 13 years.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['Hunter', 'star']
+For argument "place" extracted spans ['Los Angeles']
+
+Example 22
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Everyone has heard the story: Beatriz Marinello was elected USCF President on August 11, 2003 in Los Angeles.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['Beatriz Marinello']
+For argument "place" extracted spans ['Los Angeles']
+For argument "entity" extracted spans ['USCF']
+
+Example 23
+#### Event Type ####
+Attack(ConflictEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+killed
+### Event Arguments ###
+For argument "attacker" extracted spans ['mob']
+For argument "place" extracted spans ['area']
+For argument "target" extracted spans ['them']
+For argument "instrument" extracted spans ['machetes', 'spears']
+
+Example 24
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+In a verdict handed down on Saturday, the judge also ordered Ranjha to pay a fine of 50,000 rupees (about 870 US dollars), they said.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['Ranjha']
+For argument "adjudicator" extracted spans ['judge']
+
+Example 25
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "place" extracted spans ['united states']
+For argument "org" extracted spans ['worldcom']

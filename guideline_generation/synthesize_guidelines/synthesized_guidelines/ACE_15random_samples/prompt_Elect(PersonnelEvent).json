@@ -1,0 +1,35 @@
+{
+    "Elect(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the act of selecting or appointing someone to a position or office through a voting process. Example triggers include 'elected', 're-election', 'elections', and 'by-elections'.",
+            "The event is characterized by the involvement of a person or entity being chosen for a role, often in a political or organizational context. Key characteristics include the formal process of voting and the announcement of results.",
+            "Unlike other PersonnelEvents such as 'StartPosition', the Elect event specifically involves a voting process rather than an appointment or hiring decision. For example, 'elected' indicates a voting process, whereas 'appointed' would indicate a different event type.",
+            "Triggers such as 'elected' and 're-election' are indicative of the Elect event type, not events like 'Injure' or 'Sentence', which involve different contexts and outcomes.",
+            "The outcome of the Elect event is the selection of a person or entity for a specific role or position, distinguishing it from events like 'MergeOrg' or 'TransferOwnership', which involve organizational changes or asset transfers rather than personnel selection."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'USCF' in 'Beatriz Marinello was elected USCF President'. The entity represents the organization or group for which the election is taking place.",
+            "The entity is crucial as it provides context to the election, indicating the scope and relevance of the position being filled. For instance, 'USCF' specifies the organization involved.",
+            "In cases where the entity is not explicitly mentioned, the context of the election can often be inferred from surrounding text. For example, 'elected President' implies an entity even if not directly stated.",
+            "Unlike the 'person' argument, which identifies the individual elected, the 'entity' argument identifies the organization or group associated with the election.",
+            "Edge cases may include elections for informal or ad-hoc groups where the entity is not a formal organization. In such cases, the entity can be described based on the context provided in the text."
+        ],
+        "person": [
+            "Examples are 'Beatriz Marinello' in 'Beatriz Marinello was elected USCF President'. The person represents the individual who is being elected.",
+            "The person argument is essential as it identifies the individual who has been chosen through the election process. For instance, 'Putin' in 'Putin will face re-election'.",
+            "In some cases, the person may be referred to indirectly or by a pronoun, such as 'you' in 'You won't be directly elected'.",
+            "Unlike the 'entity' argument, which identifies the organization, the 'person' argument focuses on the individual who is the subject of the election.",
+            "Edge cases may include elections where multiple individuals are elected simultaneously. In such cases, each person should be identified separately if possible."
+        ],
+        "place": [
+            "Examples are 'Los Angeles' in 'Beatriz Marinello was elected USCF President in Los Angeles'. The place represents the location where the election takes place.",
+            "The place argument provides geographical context to the election, indicating where the event occurred. For instance, 'Iraq' in 'elections in Iraq'.",
+            "In some cases, the place may be implied rather than explicitly stated, such as 'elections' in a text primarily discussing a specific country or city.",
+            "Unlike the 'entity' and 'person' arguments, which identify the participants in the election, the 'place' argument identifies the location of the event.",
+            "Edge cases may include virtual or online elections where the physical location is not relevant. In such cases, the place argument may be omitted or described as 'online' or 'virtual'."
+        ]
+    }
+}

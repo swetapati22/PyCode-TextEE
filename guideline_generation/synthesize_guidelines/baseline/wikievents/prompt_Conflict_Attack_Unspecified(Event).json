@@ -1,0 +1,42 @@
+{
+    "Conflict_Attack_Unspecified(Event)": {
+        "description": [
+            "The event type 'Conflict_Attack_Unspecified' refers to any instance where an attack or conflict occurs without a specified nature or type. The event can be triggered by words such as 'attack', 'conflict', 'assault', 'strike', 'raid', etc. The event can involve various actors, targets, instruments, and locations. It is important to note that the attack does not need to be physical; it can also be verbal or cyber in nature.",
+            "Conflict_Attack_Unspecified events are characterized by an aggressive action taken by one party against another. This can include physical violence, verbal assaults, or other forms of aggression. The event can be triggered by terms like 'attack', 'assault', 'conflict', 'strike', and similar words. The context of the event should indicate an aggressive action.",
+            "An event of type 'Conflict_Attack_Unspecified' involves an act of aggression or conflict that is not specifically categorized. Triggers for this event include words like 'attack', 'conflict', 'assault', 'raid', etc. The event can occur in various contexts, including physical, verbal, or cyber environments. The key aspect is the presence of an aggressive action.",
+            "The 'Conflict_Attack_Unspecified' event type captures any form of attack or conflict that lacks a specific classification. This event can be triggered by terms such as 'attack', 'conflict', 'assault', 'strike', and others. The event encompasses a wide range of aggressive actions, whether physical, verbal, or cyber, and involves different actors, targets, and locations.",
+            "Conflict_Attack_Unspecified refers to any aggressive action or conflict that is not specifically defined. Triggers for this event include words like 'attack', 'conflict', 'assault', 'raid', etc. The event can involve various forms of aggression, including physical, verbal, or cyber, and can occur in different contexts. The key element is the presence of an aggressive action."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "attacker": [
+            "The 'attacker' argument refers to the individual or group initiating the aggressive action. Examples are 'man', 'sons', 'suspects', 'insurgents', 'police'. The attacker is the entity responsible for carrying out the attack or conflict.",
+            "In the context of a Conflict_Attack_Unspecified event, the 'attacker' is the person or group that performs the aggressive action. Examples are 'man', 'sons', 'suspects', 'insurgents', 'police'. The attacker is the one who initiates the conflict or attack.",
+            "The 'attacker' argument identifies the entity that is responsible for the aggressive action in a Conflict_Attack_Unspecified event. Examples are 'man', 'sons', 'suspects', 'insurgents', 'police'. This can be an individual or a group that carries out the attack.",
+            "For a Conflict_Attack_Unspecified event, the 'attacker' is the person or group that initiates the aggressive action. Examples are 'man', 'sons', 'suspects', 'insurgents', 'police'. The attacker is the entity that performs the attack or conflict.",
+            "The 'attacker' in a Conflict_Attack_Unspecified event is the individual or group that carries out the aggressive action. Examples are 'man', 'sons', 'suspects', 'insurgents', 'police'. The attacker is the one who initiates the conflict or attack."
+        ],
+        "instrument": [
+            "The 'instrument' argument refers to the tool or weapon used by the attacker to carry out the aggressive action. Examples are 'machete', 'grenades', 'tear gas'. The instrument is the means by which the attack is executed.",
+            "In a Conflict_Attack_Unspecified event, the 'instrument' is the object or tool used by the attacker to perform the aggressive action. Examples are 'machete', 'grenades', 'tear gas'. The instrument is what the attacker uses to carry out the attack.",
+            "The 'instrument' argument identifies the tool or weapon used in the aggressive action of a Conflict_Attack_Unspecified event. Examples are 'machete', 'grenades', 'tear gas'. The instrument is the means through which the attack is conducted.",
+            "For a Conflict_Attack_Unspecified event, the 'instrument' is the tool or weapon utilized by the attacker to execute the aggressive action. Examples are 'machete', 'grenades', 'tear gas'. The instrument is what the attacker uses to carry out the attack.",
+            "The 'instrument' in a Conflict_Attack_Unspecified event refers to the object or tool used by the attacker to perform the aggressive action. Examples are 'machete', 'grenades', 'tear gas'. The instrument is the means by which the attack is executed."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the aggressive action takes place. Examples are 'mall', 'Times Square', 'Watertown'. The place is the physical setting of the attack or conflict.",
+            "In a Conflict_Attack_Unspecified event, the 'place' is the location where the aggressive action occurs. Examples are 'mall', 'Times Square', 'Watertown'. The place is the site of the attack or conflict.",
+            "The 'place' argument identifies the location of the aggressive action in a Conflict_Attack_Unspecified event. Examples are 'mall', 'Times Square', 'Watertown'. The place is where the attack or conflict takes place.",
+            "For a Conflict_Attack_Unspecified event, the 'place' is the location where the aggressive action happens. Examples are 'mall', 'Times Square', 'Watertown'. The place is the physical setting of the attack or conflict.",
+            "The 'place' in a Conflict_Attack_Unspecified event refers to the location where the aggressive action takes place. Examples are 'mall', 'Times Square', 'Watertown'. The place is the site of the attack or conflict."
+        ],
+        "target": [
+            "The 'target' argument refers to the individual or entity that is the recipient of the aggressive action. Examples are 'soldiers', 'Times Square', 'Russia', 'consulate', 'boat'. The target is the entity that is attacked or affected by the conflict.",
+            "In a Conflict_Attack_Unspecified event, the 'target' is the person or entity that the aggressive action is directed towards. Examples are 'soldiers', 'Times Square', 'Russia', 'consulate', 'boat'. The target is the recipient of the attack.",
+            "The 'target' argument identifies the individual or entity that is affected by the aggressive action in a Conflict_Attack_Unspecified event. Examples are 'soldiers', 'Times Square', 'Russia', 'consulate', 'boat'. The target is the entity that is attacked.",
+            "For a Conflict_Attack_Unspecified event, the 'target' is the person or entity that the aggressive action is aimed at. Examples are 'soldiers', 'Times Square', 'Russia', 'consulate', 'boat'. The target is the recipient of the attack.",
+            "The 'target' in a Conflict_Attack_Unspecified event refers to the individual or entity that is the recipient of the aggressive action. Examples are 'soldiers', 'Times Square', 'Russia', 'consulate', 'boat'. The target is the entity that is attacked or affected by the conflict."
+        ]
+    }
+}

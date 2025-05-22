@@ -1,0 +1,62 @@
+{
+    "Attack(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions or incidents where one party inflicts harm or damage on another, often involving physical violence or destruction. Example triggers include 'killed', 'raping', 'drugging', 'blast', 'tore', and 'explosion'.",
+            "The event is characterized by the presence of an aggressor (attacker) and a recipient of the aggression (victim or target), and may involve the use of instruments or weapons. Unlike a 'Die' event, which focuses on the outcome of death, an 'Attack' event emphasizes the act of aggression itself.",
+            "The scope of the event includes any form of physical assault, bombing, shooting, or similar violent actions. It does not include non-violent conflicts or verbal altercations, which are covered under different event types.",
+            "Triggers and outcomes for 'Attack' events differ from 'JusticeEvent' types like 'Convict' or 'Sentence', which involve legal proceedings and judgments rather than acts of violence.",
+            "Unlike 'MovementEvent' types such as 'Transport', which involve the movement of people or goods, 'Attack' events focus on the act of aggression and its immediate impact on the victims and surroundings."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the specific word or phrase that indicates the occurrence of the attack. Examples include 'killed', 'raping', 'drugging', 'blast', 'tore', and 'explosion'.",
+            "Triggers must clearly denote an act of violence or aggression. For instance, 'killed' in 'The mob killed them' is a valid trigger, while 'appealed' in 'They appealed the decision' is not.",
+            "Edge cases include words that might imply violence but are used metaphorically. For example, 'bombed' in 'He bombed the test' is not a valid trigger for an 'Attack' event.",
+            "Triggers should be distinguished from related event types by their context. 'Explosion' in 'A bomb explosion' is valid, while 'explosion of ideas' is not.",
+            "Variations in triggers can include different forms of the same verb or synonyms. 'Shooting' and 'shot' both serve as valid triggers for an 'Attack' event."
+        ],
+        "agent": [
+            "Examples are the entity that initiates or carries out the attack. This can be an individual, group, or organization. For instance, 'mob' in 'The mob killed them' is the agent.",
+            "The agent is crucial for identifying the perpetrator of the attack. In 'Luster raped the women', 'Luster' is the agent.",
+            "In cases where the agent is not explicitly mentioned, context can help infer the agent. For example, 'A bomb exploded' implies an unknown agent.",
+            "The agent can be a collective entity, such as 'terrorists' or 'military forces'.",
+            "Unlike 'JusticeEvent' types where the agent might be a legal authority, in 'Attack' events, the agent is the aggressor."
+        ],
+        "attacker": [
+            "Examples are the specific individual or group that directly performs the attack. For instance, 'mob' in 'The mob killed them' is the attacker.",
+            "The attacker is often synonymous with the agent but focuses more on the direct perpetrator. In 'The terrorists bombed the building', 'terrorists' is the attacker.",
+            "In some cases, the attacker might be a subset of the agent. For example, 'A member of the gang shot the victim' - 'member' is the attacker.",
+            "The attacker can be an individual or a group, such as 'soldier' or 'rebels'.",
+            "Unlike 'MovementEvent' types where the entity might be a traveler, in 'Attack' events, the attacker is the one causing harm."
+        ],
+        "instrument": [
+            "Examples are the tools or weapons used to carry out the attack. For instance, 'machetes' and 'spears' in 'killed them with machetes and spears' are instruments.",
+            "The instrument is important for understanding the means of the attack. In 'A bomb exploded', 'bomb' is the instrument.",
+            "In cases where the instrument is not explicitly mentioned, it can sometimes be inferred from context. For example, 'He was shot' implies a gun as the instrument.",
+            "The instrument can be any object used to inflict harm, such as 'knife', 'gun', 'explosive', etc.",
+            "Unlike 'JusticeEvent' types where the instrument might be a legal tool (e.g., 'evidence'), in 'Attack' events, the instrument is a weapon or harmful object."
+        ],
+        "place": [
+            "Examples are the location where the attack occurs. For instance, 'area' in 'fleeing the area' is the place.",
+            "The place is crucial for situating the event geographically. In 'The bomb exploded at the airport', 'airport' is the place.",
+            "In cases where the place is not explicitly mentioned, it can sometimes be inferred from context. For example, 'A shooting occurred' might imply a public place.",
+            "The place can be a specific location, such as 'city', 'building', 'street', etc.",
+            "Unlike 'MovementEvent' types where the place might be a destination or origin, in 'Attack' events, the place is where the violence happens."
+        ],
+        "target": [
+            "Examples are the entity or object that is the focus of the attack. For instance, 'them' in 'killed them' is the target.",
+            "The target is important for identifying who or what is being attacked. In 'The bomb hit the terminal', 'terminal' is the target.",
+            "In cases where the target is not explicitly mentioned, it can sometimes be inferred from context. For example, 'He was attacked' implies the person as the target.",
+            "The target can be an individual, group, or object, such as 'person', 'building', 'vehicle', etc.",
+            "Unlike 'JusticeEvent' types where the target might be a legal entity (e.g., 'defendant'), in 'Attack' events, the target is the victim or object of aggression."
+        ],
+        "victim": [
+            "Examples are the individuals or groups who suffer harm or injury from the attack. For instance, 'women' in 'raping and drugging three women' are the victims.",
+            "The victim is crucial for identifying those affected by the attack. In '19 people were killed', 'people' are the victims.",
+            "In cases where the victim is not explicitly mentioned, it can sometimes be inferred from context. For example, 'A bomb exploded' might imply casualties.",
+            "The victim can be an individual or a group, such as 'person', 'crowd', 'civilians', etc.",
+            "Unlike 'JusticeEvent' types where the victim might be a legal party (e.g., 'plaintiff'), in 'Attack' events, the victim is the one harmed by the aggression."
+        ]
+    }
+}

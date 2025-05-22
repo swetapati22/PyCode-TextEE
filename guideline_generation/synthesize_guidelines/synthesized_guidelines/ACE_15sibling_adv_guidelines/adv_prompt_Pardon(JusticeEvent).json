@@ -1,0 +1,11 @@
+{
+    "Pardon(JusticeEvent)": {
+        "description": "A Pardon event in the justice system is triggered by an official act of forgiving or excusing a person from a legal penalty or punishment. This event involves an adjudicator with the authority to grant the pardon and a defendant who is the recipient. The event is distinct from other justice events like 'ChargeIndict' or 'Execute', as it focuses on the removal or reduction of legal penalties rather than the imposition or execution of them. Example triggers include terms like 'pardoned', 'cleared', and 'forgave'. The outcome of a Pardon event is the alleviation of legal consequences for the defendant.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the authority figure or body that grants the pardon, such as a judge, monarch, or official board. Examples include 'King Abdullah II', 'court', and 'board of pardon and paroles'. The adjudicator's decision is final and authoritative, distinguishing it from advisory roles in other justice events.",
+            "defendant": "The defendant is the person who is being pardoned, typically someone who has been convicted or accused of a crime. Examples include 'legislator', 'their', and 'client'. The defendant is the central figure in the pardon event, receiving the forgiveness or legal relief. Edge cases may involve groups of people, such as 'prisoners' or 'convicts'.",
+            "place": "The place is the location where the pardon is granted or takes effect, providing context for jurisdiction and legal authority. Examples include 'Jordan', 'court', and 'state'. The place can be a specific country, state, or institution where the legal authority resides. Edge cases may involve inferred locations from the context, such as 'the court' or 'the board'."
+        }
+    }
+}

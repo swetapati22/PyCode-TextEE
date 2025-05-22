@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Execute(JusticeEvent)
+```json
+{
+    "Execute(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of carrying out a death sentence on an individual, typically as a result of a legal or judicial process. Example triggers include 'execute', 'executed', 'death penalty', and 'killing'.",
+            "The event is characterized by the finality of the action, where the individual is deprived of life as a form of punishment. This distinguishes it from other JusticeEvents like 'ArrestJail' or 'Sentence', which do not result in death.",
+            "Unlike 'Convict' or 'Sentence', the 'Execute' event specifically involves the act of putting someone to death, rather than the legal process leading up to it. Triggers such as 'convicted' or 'sentenced' are indicative of those events, not this event type.",
+            "The scope of the event includes the agent responsible for carrying out the execution, the person being executed, and the place where the execution occurs. This helps in identifying the key participants and location involved in the event.",
+            "The outcome of the 'Execute' event is the death of the individual, which is a definitive and irreversible action. This is in contrast to events like 'ReleaseParole' or 'Pardon', where the individual is granted freedom or absolution."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'court', 'state', 'government', 'Attorney', 'China'. The agent is the entity responsible for carrying out the execution. This could be a legal body, government authority, or any official entity.",
+            "The agent plays a crucial role as it signifies the authority under which the execution is being carried out. For instance, 'court' in 'A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death' indicates the judicial authority.",
+            "In some cases, the agent may be implicit or not explicitly mentioned, but inferred from the context. For example, 'They were executed for murder' implies a judicial or governmental authority.",
+            "The agent is important for understanding the legitimacy and context of the execution. For example, 'China Executes Nine Uighurs' indicates a state-sanctioned action.",
+            "Edge cases include scenarios where the agent is a collective entity or an individual acting on behalf of an authority, such as 'Attorney' in '3.5% of persons whom the Attorney General has attempted to execute'."
+        ],
+        "person": [
+            "Examples are 'man', 'criminal', 'Uighurs', 'They', 'people', '3.5%'. The person is the individual or group of individuals who are being executed.",
+            "The person is the central figure in the event, as the execution is being carried out on them. For instance, 'man' in 'A man in Afghanistan is being prosecuted' is the individual facing execution.",
+            "In some cases, the person may be a group, such as 'Uighurs' in 'China Executes Nine Uighurs', indicating multiple individuals being executed.",
+            "The person can also be referred to in a general sense, such as 'people' in 'Innocent people are on death row and have been executed', indicating a broader group without specific names.",
+            "Edge cases include scenarios where the person is referred to by a percentage or a non-specific term, such as '3.5%' in '3.5% of persons whom the Attorney General has attempted to execute'."
+        ],
+        "place": [
+            "Examples are 'Afghanistan', 'Saudi Arabia', 'Kabul', 'Xinjiang', 'Massachusetts'. The place is the location where the execution takes place.",
+            "The place provides context and geographical information about where the execution is occurring. For instance, 'Afghanistan' in 'A man in Afghanistan is being prosecuted' indicates the country where the event is happening.",
+            "In some cases, the place may be a specific city or region, such as 'Kabul' in 'A man in Afghanistan is being prosecuted in a Kabul court'.",
+            "The place can also be a broader region or country, such as 'Saudi Arabia' in 'a man cannot be executed for killing his children or wife, but can face the death penalty for leaving Islam'.",
+            "Edge cases include scenarios where the place is not explicitly mentioned but can be inferred from the context, such as 'Innocent people are on death row and have been executed' where the place might be inferred from the broader context of the text."
+        ]
+    }
+}
+```

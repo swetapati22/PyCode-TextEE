@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Divorce(LifeEvent)
+```json
+{
+    "Divorce(LifeEvent)": {
+        "description": [
+            "The event is triggered by any mention or implication of a legal or customary termination of a marriage. This can include terms like 'divorce', 'divorced', 'separated', and 'Talaq'.",
+            "The event is indicated by contexts where the dissolution of a marriage is discussed, regardless of the specifics of the legal system or cultural practice. This includes both no-fault and fault-based divorce scenarios.",
+            "The event encompasses situations where parties involved are either planning, undergoing, or have completed the process of ending their marriage. This can be inferred from terms and phrases related to the legal proceedings or personal declarations of divorce.",
+            "Unlike related life events such as marriage (Marry) or being born (BeBorn), this event does not celebrate a beginning but rather marks an end or separation, highlighted by triggers specific to ending a relationship.",
+            "The event does not include broader family disputes or domestic violence unless specifically mentioned in the context of terminating a marriage, distinguishing it from other LifeEvent types like Injure or Die."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are phrases or nouns that identify the individuals directly involved or affected by the divorce, such as 'my ex', 'parents', 'they', or specific identifiers like 'Person B'.",
+            "The 'person' argument captures all parties whose marital status is changing as a result of the event, which could be a single individual or multiple people depending on the context.",
+            "In cases where generic or possessive pronouns are used (e.g., 'our', 'your'), the 'person' argument associates these with the individuals involved in the divorce discussed in the text.",
+            "Ambiguities in identifying 'person' can arise in complex familial relationships; therefore, context is key in determining whether siblings, parents, or extended family are the subjects when the term 'parents' or similar plural possessives are used.",
+            "This argument does not include individuals mentioned as peripheral to the event (e.g., lawyers, friends) unless they are explicitly stated to be undergoing the divorce themselves."
+        ],
+        "place": [
+            "Examples are geographic or jurisdictional mentions relevant to where the divorce takes place or is recognized, such as 'Michigan' in the context of a no-fault divorce state.",
+            "The 'place' argument helps to contextualize the divorce by indicating specific locations that may influence the proceedings or outcome, highlighting legal and cultural variations.",
+            "Annotations should capture specific place names mentioned in the same sentence or clause as the divorce event to accurately tie the legal or cultural setting to the event.",
+            "When a place is mentioned in the context of the narrative background rather than directly linked to the event of divorce, it should not be annotated as part of the 'place' argument.",
+            "Unlike events like Marry or BeBorn, where the place might symbolize a venue or birthplace, in Divorce, the place relates specifically to legal jurisdictions or the residence of the parties involved."
+        ]
+    }
+}
+```

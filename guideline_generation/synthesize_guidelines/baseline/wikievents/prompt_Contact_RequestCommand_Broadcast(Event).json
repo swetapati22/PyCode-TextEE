@@ -1,0 +1,28 @@
+{
+    "Contact_RequestCommand_Broadcast(Event)": {
+        "description": [
+            "The event type 'Contact_RequestCommand_Broadcast' involves a situation where a communicator issues a request, command, or broadcast to a recipient. The event can be triggered by verbs such as 'called', 'announced', 'appealed', 'urged', and 'ordered'. This event type captures the act of communication where one party is directing or requesting something from another party.",
+            "The event type 'Contact_RequestCommand_Broadcast' refers to instances where a communicator makes a request, command, or broadcast to a recipient. The event can be triggered by phrases like 'asked', 'demanded', 'requested', 'instructed', and 'broadcasted'. This event is characterized by the transmission of information or directives from one entity to another.",
+            "The event type 'Contact_RequestCommand_Broadcast' is defined as an occurrence where a communicator issues a directive, request, or broadcast to a recipient. The event can be triggered by words such as 'implored', 'directed', 'commanded', 'broadcasted', and 'requested'. This event captures the act of one party communicating a specific message or instruction to another party.",
+            "The event type 'Contact_RequestCommand_Broadcast' involves a scenario where a communicator sends out a request, command, or broadcast to a recipient. The event can be triggered by terms like 'pleaded', 'instructed', 'commanded', 'broadcasted', and 'requested'. This event type focuses on the act of communication where one entity is conveying a message or directive to another.",
+            "The event type 'Contact_RequestCommand_Broadcast' pertains to situations where a communicator makes a request, command, or broadcast to a recipient. The event can be triggered by expressions such as 'urged', 'appealed', 'ordered', 'broadcasted', and 'requested'. This event captures the act of one party issuing a communication to another party, often with a specific intent or directive."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "communicator": [
+            "The 'communicator' argument refers to the entity that is issuing the request, command, or broadcast. Examples are 'Maduro', 'government', 'Maithripala Sirisena', 'Police', and 'U.S. State Department'. This argument identifies who is initiating the communication.",
+            "The 'communicator' argument is the entity responsible for making the request, command, or broadcast. Examples are 'President', 'Prime Minister', 'organization', 'agency', and 'official'. This argument specifies the source of the communication.",
+            "The 'communicator' argument denotes the party that is sending out the request, command, or broadcast. Examples are 'leader', 'authority', 'spokesperson', 'department', and 'committee'. This argument highlights the originator of the communication.",
+            "The 'communicator' argument identifies the entity that is communicating the request, command, or broadcast. Examples are 'individual', 'group', 'institution', 'administration', and 'council'. This argument points to who is delivering the message.",
+            "The 'communicator' argument represents the source of the request, command, or broadcast. Examples are 'head of state', 'government body', 'military', 'police force', and 'agency'. This argument clarifies who is making the communication."
+        ],
+        "recipient": [
+            "The 'recipient' argument refers to the entity that is receiving the request, command, or broadcast. Examples are 'Donald Trump', 'people', 'American', 'citizens', and 'public'. This argument identifies who is the target of the communication.",
+            "The 'recipient' argument is the entity to whom the request, command, or broadcast is directed. Examples are 'audience', 'nation', 'community', 'employees', and 'residents'. This argument specifies who is intended to receive the communication.",
+            "The 'recipient' argument denotes the party that is the intended receiver of the request, command, or broadcast. Examples are 'officials', 'members', 'participants', 'viewers', and 'listeners'. This argument highlights who is being addressed by the communication.",
+            "The 'recipient' argument identifies the entity that is the target of the request, command, or broadcast. Examples are 'voters', 'subordinates', 'followers', 'attendees', and 'readers'. This argument points to who is supposed to act on or respond to the communication.",
+            "The 'recipient' argument represents the entity that is meant to receive the request, command, or broadcast. Examples are 'staff', 'military personnel', 'students', 'inhabitants', and 'supporters'. This argument clarifies who is the intended audience of the communication."
+        ]
+    }
+}

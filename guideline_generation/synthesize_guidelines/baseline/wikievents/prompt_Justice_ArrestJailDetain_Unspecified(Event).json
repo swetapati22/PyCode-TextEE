@@ -1,0 +1,35 @@
+{
+    "Justice_ArrestJailDetain_Unspecified(Event)": {
+        "description": [
+            "The event 'Justice_ArrestJailDetain_Unspecified' refers to the act of apprehending, jailing, or detaining an individual without specifying the exact nature of the justice-related action. The event can be triggered by words such as 'arrested', 'detained', 'taken into custody', 'jailed', or similar terms. This event involves the capture or confinement of a person by authorities, typically in response to a suspected crime or legal violation.",
+            "The event 'Justice_ArrestJailDetain_Unspecified' encompasses actions where an individual is apprehended, jailed, or detained by authorities. The event can be triggered by terms like 'arrested', 'detained', 'taken into custody', 'jailed', etc. It signifies the act of taking someone into legal custody, often due to alleged criminal activities.",
+            "The 'Justice_ArrestJailDetain_Unspecified' event type involves the apprehension, jailing, or detention of an individual by law enforcement or other authorities. The event can be triggered by phrases such as 'arrested', 'detained', 'taken into custody', 'jailed', and similar expressions. This event indicates that a person has been taken into custody for legal reasons.",
+            "The 'Justice_ArrestJailDetain_Unspecified' event refers to the act of arresting, jailing, or detaining an individual by authorities. The event can be triggered by words like 'arrested', 'detained', 'taken into custody', 'jailed', etc. It involves the legal capture or confinement of a person, usually in response to a suspected crime.",
+            "The event 'Justice_ArrestJailDetain_Unspecified' pertains to the apprehension, jailing, or detention of an individual by law enforcement or other authorities. The event can be triggered by terms such as 'arrested', 'detained', 'taken into custody', 'jailed', and similar phrases. This event signifies that a person has been taken into legal custody, typically due to alleged criminal conduct."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "detainee": [
+            "The 'detainee' argument refers to the individual who is being apprehended, jailed, or detained. Examples are 'He', 'Rahami', 'suspect', 'Ahmad Khan Rahami', 'Bilal'. This argument identifies the person who is the subject of the arrest, jailing, or detention.",
+            "The 'detainee' argument represents the person who is being taken into custody by authorities. Examples are 'He', 'Rahami', 'suspect', 'Ahmad Khan Rahami', 'Bilal'. This argument specifies the individual who is being apprehended or confined.",
+            "The 'detainee' argument denotes the individual who is being arrested, jailed, or detained. Examples are 'He', 'Rahami', 'suspect', 'Ahmad Khan Rahami', 'Bilal'. This argument highlights the person who is the target of the legal action.",
+            "The 'detainee' argument identifies the person who is being apprehended, jailed, or detained by authorities. Examples are 'He', 'Rahami', 'suspect', 'Ahmad Khan Rahami', 'Bilal'. This argument points to the individual who is being taken into custody.",
+            "The 'detainee' argument refers to the individual who is being arrested, jailed, or detained by law enforcement or other authorities. Examples are 'He', 'Rahami', 'suspect', 'Ahmad Khan Rahami', 'Bilal'. This argument specifies the person who is the subject of the legal action."
+        ],
+        "jailer": [
+            "The 'jailer' argument refers to the authority or entity responsible for apprehending, jailing, or detaining the detainee. Examples are 'police', 'Authorities', 'Police', 'National Police Chief Somyot Poomphanmuang', 'military'. This argument identifies the party carrying out the arrest, jailing, or detention.",
+            "The 'jailer' argument represents the law enforcement or other authority responsible for taking the detainee into custody. Examples are 'police', 'Authorities', 'Police', 'National Police Chief Somyot Poomphanmuang', 'military'. This argument specifies the entity performing the legal action.",
+            "The 'jailer' argument denotes the authority or entity that is arresting, jailing, or detaining the detainee. Examples are 'police', 'Authorities', 'Police', 'National Police Chief Somyot Poomphanmuang', 'military'. This argument highlights the party responsible for the apprehension or confinement.",
+            "The 'jailer' argument identifies the law enforcement or other authority responsible for the arrest, jailing, or detention of the detainee. Examples are 'police', 'Authorities', 'Police', 'National Police Chief Somyot Poomphanmuang', 'military'. This argument points to the entity carrying out the legal action.",
+            "The 'jailer' argument refers to the authority or entity that is responsible for apprehending, jailing, or detaining the detainee. Examples are 'police', 'Authorities', 'Police', 'National Police Chief Somyot Poomphanmuang', 'military'. This argument specifies the party performing the arrest, jailing, or detention."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the detainee is apprehended, jailed, or detained. Examples are 'one', 'Bangkok', 'army base', 'outskirts of Bangkok', 'Thai-Cambodia border'. This argument identifies the geographical location of the arrest, jailing, or detention.",
+            "The 'place' argument represents the location where the detainee is taken into custody by authorities. Examples are 'one', 'Bangkok', 'army base', 'outskirts of Bangkok', 'Thai-Cambodia border'. This argument specifies the place where the legal action occurs.",
+            "The 'place' argument denotes the location where the detainee is apprehended, jailed, or detained. Examples are 'one', 'Bangkok', 'army base', 'outskirts of Bangkok', 'Thai-Cambodia border'. This argument highlights the geographical setting of the arrest, jailing, or detention.",
+            "The 'place' argument identifies the location where the detainee is taken into custody by law enforcement or other authorities. Examples are 'one', 'Bangkok', 'army base', 'outskirts of Bangkok', 'Thai-Cambodia border'. This argument points to the place where the legal action takes place.",
+            "The 'place' argument refers to the location where the detainee is apprehended, jailed, or detained by authorities. Examples are 'one', 'Bangkok', 'army base', 'outskirts of Bangkok', 'Thai-Cambodia border'. This argument specifies the geographical location of the arrest, jailing, or detention."
+        ]
+    }
+}

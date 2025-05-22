@@ -1,0 +1,42 @@
+{
+    "ChargeIndict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by an individual or entity being formally accused of a crime or legal violation, often marked by specific legal language such as 'charged,' 'accused,' or related terms.",
+            "The action involves the formal accusation process within a legal or judicial framework, distinguishing it from broader justice-related events such as arrests or trials.",
+            "There is a clear identifier of the judicial process starting, separating this event from the conclusion of judicial processes like convictions or sentencing.",
+            "Legal representatives, such as prosecutors or legal documents, initiate or describe the charges, thereby engaging the justice system formally.",
+            "It includes specific roles such as adjudicator, defendant, prosecutor, and place, which are integral to setting the legal stage for the indictment or charge process."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are individuals or entities that oversee the legal proceeding or have the authority to make judicial decisions regarding the indictment, such as judges or magistrates.",
+            "This role is crucial as it defines who is formally overseeing or making declarations about the charge.",
+            "In cases where the term 'adjudicator' is ambiguous, it refers to any authoritative figure directly involved in the legal adjudication process.",
+            "Typically identified by their role or title within the context of a legal document or statement.",
+            "Distinct from a 'prosecutor' who actively argues or presents the case against the defendant."
+        ],
+        "defendant": [
+            "Examples are individuals, groups, or entities who are being formally charged or indicted.",
+            "This argument is central to the event as it identifies whom the charges are against.",
+            "Can be explicitly named or referred to by their relation to the case (e.g., 'the accused,' 'the former president').",
+            "Identification often occurs in the context of legal accusations or when mentioned in relation to a crime.",
+            "It is critical to distinguish defendants from witnesses or other parties involved in a case."
+        ],
+        "place": [
+            "Examples are geographical locations or specific venues where the charge or indictment is filed or is pertinent.",
+            "Essential for contextualizing the event, indicating jurisdiction or specific location relevance like a city, court, or country.",
+            "Places are often mentioned explicitly but can be implied through known contexts or related legal entities.",
+            "Helps in understanding the scope and legal boundaries of the charge.",
+            "Not to be confused with incidental locations unrelated to the legal proceedings."
+        ],
+        "prosecutor": [
+            "Examples are individuals, often part of a governmental or legal body, who formally bring the charges against the defendant.",
+            "This role is integral in initiating the legal action that triggers the ChargeIndict event.",
+            "Can be named directly or identified through their involvement in the legal process.",
+            "Key in differentiating the driving force of the indictment from the adjudicator's role.",
+            "Unlike adjudicators, prosecutors actively pursue the charges and present evidence."
+        ]
+    }
+}

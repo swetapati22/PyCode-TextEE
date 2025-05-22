@@ -1,0 +1,34 @@
+{
+    "Meet(ContactEvent)": {
+        "description": [
+            "The event is triggered by interactions where individuals or groups come together for a discussion or activity. Example triggers include 'talks', 'conference', 'forum', 'negotiations', and 'meeting'.",
+            "The event is characterized by the physical or virtual presence of multiple entities at a specific place or for a specific purpose. Unlike other ContactEvents, this event specifically involves a gathering or assembly.",
+            "The event scope includes formal and informal gatherings, such as diplomatic talks, business meetings, and public forums. It does not include one-on-one communications like phone calls or written correspondence.",
+            "Triggers and outcomes for this event type involve the act of meeting or gathering, as opposed to other ContactEvents like 'PhoneWrite', which involve communication through phone or writing.",
+            "Unlike events such as 'PhoneWrite', which are triggered by communication tools like 'telephone', this event is triggered by terms indicating a physical or virtual assembly, such as 'meeting' or 'conference'."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger ('mention') is the word or phrase that indicates the occurrence of the meeting. Examples include 'talks', 'conference', 'forum', 'negotiations', and 'meeting'.",
+            "Valid triggers are terms that denote a gathering or assembly of people for a specific purpose. For instance, 'summit' and 'discussion' can also serve as triggers.",
+            "Edge cases include terms that might imply a meeting but are used in a different context, such as 'meet' in 'meet the requirements'. These should not be considered valid triggers.",
+            "Triggers should be distinguished from related events by their context. For example, 'call' in 'conference call' is not a valid trigger for a Meet event but for a PhoneWrite event.",
+            "Variations in triggers can include synonyms or related terms like 'session', 'assembly', or 'convention', provided they indicate a gathering of entities."
+        ],
+        "entity": [
+            "Examples are the individuals or groups participating in the meeting. In the example 'Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat.', 'Blair' and 'Bush' are the entities.",
+            "The role of the entity is to identify the participants in the meeting. This is crucial for understanding who is involved in the event.",
+            "Entities can be individuals, organizations, or countries. For instance, 'Washington' and 'Pyongyang' in 'Negotiations between Washington and Pyongyang on their nuclear dispute have been set for April 23 in Bejing.'",
+            "Edge cases include mentions of entities that are not directly participating in the meeting but are mentioned in the context. For example, 'Moscow' in the same example is not an entity in the meeting.",
+            "Entities should be distinguished from other roles such as 'place'. For example, 'Bejing' in the same example is a place, not an entity."
+        ],
+        "place": [
+            "Examples are the locations where the meeting takes place. In the example 'Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat.', 'retreat' is the place.",
+            "The role of the place is to provide the context of where the meeting is happening. This helps in understanding the setting of the event.",
+            "Places can be specific locations like 'Bejing' in 'Negotiations between Washington and Pyongyang on their nuclear dispute have been set for April 23 in Bejing.'",
+            "Edge cases include mentions of places that are not directly related to the meeting location but are mentioned in the context. For example, 'Washington' in the same example is not the place of the meeting.",
+            "Places should be distinguished from other roles such as 'entity'. For example, 'Washington' and 'Pyongyang' in the same example are entities, not places."
+        ]
+    }
+}

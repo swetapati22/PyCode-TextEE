@@ -1,0 +1,41 @@
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of detaining or taking someone into custody, typically by law enforcement. Example triggers include 'arrested', 'detained', and 'taken into custody'.",
+            "The event involves the physical act of apprehending a person, often in connection with a suspected crime or violation of law. Key characteristics include the involvement of law enforcement agents and the location where the arrest occurs.",
+            "Unlike the Convict event, which involves a legal judgment and sentencing, the ArrestJail event focuses on the initial act of taking someone into custody. For example, 'convicted' indicates a legal decision, whereas 'arrested' indicates the act of detaining.",
+            "Triggers such as 'arrested' and 'detained' are indicative of the ArrestJail event type, not the ReleaseParole event type, which involves the release of a person from custody.",
+            "The event outcomes typically include the person being taken to a police station or jail, but it does not include the legal proceedings that follow, which are covered by other event types like Convict or Trial."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of the ArrestJail event. Examples include 'arrested', 'detained', and 'taken into custody'.",
+            "Triggers must clearly indicate the act of taking someone into custody. For instance, 'arrested' in 'Police arrested her' is a valid trigger.",
+            "Edge cases include phrases like 'held for questioning', which may imply detention but not necessarily an arrest. These should be carefully evaluated.",
+            "Triggers such as 'convicted' or 'sentenced' are not valid for this event type as they pertain to legal judgments, not the act of arrest.",
+            "In cases where multiple potential triggers are present, the one most directly indicating the act of arrest should be chosen. For example, in 'Police arrested and charged him', 'arrested' is the primary trigger."
+        ],
+        "agent": [
+            "The agent argument refers to the entity performing the arrest, typically law enforcement. Examples are 'Police', 'officers', and 'authorities'.",
+            "The agent is crucial as it identifies who is responsible for the arrest. For instance, 'Police' in 'Police arrested her' is the agent.",
+            "In cases where the agent is implied but not explicitly mentioned, context should be used to infer the agent. For example, 'She was arrested' implies law enforcement as the agent.",
+            "Unlike the Convict event, where the agent might be a judge or jury, the agent in ArrestJail is always the entity performing the physical act of arrest.",
+            "Examples include 'officers' in 'Officers detained the suspect' and 'authorities' in 'Authorities took him into custody'."
+        ],
+        "person": [
+            "The person argument refers to the individual being arrested. Examples are 'her', 'people', and 'group'.",
+            "The person is the target of the arrest action. For instance, 'her' in 'Police arrested her' is the person.",
+            "In cases where multiple individuals are arrested, the argument should reflect all relevant persons. For example, 'people' in '70 people were arrested'.",
+            "Unlike the agent, the person is always the one being taken into custody, not performing the action.",
+            "Examples include 'group' in 'A group of protesters were arrested' and 'individuals' in 'Several individuals were detained'."
+        ],
+        "place": [
+            "The place argument refers to the location where the arrest occurs. Examples are 'Abilene', 'New York', and 'San Francisco'.",
+            "The place provides context for where the arrest took place. For instance, 'Abilene' in 'Police arrested her in Abilene' is the place.",
+            "In cases where the place is not explicitly mentioned, it may be inferred from context. For example, 'here' in 'arrested here' can be linked to a previously mentioned location.",
+            "Unlike the person or agent, the place is a geographical location and not an entity involved in the action.",
+            "Examples include 'New York' in 'arrested in New York' and 'San Francisco' in 'arrested in San Francisco'."
+        ]
+    }
+}

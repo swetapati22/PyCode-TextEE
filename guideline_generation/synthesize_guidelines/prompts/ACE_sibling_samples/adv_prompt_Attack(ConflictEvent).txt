@@ -1,0 +1,119 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Attack(ConflictEvent)
+```json
+{
+    "Attack(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions that involve physical or violent confrontation, such as 'killed', 'raping and drugging', 'blast', 'tore', 'explosion', 'clashed', 'clashes', and 'war'.",
+            "The event is characterized by an aggressive act where one party (attacker) inflicts harm or damage on another party (victim or target) using various means (instruments) at a specific location (place).",
+            "Unlike Demonstrate events, which involve peaceful or organized protests, Attack events involve direct physical harm or violence. For example, 'clashed' in the context of a violent confrontation is an Attack event, whereas 'rally' in the context of a peaceful protest is a Demonstrate event.",
+            "Triggers such as 'blast' and 'explosion' indicate an Attack event, as they involve sudden and violent destruction, unlike 'rally', which indicates a peaceful gathering.",
+            "The outcomes of Attack events typically include injury, death, or destruction, distinguishing them from other ConflictEvent types that may not result in physical harm, such as Demonstrate events."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are individuals or groups initiating the attack, such as 'luster' in the context of 'raping and drugging'.",
+            "The agent is the entity responsible for carrying out the attack, often synonymous with the attacker.",
+            "In some cases, the agent may be a broader entity or organization behind the attack, not directly involved in the physical act.",
+            "The agent is crucial for understanding the source of the attack and can include individuals, groups, or organizations.",
+            "Edge cases include situations where the agent is not explicitly mentioned but can be inferred from context, such as 'police' in a clash scenario."
+        ],
+        "attacker": [
+            "Examples are entities directly involved in the attack, such as 'mob' in the context of 'killed'.",
+            "The attacker is the party that physically executes the attack, often causing harm or damage.",
+            "In some cases, multiple attackers may be involved, as seen with 'demonstrators' and 'police' in a clash.",
+            "The attacker is distinct from the agent in that the attacker is directly involved in the physical act, while the agent may be the broader entity behind it.",
+            "Edge cases include situations where the attacker is not explicitly mentioned but can be inferred from context, such as 'demonstrators' in a clash scenario."
+        ],
+        "instrument": [
+            "Examples are tools or weapons used in the attack, such as 'machetes' and 'spears' in the context of 'killed'.",
+            "The instrument is the means by which the attack is carried out, often causing physical harm or damage.",
+            "In some cases, the instrument may be a non-physical means, such as 'devices' used in clashes.",
+            "The instrument is crucial for understanding the method of the attack and can include weapons, tools, or other means.",
+            "Edge cases include situations where the instrument is not explicitly mentioned but can be inferred from context, such as 'bomb' in an explosion scenario."
+        ],
+        "place": [
+            "Examples are locations where the attack occurs, such as 'area' in the context of 'killed' and 'airport' in the context of 'blast'.",
+            "The place is the physical location where the attack takes place, providing context for the event.",
+            "In some cases, the place may be a broader region or country, such as 'Iraq' in the context of 'war'.",
+            "The place is crucial for understanding the geographical context of the attack and can include specific locations, cities, or countries.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from context, such as 'shed' in an explosion scenario."
+        ],
+        "target": [
+            "Examples are entities or objects that are the focus of the attack, such as 'them' in the context of 'killed' and 'terminal' in the context of 'explosion'.",
+            "The target is the entity or object that the attack is directed towards, often suffering harm or damage.",
+            "In some cases, the target may be a broader group or entity, such as 'officers' in a clash scenario.",
+            "The target is crucial for understanding the focus of the attack and can include individuals, groups, or objects.",
+            "Edge cases include situations where the target is not explicitly mentioned but can be inferred from context, such as 'shed' in an explosion scenario."
+        ],
+        "victim": [
+            "Examples are individuals or groups harmed by the attack, such as 'women' in the context of 'raping and drugging'.",
+            "The victim is the party that suffers harm or damage as a result of the attack.",
+            "In some cases, the victim may be a broader group or entity, such as 'people' in a blast scenario.",
+            "The victim is crucial for understanding the impact of the attack and can include individuals, groups, or organizations.",
+            "Edge cases include situations where the victim is not explicitly mentioned but can be inferred from context, such as 'officers' in a clash scenario."
+        ]
+    }
+}
+```

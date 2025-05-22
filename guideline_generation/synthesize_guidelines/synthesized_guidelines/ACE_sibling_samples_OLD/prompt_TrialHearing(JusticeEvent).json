@@ -1,0 +1,43 @@
+{
+    "TrialHearing(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal proceedings where an adjudicator oversees the presentation of evidence and arguments to determine the guilt, innocence, or other legal standing of a defendant. Examples of triggers include 'hearing,' 'trial,' and 'tried.'",
+            "The event is characterized by its focus on adjudicating legal responsibilities or rights of the involved parties, typically involving formal legal settings and processes. Unlike 'ArrestJail' events, this does not involve the physical detention of persons but rather the judicial determination regarding a defendant.",
+            "The event often involves multiple parties, including a legally authorized adjudicator (such as a judge or court), a defendant, and usually a prosecutor, who represents the legal interests of the state or other accusing body.",
+            "This event type is distinguished from 'Fine' or 'Sue' by the nature of the legal process; 'TrialHearing' is about adjudicating a case through a hearing or trial, rather than imposing a financial penalty (Fine) or engaging in a civil lawsuit (Sue).",
+            "Triggers such as 'hearing' are indicative of 'TrialHearing', focusing on the procedural aspects of legal adjudication. In contrast, triggers like 'arrested' point towards 'ArrestJail', not this event type, which involves custody rather than judicial evaluation."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are judges, courts, or any judicial figure who presides over the hearing or trial. Their role is crucial as they interpret and apply laws, direct the legal process, and ultimately make judicial decisions.",
+            "In the context of a 'TrialHearing', an adjudicator is formally recognized and authorized to conduct the proceedings. For instance, a 'judge' in a courtroom or a 'court' as an institutional body can be identified.",
+            "Adjudicators differ from agents in events like 'ArrestJail' where police officers play the role of arresting individuals. Here, the adjudicator’s function is purely judicial and procedural within the confines of a court setting.",
+            "In edge cases, the adjudicator could be a tribunal or a special judicial committee, especially in contexts involving administrative or military trials where traditional court figures might not be present.",
+            "For the argument 'adjudicator', acceptable spans include specific titles or institutional names directly involved in the legal processing of the case, such as 'Oklahoma City judge' or 'Belgrade district court'."
+        ],
+        "defendant": [
+            "Examples are individuals, groups, or entities who are being formally accused or tried in a legal setting. Their role is central as the subject of the trial's proceedings.",
+            "Defendants can be directly named individuals like 'Nichols' or more broadly defined groups implicated in a case, evident from text such as 'Milosevic's wife' or '10 other Milosevic-era officials'.",
+            "Unlike the 'defendant' in a 'Sue' event, where the focus might be on civil liability, in 'TrialHearing', the defendant is involved in a judicial process that could result in criminal penalties or acquittal.",
+            "Edge cases might include situations where the defendant's identity is implied through association or role rather than explicitly named, necessitating careful text interpretation by annotators.",
+            "Examples of valid spans for the defendant include singular or multiple parties directly involved in the case, like 'Anwar Ibrahim' or collective references such as 'officials'."
+        ],
+        "place": [
+            "Examples are geographical locations or specific venues where the trial or hearing occurs, such as 'Oklahoma City' or 'Belgrade'.",
+            "The place is significant as it situates the legal event within a specific jurisdiction, which can affect the applicable laws and the nature of the legal proceedings.",
+            "Place differs from the 'place' argument in 'ArrestJail' or 'Extradite' events, which may refer to places of detention or extradition rather than locations of judicial proceedings.",
+            "Edge cases may involve virtual hearings or locations where jurisdiction overlaps, requiring annotators to consider the broader context of the judicial authority.",
+            "Valid spans for 'place' are typically names of cities, courts, or specific venues that are clearly mentioned as the setting of the judicial event, like 'Malaysia's prison department' when linked to a legal decision."
+
+        ],
+        "prosecutor": [
+            "Examples are legal representatives of the state, government, or other prosecuting bodies who bring the case against the defendant. Typical roles include 'prosecutors' or specific state attorneys.",
+            "The prosecutor is crucial for presenting the case against the defendant, which distinguishes this role from those involved in non-criminal justice events such as 'Sue', where 'plaintiffs' undertake a similar but civilly oriented role.",
+            "In 'TrialHearing', the prosecutor actively participates in the judicial process, advocating for the application of law based on presented evidence and legal arguments.",
+            "Edge cases might involve multiple prosecuting entities or special interest legal representatives, particularly in high-profile or complex legal matters.",
+            "For the argument 'prosecutor', valid spans include titles or descriptions of legal professionals or bodies responsible for the prosecution, such as 'prosecutors' in the Oklahoma City case."
+        ]
+    }
+}

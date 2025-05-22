@@ -1,0 +1,11 @@
+{
+    "Sentence(JusticeEvent)": {
+        "description": "The Sentence event in the context of justice is triggered by the imposition of a judicial punishment or penalty on a defendant. This event is characterized by a formal declaration of punishment by an adjudicator, such as a court or judge, directed at a defendant. The punishment can include imprisonment, fines, or other penalties. It is distinct from the Convict event, which focuses on the determination of guilt, and from events like Acquit or Pardon, which involve absolution or release. The outcome of the Sentence event is the formal assignment of a penalty, distinguishing it from related events like Appeal or ReleaseParole.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the authority responsible for delivering the sentence, such as a court, judge, or any official body with the legal power to impose punishment. Examples include 'court' in 'a court in Salonika' or 'judge' in 'the judge sentenced him'. In some cases, the adjudicator may be inferred from context, such as 'he was sentenced to 5 years'. Non-traditional adjudicators like 'tribunal' or 'panel' also qualify if they have sentencing authority.",
+            "defendant": "The defendant is the individual or entity receiving the sentence, such as 'mayor', 'he', 'man', or 'company'. The defendant is central to the Sentence event as the subject of the punishment. Examples include 'mayor' in 'convicted the former mayor' or 'he' in 'he only got 4 years'. The defendant may be referred to indirectly or by a pronoun, and can include groups or organizations if they are the recipients of the sentence.",
+            "place": "The place is the location where the sentence is delivered or relevant to the event, providing geographical context. Examples include 'Salonika', 'Greece', or 'courtroom'. The place situates the event within a specific legal jurisdiction or physical location, such as 'Salonika' in 'a court in Salonika'. It may be implied rather than explicitly stated, and can include virtual or non-traditional locations like 'online court' or 'remote hearing'."
+        }
+    }
+}

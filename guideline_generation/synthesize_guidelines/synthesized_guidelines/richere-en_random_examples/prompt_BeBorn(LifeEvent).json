@@ -1,0 +1,28 @@
+{
+    "BeBorn(LifeEvent)": {
+        "description": [
+            "The event is triggered by the birth of a person, indicating the beginning of their life. Example triggers include 'born', 'births', and 'newborn'.",
+            "The event is characterized by the introduction of a new individual into the world, often specifying the person and the place of birth.",
+            "Unlike other LifeEvents such as 'Injure', which involve harm or injury, the BeBorn event specifically marks the start of life.",
+            "Triggers such as 'born' and 'births' are indicative of the BeBorn event type, not events like 'StartPosition' or 'EndPosition' which relate to job roles.",
+            "The outcome of the BeBorn event is the existence of a new person, distinct from events like 'Convict' or 'Sentence' which involve legal judgments."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'I', 'they', 'newborn', and 'children'. This argument identifies the individual who is being born.",
+            "The person argument is crucial as it specifies the new life being introduced. For instance, 'I' in 'I was born in London' refers to the person.",
+            "In cases where the text mentions 'newborn', it directly points to the person being born, as in 'picked up a newborn'.",
+            "Edge cases include plural forms like 'children', which still refer to individuals being born, e.g., 'children must have the best'.",
+            "Unlike the 'agent' in events like 'ArrestJail', the 'person' in BeBorn is the subject of the birth, not an actor performing an action."
+        ],
+        "place": [
+            "Examples are 'London', 'Canada', 'hospital', and 'here in Canada'. This argument specifies the location where the birth occurs.",
+            "The place argument is important as it provides context to the birth event, indicating where the person was born.",
+            "In texts like 'born here in Canada', 'Canada' is the place argument, giving geographical context to the birth.",
+            "Edge cases include specific institutions like 'hospital', which still qualify as places where births occur, e.g., 'newborn being placed for adoption in a hospital'.",
+            "Unlike the 'destination' in events like 'TransportArtifact', the 'place' in BeBorn is where the birth happens, not where something is being moved to."
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "ReleaseParole(JusticeEvent)": {
+        "description": "The 'ReleaseParole' event is triggered by the act of releasing an individual from custody or imprisonment under specific conditions, such as parole. This event involves the transition of a person from confinement to freedom, typically through legal or administrative actions. It is distinct from events like 'Pardon', which involves forgiveness and removal of penalties, and 'Acquit', where the individual is declared not guilty and freed without conditions. The 'ReleaseParole' event is characterized by the involvement of legal authorities and the conditional nature of the release, and it is not triggered by the initial act of sentencing or imprisonment.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "The entity is typically an organization or group involved in facilitating or advocating for the release, such as 'negotiators', 'lawyers', 'human rights organizations', 'the United Nations', or 'the parole board'. The entity is not the person being released but rather the group or organization that influences or decides the release.",
+            "person": "The person is the individual being released from custody or imprisonment, often identified by name, pronoun, role, or status, such as 'ramzi binalshibh', 'Anwar', 'Pasko', 'he', 'she', 'the prisoner', or 'the detainee'. The person transitions from confinement to freedom under specific conditions like parole.",
+            "place": "The place is the location from which the person is released, providing context for the release event. Examples include 'prison', 'detention center', 'jail', or specific geographic locations like 'Pakistan' or 'New York'. The place is where the individual was held, not where the release decision is made."
+        }
+    }
+}

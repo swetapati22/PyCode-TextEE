@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_ChargeIndict(JusticeEvent)
+```json
+{
+    "ChargeIndict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal actions where an individual or entity is formally accused of a crime. Example triggers include 'charged', 'accused', 'prosecuted', and 'indicted'.",
+            "The event is characterized by the formal accusation of a crime, typically involving legal authorities such as prosecutors or magistrates. It involves the identification of a defendant and often specifies the location of the legal proceedings.",
+            "Unlike the 'TrialHearing' event, which focuses on the judicial process of hearing evidence, the 'ChargeIndict' event specifically pertains to the formal accusation phase. For example, 'hearing' is indicative of 'TrialHearing', not 'ChargeIndict'.",
+            "Triggers such as 'charged' and 'accused' are indicative of the 'ChargeIndict' event type, whereas triggers like 'sentenced' or 'acquitted' are related to the outcomes of a trial and belong to different event types such as 'Sentence' or 'Acquit'.",
+            "The event outcomes include the formal recognition of charges against the defendant, which may lead to further legal actions such as trials or plea bargains. Unlike 'ArrestJail', which involves the physical detention of a person, 'ChargeIndict' focuses on the legal accusation itself."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are legal authorities or officials who oversee the legal process of charging or indicting an individual. This can include judges, magistrates, or other judicial officers. For instance, in 'The lawyer was reprimanded by a Lusaka magistrate', 'magistrate' is the adjudicator.",
+            "The adjudicator plays a crucial role in the legal process by ensuring that the charges are formally recognized and processed. For example, 'He was charged by the district attorney' identifies 'district attorney' as the adjudicator.",
+            "In some cases, the adjudicator may be implied rather than explicitly mentioned. For instance, 'He was charged with theft' implies the presence of a legal authority as the adjudicator.",
+            "Unlike the 'prosecutor', who actively pursues the charges, the adjudicator is responsible for the legal oversight and formal recognition of the charges. For example, 'The judge charged him with contempt' identifies 'judge' as the adjudicator.",
+            "Edge cases may include situations where the adjudicator is a collective body, such as a jury or a panel of judges. For example, 'The grand jury indicted him on multiple counts' identifies 'grand jury' as the adjudicator."
+        ],
+        "defendant": [
+            "Examples are individuals or entities formally accused of a crime. This can include people, organizations, or companies. For instance, in 'Christie's was not prosecuted', 'Christie's' is the defendant.",
+            "The defendant is the primary subject of the charges or indictment and is the one who will face legal proceedings. For example, 'Lisa M. Montgomery was charged with kidnapping' identifies 'Lisa M. Montgomery' as the defendant.",
+            "In some cases, the defendant may be referred to indirectly. For instance, 'He was charged with theft' uses 'He' as the defendant.",
+            "Unlike the 'plaintiff' in a civil lawsuit, the defendant in a 'ChargeIndict' event is the one facing criminal charges. For example, 'The company was charged with fraud' identifies 'company' as the defendant.",
+            "Edge cases may include situations where multiple defendants are involved. For example, 'The brokerages were charged with conflicts of interest' identifies 'brokerages' as the defendants."
+        ],
+        "place": [
+            "Examples are locations where the legal proceedings or charges are taking place. This can include cities, countries, or specific courts. For instance, in 'He was charged in the United States', 'United States' is the place.",
+            "The place provides context for where the legal action is occurring and can be crucial for jurisdictional purposes. For example, 'The charges were filed in New York' identifies 'New York' as the place.",
+            "In some cases, the place may be implied rather than explicitly mentioned. For instance, 'He was charged with theft' may imply a specific location based on the context.",
+            "Unlike the 'origin' or 'destination' in an 'Extradite' event, the place in a 'ChargeIndict' event is where the charges are formally recognized. For example, 'The court in London charged him with fraud' identifies 'London' as the place.",
+            "Edge cases may include situations where the place is a broader region or multiple locations. For example, 'The charges were filed across several states' identifies 'several states' as the place."
+        ],
+        "prosecutor": [
+            "Examples are legal professionals who bring charges against the defendant. This can include district attorneys, state prosecutors, or other legal representatives. For instance, in 'The prosecutor charged him with theft', 'prosecutor' is the prosecutor.",
+            "The prosecutor is responsible for presenting the case against the defendant and pursuing legal action. For example, 'The district attorney indicted the suspect' identifies 'district attorney' as the prosecutor.",
+            "In some cases, the prosecutor may be referred to indirectly. For instance, 'He was charged by the state' uses 'state' to imply the presence of a prosecutor.",
+            "Unlike the 'adjudicator', who oversees the legal process, the prosecutor actively pursues the charges and represents the state or government. For example, 'The attorney general prosecuted the case' identifies 'attorney general' as the prosecutor.",
+            "Edge cases may include situations where the prosecutor is a collective body or organization. For example, 'The legal team brought charges against the company' identifies 'legal team' as the prosecutor."
+        ]
+    }
+}
+```

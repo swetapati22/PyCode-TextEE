@@ -1,0 +1,35 @@
+{
+    "Elect(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by terms related to the selection of individuals for positions through voting or appointment processes. Example triggers include 'elected', 're-election', 'elections', and 'by-elections'.",
+            "The event is characterized by the formal process of choosing a person for a specific role or office, often involving a voting mechanism. It typically involves a person being chosen for a position within an organization, government, or other entity.",
+            "Unlike the 'Nominate' event, which involves proposing a candidate for a position, the 'Elect' event signifies the final selection or appointment of the individual to the position.",
+            "Triggers such as 'replace' or 'name' are indicative of 'StartPosition' or 'Nominate' events, not the 'Elect' event type. The 'Elect' event specifically involves the outcome of a selection process.",
+            "The event outcomes include the formal recognition of an individual as holding a specific position or office, often marked by an official announcement or ceremony. This event does not cover the initial proposal or nomination stages."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'USCF' in 'Beatriz Marinello was elected USCF President'. The entity represents the organization or body for which the election is taking place.",
+            "The entity is crucial as it provides context to the election, indicating the scope and domain of the elected position.",
+            "In cases where the entity is not explicitly mentioned, it can often be inferred from the context or surrounding text.",
+            "Unlike the 'person' argument, which identifies the individual elected, the 'entity' argument identifies the organization or body conducting the election.",
+            "Examples include 'government', 'board', 'committee', or specific organizations like 'USCF'. It is important to distinguish this from the place or person involved in the event."
+        ],
+        "person": [
+            "Examples are 'Beatriz Marinello' in 'Beatriz Marinello was elected USCF President'. The person represents the individual who has been elected.",
+            "The person argument is essential as it identifies the individual who has been chosen for the position, providing clarity on the outcome of the election.",
+            "In some cases, the person may be referred to by a title or role rather than a name, such as 'president' or 'chairman'.",
+            "Unlike the 'entity' argument, which identifies the organization, the 'person' argument focuses on the individual who has been elected.",
+            "Examples include names of individuals or titles when specific names are not provided. It is important to distinguish this from the entity or place involved in the event."
+        ],
+        "place": [
+            "Examples are 'Los Angeles' in 'Beatriz Marinello was elected USCF President in Los Angeles'. The place represents the location where the election took place.",
+            "The place argument provides geographical context to the election, indicating where the event occurred.",
+            "In some cases, the place may be a country, city, or specific venue where the election was held.",
+            "Unlike the 'entity' and 'person' arguments, which identify the organization and individual respectively, the 'place' argument focuses on the location of the event.",
+            "Examples include cities, countries, or specific venues. It is important to distinguish this from the entity or person involved in the event."
+        ]
+    }
+}

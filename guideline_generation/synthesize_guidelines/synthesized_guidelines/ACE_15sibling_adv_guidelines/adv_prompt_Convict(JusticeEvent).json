@@ -1,0 +1,11 @@
+{
+    "Convict(JusticeEvent)": {
+        "description": "The Convict event in the justice system is triggered by the formal declaration of a defendant's guilt in a court of law, typically following a trial or legal proceeding. This event signifies the conclusion of the legal process with a guilty verdict, distinguishing it from the ChargeIndict event, which involves the formal accusation of a crime. Example triggers include terms like 'convicted', 'guilty', and 'conviction'. The outcome of the Convict event is the establishment of the defendant's guilt, potentially leading to sentencing, unlike the Acquit event, where the defendant is found not guilty.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the entity responsible for delivering the verdict of guilt, such as a jury, judge, or court. This entity plays a crucial role in the legal process by determining the trial's outcome based on the evidence and arguments presented. In some cases, the adjudicator may be a collective body, while in others, it may be an individual. Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from the context.",
+            "defendant": "The defendant is the individual or group of individuals found guilty of a crime. This central figure in the Convict event can be referred to by name, pronoun, or general term, such as 'those convicted'. The defendant's identity is crucial for understanding the context and implications of the conviction. Edge cases include situations where the defendant is not explicitly named but can be inferred from the context.",
+            "place": "The place is the location where the conviction occurs or is relevant to the event, providing context for the legal jurisdiction and setting of the conviction. This can be a specific city, country, or a more general location like 'court'. The place is important for understanding the legal and cultural context of the conviction. Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context."
+        }
+    }
+}

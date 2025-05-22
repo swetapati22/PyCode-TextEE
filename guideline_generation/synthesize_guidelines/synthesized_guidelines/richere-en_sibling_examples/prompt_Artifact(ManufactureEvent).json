@@ -1,0 +1,35 @@
+{
+    "Artifact(ManufactureEvent)": {
+        "description": [
+            "The event is triggered by the creation or construction of a tangible object or structure. Example triggers include 'building', 'makes', 'produce', and 'built'.",
+            "The event is characterized by the involvement of an agent who is responsible for the creation, an artifact that is being created, and optionally a place where the creation occurs.",
+            "Unlike a PurchaseEvent, which involves the acquisition of an existing item, this event focuses on the process of creating or manufacturing a new item.",
+            "Triggers such as 'buy', 'purchase', or 'acquire' are indicative of PurchaseEvent, not this event type. The Artifact event specifically involves the act of making or constructing something.",
+            "The outcome of this event is the existence of a new artifact, which did not exist before the event took place. This distinguishes it from events like RepairEvent, where the focus is on fixing an existing item."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'they' in 'they've been building schools', 'Diebold' in 'Diebold no longer makes voting machines', and 'district' in 'The district built a planetarium'. The agent is the entity responsible for the creation of the artifact.",
+            "The agent can be an individual, a group, or an organization. It is the doer of the action that results in the creation of the artifact.",
+            "In some cases, the agent may be implied or not explicitly mentioned in the text. For example, 'voting machines are made' implies an agent, even if not directly stated.",
+            "The agent is crucial for understanding who is responsible for the creation process. Without identifying the agent, the event's context may be incomplete.",
+            "Unlike the artifact, which is the object being created, the agent is the creator. For instance, in 'The company produced new software', 'company' is the agent, while 'software' is the artifact."
+        ],
+        "artifact": [
+            "Examples are 'schools' in 'they've been building schools', 'complex' in 'building this Muslim complex', and 'planetarium' in 'The district built a planetarium'. The artifact is the object or structure being created.",
+            "The artifact is the focus of the creation process. It is the end product that results from the event.",
+            "Artifacts can vary widely in nature, from buildings and machines to smaller items like software or pharmaceuticals.",
+            "The artifact is what distinguishes this event from other types. For example, in 'Diebold no longer makes voting machines', 'voting machines' is the artifact, indicating a creation event.",
+            "Unlike the agent, which is the creator, the artifact is the created object. In 'The company produced new software', 'software' is the artifact, while 'company' is the agent."
+        ],
+        "place": [
+            "Examples are 'country' in 'they've been building schools modularly in my country'. The place is the location where the creation of the artifact occurs.",
+            "The place provides context for where the creation event is taking place. It can be a specific location like a city, country, or even a more general area.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the context. For example, 'The factory produced new cars' implies the place is the factory.",
+            "The place is important for understanding the geographical context of the event. It helps in identifying where the artifact is being created.",
+            "Unlike the agent and artifact, which are the creator and the created object respectively, the place is the location of the creation process. For instance, in 'The district built a planetarium for this school', 'school' is the place where the planetarium is built."
+        ]
+    }
+}

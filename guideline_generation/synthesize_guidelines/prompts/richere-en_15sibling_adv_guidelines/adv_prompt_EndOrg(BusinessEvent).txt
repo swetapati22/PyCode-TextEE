@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_EndOrg(BusinessEvent)
+```json
+{
+    "EndOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the termination or cessation of an organization\u2019s operations. Example triggers include 'closed', 'belly-up', 'abolished', 'under', 'out', 'closing', 'collapse', and 'failure'.",
+            "The event is characterized by the end of an organization's existence or its operational activities. This can include businesses, schools, political parties, and other entities.",
+            "Unlike the MergeOrg event, which involves the combination of two or more organizations, the EndOrg event signifies the complete cessation of an organization's activities.",
+            "Triggers such as 'merge' are indicative of the MergeOrg event type, not the EndOrg event type. Similarly, 'open' is indicative of the StartOrg event type, not the EndOrg event type.",
+            "The outcomes of the EndOrg event include the organization no longer functioning or existing, which is different from events like DeclareBankruptcy where the organization may still exist but is undergoing financial restructuring."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'half' in 'the district closed almost half the schools in the city', 'businesses' in 'small businesses are going belly-up', and 'party' in 'we abolished the political party'. This argument identifies the organization that is ending.",
+            "The 'org' argument is crucial as it specifies the entity that is ceasing operations. It can refer to various types of organizations such as businesses, schools, political parties, etc.",
+            "In the context of the EndOrg event, 'org' represents the subject of the termination. For instance, 'companies' in 'putting light bulb companies out of business' indicates the companies that are ending.",
+            "Unlike the 'agent' argument in StartOrg events, which refers to the entity initiating the start, the 'org' argument in EndOrg events refers to the entity that is ending.",
+            "Edge cases include ambiguous references where the organization is not explicitly named but implied, such as 'hundreds' or 'thousands' in 'hundreds if not thousands will go under'."
+        ],
+        "place": [
+            "Examples are 'city' in 'the district closed almost half the schools in the city'. This argument identifies the location where the organization is ending.",
+            "The 'place' argument is important as it provides the geographical context of the event. It specifies where the organization is ceasing operations.",
+            "In the context of the EndOrg event, 'place' represents the location affected by the termination. For instance, 'mall' in 'the local Glock dealer would not open up a store in the same strip mall' indicates the location related to the event.",
+            "Unlike the 'place' argument in StartOrg events, which indicates where an organization is starting, the 'place' argument in EndOrg events indicates where an organization is ending.",
+            "Edge cases include situations where the location is not explicitly mentioned but can be inferred from the context, such as 'other countries' in 'all the platforms went to other countries'."
+        ]
+    }
+}
+```

@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Nominate(PersonnelEvent)
+```json
+{
+    "Nominate(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the act of proposing or appointing someone for a position or role. Example triggers include 'nominate', 'nominated', 'nomination', 'appoint', and 'renomination'.",
+            "The event is characterized by the involvement of an agent who proposes or appoints a person for a specific role or position. The scope of the event includes political, organizational, and other formal contexts.",
+            "Unlike the 'EndPosition' event, which marks the conclusion of a role, the 'Nominate' event focuses on the initiation or proposal of a role. For example, 'nominated' indicates a proposal, whereas 'resigned' indicates an end.",
+            "Triggers such as 'elected' or 'hired' are indicative of 'StartPosition' events, not 'Nominate' events. The 'Nominate' event does not confirm the start of a role but rather the proposal or consideration for it.",
+            "The outcome of the 'Nominate' event is the consideration or proposal of a person for a role, which may or may not lead to the actual start of the position. This is distinct from events that confirm the commencement of a role, such as 'StartPosition'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'republican', 'party', 'Obama', 'Deval Patrick', and 'Republicans'. The agent is the entity or individual responsible for proposing or appointing the person for the role.",
+            "The agent plays a crucial role in the event as they initiate the nomination process. This can be a political party, an individual, or an organization.",
+            "In cases where the agent is not explicitly mentioned, it can often be inferred from the context. For example, 'nominated by the party' implies the party as the agent.",
+            "The agent is distinct from the person being nominated. For instance, in 'Obama appointed a chairman', Obama is the agent, and the chairman is the person.",
+            "Edge cases include self-nomination, where the agent and the person are the same. For example, 'Mishaal would nominate himself' indicates Mishaal as both the agent and the person."
+        ],
+        "person": [
+            "Examples are 'Bush Jr', 'Kerry', 'Mishaal', 'people', 'Chairman', 'Ryan', 'Jr.', and 'nominee'. The person is the individual being proposed or appointed for the role.",
+            "The person is the central focus of the nomination event, as they are the one being considered for the position.",
+            "In some contexts, the person may be referred to by their title or role rather than their name. For example, 'Chairman' or 'nominee' can be used instead of a specific name.",
+            "The person is distinct from the agent. For instance, in 'Obama appointed a chairman', the chairman is the person, and Obama is the agent.",
+            "Edge cases include collective nominations, where a group of individuals is nominated. For example, 'people' in 'people get nominated president' refers to multiple individuals being considered."
+        ],
+        "place": [
+            "Examples are 'New York'. The place is the location where the nomination event occurs or is relevant to.",
+            "The place provides context to the nomination event, indicating where the nomination is taking place or where the nominated person is expected to serve.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the context. For example, 'nominated at the convention' implies a specific location for the event.",
+            "The place is distinct from the agent and the person. For instance, in 'the republican convention in New York', New York is the place, the republican convention is the agent, and Bush Jr is the person.",
+            "Edge cases include virtual or non-physical locations, such as online nominations or nominations for roles that do not have a specific geographic location."
+        ]
+    }
+}
+```

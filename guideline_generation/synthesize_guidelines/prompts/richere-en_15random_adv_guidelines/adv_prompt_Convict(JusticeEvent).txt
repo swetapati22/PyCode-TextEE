@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Convict(JusticeEvent)
+```json
+{
+    "Convict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by a formal declaration of guilt by a legal authority. Example triggers include 'convicted', 'found guilty', and 'judgments'.",
+            "The event is characterized by the legal determination that an individual or entity has committed a crime. This determination is typically made by a court or similar adjudicative body.",
+            "Unlike the 'ChargeIndict' event, which involves the formal accusation of a crime, the 'Convict' event signifies that the accused has been found guilty after a legal process.",
+            "Triggers such as 'charged' or 'indicted' are indicative of the 'ChargeIndict' event type, not the 'Convict' event type. The 'Convict' event specifically involves the conclusion of guilt.",
+            "The outcome of the 'Convict' event is a legal conviction, which may lead to sentencing or other legal consequences. This is distinct from events like 'TrialHearing', which involve the process of determining guilt, rather than the conclusion."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', or 'jury'. The adjudicator is the legal authority that determines the guilt of the defendant.",
+            "The adjudicator plays a crucial role in the 'Convict' event as they are responsible for the final decision of guilt. This can include entities like 'Supreme Court' or 'tribunal'.",
+            "In cases where the adjudicator is not explicitly mentioned, it can often be inferred from the context, such as 'the court found him guilty'.",
+            "Unlike the 'prosecutor' in the 'ChargeIndict' event, the adjudicator is neutral and responsible for the final judgment.",
+            "Edge cases include situations where the adjudicator is a panel or a group, such as 'jury' or 'board of judges'."
+        ],
+        "defendant": [
+            "Examples are 'mayor', 'Jacobs', or 'i'. The defendant is the individual or entity that has been found guilty of a crime.",
+            "The defendant is central to the 'Convict' event as they are the subject of the conviction. This can include individuals, organizations, or even groups.",
+            "In some cases, the defendant may be referred to by their role or title, such as 'the accused' or 'the suspect'.",
+            "Unlike the 'plaintiff' in the 'Sue' event, the defendant in the 'Convict' event is the party being judged for a crime.",
+            "Edge cases include situations where the defendant is a minor or an entity, such as 'the company was convicted of fraud'."
+        ],
+        "place": [
+            "Examples are 'Salonika', 'London', or 'Afghanistan'. The place is the location where the conviction occurs or is relevant to the event.",
+            "The place provides context to the 'Convict' event, indicating where the legal proceedings took place or where the crime was committed.",
+            "In some instances, the place may be implied rather than explicitly stated, such as 'the court in the city found him guilty'.",
+            "Unlike the 'destination' in the 'Extradite' event, the place in the 'Convict' event is where the conviction is declared.",
+            "Edge cases include situations where the place is a virtual or non-physical location, such as 'online court'."
+        ]
+    }
+}
+```

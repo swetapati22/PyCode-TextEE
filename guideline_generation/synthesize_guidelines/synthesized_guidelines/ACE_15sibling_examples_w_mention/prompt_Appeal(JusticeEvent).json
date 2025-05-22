@@ -1,0 +1,41 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": [
+            "The event is triggered by an individual or group formally requesting a higher court to review and change the decision of a lower court. Example triggers include 'appealed', 'appeals', and 'appeal'.",
+            "The event is characterized by the involvement of a higher judicial authority (adjudicator) and the party requesting the review (plaintiff). The scope of the event includes legal contexts where a decision is contested.",
+            "Unlike the 'ChargeIndict' event, which involves the formal accusation of a crime, the 'Appeal' event involves challenging an existing decision. Triggers such as 'charges' are indicative of 'ChargeIndict', not 'Appeal'.",
+            "The outcome of an 'Appeal' event is a potential review or change of a previous decision, whereas events like 'Execute' result in the enforcement of a sentence. Triggers such as 'executed' are indicative of 'Execute', not 'Appeal'.",
+            "The 'Appeal' event differs from 'Acquit' as it involves a request for review rather than a final judgment of innocence. Triggers such as 'acquitted' are indicative of 'Acquit', not 'Appeal'."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the word or phrase that indicates the occurrence of an appeal. Examples include 'appealed', 'appeals', and 'appeal'.",
+            "Valid triggers for the 'Appeal' event include variations such as 'filed an appeal', 'submitted an appeal', and 'appeal for review'.",
+            "Edge cases include phrases like 'considering an appeal' or 'planning to appeal', which indicate potential future actions rather than completed events.",
+            "Triggers such as 'appeal' in contexts unrelated to legal reviews (e.g., 'appeal to emotions') are not valid for this event type.",
+            "The distinction from related events is crucial; for instance, 'appeal' in 'appeal for clemency' is valid, but 'appeal' in 'appeal to the public' is not."
+        ],
+        "adjudicator": [
+            "Examples are 'Supreme Court', 'Court of Appeals', 'judge', and 'tribunal'. The adjudicator is the authority reviewing the appeal.",
+            "The role of the adjudicator is to reassess the decision made by a lower court. This is a key element distinguishing the 'Appeal' event from initial trials.",
+            "In cases where multiple adjudicators are involved, such as a panel of judges, the term 'adjudicator' can refer to the collective body.",
+            "Edge cases include situations where the adjudicator is not explicitly named but implied, such as 'the court' or 'the judicial body'.",
+            "Unlike the 'TrialHearing' event, where the adjudicator presides over the initial hearing, the 'Appeal' event involves a higher authority reviewing a prior decision."
+        ],
+        "place": [
+            "Examples are 'Indonesia', 'Supreme Court', 'New York', and 'federal court'. The place is where the appeal is filed or reviewed.",
+            "The place is important as it provides context for the jurisdiction and legal framework within which the appeal is taking place.",
+            "In cases where the place is not explicitly mentioned, it can often be inferred from the context, such as 'the court' referring to a known location.",
+            "Edge cases include appeals filed in multiple locations, where the primary place of review should be identified.",
+            "Unlike the 'Extradite' event, where the place involves origin and destination, the 'Appeal' event focuses on the location of the judicial review."
+        ],
+        "plaintiff": [
+            "Examples are 'five', 'their', 'offender', and 'convict'. The plaintiff is the individual or group requesting the appeal.",
+            "The plaintiff's role is crucial as they are the party challenging the decision, seeking a review or reversal of the lower court's ruling.",
+            "In cases where the plaintiff is a group, such as 'the defendants' or 'the appellants', the term can refer to the collective entity.",
+            "Edge cases include situations where the plaintiff is not explicitly named but implied, such as 'the party' or 'the individual'.",
+            "Unlike the 'Sue' event, where the plaintiff initiates a lawsuit, the 'Appeal' event involves the plaintiff seeking a review of an existing decision."
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "StartOrg(BusinessEvent)": {
+        "description": "The StartOrg event is triggered by the initiation or establishment of a new organization, such as a business, foundation, or government entity. This event is characterized by the formation of a new entity that did not previously exist, distinct from events like MergeOrg or EndOrg. Example triggers include 'open', 'set up', 'create', 'launches', 'founders', 'established', and 'creation'. The event can occur in various contexts, including business, non-profit, and governmental sectors, and involves identifying the agent responsible for the creation, the organization being created, and the place where the organization is established.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the individual or entity responsible for initiating or establishing the organization. This can include specific individuals, collective entities, or implied groups. Examples include 'dealer', 'people', 'he', 'Blair', 'one', 'founders', and 'states'. The agent is the driving force behind the creation of the new organization and must be distinguished from other participants in the event.",
+            "org": "The org is the organization being created or established in the StartOrg event. It is the primary focus of the event and can be a business, non-profit, governmental body, or any other type of organization. Examples include 'store', 'businesses', 'foundation', 'Mad City Rollers', 'militia', 'World Zionist Organization', and 'UNSCOP'. The org must be distinguished from the agent, which refers to the initiator.",
+            "place": "The place is the location where the organization is being established or created. It provides context for the event by indicating where the new organization will operate or be based. Examples include 'mall' and 'property'. The place can be a specific physical location, such as a building, city, or country, and must be distinguished from the org, which refers to the organization being created."
+        }
+    }
+}

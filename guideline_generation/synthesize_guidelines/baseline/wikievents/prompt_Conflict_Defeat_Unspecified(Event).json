@@ -1,0 +1,35 @@
+{
+    "Conflict_Defeat_Unspecified(Event)": {
+        "description": [
+            "The event type 'Conflict_Defeat_Unspecified' refers to any situation where one party is defeated by another in a conflict. The event can be triggered by verbs such as 'defeated', 'repelled', 'combated', 'recaptured', etc. The event involves identifying the victor (the party that wins), the defeated (the party that loses), and optionally the place where the conflict occurred.",
+            "Conflict_Defeat_Unspecified events describe scenarios where one entity overcomes another in a conflict. This can be indicated by words like 'defeated', 'repelled', 'combated', and 'recaptured'. The key elements to identify are the victor, the defeated, and sometimes the location of the event.",
+            "A Conflict_Defeat_Unspecified event occurs when one group or individual defeats another in a conflict. Triggers for this event include terms like 'defeated', 'repelled', 'combated', and 'recaptured'. The main components to annotate are the victor, the defeated, and the place of the conflict.",
+            "The Conflict_Defeat_Unspecified event type captures instances where a conflict results in one party's defeat. This can be triggered by words such as 'defeated', 'repelled', 'combated', and 'recaptured'. Important arguments to identify include the victor, the defeated, and the location of the conflict.",
+            "Conflict_Defeat_Unspecified events are characterized by the defeat of one party by another in a conflict. Triggers for this event include 'defeated', 'repelled', 'combated', and 'recaptured'. Key arguments to annotate are the victor, the defeated, and the place where the conflict took place."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "defeated": [
+            "The 'defeated' argument refers to the party that loses in the conflict. Examples are 'al Shabaab', 'terrorist', 'armies', 'you'. This argument is crucial to identify the entity that has been overcome or subdued in the event.",
+            "The 'defeated' argument identifies the entity that has been overcome in the conflict. Examples include 'al Shabaab', 'terrorist', 'armies', 'you'. This argument helps in understanding who the losing party is in the event.",
+            "In the context of Conflict_Defeat_Unspecified, 'defeated' denotes the party that has been vanquished. Examples are 'al Shabaab', 'terrorist', 'armies', 'you'. This argument is essential for pinpointing the losing side in the conflict.",
+            "The 'defeated' argument represents the losing party in the conflict. Examples include 'al Shabaab', 'terrorist', 'armies', 'you'. This argument is key to identifying who has been defeated in the event.",
+            "The 'defeated' argument is used to mark the entity that has lost in the conflict. Examples are 'al Shabaab', 'terrorist', 'armies', 'you'. This argument is important for determining the defeated party in the event."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the conflict took place. Examples are 'territory', 'south-central Somalia'. This argument helps in situating the event geographically.",
+            "The 'place' argument identifies the geographical location of the conflict. Examples include 'territory', 'south-central Somalia'. This argument is useful for understanding where the event occurred.",
+            "In Conflict_Defeat_Unspecified events, the 'place' argument denotes the location of the conflict. Examples are 'territory', 'south-central Somalia'. This argument provides context about the setting of the event.",
+            "The 'place' argument specifies the location where the conflict happened. Examples include 'territory', 'south-central Somalia'. This argument is important for mapping the event to a specific place.",
+            "The 'place' argument is used to indicate the location of the conflict. Examples are 'territory', 'south-central Somalia'. This argument helps in identifying where the event took place."
+        ],
+        "victor": [
+            "The 'victor' argument refers to the party that wins the conflict. Examples are 'military', 'force', 'Indonesia', 'mission', 'one'. This argument is crucial to identify the entity that has emerged victorious in the event.",
+            "The 'victor' argument identifies the entity that has won the conflict. Examples include 'military', 'force', 'Indonesia', 'mission', 'one'. This argument helps in understanding who the winning party is in the event.",
+            "In the context of Conflict_Defeat_Unspecified, 'victor' denotes the party that has triumphed. Examples are 'military', 'force', 'Indonesia', 'mission', 'one'. This argument is essential for pinpointing the winning side in the conflict.",
+            "The 'victor' argument represents the winning party in the conflict. Examples include 'military', 'force', 'Indonesia', 'mission', 'one'. This argument is key to identifying who has been victorious in the event.",
+            "The 'victor' argument is used to mark the entity that has won in the conflict. Examples are 'military', 'force', 'Indonesia', 'mission', 'one'. This argument is important for determining the victorious party in the event."
+        ]
+    }
+}

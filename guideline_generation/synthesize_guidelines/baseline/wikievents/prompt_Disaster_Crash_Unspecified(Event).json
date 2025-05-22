@@ -1,0 +1,35 @@
+{
+    "Disaster_Crash_Unspecified(Event)": {
+        "description": [
+            "The event type 'Disaster_Crash_Unspecified' refers to any incident where a vehicle or object crashes without a specified cause. The event can be triggered by words such as 'crash', 'crashed', 'crashing', etc. This event type is used when the crash does not fall into more specific categories like 'airplane crash' or 'car crash'.",
+            "The event type 'Disaster_Crash_Unspecified' involves an unspecified crash event where a vehicle or object collides with another object or surface. The event can be triggered by terms like 'crash', 'crashed', 'crashing', etc. It is used when the details of the crash are not specific enough to categorize it under a more defined crash type.",
+            "The 'Disaster_Crash_Unspecified' event type captures incidents where a vehicle or object crashes, and the specifics of the crash are not detailed enough to classify it under a more specific event type. The event can be triggered by words such as 'crash', 'crashed', 'crashing', etc.",
+            "The 'Disaster_Crash_Unspecified' event type is used to annotate events where a vehicle or object crashes, but the nature of the crash is not detailed enough to be classified under a more specific category. The event can be triggered by terms like 'crash', 'crashed', 'crashing', etc.",
+            "The 'Disaster_Crash_Unspecified' event type refers to any crash event involving a vehicle or object where the specifics are not detailed enough to classify it under a more specific crash type. The event can be triggered by words such as 'crash', 'crashed', 'crashing', etc."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "crashobject": [
+            "The 'crashobject' argument refers to the object or entity that the vehicle or object crashes into. Examples are 'building', 'apartment building', 'vicinity', etc. Edge cases include situations where the crash object is not explicitly mentioned but can be inferred from context.",
+            "The 'crashobject' argument identifies the object or entity that the vehicle or object collides with during the crash. Examples are 'building', 'apartment building', 'vicinity', etc. In some cases, the crash object may not be directly mentioned but can be inferred from the surrounding text.",
+            "The 'crashobject' argument denotes the object or entity that the vehicle or object impacts during the crash. Examples include 'building', 'apartment building', 'vicinity', etc. Edge cases may involve inferred crash objects based on contextual clues.",
+            "The 'crashobject' argument specifies the object or entity that the vehicle or object crashes into. Examples are 'building', 'apartment building', 'vicinity', etc. Sometimes, the crash object may not be explicitly stated but can be deduced from the context.",
+            "The 'crashobject' argument represents the object or entity that the vehicle or object collides with in the crash. Examples include 'building', 'apartment building', 'vicinity', etc. Edge cases include inferred crash objects from the context."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the crash occurs. Examples are 'Caracas', 'apartment building', 'vicinity', etc. Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context.",
+            "The 'place' argument identifies the location of the crash event. Examples are 'Caracas', 'apartment building', 'vicinity', etc. In some cases, the place may not be directly mentioned but can be inferred from the surrounding text.",
+            "The 'place' argument denotes the location where the crash takes place. Examples include 'Caracas', 'apartment building', 'vicinity', etc. Edge cases may involve inferred places based on contextual clues.",
+            "The 'place' argument specifies the location of the crash. Examples are 'Caracas', 'apartment building', 'vicinity', etc. Sometimes, the place may not be explicitly stated but can be deduced from the context.",
+            "The 'place' argument represents the location where the crash occurs. Examples include 'Caracas', 'apartment building', 'vicinity', etc. Edge cases include inferred places from the context."
+        ],
+        "vehicle": [
+            "The 'vehicle' argument refers to the vehicle or object that is involved in the crash. Examples are 'drone', 'second', 'drones', etc. Edge cases include situations where the vehicle is not explicitly mentioned but can be inferred from context.",
+            "The 'vehicle' argument identifies the vehicle or object that crashes. Examples are 'drone', 'second', 'drones', etc. In some cases, the vehicle may not be directly mentioned but can be inferred from the surrounding text.",
+            "The 'vehicle' argument denotes the vehicle or object involved in the crash. Examples include 'drone', 'second', 'drones', etc. Edge cases may involve inferred vehicles based on contextual clues.",
+            "The 'vehicle' argument specifies the vehicle or object that crashes. Examples are 'drone', 'second', 'drones', etc. Sometimes, the vehicle may not be explicitly stated but can be deduced from the context.",
+            "The 'vehicle' argument represents the vehicle or object involved in the crash. Examples include 'drone', 'second', 'drones', etc. Edge cases include inferred vehicles from the context."
+        ]
+    }
+}

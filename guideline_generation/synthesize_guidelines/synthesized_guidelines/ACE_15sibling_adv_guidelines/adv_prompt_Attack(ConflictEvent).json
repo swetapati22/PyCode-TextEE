@@ -1,0 +1,14 @@
+{
+    "Attack(ConflictEvent)": {
+        "description": "An Attack event, a type of ConflictEvent, is characterized by physical or violent confrontation where one party (attacker) inflicts harm or damage on another party (victim or target) using various means (instruments) at a specific location (place). This event is triggered by actions such as 'killed', 'raping and drugging', 'blast', 'tore', 'explosion', 'clashed', 'clashes', and 'war'. Unlike Demonstrate events, which involve peaceful protests, Attack events result in injury, death, or destruction. Examples include 'clashed' in a violent context and 'explosion' indicating sudden destruction, distinguishing them from non-violent events like 'rally'.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'killed' or 'explosion'.",
+            "agent": "The entity responsible for initiating the attack, which can be individuals, groups, or organizations. Examples include 'luster' in 'raping and drugging' and 'police' inferred in a clash scenario. The agent may not always be directly involved in the physical act but is crucial for understanding the source of the attack.",
+            "attacker": "The party directly involved in executing the attack, causing harm or damage. Examples include 'mob' in 'killed' and 'demonstrators' in a clash. The attacker is distinct from the agent, as the attacker is physically involved in the act, while the agent may be a broader entity behind it.",
+            "instrument": "The means by which the attack is carried out, often causing physical harm or damage. Examples include 'machetes' and 'spears' in 'killed' and 'devices' in clashes. The instrument can be weapons, tools, or other means, and may sometimes be inferred from context, such as 'bomb' in an explosion scenario.",
+            "place": "The physical location where the attack occurs, providing geographical context. Examples include 'area' in 'killed' and 'airport' in 'blast'. The place can range from specific locations to broader regions or countries, and may sometimes be inferred from context, such as 'shed' in an explosion scenario.",
+            "target": "The entity or object that the attack is directed towards, often suffering harm or damage. Examples include 'them' in 'killed' and 'terminal' in 'explosion'. The target can be individuals, groups, or objects, and may sometimes be inferred from context, such as 'shed' in an explosion scenario.",
+            "victim": "The party that suffers harm or damage as a result of the attack. Examples include 'women' in 'raping and drugging' and 'people' in a blast scenario. The victim can be individuals, groups, or organizations, and may sometimes be inferred from context, such as 'officers' in a clash scenario."
+        }
+    }
+}

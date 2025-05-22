@@ -1,0 +1,11 @@
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": "The EndPosition (PersonnelEvent) is triggered by the termination or conclusion of a person's role, job, or position. This event signifies the end of an existing professional role, which can occur voluntarily (e.g., 'retired', 'quit') or involuntarily (e.g., 'fired', 'lost'). It is distinct from StartPosition events, which mark the beginning of a new role. Examples include 'retired', 'fired', 'quit', 'gave up work', and 'lost'. This event type does not include transitions to new roles, which are covered by StartPosition events.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "The entity represents the organization or institution associated with the person's role. Examples include specific companies or institutions, such as 'Pfizer' in 'Loss of 2,400 jobs at Pfizer'. In cases where the entity is not explicitly mentioned, it may be inferred from the context.",
+            "person": "The person is the individual whose role or job is ending. Examples include 'mum' in 'My mum gave up work' and 'Sandusky' in 'Sandusky retired'. The person can be identified by pronouns, proper names, or groups, such as '2,400' in 'Loss of 2,400 jobs at Pfizer'.",
+            "place": "The place provides geographical context to the event. Examples include specific cities or regions, such as 'Sandwich' in 'Loss of 2,400 jobs at Pfizer in Sandwich, Kent'. In some cases, the place may not be explicitly mentioned but can be inferred from the context."
+        }
+    }
+}

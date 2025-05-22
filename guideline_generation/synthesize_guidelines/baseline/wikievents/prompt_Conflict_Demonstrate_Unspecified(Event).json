@@ -1,0 +1,35 @@
+{
+    "Conflict_Demonstrate_Unspecified(Event)": {
+        "description": [
+            "The event type 'Conflict_Demonstrate_Unspecified' refers to any public display of protest, rally, or demonstration where the specific nature of the conflict is not detailed. The event can be triggered by words such as 'protest', 'demonstrate', 'rally', 'march', and similar terms. The event can be triggered by both peaceful and violent demonstrations. Edge cases include situations where the demonstration is implied but not explicitly stated, or where the demonstration is part of a larger event.",
+            "The event type 'Conflict_Demonstrate_Unspecified' captures instances where individuals or groups publicly express their opposition or support for a cause without specifying the exact nature of the conflict. The event can be triggered by terms like 'protest', 'demonstrate', 'rally', 'march', etc. The event can be triggered by both organized and spontaneous demonstrations. Edge cases include virtual or online demonstrations and symbolic acts of protest.",
+            "The event type 'Conflict_Demonstrate_Unspecified' involves any form of public demonstration, protest, or rally where the specific conflict or issue is not clearly defined. The event can be triggered by terms such as 'protest', 'demonstrate', 'rally', 'march', etc. The event can be triggered by both large-scale and small-scale demonstrations. Edge cases include demonstrations that are part of a larger event or movement and those that are symbolic in nature.",
+            "The event type 'Conflict_Demonstrate_Unspecified' refers to public gatherings or actions taken to express dissent or support for a cause, where the specific conflict is not detailed. The event can be triggered by terms like 'protest', 'demonstrate', 'rally', 'march', etc. The event can be triggered by both peaceful and violent actions. Edge cases include demonstrations that are part of a larger event or those that are symbolic or virtual.",
+            "The event type 'Conflict_Demonstrate_Unspecified' captures any public act of protest, rally, or demonstration where the specific conflict or issue is not explicitly mentioned. The event can be triggered by terms such as 'protest', 'demonstrate', 'rally', 'march', etc. The event can be triggered by both organized and spontaneous actions. Edge cases include symbolic acts of protest and virtual or online demonstrations."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "demonstrator": [
+            "The 'demonstrator' argument refers to the individual or group of people who are participating in the demonstration. Examples are 'Abdo', 'Joe Kebartas', 'Muslims', 'people', 'who'. Edge cases include situations where the demonstrator is implied but not explicitly mentioned, or where the demonstrator is a collective group without a specific name.",
+            "The 'demonstrator' argument identifies the person or group involved in the demonstration. Examples are 'Abdo', 'Joe Kebartas', 'Muslims', 'people', 'who'. Edge cases include anonymous or unidentified demonstrators and situations where the demonstrator is a large group or organization.",
+            "The 'demonstrator' argument denotes the participants in the demonstration. Examples are 'Abdo', 'Joe Kebartas', 'Muslims', 'people', 'who'. Edge cases include cases where the demonstrator is a collective entity or where the demonstrator is not explicitly named.",
+            "The 'demonstrator' argument specifies the individuals or groups taking part in the demonstration. Examples are 'Abdo', 'Joe Kebartas', 'Muslims', 'people', 'who'. Edge cases include situations where the demonstrator is a large, unnamed group or where the demonstrator is implied.",
+            "The 'demonstrator' argument refers to those who are actively participating in the demonstration. Examples are 'Abdo', 'Joe Kebartas', 'Muslims', 'people', 'who'. Edge cases include collective groups without specific names and situations where the demonstrator is not directly mentioned."
+        ],
+        "target": [
+            "The 'target' argument refers to the entity or entities that the demonstration is directed against or in support of. Examples are 'U.S'. Edge cases include situations where the target is implied but not explicitly mentioned, or where the target is a broad concept rather than a specific entity.",
+            "The 'target' argument identifies the focus of the demonstration, whether it is an entity, organization, or concept. Examples are 'U.S'. Edge cases include demonstrations directed at abstract concepts or where the target is not explicitly stated.",
+            "The 'target' argument denotes the object or subject of the demonstration's focus. Examples are 'U.S'. Edge cases include cases where the target is a broad or abstract concept and situations where the target is implied.",
+            "The 'target' argument specifies the entity or entities that are the focus of the demonstration. Examples are 'U.S'. Edge cases include situations where the target is a general concept or where the target is not directly mentioned.",
+            "The 'target' argument refers to the entity or entities that the demonstrators are addressing or opposing. Examples are 'U.S'. Edge cases include broad or abstract targets and situations where the target is implied but not explicitly mentioned."
+        ],
+        "topic": [
+            "The 'topic' argument refers to the specific issue or subject matter that the demonstration is about. Examples are 'Iraq', 'Afghanistan', 'the government', 'the Constituent Assembly'. Edge cases include situations where the topic is broad or multifaceted, or where the topic is implied but not explicitly mentioned.",
+            "The 'topic' argument identifies the main issue or cause that the demonstration is addressing. Examples are 'Iraq', 'Afghanistan', 'the government', 'the Constituent Assembly'. Edge cases include demonstrations with multiple topics or where the topic is not explicitly stated.",
+            "The 'topic' argument denotes the specific subject or issue that the demonstration is focused on. Examples are 'Iraq', 'Afghanistan', 'the government', 'the Constituent Assembly'. Edge cases include cases where the topic is broad or implied and situations where the topic is multifaceted.",
+            "The 'topic' argument specifies the issue or cause that the demonstration is about. Examples are 'Iraq', 'Afghanistan', 'the government', 'the Constituent Assembly'. Edge cases include situations where the topic is a broad concept or where the topic is not directly mentioned.",
+            "The 'topic' argument refers to the specific issue or subject matter that the demonstrators are addressing. Examples are 'Iraq', 'Afghanistan', 'the government', 'the Constituent Assembly'. Edge cases include broad or multifaceted topics and situations where the topic is implied but not explicitly mentioned."
+        ]
+    }
+}

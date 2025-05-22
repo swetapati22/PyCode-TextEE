@@ -1,0 +1,149 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type TransferMoney which is a child event type of super class TransactionEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Identify the Event Trigger (Mention Argument): 
+    - Define the event trigger ("mention") with 5 specific definitions, and include examples of valid triggers while addressing variations, edge cases, and distinctions from related event types.
+4. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+5. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+6. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "mention": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+TransferMoney which is a child event type of super class TransactionEvent
+Arguments:
+Argument 1 -> beneficiary
+Argument 2 -> giver
+Argument 3 -> place
+Argument 4 -> recipient
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+Of course outspoken organizations such as Planned Parenthood, which gives a lot of money to Democrats, will fight with everything they've got to keep the Democratic platform as liberal as possible.
+### Event Trigger ###
+gives
+### Event Arguments ###
+For argument "giver" extracted spans ['Planned Parenthood']
+For argument "beneficiary" extracted spans ['Democrats']
+For argument "recipient" extracted spans ['Democrats']
+
+Example 2
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+A Colorado judge ordered two teen-age girls to pay about $900 for the distress a neighbor said they caused by giving her home-made cookies adorned with paper hearts.
+### Event Trigger ###
+pay
+### Event Arguments ###
+For argument "giver" extracted spans ['girls']
+For argument "beneficiary" extracted spans ['neighbor']
+For argument "place" extracted spans ['Colorado']
+
+Example 3
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+The world's most powerful fine art auction houses, Sotheby's and Christie's, have agreed to pay 40 million dollars to settle an international price-fixing scam, Sotheby's said.
+### Event Trigger ###
+pay
+### Event Arguments ###
+For argument "giver" extracted spans ['houses', "Sotheby's", "Christie's"]
+
+Example 4
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+The payment, if approved by the courts, would settle a slew of suits by clients over auctions held between 1993 and 2000 outside the United States, it said in a statement.
+### Event Trigger ###
+payment
+### Event Arguments ###
+
+Example 5
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+"Under the terms of the settlement agreement, Sotheby's and Christie's will each pay 20 million dollars," said Sotheby's, which operates in 34 countries.
+### Event Trigger ###
+pay
+### Event Arguments ###
+For argument "giver" extracted spans ["Sotheby's", "Christie's", 'each']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 6
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+Mirjana Markovic, the power behind the scenes during Milosevic's 13-year reign, is accused of illegally providing their grandson's nanny with a state-owned luxury apartment in Belgrade in 2000.
+### Event Trigger ###
+providing
+### Event Arguments ###
+For argument "beneficiary" extracted spans ['nanny']
+For argument "artifact" extracted spans ['apartment']
+For argument "seller" extracted spans ['Mirjana Markovic']
+For argument "place" extracted spans ['Belgrade']

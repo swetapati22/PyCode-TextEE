@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_StartOrg(BusinessEvent)
+```json
+{
+    "StartOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the establishment or creation of a new organization. Example triggers include 'founded', 'created', 'launched', 'opened', and 'built'.",
+            "The event is characterized by the initiation of a new business entity or organization, often involving an agent responsible for the creation and a specific location where the organization is established.",
+            "Unlike events such as 'Nominate' or 'Elect', which involve assigning roles within existing organizations, 'StartOrg' focuses on the inception of entirely new entities.",
+            "Triggers such as 'founded' and 'launched' are indicative of 'StartOrg', whereas triggers like 'appointed' or 'elected' are related to personnel changes within existing organizations.",
+            "The outcome of the 'StartOrg' event is the existence of a new organization, which differentiates it from events like 'MergeOrg' or 'AcquireOrg', where existing entities are combined or taken over."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "The agent is the entity or individual responsible for initiating the creation of the new organization. Examples are 'Kim Dae-Jung' in 'founded by former president Kim Dae-Jung'.",
+            "The agent can be a person, group, or another organization that plays a key role in the establishment of the new entity. Examples are 'AIG' in 'AIG is in the final stage of talks to create Japan's sixth largest life insurer'.",
+            "In some cases, the agent may be implied or not explicitly mentioned in the text. For instance, 'we' in 'we are going to build a monster'.",
+            "The agent is crucial for understanding who is behind the creation of the organization, providing context and accountability. Examples are 'Twentieth Century Fox' in 'he helped launch the Fox Television network'.",
+            "Unlike the 'org' argument, which refers to the new entity being created, the agent refers to the initiator of the creation process. Examples are 'Daily Planet Ltd' in 'plans to follow up its May Day launching by opening a 'sex Disneyland''."
+        ],
+        "org": [
+            "The org is the new organization being created or established. Examples are 'Millennium Democratic Party' in 'founded by former president Kim Dae-Jung'.",
+            "The org can be a company, political party, group, or any other type of organization. Examples are 'Disneyland' in 'opening a 'sex Disneyland''.",
+            "The org is the primary focus of the 'StartOrg' event, representing the new entity that comes into existence. Examples are 'network' in 'he helped launch the Fox Television network'.",
+            "In some cases, the org may be a conceptual or planned entity rather than one that already exists. Examples are 'party' in 'forging a new party'.",
+            "Unlike the 'agent' argument, which refers to the initiator, the org refers to the entity being created. Examples are 'group' in 'creating the sixth largest private sector banking group in Spain'."
+        ],
+        "place": [
+            "The place is the location where the new organization is being established. Examples are 'here' in 'opening a 'sex Disneyland' here'.",
+            "The place can be a city, country, or specific venue where the organization is set up. Examples are 'Sydney' in 'we are going to build a monster in Sydney'.",
+            "The place provides geographical context to the 'StartOrg' event, indicating where the new entity will operate. Examples are 'Japan' in 'create Japan's sixth largest life insurer'.",
+            "In some cases, the place may be implied or not explicitly mentioned in the text. Examples are 'premises' in 'we have found much bigger premises in a much better location to create a sex Disneyland'.",
+            "Unlike the 'org' and 'agent' arguments, which refer to the entity and initiator respectively, the place refers to the physical location of the new organization. Examples are 'Melbourne' in 'the Melbourne-based bordello announced'."
+        ]
+    }
+}
+```

@@ -1,0 +1,280 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Extradite which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Identify the Event Trigger (Mention Argument): 
+    - Define the event trigger ("mention") with 5 specific definitions, and include examples of valid triggers while addressing variations, edge cases, and distinctions from related event types.
+4. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+5. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+6. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "mention": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Extradite which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> destination
+Argument 3 -> origin
+Argument 4 -> person
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+The waiver of extradition that she signed simply means that if she skips out and goes to another state, she can't contest the right of the original court to have her hauled back to its jurisdiction, and that the court won't have to initiate the time-consuming process of extraditing her.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['she']
+For argument "origin" extracted spans ['state']
+For argument "destination" extracted spans ['jurisdiction']
+For argument "agent" extracted spans ['court']
+
+Example 2
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+The post-Milosevic government later extradited him to the U.N. war crimes tribunal in The Hague, the Netherlands.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['him']
+For argument "destination" extracted spans ['Hague']
+For argument "agent" extracted spans ['government']
+
+Example 3
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+taken into custody and he's currently at atlanta police department headquarters pending extradition back to the state of louisiana.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "destination" extracted spans ['state']
+For argument "origin" extracted spans ['headquarters']
+For argument "person" extracted spans ['he']
+
+Example 4
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+waiver of extradition means what
+### Event Trigger ###
+extradition
+### Event Arguments ###
+
+Example 5
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Re: waiver of extradition means what
+### Event Trigger ###
+extradition
+### Event Arguments ###
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 6
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+The Pakistani supreme court last year aquitted Ayub Masih, who had denied uttering any word against Islam or the Prophet Mohammad.
+### Event Trigger ###
+aquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Ayub Masih']
+For argument "adjudicator" extracted spans ['court']
+
+Example 7
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+In a verdict handed down on Saturday, the judge also ordered Ranjha to pay a fine of 50,000 rupees (about 870 US dollars), they said.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['Ranjha']
+For argument "adjudicator" extracted spans ['judge']
+
+Example 8
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+an oklahoma city judge has ruled prosecutors presented enough evidence at a preliminary hearing to try nichols on murder charges for the other 160 victims of the attack.
+### Event Trigger ###
+hearing
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+For argument "defendant" extracted spans ['nichols']
+For argument "prosecutor" extracted spans ['prosecutors']
+For argument "place" extracted spans ['oklahoma city']
+
+Example 9
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+Police arrested her in Abilene, Texas, Saturday where she had moved with a friend June 2.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "person" extracted spans ['her']
+For argument "place" extracted spans ['Abilene']
+For argument "agent" extracted spans ['Police']
+
+Example 10
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+negotiators say he demanded the release of four prisoners, including ramzi binalshibh, a september 11th suspect apprehended last year in pakistan.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "person" extracted spans ['ramzi binalshibh']
+For argument "entity" extracted spans ['negotiators']
+
+Example 11
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+But after spending 40 days in prison, Jordan's King Abdullah II pardoned the former legislator known for her harsh criticism of the state.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['legislator']
+For argument "place" extracted spans ['Jordan']
+For argument "adjudicator" extracted spans ['Abdullah II']
+
+Example 12
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Larry Klayman, chairman of Judicial Watch, which represent 14 survivors and victims' relatives who have filed a $1.5 billion federal lawsuit against Iraq in Washington, said his organization had served a subpoena on Al-Douri twice, on March 26 and March 28, but said he has not responded.
+### Event Trigger ###
+lawsuit
+### Event Arguments ###
+For argument "defendant" extracted spans ['Iraq']
+For argument "place" extracted spans ['Washington']
+For argument "plaintiff" extracted spans ['relatives', 'survivors']
+
+Example 13
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+lawyers in texas are trying to keep their client from becoming the 300th person executed in the state since 1982, when texas resumed capital punishment.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['person']
+For argument "place" extracted spans ['state']
+For argument "agent" extracted spans ['texas']
+
+Example 14
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+Indonesian courts have increasingly handed out severe sentences, including death, for drug smugglers.
+### Event Trigger ###
+sentences
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['courts']
+For argument "defendant" extracted spans ['smugglers']
+For argument "place" extracted spans ['Indonesian']
+
+Example 15
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In December 2001, a Manhattan jury convicted Sotheby's main shareholder and former chairman Alfred Taubman of entering into a price-fixing agreement with Christie's.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Alfred Taubman']
+For argument "place" extracted spans ['Manhattan']
+For argument "adjudicator" extracted spans ['jury']
+
+Example 16
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+Indonesia will delay the execution of six convicts including an Indian on death row after five of them appealed to the Supreme Court for a second review, prosecutors said Thursday.
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "place" extracted spans ['Indonesia']
+For argument "adjudicator" extracted spans ['Supreme Court']
+For argument "plaintiff" extracted spans ['five']
+
+Example 17
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.
+### Event Trigger ###
+charges
+### Event Arguments ###
+For argument "defendant" extracted spans ['client']
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "place" extracted spans ['court']

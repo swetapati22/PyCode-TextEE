@@ -1,0 +1,34 @@
+{
+    "Acquit(JusticeEvent)": {
+        "description": [
+            "The event is triggered by a legal decision where a defendant is declared not guilty of the charges against them. Example triggers include 'acquitted', 'walk free', and 'acquittal'.",
+            "The event is characterized by the formal release of a defendant from legal charges, often following a trial or judicial review. Key characteristics include the involvement of a judicial body and the defendant being cleared of charges.",
+            "The event scope includes any instance where a defendant is legally declared innocent, regardless of the specific legal system or jurisdiction. This can occur in various courts, including supreme courts, appellate courts, and lower courts.",
+            "Unlike the Convict event, which results in a guilty verdict, the Acquit event results in a not guilty verdict. Triggers such as 'convicted' are indicative of the Convict event, not the Acquit event.",
+            "The outcome of the Acquit event is the defendant's release from legal charges, distinguishing it from related events like Pardon, which involves forgiveness of a crime, or ReleaseParole, which involves conditional release. Triggers such as 'pardoned' or 'release' are indicative of these other events, not the Acquit event."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger ('mention') is the word or phrase that indicates the acquittal. Examples include 'acquitted', 'walk free', and 'acquittal'.",
+            "Triggers must clearly indicate a legal decision of not guilty. For instance, 'acquitted' in 'The court acquitted the defendant' is a valid trigger.",
+            "Edge cases include phrases like 'walk free', which may imply acquittal in a legal context. For example, 'He walked free after the trial' is a valid trigger.",
+            "Triggers should not be confused with similar terms from related events. For example, 'convicted' indicates a guilty verdict and is not a valid trigger for the Acquit event.",
+            "Variations in phrasing, such as 'found not guilty' or 'cleared of charges', can also serve as valid triggers if they clearly indicate an acquittal."
+        ],
+        "adjudicator": [
+            "The adjudicator is the entity responsible for the acquittal decision. Examples are 'court', 'judge', and 'jury'.",
+            "The role of the adjudicator is crucial as they are the authority declaring the defendant not guilty. For instance, 'The supreme court acquitted the defendant' identifies 'supreme court' as the adjudicator.",
+            "In cases where multiple adjudicators are involved, all should be identified. For example, 'Judges Piet Streicher and Mohamed Navsa acquitted the defendant' includes both judges as adjudicators.",
+            "The adjudicator must be a legal authority. Unlike a 'prosecutor' or 'lawyer', who may argue the case, the adjudicator makes the final decision.",
+            "Edge cases include scenarios where the adjudicator is implied but not explicitly mentioned. For example, 'The defendant was acquitted' implies a court or judge as the adjudicator."
+        ],
+        "defendant": [
+            "The defendant is the individual or entity being acquitted. Examples are 'Ayub Masih', 'character', and 'Wouter Basson'.",
+            "The defendant is the central figure in the Acquit event, as they are the ones declared not guilty. For instance, 'Ayub Masih was acquitted' identifies 'Ayub Masih' as the defendant.",
+            "In cases where the defendant is referred to generically, such as 'one defendant', the term still applies. For example, 'One defendant was acquitted' identifies 'defendant' as the argument.",
+            "The defendant must be the party facing charges. Unlike a 'plaintiff' or 'victim', who may be involved in the case, the defendant is the one on trial.",
+            "Edge cases include scenarios where the defendant is part of a group. For example, 'Four defendants were acquitted' includes all four individuals as defendants."
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "ReleaseParole(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of releasing an individual from custody or imprisonment, often under specific conditions such as parole. Example triggers include 'release', 'released', and 'parole'.",
+            "The event is characterized by the transition of a person from being confined to being free, typically under legal or conditional terms. It involves entities such as the person being released and the place of release.",
+            "Unlike the 'Pardon' event, which involves forgiveness and removal of penalties, the 'ReleaseParole' event focuses on the conditional release of a person from imprisonment.",
+            "Triggers such as 'release' and 'parole' are indicative of this event type, whereas triggers like 'sentences' or 'convicted' are related to other justice events such as 'Sentence' or 'Convict'.",
+            "The outcome of this event is the freedom of the person under certain conditions, distinguishing it from events like 'Execute' or 'ArrestJail', which involve the imposition of penalties or confinement."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of the event. Examples include 'release', 'released', and 'parole'.",
+            "Triggers such as 'release' and 'parole' are valid indicators of this event, while words like 'sentences' or 'convicted' are not.",
+            "In the context of this event, the trigger must denote the act of freeing someone from custody. For instance, 'released on parole' is a valid trigger.",
+            "Edge cases include phrases like 'earliest possible release date', which indicate a future event but still serve as valid triggers.",
+            "Triggers must be directly related to the act of release. For example, 'parole hearing' is not a valid trigger as it refers to a procedural event rather than the release itself."
+        ],
+        "entity": [
+            "Examples are 'negotiators' in the context of negotiating the release of prisoners.",
+            "The entity argument represents the group or organization involved in the release process. For instance, 'lawyer' in 'The lawyer filed an appeal for his client's release'.",
+            "In some cases, the entity may be implicit, such as 'authorities' or 'court' involved in the release decision.",
+            "The entity is crucial as it provides context to the release process, indicating who is facilitating or demanding the release.",
+            "Edge cases include situations where the entity is not explicitly mentioned but can be inferred from the context, such as 'the government' in 'The government released the prisoners'."
+        ],
+        "person": [
+            "Examples are 'ramzi binalshibh' in 'the release of four prisoners, including ramzi binalshibh'.",
+            "The person argument refers to the individual being released. For instance, 'Anwar' in 'Anwar, 56, who this week completed four years in prison'.",
+            "In some cases, the person may be referred to by a pronoun, such as 'who' in 'his client, who was released on parole'.",
+            "The person is the central figure in the event, as the release directly affects them. For example, 'thousand' in 'almost a thousand have been released'.",
+            "Edge cases include situations where the person is part of a larger group, such as 'prisoners' in 'the release of prisoners'."
+        ],
+        "place": [
+            "Examples are 'center' in 'one detention center, well over 7,000 Iraqis held there'.",
+            "The place argument indicates the location from which the person is released. For instance, 'prison' in 'completed four years in prison'.",
+            "In some cases, the place may be a broader location, such as 'country' or 'state'.",
+            "The place provides context to the release, indicating where the person was confined. For example, 'Pakistan' in 'apprehended last year in Pakistan'.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred, such as 'facility' in 'released from the facility'."
+        ]
+    }
+}

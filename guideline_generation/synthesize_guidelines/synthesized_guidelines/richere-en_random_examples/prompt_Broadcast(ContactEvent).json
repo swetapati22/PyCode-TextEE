@@ -1,0 +1,35 @@
+{
+    "Broadcast(ContactEvent)": {
+        "description": [
+            "The event is triggered by an entity publicly communicating information to an audience. Example triggers include 'addressing', 'call', 'report', 'declared', 'said', 'speak', and 'edicts'.",
+            "The event is characterized by the dissemination of information or opinions from an entity to a group of people, often in a formal or public setting. This can include speeches, announcements, reports, and declarations.",
+            "Unlike general Contact events, Broadcast events specifically involve the act of conveying information to a broader audience, rather than a one-on-one interaction. For example, 'addressing a group' is a Broadcast event, while 'talking to a friend' is not.",
+            "Triggers such as 'addressing', 'call', and 'report' are indicative of Broadcast events, as they involve the act of communicating to an audience. In contrast, triggers like 'stated' in a one-on-one context or 'sued' are not Broadcast events.",
+            "The outcome of a Broadcast event is the dissemination of information to an audience, which can influence public opinion, inform, or persuade. This differs from events like 'ArrestJail' or 'Sue', where the outcome involves legal actions and consequences."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "audience": [
+            "Examples are 'group', 'students', 'king', indicating the recipients of the broadcasted information. The audience is crucial as it defines who the information is intended for.",
+            "The audience can be a specific group of people or a general public. For instance, 'students' in a university setting or 'the public' in a press conference.",
+            "In some cases, the audience may not be explicitly mentioned but can be inferred from the context. For example, 'addressing the nation' implies the audience is the citizens of the country.",
+            "The audience is important as it helps determine the scope and impact of the broadcast. For example, 'addressing a small group' has a different impact than 'addressing the entire nation'.",
+            "Edge cases include situations where the audience is not directly mentioned but implied, such as 'declared war' where the audience could be inferred as the opposing nation or the public."
+        ],
+        "entity": [
+            "Examples are 'Gadhafi', 'globalists', 'press', 'head', 'Palin', 'OBL', 'leaders', indicating the person or group making the broadcast. The entity is the source of the information being communicated.",
+            "The entity can be an individual, a group, or an organization. For instance, 'Gadhafi' as an individual, 'globalists' as a group, or 'press' as an organization.",
+            "The entity is important as it provides the source and credibility of the broadcast. For example, a statement from 'the president' carries more weight than from an unknown individual.",
+            "In some cases, the entity may be a collective group, such as 'leaders' or 'press', indicating a broader source of information.",
+            "Edge cases include situations where the entity is not explicitly mentioned but can be inferred from the context, such as 'declared war' where the entity could be the government or a specific leader."
+        ],
+        "place": [
+            "Examples are 'La Sapienza university', indicating the location where the broadcast takes place. The place provides context and setting for the broadcast event.",
+            "The place can be a specific location, such as a university, a city, or a country. For instance, 'La Sapienza university' or 'Saudi king's palace'.",
+            "The place is important as it helps situate the broadcast event in a physical context, which can influence the interpretation and impact of the broadcast.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the context. For example, 'addressing the nation' implies a national setting.",
+            "Edge cases include situations where the place is not directly relevant to the broadcast but provides additional context, such as 'declared war' where the place could be the location of the declaration or the affected area."
+        ]
+    }
+}

@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Broadcast(ContactEvent)
+```json
+{
+    "Broadcast(ContactEvent)": {
+        "description": [
+            "The event is triggered by a public or semi-public communication from an entity to an audience. Example triggers include 'addressing', 'call', 'report', 'declared', 'said', 'speak', and 'edicts'.",
+            "The event is characterized by the dissemination of information, opinions, or directives from an entity to a group of people. It often involves a one-to-many communication format.",
+            "Unlike Correspondence events, which involve direct communication between specific individuals or entities, Broadcast events are aimed at a broader audience and do not require a direct response.",
+            "Triggers such as 'meet' or 'meeting' are indicative of Meet events, not Broadcast events, as they imply a two-way interaction rather than a one-way dissemination of information.",
+            "The outcome of a Broadcast event is the spread of information or directives to a wider audience, whereas similar events like Correspondence or Meet focus on direct, often private, exchanges between parties."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "audience": [
+            "Examples are 'group', 'students', 'king'. The audience is the group of people who receive the broadcasted message. It is important as it defines the target of the communication.",
+            "The audience can be a specific group or a general public. For instance, 'students' in a university setting or 'the public' in a press release.",
+            "In some cases, the audience may be implied rather than explicitly stated. For example, 'the press' implies the general public as the ultimate audience.",
+            "Unlike the entity, which is the source of the message, the audience is the recipient. For example, in 'Gadhafi was addressing a group of students', 'Gadhafi' is the entity and 'students' are the audience.",
+            "Edge cases include situations where the audience is not explicitly mentioned but can be inferred from context, such as 'the press' implying the general public."
+        ],
+        "entity": [
+            "Examples are 'Gadhafi', 'globalists', 'press', 'head', 'Palin', 'OBL', 'leaders'. The entity is the source or originator of the broadcasted message.",
+            "The entity can be an individual, a group, or an organization. For instance, 'Gadhafi' as an individual, 'globalists' as a group, or 'the press' as an organization.",
+            "The entity is responsible for the content of the broadcast. For example, 'the head of Diebold said his mission was to see that Bush was re-elected' identifies 'the head' as the entity.",
+            "Unlike the audience, which receives the message, the entity is the one delivering it. For example, in 'Palin's having just accepted an invitation to speak', 'Palin' is the entity.",
+            "Edge cases include situations where the entity is a collective or abstract group, such as 'globalists' or 'leaders', rather than a specific individual."
+        ],
+        "place": [
+            "Examples are 'La Sapienza university', 'London', 'Goerkes Corner'. The place is the location where the broadcast event occurs or is relevant to.",
+            "The place can be a physical location, such as a university or a city, where the broadcast is made or received.",
+            "In some cases, the place may be implied or not explicitly mentioned but can be inferred from context. For example, 'at a GUN SHOW' implies a specific location.",
+            "Unlike the entity and audience, which are people or groups, the place is a geographical or physical setting. For example, 'La Sapienza university' in 'Gadhafi was addressing a group of students at La Sapienza university'.",
+            "Edge cases include virtual or non-physical places, such as online platforms or broadcast studios, where the event takes place."
+        ]
+    }
+}
+```

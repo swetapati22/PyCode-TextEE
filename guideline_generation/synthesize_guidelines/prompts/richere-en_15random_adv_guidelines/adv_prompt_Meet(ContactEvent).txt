@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Meet(ContactEvent)
+```json
+{
+    "Meet(ContactEvent)": {
+        "description": [
+            "The event is triggered by interactions or engagements between two or more entities. Example triggers include 'meeting', 'discussion', 'approach', 'asked', and 'counsel'.",
+            "The event is characterized by the presence of at least one entity engaging with another entity, often at a specific place. The interaction can be verbal, physical, or implied.",
+            "Unlike other ContactEvents, the Meet event specifically involves a direct or indirect interaction between entities. For example, 'meeting' someone is a Meet event, whereas 'calling' someone might be a different ContactEvent.",
+            "Triggers such as 'meeting' and 'discussion' are indicative of the Meet event type, not events like 'TransportPerson' or 'EndOrg', which involve movement or organizational changes respectively.",
+            "The outcome of a Meet event is typically an exchange of information, ideas, or physical presence, distinguishing it from events like 'Sue' or 'Sentence', which involve legal actions and judgments."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'I', 'someone', 'medic', 'lives', 'I', 'Condi', 'they', 'victim', 'I', 'doctor', 'I', 'campaigners', 'her', 'students', 'i', 'one', 'her'. The entity argument represents the participants involved in the meeting or interaction.",
+            "The entity is crucial as it identifies who is involved in the Meet event. For instance, in 'I had a discussion with the doctor', 'I' and 'doctor' are the entities.",
+            "In cases where multiple entities are involved, each entity should be annotated separately. For example, 'I and my friend met the doctor' would have three entities: 'I', 'my friend', and 'doctor'.",
+            "Entities can be individuals, groups, or even abstract representations of people. For example, 'the team' or 'the committee' can be entities in a Meet event.",
+            "Unlike other arguments in different event types, the entity in a Meet event does not imply any hierarchical or causal relationship but simply denotes participation in the interaction."
+        ],
+        "place": [
+            "Examples are 'Goerkes Corner', 'station'. The place argument specifies the location where the meeting or interaction takes place.",
+            "The place is important as it provides context to the Meet event, indicating where the interaction occurred. For instance, 'We met at the park' has 'park' as the place.",
+            "In some cases, the place might be implied or not explicitly mentioned. For example, 'We had a meeting' does not specify a place, but if it were 'We had a meeting at the office', 'office' would be the place.",
+            "The place can be a physical location like 'office', 'park', or 'station', or it can be a virtual location like 'online' or 'on a call'.",
+            "Unlike events like 'TransportPerson' where the place indicates origin or destination, in a Meet event, the place simply denotes the location of the interaction without implying movement."
+        ]
+    }
+}
+```

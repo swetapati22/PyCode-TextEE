@@ -1,0 +1,10 @@
+{
+    "PhoneWrite(ContactEvent)": {
+        "description": "The PhoneWrite(ContactEvent) is triggered by any form of communication made via telephone or similar devices, such as phone calls, telephone conversations, or messages. This event involves the exchange of information or messages between entities through a phone or similar communication device, with at least one entity initiating the contact and another receiving it. Unlike other ContactEvents, PhoneWrite specifically requires the use of a telephone or similar device as the medium of communication. Triggers include terms like 'telephone', 'call', 'told', 'discussed', 'phone', 'chatted', 'contacted', and 'written' when used in the context of phone communication. The outcome is the successful transmission of information or messages between entities via a phone or similar device, distinguishing it from other events where the medium of communication is different, such as emails or in-person conversations.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "Entities are the individuals or groups involved in the phone communication. They represent the participants in the event. For example, in the sentence 'The spokesman said by telephone from Agartala,' the 'spokesman' is the entity. In 'Bush told Chretien by telephone,' both 'Bush' and 'Chretien' are entities. Entities can be individuals or groups, and pronouns should be resolved to their antecedents, such as 'she' and 'him' in 'She called him.'",
+            "place": "The place argument indicates the locations associated with the phone communication, providing context to the event. For example, in 'The spokesman said by telephone from Agartala,' 'Agartala' is the place. In 'He called from his office,' 'office' is the place. Places can be specific locations or broader areas, such as 'White House' in 'They discussed by phone from the White House.' In some cases, the place might be implied or not explicitly mentioned, but if the context indicates a location, it should be annotated as the place."
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "StartPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by a person beginning a new role or position, often indicated by verbs such as 'took', 'promoted', 'appointed', 'started', 'back at work', 'get', and 'worked'.",
+            "The event is characterized by the initiation of a new job, role, or responsibility by an individual, distinguishing it from events like 'EndPosition' which marks the conclusion of a role.",
+            "Unlike 'Nominate' events, which involve the proposal of a candidate for a position, 'StartPosition' events confirm the commencement of the role.",
+            "Triggers such as 'renomination' or 'won' are indicative of 'Nominate' or 'Elect' events, not 'StartPosition' events, which focus on the actual start of a role.",
+            "The outcome of a 'StartPosition' event is the individual actively taking on new duties or responsibilities, as opposed to 'EndPosition' where the individual ceases to hold a position."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'papers' in 'He took two small papers with declining circulation in a small city in South Australia and built a media empire'. The 'entity' refers to the organization, company, or role that the person is starting.",
+            "The 'entity' is crucial as it specifies the new role or position being assumed, such as 'Captains' in 'Quite a few were promoted Captains'.",
+            "In cases where the entity is not explicitly mentioned, the context should imply the new role, like 'work' in 'back at work'.",
+            "The 'entity' can also be a project or initiative, as seen in 'fast tracked Solyndra and made it the 'showcase' of his green jobs initiative'.",
+            "Edge cases include ambiguous roles where the entity might be inferred from the context, such as 'job' in 'get a head coaching job'."
+        ],
+        "person": [
+            "Examples are 'He' in 'He took two small papers with declining circulation in a small city in South Australia and built a media empire'. The 'person' is the individual starting the new role.",
+            "The 'person' is essential as it identifies who is beginning the new position, like 'few' in 'Quite a few were promoted Captains'.",
+            "In some instances, the 'person' might be implied through pronouns, such as 'I' in 'Ever since I started working I have helped out'.",
+            "The 'person' can also be a group or collective, as seen in 'they' in 'when they become an adult and start working'.",
+            "Edge cases include indirect references to the person, such as 'him' in 'I am so proud of him for going back to work'."
+        ],
+        "place": [
+            "Examples are 'city' in 'He took two small papers with declining circulation in a small city in South Australia and built a media empire'. The 'place' indicates the location where the new role is being assumed.",
+            "The 'place' is important as it provides geographical context, like 'South Australia' in the same example.",
+            "In some cases, the 'place' might be implied or not explicitly mentioned, such as 'work' in 'back at work'.",
+            "The 'place' can also refer to broader locations or institutions, such as 'Gulf' in 'stonewalled drilling permits in the Gulf'.",
+            "Edge cases include virtual or non-physical places, like 'online' roles or remote work scenarios."
+        ]
+    }
+}

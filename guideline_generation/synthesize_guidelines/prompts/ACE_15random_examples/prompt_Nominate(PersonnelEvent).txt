@@ -1,0 +1,350 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Nominate which is a child event type of super class PersonnelEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Nominate which is a child event type of super class PersonnelEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> person
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+and the pope will reportedly name a new head of the troubled boston archdiocese this week.
+### Event Trigger ###
+name
+### Event Arguments ###
+For argument "person" extracted spans ['head']
+For argument "agent" extracted spans ['pope']
+
+Example 2
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+British Chancellor of the Exchequer Gordon Brown on Tuesday named the current head of the country's energy regulator as the new chairman of finance watchdog the Financial Services Authority (FSA).
+### Event Trigger ###
+named
+### Event Arguments ###
+For argument "person" extracted spans ['head']
+
+Example 3
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+Peterson, of course, is a candidate for the Lt. Governor nomination.
+### Event Trigger ###
+nomination
+### Event Arguments ###
+For argument "person" extracted spans ['candidate']
+
+Example 4
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+Senator Christopher Dodd of Connecticut made the announcement today that he would not be the 10th candidate for the nomination.
+### Event Trigger ###
+nomination
+### Event Arguments ###
+For argument "person" extracted spans ['candidate']
+
+Example 5
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+He explained he could better spend the next two years on homeland security, the economy and judicial nominations.
+### Event Trigger ###
+nominations
+### Event Arguments ###
+
+Example 6
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+I'd love to call it a classic raid -- he's making an offer for the company, nominating his own board, claiming management can accept one or the other or both, and hinting that if they paid him enough, he'd probably go away.
+### Event Trigger ###
+nominating
+### Event Arguments ###
+For argument "person" extracted spans ['board']
+For argument "agent" extracted spans ['he']
+
+Example 7
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+In order to improve the epidemic control, Secretary for Social Affairs and Culture Chui Sai On, who has been named director of the SARS task force by the government, has designated representatives from the Health Services and the Center for Disease Prevention and Control to visit neighboring Guangdong Province on Thursday, to learn from Guangdong's experience and know-how in combating SARS, which have been acknowledged by WHO.
+### Event Trigger ###
+named
+### Event Arguments ###
+For argument "person" extracted spans ['Chui Sai On']
+For argument "agent" extracted spans ['government']
+
+Example 8
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+So any thoughts on who you uh you would name?
+### Event Trigger ###
+name
+### Event Arguments ###
+For argument "person" extracted spans ['who']
+For argument "agent" extracted spans ['you']
+
+Example 9
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+You know who I would name?
+### Event Trigger ###
+name
+### Event Arguments ###
+For argument "person" extracted spans ['who']
+For argument "agent" extracted spans ['I']
+
+Example 10
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+Um,  well, there's been a couple where -- they've- they talked about the Cabinet -- for -- Bush, and Bush has been,  um,  you know,  selecting new Cabinet members and -- all of the new members are people that I'm- I don't really know very well.
+### Event Trigger ###
+selecting
+### Event Arguments ###
+For argument "person" extracted spans ['members']
+For argument "agent" extracted spans ['Bush']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Prison authorities have given the nod for Anwar to be taken home later in the afternoon to marry his eldest daughter, Nurul Izzah, to engineer Raja Ahmad Sharir Iskandar in a traditional Malay ceremony, he said.
+### Event Trigger ###
+marry
+### Event Arguments ###
+For argument "person" extracted spans ['daughter', 'Raja Ahmad Sharir Iskandar']
+For argument "place" extracted spans ['home']
+
+Example 12
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "place" extracted spans ['united states']
+For argument "org" extracted spans ['worldcom']
+
+Example 13
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+Some 70 people were arrested Saturday as demonstrators clashed with police at the end of a major peace rally here, as at least 200,000 anti-war protesters took to the streets across the United States and Canada.
+### Event Trigger ###
+rally
+### Event Arguments ###
+For argument "place" extracted spans ['here']
+For argument "entity" extracted spans ['protesters']
+
+Example 14
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+an oklahoma city judge has ruled prosecutors presented enough evidence at a preliminary hearing to try nichols on murder charges for the other 160 victims of the attack.
+### Event Trigger ###
+hearing
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+For argument "defendant" extracted spans ['nichols']
+For argument "prosecutor" extracted spans ['prosecutors']
+For argument "place" extracted spans ['oklahoma city']
+
+Example 15
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+Kristin Scott, the mother, told police she gave birth secretly to both babies at her parents' home in Byrds Creek, Richland County, one of unknown sex in April 2001 and the other, a fullterm girl, January 14.
+### Event Trigger ###
+birth
+### Event Arguments ###
+For argument "person" extracted spans ['babies', 'one', 'other']
+For argument "place" extracted spans ['home']
+
+Example 16
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Putin, who enjoyed a warm relationship with former Chinese president Jiang Zeming, has made efforts to nurture ties with Hu and was the first world leader to go to Beijing to meet him in December when he was president-in-waiting.
+### Event Trigger ###
+former
+### Event Arguments ###
+For argument "person" extracted spans ['president']
+For argument "place" extracted spans ['Chinese']
+For argument "entity" extracted spans ['Chinese']
+
+Example 17
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+lawyers in texas are trying to keep their client from becoming the 300th person executed in the state since 1982, when texas resumed capital punishment.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['person']
+For argument "place" extracted spans ['state']
+For argument "agent" extracted spans ['texas']
+
+Example 18
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+Of course outspoken organizations such as Planned Parenthood, which gives a lot of money to Democrats, will fight with everything they've got to keep the Democratic platform as liberal as possible.
+### Event Trigger ###
+gives
+### Event Arguments ###
+For argument "giver" extracted spans ['Planned Parenthood']
+For argument "beneficiary" extracted spans ['Democrats']
+For argument "recipient" extracted spans ['Democrats']
+
+Example 19
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Everyone has heard the story: Beatriz Marinello was elected USCF President on August 11, 2003 in Los Angeles.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['Beatriz Marinello']
+For argument "place" extracted spans ['Los Angeles']
+For argument "entity" extracted spans ['USCF']
+
+Example 20
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+knew saddam hussein's rej geemg is no more, the focus in iraq is turning from military action to rebuilding which means the coalition's role in the country will have to change.
+### Event Trigger ###
+is no more
+### Event Arguments ###
+For argument "place" extracted spans ['iraq']
+For argument "org" extracted spans ['rej geemg']
+
+Example 21
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+Mirjana Markovic, the power behind the scenes during Milosevic's 13-year reign, is accused of illegally providing their grandson's nanny with a state-owned luxury apartment in Belgrade in 2000.
+### Event Trigger ###
+providing
+### Event Arguments ###
+For argument "beneficiary" extracted spans ['nanny']
+For argument "artifact" extracted spans ['apartment']
+For argument "seller" extracted spans ['Mirjana Markovic']
+For argument "place" extracted spans ['Belgrade']
+
+Example 22
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+In the latest edition, staff writer Jeremy M. Lazarus reports that the Legislative Black Caucus celebrated killing a bill that would have merged the Department of Minority Business Enterprise (DMBE) with the Department of Business Assistance (DBA).
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['Department of Minority Business Enterprise', 'Department of Business Assistance']
+
+Example 23
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+Indonesia will delay the execution of six convicts including an Indian on death row after five of them appealed to the Supreme Court for a second review, prosecutors said Thursday.
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "place" extracted spans ['Indonesia']
+For argument "adjudicator" extracted spans ['Supreme Court']
+For argument "plaintiff" extracted spans ['five']
+
+Example 24
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+telephone
+### Event Arguments ###
+For argument "place" extracted spans ['Agartala']
+For argument "entity" extracted spans ['spokesman']
+
+Example 25
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+negotiators say he demanded the release of four prisoners, including ramzi binalshibh, a september 11th suspect apprehended last year in pakistan.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "person" extracted spans ['ramzi binalshibh']
+For argument "entity" extracted spans ['negotiators']

@@ -1,0 +1,35 @@
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions where an individual or group is taken into custody by law enforcement, such as 'arrested', 'detained', or 'jailed'.",
+            "The event is characterized by the involvement of law enforcement agents and the physical act of taking someone into custody, often at a specific location.",
+            "Unlike events such as 'Pardon' or 'Acquit', this event involves the initiation of custody rather than the release or exoneration of an individual.",
+            "Triggers such as 'arrested' or 'jailed' indicate this event type, whereas triggers like 'pardoned' or 'acquitted' are indicative of different JusticeEvent types.",
+            "The outcome of this event is the confinement of the person(s) involved, distinguishing it from events like 'Sue' or 'Appeal', which involve legal proceedings without immediate physical custody."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are law enforcement entities such as 'Police', 'FBI', or 'sheriff'.",
+            "The agent is the entity responsible for carrying out the arrest or detention.",
+            "In the context of this event, the agent is typically a formal authority with the power to enforce the law.",
+            "For instance, in 'Police arrested her', 'Police' is the agent.",
+            "Unlike other roles such as 'adjudicator' in 'Sentence' events, the agent here is directly involved in the physical act of arresting."
+        ],
+        "person": [
+            "Examples are individuals or groups who are being taken into custody, such as 'her', 'people', or 'group'.",
+            "The person is the target of the arrest or detention action.",
+            "This argument is crucial as it identifies who is being subjected to the justice action.",
+            "For example, in 'Some 70 people were arrested', 'people' is the person argument.",
+            "Unlike the 'defendant' in 'Sue' or 'Acquit' events, the person here is specifically the one being physically detained."
+        ],
+        "place": [
+            "Examples are locations where the arrest or detention takes place, such as 'Abilene', 'New York', or 'San Francisco'.",
+            "The place provides the geographical context for the event.",
+            "This argument helps in understanding where the justice action is occurring.",
+            "For instance, in 'arrested her in Abilene, Texas', 'Abilene' is the place.",
+            "Unlike the 'place' in 'Sue' events which might indicate where a lawsuit is filed, here it indicates where the physical act of arrest happens."
+        ]
+    }
+}

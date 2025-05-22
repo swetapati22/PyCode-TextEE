@@ -1,0 +1,356 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type TrialHearing which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+TrialHearing which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> adjudicator
+Argument 2 -> defendant
+Argument 3 -> place
+Argument 4 -> prosecutor
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+In The United States versus Miller, the Court held:
+### Event Trigger ###
+versus
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Court']
+For argument "prosecutor" extracted spans ['United States']
+For argument "defendant" extracted spans ['Miller']
+
+Example 2
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+Aymette v. State of Tennessee, 2 Humph., Tenn., 154, 158.
+### Event Trigger ###
+v.
+### Event Arguments ###
+For argument "prosecutor" extracted spans ['State']
+For argument "defendant" extracted spans ['Aymette']
+For argument "place" extracted spans ['Tennessee']
+
+Example 3
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+He is like Giovanni Falcone, the magistrate from Palermo who was so successful in prosecuting Mafia guys in the Maxi Trials, and got blown up for it along with his family.
+### Event Trigger ###
+Trials
+### Event Arguments ###
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "defendant" extracted spans ['guys']
+
+Example 4
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+Sorry, liar, but the case that was brought and won against the NBP was DISMISSED by the direct orders of the RACIST Eric Holder.
+### Event Trigger ###
+case
+### Event Arguments ###
+For argument "defendant" extracted spans ['NBP']
+
+Example 5
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+I just think it would have been nice/advisable to have this go to court and KNOW what's what before people started throwing molotov cocktails every which way.
+### Event Trigger ###
+go to court
+### Event Arguments ###
+
+Example 6
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+Clinton was in trouble for suborning perjury in a civil rights case where he was the defendant.
+### Event Trigger ###
+case
+### Event Arguments ###
+For argument "defendant" extracted spans ['he']
+
+Example 7
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+It was proven in a lower court by a judge.
+### Event Trigger ###
+proven
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+
+Example 8
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+Granted that was overruled in a higher court, that is how we got here.
+### Event Trigger ###
+overruled
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+
+Example 9
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+It was proven in a lower court by a judge.
+### Event Trigger ###
+proven
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+
+Example 10
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+Granted that was overruled in a higher court, that is how we got here.
+### Event Trigger ###
+overruled
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Attack(ConflictEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "attacker" extracted spans ['they']
+For argument "place" extracted spans ['where']
+For argument "target" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+
+Example 12
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+And this while the country was receiving generous aid: by May of 2001, Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.
+### Event Trigger ###
+spent
+### Event Arguments ###
+For argument "giver" extracted spans ['E.U.']
+For argument "beneficiary" extracted spans ['country']
+For argument "place" extracted spans ['country']
+
+Example 13
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Loss of 2,400 jobs at Pfizer in Sandwich, Kent....massive impact on employment in local area...loss of confidence in UK...
+### Event Trigger ###
+Loss
+### Event Arguments ###
+For argument "entity" extracted spans ['Pfizer']
+For argument "place" extracted spans ['Sandwich']
+For argument "person" extracted spans ['2,400']
+
+Example 14
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 15
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+In a joint motion, lawyers for the defense and prosecution asked Magistrate Judge Marianne B. Bowler of U.S. District Court in Massachusetts to release Phillipos, 19, on $100,000 bail on the condition that he stay under house arrest and wear an electronic tracking bracelet.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "agent" extracted spans ['Marianne B. Bowler']
+For argument "person" extracted spans ['Phillipos']
+For argument "place" extracted spans ['Massachusetts']
+
+Example 16
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+He took two small papers with declining circulation in a small city in South Australia and built a media empire and made himself on of the wealthiest men in the world.
+### Event Trigger ###
+took
+### Event Arguments ###
+For argument "person" extracted spans ['He']
+For argument "place" extracted spans ['city']
+For argument "entity" extracted spans ['papers']
+
+Example 17
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "victim" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+For argument "place" extracted spans ['where']
+
+Example 18
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Another is that when the government orders a military member through Permanent Change of Station orders (PCS) to relocate from one place to another the military sponsors the spouse to travel and relocate to the new base with their spouse.
+### Event Trigger ###
+relocate
+### Event Arguments ###
+For argument "agent" extracted spans ['government']
+For argument "person" extracted spans ['member']
+For argument "origin" extracted spans ['place']
+For argument "destination" extracted spans ['another']
+
+Example 19
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 20
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Assange, the founder of the anti-secrecy group WikiLeaks, has been holed up for nearly a year in the tiny Ecuadorean Embassy here, stymying British attempts to extradite him to Sweden.
+### Event Trigger ###
+extradite
+### Event Arguments ###
+For argument "agent" extracted spans ['British']
+For argument "person" extracted spans ['him']
+For argument "origin" extracted spans ['Ecuadorean']
+For argument "destination" extracted spans ['Sweden']
+
+Example 21
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+To reduce costs last year, the district closed almost half the schools in the city.
+### Event Trigger ###
+closed
+### Event Arguments ###
+For argument "org" extracted spans ['half']
+For argument "place" extracted spans ['city']
+
+Example 22
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+“The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities that Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague to discuss the case of Julian Assange,” the spokesman said.
+### Event Trigger ###
+meet
+### Event Arguments ###
+For argument "entity" extracted spans ['Patino', 'William Hague']
+For argument "place" extracted spans ['London']
+
+Example 23
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Why is it only one of the identified groups is being barred from Civil Marriage (in most places).
+### Event Trigger ###
+Marriage
+### Event Arguments ###
+For argument "person" extracted spans ['groups']
+For argument "place" extracted spans ['places']
+
+Example 24
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 25
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+In Rapid City, SD they have arrested over 300 for DUI since the first of the year.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "person" extracted spans ['300']
+For argument "place" extracted spans ['Rapid City']

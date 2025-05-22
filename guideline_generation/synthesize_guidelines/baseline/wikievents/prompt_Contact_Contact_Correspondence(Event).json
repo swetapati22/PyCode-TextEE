@@ -1,0 +1,35 @@
+{
+    "Contact_Contact_Correspondence(Event)": {
+        "description": [
+            "The event type 'Contact_Contact_Correspondence' refers to any form of communication or interaction between two or more participants. This can include verbal, written, or electronic communication. The event can be triggered by words such as 'said', 'told', 'emailed', 'called', 'ordered', 'conference', etc. The event can be triggered by direct quotes, reported speech, or any form of communication act.",
+            "The event type 'Contact_Contact_Correspondence' involves any instance where information is exchanged between individuals or groups. This can be through various mediums such as speech, writing, or digital communication. The event can be triggered by verbs like 'stated', 'mentioned', 'reported', 'announced', 'communicated', etc. The event can be triggered by both formal and informal communication.",
+            "The event type 'Contact_Contact_Correspondence' captures instances of communication between entities. This includes conversations, emails, phone calls, and other forms of correspondence. The event can be triggered by terms like 'discussed', 'talked', 'informed', 'declared', 'addressed', etc. The event can be triggered by both synchronous and asynchronous communication.",
+            "The event type 'Contact_Contact_Correspondence' is defined as any event where there is an exchange of information between participants. This can occur through various channels such as face-to-face conversations, written documents, or electronic messages. The event can be triggered by phrases like 'spoke', 'wrote', 'texted', 'communicated', 'briefed', etc. The event can be triggered by both direct and indirect communication.",
+            "The event type 'Contact_Contact_Correspondence' refers to any interaction where information is shared between parties. This can include spoken words, written text, or digital communication. The event can be triggered by words such as 'expressed', 'conveyed', 'notified', 'announced', 'shared', etc. The event can be triggered by both formal announcements and casual conversations."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "participant": [
+            "The 'participant' argument refers to the individuals or groups involved in the communication event. Examples are 'Obama', 'John Kerry', 'spokeswoman', 'Nidal Hasan', 'Awlaki'. This argument captures the entities who are either sending or receiving the information. Edge cases include situations where the participant is a group or organization rather than an individual.",
+            "The 'participant' argument identifies the entities engaged in the correspondence. Examples are 'federal', 'secretary', 'Tsarnaev', 'speaker', 'Novack'. This argument includes all parties involved in the communication, whether they are speaking, writing, or being addressed. Edge cases include anonymous participants or those referred to by titles rather than names.",
+            "The 'participant' argument denotes the people or groups taking part in the communication. Examples are 'police', 'We', 'owner', 'police', 'Tsarnaev'. This argument encompasses all entities involved in the exchange of information, regardless of their role in the communication. Edge cases include participants who are implied but not explicitly mentioned.",
+            "The 'participant' argument captures the individuals or groups who are part of the communication event. Examples are 'Stephen Silva', 'Tsarnaev', 'Obama', 'John Kerry', 'spokeswoman'. This argument includes all entities who are either communicating or being communicated to. Edge cases include participants who are represented by pronouns or other indirect references.",
+            "The 'participant' argument refers to the entities involved in the communication process. Examples are 'Awlaki', 'Nidal Hasan', 'police', 'We', 'owner'. This argument includes all parties who are part of the correspondence, whether they are initiating or receiving the communication. Edge cases include participants who are part of a larger group or organization."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the communication event takes place. Examples are 'Massachusetts'. This argument captures the physical or virtual setting of the correspondence. Edge cases include situations where the place is implied or not explicitly mentioned.",
+            "The 'place' argument identifies the location associated with the communication event. Examples are 'Massachusetts'. This argument includes the geographical or situational context of the correspondence. Edge cases include virtual locations or places that are part of a larger area.",
+            "The 'place' argument denotes the location where the communication occurs. Examples are 'Massachusetts'. This argument encompasses the setting of the communication, whether it is a physical place or a virtual environment. Edge cases include places that are referred to indirectly or through descriptions.",
+            "The 'place' argument captures the location of the communication event. Examples are 'Massachusetts'. This argument includes the specific or general area where the correspondence takes place. Edge cases include locations that are part of a broader region or context.",
+            "The 'place' argument refers to the setting of the communication event. Examples are 'Massachusetts'. This argument includes the place where the communication happens, whether it is a physical location or a virtual space. Edge cases include places that are implied or mentioned in passing."
+        ],
+        "topic": [
+            "The 'topic' argument refers to the subject matter of the communication event. Examples are 'state', 'Prophet', '9mm P95 Ruger'. This argument captures the main focus or theme of the correspondence. Edge cases include situations where the topic is broad or multifaceted.",
+            "The 'topic' argument identifies the subject of the communication. Examples are 'state', 'Prophet', '9mm P95 Ruger'. This argument includes the central issue or content being discussed or conveyed. Edge cases include topics that are implied or not explicitly stated.",
+            "The 'topic' argument denotes the subject matter being communicated. Examples are 'state', 'Prophet', '9mm P95 Ruger'. This argument encompasses the main idea or theme of the correspondence. Edge cases include topics that are part of a larger discussion or context.",
+            "The 'topic' argument captures the focus of the communication event. Examples are 'state', 'Prophet', '9mm P95 Ruger'. This argument includes the specific subject or issue being addressed in the communication. Edge cases include topics that are mentioned indirectly or through related terms.",
+            "The 'topic' argument refers to the subject of the communication. Examples are 'state', 'Prophet', '9mm P95 Ruger'. This argument includes the main theme or content of the correspondence. Edge cases include topics that are broad or have multiple aspects."
+        ]
+    }
+}

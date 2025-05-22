@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_EndPosition(PersonnelEvent)
+```json
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the termination or conclusion of a person's role or position within an organization or entity. Example triggers include 'quit', 'ending', 'removal', 'leave', 'steps down', 'formerly', and 'previously'.",
+            "The event is characterized by a person ceasing to hold a specific position or title, often marked by explicit language indicating the end of their tenure. This can include voluntary resignation, retirement, or being replaced.",
+            "Unlike the StartPosition event, which marks the beginning of a role, the EndPosition event specifically denotes the conclusion of a role. For instance, 'steps down' indicates an end, whereas 'appointed' would indicate a start.",
+            "Triggers such as 'quit' and 'removal' are indicative of the EndPosition event type, not the StartPosition event type. The focus is on the cessation of duties rather than the commencement.",
+            "The event outcomes include the person no longer holding their previous position, which can be due to various reasons such as resignation, termination, or retirement. This is distinct from events like Elect, which involve the selection or appointment to a new role."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'Vivendi Universal Entertainment', 'Barclays Bank', 'Department of Trade and Industry'. The entity argument refers to the organization or entity from which the person is ending their position.",
+            "The entity is crucial as it provides context to the position being vacated. For instance, 'Vivendi Universal Entertainment' in 'Barry Diller quit as chief of Vivendi Universal Entertainment'.",
+            "In cases where multiple entities are mentioned, such as 'Barclays Bank, BZW, and Kleinwort Benson', all relevant entities should be included if they are part of the person's previous roles.",
+            "The entity can sometimes be implied or indirectly referenced, such as 'the entertainment unit of French giant Vivendi Universal'.",
+            "Edge cases include situations where the entity is a broader category or sector, like 'the Department of Trade and Industry' for a civil servant."
+        ],
+        "person": [
+            "Examples are 'Barry Diller', 'Jean-Marie Messier', 'Callum McCarthy'. The person argument identifies the individual whose position is ending.",
+            "The person is the central figure in the event, as their role or position is the one being concluded. For example, 'Jean-Marie Messier' in 'the removal of expansionist boss Jean-Marie Messier'.",
+            "In some cases, the person may be referred to by a pronoun, such as 'he' or 'his', which should be correctly identified and linked to the individual.",
+            "The person can also be identified by their title or role, such as 'president' or 'incumbent', which provides additional context to their position.",
+            "Edge cases include situations where the person's name is not explicitly mentioned but can be inferred from the context, such as 'the most moderate member of the Bush cabinet' referring to Colin Powell."
+        ],
+        "place": [
+            "Examples are 'Chinese', 'London'. The place argument refers to the geographical location associated with the end of the position.",
+            "The place provides additional context to the event, indicating where the position was held or where the person is leaving from. For example, 'London' in 'when incumbent Howard Davies steps down'.",
+            "In some cases, the place may be implied or part of a larger entity, such as 'Chinese' in 'former Chinese president'.",
+            "The place can also refer to the broader location or region relevant to the event, such as 'the University of London' for a position within the London School of Economics.",
+            "Edge cases include situations where the place is not directly mentioned but can be inferred from the context, such as 'the world's second-largest media group' referring to Vivendi Universal's global operations."
+        ]
+    }
+}
+```

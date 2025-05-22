@@ -1,0 +1,35 @@
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the termination or conclusion of a person's role, job, or position. Example triggers include 'retired', 'fired', 'quit', 'gave up work', and 'lost'.",
+            "The event is characterized by a person ceasing to hold a particular position or job, often due to resignation, termination, or retirement. It involves a clear end to a professional role.",
+            "Unlike StartPosition events, which mark the beginning of a new role, EndPosition events signify the end of an existing role. Triggers such as 'started' or 'began' are indicative of StartPosition events, not EndPosition events.",
+            "EndPosition events can occur voluntarily, such as 'retired' or 'quit', or involuntarily, such as 'fired' or 'lost'. The key outcome is the cessation of the person's role or job.",
+            "This event type does not include transitions to new roles or positions, which are covered by StartPosition events. For example, 'left the law and went to education policy' is an EndPosition event, not a StartPosition event."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are organizations or companies from which the person is departing. For instance, in 'Loss of 2,400 jobs at Pfizer', 'Pfizer' is the entity.",
+            "The entity represents the organization or institution associated with the person's role. In 'she turned him down and got fired because of that', 'DMV' is the entity.",
+            "Entities are crucial for understanding the context of the job or position being ended. In 'retirement was forced because PSU knew he was a child molester', 'PSU' is the entity.",
+            "Entities can be specific companies, institutions, or broader organizational units. For example, 'Pfizer' in 'Loss of 2,400 jobs at Pfizer' is a specific company.",
+            "In cases where the entity is not explicitly mentioned, it may be inferred from the context. For example, 'gave up work' may imply an unspecified employer or organization."
+        ],
+        "person": [
+            "Examples are individuals whose roles or jobs are ending. For instance, in 'My mum gave up work', 'mum' is the person.",
+            "The person is the subject experiencing the end of their position. In 'Sandusky retired', 'Sandusky' is the person.",
+            "Persons are central to the event as they are the ones whose professional roles are concluding. In 'Paterno lost his job', 'Paterno' is the person.",
+            "The person can be identified by pronouns or proper names. For example, 'he' in 'retirement was forced because PSU knew he was a child molester' is the person.",
+            "In some cases, the person may be represented by a group or number, such as '2,400' in 'Loss of 2,400 jobs at Pfizer'."
+        ],
+        "place": [
+            "Examples are locations where the end of the position occurs. For instance, in 'Loss of 2,400 jobs at Pfizer in Sandwich, Kent', 'Sandwich' is the place.",
+            "The place provides geographical context to the event. In 'retired right after that incident', the place may be implied by the broader context.",
+            "Places can be specific cities, regions, or broader areas. For example, 'Sandwich' in 'Loss of 2,400 jobs at Pfizer in Sandwich, Kent' is a specific city.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the context. For example, 'gave up work' may imply a workplace location.",
+            "The place helps to situate the event within a physical or geographical context, adding depth to the understanding of the event's impact."
+        ]
+    }
+}

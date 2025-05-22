@@ -1,0 +1,9 @@
+{
+    "MergeOrg(BusinessEvent)": {
+        "description": "The MergeOrg event is triggered by the merging of two or more organizations into a single entity. This event is characterized by the combination of separate organizations, often resulting in a new or larger organization, and can involve companies, schools, airlines, or other entities. Unlike the DeclareBankruptcy event, which involves an organization ceasing operations due to financial insolvency, the MergeOrg event involves the unification of organizations to continue operations together. Triggers such as 'merge', 'merged', and 'merger' are indicative of this event, while triggers like 'bankruptcy' or 'closed' are not. The outcome of a MergeOrg event is the formation of a single, unified organization from previously separate entities, distinct from the StartOrg event where a new organization is created from scratch.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "org": "The 'org' argument represents the entities involved in the merging process. Examples include 'ABN Amro' in the context of a merger with another organization, 'Southwest High' and 'schools' in the context of school mergers, and 'American Airlines' and 'US Airways' in the context of airline mergers. This argument is crucial as it identifies the specific organizations being combined, helping to understand the scope and impact of the merger. Edge cases include scenarios where multiple organizations are mentioned, such as 'Delta Air Lines', 'Northwest Airlines', 'United', and 'Continental'. Unlike other event types, the 'org' argument in MergeOrg specifically refers to the entities being unified, not those being dissolved or newly created."
+        }
+    }
+}

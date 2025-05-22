@@ -1,0 +1,35 @@
+{
+    "Sentence(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the imposition of a judicial punishment or penalty on a defendant. Example triggers include 'sentence', 'got', 'served', 'punishment', and 'sentenced'.",
+            "The event is characterized by the formal declaration of a punishment by an adjudicator, typically a court or judge, directed at a defendant. This can include various forms of punishment such as imprisonment, fines, or other penalties.",
+            "Unlike the Convict event, which focuses on the determination of guilt, the Sentence event specifically pertains to the punishment phase following a conviction. For example, 'convicted' indicates a Convict event, not a Sentence event.",
+            "Triggers such as 'acquitted' or 'pardoned' are indicative of Acquit or Pardon events, respectively, and not the Sentence event type. The Sentence event is concerned with the imposition of a penalty rather than the absolution or release of the defendant.",
+            "The outcome of the Sentence event is the formal assignment of a penalty to the defendant, which can vary in severity and type. This distinguishes it from related events like Appeal, which involves challenging a decision, or ReleaseParole, which involves freeing a defendant under certain conditions."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', or any official body responsible for delivering the sentence. The adjudicator is the authority that imposes the punishment on the defendant.",
+            "The role of the adjudicator is crucial as it signifies the entity that has the legal power to determine and declare the sentence. For instance, 'court' in 'a court in Salonika' is the adjudicator.",
+            "In cases where the adjudicator is not explicitly mentioned, it can often be inferred from the context. For example, 'he was sentenced to 5 years' implies a judicial authority as the adjudicator.",
+            "Unlike the defendant, who is the recipient of the sentence, the adjudicator is the entity that issues the sentence. For example, 'jury' in 'acquitted by a London jury' is an adjudicator in an Acquit event, not a Sentence event.",
+            "Edge cases may include non-traditional adjudicators such as 'tribunal' or 'panel'. These still qualify as adjudicators if they have the authority to impose sentences."
+        ],
+        "defendant": [
+            "Examples are 'mayor', 'he', 'guy', 'man', or any individual who is receiving the sentence. The defendant is the person being punished.",
+            "The defendant is central to the Sentence event as they are the subject of the punishment. For instance, 'mayor' in 'convicted the former mayor' is the defendant.",
+            "In some contexts, the defendant may be referred to indirectly or by a pronoun. For example, 'he' in 'he only got 4 years' is the defendant.",
+            "Unlike the adjudicator, who imposes the sentence, the defendant is the one who receives it. For example, 'sisters' in 'acquitted of fraud charges' are defendants in an Acquit event, not a Sentence event.",
+            "Edge cases may include groups or entities acting as defendants, such as 'company' or 'organization', if they are the recipients of the sentence."
+        ],
+        "place": [
+            "Examples are 'Salonika', 'Greece', 'courtroom', or any location where the sentence is delivered or relevant to the event. The place provides the geographical context for the Sentence event.",
+            "The place is important as it situates the event within a specific legal jurisdiction or physical location. For instance, 'Salonika' in 'a court in Salonika' is the place.",
+            "In some cases, the place may be implied rather than explicitly stated. For example, 'in February' might imply a specific location if the context is clear.",
+            "Unlike the adjudicator or defendant, the place is a geographical reference and not a person or entity. For example, 'London' in 'acquitted by a London jury' is the place in an Acquit event, not a Sentence event.",
+            "Edge cases may include virtual or non-traditional locations such as 'online court' or 'remote hearing', which still qualify as places if they provide the context for the Sentence event."
+        ]
+    }
+}

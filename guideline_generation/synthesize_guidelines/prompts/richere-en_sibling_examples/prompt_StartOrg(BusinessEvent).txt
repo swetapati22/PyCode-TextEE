@@ -1,0 +1,213 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type StartOrg which is a child event type of super class BusinessEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+StartOrg which is a child event type of super class BusinessEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> org
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot, 6 killed.
+### Event Trigger ###
+open
+### Event Arguments ###
+For argument "agent" extracted spans ['dealer']
+For argument "org" extracted spans ['store']
+For argument "place" extracted spans ['mall']
+
+Example 2
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot, 6 killed.
+### Event Trigger ###
+open
+### Event Arguments ###
+For argument "agent" extracted spans ['dealer']
+For argument "org" extracted spans ['store']
+For argument "place" extracted spans ['mall']
+
+Example 3
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+Why can people not set up private businesses on their property - why are you making this illegal?
+### Event Trigger ###
+set up
+### Event Arguments ###
+For argument "agent" extracted spans ['people']
+For argument "org" extracted spans ['businesses']
+For argument "place" extracted spans ['property']
+
+Example 4
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+Where it goes wrong in practice is when they create a central government to control the communes.
+### Event Trigger ###
+create
+### Event Arguments ###
+
+Example 5
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+Then most recently he has set up a new faith foundation in which it is his goal "to tackle global poverty, challenge conflict and unite the world's religions".
+### Event Trigger ###
+set up
+### Event Arguments ###
+For argument "agent" extracted spans ['he']
+For argument "org" extracted spans ['foundation']
+
+Example 6
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+Blair launches faith foundation google it
+### Event Trigger ###
+launches
+### Event Arguments ###
+For argument "agent" extracted spans ['Blair']
+For argument "org" extracted spans ['foundation']
+
+Example 7
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+I was one of the founders of Mad City Rollers 10 years ago, and Ron Dennis and I switched off on running the club, until we both got tired of it, and sort of took up other hobbies.
+### Event Trigger ###
+founders
+### Event Arguments ###
+For argument "org" extracted spans ['Mad City Rollers']
+For argument "agent" extracted spans ['one', 'founders']
+
+Example 8
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+However, hopefully we will someday return to the Constitution and have the states actually set up militia under government control, which people could join if they wished to.
+### Event Trigger ###
+set up
+### Event Arguments ###
+For argument "agent" extracted spans ['states']
+For argument "org" extracted spans ['militia']
+
+Example 9
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The only thing the Holocaust did was underline the need for a Jewish homeland, an idea that that really came to fruition in the late 1800's when Theodore Herzl lead the First Zionist Congress which then lead to the creation of the the World Zionist Organization.
+### Event Trigger ###
+creation
+### Event Arguments ###
+For argument "org" extracted spans ['World Zionist Organization']
+
+Example 10
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The UN then established UNSCOP to devise a solution and they too came up with a partition plan which took the form of a GA resolution - Israel declared independence according to the partition plan a day before the British Mandate was due to expire and in 1949 they were admitted to the UN so no, the Jews did not exceed their authority, gain a majority through immigration or come up with a nefarious plan to split Palestine.
+### Event Trigger ###
+established
+### Event Arguments ###
+For argument "org" extracted spans ['UNSCOP']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+Employees lost their retirement savings and shareholders lost billions of dollars after the once highflying company slid into bankruptcy in 2001.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['company']
+
+Example 12
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 13
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+To reduce costs last year, the district closed almost half the schools in the city.
+### Event Trigger ###
+closed
+### Event Arguments ###
+For argument "org" extracted spans ['half']
+For argument "place" extracted spans ['city']

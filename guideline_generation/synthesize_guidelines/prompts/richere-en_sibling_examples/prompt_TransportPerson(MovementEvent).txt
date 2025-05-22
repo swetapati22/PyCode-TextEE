@@ -1,0 +1,199 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type TransportPerson which is a child event type of super class MovementEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+TransportPerson which is a child event type of super class MovementEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> destination
+Argument 3 -> instrument
+Argument 4 -> origin
+Argument 5 -> person
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Another is that when the government orders a military member through Permanent Change of Station orders (PCS) to relocate from one place to another the military sponsors the spouse to travel and relocate to the new base with their spouse.
+### Event Trigger ###
+relocate
+### Event Arguments ###
+For argument "agent" extracted spans ['government']
+For argument "person" extracted spans ['member']
+For argument "origin" extracted spans ['place']
+For argument "destination" extracted spans ['another']
+
+Example 2
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+It's enough to say I left after I was punched in the head while driving- almost lost control of the car- and he didn't seem to realise he'd even done anything.
+### Event Trigger ###
+driving
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "instrument" extracted spans ['the car']
+
+Example 3
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Muslims in lower Manhattan go to a mosque or prayer room there, because that's where they live ot work.
+### Event Trigger ###
+go
+### Event Arguments ###
+For argument "agent" extracted spans ['Muslims']
+For argument "destination" extracted spans ['mosque', 'room']
+
+Example 4
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Then you drop that receipt into a box before leaving the polling place.
+### Event Trigger ###
+leaving
+### Event Arguments ###
+For argument "person" extracted spans ['you']
+For argument "origin" extracted spans ['place']
+
+Example 5
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Then you drop that receipt into a box before leaving the polling place.
+### Event Trigger ###
+leaving
+### Event Arguments ###
+For argument "person" extracted spans ['you']
+For argument "origin" extracted spans ['place']
+
+Example 6
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Even though I would have supported the Russians against the Germans in general and especially with the German attack on Stalingrad; if I were to have crossed into Finland I probably would have ended up supporting some of the German regiments which were fighting alongside Finish units against Soviet aggression toward Finland.
+### Event Trigger ###
+into
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "origin" extracted spans ['Finland']
+
+Example 7
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Of course whenever these units moved back into Norway then these same German units would then become the enemy.
+### Event Trigger ###
+into
+### Event Arguments ###
+For argument "destination" extracted spans ['Norway']
+
+Example 8
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+I have been on holiday to Pakistan a fair amount of times, and have traveled throughout the country, so I thought I had a pretty accurate idea of the country as a whole and it's people.
+### Event Trigger ###
+traveled
+### Event Arguments ###
+For argument "agent" extracted spans ['I']
+For argument "origin" extracted spans ['country']
+For argument "destination" extracted spans ['country']
+
+Example 9
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+I have been on holiday to Pakistan a fair amount of times, and have traveled throughout the country, so I thought I had a pretty accurate idea of the country as a whole and it's people.
+### Event Trigger ###
+to
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "destination" extracted spans ['Pakistan']
+
+Example 10
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+I actually find it shocking, that most families who moved to England in the 60's like my grandfather have managed to maintain that cultural pride and certain traditions that have been lost among certain groups of people in Pakistan.
+### Event Trigger ###
+moved
+### Event Arguments ###
+For argument "agent" extracted spans ['families', 'grandfather']
+For argument "destination" extracted spans ['England']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+In some places STUDENTS can bring GUNS to school (rifle clubs).
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "agent" extracted spans ['STUDENTS']
+For argument "artifact" extracted spans ['GUNS']
+For argument "destination" extracted spans ['school']

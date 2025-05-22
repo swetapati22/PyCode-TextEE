@@ -1,0 +1,143 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type PhoneWrite which is a child event type of super class ContactEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Identify the Event Trigger (Mention Argument): 
+    - Define the event trigger ("mention") with 5 specific definitions, and include examples of valid triggers while addressing variations, edge cases, and distinctions from related event types.
+4. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+5. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+6. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "mention": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+PhoneWrite which is a child event type of super class ContactEvent
+Arguments:
+Argument 1 -> entity
+Argument 2 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+telephone
+### Event Arguments ###
+For argument "place" extracted spans ['Agartala']
+For argument "entity" extracted spans ['spokesman']
+
+Example 2
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+French President Jacques Chirac received only a reserved response when he tried to mend fences by placing a telephone call Tuesday to Bush.
+### Event Trigger ###
+call
+### Event Arguments ###
+For argument "entity" extracted spans ['he', 'Bush']
+
+Example 3
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+US President George W. Bush told Canadian Prime Minister Jean Chretien by telephone Monday that he looked forward to seeing him at the upcoming summit of major industrialized nations and Russia, the White House said Tuesday.
+### Event Trigger ###
+told
+### Event Arguments ###
+For argument "entity" extracted spans ['George W. Bush', 'Jean Chretien']
+
+Example 4
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+"The two leaders discussed the upcoming G-8 meeting, US-Canada (relations) and other international issues of concern," Bush spokesman Ari Fleischer said days before the June 1-3 summit, to be held in France.
+### Event Trigger ###
+discussed
+### Event Arguments ###
+For argument "entity" extracted spans ['leaders']
+
+Example 5
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+On Monday, Chretien told reporters that he and Bush, who had not spoken since late February, discussed a wide range of issues, including Iraq, the upcoming summit of the Group of Eight industrial powers and aid to Africa.
+### Event Trigger ###
+discussed
+### Event Arguments ###
+For argument "entity" extracted spans ['he', 'Bush']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 6
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat.
+### Event Trigger ###
+talks
+### Event Arguments ###
+For argument "place" extracted spans ['retreat']
+For argument "entity" extracted spans ['Blair', 'Bush']

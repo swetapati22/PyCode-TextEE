@@ -1,0 +1,41 @@
+{
+    "Pardon(JusticeEvent)": {
+        "description": [
+            "The event is triggered by an official act of forgiving or excusing a person from a legal penalty or punishment. Example triggers include 'pardoned', 'cleared', and 'forgiven'.",
+            "The event is characterized by the involvement of an adjudicator who grants the pardon and a defendant who receives it. The place where the pardon occurs may also be specified.",
+            "Unlike the 'Acquit' event, which involves a legal decision of not guilty, the 'Pardon' event involves forgiving a person who has already been convicted or is serving a sentence.",
+            "Triggers such as 'acquitted' or 'released' are indicative of 'Acquit' or 'ReleaseParole' events, not the 'Pardon' event type.",
+            "The outcome of a 'Pardon' event is the removal or reduction of legal penalties, whereas similar events like 'Convict' or 'Sentence' result in the imposition of penalties."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the act of pardoning. Examples include 'pardoned', 'cleared', and 'forgiven'.",
+            "Triggers must clearly indicate the act of forgiving or excusing a legal penalty. For instance, 'pardoned by the president' is a valid trigger.",
+            "Edge cases include phrases like 'granted clemency', which can also serve as triggers for the 'Pardon' event.",
+            "Triggers such as 'acquitted' or 'released' are not valid for this event type as they indicate different legal outcomes.",
+            "In some contexts, the trigger may be implied rather than explicit, such as 'received a pardon', which still indicates the 'Pardon' event."
+        ],
+        "adjudicator": [
+            "Examples are the person or authority granting the pardon, such as 'King Abdullah II', 'court', or 'board of pardon and paroles'.",
+            "The adjudicator is crucial as they hold the authority to grant the pardon. This can be a judge, a president, or a pardon board.",
+            "In cases where multiple adjudicators are involved, all should be annotated, such as 'court and board of pardon and paroles'.",
+            "Unlike the 'Convict' event, where the adjudicator imposes a penalty, in the 'Pardon' event, the adjudicator removes or reduces a penalty.",
+            "Edge cases include situations where the adjudicator is a collective body, such as 'the government' or 'the judiciary'."
+        ],
+        "defendant": [
+            "Examples are the person receiving the pardon, such as 'legislator', 'their', or 'individual'.",
+            "The defendant is the individual who benefits from the pardon, having their legal penalties forgiven or reduced.",
+            "In cases where the defendant is a group, such as 'the prisoners', all members of the group should be considered as defendants.",
+            "Unlike the 'Plaintiff' in a 'Sue' event, the defendant in a 'Pardon' event is the one receiving relief from penalties.",
+            "Edge cases include situations where the defendant is referred to indirectly, such as 'the accused' or 'the convicted'."
+        ],
+        "place": [
+            "Examples are the location where the pardon is granted, such as 'Jordan', 'court', or 'state'.",
+            "The place is important as it provides context for where the legal action of pardoning occurs.",
+            "In cases where the place is not explicitly mentioned, it can sometimes be inferred from the context, such as 'the local court'.",
+            "Unlike the 'Extradite' event, where the place involves origin and destination, the 'Pardon' event typically involves a single location.",
+            "Edge cases include situations where the place is a broader region, such as 'the country' or 'the city'."
+        ]
+    }
+}

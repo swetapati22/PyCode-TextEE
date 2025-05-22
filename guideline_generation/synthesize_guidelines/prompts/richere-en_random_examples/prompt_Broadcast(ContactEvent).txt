@@ -1,0 +1,354 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Broadcast which is a child event type of super class ContactEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Broadcast which is a child event type of super class ContactEvent
+Arguments:
+Argument 1 -> audience
+Argument 2 -> entity
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+But it also drew protests, including at La Sapienza university, where Gadhafi was addressing a group of few hundred students.
+### Event Trigger ###
+addressing
+### Event Arguments ###
+For argument "entity" extracted spans ['Gadhafi']
+For argument "place" extracted spans ['La Sapienza university']
+For argument "audience" extracted spans ['group']
+
+Example 2
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+How is it a conspiracy theory when the globalists openly call for world government.
+### Event Trigger ###
+call
+### Event Arguments ###
+For argument "entity" extracted spans ['globalists']
+
+Example 3
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+How is it a conspiracy theory when the globalists openly call for world government.
+### Event Trigger ###
+call
+### Event Arguments ###
+For argument "entity" extracted spans ['globalists']
+
+Example 4
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+It's a conspiracy theory because the press chose not to report on it, at a time when there weren't many ways to get around press silence.
+### Event Trigger ###
+report
+### Event Arguments ###
+For argument "entity" extracted spans ['press']
+
+Example 5
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+And at the same time declared war on the Saudi king because he allowed us bases in the holy kingdom to help us fight Gulf War 1 and for us to defend the kingdom.
+### Event Trigger ###
+declared
+### Event Arguments ###
+For argument "audience" extracted spans ['king']
+
+Example 6
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+The head of Diebold said his mission was to see that Bush was re-elected.
+### Event Trigger ###
+said
+### Event Arguments ###
+For argument "entity" extracted spans ['head']
+
+Example 7
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+So what does it then say about Palin's having just accepted an invitation to speak at a GUN SHOW immediately AFTER the AZ shootings?
+### Event Trigger ###
+speak
+### Event Arguments ###
+For argument "entity" extracted spans ['Palin']
+
+Example 8
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+2) To compare any American political rhetoric, no matter how allegedly 'violent,' to the edicts issued by OBL and other Islamic terrorist leaders is about as fucking retarded as it gets.
+### Event Trigger ###
+edicts
+### Event Arguments ###
+For argument "entity" extracted spans ['OBL']
+
+Example 9
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+2) To compare any American political rhetoric, no matter how allegedly 'violent,' to the edicts issued by OBL and other Islamic terrorist leaders is about as fucking retarded as it gets.
+### Event Trigger ###
+edicts
+### Event Arguments ###
+For argument "entity" extracted spans ['leaders']
+
+Example 10
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+2) To compare any American political rhetoric, no matter how allegedly 'violent,' to the edicts issued by OBL and other Islamic terrorist leaders is about as fucking retarded as it gets.
+### Event Trigger ###
+edicts
+### Event Arguments ###
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Contact(Event)
+### Input Text ###
+(6) Obama stated in ISLAMIC COUNTRIES that the bond btw American and Israel is unshakable.
+### Event Trigger ###
+stated
+### Event Arguments ###
+For argument "entity" extracted spans ['Obama']
+For argument "place" extracted spans ['COUNTRIES']
+
+Example 12
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+In Rapid City, SD they have arrested over 300 for DUI since the first of the year.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "person" extracted spans ['300']
+For argument "place" extracted spans ['Rapid City']
+
+Example 13
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+But I heard the authors sued him over it in England.
+### Event Trigger ###
+sued
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['authors']
+For argument "defendant" extracted spans ['him']
+For argument "place" extracted spans ['England']
+
+Example 14
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Loss of 2,400 jobs at Pfizer in Sandwich, Kent....massive impact on employment in local area...loss of confidence in UK...
+### Event Trigger ###
+Loss
+### Event Arguments ###
+For argument "entity" extracted spans ['Pfizer']
+For argument "place" extracted spans ['Sandwich']
+For argument "person" extracted spans ['2,400']
+
+Example 15
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even the IRA failed to cause as many casualties on mainland Great Britain as Pakistani trained suicide bombers did in one day.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "agent" extracted spans ['bombers']
+For argument "victim" extracted spans ['bombers']
+For argument "place" extracted spans ['mainland']
+For argument "instrument" extracted spans ['bombers']
+
+Example 16
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Assange, the founder of the anti-secrecy group WikiLeaks, has been holed up for nearly a year in the tiny Ecuadorean Embassy here, stymying British attempts to extradite him to Sweden.
+### Event Trigger ###
+extradite
+### Event Arguments ###
+For argument "agent" extracted spans ['British']
+For argument "person" extracted spans ['him']
+For argument "origin" extracted spans ['Ecuadorean']
+For argument "destination" extracted spans ['Sweden']
+
+Example 17
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']
+
+Example 18
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Another is that when the government orders a military member through Permanent Change of Station orders (PCS) to relocate from one place to another the military sponsors the spouse to travel and relocate to the new base with their spouse.
+### Event Trigger ###
+relocate
+### Event Arguments ###
+For argument "agent" extracted spans ['government']
+For argument "person" extracted spans ['member']
+For argument "origin" extracted spans ['place']
+For argument "destination" extracted spans ['another']
+
+Example 19
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+President Barack Obama won Iowa Catholics, about a quarter of the electorate, by what the exit polls showed was an 18-percentage-point margin.
+### Event Trigger ###
+won
+### Event Arguments ###
+For argument "person" extracted spans ['Barack Obama']
+For argument "agent" extracted spans ['Catholics']
+For argument "place" extracted spans ['Iowa']
+
+Example 20
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 21
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+In some places STUDENTS can bring GUNS to school (rifle clubs).
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "agent" extracted spans ['STUDENTS']
+For argument "artifact" extracted spans ['GUNS']
+For argument "destination" extracted spans ['school']
+
+Example 22
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+Employees lost their retirement savings and shareholders lost billions of dollars after the once highflying company slid into bankruptcy in 2001.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['company']
+
+Example 23
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+charged
+### Event Arguments ###
+For argument "defendant" extracted spans ['man']
+For argument "adjudicator" extracted spans ['court']
+For argument "prosecutor" extracted spans ['country']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 24
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']
+
+Example 25
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+We didn't intervene when the Sri Lankan government were slaughtering the Tamil Tigers, or during the Rwandan Genocide, or when the Yemen/Syrian/Bahrain government shot at their protesters, or when Mugabe began killing opposition.
+### Event Trigger ###
+protesters
+### Event Arguments ###
+For argument "entity" extracted spans ['protesters']
+For argument "place" extracted spans ['Yemen/Syrian/Bahrain']

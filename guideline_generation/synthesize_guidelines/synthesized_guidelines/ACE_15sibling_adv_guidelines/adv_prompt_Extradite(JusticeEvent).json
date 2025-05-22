@@ -1,0 +1,12 @@
+{
+    "Extradite(JusticeEvent)": {
+        "description": "The 'Extradite' event involves the legal transfer of a person from one jurisdiction to another for the purpose of legal proceedings or punishment. This event is characterized by the involvement of legal authorities and formal agreements between jurisdictions. It is distinct from events like 'ArrestJail', which focus on taking someone into custody, and 'ReleaseParole' or 'Pardon', which involve outcomes of freedom or clemency. The primary outcome of the 'Extradite' event is the movement of the person to a new jurisdiction where they will face legal actions.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the entity responsible for initiating or carrying out the extradition process, such as a court, government, or police department. This entity ensures the transfer is conducted according to legal protocols and may include specific legal bodies or international organizations in cross-border cases.",
+            "destination": "The destination is the location to which the person is being extradited, such as a specific city, state, or country. It determines where the person will face legal proceedings or punishment and may include temporary holding locations before reaching the final jurisdiction.",
+            "origin": "The origin is the location from which the person is being extradited, indicating the starting point of the extradition process. This could be a specific city, state, or country, and may include temporary holding locations before the final transfer.",
+            "person": "The person is the individual being extradited, referred to by name or pronoun. They are the central figure in the extradition process, distinct from a 'defendant' in other legal events, as they are specifically being transferred for legal proceedings or punishment. This may include high-profile individuals or groups."
+        }
+    }
+}

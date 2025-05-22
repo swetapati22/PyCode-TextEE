@@ -1,0 +1,351 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type DeclareBankruptcy which is a child event type of super class BusinessEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+DeclareBankruptcy which is a child event type of super class BusinessEvent
+Arguments:
+Argument 1 -> org
+Argument 2 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "place" extracted spans ['united states']
+For argument "org" extracted spans ['worldcom']
+
+Example 2
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+Bankrupt energy giant Enron Corp is considering bringing legal action against its own bankers for giving bad financial advice that helped lead to its downfall, the Wall Street Journal reported Wednesday.
+### Event Trigger ###
+Bankrupt
+### Event Arguments ###
+For argument "org" extracted spans ['Enron Corp']
+
+Example 3
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+The Houston energy company, which has been the target of a slew of investigations into alleged financial deception, filed a pair of motions in federal bankruptcy court in Manhattan in April, said the daily.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+
+Example 4
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+despite operating under bankruptcy laws, united posted the best on time performance.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['united']
+
+Example 5
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+the flight attendants came in with a close vote rejecting these concessions so the ceo has extended the deadline today, if they don't ratify these agreements, amr will have to file for bankruptcy.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['amr']
+
+Example 6
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+usairways is flying its way out of bankruptcy.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['usairways']
+
+Example 7
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+if the workers don't approve the steep cut backs american says it will file for bankruptcy.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['it']
+
+Example 8
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+america warns it will seek more layoffs if it does file for chapter 11.
+### Event Trigger ###
+chapter 11
+### Event Arguments ###
+For argument "org" extracted spans ['it']
+
+Example 9
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+for the latest on the company to avoid bankruptcy, check with rhonda schaffler.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['company']
+
+Example 10
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+and if it's rejected the largest airline may have to file for bankruptcy.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['airline']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+In Paris, the French media group said parent company chairman Jean-Rene Fourtou will replace Diller as chairman and chief executive of US unit.
+### Event Trigger ###
+replace
+### Event Arguments ###
+For argument "person" extracted spans ['Jean-Rene Fourtou']
+For argument "place" extracted spans ['Paris']
+For argument "entity" extracted spans ['unit']
+
+Example 12
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+Of course outspoken organizations such as Planned Parenthood, which gives a lot of money to Democrats, will fight with everything they've got to keep the Democratic platform as liberal as possible.
+### Event Trigger ###
+gives
+### Event Arguments ###
+For argument "giver" extracted spans ['Planned Parenthood']
+For argument "beneficiary" extracted spans ['Democrats']
+For argument "recipient" extracted spans ['Democrats']
+
+Example 13
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+Some 70 people were arrested Saturday as demonstrators clashed with police at the end of a major peace rally here, as at least 200,000 anti-war protesters took to the streets across the United States and Canada.
+### Event Trigger ###
+rally
+### Event Arguments ###
+For argument "place" extracted spans ['here']
+For argument "entity" extracted spans ['protesters']
+
+Example 14
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+wounding
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['20']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 15
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+Mirjana Markovic, the power behind the scenes during Milosevic's 13-year reign, is accused of illegally providing their grandson's nanny with a state-owned luxury apartment in Belgrade in 2000.
+### Event Trigger ###
+providing
+### Event Arguments ###
+For argument "beneficiary" extracted spans ['nanny']
+For argument "artifact" extracted spans ['apartment']
+For argument "seller" extracted spans ['Mirjana Markovic']
+For argument "place" extracted spans ['Belgrade']
+
+Example 16
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Larry Klayman, chairman of Judicial Watch, which represent 14 survivors and victims' relatives who have filed a $1.5 billion federal lawsuit against Iraq in Washington, said his organization had served a subpoena on Al-Douri twice, on March 26 and March 28, but said he has not responded.
+### Event Trigger ###
+lawsuit
+### Event Arguments ###
+For argument "defendant" extracted spans ['Iraq']
+For argument "place" extracted spans ['Washington']
+For argument "plaintiff" extracted spans ['relatives', 'survivors']
+
+Example 17
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In December 2001, a Manhattan jury convicted Sotheby's main shareholder and former chairman Alfred Taubman of entering into a price-fixing agreement with Christie's.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Alfred Taubman']
+For argument "place" extracted spans ['Manhattan']
+For argument "adjudicator" extracted spans ['jury']
+
+Example 18
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Prison authorities have given the nod for Anwar to be taken home later in the afternoon to marry his eldest daughter, Nurul Izzah, to engineer Raja Ahmad Sharir Iskandar in a traditional Malay ceremony, he said.
+### Event Trigger ###
+marry
+### Event Arguments ###
+For argument "person" extracted spans ['daughter', 'Raja Ahmad Sharir Iskandar']
+For argument "place" extracted spans ['home']
+
+Example 19
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+negotiators say he demanded the release of four prisoners, including ramzi binalshibh, a september 11th suspect apprehended last year in pakistan.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "person" extracted spans ['ramzi binalshibh']
+For argument "entity" extracted spans ['negotiators']
+
+Example 20
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.
+### Event Trigger ###
+charges
+### Event Arguments ###
+For argument "defendant" extracted spans ['client']
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "place" extracted spans ['court']
+
+Example 21
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Everyone has heard the story: Beatriz Marinello was elected USCF President on August 11, 2003 in Los Angeles.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['Beatriz Marinello']
+For argument "place" extracted spans ['Los Angeles']
+For argument "entity" extracted spans ['USCF']
+
+Example 22
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Putin, who enjoyed a warm relationship with former Chinese president Jiang Zeming, has made efforts to nurture ties with Hu and was the first world leader to go to Beijing to meet him in December when he was president-in-waiting.
+### Event Trigger ###
+former
+### Event Arguments ###
+For argument "person" extracted spans ['president']
+For argument "place" extracted spans ['Chinese']
+For argument "entity" extracted spans ['Chinese']
+
+Example 23
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+lawyers in texas are trying to keep their client from becoming the 300th person executed in the state since 1982, when texas resumed capital punishment.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['person']
+For argument "place" extracted spans ['state']
+For argument "agent" extracted spans ['texas']
+
+Example 24
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+an oklahoma city judge has ruled prosecutors presented enough evidence at a preliminary hearing to try nichols on murder charges for the other 160 victims of the attack.
+### Event Trigger ###
+hearing
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+For argument "defendant" extracted spans ['nichols']
+For argument "prosecutor" extracted spans ['prosecutors']
+For argument "place" extracted spans ['oklahoma city']
+
+Example 25
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+and the pope will reportedly name a new head of the troubled boston archdiocese this week.
+### Event Trigger ###
+name
+### Event Arguments ###
+For argument "person" extracted spans ['head']
+For argument "agent" extracted spans ['pope']

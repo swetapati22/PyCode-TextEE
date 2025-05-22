@@ -1,0 +1,48 @@
+{
+    "TransferMoney(TransactionEvent)": {
+        "description": [
+            "The event is triggered by actions involving the transfer of money from one entity to another. Example triggers include 'pay', 'give', and 'transfer'.",
+            "The event is characterized by the movement of monetary value, typically involving a giver and a recipient. It is distinct from other transaction events that may involve goods or services instead of money.",
+            "Unlike TransferOwnership, which involves the transfer of ownership of physical or intangible assets, TransferMoney specifically involves the transfer of monetary funds.",
+            "Triggers such as 'pay' and 'give' are indicative of TransferMoney, whereas triggers like 'sell' or 'provide' are more indicative of TransferOwnership.",
+            "The outcome of the event is the successful transfer of money from the giver to the recipient, often with a specified beneficiary and sometimes a place where the transaction occurs."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of the TransferMoney event. Examples include 'pay', 'give', and 'transfer'.",
+            "Triggers must clearly indicate the movement of money. For instance, 'pay' in 'pay the bill' is a valid trigger.",
+            "Edge cases include phrases like 'settle' in 'settle the debt', which can also indicate a TransferMoney event.",
+            "Triggers should not be confused with similar terms used in different contexts, such as 'provide' in 'provide assistance', which does not indicate a TransferMoney event.",
+            "Valid triggers must be directly related to the act of transferring money, such as 'donate' in 'donate funds'."
+        ],
+        "beneficiary": [
+            "Examples are entities that benefit from the transfer of money, such as 'Democrats' in 'Planned Parenthood gives a lot of money to Democrats'.",
+            "The beneficiary is the entity that ultimately receives the benefit of the transferred money, even if indirectly.",
+            "In some cases, the beneficiary and the recipient may be the same, as in 'Democrats' in the example provided.",
+            "The beneficiary can be an individual, organization, or group that gains from the transaction.",
+            "Unlike the recipient, the beneficiary may not directly receive the money but still benefits from the transfer."
+        ],
+        "giver": [
+            "Examples are entities that initiate the transfer of money, such as 'Planned Parenthood' in 'Planned Parenthood gives a lot of money to Democrats'.",
+            "The giver is the entity that provides the money in the transaction.",
+            "The giver can be an individual, organization, or group responsible for the transfer.",
+            "In some cases, multiple givers can be involved, as in 'Sotheby's and Christie's' in the example provided.",
+            "The giver is distinct from the beneficiary and recipient, as they are the source of the funds."
+        ],
+        "place": [
+            "Examples are locations where the transfer of money occurs, such as 'Colorado' in 'A Colorado judge ordered two teen-age girls to pay about $900'.",
+            "The place indicates the geographical location relevant to the transaction.",
+            "The place can be a city, state, country, or any specific location where the event takes place.",
+            "In some cases, the place may be implied rather than explicitly stated, such as 'outside the United States' in the example provided.",
+            "The place is distinct from the giver, recipient, and beneficiary, as it refers to the location of the event."
+        ],
+        "recipient": [
+            "Examples are entities that directly receive the money, such as 'Democrats' in 'Planned Parenthood gives a lot of money to Democrats'.",
+            "The recipient is the entity that physically or electronically receives the transferred money.",
+            "The recipient can be an individual, organization, or group that gets the money from the giver.",
+            "In some cases, the recipient and beneficiary may be the same, as in 'Democrats' in the example provided.",
+            "The recipient is distinct from the giver and place, as they are the direct receiver of the funds."
+        ]
+    }
+}

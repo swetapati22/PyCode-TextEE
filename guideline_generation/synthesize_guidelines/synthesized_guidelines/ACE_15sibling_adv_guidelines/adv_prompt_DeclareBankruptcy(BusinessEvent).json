@@ -1,0 +1,10 @@
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": "The DeclareBankruptcy event is triggered when a company or organization formally declares its inability to pay its debts, often leading to legal proceedings such as bankruptcy filings or Chapter 11. This event is characterized by financial failure, which may result in restructuring or liquidation of assets. Unlike events such as StartOrg or MergeOrg, this event does not involve the creation or combination of organizations but rather the cessation of normal business operations due to insolvency. The outcomes often include legal protection from creditors, potential restructuring, or liquidation of assets, distinguishing it from EndOrg, which involves complete dissolution for reasons other than financial insolvency.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'bankruptcy', 'file for bankruptcy', or 'chapter 11'.",
+            "org": "The 'org' argument identifies the organization declaring bankruptcy, which is crucial for understanding the entity undergoing financial distress. Examples include 'worldcom', 'Enron Corp', 'usairways', 'united', 'amr', 'american', and pronouns like 'it' or 'company' in relevant contexts.",
+            "place": "The 'place' argument refers to the location where the bankruptcy event is taking place, providing geographical context. Examples include 'united states', 'Manhattan', 'Houston', and 'federal bankruptcy court'. This argument helps indicate where the legal proceedings or financial distress are occurring."
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": "The DeclareBankruptcy event is triggered when a company or organization formally declares bankruptcy, indicating financial insolvency and seeking legal relief. This event is characterized by the cessation of normal business operations due to financial failure, involving legal filings and financial distress. Unlike other BusinessEvents such as mergers, acquisitions, or ownership transfers, DeclareBankruptcy specifically focuses on financial insolvency and legal protection from creditors. General financial difficulties or restructuring efforts do not trigger this event unless they explicitly involve legal bankruptcy proceedings.",
+        "attributes": {
+            "mention": "The text span that triggers the DeclareBankruptcy event, such as 'bankruptcy', 'filed for bankruptcy', or 'chapter 11'.",
+            "org": "The 'org' argument identifies the organization or company declaring bankruptcy. Examples include 'worldcom', 'Enron Corp', 'united', 'amr', 'usairways', 'american', 'company', 'airline'. It is crucial to specify the entity undergoing financial insolvency, even if referred to by a pronoun in context. The 'org' argument always refers to a business or corporate entity, and in cases of conglomerates or subsidiaries, the specific entity should be identified.",
+            "place": "The 'place' argument identifies the location where the bankruptcy event is taking place or being filed, such as 'united states', 'Manhattan', or 'court'. This argument provides geographical context, indicating where legal proceedings or business operations are affected. In cases where the location is not explicitly mentioned, the broader context should be considered. The 'place' argument often involves legal or corporate locations, and for multinational corporations, the specific legal jurisdiction should be identified."
+        }
+    }
+}

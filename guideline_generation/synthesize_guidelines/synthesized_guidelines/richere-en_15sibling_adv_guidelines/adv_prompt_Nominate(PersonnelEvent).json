@@ -1,0 +1,11 @@
+{
+    "Nominate(PersonnelEvent)": {
+        "description": "The 'Nominate' event in the context of personnel involves the official act of suggesting or appointing someone for a position or role. This event is triggered by terms such as 'nominate', 'nominated', 'nomination', 'appoint', and 'renomination'. It involves an agent who proposes or supports the nomination, a person who is being nominated, and sometimes a place where the nomination occurs. Unlike the 'Elect' event, which signifies the final selection of a candidate through voting, the 'Nominate' event focuses on the proposal or recommendation stage. The outcome of this event is the proposal of a candidate, which may or may not lead to their final selection, distinguishing it from the 'StartPosition' event that indicates the beginning of a role or job.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'nominate', 'nominated', 'nomination', 'appoint', and 'renomination'.",
+            "agent": "The agent is the entity that proposes or supports the nomination. This can be a political party, committee, individual with authority, organization, or group. Examples include 'The party nominated John', where 'party' is the agent, and 'Obama appointed a chairman', where 'Obama' is the agent. The agent may sometimes be implied rather than explicitly stated.",
+            "person": "The person is the individual being nominated for a position or role. This can be a candidate for an office or position, referred to by their name, title, or as a group. Examples include 'The party nominated John', where 'John' is the person, and 'Kerry was nominated in 2004', where 'Kerry' is the person. The person is the focus of the nomination event.",
+            "place": "The place is the location where the nomination event occurs. This can be a city, state, country, specific venue, or institution. Examples include 'The convention in New York', where 'New York' is the place, and 'The nomination at the State House', where 'State House' is the place. The place provides context to the nomination event and may sometimes be implied."
+        }
+    }
+}

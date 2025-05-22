@@ -1,0 +1,42 @@
+{
+    "Die(LifeEvent)": {
+        "description": [
+            "The event is triggered by the occurrence of a death, whether it is natural, accidental, or intentional. Example triggers include 'suicide', 'murder', 'killing', 'blown up', and 'victims'.",
+            "The event is characterized by the end of life of one or more individuals. It encompasses various causes and contexts, such as homicides, accidents, and natural causes.",
+            "Unlike related events such as 'Injure' or 'Execute', the 'Die' event specifically denotes the cessation of life, not just harm or legal execution. For instance, 'burned' in the context of injury does not trigger a 'Die' event unless it results in death.",
+            "Triggers such as 'divorce', 'marriage', or 'nominate' are indicative of other event types like 'Divorce', 'Marry', or 'Nominate', not the 'Die' event type.",
+            "The outcomes of the 'Die' event include the death of the victim(s), which is distinct from outcomes of events like 'Injure' where the victim survives but is harmed."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are the entity responsible for causing the death. This can be a person, group, or organization. For instance, 'bombers' in 'suicide bombers' or 'government' in 'government murder'.",
+            "The agent is crucial in identifying the perpetrator of the death event. It helps in understanding the context and assigning responsibility. For example, 'terrorists' in 'terrorists killed the victims'.",
+            "In cases where the death is self-inflicted, the agent and victim can be the same, such as 'bombers' in a suicide bombing.",
+            "The agent can also be an abstract entity, such as 'disease' or 'natural disaster', which indirectly causes death. For example, 'cancer' in 'cancer killed many people'.",
+            "Unlike the 'victim', the agent is the cause of the death, not the one who suffers it. For instance, 'killers' in 'killers murdered the children' is the agent, not the victim."
+        ],
+        "instrument": [
+            "Examples are the means or tools used to cause the death. This can include weapons, methods, or substances. For instance, 'bombers' in 'suicide bombers' or 'hot wires' in 'burned with hot wires'.",
+            "The instrument provides insight into how the death was carried out, which is essential for understanding the nature of the event. For example, 'poison' in 'poisoned to death'.",
+            "In some cases, the instrument can be a method rather than a physical object, such as 'drowning' in 'drowned in the river'.",
+            "The instrument can also be a natural element, such as 'fire' in 'burned to death in the fire'.",
+            "Unlike the 'agent', the instrument is the tool or method used by the agent to cause the death, not the entity responsible. For instance, 'gun' in 'shot with a gun' is the instrument, not the agent."
+        ],
+        "place": [
+            "Examples are the location where the death occurred. This can be a specific place, city, or country. For instance, 'mainland' in 'mainland Great Britain' or 'downtown Manhattan' in 'downtown Manhattan'.",
+            "The place helps in contextualizing the event geographically, which can be important for legal, historical, or social analysis. For example, 'Afghanistan' in 'murdered in Afghanistan'.",
+            "In some cases, the place can be a more general location, such as 'home' in 'died at home'.",
+            "The place can also be a symbolic or significant location, such as 'battlefield' in 'died on the battlefield'.",
+            "Unlike the 'agent' or 'instrument', the place is the setting where the death occurs, not the cause or means. For instance, 'New York' in 'died in New York' is the place, not the agent or instrument."
+        ],
+        "victim": [
+            "Examples are the individual(s) who died as a result of the event. This can include people, groups, or even animals. For instance, 'bombers' in 'suicide bombers' or 'children' in 'killing the children'.",
+            "The victim is central to the 'Die' event as it identifies who suffered the fatal outcome. For example, 'family' in 'blown up along with his family'.",
+            "In some cases, the victim can be a collective group, such as 'Americans' and 'foreigners' in 'Americans and foreigners were murdered'.",
+            "The victim can also be identified by their role or relationship, such as 'magistrate' in 'magistrate was blown up'.",
+            "Unlike the 'agent', the victim is the one who suffers the death, not the one who causes it. For instance, 'victims' in 'victims of the atrocities' are the ones who died, not the perpetrators."
+        ]
+    }
+}

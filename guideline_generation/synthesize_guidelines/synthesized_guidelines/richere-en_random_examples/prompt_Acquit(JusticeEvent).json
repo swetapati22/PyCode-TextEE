@@ -1,0 +1,35 @@
+{
+    "Acquit(JusticeEvent)": {
+        "description": [
+            "The event is triggered by a legal decision where a defendant is found not guilty of the charges against them. Example triggers include 'acquitted', 'dropped', 'overturned', 'exonerated', and 'cleared of'.",
+            "The event is characterized by the formal release of a defendant from legal charges, often following a trial or legal review. Key characteristics include the involvement of a legal adjudicator and the defendant being declared not guilty.",
+            "The event scope includes any legal context where charges are dismissed or a verdict of not guilty is reached. This can occur in various legal systems and jurisdictions.",
+            "Unlike the Convict event, which results in a guilty verdict, the Acquit event results in a not guilty verdict. Triggers such as 'convicted' are indicative of the Convict event, not the Acquit event.",
+            "The outcome of the Acquit event is the defendant's release from legal charges, whereas similar events like ChargeIndict involve the initiation of legal charges. Triggers such as 'charged' are indicative of ChargeIndict, not the Acquit event."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'jury', 'judge', 'court'. The adjudicator is the legal authority or body that makes the decision to acquit the defendant. This argument is crucial as it identifies the entity responsible for the legal decision.",
+            "The adjudicator can be a single judge, a panel of judges, or a jury. For instance, 'jury' in 'acquitted by a jury' or 'judge' in 'overturned by a high judge'.",
+            "In some cases, the adjudicator may be implied rather than explicitly stated. For example, 'the case was overturned' implies a judge or court made the decision.",
+            "The adjudicator is distinct from the prosecutor or defense attorney, who are involved in presenting the case rather than making the final decision.",
+            "Edge cases include situations where the adjudicator is a higher court or appellate body, such as 'overturned by the Supreme Court'."
+        ],
+        "defendant": [
+            "Examples are 'sisters', 'I', 'his', 'you', 'Drew'. The defendant is the individual or group of individuals who are being acquitted of the charges. This argument is essential as it identifies the person(s) benefiting from the acquittal.",
+            "The defendant can be a single person or multiple people. For instance, 'sisters' in 'Two Italians sisters were acquitted' or 'I' in 'Charges were dropped because of a bad search warrant'.",
+            "In some cases, the defendant may be referred to by a pronoun, such as 'he' or 'you'. For example, 'he was cleared of all charges' or 'you were acquitted'.",
+            "The defendant is distinct from the victim or plaintiff, who are involved in the case but are not the ones being acquitted.",
+            "Edge cases include situations where the defendant is a public figure or entity, such as 'the company was acquitted of all charges'."
+        ],
+        "place": [
+            "Examples are 'London', 'Florida', 'England'. The place is the location where the acquittal occurs. This argument provides context about the jurisdiction or venue of the legal decision.",
+            "The place can be a city, state, or country. For instance, 'London' in 'acquitted by a London jury' or 'Florida' in 'exonerated from death row in Florida'.",
+            "In some cases, the place may be implied rather than explicitly stated. For example, 'the case was overturned' may imply a specific court or jurisdiction.",
+            "The place is distinct from the location of the crime or the residence of the defendant, which may be different from where the legal decision is made.",
+            "Edge cases include situations where the place is a specific court or legal body, such as 'overturned by the Supreme Court in Washington, D.C.'."
+        ]
+    }
+}

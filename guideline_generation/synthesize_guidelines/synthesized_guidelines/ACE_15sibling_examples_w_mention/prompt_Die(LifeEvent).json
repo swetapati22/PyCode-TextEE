@@ -1,0 +1,55 @@
+{
+    "Die(LifeEvent)": {
+        "description": [
+            "The event is triggered by the occurrence of a death, whether it is a natural death, an accident, or a deliberate act. Example triggers include 'killed', 'died', 'murdered', 'suicide', and 'fallen'.",
+            "The event is characterized by the cessation of life of an individual or group of individuals. It encompasses various scenarios such as homicides, suicides, accidents, and natural deaths.",
+            "Unlike other LifeEvents such as 'BeBorn' or 'Marry', the 'Die' event specifically involves the end of life. Triggers such as 'birth' or 'marriage' are indicative of other LifeEvents, not this event type.",
+            "The event is distinct from 'Injure' events, which involve harm but not necessarily death. For example, 'wounded' or 'injured' are triggers for 'Injure' events, not 'Die' events.",
+            "The outcome of the 'Die' event is the death of the person(s) involved, which is different from events like 'Divorce' or 'Marry' where the outcome is a change in marital status rather than the end of life."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger (mention) is the word or phrase that indicates the occurrence of the death. Examples include 'killed', 'died', 'murdered', 'suicide', and 'fallen'.",
+            "Triggers such as 'killed' or 'murdered' indicate a deliberate act leading to death, while 'died' or 'fallen' may indicate a natural or accidental death.",
+            "Edge cases include phrases like 'passed away' or 'lost their life', which also serve as valid triggers for the 'Die' event.",
+            "Triggers like 'wounded' or 'injured' are not valid for the 'Die' event as they indicate harm without death.",
+            "In cases of mass casualties, phrases like 'massacre' or 'genocide' can also serve as triggers for the 'Die' event."
+        ],
+        "agent": [
+            "The 'agent' argument refers to the entity responsible for causing the death. Examples are 'bomber', 'assailant', or 'shooter'.",
+            "In cases of suicide, the 'agent' and 'victim' may be the same entity, such as 'suicide bomber'.",
+            "For natural deaths, there may not be a clear 'agent', and this argument can be omitted.",
+            "In accidents, the 'agent' could be an inanimate object or force, such as 'car' in a car accident.",
+            "Unlike the 'instrument' argument, which refers to the means used, the 'agent' is the entity that performs the action leading to death."
+        ],
+        "instrument": [
+            "The 'instrument' argument refers to the means or tool used to cause the death. Examples are 'explosives', 'gun', or 'knife'.",
+            "In cases of poisoning, the 'instrument' could be 'poison' or 'toxin'.",
+            "For natural deaths, there may not be a clear 'instrument', and this argument can be omitted.",
+            "In accidents, the 'instrument' could be the object involved, such as 'vehicle' in a car accident.",
+            "Unlike the 'agent' argument, which refers to the entity causing the death, the 'instrument' is the means by which the death is caused."
+        ],
+        "person": [
+            "The 'person' argument refers to the individual who has died. Examples are 'comrades', 'victim', or 'deceased'.",
+            "In cases of mass casualties, the 'person' argument can refer to a group, such as 'people' or 'victims'.",
+            "For natural deaths, the 'person' argument is the individual who has passed away, such as 'John Doe'.",
+            "In cases of unidentified bodies, the 'person' argument can be 'unknown individual' or 'unidentified person'.",
+            "Unlike the 'victim' argument, which specifically refers to those who have been harmed or killed, the 'person' argument is a more general term for the deceased."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the death occurred. Examples are 'mall', 'airport', or 'home'.",
+            "In cases of mass casualties, the 'place' argument can refer to a broader location, such as 'city' or 'country'.",
+            "For natural deaths, the 'place' argument is the location where the individual passed away, such as 'hospital' or 'residence'.",
+            "In accidents, the 'place' argument is the site of the incident, such as 'highway' or 'intersection'.",
+            "Unlike the 'agent' or 'instrument' arguments, which refer to the cause of death, the 'place' argument specifies the location of the event."
+        ],
+        "victim": [
+            "The 'victim' argument refers to the individual or group who has been killed. Examples are 'bomber', 'people', or 'victims'.",
+            "In cases of mass casualties, the 'victim' argument can refer to a group, such as 'civilians' or 'soldiers'.",
+            "For natural deaths, the 'victim' argument is the individual who has passed away, such as 'John Doe'.",
+            "In cases of unidentified bodies, the 'victim' argument can be 'unknown individual' or 'unidentified person'.",
+            "Unlike the 'person' argument, which is a general term for the deceased, the 'victim' argument specifically refers to those who have been harmed or killed."
+        ]
+    }
+}

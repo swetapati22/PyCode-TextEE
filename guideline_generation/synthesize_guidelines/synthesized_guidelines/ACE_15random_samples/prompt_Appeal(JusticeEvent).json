@@ -1,0 +1,35 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions or processes where a party formally requests a higher authority to review and change a decision made by a lower authority. Example triggers include 'appeal', 'appealed', and 'appeals'.",
+            "The event is characterized by the involvement of a plaintiff who seeks a review of a decision, an adjudicator who is the authority reviewing the appeal, and potentially a place where the appeal is filed or heard.",
+            "Unlike the 'Sue' event, which involves initiating a lawsuit, the 'Appeal' event specifically involves seeking a review of an existing decision. Triggers such as 'lawsuit' are indicative of the 'Sue' event, not the 'Appeal' event.",
+            "The outcome of an 'Appeal' event is typically a decision by the adjudicator to either uphold, modify, or overturn the original decision. This differs from events like 'Sentence' or 'Acquit', where the focus is on the initial judgment rather than a review.",
+            "The scope of the 'Appeal' event includes various legal contexts, such as criminal cases, civil disputes, and administrative decisions. It is not limited to any specific type of legal matter."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'Supreme Court', 'Federal Court', 'court'. The adjudicator is the authority or body that reviews the appeal and makes a decision on it.",
+            "The adjudicator plays a crucial role in the appeal process as they have the power to uphold, modify, or overturn the original decision. For instance, 'Supreme Court' in 'appealed to the Supreme Court'.",
+            "In some cases, the adjudicator may be a specific judge or panel of judges. For example, 'pre-selected judges' in 'his appeal was rejected by pre-selected judges'.",
+            "The adjudicator is distinct from the original decision-maker. Unlike the 'Sentence' event where the adjudicator is the one giving the initial sentence, in the 'Appeal' event, the adjudicator reviews an existing decision.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from context, such as 'the court' in 'appeal to the court'."
+        ],
+        "place": [
+            "Examples are 'Indonesia', 'court', 'Federal Court'. The place is the location where the appeal is filed or heard.",
+            "The place provides context for the jurisdiction and venue of the appeal. For instance, 'Indonesia' in 'appealed to the Supreme Court in Indonesia'.",
+            "In some cases, the place may refer to a specific court or legal body. For example, 'Federal Court' in 'appeal to the Federal Court'.",
+            "The place is distinct from the location of the original decision. Unlike the 'Sue' event where the place might be where the lawsuit is filed, in the 'Appeal' event, it is where the appeal is reviewed.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from context, such as 'the court' in 'appeal to the court'."
+        ],
+        "plaintiff": [
+            "Examples are 'five', 'their', 'offender', 'convict', 'Anwar', 'his', 'He'. The plaintiff is the party who files the appeal seeking a review of the decision.",
+            "The plaintiff is central to the appeal process as they are the ones challenging the original decision. For instance, 'five' in 'five of them appealed'.",
+            "In some cases, the plaintiff may be a group or an individual. For example, 'convict' in 'a convict can file an appeal'.",
+            "The plaintiff is distinct from the defendant in other legal events. Unlike the 'Sue' event where the plaintiff initiates a lawsuit, in the 'Appeal' event, the plaintiff seeks a review of an existing decision.",
+            "Edge cases include situations where the plaintiff is not explicitly mentioned but can be inferred from context, such as 'his' in 'his appeal was rejected'."
+        ]
+    }
+}

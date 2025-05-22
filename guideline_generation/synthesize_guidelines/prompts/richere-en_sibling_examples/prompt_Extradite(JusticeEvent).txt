@@ -1,0 +1,327 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Extradite which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Extradite which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> destination
+Argument 3 -> origin
+Argument 4 -> person
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Assange, the founder of the anti-secrecy group WikiLeaks, has been holed up for nearly a year in the tiny Ecuadorean Embassy here, stymying British attempts to extradite him to Sweden.
+### Event Trigger ###
+extradite
+### Event Arguments ###
+For argument "agent" extracted spans ['British']
+For argument "person" extracted spans ['him']
+For argument "origin" extracted spans ['Ecuadorean']
+For argument "destination" extracted spans ['Sweden']
+
+Example 2
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+A Colombian who has been described by his country’s president as “the last of the great kingpins” was extradited to the United States from Colombia on Tuesday to face charges that he manufactured large quantities of cocaine that he then trafficked to the U.S. and elsewhere.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['Colombian']
+For argument "origin" extracted spans ['Colombia']
+For argument "destination" extracted spans ['United States']
+
+Example 3
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+He was later sent to Colombia, and his extradition was announced by the U.S. attorneys in the three jurisdictions and other officials, including Raymond W. Kelly, the police commissioner of New York; and Michele M. Leonhart, the head of the DEA.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['his']
+For argument "agent" extracted spans ['U.S.']
+
+Example 4
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+MOSCOW - Edward J. Snowden, the former intelligence contractor on the run from U.S. authorities, formally applied Tuesday for temporary asylum in Russia, citing fears that he could face torture or the death penalty if extradited to the United States, according to a Russian official who assisted in preparing the documents.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+
+Example 5
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+But Snowden and his supporters in and outside of Russia have cited the existence of the death penalty in the United States as a reason he should not be extradited, noting that U.S. officials have said he could face additional charges.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['he']
+For argument "agent" extracted spans ['United States']
+For argument "origin" extracted spans ['Russia']
+For argument "destination" extracted spans ['United States']
+
+Example 6
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+He was eventually extradited to the United States, and in 2003 was convicted of two counts of drug conspiracy.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['He']
+For argument "destination" extracted spans ['United States']
+
+Example 7
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+The family fought Fabio’s extradition with an aggressive but unsuccessful legal and public relations campaign.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['Fabio']
+
+Example 8
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Juan David and Jorge Luis avoided extradition, but other governments found at least some ways to punish them.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['Juan David', 'Jorge Luis']
+
+Example 9
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+“Everyone loves us; the doors open for us all over,” Juan David Ochoa said in an interview with The Times on the day his brother was extradited.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['brother']
+
+Example 10
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Weeks after the U.S. government charged Javier Martin-Artajo, a former JPMorgan Chase employee, with hiding trading losses that ultimately reached more than $6 billion, he had his first day in court Tuesday as he surrendered to Spanish authorities and kicked off what could be a lengthy extradition process.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['he']
+For argument "agent" extracted spans ['authorities']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']
+
+Example 12
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+SEOUL, South Korea - State prosecutors armed with metal detectors raided the Seoul residence of former President Chun Doo-hwan on Tuesday to look for assets of the ex-military dictator who owes South Korea 167.5 billion won ($150 million) in fines but claims to be broke.
+### Event Trigger ###
+fines
+### Event Arguments ###
+For argument "entity" extracted spans ['dictator']
+For argument "place" extracted spans ['South Korea']
+
+Example 13
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+In a joint motion, lawyers for the defense and prosecution asked Magistrate Judge Marianne B. Bowler of U.S. District Court in Massachusetts to release Phillipos, 19, on $100,000 bail on the condition that he stay under house arrest and wear an electronic tracking bracelet.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "agent" extracted spans ['Marianne B. Bowler']
+For argument "person" extracted spans ['Phillipos']
+For argument "place" extracted spans ['Massachusetts']
+
+Example 14
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 15
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 16
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+In Rapid City, SD they have arrested over 300 for DUI since the first of the year.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "person" extracted spans ['300']
+For argument "place" extracted spans ['Rapid City']
+
+Example 17
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+charged
+### Event Arguments ###
+For argument "defendant" extracted spans ['man']
+For argument "adjudicator" extracted spans ['court']
+For argument "prosecutor" extracted spans ['country']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 18
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 19
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+But I heard the authors sued him over it in England.
+### Event Trigger ###
+sued
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['authors']
+For argument "defendant" extracted spans ['him']
+For argument "place" extracted spans ['England']
+
+Example 20
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']
+
+Example 21
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+sentence
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 22
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+In The United States versus Miller, the Court held:
+### Event Trigger ###
+versus
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Court']
+For argument "prosecutor" extracted spans ['United States']
+For argument "defendant" extracted spans ['Miller']

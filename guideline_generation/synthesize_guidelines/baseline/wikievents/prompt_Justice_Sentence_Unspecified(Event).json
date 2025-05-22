@@ -1,0 +1,35 @@
+{
+    "Justice_Sentence_Unspecified(Event)": {
+        "description": [
+            "The Justice_Sentence_Unspecified event refers to the act of a judicial body or authority imposing a punishment or penalty on an individual (defendant) for a crime or offense. The event can be triggered by words such as 'sentenced', 'sentence', 'verdict', 'sentencing', etc. The event typically involves a judicial authority (judgecourt) and may specify the location (place) where the sentencing occurs. The event can occur in various contexts, including criminal trials, civil cases, and other legal proceedings.",
+            "Justice_Sentence_Unspecified is an event where a legal authority, such as a judge or court, imposes a penalty on a defendant for committing a crime. This event is triggered by terms like 'sentenced', 'sentence', 'verdict', and 'sentencing'. It involves key participants such as the defendant and the judicial authority, and may also include the location of the sentencing. This event is common in legal and judicial contexts.",
+            "The event type Justice_Sentence_Unspecified involves the imposition of a legal penalty on an individual by a judicial authority. It is triggered by terms like 'sentenced', 'sentence', 'verdict', and 'sentencing'. The event includes arguments such as the defendant, the judicial authority (judgecourt), and the place where the sentencing occurs. This event is typically found in legal documents, news reports, and court proceedings.",
+            "Justice_Sentence_Unspecified refers to the act of a court or judge imposing a punishment on a defendant for a crime. The event is triggered by words like 'sentenced', 'sentence', 'verdict', and 'sentencing'. It involves the defendant, the judicial authority (judgecourt), and the location (place) of the sentencing. This event is relevant in legal contexts and judicial proceedings.",
+            "The Justice_Sentence_Unspecified event describes the process of a judicial authority imposing a penalty on a defendant for a crime. Trigger words include 'sentenced', 'sentence', 'verdict', and 'sentencing'. The event involves the defendant, the judicial authority (judgecourt), and the place of sentencing. This event is commonly found in legal and judicial contexts."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "defendant": [
+            "The defendant is the individual who is being sentenced by the judicial authority. This person is the subject of the sentencing and is typically the one who has been found guilty of a crime or offense. Examples are 'Dzhokhar Tsarnaev', 'Aydin Sevigin', 'the 20-year-old', 'the bomber', and 'him'.",
+            "The defendant refers to the person who is receiving the sentence from the court or judge. This individual is the one who has been convicted or accused of a crime. Examples are 'Dzhokhar Tsarnaev', 'Aydin Sevigin', 'the 20-year-old', 'the bomber', and 'him'.",
+            "In the context of Justice_Sentence_Unspecified, the defendant is the person who is being sentenced by the judicial authority. This person is the one who has been found guilty or is accused of a crime. Examples are 'Dzhokhar Tsarnaev', 'Aydin Sevigin', 'the 20-year-old', 'the bomber', and 'him'.",
+            "The defendant is the individual who is subject to the sentencing by the court or judge. This person is the one who has been convicted of a crime or offense. Examples are 'Dzhokhar Tsarnaev', 'Aydin Sevigin', 'the 20-year-old', 'the bomber', and 'him'.",
+            "The defendant in the Justice_Sentence_Unspecified event is the person who is being sentenced by the judicial authority. This individual is the one who has been found guilty of a crime. Examples are 'Dzhokhar Tsarnaev', 'Aydin Sevigin', 'the 20-year-old', 'the bomber', and 'him'."
+        ],
+        "judgecourt": [
+            "The judgecourt refers to the judicial authority or body that imposes the sentence on the defendant. This can be a judge, a court, or a jury. Examples are 'Attunda District Court', 'jury', 'judge', 'U.S. District Judge George O'Toole Jr.', and 'the chairman of the court'.",
+            "Judgecourt is the term used to describe the judicial authority responsible for sentencing the defendant. This can include a judge, a court, or a jury. Examples are 'Attunda District Court', 'jury', 'judge', 'U.S. District Judge George O'Toole Jr.', and 'the chairman of the court'.",
+            "In the context of Justice_Sentence_Unspecified, judgecourt refers to the entity that delivers the sentence to the defendant. This can be a judge, a court, or a jury. Examples are 'Attunda District Court', 'jury', 'judge', 'U.S. District Judge George O'Toole Jr.', and 'the chairman of the court'.",
+            "The judgecourt is the judicial body or authority that sentences the defendant. This can be a judge, a court, or a jury. Examples are 'Attunda District Court', 'jury', 'judge', 'U.S. District Judge George O'Toole Jr.', and 'the chairman of the court'.",
+            "Judgecourt refers to the judicial authority that imposes the sentence on the defendant. This can be a judge, a court, or a jury. Examples are 'Attunda District Court', 'jury', 'judge', 'U.S. District Judge George O'Toole Jr.', and 'the chairman of the court'."
+        ],
+        "place": [
+            "The place refers to the location where the sentencing occurs. This can be a city, a courthouse, or any specific location related to the judicial process. Examples are 'Stockholm', 'Boston', 'Attunda District Court', 'John Joseph Moakley United States Courthouse', and 'Massachusetts'.",
+            "Place is the term used to describe the location where the sentencing takes place. This can include a city, a courthouse, or any relevant location. Examples are 'Stockholm', 'Boston', 'Attunda District Court', 'John Joseph Moakley United States Courthouse', and 'Massachusetts'.",
+            "In the context of Justice_Sentence_Unspecified, place refers to the location where the sentencing is carried out. This can be a city, a courthouse, or any specific place related to the judicial event. Examples are 'Stockholm', 'Boston', 'Attunda District Court', 'John Joseph Moakley United States Courthouse', and 'Massachusetts'.",
+            "The place is the location where the sentencing occurs. This can be a city, a courthouse, or any specific location associated with the judicial process. Examples are 'Stockholm', 'Boston', 'Attunda District Court', 'John Joseph Moakley United States Courthouse', and 'Massachusetts'.",
+            "Place refers to the location where the sentencing happens. This can be a city, a courthouse, or any relevant location. Examples are 'Stockholm', 'Boston', 'Attunda District Court', 'John Joseph Moakley United States Courthouse', and 'Massachusetts'."
+        ]
+    }
+}

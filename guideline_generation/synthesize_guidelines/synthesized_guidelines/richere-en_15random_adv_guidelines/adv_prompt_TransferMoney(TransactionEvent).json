@@ -1,0 +1,12 @@
+{
+    "TransferMoney(TransactionEvent)": {
+        "description": "The TransferMoney event is triggered by the act of transferring money from one entity to another, characterized by the movement of monetary value between parties, often involving a giver and a recipient. This event can occur in various contexts such as aid distribution, bonuses, payments, and loans, and includes both physical cash transactions and digital/electronic transfers. It is distinct from TransferOwnership, which involves the transfer of ownership of assets rather than money, and from other financial events like Fine or Sue, which involve legal adjudication or penalties.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "beneficiary": "The beneficiary is the entity that ultimately benefits from the transfer of money, even if they are not the direct recipient. This can be an individual, group, or organization, such as a country or community in the context of aid or relief. For example, 'The E.U. spent 200 million euros on relief for the country.'",
+            "giver": "The giver is the entity that provides the money in the transaction, identifying the source of the funds. This can be an individual, organization, or government entity. For example, 'The government provided financial aid to the disaster-stricken area.'",
+            "place": "The place is the location where the transfer of money occurs or where the beneficiary is located, helping to contextualize the event geographically. This can be a country, region, city, or town. For example, 'The funds were transferred to support development projects in Africa.'",
+            "recipient": "The recipient is the entity that directly receives the money in the transaction, identifying who gets the funds. This can be an individual, group, or organization. For example, 'The non-profit organization received a grant from the government.'"
+        }
+    }
+}

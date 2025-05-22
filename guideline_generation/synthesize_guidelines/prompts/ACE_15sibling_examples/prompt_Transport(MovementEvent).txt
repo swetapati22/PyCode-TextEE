@@ -1,0 +1,191 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Transport which is a child event type of super class MovementEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Transport which is a child event type of super class MovementEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> artifact
+Argument 3 -> destination
+Argument 4 -> origin
+Argument 5 -> place
+Argument 6 -> vehicle
+Argument 7 -> victim
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+In last year's trial, the paper was convicted of defaming the government for publishing that trains running to and from southern Sudan were used to transport abducted women and children.
+### Event Trigger ###
+transport
+### Event Arguments ###
+For argument "vehicle" extracted spans ['trains']
+For argument "artifact" extracted spans ['women', 'children']
+For argument "destination" extracted spans ['Sudan']
+For argument "origin" extracted spans ['Sudan']
+
+Example 2
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+And, particularly, I have in mind the Iraqi National Congress that Mr. Chalabi, who was assisted by U.S. forces in getting back into Iraq?
+### Event Trigger ###
+back
+### Event Arguments ###
+For argument "victim" extracted spans ['who']
+For argument "agent" extracted spans ['forces']
+For argument "place" extracted spans ['Iraq']
+
+Example 3
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+Television footage showed medical teams carting away dozens of wounded victims with fully armed troops on guard.
+### Event Trigger ###
+carting
+### Event Arguments ###
+For argument "artifact" extracted spans ['victims', 'teams']
+
+Example 4
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+Some 70 people were arrested Saturday as demonstrators clashed with police at the end of a major peace rally here, as at least 200,000 anti-war protesters took to the streets across the United States and Canada.
+### Event Trigger ###
+took
+### Event Arguments ###
+For argument "artifact" extracted spans ['protesters']
+For argument "destination" extracted spans ['streets']
+
+Example 5
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+Liana Owen drove 10 hours from Pennsylvania to attend the rally in Manhattan with her parents.
+### Event Trigger ###
+drove
+### Event Arguments ###
+For argument "artifact" extracted spans ['Liana Owen']
+For argument "origin" extracted spans ['Pennsylvania']
+For argument "destination" extracted spans ['Manhattan']
+
+Example 6
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+"We support our troops -- bring them home!" read one.
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "artifact" extracted spans ['them']
+For argument "destination" extracted spans ['home']
+
+Example 7
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+Thousands of fresh US troops headed for Iraq Thursday as British Prime Minister Tony Blair and US President George W. Bush discussed the effort to oust Saddam Hussein, which some senior US military officials warn could last months.
+### Event Trigger ###
+headed
+### Event Arguments ###
+For argument "artifact" extracted spans ['troops']
+For argument "origin" extracted spans ['Iraq']
+
+Example 8
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+About 1,000 soldiers from the US Army's 173rd Airborne Brigade parachuted into an airfield in a Kurdish-controlled area of northern Iraq, establishing a base through which to bring in more troops and tanks, Pentagon officials said.
+### Event Trigger ###
+parachuted
+### Event Arguments ###
+For argument "artifact" extracted spans ['soldiers']
+For argument "destination" extracted spans ['airfield']
+
+Example 9
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+About 1,000 soldiers from the US Army's 173rd Airborne Brigade parachuted into an airfield in a Kurdish-controlled area of northern Iraq, establishing a base through which to bring in more troops and tanks, Pentagon officials said.
+### Event Trigger ###
+bring in
+### Event Arguments ###
+For argument "artifact" extracted spans ['troops', 'tanks']
+For argument "destination" extracted spans ['which']
+
+Example 10
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+And some 12,000 soldiers from the US Army's 4th Infantry Division, which was supposed to have gone into northern Iraq through Turkey, began flying out of Fort Hood, Texas, Thursday to the region, a military fort spokeswoman told AFP.
+### Event Trigger ###
+flying
+### Event Arguments ###
+For argument "artifact" extracted spans ['soldiers']
+For argument "destination" extracted spans ['region']
+For argument "origin" extracted spans ['Fort Hood']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###

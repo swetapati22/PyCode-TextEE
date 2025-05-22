@@ -1,0 +1,11 @@
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": "The 'ArrestJail' event type is triggered by actions resulting in the detention or imprisonment of an individual, typically by law enforcement or an authority figure. This event involves the physical apprehension and confinement of a person, leading to the deprivation of their liberty. It is distinct from events involving monetary penalties or legal judgments, focusing specifically on the act of detaining or imprisoning someone. Example triggers include terms like 'arrested', 'busted', 'locked away', and 'jail'. The outcome is the confinement of the individual in a specific place, such as a jail or prison, often following an arrest by law enforcement agents.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'arrested', 'busted', 'locked away', or 'jail'.",
+            "agent": "The entity responsible for carrying out the arrest or detention, which can be law enforcement officers, police, or any authority figure. Examples include 'mounties' in 'busted up by the mounties' or 'police' in 'the police arrested him'. The agent may also be implied, such as in 'he was arrested', where law enforcement is understood to be the agent.",
+            "person": "The individual or group being arrested or detained. Examples include 'Koresh' in 'arrest Koresh and others' or 'sheriff' in 'the sheriff just got busted'. The person can also be a collective group, such as 'a bunch of hacks at the Sun were arrested', or referred to by a role or title, like 'wannabees' in 'busted wannabees'.",
+            "place": "The geographical location where the arrest or detention occurs. This can be a specific place, such as 'Rapid City' in 'arrested over 300 for DUI in Rapid City', or a facility like 'prison' in 'locked away in prison'. The place may also be implied, as in 'busted up by the mounties', where the location of the bust is understood."
+        }
+    }
+}

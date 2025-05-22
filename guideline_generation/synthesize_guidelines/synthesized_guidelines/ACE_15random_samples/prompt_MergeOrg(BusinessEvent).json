@@ -1,0 +1,21 @@
+{
+    "MergeOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the merging of two or more organizations into a single entity. Example triggers include 'merged', 'merger', 'tying the knot', and 'create'.",
+            "The event is characterized by the combination of separate organizations into one, often to increase efficiency, market share, or resources. Key characteristics include the involvement of multiple organizations and a unification process.",
+            "Unlike the StartOrg event, which involves the creation of a new organization, the MergeOrg event involves the consolidation of existing organizations. Triggers such as 'opening' or 'launching' are indicative of StartOrg, not MergeOrg.",
+            "The MergeOrg event differs from the EndOrg event, which signifies the dissolution or termination of an organization. Triggers like 'is no more' or 'closed' are indicative of EndOrg, not MergeOrg.",
+            "The outcome of a MergeOrg event is a single, unified organization formed from the merging entities. This is distinct from events like TransferOwnership, where ownership changes hands but the organizations remain separate."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'Department of Minority Business Enterprise', 'Department of Business Assistance', 'organizations', 'Warner Communications', 'industries', 'business', 'startups', 'competitors', 'Oracle', 'Peoplesoft', 'sides', 'company'. The 'org' argument represents the organizations involved in the merger.",
+            "The 'org' argument is crucial as it identifies the entities being merged. It can include companies, departments, or any organizational units. For instance, 'Oracle' and 'Peoplesoft' in the context of a merger.",
+            "In cases where the text mentions multiple organizations, all relevant entities should be included in the 'org' argument. For example, 'startups' and 'competitors' in a merger context.",
+            "The 'org' argument should not include entities that are not part of the merger. For example, in a sentence about a merger involving 'Oracle' and 'Peoplesoft', other companies mentioned in a different context should not be included.",
+            "Edge cases include scenarios where the organizations are not explicitly named but referred to in a general sense, such as 'two organizations'. In such cases, the general reference should be captured as the 'org' argument."
+        ]
+    }
+}

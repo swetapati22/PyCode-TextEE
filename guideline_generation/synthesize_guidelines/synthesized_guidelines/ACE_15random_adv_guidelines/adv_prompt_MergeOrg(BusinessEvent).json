@@ -1,0 +1,9 @@
+{
+    "MergeOrg(BusinessEvent)": {
+        "description": "The MergeOrg event is triggered by the merging of two or more organizations into a single entity. This event is characterized by the unification of separate organizations to increase efficiency, market share, or resources. It is distinct from the StartOrg event, which involves the creation of a new organization, and the EndOrg event, which signifies the dissolution of an organization. The outcome of a MergeOrg event is a single, unified organization formed from the merging entities. Example triggers include 'merged', 'merger', 'tying the knot', and 'create'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "org": "The 'org' argument represents the organizations involved in the merger. It includes companies, departments, or any organizational units, such as 'Oracle' and 'Peoplesoft'. All relevant entities mentioned in the context of the merger should be included, while entities not part of the merger should be excluded. In cases where organizations are referred to generally, such as 'two organizations', the general reference should be captured."
+        }
+    }
+}

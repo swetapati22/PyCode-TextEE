@@ -1,0 +1,42 @@
+{
+    "ChargeIndict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal actions where an individual or entity is formally accused of a crime. Example triggers include 'charged', 'indicted', and 'counts'.",
+            "The event is characterized by the formal accusation of a crime, typically involving legal authorities such as courts or prosecutors. It is part of the judicial process and precedes a trial or hearing.",
+            "Unlike the 'Convict' event, which indicates a final judgment of guilt, the 'ChargeIndict' event only signifies the formal accusation stage. For example, 'charged' indicates an accusation, whereas 'convicted' indicates a judgment.",
+            "Triggers such as 'appealed' are indicative of the 'Appeal' event type, not this event type. The 'ChargeIndict' event focuses on the initial accusation rather than subsequent legal processes.",
+            "The outcome of the 'ChargeIndict' event is the formal charging or indictment of the defendant, which may lead to further legal proceedings. This is distinct from events like 'Acquit', which indicate the resolution of charges in favor of the defendant."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', or 'jury'. The adjudicator is the legal authority responsible for overseeing the charging or indictment process.",
+            "The adjudicator plays a crucial role in the legal process, ensuring that the charges are formally recognized and processed. For instance, 'a judge said Sunday' indicates the involvement of a judge.",
+            "In some cases, the adjudicator may be a collective body, such as a 'jury'. This is important in distinguishing between individual and collective legal authorities.",
+            "Unlike the 'prosecutor', who initiates the charges, the adjudicator is responsible for the legal validation and oversight of the charges. For example, 'the court held' indicates the court's role as an adjudicator.",
+            "Edge cases may include situations where the adjudicator is not explicitly mentioned but implied, such as 'the decision was made by the court'."
+        ],
+        "defendant": [
+            "Examples are 'man', 'defendants', 'Sandusky', or 'Jay Z.'. The defendant is the individual or entity being formally accused of a crime.",
+            "The defendant is central to the 'ChargeIndict' event, as they are the subject of the legal accusation. For instance, 'a man in Afghanistan' indicates the person being charged.",
+            "In some cases, the defendant may be a group of individuals, such as 'defendants'. This highlights the scope of the charges, which can involve multiple parties.",
+            "Unlike the 'prosecutor', who brings the charges, the defendant is the one facing the charges. For example, 'Jay Z. has not been charged' indicates the person who is the subject of the accusation.",
+            "Edge cases may include situations where the defendant is not explicitly named but referred to indirectly, such as 'the locals charged me'."
+        ],
+        "place": [
+            "Examples are 'Afghanistan', 'Philadelphia', or 'Kabul'. The place indicates the location where the charges or indictment are taking place.",
+            "The place is important for contextualizing the legal proceedings, as it provides geographical information about where the event is occurring. For instance, 'in a Kabul court' specifies the location.",
+            "In some cases, the place may refer to broader regions or countries, such as 'Afghanistan'. This helps in understanding the jurisdiction and legal context of the charges.",
+            "Unlike the 'adjudicator' or 'prosecutor', the place is a geographical reference rather than a legal authority. For example, 'Philadelphia' indicates the location of the event.",
+            "Edge cases may include situations where the place is implied rather than explicitly stated, such as 'the court in the capital'."
+        ],
+        "prosecutor": [
+            "Examples are 'country', 'department', or 'locals'. The prosecutor is the legal authority or entity responsible for bringing the charges against the defendant.",
+            "The prosecutor plays a key role in initiating the 'ChargeIndict' event, as they are responsible for formally accusing the defendant. For instance, 'the Bush administration\u2019s Justice Department' indicates the prosecuting authority.",
+            "In some cases, the prosecutor may be a collective entity, such as 'the locals'. This highlights the involvement of community or governmental bodies in the legal process.",
+            "Unlike the 'defendant', who is the subject of the charges, the prosecutor is the one bringing the charges. For example, 'the country\u2019s Islamic sharia laws' indicates the prosecuting authority.",
+            "Edge cases may include situations where the prosecutor is not explicitly named but implied, such as 'the decision not to pursue criminal charges'."
+        ]
+    }
+}

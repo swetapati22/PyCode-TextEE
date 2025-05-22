@@ -1,0 +1,35 @@
+{
+    "Elect(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the selection or appointment of a person to a position or office through a voting process or decision. Example triggers include 'elected', 're-elected', 'won', 'gained', 'stood', 'take', and 'unelected'.",
+            "The event is characterized by the involvement of a person being chosen for a role, often through a formal or informal voting process. It typically involves an agent (voters or an organization) and may specify a place where the election occurs.",
+            "Unlike other PersonnelEvents, the Elect event specifically involves the process of choosing or appointing someone to a position, rather than other forms of personnel changes such as hiring or firing.",
+            "Triggers such as 'charged', 'extradite', 'addressing', and 'merge' are indicative of JusticeEvent, ContactEvent, and BusinessEvent types, not the Elect event type.",
+            "The outcome of the Elect event is the selection of a person for a role, which differs from events like 'ChargeIndict' or 'Sentence' where the outcome involves legal consequences rather than a position appointment."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'Catholics' in 'President Barack Obama won Iowa Catholics', where the agent represents the group or entity responsible for the election or voting process.",
+            "The agent is crucial as it identifies who is responsible for electing the person. It can be a group of people, an organization, or a specific electorate.",
+            "In the sentence 'Our government no longer listens to the people they were elected by', 'people' is the agent, indicating the voters.",
+            "The agent can sometimes be implied or not explicitly mentioned, as in 'The head of Diebold said his mission was to see that Bush was re-elected', where the agent is implied to be the voters.",
+            "Unlike the 'adjudicator' in JusticeEvents, the agent in Elect events is involved in the voting or selection process rather than making legal judgments."
+        ],
+        "person": [
+            "Examples are 'Barack Obama' in 'President Barack Obama won Iowa Catholics', where the person is the individual being elected.",
+            "The person is the central figure in the Elect event, as they are the one being chosen for a position or office.",
+            "In 'The head of Diebold said his mission was to see that Bush was re-elected', 'Bush' is the person being re-elected.",
+            "The person can be a candidate, incumbent, or any individual being considered for a role, as seen in 'If I was David Miliband I'd criticize him back, make a statement calling him an unelected fascist dictator'.",
+            "Unlike the 'defendant' in JusticeEvents, the person in Elect events is not facing legal action but is being considered for a position."
+        ],
+        "place": [
+            "Examples are 'Iowa' in 'President Barack Obama won Iowa Catholics', where the place indicates the location of the election or voting process.",
+            "The place is important as it provides context for where the election is taking place, which can influence the event's significance.",
+            "In 'Hey, you seem to know your stuff, a libertarian stood in an Ealing seat', 'Ealing' is the place where the election occurred.",
+            "The place can be a city, state, or any geographical location relevant to the election, as seen in 'But obviously most importantly they have gained their first ever MP, Caroline Lucas in Brighton Pavilion'.",
+            "Unlike the 'place' in events like 'Extradite' or 'TransferMoney', the place in Elect events is specifically related to the location of the electoral process."
+        ]
+    }
+}

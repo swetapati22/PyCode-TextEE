@@ -1,0 +1,11 @@
+{
+    "Elect(PersonnelEvent)": {
+        "description": "The Elect (PersonnelEvent) refers to the process of selecting or appointing an individual to a specific role or position through a voting mechanism. This event is characterized by formal voting procedures, the announcement of results, and the identification of a person or entity chosen for the role, commonly within political or organizational contexts. Distinct from other PersonnelEvents, the Elect event exclusively involves voting as opposed to direct appointment or hiring decisions. Examples include instances such as 'elected', 're-election', or 'by-elections'. The outcome is the assignment of a person or entity to a defined position, differentiating it from events like organizational mergers or asset transfers.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "The entity identifies the organization or group associated with the election. For example, 'USCF' in 'Beatriz Marinello was elected USCF President' represents the entity defining the scope of the elected position. When not explicitly mentioned, the context can imply the entity. The entity is distinct from the elected individual and is essential for understanding the relevance and scope of the election.",
+            "person": "The person argument represents the individual elected through the voting process, such as 'Beatriz Marinello' in 'Beatriz Marinello was elected USCF President'. This argument is vital for identifying the subject of the election and is distinct from the organization involved. In cases of implicit references or pronouns, contextual interpretation helps identify the person. For elections involving multiple individuals, each elected person should be individually recognized.",
+            "place": "The place argument denotes the location of the election, providing geographical context, such as 'Los Angeles' in 'Beatriz Marinello was elected USCF President in Los Angeles'. While some elections may not have a clear physical location, such as virtual elections, the argument can be adjusted to reflect the nature of the event, including terms like 'online' or 'virtual' if applicable."
+        }
+    }
+}

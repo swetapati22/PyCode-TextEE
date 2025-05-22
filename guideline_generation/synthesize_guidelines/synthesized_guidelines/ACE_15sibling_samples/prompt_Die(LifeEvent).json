@@ -1,0 +1,49 @@
+{
+    "Die(LifeEvent)": {
+        "description": [
+            "The event is triggered by the occurrence of a death, such as 'suicide', 'fallen', 'killed', 'death', 'deaths', or 'dead'.",
+            "The event is characterized by the end of life of one or more individuals, often involving specific circumstances or causes.",
+            "Unlike related events such as 'Injure' or 'Marry', this event specifically denotes the cessation of life, not injury or union.",
+            "Triggers such as 'wounding' or 'marry' are indicative of 'Injure' or 'Marry' events, not the 'Die' event type.",
+            "The outcome of this event is the confirmation of death, which can be caused by various means such as violence, accidents, or natural causes."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are the entity responsible for causing the death, such as 'bomber' in 'A suicide bomber detonated explosives'.",
+            "The agent is crucial in understanding the cause or perpetrator of the death event.",
+            "In cases of accidents, the agent might be an inanimate object or natural force, e.g., 'earthquake' or 'fire'.",
+            "Unlike the 'victim', the agent is the one who initiates the action leading to death.",
+            "In some contexts, the agent might be implicit, such as 'disease' in 'He died of cancer'."
+        ],
+        "instrument": [
+            "Examples are the means or tools used to cause the death, such as 'explosives' in 'A suicide bomber detonated explosives'.",
+            "The instrument provides insight into the method of death, which can be critical for understanding the event.",
+            "In cases of natural death, the instrument might be a condition or disease, e.g., 'cancer' or 'heart attack'.",
+            "Unlike the 'agent', the instrument is the tool or method used by the agent to cause death.",
+            "In some scenarios, the instrument might be abstract, such as 'poison' in 'He was poisoned'."
+        ],
+        "person": [
+            "Examples are the individuals directly involved in the event, such as 'comrades' in 'bodies of fallen comrades'.",
+            "The person argument is important for identifying who is affected by the death event.",
+            "In some cases, the person might be a group or collective, e.g., 'soldiers' or 'civilians'.",
+            "Unlike the 'victim', the person might not always be the one who dies but could be related to the event.",
+            "In certain contexts, the person might be indirectly involved, such as 'family members' in 'He left behind a grieving family'."
+        ],
+        "place": [
+            "Examples are the locations where the death occurs, such as 'mall' in 'A suicide bomber detonated explosives at the entrance to a crowded mall'.",
+            "The place provides context and setting for the death event, which can be crucial for situational understanding.",
+            "In some cases, the place might be a broader region, e.g., 'city' or 'country'.",
+            "Unlike the 'agent' or 'instrument', the place is the physical location where the event transpires.",
+            "In certain scenarios, the place might be implicit, such as 'home' in 'He died peacefully at home'."
+        ],
+        "victim": [
+            "Examples are the individuals who die as a result of the event, such as 'bomber' in 'killing at least four shoppers and wounding 20'.",
+            "The victim is central to the event as they are the ones who experience the cessation of life.",
+            "In some cases, the victim might be a group or collective, e.g., 'people' or 'civilians'.",
+            "Unlike the 'agent', the victim is the one who suffers the consequence of the death event.",
+            "In certain contexts, the victim might be indirectly referenced, such as 'someone' in 'We are talking about someone's life or death'."
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Correspondence(ContactEvent)
+```json
+{
+    "Correspondence(ContactEvent)": {
+        "description": [
+            "The event is triggered by an act of communication between two or more entities, such as a phone call, email, or meeting. Example triggers include 'phoned', 'meet', 'answer', and 'asked'.",
+            "The event is characterized by the exchange of information or messages, typically involving a sender and a receiver. It often includes direct interaction or response. Example: 'Phoned Amtrak on Wednesday'.",
+            "The event involves a specific form of contact where the primary purpose is to convey or request information. Unlike a Broadcast event, Correspondence is typically more personal and directed at specific individuals or entities. Example: 'Let's see, you quoted my post'.",
+            "The event can occur in various settings, including physical locations or virtual platforms. Unlike a Demonstrate event, Correspondence does not involve public displays or protests. Example: 'The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities'.",
+            "The event outcomes include the successful exchange of information or the initiation of further communication. Unlike a Transaction event, Correspondence does not involve the exchange of goods or services. Example: 'Do you recall in YOUR 'The best healthcare in America is government run' thread'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are individuals or organizations involved in the communication. They can be the sender, receiver, or both. Example: 'Patino' and 'William Hague' in 'The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities'.",
+            "The entity argument identifies the participants in the correspondence. It is crucial for understanding who is involved in the communication. Example: 'Amtrak' in 'Phoned Amtrak on Wednesday'.",
+            "Entities can be mentioned explicitly or implied through pronouns. Example: 'you' and 'I' in 'Let's see, you quoted my post'.",
+            "Entities can include multiple participants, highlighting the interaction between them. Example: 'you' and 'me' in 'Do you recall in YOUR 'The best healthcare in America is government run' thread'.",
+            "The entity argument helps distinguish Correspondence events from other ContactEvents by specifying the direct participants. Example: 'company' in 'Phoned online company and got it'."
+        ],
+        "place": [
+            "Examples are locations where the correspondence takes place, either physical or virtual. Example: 'London' in 'The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities'.",
+            "The place argument provides context for the setting of the communication, which can be important for understanding the event's circumstances. Example: 'London' in 'Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson\u2019s credit cards were acquitted of fraud charges Friday by a London jury'.",
+            "Places can be specific or general, depending on the level of detail provided in the text. Example: 'mall' in 'For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot'.",
+            "The place argument helps differentiate Correspondence events from other events that may occur in different settings. Example: 'Massachusetts' in 'In a joint motion, lawyers for the defense and prosecution asked Magistrate Judge Marianne B. Bowler of U.S. District Court in Massachusetts to release Phillipos'.",
+            "The place argument is not always present in Correspondence events, but when it is, it adds valuable information about the context of the communication. Example: 'Iowa' in 'President Barack Obama won Iowa Catholics, about a quarter of the electorate, by what the exit polls showed was an 18-percentage-point margin'."
+        ]
+    }
+}
+```

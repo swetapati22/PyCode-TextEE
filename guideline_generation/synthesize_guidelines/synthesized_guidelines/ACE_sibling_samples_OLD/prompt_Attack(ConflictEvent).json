@@ -1,0 +1,56 @@
+{
+    "Attack(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions that involve physical harm or violence directed towards individuals, groups, or locations. Example triggers include 'killed', 'raping', 'drugging', 'blast', 'tore', and 'explosion'.",
+            "The event is characterized by the presence of an aggressor (attacker) and a recipient of the violence (victim or target). It often involves the use of instruments or weapons and occurs at specific places.",
+            "Unlike other ConflictEvent types such as Demonstrate, which involve public displays of protest or support, Attack events specifically involve acts of violence or aggression.",
+            "Triggers such as 'rally' or 'protest' are indicative of Demonstrate events, not Attack events. Attack events are marked by direct physical harm or the threat thereof.",
+            "The outcomes of Attack events typically include injury, death, or destruction, distinguishing them from other events where the primary outcome is not physical harm."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are individuals or entities that initiate the attack, such as 'luster' in the context of 'raping and drugging'.",
+            "The agent is responsible for planning or executing the attack, often synonymous with the attacker.",
+            "In some cases, the agent may be an organization or group rather than an individual.",
+            "The agent's role is crucial as it identifies the source of the attack, providing context to the event.",
+            "Edge cases include situations where the agent is not directly involved in the physical act but orchestrates it, such as a mastermind behind a bombing."
+        ],
+        "attacker": [
+            "Examples are the direct perpetrators of the attack, such as 'mob' in the context of 'killed'.",
+            "The attacker is the entity that physically carries out the violent act.",
+            "In some scenarios, the attacker may be a group or collective rather than a single individual.",
+            "The attacker is distinct from the agent when the agent is not directly involved in the physical act.",
+            "Edge cases include situations where the attacker is unknown or unidentified, but the event is still classified as an attack."
+        ],
+        "instrument": [
+            "Examples are tools or weapons used to carry out the attack, such as 'machetes', 'spears', and 'bomb'.",
+            "The instrument is crucial for understanding the method and severity of the attack.",
+            "In some cases, the instrument may be unconventional, such as poison or cyber tools in a cyber-attack.",
+            "The presence of an instrument often indicates premeditation and intent to cause harm.",
+            "Edge cases include attacks where the instrument is not physical, such as psychological or chemical attacks."
+        ],
+        "place": [
+            "Examples are locations where the attack occurs, such as 'area', 'airport', 'shed', and 'city'.",
+            "The place provides context and helps in understanding the scope and impact of the attack.",
+            "In some cases, the place may be a virtual location, such as in cyber-attacks.",
+            "The place is distinct from the target, which is the specific entity or entities being attacked.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context."
+        ],
+        "target": [
+            "Examples are the specific entities or objects being attacked, such as 'them' and 'terminal'.",
+            "The target is the direct recipient of the attack, which can be individuals, groups, or physical structures.",
+            "In some cases, the target may be symbolic, such as an attack on a government building representing an attack on the state.",
+            "The target is distinct from the victim, which refers to those who suffer harm as a result of the attack.",
+            "Edge cases include situations where the target is not explicitly mentioned but can be inferred from the context."
+        ],
+        "victim": [
+            "Examples are individuals or groups who suffer harm as a result of the attack, such as 'women' in the context of 'raping and drugging'.",
+            "The victim is the entity that experiences the consequences of the attack, such as injury or death.",
+            "In some cases, the victim may be a bystander or unintended target of the attack.",
+            "The victim is distinct from the target, which is the intended recipient of the attack.",
+            "Edge cases include situations where the victim is not explicitly mentioned but can be inferred from the context."
+        ]
+    }
+}

@@ -1,0 +1,126 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Transport(MovementEvent)
+```json
+{
+    "Transport(MovementEvent)": {
+        "description": [
+            "The event is triggered by verbs or phrases indicating the movement of entities from one place to another, such as 'transport', 'drive', 'fly', 'bring', 'head', 'parachute', and 'cart'.",
+            "The event is characterized by the involvement of an agent or vehicle facilitating the movement, and an artifact or victim being moved. The movement typically involves a clear origin and destination.",
+            "Unlike other MovementEvent types, the Transport event specifically involves the conveyance of entities, often with a focus on the means or method of transportation.",
+            "Triggers such as 'walk', 'run', or 'swim' are indicative of other MovementEvent types like 'Travel' or 'Journey', not the Transport event type.",
+            "The outcome of a Transport event is the successful relocation of the artifact or victim to a new place, often facilitated by an agent or vehicle."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'forces', 'medical teams', 'parents'. The agent is the entity responsible for facilitating the transport.",
+            "The agent plays a crucial role in initiating and managing the transport process.",
+            "In some cases, the agent may be an organization or group, such as 'US forces' or 'police'.",
+            "The agent is distinct from the artifact or victim being transported.",
+            "Edge cases include scenarios where the agent is implied but not explicitly mentioned, such as 'troops headed for Iraq'."
+        ],
+        "artifact": [
+            "Examples are 'women', 'children', 'victims', 'protesters', 'Liana Owen'. The artifact is the entity being transported.",
+            "The artifact is the primary focus of the transport event, as it is the entity being moved from one location to another.",
+            "Artifacts can be individuals, groups of people, or objects.",
+            "Unlike the agent, the artifact does not facilitate the transport but is the subject of the movement.",
+            "Edge cases include scenarios where the artifact is a collective group, such as 'troops' or 'protesters'."
+        ],
+        "destination": [
+            "Examples are 'Sudan', 'Iraq', 'Manhattan', 'home', 'airfield'. The destination is the endpoint of the transport.",
+            "The destination is crucial for defining the scope and goal of the transport event.",
+            "It is the location where the artifact or victim is intended to arrive.",
+            "Unlike the origin, the destination is the final point in the transport process.",
+            "Edge cases include scenarios where the destination is implied but not explicitly mentioned, such as 'headed for Iraq'."
+        ],
+        "origin": [
+            "Examples are 'Sudan', 'Pennsylvania', 'Fort Hood'. The origin is the starting point of the transport.",
+            "The origin provides context for where the transport begins.",
+            "It is the location from which the artifact or victim is moved.",
+            "Unlike the destination, the origin is the initial point in the transport process.",
+            "Edge cases include scenarios where the origin is implied but not explicitly mentioned, such as 'flying out of Fort Hood'."
+        ],
+        "place": [
+            "Examples are 'Iraq'. The place is a general location associated with the transport event.",
+            "The place provides additional context for the transport event, often indicating a broader area involved.",
+            "It is not as specific as the origin or destination but helps situate the event geographically.",
+            "Unlike the origin or destination, the place may not indicate a specific start or end point.",
+            "Edge cases include scenarios where the place is a large region or country, such as 'across the United States and Canada'."
+        ],
+        "vehicle": [
+            "Examples are 'trains'. The vehicle is the means of transportation used in the event.",
+            "The vehicle is crucial for understanding how the transport is facilitated.",
+            "It can be any mode of transport, such as cars, planes, trains, or ships.",
+            "Unlike the agent, the vehicle is the tool or method used for the transport, not the entity facilitating it.",
+            "Edge cases include scenarios where the vehicle is implied but not explicitly mentioned, such as 'drove 10 hours'."
+        ],
+        "victim": [
+            "Examples are 'who', 'victims'. The victim is the entity being transported, often in a context of harm or distress.",
+            "The victim is a specific type of artifact, typically involving individuals in need of assistance or rescue.",
+            "Victims are often highlighted in contexts of emergency or medical transport.",
+            "Unlike general artifacts, victims are usually associated with negative or urgent circumstances.",
+            "Edge cases include scenarios where the victim is part of a larger group, such as 'dozens of wounded victims'."
+        ]
+    }
+}
+```

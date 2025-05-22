@@ -1,0 +1,34 @@
+{
+    "Nominate(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the act of officially naming or designating someone for a position or role. Example triggers include 'name', 'nominate', and 'appoint'.",
+            "The event is characterized by the formal proposal or selection of a person for a specific role, often within an organization or institution.",
+            "Unlike the 'Elect' event, which involves a voting process, the 'Nominate' event does not necessarily imply a democratic selection but rather a designation by an authority or committee.",
+            "Triggers such as 'elected' or 'voted' are indicative of the 'Elect' event type, not the 'Nominate' event type.",
+            "The outcome of the 'Nominate' event is the identification of a candidate or appointee, whereas the 'StartPosition' event involves the commencement of duties in a role."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the act of nomination. Examples include 'name', 'nominate', and 'appoint'.",
+            "Triggers such as 'name' and 'nominate' are valid for this event type, as they directly indicate the act of designating someone for a role.",
+            "Edge cases include phrases like 'considered for nomination', which do not trigger the event as they imply potential rather than actual nomination.",
+            "Triggers like 'elected' or 'voted' are not valid for this event type as they pertain to the 'Elect' event type.",
+            "The trigger must clearly indicate the act of nomination, as in 'named as the new chairman' or 'nominated for the position'."
+        ],
+        "agent": [
+            "The 'agent' argument refers to the entity or person who is performing the act of nomination. Examples are 'pope' in 'the pope will reportedly name a new head'.",
+            "The agent is typically an authority figure or organization responsible for the nomination. For instance, 'British Chancellor of the Exchequer' in 'Gordon Brown on Tuesday named...'.",
+            "In cases where the agent is implied but not explicitly mentioned, the context should be used to infer the agent. For example, 'the committee nominated' implies the committee as the agent.",
+            "Unlike the 'Elect' event, where the agent might be a collective body of voters, the 'Nominate' event usually involves a single entity or a smaller group.",
+            "Examples are 'Senator Christopher Dodd' in 'Senator Christopher Dodd of Connecticut made the announcement...'."
+        ],
+        "person": [
+            "The 'person' argument refers to the individual who is being nominated. Examples are 'head' in 'name a new head of the troubled boston archdiocese'.",
+            "The person is the candidate or appointee for the position. For instance, 'head' in 'named the current head of the country's energy regulator'.",
+            "In cases where the person is referred to by their role or title, such as 'candidate' in 'Peterson, of course, is a candidate for the Lt. Governor nomination'.",
+            "Unlike the 'StartPosition' event, where the person is starting a role, the 'Nominate' event focuses on the designation of the person for a future role.",
+            "Examples are 'candidate' in 'he would not be the 10th candidate for the nomination'."
+        ]
+    }
+}

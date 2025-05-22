@@ -1,0 +1,35 @@
+{
+    "Elect(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the selection or appointment of a person to a position or office through a voting process. Example triggers include 'elected', 'won', 're-elected', 'gained', 'stood', and 'take'.",
+            "The event is characterized by the involvement of a person being chosen for a role, often through a democratic process. It typically involves an agent (voters or an organization) and a place where the election occurs.",
+            "Unlike the 'Nominate' event, which involves proposing a candidate for a position, the 'Elect' event signifies the final selection or appointment of the candidate. For example, 'renomination' is indicative of the 'Nominate' event, not the 'Elect' event.",
+            "Triggers such as 'took' or 'Loss' are indicative of 'StartPosition' or 'EndPosition' events, respectively, and not the 'Elect' event. The 'Elect' event specifically involves the outcome of a voting process.",
+            "The event is not triggered by the mere proposal or consideration of a candidate but by the actual outcome of an election or voting process. For instance, 'elected' and 'won' indicate the 'Elect' event, whereas 'nominated' would indicate a 'Nominate' event."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'Catholics' in 'President Barack Obama won Iowa Catholics', where 'Catholics' are the voters or the group responsible for the election.",
+            "The agent represents the entity or group that conducts the election or votes for the candidate. It is crucial in identifying who is responsible for the election outcome.",
+            "In the sentence 'Our government no longer listens to the people they were elected by', 'people' is the agent, indicating the voters.",
+            "The agent can be an organization, a group of people, or a specific demographic involved in the election process. For example, 'Diebold' in 'The head of Diebold said his mission was to see that Bush was re-elected'.",
+            "Unlike the 'person' argument, which identifies the individual being elected, the 'agent' argument identifies those who are electing or voting. For instance, 'libertarian' in 'a libertarian stood in an Ealing seat' is the person, while the voters in Ealing would be the agent."
+        ],
+        "person": [
+            "Examples are 'Barack Obama' in 'President Barack Obama won Iowa Catholics', where 'Barack Obama' is the individual being elected.",
+            "The person argument identifies the individual who is the subject of the election or voting process. It is essential in determining who has been elected.",
+            "In the sentence 'The head of Diebold said his mission was to see that Bush was re-elected', 'Bush' is the person, indicating the individual being re-elected.",
+            "The person can be any individual running for a position or office. For example, 'Caroline Lucas' in 'they have gained their first ever MP, Caroline Lucas in Brighton Pavilion'.",
+            "Unlike the 'agent' argument, which identifies the voters or the group conducting the election, the 'person' argument specifically identifies the candidate. For instance, 'Adrian' in 'Adrian was seen as having a fair chance to win here' is the person, while the voters in 'here' would be the agent."
+        ],
+        "place": [
+            "Examples are 'Iowa' in 'President Barack Obama won Iowa Catholics', where 'Iowa' is the location of the election.",
+            "The place argument identifies the geographical location where the election or voting process takes place. It is important for contextualizing the event.",
+            "In the sentence 'a libertarian stood in an Ealing seat', 'Ealing' is the place, indicating the location of the election.",
+            "The place can be any specific location, such as a city, state, or country, where the election occurs. For example, 'Brighton' in 'Caroline Lucas in Brighton Pavilion'.",
+            "Unlike the 'agent' and 'person' arguments, which identify the voters and the candidate respectively, the 'place' argument provides the setting for the election. For instance, 'Norwich south' in 'In Norwich south they made an 8% gain' is the place, while the voters and the candidate would be the agent and person, respectively."
+        ]
+    }
+}

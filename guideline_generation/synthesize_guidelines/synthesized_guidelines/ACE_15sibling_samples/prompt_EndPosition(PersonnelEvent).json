@@ -1,0 +1,35 @@
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the termination or conclusion of a person's role or position within an organization or entity. Example triggers include 'quit', 'ending', 'removal', 'leave', 'steps down', 'formerly', and 'previously'.",
+            "The event is characterized by a person ceasing to hold a specific position or role, often marked by explicit language indicating the end of their tenure. This can include voluntary resignation, retirement, or being removed from the position.",
+            "Unlike the StartPosition event, which marks the beginning of a role, the EndPosition event specifically denotes the conclusion of a role. For example, 'steps down' indicates an end, whereas 'appointed' would indicate a start.",
+            "Triggers such as 'replace' are indicative of the StartPosition event, not the EndPosition event. The EndPosition event focuses on the departure or cessation of a role, not the commencement of a new one.",
+            "The outcome of the EndPosition event is the vacancy of a position previously held by the person, which may or may not be immediately filled by another individual. This event does not cover the nomination or election of a successor, which are separate event types."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'Vivendi Universal Entertainment', 'Department of Trade and Industry', 'Barclays Bank'. The entity argument refers to the organization, company, or institution from which the person is departing.",
+            "The entity is crucial as it provides context to the position being vacated. It helps identify the scope and impact of the departure within a specific organizational framework.",
+            "In cases where multiple entities are mentioned, such as 'Barclays Bank, BZW and Kleinwort Benson', all relevant entities should be included to fully capture the extent of the person's previous roles.",
+            "The entity argument is not to be confused with the place argument, which refers to the geographical location. For example, 'London' is a place, whereas 'London School of Economics' is an entity.",
+            "Edge cases include scenarios where the entity is implied but not explicitly stated. In such cases, infer the entity from the context if possible, but ensure clarity and avoid assumptions without sufficient evidence."
+        ],
+        "person": [
+            "Examples are 'Barry Diller', 'Jean-Marie Messier', 'Callum McCarthy'. The person argument identifies the individual whose position is ending.",
+            "The person argument is essential as it specifies the subject of the event, providing a clear focus on who is leaving the position.",
+            "In cases where pronouns are used, such as 'he' or 'his', ensure that the antecedent is clear and correctly identified to avoid ambiguity.",
+            "The person argument should not be confused with the agent in related events like Nominate or Elect, where the focus is on the individual initiating the action rather than the one affected by it.",
+            "Edge cases include scenarios where multiple individuals are mentioned. Ensure that the person argument accurately reflects the individual whose position is ending, not others mentioned in the context."
+        ],
+        "place": [
+            "Examples are 'Chinese', 'London'. The place argument refers to the geographical location associated with the end of the position.",
+            "The place argument provides additional context, indicating where the event is taking place or where the organization/entity is based.",
+            "In cases where the place is not explicitly mentioned, infer it from the context if possible, but ensure clarity and avoid assumptions without sufficient evidence.",
+            "The place argument is distinct from the entity argument, which refers to the organization or institution. For example, 'London' is a place, whereas 'London School of Economics' is an entity.",
+            "Edge cases include scenarios where the place is implied through cultural or regional references. Ensure that the place argument accurately reflects the geographical context relevant to the event."
+        ]
+    }
+}

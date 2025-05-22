@@ -1,0 +1,21 @@
+{
+    "Life_Infect_Unspecified(Event)": {
+        "description": [
+            "The Life_Infect_Unspecified event refers to any instance where an individual or group of individuals is harmed or adversely affected by an unspecified infectious agent. The event can be triggered by terms such as 'infected', 'contracted', 'caught', 'spread', or 'transmitted'. This event type does not specify the nature of the infectious agent or the exact circumstances of the infection.",
+            "Life_Infect_Unspecified is an event type that captures scenarios where an infection occurs without specifying the infectious agent or the exact details of the infection. The event can be triggered by words like 'infected', 'contracted', 'caught', 'spread', or 'transmitted'. It focuses on the occurrence of the infection rather than the specifics of the pathogen or the method of transmission.",
+            "This event type, Life_Infect_Unspecified, is used to annotate instances where an infection has taken place, but the details of the infectious agent or the method of infection are not provided. Triggers for this event include 'infected', 'contracted', 'caught', 'spread', or 'transmitted'. The emphasis is on the fact that an infection has occurred, regardless of the specifics.",
+            "Life_Infect_Unspecified captures events where an infection is mentioned without specifying the infectious agent or the exact details. Triggers for this event can include 'infected', 'contracted', 'caught', 'spread', or 'transmitted'. The event focuses on the occurrence of the infection itself.",
+            "The Life_Infect_Unspecified event type is used to annotate situations where an infection is reported, but the details of the infectious agent or the method of infection are not specified. Triggers for this event include 'infected', 'contracted', 'caught', 'spread', or 'transmitted'. The key aspect is the occurrence of the infection, not the specifics of the pathogen or transmission."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "victim": [
+            "The 'victim' argument refers to the individual or group of individuals who have been infected. Examples are 'John', 'the patients', 'the community', 'the children', or 'the workers'. The victim is the entity that suffers from the infection.",
+            "In the context of Life_Infect_Unspecified, the 'victim' argument identifies the person or group that has contracted the infection. Examples include 'the residents', 'the staff', 'the family', 'the students', or 'the population'. The victim is the one affected by the infection.",
+            "The 'victim' argument in this event type denotes the entity that has been infected. Examples are 'the villagers', 'the employees', 'the team', 'the participants', or 'the individuals'. The victim is the one who experiences the infection.",
+            "For the Life_Infect_Unspecified event, the 'victim' argument specifies who has been infected. Examples include 'the citizens', 'the crew', 'the members', 'the attendees', or 'the group'. The victim is the entity impacted by the infection.",
+            "The 'victim' argument in the Life_Infect_Unspecified event type refers to those who have been infected. Examples are 'the population', 'the inhabitants', 'the soldiers', 'the travelers', or 'the patients'. The victim is the one who contracts the infection."
+        ]
+    }
+}

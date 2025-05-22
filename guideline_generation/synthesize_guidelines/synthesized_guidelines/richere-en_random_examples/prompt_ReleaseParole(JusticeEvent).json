@@ -1,0 +1,35 @@
+{
+    "ReleaseParole(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of releasing an individual from custody, typically under specific conditions such as parole or bail. Example triggers include 'release', 'parole', 'bail', 'let free', and 'paroled'.",
+            "The event is characterized by the involvement of a judicial or legal authority (agent) who authorizes the release, the individual being released (person), and the location where the release occurs (place).",
+            "Unlike other JusticeEvents such as 'Acquit' or 'Appeal', ReleaseParole specifically involves the conditional release of an individual from custody rather than a legal judgment or appeal process.",
+            "Triggers such as 'acquitted' or 'appealed' are indicative of other JusticeEvents like 'Acquit' or 'Appeal', not ReleaseParole. The outcome of ReleaseParole is the physical release of an individual under certain conditions.",
+            "The event scope includes scenarios where individuals are released from prison, jail, or detention centers, often involving conditions like house arrest, electronic monitoring, or community service. It does not include scenarios where individuals are merely transferred or moved without being released."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are the legal or judicial authority responsible for authorizing the release. This could be a judge, magistrate, or parole board. For instance, in 'Magistrate Judge Marianne B. Bowler of U.S. District Court in Massachusetts', 'Marianne B. Bowler' is the agent.",
+            "The agent plays a crucial role in the event as they have the authority to grant or deny the release. In 'They also seem to understand that releasing prisoners...', 'They' refers to the authority responsible for the release.",
+            "In cases where the agent is not explicitly mentioned, it can be inferred from the context. For example, 'He was paroled' implies an agent authorized the parole.",
+            "Unlike other roles such as 'defendant' or 'adjudicator' in events like 'Acquit' or 'Appeal', the agent in ReleaseParole is specifically involved in the release process.",
+            "Edge cases include scenarios where the agent is a collective entity, such as a parole board or a group of officials. For example, 'lawyers for the defense and prosecution' collectively act as the agent in requesting the release."
+        ],
+        "person": [
+            "Examples are the individual being released from custody. This could be a defendant, prisoner, or detainee. For instance, in 'release Phillipos, 19, on $100,000 bail', 'Phillipos' is the person.",
+            "The person is the central figure in the event as they are the subject of the release. In 'a hard core criminal was let out on bail', 'criminal' is the person.",
+            "In cases where the person is not explicitly named, it can be inferred from the context. For example, 'She appears to have long deconverted from the Manson cult...' implies 'she' is the person seeking parole.",
+            "Unlike other roles such as 'victim' or 'recipient' in events like 'Injure' or 'TransferOwnership', the person in ReleaseParole is the one being released from custody.",
+            "Edge cases include scenarios where the person is referred to by a pronoun or a general term. For example, 'he' in 'he more likely to be paroled' is the person."
+        ],
+        "place": [
+            "Examples are the location where the release occurs or where the person is being released to. This could be a prison, jail, or a specific geographic location. For instance, in 'U.S. District Court in Massachusetts', 'Massachusetts' is the place.",
+            "The place provides context to the event by indicating where the release is taking place. In 'a hard core criminal was let out on bail in the US', 'US' is the place.",
+            "In cases where the place is not explicitly mentioned, it can be inferred from the context. For example, 'left prison on parole' implies the place is the prison.",
+            "Unlike other roles such as 'destination' or 'origin' in events like 'TransportArtifact', the place in ReleaseParole is specifically related to the location of the release.",
+            "Edge cases include scenarios where the place is a general term or a specific facility. For example, 'prison' in 'left prison on parole' is the place."
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "Justice_ChargeIndict_Unspecified(Event)": {
+        "description": [
+            "The event 'Justice_ChargeIndict_Unspecified' refers to the formal accusation or indictment of an individual (defendant) by legal authorities (prosecutor) for committing a crime. The event can be triggered by words such as 'charged', 'indicted', 'accused', etc. This event does not specify the exact nature of the charges or indictments.",
+            "The 'Justice_ChargeIndict_Unspecified' event involves the legal process where an individual (defendant) is formally accused of a crime by a prosecutor. This event can be identified by triggers like 'charged', 'indicted', 'accused', and similar terms. The specific charges or details of the indictment are not provided in this event type.",
+            "In the 'Justice_ChargeIndict_Unspecified' event, a defendant is formally accused or indicted by a prosecutor. The event is typically indicated by triggers such as 'charged', 'indicted', 'accused', etc. The exact nature of the charges or indictments is not detailed in this event type.",
+            "The 'Justice_ChargeIndict_Unspecified' event describes the formal accusation or indictment of a defendant by a prosecutor. This event is triggered by terms like 'charged', 'indicted', 'accused', and similar words. The specific details of the charges or indictments are not specified in this event type.",
+            "The event 'Justice_ChargeIndict_Unspecified' involves the formal legal accusation or indictment of an individual (defendant) by a prosecutor. Triggers for this event include words such as 'charged', 'indicted', 'accused', etc. The event does not specify the exact nature of the charges or indictments."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "defendant": [
+            "The 'defendant' is the individual who is being formally accused or indicted in the 'Justice_ChargeIndict_Unspecified' event. Examples are 'Ahmad Khan Rahami', 'Dzhokhar Tsarnaev', 'man', 'he', 'Rahimi'. The defendant is the person against whom the charges are brought.",
+            "In the 'Justice_ChargeIndict_Unspecified' event, the 'defendant' refers to the person who is being charged or indicted. Examples include 'Ahmad Khan Rahami', 'Dzhokhar Tsarnaev', 'man', 'he', 'Rahimi'. The defendant is the subject of the legal accusation.",
+            "The 'defendant' in the 'Justice_ChargeIndict_Unspecified' event is the person who is facing formal charges or indictment. Examples are 'Ahmad Khan Rahami', 'Dzhokhar Tsarnaev', 'man', 'he', 'Rahimi'. This is the individual against whom the legal action is directed.",
+            "For the 'Justice_ChargeIndict_Unspecified' event, the 'defendant' is the individual being formally accused or indicted. Examples include 'Ahmad Khan Rahami', 'Dzhokhar Tsarnaev', 'man', 'he', 'Rahimi'. The defendant is the person who is alleged to have committed the crime.",
+            "The 'defendant' in the context of the 'Justice_ChargeIndict_Unspecified' event is the person who is being formally charged or indicted. Examples are 'Ahmad Khan Rahami', 'Dzhokhar Tsarnaev', 'man', 'he', 'Rahimi'. This is the individual who is the target of the legal accusation."
+        ],
+        "judgecourt": [
+            "The 'judgecourt' refers to the legal authority or court where the charges or indictment are being processed. Examples are 'New York'. This argument identifies the judicial body involved in the event.",
+            "In the 'Justice_ChargeIndict_Unspecified' event, 'judgecourt' denotes the court or legal authority handling the charges or indictment. Examples include 'New York'. This is the place where the legal proceedings are taking place.",
+            "The 'judgecourt' in the 'Justice_ChargeIndict_Unspecified' event is the court or legal authority where the defendant is being charged or indicted. Examples are 'New York'. This argument specifies the judicial entity involved.",
+            "For the 'Justice_ChargeIndict_Unspecified' event, 'judgecourt' refers to the court or legal authority overseeing the charges or indictment. Examples include 'New York'. This is the judicial body responsible for the legal process.",
+            "The 'judgecourt' in the context of the 'Justice_ChargeIndict_Unspecified' event is the court or legal authority where the indictment or charges are being handled. Examples are 'New York'. This argument identifies the legal institution involved."
+        ],
+        "place": [
+            "The 'place' refers to the location where the charges or indictment are being made. Examples are 'court'. This argument specifies the physical location of the legal proceedings.",
+            "In the 'Justice_ChargeIndict_Unspecified' event, 'place' denotes the location where the defendant is being charged or indicted. Examples include 'court'. This is the place where the legal action is taking place.",
+            "The 'place' in the 'Justice_ChargeIndict_Unspecified' event is the location where the charges or indictment are occurring. Examples are 'court'. This argument specifies the venue of the legal proceedings.",
+            "For the 'Justice_ChargeIndict_Unspecified' event, 'place' refers to the location where the legal charges or indictment are being processed. Examples include 'court'. This is the physical setting of the legal event.",
+            "The 'place' in the context of the 'Justice_ChargeIndict_Unspecified' event is the location where the defendant is being formally charged or indicted. Examples are 'court'. This argument identifies the venue of the legal proceedings."
+        ],
+        "prosecutor": [
+            "The 'prosecutor' is the legal authority or individual who is bringing the charges or indictment against the defendant. Examples are 'Prosecutors'. This argument identifies the party responsible for the legal accusation.",
+            "In the 'Justice_ChargeIndict_Unspecified' event, the 'prosecutor' refers to the person or legal authority charging or indicting the defendant. Examples include 'Prosecutors'. This is the entity initiating the legal action.",
+            "The 'prosecutor' in the 'Justice_ChargeIndict_Unspecified' event is the individual or legal authority responsible for bringing the charges or indictment. Examples are 'Prosecutors'. This argument specifies the accuser in the legal process.",
+            "For the 'Justice_ChargeIndict_Unspecified' event, the 'prosecutor' is the legal authority or person who is charging or indicting the defendant. Examples include 'Prosecutors'. This is the party responsible for the legal accusation.",
+            "The 'prosecutor' in the context of the 'Justice_ChargeIndict_Unspecified' event is the individual or legal authority bringing the charges or indictment against the defendant. Examples are 'Prosecutors'. This argument identifies the accuser in the legal proceedings."
+        ]
+    }
+}

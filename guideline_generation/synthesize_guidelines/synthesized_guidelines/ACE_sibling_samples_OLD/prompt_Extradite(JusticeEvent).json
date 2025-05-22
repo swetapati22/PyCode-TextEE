@@ -1,0 +1,42 @@
+{
+    "Extradite(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of transferring a person from one jurisdiction to another for legal proceedings or punishment. Example triggers include 'extradite', 'extradition', and 'extraditing'.",
+            "The event is characterized by the involvement of legal authorities and the movement of a person from an origin location to a destination location. It often involves formal agreements or legal processes between different jurisdictions.",
+            "Unlike the 'ArrestJail' event, which focuses on the act of taking someone into custody, the 'Extradite' event specifically involves the transfer of a person across jurisdictions for legal reasons.",
+            "Triggers such as 'release' or 'pardon' are indicative of events like 'ReleaseParole' or 'Pardon', not the 'Extradite' event type. The 'Extradite' event focuses on the legal transfer process rather than the outcome of freedom or clemency.",
+            "The outcome of the 'Extradite' event is the person being moved to a new jurisdiction where they will face legal proceedings or punishment. This differs from events like 'TrialHearing' or 'Convict', which focus on the legal proceedings themselves rather than the transfer process."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'court', 'government', 'police department'. The agent is the entity responsible for initiating or carrying out the extradition process.",
+            "The agent plays a crucial role in the legal and logistical aspects of the extradition, ensuring that the person is transferred according to legal protocols.",
+            "In some cases, the agent may be a specific legal authority or government body that has the jurisdiction to request or enforce the extradition.",
+            "Unlike the 'person' argument, which refers to the individual being extradited, the 'agent' refers to the entity facilitating the extradition.",
+            "Edge cases may include international organizations or tribunals acting as agents in cross-border extraditions, such as the U.N. war crimes tribunal."
+        ],
+        "destination": [
+            "Examples are 'jurisdiction', 'Hague', 'state'. The destination is the location to which the person is being extradited.",
+            "The destination is important as it indicates where the legal proceedings or punishment will take place after the extradition.",
+            "In some cases, the destination may be a specific city, state, or country, depending on the legal agreements in place.",
+            "Unlike the 'origin' argument, which refers to the starting location of the extradition, the 'destination' is the endpoint where the person will be transferred.",
+            "Edge cases may include situations where the destination is a specific court or detention facility within a broader jurisdiction."
+        ],
+        "origin": [
+            "Examples are 'state', 'headquarters'. The origin is the location from which the person is being extradited.",
+            "The origin is significant as it indicates the starting point of the extradition process and the jurisdiction that is relinquishing custody of the person.",
+            "In some cases, the origin may be a specific city, state, or country, depending on the legal context of the extradition.",
+            "Unlike the 'destination' argument, which refers to the endpoint of the extradition, the 'origin' is the starting location.",
+            "Edge cases may include situations where the origin is a specific detention facility or legal jurisdiction within a broader area."
+        ],
+        "person": [
+            "Examples are 'she', 'him', 'her'. The person is the individual being extradited from one jurisdiction to another.",
+            "The person is the central figure in the extradition event, as they are the subject of the legal transfer process.",
+            "In some cases, the person may be a suspect, defendant, or convicted individual facing legal proceedings or punishment in the destination jurisdiction.",
+            "Unlike the 'agent' argument, which refers to the entity facilitating the extradition, the 'person' is the individual being transferred.",
+            "Edge cases may include situations where the person is a high-profile individual or a person of interest in international legal matters."
+        ]
+    }
+}

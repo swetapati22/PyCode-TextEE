@@ -1,0 +1,41 @@
+{
+    "StartOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the establishment or initiation of a new organization, such as forming, launching, or founding an entity.",
+            "This event involves explicit actions that denote the creation of a formal or informal organization, as indicated by triggers like 'founded,' 'created,' or 'launched.'",
+            "Unlike related events such as MergeOrg, which focus on the combination of existing entities, this event specifically deals with the inception of a standalone organization.",
+            "Triggers such as 'opening' or 'launching' are indicative of this event type, particularly when they lead to the creation of a new organization.",
+            "The event scope includes but is not limited to formal business entities, political organizations, and community groups, as long as the action indicates the start of their existence."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The trigger for this event must be a verb or noun directly associated with the creation or establishment of an organization, such as 'founded,' 'created,' or 'launching.'",
+            "Examples of valid triggers include 'founded' in the sentence 'The organization was founded by X,' or 'launching' in 'The company plans its grand launching next week.'",
+            "Edge cases involve phrases like 'set up' or 'inaugurated,' which are acceptable if they directly describe the creation of an organization.",
+            "Triggers indicating the transformation or merging of existing entities, such as 'merged,' do not qualify for this event type.",
+            "Negative examples include 'dissolved' or 'terminated,' which pertain to the EndOrg event type."
+        ],
+        "agent": [
+            "The 'agent' argument identifies the person(s) or entity responsible for initiating or creating the organization, such as 'Kim Dae-Jung' in 'founded by Kim Dae-Jung.'",
+            "Agents can be individuals, groups, or organizations themselves, as long as they play a central role in the creation process.",
+            "Examples are 'The government' in 'The government established the agency' or 'A group of investors' in 'A group of investors launched the firm.'",
+            "For edge cases where the agent is implied but not explicitly stated, context should help infer the responsible party.",
+            "Unlike the 'org' argument, which identifies the organization being started, 'agent' specifies who initiated the process."
+        ],
+        "org": [
+            "The 'org' argument specifies the organization being created, such as 'Millennium Democratic Party' in 'founded by Kim Dae-Jung.'",
+            "Organizations can include companies, political parties, non-profits, and other entities, as long as they are being initiated in the context.",
+            "Examples include 'Disneyland' in 'opening a Disneyland here' and 'Daily Planet Ltd' in 'launching by Daily Planet Ltd.'",
+            "Edge cases involve unclear names of organizations; partial names can be acceptable if they distinctly identify the organization being referred to.",
+            "This argument excludes organizations involved in other capacities, such as being dissolved, merged,, or taken over, which belong to different event types."
+        ],
+        "place": [
+            "The 'place' argument denotes the geographic location where the organization is being created or launched, such as 'here' in 'opening a Disneyland here.'",
+            "Places can include cities, countries, or specific venues as long as they are explicitly or contextually tied to the organization's creation.",
+            "Examples include 'Melbourne' in 'The company launched in Melbourne' and 'United States' in 'launched operations in the United States.'",
+            "For edge cases, vague references like 'locally' can be inferred to generalize the place, but specific locations are preferred.",
+            "Unlike 'org,' which specifies the entity, 'place' strictly refers to the geographic location associated with the event."
+        ]
+    }
+}

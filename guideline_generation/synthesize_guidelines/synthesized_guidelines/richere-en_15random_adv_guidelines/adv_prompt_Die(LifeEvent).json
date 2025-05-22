@@ -1,0 +1,12 @@
+{
+    "Die(LifeEvent)": {
+        "description": "The 'Die' event is triggered by the occurrence of a death, whether natural, accidental, or intentional. It signifies the end of life of one or more individuals, encompassing various causes such as homicides, accidents, and natural causes. Unlike related events like 'Injure' or 'Execute', the 'Die' event specifically denotes the cessation of life. Triggers such as 'suicide', 'murder', 'killing', 'blown up', and 'victims' are indicative of this event. The outcome is the death of the victim(s), distinguishing it from events where the victim survives but is harmed.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The entity responsible for causing the death, which can be a person, group, organization, or abstract entity like a disease or natural disaster. Examples include 'bombers' in 'suicide bombers', 'government' in 'government murder', and 'cancer' in 'cancer killed many people'. The agent is the cause of the death, not the one who suffers it.",
+            "instrument": "The means or tools used to cause the death, including weapons, methods, or substances. Examples include 'bomb' in 'suicide bombers', 'poison' in 'poisoned to death', and 'fire' in 'burned to death in the fire'. The instrument is the tool or method used by the agent to cause the death.",
+            "place": "The location where the death occurred, which can be a specific place, city, country, or a more general location. Examples include 'mainland' in 'mainland Great Britain', 'downtown Manhattan' in 'downtown Manhattan', and 'home' in 'died at home'. The place contextualizes the event geographically.",
+            "victim": "The individual(s) who died as a result of the event, which can include people, groups, or animals. Examples include 'bombers' in 'suicide bombers', 'children' in 'killing the children', and 'family' in 'blown up along with his family'. The victim is the one who suffers the death, not the one who causes it."
+        }
+    }
+}

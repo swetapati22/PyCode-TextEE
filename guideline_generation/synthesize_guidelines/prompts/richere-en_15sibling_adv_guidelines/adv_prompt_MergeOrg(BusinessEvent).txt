@@ -1,0 +1,78 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_MergeOrg(BusinessEvent)
+```json
+{
+    "MergeOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the merging of two or more organizations into a single entity. Example triggers include 'merge', 'merged', and 'merger'.",
+            "The event is characterized by the combination of separate organizations, often resulting in a new or larger organization. This can involve companies, schools, airlines, or other entities.",
+            "Unlike the DeclareBankruptcy event, which involves an organization ceasing operations due to financial insolvency, the MergeOrg event involves the unification of organizations to continue operations together.",
+            "Triggers such as 'bankruptcy' or 'closed' are indicative of DeclareBankruptcy or EndOrg events, not the MergeOrg event type.",
+            "The outcome of a MergeOrg event is the formation of a single, unified organization from previously separate entities, which is distinct from the StartOrg event where a new organization is created from scratch."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'ABN Amro' in the context of a merger with another organization. The 'org' argument represents the entities involved in the merging process.",
+            "The 'org' argument is crucial as it identifies the specific organizations that are being combined. For instance, 'Southwest High' and 'schools' in the context of school mergers.",
+            "In the case of airline mergers, 'org' could include entities like 'American Airlines' and 'US Airways'. This argument helps in understanding the scope and impact of the merger.",
+            "Edge cases include scenarios where multiple organizations are mentioned, such as 'Delta Air Lines', 'Northwest Airlines', 'United', and 'Continental'. Each organization involved in the merger should be captured.",
+            "Unlike other event types, the 'org' argument in MergeOrg specifically refers to the entities being unified, not those being dissolved or newly created. For example, 'airlines' in the context of a merger event."
+        ]
+    }
+}
+```

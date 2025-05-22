@@ -1,0 +1,10 @@
+{
+    "Contact(Event)": {
+        "description": "A Contact event is triggered by verbal or written communication between entities, characterized by the exchange of information, opinions, or directives. This event type focuses on the dissemination or reception of information, often involving direct or indirect speech acts. Unlike Transaction events, which involve the exchange of goods or services, Contact events are centered on communication itself. Examples of triggers include 'stated', 'say', 'claimed', 'conversation', 'told', and 'talking'. The context of the communication can vary from formal statements to casual conversations, with the primary outcome being the communication rather than the transfer of physical items or services.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "Entities are individuals or groups involved in the communication. They can be the person or group conveying or receiving the information. Examples include 'Obama' in 'Obama stated in ISLAMIC COUNTRIES' and 'Giulio Andreotti' in 'Giulio Andreotti had to say something'. Entities can be explicitly mentioned or implied, such as 'He' in 'He claimed'. Identifying entities is crucial for understanding the participants in the communication.",
+            "place": "The place is the location where the communication occurs, providing context for the event. It can be a physical location or an abstract setting. Examples include 'ISLAMIC COUNTRIES' in 'Obama stated in ISLAMIC COUNTRIES' and 'in the showers' in 'several people were told in the showers'. The place may be explicitly mentioned or inferred from the context, helping to situate the event and understand the communication's setting."
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "StartPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by a person starting a new position or role within an organization or entity. Example triggers include 'replace', 'took on', 'begins', 'become', 'took office', 'appointed', 'becoming', and 'became'.",
+            "The event is characterized by the initiation of a new role or position by an individual, often marked by formal or official language indicating the start of a tenure. Key characteristics include the mention of the new role, the individual assuming the role, and sometimes the location or entity associated with the role.",
+            "Unlike the 'Nominate' event, which involves the proposal of a candidate for a position, the 'StartPosition' event signifies the actual commencement of the role. For example, 'appointed' indicates the start of a role, whereas 'nominated' would indicate a proposal for a role.",
+            "Triggers such as 'elected' are indicative of the 'Elect' event type, not the 'StartPosition' event type. The 'Elect' event involves the selection process, while 'StartPosition' focuses on the beginning of the role after the selection process is complete.",
+            "The 'StartPosition' event does not include the end of a role, which is covered by the 'EndPosition' event. For instance, 'former' indicates a past role and is not a trigger for 'StartPosition'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'unit', 'operations', 'London School of Economics', 'Palestinian', 'Israel', 'Beijing', 'China', 'parliament'. The 'entity' argument refers to the organization, institution, or entity where the new position is being started.",
+            "The 'entity' argument is crucial as it provides context about the organization or entity associated with the new role. For example, 'Jean-Rene Fourtou' starting a role at the 'unit' indicates the specific entity involved.",
+            "In cases where the entity is a broader organization, such as 'China' or 'Beijing', it indicates the larger context within which the new role is situated. For instance, 'Hu Jintao' becoming the leader in 'Beijing' provides a geopolitical context.",
+            "The 'entity' argument can sometimes be implicit or inferred from the context. For example, 'operations' in 'Diller took on the role at the top of Vivendi's US entertainment operations' implies the entity is 'Vivendi's US entertainment operations'.",
+            "Edge cases include situations where the entity is not explicitly mentioned but can be inferred from the text. For example, 'he took office as Israel's foreign minister' implies the entity is 'Israel'."
+        ],
+        "person": [
+            "Examples are 'Jean-Rene Fourtou', 'Diller', 'Callum McCarthy', 'Davies', 'Roh Moo-Hyun', 'minister', 'he', 'Hu Jintao', 'I'. The 'person' argument refers to the individual who is starting the new position or role.",
+            "The 'person' argument is essential as it identifies the individual assuming the new role. For example, 'Callum McCarthy' beginning an important job in London's financial world highlights the person involved.",
+            "In some cases, the 'person' argument may be a pronoun or a title, such as 'he' or 'minister', which should be resolved to the specific individual mentioned earlier in the text.",
+            "The 'person' argument can also include titles or roles that the individual is known by, such as 'president' or 'leader', which provide additional context about the individual's identity and the significance of the new role.",
+            "Edge cases include situations where the individual's name is not explicitly mentioned but can be inferred from the context. For example, 'I became president of China' implies the person is the speaker, who is the president of China."
+        ],
+        "place": [
+            "Examples are 'Paris', 'Serbia and Montenegro'. The 'place' argument refers to the geographical location where the new position or role is being started.",
+            "The 'place' argument provides additional context about the location associated with the new role. For example, 'Jean-Rene Fourtou' starting a role in 'Paris' indicates the geographical context of the event.",
+            "In some cases, the 'place' argument may be implicit or inferred from the text. For example, 'he took office as Israel's foreign minister' implies the place is 'Israel'.",
+            "The 'place' argument can also include broader geographical regions or countries, such as 'Serbia and Montenegro', which provide a larger context for the new role.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context. For example, 'Callum McCarthy begins an important job in London's financial world' implies the place is 'London'."
+        ]
+    }
+}

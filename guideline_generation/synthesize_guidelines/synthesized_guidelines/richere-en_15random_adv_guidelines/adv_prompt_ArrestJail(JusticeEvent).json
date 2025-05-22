@@ -1,0 +1,11 @@
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": "The 'ArrestJail' event involves the actions of law enforcement or similar authorities detaining or imprisoning an individual. It is triggered by actions or outcomes that lead to someone being taken into custody or confined, typically indicated by terms such as 'arrested', 'busted', or 'locked away'. Unlike related justice events like 'TrialHearing' or 'Execute', this event specifically focuses on the act of detention without the involvement of legal proceedings or execution processes.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "In an 'ArrestJail' event, the agent is the individual or group, such as police officers or law enforcement agencies, responsible for carrying out the arrest or imprisonment. The agent may be directly named or implied within the context, and is pivotal in identifying the enforcing authority.",
+            "person": "The person argument refers to the individual or group that is being detained or imprisoned. This argument highlights the target of the action, which can range from a single person to a collective group identified by specific roles or identities.",
+            "place": "The place argument specifies the location where the arrest or imprisonment occurs. It can be as specific as a particular facility like a jail or as broad as a city or county. This provides essential context to the event, pinpointing where the action takes place."
+        }
+    }
+}

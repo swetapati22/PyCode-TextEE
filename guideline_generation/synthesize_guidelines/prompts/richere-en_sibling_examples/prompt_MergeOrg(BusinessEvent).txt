@@ -1,0 +1,204 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type MergeOrg which is a child event type of super class BusinessEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+MergeOrg which is a child event type of super class BusinessEvent
+Arguments:
+Argument 1 -> org
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 2
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+Some schools, like Southwest High, were merged, raising enrollment dramatically, maybe even dangerously.
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['Southwest High', 'schools']
+
+Example 3
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The Justice Department, along with the attorneys general of six states and the District of Columbia, filed a lawsuit Tuesday seeking to block the proposed merger of American Airlines and US Airways.
+### Event Trigger ###
+merger
+### Event Arguments ###
+For argument "org" extracted spans ['American Airlines', 'US Airways']
+
+Example 4
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+Dealing an unexpected blow to a yearlong effort to create the world’s biggest airline, the Justice Department said the merger between the two airlines would substantially reduce competition, increase airfares and cut service.
+### Event Trigger ###
+merger
+### Event Arguments ###
+For argument "org" extracted spans ['airlines']
+
+Example 5
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+After approving a series of mergers between the nation’s airlines in recent years, the Justice Department’s decision came as a surprise to both carriers, who had expressed confidence the deal would go through with only a few changes.
+### Event Trigger ###
+mergers
+### Event Arguments ###
+For argument "org" extracted spans ['airlines']
+
+Example 6
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+Since then, Delta Air Lines merged with Northwest Airlines, United merged with Continental, and Southwest merged with AirTran.
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['Delta Air Lines', 'Northwest Airlines']
+
+Example 7
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+Since then, Delta Air Lines merged with Northwest Airlines, United merged with Continental, and Southwest merged with AirTran.
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['United', 'Continental']
+
+Example 8
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+Since then, Delta Air Lines merged with Northwest Airlines, United merged with Continental, and Southwest merged with AirTran.
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['Southwest', 'AirTran']
+
+Example 9
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+A merger of American and US Airways, it said, would result in four airlines controlling more than 80 percent of the U.S. market for commercial air travel.
+### Event Trigger ###
+merger
+### Event Arguments ###
+For argument "org" extracted spans ['American', 'US Airways']
+
+Example 10
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The two airlines said they would defend their merger plan.
+### Event Trigger ###
+merger
+### Event Arguments ###
+For argument "org" extracted spans ['airlines']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+Employees lost their retirement savings and shareholders lost billions of dollars after the once highflying company slid into bankruptcy in 2001.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "org" extracted spans ['company']
+
+Example 12
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot, 6 killed.
+### Event Trigger ###
+open
+### Event Arguments ###
+For argument "agent" extracted spans ['dealer']
+For argument "org" extracted spans ['store']
+For argument "place" extracted spans ['mall']
+
+Example 13
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+To reduce costs last year, the district closed almost half the schools in the city.
+### Event Trigger ###
+closed
+### Event Arguments ###
+For argument "org" extracted spans ['half']
+For argument "place" extracted spans ['city']

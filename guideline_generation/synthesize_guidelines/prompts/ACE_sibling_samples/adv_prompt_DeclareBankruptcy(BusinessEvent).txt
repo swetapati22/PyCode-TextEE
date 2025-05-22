@@ -1,0 +1,91 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_DeclareBankruptcy(BusinessEvent)
+```json
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": [
+            "The event is triggered by a company or organization formally declaring its inability to pay its debts, often leading to legal proceedings. Example triggers include 'bankruptcy', 'file for bankruptcy', and 'chapter 11'.",
+            "The event is characterized by the financial failure of an organization, which may result in restructuring or liquidation. Key characteristics include legal filings and public announcements of financial distress.",
+            "Unlike events such as 'StartOrg' or 'MergeOrg', this event does not involve the creation or combination of organizations but rather the cessation of normal business operations due to insolvency.",
+            "Triggers such as 'opening' or 'merged' are indicative of 'StartOrg' or 'MergeOrg' events, not this event type. This event focuses on financial failure and legal insolvency processes.",
+            "The outcomes of this event often include legal protection from creditors, potential restructuring, or liquidation of assets. It differs from 'EndOrg' as it specifically involves financial insolvency rather than the complete dissolution of an organization for other reasons."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "The 'org' argument refers to the organization that is declaring bankruptcy. Examples are 'worldcom', 'Enron Corp', and 'usairways'.",
+            "This argument is crucial as it identifies the entity undergoing financial distress. Examples include 'united', 'amr', and 'american'.",
+            "In cases where the organization is referred to by a pronoun, such as 'it' or 'company', the 'org' argument should capture the correct entity. Examples are 'it' in 'america warns it will seek more layoffs'.",
+            "The 'org' argument helps distinguish the specific entity involved in the bankruptcy event, which is essential for understanding the context and impact. Examples include 'airline' in 'the largest airline may have to file for bankruptcy'.",
+            "Unlike arguments in events like 'StartOrg' or 'MergeOrg', the 'org' argument here does not indicate a new or combined entity but rather one that is financially insolvent. Examples are 'company' in 'the company to avoid bankruptcy'."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the bankruptcy event is taking place. Examples are 'united states' in 'worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states'.",
+            "This argument is important for understanding the geographical context of the bankruptcy event. Examples include 'Manhattan' in 'filed a pair of motions in federal bankruptcy court in Manhattan'.",
+            "In some cases, the 'place' argument may not be explicitly mentioned but can be inferred from the context. Examples are 'Houston' in 'The Houston energy company'.",
+            "The 'place' argument helps provide a complete picture of the event by indicating where the legal proceedings or financial distress are occurring. Examples include 'federal bankruptcy court' in 'filed a pair of motions in federal bankruptcy court'.",
+            "Unlike events such as 'StartOrg' or 'MergeOrg', where the 'place' argument might indicate the location of a new or combined entity, here it indicates where the bankruptcy proceedings are taking place. Examples are 'united states' in 'largest corporate bankruptcy in the united states'."
+        ]
+    }
+}
+```

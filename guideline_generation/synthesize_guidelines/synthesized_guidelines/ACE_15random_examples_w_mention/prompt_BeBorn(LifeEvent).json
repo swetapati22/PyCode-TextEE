@@ -1,0 +1,34 @@
+{
+    "BeBorn(LifeEvent)": {
+        "description": [
+            "The event is triggered by the birth of a person, indicating the moment when a new individual comes into existence. Example triggers include 'birth', 'born', and 'cut out'.",
+            "The event is characterized by the introduction of a new person into the world, often accompanied by specific details about the person and the place of birth.",
+            "Unlike other LifeEvents such as 'Marry', which involves a union between individuals, the 'BeBorn' event specifically focuses on the emergence of a new individual.",
+            "Triggers such as 'birth' and 'born' are indicative of the 'BeBorn' event type, not events like 'Marry' or 'Transport'.",
+            "The outcome of the 'BeBorn' event is the existence of a new person, which is distinct from events like 'ChargeIndict' or 'Appeal' that involve legal actions and decisions."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the word or phrase that indicates the occurrence of the birth event. Examples include 'birth', 'born', and 'cut out'.",
+            "Valid triggers for the 'BeBorn' event include terms that directly refer to the act of being born, such as 'birth' in 'gave birth' or 'born' in 'infant born'.",
+            "Edge cases include phrases like 'cut out' when referring to a baby being delivered through an unconventional method, as in 'baby girl who had been cut out'.",
+            "Triggers should not be confused with related terms like 'marry' or 'transport', which indicate different types of events.",
+            "The trigger must clearly denote the birth process, distinguishing it from other life events or actions."
+        ],
+        "person": [
+            "Examples are 'babies', 'one', 'other' in the context of 'gave birth secretly to both babies'.",
+            "The 'person' argument refers to the individual(s) being born, such as 'infant' in 'infant born in January'.",
+            "In cases where the person is described by nationality or origin, such as 'New Zealand-born Hunter', the argument should capture the individual's name or description.",
+            "The 'person' argument is crucial as it identifies the new individual resulting from the birth event, distinguishing it from other participants in related events.",
+            "Edge cases include references to the person in non-standard birth scenarios, like 'girl' in 'baby girl who had been cut out'."
+        ],
+        "place": [
+            "Examples are 'home' in 'gave birth secretly to both babies at her parents' home'.",
+            "The 'place' argument specifies the location where the birth occurred, such as 'New Zealand' in 'New Zealand-born Hunter'.",
+            "This argument is important for providing context about the birth event, indicating where the new individual was born.",
+            "Unlike events like 'Transport' where 'place' might refer to origin or destination, in 'BeBorn', it strictly refers to the birth location.",
+            "Edge cases include indirect references to the place, such as 'Byrds Creek, Richland County' when describing the location of the birth."
+        ]
+    }
+}

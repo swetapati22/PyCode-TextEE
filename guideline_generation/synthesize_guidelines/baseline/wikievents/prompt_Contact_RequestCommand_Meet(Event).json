@@ -1,0 +1,28 @@
+{
+    "Contact_RequestCommand_Meet(Event)": {
+        "description": [
+            "The Contact_RequestCommand_Meet event involves one party requesting or commanding another party to meet. This event can be triggered by verbs such as 'ask', 'order', 'request', 'command', or similar terms indicating a request or command for a meeting.",
+            "The Contact_RequestCommand_Meet event occurs when an individual or entity asks or instructs another individual or entity to meet. The event can be triggered by phrases like 'asked to meet', 'ordered to meet', 'requested a meeting', etc.",
+            "The Contact_RequestCommand_Meet event is defined as an instance where one person or group requests or commands another person or group to have a meeting. Triggers for this event include words like 'request', 'command', 'ask', 'order', and other similar terms.",
+            "The Contact_RequestCommand_Meet event refers to a situation where a request or command is made for a meeting between two parties. This event can be identified by triggers such as 'asked', 'ordered', 'requested', 'commanded', and similar expressions.",
+            "The Contact_RequestCommand_Meet event involves a scenario where one party requests or commands another party to meet. The event can be triggered by terms like 'ask', 'order', 'request', 'command', or any similar language indicating a request or command for a meeting."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "communicator": [
+            "The communicator is the individual or entity making the request or command for the meeting. Examples are 'Judge George O'Toole' in the context of a court ruling, or 'Jos\u00e9' in the context of a workplace directive.",
+            "The communicator refers to the person or group who initiates the request or command for a meeting. Examples include a judge, a manager, or any person in a position to make such a request.",
+            "The communicator is the party that issues the request or command for a meeting. Examples are 'Judge George O'Toole' who ruled in a court case, or a manager instructing employees to attend a meeting.",
+            "The communicator is the entity or person who asks or commands another to meet. Examples include a judge in a courtroom setting or a manager in a workplace scenario.",
+            "The communicator is the individual or organization that makes the request or command for a meeting. Examples are 'Judge George O'Toole' in a legal context or a manager in a corporate environment."
+        ],
+        "recipient": [
+            "The recipient is the individual or entity who is being asked or commanded to meet. Examples are 'jury' in the context of a court ruling, or 'employees' in the context of a workplace directive.",
+            "The recipient refers to the person or group who is the target of the request or command for a meeting. Examples include a jury, employees, or any person or group being asked to meet.",
+            "The recipient is the party that is being requested or commanded to meet. Examples are 'jury' who are asked to hear witness descriptions, or 'employees' who are instructed to attend a meeting.",
+            "The recipient is the entity or person who is asked or commanded to meet. Examples include a jury in a courtroom setting or employees in a workplace scenario.",
+            "The recipient is the individual or organization that is being asked or commanded to meet. Examples are 'jury' in a legal context or 'employees' in a corporate environment."
+        ]
+    }
+}

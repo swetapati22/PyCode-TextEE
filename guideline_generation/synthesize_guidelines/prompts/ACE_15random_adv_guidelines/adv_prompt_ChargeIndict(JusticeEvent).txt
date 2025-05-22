@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_ChargeIndict(JusticeEvent)
+```json
+{
+    "ChargeIndict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal actions or formal accusations against an individual or entity, typically involving criminal charges. Example triggers include 'charged', 'accused', 'prosecuted', and 'indicted'.",
+            "The event is characterized by the formal process of bringing charges against a defendant, often initiated by a prosecutor or adjudicator. It involves legal proceedings and can occur in various jurisdictions.",
+            "Unlike the 'Sentence' event, which focuses on the outcome of a trial, the 'ChargeIndict' event centers on the initiation of legal action. Triggers such as 'sentenced' are indicative of the 'Sentence' event, not this event type.",
+            "The event may involve multiple parties, including the defendant, prosecutor, and adjudicator, and can take place in various locations such as courts or other legal venues.",
+            "The outcome of the 'ChargeIndict' event is the formal accusation or indictment of the defendant, which may lead to further legal proceedings. This event does not cover the final judgment or sentencing phase."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are judges, magistrates, or any legal authority responsible for overseeing the legal process. The adjudicator plays a crucial role in the legal proceedings, ensuring that the charges are formally presented and processed.",
+            "In the context of the event, the adjudicator is the person or entity that has the authority to bring charges or indictments against the defendant. For instance, 'the magistrate' in 'The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.'",
+            "The adjudicator is not the same as the prosecutor, who is responsible for presenting the case against the defendant. Unlike the prosecutor, the adjudicator remains neutral and oversees the legal process.",
+            "In some cases, the adjudicator may be implied rather than explicitly mentioned. For example, 'he' in 'Within weeks he was arrested and charged with sodomising an official driver several years previously and with abusing his powers to cover up the offence.'",
+            "The adjudicator's role is to ensure that the legal process is followed correctly, and they may issue warrants, oversee hearings, and make rulings on the charges presented."
+        ],
+        "defendant": [
+            "Examples are individuals or entities formally accused or charged with a crime. The defendant is the primary subject of the 'ChargeIndict' event, facing legal action.",
+            "In the context of the event, the defendant is the person or entity against whom the charges are brought. For instance, 'client' in 'The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.'",
+            "The defendant is distinct from the prosecutor and adjudicator, as they are the ones facing the legal accusations. Unlike the prosecutor, the defendant is not presenting the case but is the subject of the charges.",
+            "The defendant can be an individual, such as 'Ayub Masih' in 'Ayub Masih was charged in 1996 with blasphemy for allegedly defending British author Salman Rushdie,' or an entity, such as 'Christie's' in 'Christie's was not prosecuted in the United States after its management agreed to testify against Sotheby's.'",
+            "The defendant's role is central to the event, as the legal proceedings revolve around the charges brought against them. They may face various outcomes, including trial, plea bargains, or dismissal of charges."
+        ],
+        "place": [
+            "Examples are locations where the legal proceedings or charges take place. The place is significant as it provides context for the jurisdiction and venue of the event.",
+            "In the context of the event, the place can be a court, city, or country where the charges are brought. For instance, 'court' in 'The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.'",
+            "The place is not the same as the location of the crime itself but rather where the legal action is initiated or processed. Unlike the crime scene, the place is where the formal legal proceedings occur.",
+            "The place can vary widely, from specific courts to broader jurisdictions. For example, 'United States' in 'Christie's was not prosecuted in the United States after its management agreed to testify against Sotheby's.'",
+            "The place provides important context for understanding the legal framework and authority under which the charges are brought. It helps identify the legal jurisdiction and venue for the proceedings."
+        ],
+        "prosecutor": [
+            "Examples are legal professionals or authorities responsible for presenting the case against the defendant. The prosecutor plays a key role in initiating and pursuing the charges.",
+            "In the context of the event, the prosecutor is the person or entity that brings the charges against the defendant. For instance, 'magistrate' in 'The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.'",
+            "The prosecutor is distinct from the adjudicator, who oversees the legal process, and the defendant, who faces the charges. Unlike the adjudicator, the prosecutor actively presents the case against the defendant.",
+            "The prosecutor can be an individual, such as a district attorney, or an entity, such as a government agency. For example, 'you' in 'If you can't charge someone for killing a fetus via abortion during the eighth month, then surely you can't make a big deal about a woman who kidnapped a fetus that survived the knifing.'",
+            "The prosecutor's role is to gather evidence, present the case, and seek a legal resolution against the defendant. They are essential in ensuring that the charges are pursued and that justice is served."
+        ]
+    }
+}
+```

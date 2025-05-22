@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Fine(JusticeEvent)
+```json
+{
+    "Fine(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the imposition of a monetary penalty on an individual or entity as a result of a legal or regulatory decision. Example triggers include 'fine', 'fined', and 'pay a fine'.",
+            "The event is characterized by the requirement for the entity to pay a specified amount of money as a penalty. This distinguishes it from other JusticeEvents like 'ArrestJail' or 'Convict', which involve different forms of punishment.",
+            "Unlike 'ArrestJail', which involves physical detention, the 'Fine' event involves a financial penalty. Triggers such as 'arrested' are indicative of 'ArrestJail', not this event type.",
+            "The outcome of the 'Fine' event is the payment of a monetary penalty, whereas events like 'Pardon' or 'Acquit' result in the removal or reduction of legal penalties. Triggers such as 'pardoned' or 'acquitted' are not related to the 'Fine' event.",
+            "The 'Fine' event can be imposed by various adjudicators such as judges, regulatory bodies, or other authorities. This event does not involve the physical transfer of individuals, unlike 'Extradite' or 'ReleaseParole'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'judge', 'SEC', 'court'. The adjudicator is the authority or body that imposes the fine. This argument is crucial as it identifies the source of the legal or regulatory decision.",
+            "The adjudicator can be a person or an organization. For instance, 'judge' in 'the judge ordered a fine' or 'SEC' in 'the SEC imposed a fine'.",
+            "In some cases, multiple adjudicators may be involved, such as 'judge' and 'SEC' in 'the judge and the SEC imposed a fine'.",
+            "The adjudicator is distinct from the entity being fined. For example, in 'the court fined the company', 'court' is the adjudicator, not the entity.",
+            "Unlike the 'defendant' in 'Convict' or 'Sentence' events, the adjudicator in a 'Fine' event is the authority imposing the penalty, not the recipient of the penalty."
+        ],
+        "entity": [
+            "Examples are 'Ranjha', 'Monitor', 'MCI'. The entity is the individual or organization that is required to pay the fine. This argument is essential as it identifies who is being penalized.",
+            "The entity can be a person, a company, or an organization. For instance, 'Ranjha' in 'Ranjha was fined' or 'MCI' in 'MCI agreed to pay a fine'.",
+            "In some cases, the entity may be referred to by a role or title, such as 'the paper' in 'the paper was fined'.",
+            "The entity is distinct from the adjudicator. For example, in 'the judge fined Ranjha', 'Ranjha' is the entity, not the adjudicator.",
+            "Unlike the 'plaintiff' in 'Sue' events, the entity in a 'Fine' event is the one being penalized, not the one initiating legal action."
+        ],
+        "place": [
+            "Examples are 'offices', 'court'. The place is the location where the fine is imposed or where the entity is required to pay the fine. This argument provides context about the setting of the event.",
+            "The place can be a physical location, such as 'offices' in 'the fine was imposed at the offices' or 'court' in 'the court imposed a fine'.",
+            "In some cases, the place may be implied or not explicitly mentioned, such as 'the fine was imposed' without specifying the location.",
+            "The place is distinct from the adjudicator and the entity. For example, in 'the court in New York imposed a fine', 'New York' is the place, not the adjudicator or the entity.",
+            "Unlike the 'origin' or 'destination' in 'Extradite' events, the place in a 'Fine' event is where the penalty is imposed or paid, not where an individual is transferred."
+        ]
+    }
+}
+```

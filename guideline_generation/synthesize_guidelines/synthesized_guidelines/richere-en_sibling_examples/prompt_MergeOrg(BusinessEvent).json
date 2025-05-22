@@ -1,0 +1,21 @@
+{
+    "MergeOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the merging of two or more organizations into a single entity. Example triggers include 'merge', 'merged', and 'merger'.",
+            "The event is characterized by the combination of separate organizations, often resulting in a new or larger organization. This can involve companies, schools, airlines, or other entities.",
+            "Unlike the DeclareBankruptcy event, which involves an organization ceasing operations due to financial insolvency, the MergeOrg event involves the unification of organizations to continue operations together.",
+            "Triggers such as 'bankruptcy' or 'closed' are indicative of DeclareBankruptcy or EndOrg events, not the MergeOrg event type.",
+            "The outcome of a MergeOrg event is the formation of a single, unified organization from previously separate entities, which is distinct from the StartOrg event where a new organization is created from scratch."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'ABN Amro' in the context of a merger with another organization. The 'org' argument represents the entities involved in the merging process.",
+            "The 'org' argument is crucial as it identifies the specific organizations that are being combined. For instance, 'Southwest High' and 'schools' in the context of school mergers.",
+            "In the case of airline mergers, 'org' could include entities like 'American Airlines' and 'US Airways'. This argument helps in understanding the scope and impact of the merger.",
+            "Edge cases include scenarios where multiple organizations are mentioned, such as 'Delta Air Lines', 'Northwest Airlines', 'United', and 'Continental'. Each organization involved in the merger should be captured.",
+            "Unlike other event types, the 'org' argument in MergeOrg specifically refers to the entities being unified, not those being dissolved or newly created. For example, 'airlines' in the context of a merger event."
+        ]
+    }
+}

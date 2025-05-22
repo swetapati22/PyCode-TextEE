@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Transaction(Event)
+```json
+{
+    "Transaction(Event)": {
+        "description": [
+            "The event is triggered by actions involving the transfer of goods, services, or money from one party to another. Example triggers include 'owes', 'mugged', 'seized', 'sold', 'take', 'handing out', and 'compensation'.",
+            "The event is characterized by the involvement of at least two parties: a giver and a recipient, and sometimes a beneficiary. The place where the transaction occurs can also be relevant.",
+            "Unlike Contact events, which involve communication or interaction between entities, Transaction events specifically involve the transfer or exchange of tangible or intangible assets.",
+            "Triggers such as 'stated' are indicative of Contact events, not Transaction events, as they involve communication rather than the transfer of assets.",
+            "The outcomes of Transaction events typically involve a change in ownership or possession of assets, whereas similar events like Contact do not result in such changes."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "beneficiary": [
+            "Examples are 'they' in 'the government owes me', where 'they' benefit from the transaction.",
+            "The beneficiary is the party that gains an advantage or profit from the transaction, even if they are not directly involved in the exchange.",
+            "In the context of a seizure, the beneficiary could be the entity that ultimately uses or profits from the seized assets, such as 'ex-sheriff' driving a seized Cadillac.",
+            "Unlike the recipient, the beneficiary may not directly receive the asset but still gains from the transaction.",
+            "In cases where the transaction is negative, such as a mugging, the beneficiary might be the entity that benefits indirectly from the crime."
+        ],
+        "giver": [
+            "Examples are 'government' in 'the government owes me', where the government is the entity providing the asset.",
+            "The giver is the party that provides or transfers the asset, service, or money in the transaction.",
+            "In a seizure, the giver could be the original owner of the seized assets, such as 'their' in 'their assets seized'.",
+            "Unlike the recipient, the giver is the source of the asset being transferred.",
+            "In negative transactions, such as a mugging, the giver might be the victim who is forced to give up their possessions."
+        ],
+        "place": [
+            "Examples are 'campus' in 'someone on my campus is mugged', where the campus is the location of the transaction.",
+            "The place is the location where the transaction occurs, which can provide context to the event.",
+            "In legal or formal transactions, the place might be a specific institution or geographical location.",
+            "Unlike the giver or recipient, the place does not participate in the transaction but provides the setting.",
+            "In cases of online transactions, the place might be a virtual location or platform where the exchange happens."
+        ],
+        "recipient": [
+            "Examples are 'me' in 'the government owes me', where 'me' is the entity receiving the asset.",
+            "The recipient is the party that receives the asset, service, or money in the transaction.",
+            "In a seizure, the recipient could be the entity that takes possession of the seized assets, such as 'government' in 'assets seized by the government'.",
+            "Unlike the giver, the recipient is the endpoint of the asset being transferred.",
+            "In negative transactions, such as a mugging, the recipient might be the criminal who takes the possessions from the victim."
+        ]
+    }
+}
+```

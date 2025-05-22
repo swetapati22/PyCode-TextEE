@@ -1,0 +1,349 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Elect which is a child event type of super class PersonnelEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Elect which is a child event type of super class PersonnelEvent
+Arguments:
+Argument 1 -> entity
+Argument 2 -> person
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Everyone has heard the story: Beatriz Marinello was elected USCF President on August 11, 2003 in Los Angeles.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['Beatriz Marinello']
+For argument "place" extracted spans ['Los Angeles']
+For argument "entity" extracted spans ['USCF']
+
+Example 2
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Putin will face re-election in March 2004 and analysts noted that the war -- while opposed by most Russians -- was never turned by the Kremlin into a matter of national security.
+### Event Trigger ###
+re-election
+### Event Arguments ###
+For argument "person" extracted spans ['Putin']
+
+Example 3
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+"I do not think that this will affect the elections unless Russia's failure in Iraq is presented as an issue of national security -- and has not been yet," said Viktor Kuvaldin of a research center funded by former Soviet president Mikhail Gorbachev.
+### Event Trigger ###
+elections
+### Event Arguments ###
+
+Example 4
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+South Korea's ruling party is facing an internal reformist call for dissolving itself to create a new group after a humiliating defeat at last week's by-elections, party officials said Tuesday.
+### Event Trigger ###
+by-elections
+### Event Arguments ###
+
+Example 5
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+The internal dispute erupted after the MDP lost three parliamentary seats in Thursday's by-elections.
+### Event Trigger ###
+by-elections
+### Event Arguments ###
+
+Example 6
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+General elections are due in April next year.
+### Event Trigger ###
+elections
+### Event Arguments ###
+
+Example 7
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+"We understand that they want to have as much power as possible but we told them: 'You won't be directly elected, you won't have any direct experience of government," the source said.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['You']
+
+Example 8
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+"'Of course you will have input into the government but, since you are not directly elected, it would be a nonsense for you to have direct executive power,' the source said.
+### Event Trigger ###
+elected
+### Event Arguments ###
+For argument "person" extracted spans ['you']
+
+Example 9
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+The comments came on the same day that a prominent Iraqi called for internationally-supervised elections in Iraq.
+### Event Trigger ###
+elections
+### Event Arguments ###
+For argument "place" extracted spans ['Iraq']
+
+Example 10
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+Adnan Pachachi, a onetime foreign minister who returned to Iraq on May 6 after 33 years in exile, told the independent Az-Zaman daily that elections should be held under international supervision.
+### Event Trigger ###
+elections
+### Event Arguments ###
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+wounding
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['20']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 12
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+Indonesian courts have increasingly handed out severe sentences, including death, for drug smugglers.
+### Event Trigger ###
+sentences
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['courts']
+For argument "defendant" extracted spans ['smugglers']
+For argument "place" extracted spans ['Indonesian']
+
+Example 13
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+In the latest edition, staff writer Jeremy M. Lazarus reports that the Legislative Black Caucus celebrated killing a bill that would have merged the Department of Minority Business Enterprise (DMBE) with the Department of Business Assistance (DBA).
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['Department of Minority Business Enterprise', 'Department of Business Assistance']
+
+Example 14
+#### Event Type ####
+Fine(JusticeEvent)
+### Input Text ###
+In a verdict handed down on Saturday, the judge also ordered Ranjha to pay a fine of 50,000 rupees (about 870 US dollars), they said.
+### Event Trigger ###
+fine
+### Event Arguments ###
+For argument "entity" extracted spans ['Ranjha']
+For argument "adjudicator" extracted spans ['judge']
+
+Example 15
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat.
+### Event Trigger ###
+talks
+### Event Arguments ###
+For argument "place" extracted spans ['retreat']
+For argument "entity" extracted spans ['Blair', 'Bush']
+
+Example 16
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['bomber']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 17
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+The Pakistani supreme court last year aquitted Ayub Masih, who had denied uttering any word against Islam or the Prophet Mohammad.
+### Event Trigger ###
+aquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Ayub Masih']
+For argument "adjudicator" extracted spans ['court']
+
+Example 18
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.
+### Event Trigger ###
+charges
+### Event Arguments ###
+For argument "defendant" extracted spans ['client']
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "place" extracted spans ['court']
+
+Example 19
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In December 2001, a Manhattan jury convicted Sotheby's main shareholder and former chairman Alfred Taubman of entering into a price-fixing agreement with Christie's.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Alfred Taubman']
+For argument "place" extracted spans ['Manhattan']
+For argument "adjudicator" extracted spans ['jury']
+
+Example 20
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+In Paris, the French media group said parent company chairman Jean-Rene Fourtou will replace Diller as chairman and chief executive of US unit.
+### Event Trigger ###
+replace
+### Event Arguments ###
+For argument "person" extracted spans ['Jean-Rene Fourtou']
+For argument "place" extracted spans ['Paris']
+For argument "entity" extracted spans ['unit']
+
+Example 21
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+Police arrested her in Abilene, Texas, Saturday where she had moved with a friend June 2.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "person" extracted spans ['her']
+For argument "place" extracted spans ['Abilene']
+For argument "agent" extracted spans ['Police']
+
+Example 22
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+Mirjana Markovic, the power behind the scenes during Milosevic's 13-year reign, is accused of illegally providing their grandson's nanny with a state-owned luxury apartment in Belgrade in 2000.
+### Event Trigger ###
+providing
+### Event Arguments ###
+For argument "beneficiary" extracted spans ['nanny']
+For argument "artifact" extracted spans ['apartment']
+For argument "seller" extracted spans ['Mirjana Markovic']
+For argument "place" extracted spans ['Belgrade']
+
+Example 23
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Larry Klayman, chairman of Judicial Watch, which represent 14 survivors and victims' relatives who have filed a $1.5 billion federal lawsuit against Iraq in Washington, said his organization had served a subpoena on Al-Douri twice, on March 26 and March 28, but said he has not responded.
+### Event Trigger ###
+lawsuit
+### Event Arguments ###
+For argument "defendant" extracted spans ['Iraq']
+For argument "place" extracted spans ['Washington']
+For argument "plaintiff" extracted spans ['relatives', 'survivors']
+
+Example 24
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+Of course outspoken organizations such as Planned Parenthood, which gives a lot of money to Democrats, will fight with everything they've got to keep the Democratic platform as liberal as possible.
+### Event Trigger ###
+gives
+### Event Arguments ###
+For argument "giver" extracted spans ['Planned Parenthood']
+For argument "beneficiary" extracted spans ['Democrats']
+For argument "recipient" extracted spans ['Democrats']
+
+Example 25
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+The waiver of extradition that she signed simply means that if she skips out and goes to another state, she can't contest the right of the original court to have her hauled back to its jurisdiction, and that the court won't have to initiate the time-consuming process of extraditing her.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['she']
+For argument "origin" extracted spans ['state']
+For argument "destination" extracted spans ['jurisdiction']
+For argument "agent" extracted spans ['court']

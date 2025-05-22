@@ -1,0 +1,10 @@
+{
+    "Meet(ContactEvent)": {
+        "description": "The Meet(ContactEvent) is triggered by interactions or engagements between two or more entities, such as 'meeting', 'discussion', 'approach', 'asked', and 'counsel'. This event involves at least one entity engaging with another, often at a specific location, and can be verbal, physical, or implied. It is distinct from other ContactEvents by its direct or indirect interaction between entities, leading to an exchange of information, ideas, or physical presence. Examples include 'meeting' someone, which is a Meet event, as opposed to 'calling' someone, which might be a different ContactEvent. The outcome typically involves an exchange, differentiating it from events like 'Sue' or 'Sentence', which involve legal actions and judgments.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "The entity argument represents the participants involved in the meeting or interaction. Examples include 'I', 'someone', 'doctor', 'team', and 'committee'. Entities can be individuals, groups, or abstract representations of people. Each entity should be annotated separately in cases of multiple participants, such as 'I and my friend met the doctor'. Unlike other arguments in different event types, the entity in a Meet event denotes participation without implying any hierarchical or causal relationship.",
+            "place": "The place argument specifies the location where the meeting or interaction occurs. Examples include 'Goerkes Corner', 'station', 'park', 'office', and virtual locations like 'online' or 'on a call'. The place provides context to the Meet event, indicating where the interaction happened. In some cases, the place might be implied or not explicitly mentioned. Unlike events like 'TransportPerson', where the place indicates origin or destination, in a Meet event, it simply denotes the location of the interaction without implying movement."
+        }
+    }
+}

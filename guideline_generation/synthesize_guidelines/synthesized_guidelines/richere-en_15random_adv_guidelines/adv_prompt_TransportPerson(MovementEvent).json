@@ -1,0 +1,13 @@
+{
+    "TransportPerson(MovementEvent)": {
+        "description": "The 'TransportPerson' event encapsulates the movement of a person or group from one location to another, triggered by actions or verbs such as 'relocate', 'driving', or 'traveled'. This event is distinct from other MovementEvents in that it specifically involves the transportation of people, focusing on the physical displacement from an origin to a destination, facilitated by an agent using some form of instrument.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent in a 'TransportPerson' event refers to the entity, either an individual or a group, responsible for initiating or facilitating the transportation. This may include law enforcement, government bodies, or family units, explicitly mentioned or inferred from the context.",
+            "destination": "The destination argument defines the endpoint of the movement, specified as a particular location, city, or country, such as 'new base' or 'England'. It clarifies where the person or people are being transported to.",
+            "instrument": "The instrument used in the 'TransportPerson' event describes the means or vehicle facilitating the movement, such as a car, bus, or plane. This can be explicitly stated or implied within the context of the narrative.",
+            "origin": "The origin details the starting point of the movement, pinpointing locations such as a city, country, or specific site, from where the person or group commences their journey.",
+            "person": "The person argument identifies the individual or group being transported. This includes anyone from a single person to families or groups, defined by their role in the event of being moved."
+        }
+    }
+}

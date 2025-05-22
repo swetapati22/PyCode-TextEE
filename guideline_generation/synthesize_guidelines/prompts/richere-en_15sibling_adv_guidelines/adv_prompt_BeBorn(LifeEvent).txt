@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_BeBorn(LifeEvent)
+```json
+{
+    "BeBorn(LifeEvent)": {
+        "description": [
+            "The event is triggered by the birth of a person, indicating the beginning of their life. Example triggers include 'born', 'births', and 'newborn'.",
+            "The event is characterized by the introduction of a new individual into the world, often specifying the person and the place of birth.",
+            "Unlike other LifeEvents such as 'Marry' or 'Divorce', the BeBorn event specifically marks the start of an individual's life, not a change in their marital status.",
+            "Triggers such as 'marriage' or 'divorce' are indicative of other LifeEvents and not the BeBorn event type.",
+            "The outcome of the BeBorn event is the existence of a new person, whereas events like 'Die' signify the end of a life."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'I', 'they', 'newborn', and 'children'. This argument identifies the individual who is being born.",
+            "The person argument is crucial as it specifies the new life being introduced. For instance, 'I was born in London' identifies 'I' as the person.",
+            "In cases where the text refers to a group, such as 'children', it still indicates the individuals being born. For example, 'children born in the 90s'.",
+            "Edge cases include references to newborns or infants, where the term 'newborn' itself can be the person argument.",
+            "Unlike events like 'Marry' or 'Divorce', where the person argument involves adults, the BeBorn event focuses on the birth of individuals, often infants or children."
+        ],
+        "place": [
+            "Examples are 'London', 'Canada', 'hospital', and 'place'. This argument specifies the location where the birth occurs.",
+            "The place argument is important as it provides context to the birth event, indicating where the person was born. For instance, 'born in London' identifies 'London' as the place.",
+            "In some cases, the place might be a broader region or country, such as 'Canada' in 'born in Canada'.",
+            "Edge cases include specific institutions like hospitals, where 'hospital' can be the place argument in 'born in a hospital'.",
+            "Unlike events like 'Marry' or 'Divorce', where the place might be a venue or a city, the BeBorn event's place argument often refers to the birthplace or the location of birth."
+        ]
+    }
+}
+```

@@ -1,0 +1,49 @@
+{
+    "TransferOwnership(TransactionEvent)": {
+        "description": [
+            "The event is triggered by the transfer of ownership of an item or property from one entity to another. Example triggers include 'inheritance', 'buying', 'ordered', 'hijack', and 'get'.",
+            "The event is characterized by the change in possession or control of a tangible or intangible asset. It involves at least two parties: the giver and the recipient.",
+            "Unlike TransferMoney, this event does not involve the transfer of monetary funds but rather the transfer of ownership of goods, properties, or other assets.",
+            "Triggers such as 'spending' or 'delivering' are indicative of TransferMoney, not this event type. TransferOwnership focuses on the change in ownership rather than the movement of money.",
+            "The outcome of this event is the recipient gaining control or possession of the thing, while the giver relinquishes it. This can occur in various contexts such as inheritance, purchase, or theft."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "beneficiary": [
+            "Examples are 'THEIR' in 'STOP BUYING THINGS FOR THEIR HOME!'. The beneficiary is the entity that benefits from the transfer of ownership.",
+            "The beneficiary is important as it identifies who gains from the transaction, even if they are not directly involved in the transfer.",
+            "In some cases, the beneficiary may be the same as the recipient, but they can also be different, such as when someone buys a gift for another person.",
+            "Unlike the recipient, the beneficiary may not always be explicitly mentioned in the transaction but is implied by the context.",
+            "Edge cases include scenarios where the beneficiary is a group or organization rather than an individual, such as 'the company' in 'the company received new equipment'."
+        ],
+        "giver": [
+            "Examples are 'father' in 'His father having died, he returned to Australia in 1954 to take over his inheritance'. The giver is the entity that relinquishes ownership.",
+            "The giver is crucial as it indicates the source of the thing being transferred, providing context to the transaction.",
+            "In some cases, the giver may be deceased or otherwise unable to participate actively in the transaction, as in the case of inheritance.",
+            "Unlike the recipient, the giver is the one who loses possession or control of the thing, which is a key distinction in understanding the event.",
+            "Edge cases include situations where the giver is an organization or entity rather than an individual, such as 'the company' in 'the company sold its assets'."
+        ],
+        "place": [
+            "Examples are 'Adelaide' in 'the Sunday Mail and The News, both of Adelaide'. The place is the location where the transfer occurs or is relevant to the transaction.",
+            "The place is important as it provides geographical context to the event, which can be crucial for understanding the full scope of the transaction.",
+            "In some cases, the place may be implied rather than explicitly stated, such as 'online' in 'Ordered a 32\" TV online'.",
+            "Unlike the thing, the place is not the object being transferred but the location associated with the transfer.",
+            "Edge cases include virtual locations or platforms, such as 'eBay' or 'Amazon', where the transaction occurs online."
+        ],
+        "recipient": [
+            "Examples are 'his' in 'His father having died, he returned to Australia in 1954 to take over his inheritance'. The recipient is the entity that receives ownership.",
+            "The recipient is crucial as it identifies who gains possession or control of the thing being transferred.",
+            "In some cases, the recipient may be a group or organization rather than an individual, such as 'the company' in 'the company acquired new assets'.",
+            "Unlike the giver, the recipient is the one who gains possession or control of the thing, which is a key distinction in understanding the event.",
+            "Edge cases include scenarios where the recipient is not explicitly mentioned but can be inferred from the context, such as 'they' in 'they didn't get it, but they asked for it'."
+        ],
+        "thing": [
+            "Examples are 'Sunday Mail' and 'News' in 'His father having died, he returned to Australia in 1954 to take over his inheritance, the Sunday Mail and The News'. The thing is the item or property being transferred.",
+            "The thing is important as it is the object of the transaction, providing clarity on what is being transferred.",
+            "In some cases, the thing may be intangible, such as 'rights' or 'shares', rather than a physical object.",
+            "Unlike the place, the thing is the object being transferred, not the location associated with the transfer.",
+            "Edge cases include scenarios where the thing is a service or digital asset, such as 'software' or 'subscription'."
+        ]
+    }
+}

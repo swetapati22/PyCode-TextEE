@@ -1,0 +1,35 @@
+{
+    "ReleaseParole(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of releasing an individual from custody or imprisonment, often under specific conditions such as parole. Example triggers include 'release', 'parole', 'freed', and 'released'.",
+            "The event is characterized by the transition of a person from a state of confinement to freedom, typically involving legal or administrative actions. It is distinct from events like 'Acquit' or 'Pardon' which involve legal judgments rather than the physical act of release.",
+            "Unlike 'Execute' or 'Convict', which involve the imposition of penalties or judgments, 'ReleaseParole' focuses on the cessation of confinement. Triggers such as 'executed' or 'convicted' are indicative of these other events, not 'ReleaseParole'.",
+            "The scope of the event includes the conditions under which the release occurs, such as parole or good behavior, and the entities involved in the process, such as legal authorities or correctional facilities.",
+            "The outcomes of the event typically involve the individual gaining freedom, often with certain restrictions or conditions. This is different from 'TransferOwnership' or 'TransferMoney', which involve the transfer of assets or funds rather than the release of a person."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'negotiators', 'lawyer', or 'court'. This argument represents the entity or organization involved in the process of releasing the individual. It is crucial as it identifies the authority or body responsible for the release.",
+            "In the context of 'ReleaseParole', the entity could be a legal body, a correctional facility, or any organization that has the authority to release the individual. For instance, 'negotiators' in the example 'negotiators say he demanded the release of four prisoners'.",
+            "The entity argument helps to clarify who is facilitating or authorizing the release, distinguishing it from other events where the entity might be a different type of organization, such as a 'jury' in a 'Convict' event.",
+            "In some cases, the entity might be implicit or not explicitly mentioned, but it is understood to be the authority overseeing the release. For example, 'the court' in 'the court ordered his release'.",
+            "Unlike the 'adjudicator' in events like 'Acquit' or 'Convict', the entity in 'ReleaseParole' is more focused on the administrative or procedural aspect of the release rather than the judgment itself."
+        ],
+        "person": [
+            "Examples are 'ramzi binalshibh', 'Anwar', or 'Pasko'. This argument represents the individual who is being released from custody or imprisonment. It is central to the event as it identifies the subject of the release.",
+            "The person argument is crucial for understanding who is gaining freedom as a result of the event. For instance, 'Anwar' in 'Anwar, 56, who this week completed four years in prison'.",
+            "In 'ReleaseParole', the person is typically someone who has been in confinement and is now being released, often under specific conditions. This is different from 'Execute' where the person is subject to capital punishment.",
+            "The person argument can also include pronouns or references to individuals, such as 'he' or 'who', as seen in 'who was released on parole earlier this year'.",
+            "Unlike the 'defendant' in events like 'Convict' or 'ChargeIndict', the person in 'ReleaseParole' is the one being freed, highlighting the transition from confinement to freedom."
+        ],
+        "place": [
+            "Examples are 'center', 'prison', or 'detention center'. This argument represents the location from which the individual is being released. It provides context to the event by specifying where the release is taking place.",
+            "The place argument is important for understanding the setting of the release. For instance, 'center' in 'we know of one detention center, well over 7,000 Iraqis held there'.",
+            "In 'ReleaseParole', the place is typically a facility where the individual was confined, such as a prison or detention center. This is different from 'TrialHearing' where the place might be a courtroom.",
+            "The place argument helps to distinguish the physical location of the release, which is a key aspect of the event. For example, 'prison' in 'completed four years in prison'.",
+            "Unlike the 'place' in events like 'Meet' or 'Demonstrate', which might refer to locations of gatherings or protests, the place in 'ReleaseParole' specifically refers to the site of confinement and subsequent release."
+        ]
+    }
+}

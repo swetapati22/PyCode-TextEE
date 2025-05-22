@@ -1,0 +1,10 @@
+{
+    "Divorce(LifeEvent)": {
+        "description": "The Divorce event is triggered by the legal dissolution of a marriage, indicated by terms such as 'divorce', 'filed for divorce', 'sued for divorce', 'divorce case', or 'divorce settlement'. This event involves legal proceedings, court actions, or mutual agreements that formally end a marital relationship.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "person": "The 'person' argument identifies the individuals whose marriage is being dissolved. This includes both parties involved in the divorce, such as 'Hunter', 'star', 'Michael Crichton', 'Anne-Marie', 'Rod Stewart', 'Rachel Hunter', 'Welches', and 'his ex-wife'.",
+            "place": "The 'place' argument specifies the location where the divorce proceedings are taking place or where the divorce is being filed. Examples include 'Los Angeles', 'court', and 'Los Angeles Superior Court'."
+        }
+    }
+}

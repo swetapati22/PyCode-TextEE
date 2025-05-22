@@ -1,0 +1,196 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Correspondence which is a child event type of super class ContactEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Correspondence which is a child event type of super class ContactEvent
+Arguments:
+Argument 1 -> entity
+Argument 2 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+“The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities that Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague to discuss the case of Julian Assange,” the spokesman said.
+### Event Trigger ###
+meet
+### Event Arguments ###
+For argument "entity" extracted spans ['Patino', 'William Hague']
+For argument "place" extracted spans ['London']
+
+Example 2
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+Phoned Amtrak on Wednesday, "we need a consignment number".
+### Event Trigger ###
+Phoned
+### Event Arguments ###
+For argument "entity" extracted spans ['Amtrak']
+
+Example 3
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+Phoned online company and got it.
+### Event Trigger ###
+Phoned
+### Event Arguments ###
+For argument "entity" extracted spans ['company']
+
+Example 4
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+Phoned Amtrak "a card was left on Tuesday as you weren't there" (no it wasn't of course), and "we're not allowed to leave it with a neighbour".
+### Event Trigger ###
+Phoned
+### Event Arguments ###
+For argument "entity" extracted spans ['Amtrak', 'you']
+
+Example 5
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+Let's see, you quoted my post, yet you completely failed to answer the questions I asked.
+### Event Trigger ###
+answer
+### Event Arguments ###
+For argument "entity" extracted spans ['you', 'I']
+
+Example 6
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+Let's see, you quoted my post, yet you completely failed to answer the questions I asked.
+### Event Trigger ###
+asked
+### Event Arguments ###
+For argument "entity" extracted spans ['I']
+
+Example 7
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+Let's see, you quoted my post, yet you completely failed to answer the questions I asked.
+### Event Trigger ###
+answer
+### Event Arguments ###
+For argument "entity" extracted spans ['you', 'I']
+
+Example 8
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+Let's see, you quoted my post, yet you completely failed to answer the questions I asked.
+### Event Trigger ###
+asked
+### Event Arguments ###
+For argument "entity" extracted spans ['I']
+
+Example 9
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+Do you recall in YOUR 'The best healthcare in America is government run' thread where you accused me of not reading the linked article then I handed you your ass with quotes FROM the article?
+### Event Trigger ###
+accused
+### Event Arguments ###
+For argument "entity" extracted spans ['you', 'me']
+
+Example 10
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+I'm sure you remember because you've been avoiding responding to me in that thread ever since.
+### Event Trigger ###
+responding
+### Event Arguments ###
+For argument "entity" extracted spans ['you', 'me']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+I tried an alternative route once last year, taking Bluemound in from Goerkes Corner after meeting up with someone there, but it seemed longer and I didn't get out any quicker.
+### Event Trigger ###
+meeting
+### Event Arguments ###
+For argument "entity" extracted spans ['I', 'someone']
+For argument "place" extracted spans ['Goerkes Corner']
+
+Example 12
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+But it also drew protests, including at La Sapienza university, where Gadhafi was addressing a group of few hundred students.
+### Event Trigger ###
+addressing
+### Event Arguments ###
+For argument "entity" extracted spans ['Gadhafi']
+For argument "place" extracted spans ['La Sapienza university']
+For argument "audience" extracted spans ['group']

@@ -1,0 +1,28 @@
+{
+    "EndOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the termination or cessation of an organization or business entity. Example triggers include 'closed', 'belly-up', 'abolished', 'under', 'out', 'collapse', 'failure', and 'closing'.",
+            "The event is characterized by the end of operations or existence of an organization, often due to financial difficulties, regulatory actions, or strategic decisions. It encompasses scenarios where businesses shut down, go bankrupt, or are dissolved.",
+            "Unlike the MergeOrg event, which involves the combination of two or more organizations, the EndOrg event signifies the complete cessation of an organization's activities. Triggers such as 'merge' are indicative of the MergeOrg event, not the EndOrg event.",
+            "The outcomes of the EndOrg event include the discontinuation of services, loss of jobs, and potential liquidation of assets. This event is distinct from the EndPosition event, which pertains to the termination of individual employment positions rather than the entire organization.",
+            "The event is not triggered by temporary suspensions or pauses in operations but by permanent closures. For example, 'temporary shutdown' would not trigger this event type, whereas 'permanent closure' would."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'schools', 'businesses', 'party', 'dealerships', 'Enron', 'companies'. The 'org' argument refers to the organization or business entity that is ceasing operations. It is crucial to identify the specific entity affected by the event.",
+            "The 'org' argument is important because it specifies the subject of the EndOrg event. For instance, in 'the district closed almost half the schools in the city', 'schools' is the 'org' argument.",
+            "In cases where multiple organizations are mentioned, such as 'hundreds if not thousands will go under', each organization mentioned ('hundreds', 'thousands') should be considered as part of the 'org' argument.",
+            "The 'org' argument can include various types of organizations, such as companies, political parties, schools, and dealerships. For example, 'the collapse of Enron' identifies 'Enron' as the 'org' argument.",
+            "Edge cases include scenarios where the organization is implied rather than explicitly stated. For example, 'putting light bulb companies out of business' implies 'light bulb companies' as the 'org' argument."
+        ],
+        "place": [
+            "Examples are 'city'. The 'place' argument refers to the geographical location where the organization is ceasing operations. It helps contextualize the event within a specific area.",
+            "The 'place' argument is important for understanding the scope and impact of the EndOrg event. For instance, in 'the district closed almost half the schools in the city', 'city' is the 'place' argument.",
+            "In some cases, the 'place' argument may not be explicitly mentioned but can be inferred from the context. For example, 'the collapse of Enron' may imply a specific location if additional context is provided.",
+            "The 'place' argument can include various geographical entities, such as cities, countries, or regions. For example, 'the forced closing of all those automobile dealerships' could imply a specific location if mentioned.",
+            "Edge cases include scenarios where the location is broad or unspecified. For example, 'hundreds if not thousands will go under within a year' does not specify a location, making the 'place' argument ambiguous."
+        ]
+    }
+}

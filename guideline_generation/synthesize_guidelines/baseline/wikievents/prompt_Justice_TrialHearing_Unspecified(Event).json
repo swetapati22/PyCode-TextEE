@@ -1,0 +1,42 @@
+{
+    "Justice_TrialHearing_Unspecified(Event)": {
+        "description": [
+            "The event 'Justice_TrialHearing_Unspecified' refers to any legal proceeding where a defendant is formally tried or heard in a court of law. The event can be triggered by words such as 'trial', 'hearing', 'tried', 'court appearance', etc. This event encompasses various stages of the judicial process, including pre-trial hearings, actual trials, and any other court proceedings related to the defendant's case.",
+            "The event 'Justice_TrialHearing_Unspecified' involves a formal judicial process where a defendant is brought before a judge or court. The event can be triggered by terms like 'trial', 'hearing', 'court session', 'legal proceeding', etc. It includes all types of court hearings, whether they are preliminary, intermediate, or final.",
+            "The 'Justice_TrialHearing_Unspecified' event is a legal event where a defendant is subject to judicial examination in a court. The event can be triggered by phrases such as 'trial', 'hearing', 'court appearance', 'legal hearing', etc. This event covers any court-related activity where the defendant's case is being considered.",
+            "The 'Justice_TrialHearing_Unspecified' event refers to any court proceeding where a defendant is officially tried or heard. The event can be triggered by words like 'trial', 'hearing', 'court session', 'judicial proceeding', etc. It includes all judicial activities related to the defendant's case, from initial hearings to final trials.",
+            "The event 'Justice_TrialHearing_Unspecified' encompasses any formal court proceeding involving a defendant. The event can be triggered by terms such as 'trial', 'hearing', 'court appearance', 'legal session', etc. This event includes all stages of the judicial process where the defendant's case is being addressed in court."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "defendant": [
+            "The 'defendant' argument refers to the individual who is being tried or heard in the court. Examples are 'Dzhokhar Tsarnaev', 'Rahimi', 'Azamat Tazhayakov', etc. The defendant is the person against whom the legal proceedings are directed.",
+            "The 'defendant' is the person who is facing charges or accusations in a court of law. Examples are 'suspects', 'Rahimi', 'Dzhokhar Tsarnaev', etc. This argument identifies the individual who is the subject of the trial or hearing.",
+            "The 'defendant' argument denotes the individual who is on trial or being heard in a judicial proceeding. Examples are 'Bilal', 'Yusufu', 'Tsarnaev', etc. The defendant is the person whose case is being considered by the court.",
+            "The 'defendant' refers to the person who is being prosecuted or defended in a court case. Examples are 'Rahimi', 'Azamat Tazhayakov', 'Dzhokhar Tsarnaev', etc. This argument specifies the individual involved in the legal proceedings.",
+            "The 'defendant' argument identifies the person who is undergoing a trial or hearing in a court. Examples are 'suspects', 'Rahimi', 'Tsarnaev', etc. The defendant is the individual against whom the legal action is taken."
+        ],
+        "judgecourt": [
+            "The 'judgecourt' argument refers to the judge or the court where the trial or hearing is taking place. Examples are 'court', 'Manhattan', 'U.S. District Judge Richard Berman', etc. This argument identifies the judicial authority or location overseeing the case.",
+            "The 'judgecourt' is the entity or individual presiding over the trial or hearing. Examples are 'court', 'Judge George O'Toole', 'military court', etc. This argument specifies the judge or court responsible for the legal proceedings.",
+            "The 'judgecourt' argument denotes the court or judge involved in the trial or hearing. Examples are 'court', 'Manhattan', 'U.S. District Judge Douglas Woodlock', etc. This argument identifies the judicial body or person conducting the trial.",
+            "The 'judgecourt' refers to the judicial authority or court where the trial or hearing is held. Examples are 'court', 'Judge George O'Toole', 'military court', etc. This argument specifies the location or person overseeing the legal process.",
+            "The 'judgecourt' argument identifies the court or judge presiding over the trial or hearing. Examples are 'court', 'Manhattan', 'U.S. District Judge Richard Berman', etc. This argument denotes the judicial entity or individual in charge of the case."
+        ],
+        "place": [
+            "The 'place' argument refers to the physical location where the trial or hearing is conducted. Examples are 'court', 'Boston', 'army base in Bangkok', etc. This argument specifies the venue of the judicial proceedings.",
+            "The 'place' is the location where the trial or hearing takes place. Examples are 'courthouse', 'Manhattan', 'Boston', etc. This argument identifies the geographical or physical setting of the court event.",
+            "The 'place' argument denotes the venue where the trial or hearing is held. Examples are 'court', 'Boston', 'army base in Bangkok', etc. This argument specifies the location of the judicial process.",
+            "The 'place' refers to the site where the trial or hearing occurs. Examples are 'courthouse', 'Manhattan', 'Boston', etc. This argument identifies the physical location of the court proceedings.",
+            "The 'place' argument identifies the location of the trial or hearing. Examples are 'court', 'Boston', 'army base in Bangkok', etc. This argument specifies the venue where the judicial event is taking place."
+        ],
+        "prosecutor": [
+            "The 'prosecutor' argument refers to the legal representative who is bringing the case against the defendant. Examples are 'prosecutors', 'Assistant U.S. Attorney Nicholas Lewin', 'Federal prosecutors', etc. This argument identifies the individual or group responsible for presenting the case against the defendant.",
+            "The 'prosecutor' is the person or entity that is prosecuting the defendant in the trial or hearing. Examples are 'prosecutors', 'Federal prosecutors', 'Assistant U.S. Attorney Nicholas Lewin', etc. This argument specifies the legal authority advocating for the prosecution.",
+            "The 'prosecutor' argument denotes the legal representative who is arguing the case against the defendant. Examples are 'prosecutors', 'Assistant U.S. Attorney Nicholas Lewin', 'Federal prosecutors', etc. This argument identifies the individual or team responsible for the prosecution.",
+            "The 'prosecutor' refers to the legal authority who is bringing charges against the defendant. Examples are 'prosecutors', 'Federal prosecutors', 'Assistant U.S. Attorney Nicholas Lewin', etc. This argument specifies the person or entity advocating for the state's case.",
+            "The 'prosecutor' argument identifies the legal representative prosecuting the defendant. Examples are 'prosecutors', 'Assistant U.S. Attorney Nicholas Lewin', 'Federal prosecutors', etc. This argument denotes the individual or group responsible for presenting the case against the defendant."
+        ]
+    }
+}

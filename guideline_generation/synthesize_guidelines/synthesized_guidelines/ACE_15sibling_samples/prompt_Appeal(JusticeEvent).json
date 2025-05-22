@@ -1,0 +1,35 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": [
+            "The event is triggered by an individual or group formally requesting a higher court to review and change the decision of a lower court. Example triggers include 'appealed', 'appeals', and 'appeal'.",
+            "The event is characterized by the involvement of a plaintiff who seeks a review of a legal decision, often involving an adjudicator such as a court or judge. The scope includes legal contexts where decisions are contested.",
+            "Unlike the 'Execute' event, which involves carrying out a sentence, the 'Appeal' event focuses on challenging and potentially overturning a decision. Triggers like 'executed' are indicative of the 'Execute' event, not the 'Appeal' event.",
+            "The 'Appeal' event differs from the 'ChargeIndict' event, which involves formally accusing someone of a crime. Triggers such as 'charges' are indicative of the 'ChargeIndict' event, not the 'Appeal' event.",
+            "The outcome of an 'Appeal' event can lead to a decision being upheld, overturned, or modified, which is distinct from events like 'Convict' or 'Sentence' where the focus is on the initial judgment and punishment."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'Supreme Court', 'court', 'Federal Court'. The adjudicator is the authority or body that reviews the appeal and makes a decision on it.",
+            "The adjudicator plays a crucial role in the appeal process, as their decision can uphold, overturn, or modify the original ruling. For instance, 'Supreme Court' in 'appealed to the Supreme Court'.",
+            "In some cases, the adjudicator may be a specific judge or panel of judges. For example, 'pre-selected judges' in 'its pre-selected judges, most junior of the court of appeal'.",
+            "The adjudicator is distinct from the plaintiff, who is the party requesting the appeal. For example, 'Federal Court' in 'appeal to the country's highest Federal Court'.",
+            "Unlike the 'prosecutor' in a 'ChargeIndict' event, the adjudicator in an 'Appeal' event is not advocating for a particular outcome but rather reviewing the case impartially. For example, 'court' in 'taken to the appeal court'."
+        ],
+        "place": [
+            "Examples are 'Indonesia', 'court', 'Federal Court'. The place is the location where the appeal is filed or reviewed.",
+            "The place can be a country, city, or specific court where the legal proceedings occur. For instance, 'Indonesia' in 'appealed to the Supreme Court for a second review'.",
+            "In some contexts, the place may refer to the jurisdiction or legal body overseeing the appeal. For example, 'court' in 'taken to the appeal court'.",
+            "The place is important for understanding the legal context and jurisdiction of the appeal. For example, 'Federal Court' in 'appeal to the country's highest Federal Court'.",
+            "Unlike the 'origin' or 'destination' in an 'Extradite' event, the place in an 'Appeal' event is where the legal review takes place. For example, 'court' in 'appeal to the court'."
+        ],
+        "plaintiff": [
+            "Examples are 'five', 'their', 'offender'. The plaintiff is the individual or group requesting the appeal.",
+            "The plaintiff is the party that believes the original decision was incorrect and seeks a review. For instance, 'five' in 'five of them appealed to the Supreme Court'.",
+            "In some cases, the plaintiff may be referred to by a pronoun or a general term. For example, 'their' in 'their appeals for a review'.",
+            "The plaintiff is distinct from the adjudicator, who reviews the appeal. For example, 'offender' in 'the sixth offender has only made one appeal'.",
+            "Unlike the 'defendant' in a 'ChargeIndict' event, the plaintiff in an 'Appeal' event is actively seeking a change in the legal decision. For example, 'convict' in 'a convict can file a case review or appeal'."
+        ]
+    }
+}

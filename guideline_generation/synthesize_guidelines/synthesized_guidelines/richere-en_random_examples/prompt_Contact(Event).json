@@ -1,0 +1,28 @@
+{
+    "Contact(Event)": {
+        "description": [
+            "The event is triggered by verbal or written communication between entities. Examples include 'stated', 'say', 'claimed', 'conversation', 'told', 'talking', 'trapped'.",
+            "The event is characterized by the exchange of information, opinions, or directives between one or more entities. It often involves direct or indirect speech.",
+            "Unlike events such as 'Appeal' or 'Extradite', which involve legal actions, the 'Contact' event focuses on the act of communication itself, regardless of the content or legal implications.",
+            "Triggers such as 'appealed' or 'extradite' are indicative of legal proceedings and are not considered 'Contact' events. Instead, 'Contact' events are marked by communication verbs like 'stated' or 'talking'.",
+            "The outcome of a 'Contact' event is the transmission of information or directives, unlike 'Attack' or 'Convict' events, which result in physical harm or legal judgments."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are individuals or groups involved in the communication. In 'Obama stated in ISLAMIC COUNTRIES', 'Obama' is the entity.",
+            "The entity is the person or group who initiates or participates in the communication. For instance, in 'Giulio Andreotti had to say something', 'Giulio Andreotti' is the entity.",
+            "Entities can be multiple, as seen in 'police told the man', where both 'police' and 'man' are entities.",
+            "The entity is crucial as it identifies the source or recipient of the communication. In 'He claimed', 'He' is the entity.",
+            "In cases where the communication involves multiple parties, each participant is considered an entity. For example, 'he was talking to his friend' includes 'he' and 'friend' as entities."
+        ],
+        "place": [
+            "Examples are locations where the communication takes place. In 'Obama stated in ISLAMIC COUNTRIES', 'ISLAMIC COUNTRIES' is the place.",
+            "The place provides context to the communication event, indicating where it occurred. For instance, 'at La Sapienza university' in 'Gadhafi was addressing' is the place.",
+            "Places can be specific or general, such as 'COUNTRIES' or 'Goerkes Corner'.",
+            "The place is important for understanding the setting of the communication. In 'meeting up with someone there', 'there' refers to 'Goerkes Corner'.",
+            "In some cases, the place may not be explicitly mentioned but can be inferred from the context. For example, 'in a small city' in 'He took two small papers' implies a place."
+        ]
+    }
+}

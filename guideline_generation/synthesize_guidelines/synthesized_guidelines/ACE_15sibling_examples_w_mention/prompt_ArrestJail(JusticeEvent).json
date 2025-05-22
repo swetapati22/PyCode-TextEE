@@ -1,0 +1,41 @@
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions involving the apprehension or detention of individuals by law enforcement or other authorities. Example triggers include 'arrested', 'detained', and 'taken into custody'.",
+            "The event is characterized by the physical act of taking a person into custody, often in response to alleged criminal activity or civil disobedience.",
+            "Unlike the Convict event, which involves a legal judgment of guilt, the ArrestJail event focuses on the initial act of apprehension and detention.",
+            "Triggers such as 'convicted' or 'sentenced' are indicative of Convict or Sentence events, not the ArrestJail event type.",
+            "The outcome of the ArrestJail event is the temporary or permanent detention of the person, which may lead to further legal proceedings, unlike the ReleaseParole event which involves freeing an individual from custody."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the specific word or phrase that indicates the occurrence of the ArrestJail event. Examples include 'arrested', 'detained', and 'taken into custody'.",
+            "Valid triggers must clearly indicate the act of apprehension or detention. For instance, 'arrested' in 'Police arrested her' is a valid trigger.",
+            "Edge cases include phrases like 'held for questioning', which may imply detention but do not explicitly indicate an arrest.",
+            "Triggers such as 'convicted' or 'sentenced' are not valid for this event type as they pertain to different stages of the justice process.",
+            "In cases where multiple potential triggers are present, the most explicit and direct reference to the act of arrest or detention should be chosen."
+        ],
+        "agent": [
+            "The agent argument refers to the entity responsible for carrying out the arrest or detention. Examples are 'Police', 'authorities', and 'law enforcement'.",
+            "The agent is typically a person or organization with legal authority to detain individuals. For instance, 'Police' in 'Police arrested her' is a valid agent.",
+            "In some cases, the agent may be implied rather than explicitly stated. For example, 'She was arrested' implies law enforcement as the agent.",
+            "Unlike the defendant in Convict events, the agent in ArrestJail events is the party performing the arrest, not the one being judged.",
+            "Edge cases include situations where private individuals perform a citizen's arrest, which should still be annotated as the agent if they are the ones detaining the person."
+        ],
+        "person": [
+            "The person argument refers to the individual or group being arrested or detained. Examples include 'her', 'people', and 'group'.",
+            "The person is the direct object of the arrest or detention action. For instance, 'her' in 'Police arrested her' is a valid person argument.",
+            "In cases involving groups, the person argument can refer to the collective entity, such as 'protesters' or 'demonstrators'.",
+            "Unlike the adjudicator in Convict events, the person in ArrestJail events is the one being apprehended, not the one making legal decisions.",
+            "Edge cases include situations where the person is not explicitly named but referred to by a pronoun or a general term like 'individuals'."
+        ],
+        "place": [
+            "The place argument refers to the location where the arrest or detention occurs. Examples include 'Abilene', 'New York', and 'San Francisco'.",
+            "The place is typically a geographic location or specific site where the event takes place. For instance, 'Abilene' in 'Police arrested her in Abilene' is a valid place argument.",
+            "In some cases, the place may be implied rather than explicitly stated. For example, 'She was arrested here' implies the current location as the place.",
+            "Unlike the place in Convict events, which may refer to the location of a trial or judgment, the place in ArrestJail events is where the physical act of arrest occurs.",
+            "Edge cases include situations where the place is a broad region or multiple locations, such as 'across the United States'."
+        ]
+    }
+}

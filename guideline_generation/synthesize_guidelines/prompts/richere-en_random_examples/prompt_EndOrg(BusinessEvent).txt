@@ -1,0 +1,349 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type EndOrg which is a child event type of super class BusinessEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+EndOrg which is a child event type of super class BusinessEvent
+Arguments:
+Argument 1 -> org
+Argument 2 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+To reduce costs last year, the district closed almost half the schools in the city.
+### Event Trigger ###
+closed
+### Event Arguments ###
+For argument "org" extracted spans ['half']
+For argument "place" extracted spans ['city']
+
+Example 2
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+More and more people are losing jobs to outsourcing, while small businesses are going belly-up as corporate power becomes more and more centralized.
+### Event Trigger ###
+belly-up
+### Event Arguments ###
+For argument "org" extracted spans ['businesses']
+
+Example 3
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+We defeated their armed forces, we drove their government from power, we rounded up as many of their leaders as we could get our hands on, and we abolished the political party which had held power.
+### Event Trigger ###
+abolished
+### Event Arguments ###
+For argument "org" extracted spans ['party']
+
+Example 4
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+Heck...hundreds iof not thousands will go under within a year....
+### Event Trigger ###
+under
+### Event Arguments ###
+For argument "org" extracted spans ['hundreds', 'thousands']
+
+Example 5
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+Or regulating farm dust or putting light bulb companies out of business or stopping oil drilling for so long all the platforms went to other countries instead of waiting or any other numerous stupid decision he has made.
+### Event Trigger ###
+out
+### Event Arguments ###
+For argument "org" extracted spans ['companies']
+
+Example 6
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+how about the forced closing of all those automobile dealerships.
+### Event Trigger ###
+closing
+### Event Arguments ###
+For argument "org" extracted spans ['dealerships']
+
+Example 7
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+Or regulating farm dust or putting light bulb companies out of business or stopping oil drilling for so long all the platforms went to other countries instead of waiting or any other numerous stupid decision he has made.
+### Event Trigger ###
+out
+### Event Arguments ###
+For argument "org" extracted spans ['companies']
+
+Example 8
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+how about the forced closing of all those automobile dealerships.
+### Event Trigger ###
+closing
+### Event Arguments ###
+For argument "org" extracted spans ['dealerships']
+
+Example 9
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+Jeffrey K. Skilling, imprisoned for the last six years because of his role in the fraud that caused the collapse of Enron, has reached a deal that could reduce his sentence by more than a decade.
+### Event Trigger ###
+collapse
+### Event Arguments ###
+For argument "org" extracted spans ['Enron']
+
+Example 10
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+In addition, he has agreed to allow more than $40 million of assets that were seized from him to be distributed to victims of Enron’s failure.
+### Event Trigger ###
+failure
+### Event Arguments ###
+For argument "org" extracted spans ['Enron']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even the IRA failed to cause as many casualties on mainland Great Britain as Pakistani trained suicide bombers did in one day.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "agent" extracted spans ['bombers']
+For argument "victim" extracted spans ['bombers']
+For argument "place" extracted spans ['mainland']
+For argument "instrument" extracted spans ['bombers']
+
+Example 12
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 13
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 14
+#### Event Type ####
+Artifact(ManufactureEvent)
+### Input Text ###
+In fact, lately in my country they've been building schools modularly so they can be turned into house when the families with young kids in the neighbourhood grow older and don't need them anymore.
+### Event Trigger ###
+building
+### Event Arguments ###
+For argument "artifact" extracted spans ['schools']
+For argument "agent" extracted spans ['they']
+For argument "place" extracted spans ['country']
+
+Example 15
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 16
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+In The United States versus Miller, the Court held:
+### Event Trigger ###
+versus
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Court']
+For argument "prosecutor" extracted spans ['United States']
+For argument "defendant" extracted spans ['Miller']
+
+Example 17
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+But it also drew protests, including at La Sapienza university, where Gadhafi was addressing a group of few hundred students.
+### Event Trigger ###
+addressing
+### Event Arguments ###
+For argument "entity" extracted spans ['Gadhafi']
+For argument "place" extracted spans ['La Sapienza university']
+For argument "audience" extracted spans ['group']
+
+Example 18
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 19
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+Nor should my family have to deal with the government in any way other than maybe to prove they exist if the government owes me.
+### Event Trigger ###
+owes
+### Event Arguments ###
+For argument "giver" extracted spans ['government']
+For argument "recipient" extracted spans ['me']
+For argument "beneficiary" extracted spans ['they']
+
+Example 20
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+In some places STUDENTS can bring GUNS to school (rifle clubs).
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "agent" extracted spans ['STUDENTS']
+For argument "artifact" extracted spans ['GUNS']
+For argument "destination" extracted spans ['school']
+
+Example 21
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+We didn't intervene when the Sri Lankan government were slaughtering the Tamil Tigers, or during the Rwandan Genocide, or when the Yemen/Syrian/Bahrain government shot at their protesters, or when Mugabe began killing opposition.
+### Event Trigger ###
+protesters
+### Event Arguments ###
+For argument "entity" extracted spans ['protesters']
+For argument "place" extracted spans ['Yemen/Syrian/Bahrain']
+
+Example 22
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Michigan is a no-fault divorce state, so had we have been married longer or if he was laid off before our divorce, could have been responsible for spousal support.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['our']
+For argument "place" extracted spans ['Michigan']
+
+Example 23
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+His father having died, he returned to Australia in 1954 to take over his inheritance, the Sunday Mail and The News, both of Adelaide
+### Event Trigger ###
+inheritance
+### Event Arguments ###
+For argument "recipient" extracted spans ['his']
+For argument "giver" extracted spans ['father']
+For argument "thing" extracted spans ['Sunday Mail', 'News']
+For argument "place" extracted spans ['Adelaide']
+
+Example 24
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']
+
+Example 25
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Loss of 2,400 jobs at Pfizer in Sandwich, Kent....massive impact on employment in local area...loss of confidence in UK...
+### Event Trigger ###
+Loss
+### Event Arguments ###
+For argument "entity" extracted spans ['Pfizer']
+For argument "place" extracted spans ['Sandwich']
+For argument "person" extracted spans ['2,400']

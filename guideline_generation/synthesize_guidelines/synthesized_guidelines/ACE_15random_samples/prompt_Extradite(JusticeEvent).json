@@ -1,0 +1,42 @@
+{
+    "Extradite(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of transferring a person from one jurisdiction to another for legal proceedings. Example triggers include 'extradite', 'extradition', and 'extraditing'.",
+            "The event is triggered by legal actions involving the formal process of handing over a suspect or convicted individual from one authority to another. Key characteristics include the involvement of legal authorities and the movement of the person across jurisdictions.",
+            "The event is triggered by the legal process where a person is sent from one place to another to face charges or serve a sentence. Unlike the 'ArrestJail' event, this event involves cross-jurisdictional transfer rather than initial detention.",
+            "The event is triggered by the formal request and subsequent transfer of an individual from one state or country to another for legal reasons. Triggers such as 'extradition' are indicative of this event type, not 'Transport' which involves general movement without legal context.",
+            "The event is triggered by the legal procedure of surrendering a person from one jurisdiction to another, often involving international or interstate cooperation. This event differs from 'ReleaseParole' as it focuses on the transfer for prosecution or punishment rather than release from custody."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'court', 'government', 'police department'. The agent is the authority or entity responsible for initiating or carrying out the extradition process.",
+            "The agent plays a crucial role in the extradition process, often being a legal or governmental body. For instance, 'the court' in 'the court won't have to initiate the time-consuming process of extraditing her'.",
+            "The agent is typically a legal or governmental authority that has the power to request or enforce the extradition. Examples include 'the post-Milosevic government' in 'the post-Milosevic government later extradited him'.",
+            "The agent is the entity that oversees the extradition process, ensuring that legal protocols are followed. For example, 'the police department' in 'he's currently at atlanta police department headquarters pending extradition'.",
+            "The agent is responsible for the legal and procedural aspects of the extradition, often involving coordination with other jurisdictions. An example is 'the original court' in 'the original court to have her hauled back to its jurisdiction'."
+        ],
+        "destination": [
+            "Examples are 'jurisdiction', 'Hague', 'state'. The destination is the place to which the person is being extradited.",
+            "The destination is the final location where the person will face legal proceedings or serve a sentence. For instance, 'the state of louisiana' in 'pending extradition back to the state of louisiana'.",
+            "The destination is the jurisdiction that has requested the extradition and where the legal process will continue. An example is 'the Hague' in 'extradited him to the U.N. war crimes tribunal in The Hague'.",
+            "The destination is the place where the person will be transferred to face charges or punishment. For example, 'jurisdiction' in 'the court won't have to initiate the time-consuming process of extraditing her to its jurisdiction'.",
+            "The destination is the location specified in the extradition request, often a different state or country. An example is 'jurisdiction' in 'have her hauled back to its jurisdiction'."
+        ],
+        "origin": [
+            "Examples are 'state', 'headquarters'. The origin is the place from which the person is being extradited.",
+            "The origin is the initial location where the person is currently held or from where they are being transferred. For instance, 'state' in 'if she skips out and goes to another state'.",
+            "The origin is the place where the person was initially detained or located before the extradition process begins. An example is 'headquarters' in 'currently at atlanta police department headquarters pending extradition'.",
+            "The origin is the jurisdiction that currently holds the person and is transferring them to another jurisdiction. For example, 'state' in 'if she skips out and goes to another state'.",
+            "The origin is the starting point of the extradition process, often where the person was apprehended or detained. An example is 'state' in 'if she skips out and goes to another state'."
+        ],
+        "person": [
+            "Examples are 'she', 'him', 'her'. The person is the individual being extradited.",
+            "The person is the subject of the extradition process, the one being transferred from one jurisdiction to another. For instance, 'she' in 'the waiver of extradition that she signed'.",
+            "The person is the individual who is being legally transferred to face charges or serve a sentence. An example is 'him' in 'the post-Milosevic government later extradited him'.",
+            "The person is the one who is being moved from one place to another under legal authority. For example, 'he' in 'he's currently at atlanta police department headquarters pending extradition'.",
+            "The person is the individual whose legal status is being transferred from one jurisdiction to another. An example is 'her' in 'the court won't have to initiate the time-consuming process of extraditing her'."
+        ]
+    }
+}

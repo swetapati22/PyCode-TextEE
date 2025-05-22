@@ -1,0 +1,106 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_TransferOwnership(TransactionEvent)
+```json
+{
+    "TransferOwnership(TransactionEvent)": {
+        "description": [
+            "The event is triggered by the transfer of ownership of an artifact from one entity to another. Example triggers include 'sell', 'buy', 'acquire', and 'provide'.",
+            "The event is characterized by the change in possession or control of an artifact, often involving a buyer and a seller. Key characteristics include the presence of an artifact and entities involved in the transaction.",
+            "Unlike other transaction events, this event specifically involves the transfer of ownership rights. For instance, 'renting' or 'leasing' would not trigger this event as they do not involve a change in ownership.",
+            "Triggers such as 'donate' or 'gift' may also indicate this event type, provided they result in a change of ownership. However, 'lend' or 'borrow' are indicative of temporary possession and not this event type.",
+            "The outcome of this event is the transfer of ownership of the artifact from the seller to the buyer or beneficiary. This distinguishes it from events like 'use' or 'consume', where ownership does not change."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifact": [
+            "Examples are 'apartment', 'operations', 'hotel', 'property', 'business', 'parks', 'division'. The artifact is the item or entity whose ownership is being transferred.",
+            "The artifact is central to the event as it is the object of the transaction. It can be tangible (e.g., 'apartment') or intangible (e.g., 'operations').",
+            "In cases where multiple items are involved, each can be considered an artifact if they are part of the same transaction. For example, 'Universal Studios Hollywood, Universal Orlando' in a single sale.",
+            "The artifact must be clearly identifiable in the text. Ambiguous references like 'it' or 'them' should be clarified by context.",
+            "Unlike related events where the artifact might be used or modified, in TransferOwnership, the artifact's ownership is the primary focus."
+        ],
+        "beneficiary": [
+            "Examples are 'nanny'. The beneficiary is the entity that receives the artifact as a result of the transfer.",
+            "The beneficiary is important as it indicates who gains ownership or control of the artifact. This can be an individual or an organization.",
+            "In some cases, the beneficiary may not be explicitly mentioned but can be inferred from context. For example, 'providing their grandson's nanny with a state-owned luxury apartment'.",
+            "The beneficiary is distinct from the buyer in that they may receive the artifact without a financial transaction, such as in a gift or donation.",
+            "Unlike the seller or buyer, the beneficiary does not necessarily participate in the transaction process but is the end recipient of the artifact."
+        ],
+        "buyer": [
+            "Examples are 'company', 'Andrew Harris', 'firm', 'Blackstone Group'. The buyer is the entity that acquires ownership of the artifact through purchase.",
+            "The buyer is crucial as it represents the party that gains ownership in exchange for compensation, typically monetary.",
+            "In some contexts, the buyer may be an organization or a group rather than an individual. For example, 'Blackstone Group' buying 'Vivendi's theme park division'.",
+            "The buyer must be clearly identified in the text. Ambiguous references should be clarified by context or additional information.",
+            "Unlike the beneficiary, the buyer is actively involved in the transaction process, often providing payment or other forms of compensation."
+        ],
+        "place": [
+            "Examples are 'Belgrade', 'Sydney's Kings Cross', 'Florida', 'Spain', 'Japan'. The place is the location where the transfer of ownership occurs or is relevant to the transaction.",
+            "The place provides context and specificity to the event, indicating where the transaction is taking place or where the artifact is located.",
+            "In some cases, the place may refer to multiple locations if the transaction involves assets in different areas. For example, 'Universal Orlando in Florida and Universal's ownership interests in parks in Spain and Japan'.",
+            "The place must be explicitly mentioned in the text. Implicit references should be clarified by context.",
+            "Unlike other arguments, the place is not directly involved in the transaction but provides important contextual information about the event."
+        ],
+        "seller": [
+            "Examples are 'Mirjana Markovic', 'USA Interactive', 'Vivendi', 'group'. The seller is the entity that transfers ownership of the artifact to another party.",
+            "The seller is essential as it represents the party that relinquishes ownership in exchange for compensation or other considerations.",
+            "In some contexts, the seller may be an organization or a group rather than an individual. For example, 'Vivendi Universal' selling 'its theme park business'.",
+            "The seller must be clearly identified in the text. Ambiguous references should be clarified by context or additional information.",
+            "Unlike the buyer, the seller is the party that initiates the transfer of ownership, often receiving payment or other forms of compensation in return."
+        ]
+    }
+}
+```

@@ -1,0 +1,352 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type ReleaseParole which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+ReleaseParole which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> person
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+In a joint motion, lawyers for the defense and prosecution asked Magistrate Judge Marianne B. Bowler of U.S. District Court in Massachusetts to release Phillipos, 19, on $100,000 bail on the condition that he stay under house arrest and wear an electronic tracking bracelet.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "agent" extracted spans ['Marianne B. Bowler']
+For argument "person" extracted spans ['Phillipos']
+For argument "place" extracted spans ['Massachusetts']
+
+Example 2
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+I n the US there are many incidents where a hard core criminal was let out on bail, and he would do go out and do the same.
+### Event Trigger ###
+bail
+### Event Arguments ###
+For argument "person" extracted spans ['criminal']
+For argument "place" extracted spans ['US']
+
+Example 3
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+They also seem to understand that releasing prisoners with absolutely no support (no job, no place to life, no family, no education, no nothing) forces them to fall back on petty crimes or gang life, quickly going back to prison like its a "revolving door" system.
+### Event Trigger ###
+releasing
+### Event Arguments ###
+For argument "agent" extracted spans ['They']
+
+Example 4
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+To use the most extreme example, take Leslie Van Houten, a woman involved in the Manson Family murders of the Tate and LaBianca families; Van Houten is a 62 year old woman, extremely fragile, she's made 16 unsuccessful pleas for parole over the past 40 years.
+### Event Trigger ###
+parole
+### Event Arguments ###
+For argument "person" extracted spans ['she']
+
+Example 5
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+She appears to have long deconverted from the Manson cult, she's obviously no public danger to anyone, yet her requests for parole are denied due to the extreme cruelty of her crimes.
+### Event Trigger ###
+parole
+### Event Arguments ###
+For argument "person" extracted spans ['she']
+
+Example 6
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+Once in prison, he more likely to be paroled.
+### Event Trigger ###
+paroled
+### Event Arguments ###
+
+Example 7
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+This guy could get infront of a jury and argue that he should be let free on lesser charges because he thought he was saving unborn babies?
+### Event Trigger ###
+let free
+### Event Arguments ###
+For argument "person" extracted spans ['he']
+
+Example 8
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+A former militant of the French far-left group Action Directe, Georges Cipriani, left prison on parole on Wednesday after 23 years behind bars for two high-profile murders.
+### Event Trigger ###
+parole
+### Event Arguments ###
+For argument "person" extracted spans ['Georges Cipriani']
+For argument "place" extracted spans ['prison']
+
+Example 9
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+The four included two women, Joelle Aubron who died of lung cancer in 2006 and Nathalie Menignon, who was paroled in 2008.
+### Event Trigger ###
+paroled
+### Event Arguments ###
+For argument "person" extracted spans ['who']
+
+Example 10
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+Cipriani left Ensisheim in a police vehicle bound for an open prison near Strasbourg where the police officer said he was due to do community service including working at a food bank as part of his parole.
+### Event Trigger ###
+parole
+### Event Arguments ###
+For argument "person" extracted spans ['his']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+In some places STUDENTS can bring GUNS to school (rifle clubs).
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "agent" extracted spans ['STUDENTS']
+For argument "artifact" extracted spans ['GUNS']
+For argument "destination" extracted spans ['school']
+
+Example 12
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+He took two small papers with declining circulation in a small city in South Australia and built a media empire and made himself on of the wealthiest men in the world.
+### Event Trigger ###
+took
+### Event Arguments ###
+For argument "person" extracted spans ['He']
+For argument "place" extracted spans ['city']
+For argument "entity" extracted spans ['papers']
+
+Example 13
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 14
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+The last time something like this happened that I know of; was the republican convention in New York for the renomination of Bush Jr for a second term in office.
+### Event Trigger ###
+renomination
+### Event Arguments ###
+For argument "agent" extracted spans ['republican']
+For argument "person" extracted spans ['Bush Jr']
+For argument "place" extracted spans ['New York']
+
+Example 15
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 16
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+But it also drew protests, including at La Sapienza university, where Gadhafi was addressing a group of few hundred students.
+### Event Trigger ###
+addressing
+### Event Arguments ###
+For argument "entity" extracted spans ['Gadhafi']
+For argument "place" extracted spans ['La Sapienza university']
+For argument "audience" extracted spans ['group']
+
+Example 17
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "victim" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+For argument "place" extracted spans ['where']
+
+Example 18
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Loss of 2,400 jobs at Pfizer in Sandwich, Kent....massive impact on employment in local area...loss of confidence in UK...
+### Event Trigger ###
+Loss
+### Event Arguments ###
+For argument "entity" extracted spans ['Pfizer']
+For argument "place" extracted spans ['Sandwich']
+For argument "person" extracted spans ['2,400']
+
+Example 19
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Michigan is a no-fault divorce state, so had we have been married longer or if he was laid off before our divorce, could have been responsible for spousal support.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['our']
+For argument "place" extracted spans ['Michigan']
+
+Example 20
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even the IRA failed to cause as many casualties on mainland Great Britain as Pakistani trained suicide bombers did in one day.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "agent" extracted spans ['bombers']
+For argument "victim" extracted spans ['bombers']
+For argument "place" extracted spans ['mainland']
+For argument "instrument" extracted spans ['bombers']
+
+Example 21
+#### Event Type ####
+Demonstrate(ConflictEvent)
+### Input Text ###
+We didn't intervene when the Sri Lankan government were slaughtering the Tamil Tigers, or during the Rwandan Genocide, or when the Yemen/Syrian/Bahrain government shot at their protesters, or when Mugabe began killing opposition.
+### Event Trigger ###
+protesters
+### Event Arguments ###
+For argument "entity" extracted spans ['protesters']
+For argument "place" extracted spans ['Yemen/Syrian/Bahrain']
+
+Example 22
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+His father having died, he returned to Australia in 1954 to take over his inheritance, the Sunday Mail and The News, both of Adelaide
+### Event Trigger ###
+inheritance
+### Event Arguments ###
+For argument "recipient" extracted spans ['his']
+For argument "giver" extracted spans ['father']
+For argument "thing" extracted spans ['Sunday Mail', 'News']
+For argument "place" extracted spans ['Adelaide']
+
+Example 23
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 24
+#### Event Type ####
+Contact(Event)
+### Input Text ###
+(6) Obama stated in ISLAMIC COUNTRIES that the bond btw American and Israel is unshakable.
+### Event Trigger ###
+stated
+### Event Arguments ###
+For argument "entity" extracted spans ['Obama']
+For argument "place" extracted spans ['COUNTRIES']
+
+Example 25
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']

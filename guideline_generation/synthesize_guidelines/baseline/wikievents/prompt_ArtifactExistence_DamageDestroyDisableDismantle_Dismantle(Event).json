@@ -1,0 +1,49 @@
+{
+    "ArtifactExistence_DamageDestroyDisableDismantle_Dismantle(Event)": {
+        "description": [
+            "The event type 'ArtifactExistence_DamageDestroyDisableDismantle_Dismantle' refers to the action of taking apart or disassembling an artifact into its individual components. The event can be triggered by verbs such as 'dismantle', 'disassemble', 'take apart', 'deconstruct', and 'break down'. This event typically involves a dismantler (the entity performing the action), an artifact (the object being dismantled), and may include components (the parts resulting from the dismantling), an instrument (the tool used for dismantling), and a place (the location where the dismantling occurs).",
+            "The 'ArtifactExistence_DamageDestroyDisableDismantle_Dismantle' event involves the process of breaking down an artifact into its constituent parts. The event can be triggered by words like 'dismantle', 'disassemble', 'take apart', 'deconstruct', and 'break down'. Key participants in this event include the dismantler, the artifact, and potentially the components, instrument, and place associated with the dismantling process.",
+            "In the 'ArtifactExistence_DamageDestroyDisableDismantle_Dismantle' event, an artifact is taken apart into its individual components. This event can be triggered by terms such as 'dismantle', 'disassemble', 'take apart', 'deconstruct', and 'break down'. The event typically involves a dismantler, an artifact, and may also include components, an instrument, and a place.",
+            "The 'ArtifactExistence_DamageDestroyDisableDismantle_Dismantle' event type describes the action of disassembling an artifact into its parts. The event can be triggered by verbs like 'dismantle', 'disassemble', 'take apart', 'deconstruct', and 'break down'. It involves a dismantler, an artifact, and may also include components, an instrument, and a place where the dismantling occurs.",
+            "The 'ArtifactExistence_DamageDestroyDisableDismantle_Dismantle' event refers to the process of taking apart an artifact into its individual components. The event can be triggered by words such as 'dismantle', 'disassemble', 'take apart', 'deconstruct', and 'break down'. This event typically involves a dismantler, an artifact, and may also include components, an instrument, and a place."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifact": [
+            "The 'artifact' argument refers to the object that is being dismantled in the event. Examples are 'bomb', 'device', 'drones used in the attack', 'shot gun shells', and 'servo'.",
+            "The 'artifact' is the item that is being taken apart during the dismantling process. Examples include 'bomb', 'device', 'drones used in the attack', 'shot gun shells', and 'servo'.",
+            "In the context of the event, the 'artifact' is the object that is disassembled. Examples are 'bomb', 'device', 'drones used in the attack', 'shot gun shells', and 'servo'.",
+            "The 'artifact' argument denotes the object that undergoes dismantling. Examples include 'bomb', 'device', 'drones used in the attack', 'shot gun shells', and 'servo'.",
+            "The 'artifact' refers to the object being dismantled in the event. Examples are 'bomb', 'device', 'drones used in the attack', 'shot gun shells', and 'servo'."
+        ],
+        "components": [
+            "The 'components' argument refers to the parts that result from the dismantling of the artifact. Examples are 'payload', 'GPS module', and 'payload'.",
+            "The 'components' are the individual parts obtained after dismantling the artifact. Examples include 'payload', 'GPS module', and 'payload'.",
+            "In the event, 'components' refer to the parts that the artifact is broken down into. Examples are 'payload', 'GPS module', and 'payload'.",
+            "The 'components' argument denotes the parts resulting from the dismantling process. Examples include 'payload', 'GPS module', and 'payload'.",
+            "The 'components' are the parts that make up the artifact after it has been dismantled. Examples are 'payload', 'GPS module', and 'payload'."
+        ],
+        "dismantler": [
+            "The 'dismantler' argument refers to the entity that performs the dismantling action. Examples are 'Hayes' and 'squad'.",
+            "The 'dismantler' is the person or group responsible for taking apart the artifact. Examples include 'Hayes' and 'squad'.",
+            "In the event, the 'dismantler' is the entity that disassembles the artifact. Examples are 'Hayes' and 'squad'.",
+            "The 'dismantler' argument denotes the individual or group carrying out the dismantling. Examples include 'Hayes' and 'squad'.",
+            "The 'dismantler' refers to the entity performing the dismantling action. Examples are 'Hayes' and 'squad'."
+        ],
+        "instrument": [
+            "The 'instrument' argument refers to the tool or device used to dismantle the artifact. Examples are 'servo motor' and 'robot'.",
+            "The 'instrument' is the tool or device employed in the dismantling process. Examples include 'servo motor' and 'robot'.",
+            "In the event, the 'instrument' refers to the tool used to disassemble the artifact. Examples are 'servo motor' and 'robot'.",
+            "The 'instrument' argument denotes the tool or device used for dismantling. Examples include 'servo motor' and 'robot'.",
+            "The 'instrument' refers to the tool or device used in the dismantling action. Examples are 'servo motor' and 'robot'."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the dismantling occurs. Examples are 'Hagley Road' and 'desired location'.",
+            "The 'place' is the location where the artifact is dismantled. Examples include 'Hagley Road' and 'desired location'.",
+            "In the event, the 'place' refers to the location of the dismantling process. Examples are 'Hagley Road' and 'desired location'.",
+            "The 'place' argument denotes the location where the dismantling takes place. Examples include 'Hagley Road' and 'desired location'.",
+            "The 'place' refers to the location where the dismantling action occurs. Examples are 'Hagley Road' and 'desired location'."
+        ]
+    }
+}

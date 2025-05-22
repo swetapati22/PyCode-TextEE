@@ -1,0 +1,42 @@
+{
+    "TransportArtifact(MovementEvent)": {
+        "description": [
+            "The event is triggered by the movement or transportation of an artifact from one location to another. Example triggers include 'bring', 'deliver', 'take', and 'pull'.",
+            "The event is characterized by the involvement of an agent who facilitates the movement, an artifact being moved, and often includes the origin and destination locations.",
+            "Unlike TransportPerson events, which involve the movement of individuals, TransportArtifact events specifically involve the movement of objects or items.",
+            "Triggers such as 'relocate' are indicative of TransportPerson events, not TransportArtifact events, as they imply the movement of people rather than objects.",
+            "The outcome of a TransportArtifact event is the successful or attempted relocation of an artifact, which can be contrasted with the movement of people in TransportPerson events."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'STUDENTS' in 'STUDENTS can bring GUNS to school', indicating the entity responsible for the transportation.",
+            "The agent is the entity that initiates or carries out the movement of the artifact. For instance, 'Amtrak' in 'Amtrak are delivering it'.",
+            "In some cases, the agent may be implied or indirectly referenced, such as 'we' in 'we're not allowed to leave it with a neighbour'.",
+            "The agent can be an individual, group, or organization, as seen in 'locals' in 'locals took all of my money and guns'.",
+            "Unlike the artifact, the agent is the active participant in the event, responsible for the action of moving the artifact."
+        ],
+        "artifact": [
+            "Examples are 'GUNS' in 'STUDENTS can bring GUNS to school', indicating the item being transported.",
+            "The artifact is the object or item that is being moved from one location to another. For example, 'the truck' in 'the truck pulled away from a cafe'.",
+            "Artifacts can vary widely in nature, from physical objects like 'guns' to larger items like 'the truck'.",
+            "In some contexts, the artifact may be implied or part of a larger set of items, such as 'it' in 'we're not allowed to leave it with a neighbour'.",
+            "Unlike the agent, the artifact is the passive participant in the event, being moved rather than moving itself."
+        ],
+        "destination": [
+            "Examples are 'school' in 'STUDENTS can bring GUNS to school', indicating the endpoint of the transportation.",
+            "The destination is the location to which the artifact is being transported. For instance, 'door' in 'it had been delivered next door'.",
+            "Destinations can be specific places, such as 'cafe' or more general locations like 'home'.",
+            "In some cases, the destination may be implied or understood from context, such as 'next door' in 'it had been delivered next door'.",
+            "Unlike the origin, the destination is the endpoint of the movement, where the artifact is intended to arrive."
+        ],
+        "origin": [
+            "Examples are 'cafe' in 'the truck pulled away from a cafe', indicating the starting point of the transportation.",
+            "The origin is the location from which the artifact is being moved. For example, 'place' in 'relocate from one place to another'.",
+            "Origins can be specific places, such as 'cafe', or more general locations like 'home'.",
+            "In some contexts, the origin may be implied or understood from context, such as 'home' in 'arrived home yesterday'.",
+            "Unlike the destination, the origin is the starting point of the movement, where the artifact begins its journey."
+        ]
+    }
+}

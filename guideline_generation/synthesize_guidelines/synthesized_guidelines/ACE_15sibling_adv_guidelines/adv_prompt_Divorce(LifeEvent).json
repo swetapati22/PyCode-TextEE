@@ -1,0 +1,10 @@
+{
+    "Divorce(LifeEvent)": {
+        "description": "The Divorce event is triggered by the legal dissolution of a marriage, commonly referred to as a divorce. It involves the formal ending of a marital relationship through legal proceedings and settlements, typically between two individuals who were previously married. Unlike the Marry event, which signifies the beginning of a marital relationship, the Divorce event marks its end and may involve legal and financial outcomes such as settlements or custody arrangements. Triggers for this event include terms like 'divorce', 'filed for divorce', 'sued for divorce', and 'divorce settlement'. This event is distinct from events involving physical harm or death, such as Die or Injure.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'divorce', 'filed for divorce', or 'divorce settlement'.",
+            "person": "Individuals directly involved in the divorce, typically the spouses. Examples include 'Hunter' in 'Hunter filed for divorce' and 'Crichton' and 'wife' in 'Crichton has agreed to pay his fourth wife'. This argument identifies the individuals whose marital relationship is being dissolved and does not include individuals not part of the marital relationship, such as children or lawyers.",
+            "place": "Locations where the divorce proceedings or related events occur, such as 'Los Angeles' in 'filed for divorce in Los Angeles' or 'court' in 'Los Angeles Superior Court'. This argument provides context about the jurisdiction or setting of the divorce. It does not include locations unrelated to the legal proceedings unless directly relevant, such as vacation spots or workplaces."
+        }
+    }
+}

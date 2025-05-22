@@ -1,0 +1,36 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions or communications indicating a formal request to a higher authority or court to review and potentially overturn a previous decision, such as 'appealed' or 'appeal'.",
+            "The event is characterized by the involvement of a plaintiff who seeks redress and an adjudicator who reviews the appeal, typically in a legal or judicial context.",
+            "This event focuses on the procedural act of challenging a prior ruling, contrasting with events like 'Sue', which involve initiating legal action, or 'Execute', which refers to carrying out a legal sentence.",
+            "Triggers such as 'appeal' are specific to this event type, whereas terms like 'extradition' indicate a different JusticeEvent type focused on relocating a defendant between jurisdictions.",
+            "The outcomes of the event typically involve the higher authority's decision to uphold, overturn, or modify the original ruling, distinguishing it from events like 'Acquit', which involve declaring a defendant not guilty."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are judicial or official bodies such as 'Supreme Court' or 'Court of Appeals' that have the authority to review and make a decision on the appeal.",
+            "The adjudicator plays a central role in reviewing the appeal, ensuring that the appeal process is aligned with legal protocols and judicial fairness.",
+            "Triggers like 'appeal' directly imply the involvement of an adjudicator, whereas events like 'ArrestJail' may involve an agent such as 'Police' instead.",
+            "Edge cases include non-traditional adjudicators, such as arbitration panels, which may function similarly but operate outside formal court systems.",
+            "The adjudicator's decision is final within the context of this event, unlike lower courts or non-binding recommendations."
+        ],
+        "place": [
+            "Examples are locations such as 'Indonesia' or specific jurisdictions where the appeal is filed or heard.",
+            "The place indicates the geographic or legal jurisdiction where the appeal process is conducted, influencing applicable legal frameworks.",
+            "This argument differentiates the Appeal event from events like 'Extradite', where place indicates origin and destination jurisdictions.",
+            "Places are not limited to physical courts; they may include virtual or digital jurisdictions if the appeal process is conducted online.",
+            "Edge cases include appeals filed in one jurisdiction but reviewed in another due to judicial agreements or legal transference."
+        ],
+        "plaintiff": [
+            "Examples are individuals or groups such as 'convict', 'five', or 'their' who are initiating the appeal process.",
+            "The plaintiff is the party seeking a reversal or modification of a prior decision, essential to the event as the initiator of the appeal.",
+            "Unlike events like 'Sue', where the plaintiff initiates new legal action, the plaintiff in Appeal seeks to challenge or review an existing judgment.",
+            "In edge cases, a proxy or representative, such as a lawyer, may act on behalf of the plaintiff, though the original appellant remains the actual plaintiff.",
+            "Triggers such as 'appealed' imply active participation by the plaintiff, distinguishing it from events where the plaintiff is more passive or reactive."
+        ]
+    }
+}
+  

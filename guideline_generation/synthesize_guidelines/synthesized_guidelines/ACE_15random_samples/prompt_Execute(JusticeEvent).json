@@ -1,0 +1,35 @@
+{
+    "Execute(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of carrying out a death sentence on an individual, typically by a state or legal authority. Example triggers include 'executed', 'execution', 'put to death', and 'death'.",
+            "The event is characterized by the finality of the action, where the individual is killed as a result of a legal decision. This distinguishes it from other JusticeEvents like 'Pardon' or 'ReleaseParole', where the outcome is the release or forgiveness of the individual.",
+            "Unlike the 'Die' event, which can occur due to various causes, the 'Execute' event specifically involves a legal or judicial process leading to the death of the individual. Triggers such as 'suicide' or 'killed' are indicative of the 'Die' event, not the 'Execute' event.",
+            "The scope of the event includes the legal and procedural aspects leading up to the execution, the act itself, and the aftermath. It does not include the broader context of the individual's crimes or the legal proceedings unless they directly pertain to the execution.",
+            "The event outcomes are the death of the individual and the legal closure of their case. This is in contrast to events like 'Appeal' or 'Convict', where the legal process is ongoing or results in a different form of judgment."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'texas', 'Indonesia', 'we', 'Pakistan'. The agent is the entity responsible for carrying out the execution, typically a state, country, or legal authority.",
+            "The agent's role is crucial as it signifies the authority under which the execution is performed. This can include government bodies, judicial systems, or specific officials.",
+            "In cases where the agent is a collective entity (e.g., 'we'), it represents the executing authority or body. For instance, 'we' in the context of a legal office or government department.",
+            "Edge cases include situations where the agent is implied rather than explicitly stated. For example, 'the state' or 'the country' can be inferred as the agent in certain contexts.",
+            "Unlike the 'attacker' in the 'Attack' event, the agent in the 'Execute' event operates within a legal framework and authority, emphasizing the judicial nature of the action."
+        ],
+        "person": [
+            "Examples are 'person', 'convicts', 'them', 'six', 'men', 'convict', 'McVeigh', 'delma banks', 'he', 'killer'. The person is the individual(s) who are being executed.",
+            "The person's role is central to the event as they are the subject of the execution. This can include individuals on death row, convicts, or those sentenced to death.",
+            "In some cases, the person may be referred to by their role or status, such as 'killer' or 'convict', rather than by name. This highlights their identity in the context of the execution.",
+            "Edge cases include situations where the person is part of a group or collective, such as 'six' or 'them'. These references still point to the individuals being executed.",
+            "Unlike the 'victim' in the 'Die' event, the person in the 'Execute' event is specifically under a legal death sentence, emphasizing the judicial decision leading to their execution."
+        ],
+        "place": [
+            "Examples are 'state', 'Indonesia', 'country', 'texas'. The place is the location where the execution is carried out.",
+            "The place's role is to provide the geographical context of the execution, indicating where the legal authority is exercised.",
+            "In some cases, the place may be a broader region or country, such as 'Indonesia' or 'country', rather than a specific location. This still provides the necessary context for the event.",
+            "Edge cases include situations where the place is implied rather than explicitly stated. For example, 'the state' can be inferred as the location in certain contexts.",
+            "Unlike the 'place' in the 'Extradite' event, which involves the origin and destination of a person being transferred, the place in the 'Execute' event is solely where the execution occurs, emphasizing the finality of the action."
+        ]
+    }
+}

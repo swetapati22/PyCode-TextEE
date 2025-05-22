@@ -1,0 +1,49 @@
+{
+    "TransferOwnership(TransactionEvent)": {
+        "description": [
+            "The event is triggered by actions involving the transfer of ownership or control of an asset, property, or item from one party to another. Examples of triggers include 'sale,' 'providing,' and 'acquire.'",
+            "The event typically involves specific participants such as the seller, buyer, beneficiary, or artifact, highlighting a clear change in ownership status.",
+            "Unlike related events such as TransferMoney, which involves monetary exchange without necessarily transferring ownership, this event focuses on tangible or intangible assets moving from one party to another.",
+            "Triggers such as 'sale' and 'acquire' signify ownership change, whereas terms like 'donate' or 'lend' may indicate related but distinct events, often lacking permanence in the transfer.",
+            "This event explicitly involves a defined artifact (the item being transferred) and identifiable participants who act as the transferor (e.g., seller) and transferee (e.g., buyer or beneficiary)."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifact": [
+            "Examples are tangible or intangible items whose ownership changes, such as 'apartment,' 'operations,' or 'hotel.' These items are the primary focus of the transfer.",
+            "The artifact must be explicitly mentioned or implied in the context of the event. For example, 'luxury apartment' or 'nuclear weapons'.",
+            "Artifacts should not be confused with monetary sums, which would pertain to related but different events such as TransferMoney.",
+            "The artifact should represent a distinct and identifiable entity, such as 'a state-owned luxury apartment,' not a general concept or undefined asset.",
+            "Edge cases include ambiguous phrasing; if multiple potential artifacts are mentioned, the most directly relevant to the transfer should be selected."
+        ],
+        "beneficiary": [
+            "Examples are individuals or groups who gain ownership or benefit from the transfer, such as 'nanny'.",
+            "The beneficiary must be directly linked to the artifact being transferred, either explicitly in the text or through contextual inference.",
+            "In cases where the artifact is sold or transferred without a clear beneficiary, this argument may be omitted or left undefined.",
+            "Beneficiaries should not overlap with buyers unless explicitly stated, as the roles indicate distinct contexts of transfer or acquisition.",
+            "Negative examples include recipients of monetary donations, as in TransferMoney events, where the recipient is not acquiring ownership of a specific artifact."
+        ],
+        "buyer": [
+            "Examples are entities acquiring the artifact through purchase or transactional means, such as 'company' or 'Andrew Harris'.",
+            "The buyer is often identified in transactional language involving monetary exchanges, e.g., 'sale' or 'purchase.'",
+            "Buyers must not be confused with beneficiaries, who may receive items through non-commercial means.",
+            "In edge cases where the buyer is an organization, ensure that the buyer is distinct from overarching entities involved in the event.",
+            "The buyer argument may be omitted if the context does not specify a clear acquiring party, focusing solely on the seller and artifact."
+        ],
+        "place": [
+            "Examples are the physical or geopolitical locations where the ownership transfer occurs, such as 'Belgrade'.",
+            "The place must directly relate to the transaction context, often denoting where the artifact is located or the transaction is finalized.",
+            "Unlike global or vague locations mentioned as context, the place should pinpoint the transaction’s critical setting, e.g., a specific city or property site.",
+            "Places should not be confused with broader geopolitical references unless explicitly tied to the transaction.",
+            "If multiple locations are mentioned, prioritize the one most central to the transfer’s execution."
+        ],
+        "seller": [
+            "Examples are individuals or entities transferring ownership of the artifact, such as 'Mirjana Markovic' or 'Vivendi'.",
+            "Sellers are often identified by language indicating possession and subsequent relinquishment, e.g., 'provided' or 'sold.'",
+            "The seller should not be conflated with intermediaries or unrelated participants mentioned in the narrative.",
+            "Edge cases include situations where the seller is not directly named but can be inferred through context, such as the owner of the artifact.",
+            "Negative examples include entities who facilitate rather than participate in ownership transfer, e.g., brokers or agents."
+        ]
+    }
+}

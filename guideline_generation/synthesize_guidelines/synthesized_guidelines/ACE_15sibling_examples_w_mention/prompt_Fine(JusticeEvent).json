@@ -1,0 +1,41 @@
+{
+    "Fine(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the imposition of a monetary penalty on an entity as a result of a legal or regulatory decision. Example triggers include 'fine', 'fines', and 'penalty'.",
+            "The event is characterized by the requirement for an entity to pay a specified amount of money, often as a result of a judicial or regulatory ruling. This distinguishes it from other JusticeEvents like 'Sentence' or 'Convict', which may involve imprisonment or other forms of punishment.",
+            "The event involves an adjudicator, such as a judge or regulatory body, who imposes the fine on the entity. Unlike 'ArrestJail', this event does not involve physical detention.",
+            "The event typically occurs in a legal or regulatory context, where an entity is penalized for violating laws or regulations. This is different from 'Sue', where the focus is on a legal claim rather than a penalty.",
+            "The outcome of the event is the payment of a fine by the entity, which is enforced by the adjudicator. This is distinct from 'Pardon', where the outcome is the forgiveness of a penalty rather than its imposition."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the term that indicates the imposition of a fine. Examples include 'fine', 'fines', and 'penalty'.",
+            "The trigger must clearly indicate a monetary penalty. For instance, 'The company was fined' is a valid trigger, while 'The company was sued' is not.",
+            "Triggers such as 'fined' or 'penalized' are indicative of this event type, not 'Convict' or 'Sentence'.",
+            "Edge cases include phrases like 'slapped with a fine' or 'ordered to pay a fine', which are valid triggers.",
+            "The trigger should be directly related to the imposition of a fine, not just the mention of money or penalties in general."
+        ],
+        "adjudicator": [
+            "Examples are 'judge', 'court', 'SEC', and 'regulatory body'. These are the entities that impose the fine.",
+            "The adjudicator is responsible for the decision to impose the fine. For instance, 'The judge ordered a fine' clearly identifies the adjudicator.",
+            "In cases where multiple adjudicators are involved, such as 'judge and SEC', both should be annotated.",
+            "The adjudicator must be an authoritative figure or body in a legal or regulatory context. Unlike 'Sue', where the plaintiff initiates the action, the adjudicator imposes the penalty.",
+            "Edge cases include phrases like 'the authorities fined', where 'authorities' can be considered as the adjudicator."
+        ],
+        "entity": [
+            "Examples are 'Ranjha', 'Monitor', 'MCI', 'SEC', and 'brokerages'. These are the entities that are fined.",
+            "The entity is the recipient of the fine. For instance, 'The company was fined' identifies the company as the entity.",
+            "In cases where multiple entities are fined, such as '10 brokerages', all should be annotated.",
+            "The entity must be the one penalized by the fine. Unlike 'ArrestJail', where the person is detained, the entity here is financially penalized.",
+            "Edge cases include phrases like 'the organization was fined', where 'organization' is the entity."
+        ],
+        "place": [
+            "Examples are 'offices', 'court', and 'jurisdiction'. These are the locations where the fine is imposed or relevant to the event.",
+            "The place is where the fine-related action occurs. For instance, 'The fine was imposed in court' identifies 'court' as the place.",
+            "In cases where the place is not explicitly mentioned but implied, such as 'The judge in New York fined', 'New York' should be annotated.",
+            "The place must be relevant to the imposition of the fine. Unlike 'Extradite', where the place involves movement, here it is the location of the fine imposition.",
+            "Edge cases include phrases like 'the fine was issued at the headquarters', where 'headquarters' is the place."
+        ]
+    }
+}

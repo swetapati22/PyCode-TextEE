@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Divorce(LifeEvent)
+```json
+{
+    "Divorce(LifeEvent)": {
+        "description": [
+            "The event is triggered by the legal dissolution of a marriage, often indicated by terms such as 'divorce', 'filed for divorce', 'sued for divorce', or 'divorce settlement'.",
+            "The event is triggered by actions or statements indicating the end of a marital relationship, such as 'filed for divorce', 'divorce case', or 'divorce settlement'.",
+            "The event is triggered by legal proceedings or agreements that formally end a marriage, often involving court actions or settlements.",
+            "The event is triggered by the formal process of ending a marriage, which can be indicated by legal filings, court rulings, or mutual agreements.",
+            "The event is triggered by the termination of a marital relationship through legal means, often involving terms like 'divorce', 'divorce case', or 'divorce settlement'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'Hunter', 'star', 'Michael Crichton', 'Anne-Marie', 'Rod Stewart', 'Rachel Hunter', 'Welches', 'his ex-wife'. These refer to the individuals involved in the divorce, either as the person filing for divorce or the spouse.",
+            "The 'person' argument identifies the individuals whose marriage is being dissolved. This can include both parties in the divorce, such as 'Hunter' and 'star' or 'Anne-Marie' and 'Crichton'.",
+            "Examples are 'Rachel Hunter', 'husband', 'Welches', 'his ex-wife'. This argument captures the names or references to the individuals directly involved in the divorce proceedings.",
+            "The 'person' argument is crucial as it specifies the individuals whose marital relationship is ending. Examples include 'Hunter', 'star', 'Michael Crichton', and 'Anne-Marie'.",
+            "Examples are 'Crichton', 'Anne-Marie', 'Rod Stewart', 'Rachel Hunter'. This argument highlights the people who are part of the divorce event, either as the petitioner or the respondent."
+        ],
+        "place": [
+            "Examples are 'Los Angeles', 'court', 'Los Angeles Superior Court'. This argument specifies the location where the divorce proceedings are taking place or where the divorce is being filed.",
+            "The 'place' argument identifies the geographical or institutional location related to the divorce event. Examples include 'Los Angeles' and 'court'.",
+            "Examples are 'Los Angeles', 'court'. This argument captures the specific place where the divorce is being processed or discussed.",
+            "The 'place' argument is important as it provides context about where the divorce proceedings are occurring. Examples include 'Los Angeles' and 'court'.",
+            "Examples are 'Los Angeles', 'court'. This argument indicates the location associated with the divorce event, such as the city or the court where the divorce is filed."
+        ]
+    }
+}
+```

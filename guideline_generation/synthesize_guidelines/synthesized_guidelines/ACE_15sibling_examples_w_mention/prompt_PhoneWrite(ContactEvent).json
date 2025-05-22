@@ -1,0 +1,34 @@
+{
+    "PhoneWrite(ContactEvent)": {
+        "description": [
+            "The event is triggered by a communication made via telephone or similar device, where the content of the communication is conveyed in the text. Example triggers include 'telephone', 'call', 'told', and 'discussed'.",
+            "The event is characterized by the act of conveying information or having a conversation through a phone call. It involves at least one entity making the call and potentially another entity receiving it.",
+            "Unlike other ContactEvents such as 'Meet', the PhoneWrite event specifically involves remote communication via a phone or similar device, rather than face-to-face interaction.",
+            "Triggers such as 'arrived' or 'met' are indicative of the 'Meet' event type, not the PhoneWrite event type, which focuses on telephonic communication.",
+            "The outcome of the PhoneWrite event is the exchange of information or discussion of topics, which is distinct from physical meetings or written correspondence."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the word or phrase that indicates the occurrence of the PhoneWrite event. Examples include 'telephone', 'call', 'told', and 'discussed'.",
+            "Valid triggers for the PhoneWrite event are verbs or nouns that denote telephonic communication. For instance, 'called' and 'phoned' are valid triggers.",
+            "Edge cases include indirect references to phone communication, such as 'said by phone' or 'mentioned over the phone'. These still qualify as valid triggers.",
+            "Triggers like 'met' or 'visited' are not valid for PhoneWrite as they imply physical presence, which is not a characteristic of this event type.",
+            "In cases where the communication method is implied but not explicitly stated, such as 'he informed her', additional context is needed to confirm it as a PhoneWrite event."
+        ],
+        "entity": [
+            "Examples are 'spokesman', 'he', 'Bush', 'George W. Bush', and 'Jean Chretien'. These represent the individuals or entities involved in the phone communication.",
+            "The 'entity' argument is crucial as it identifies the participants in the PhoneWrite event. It can include the caller, the receiver, or both.",
+            "In cases where multiple entities are involved, all relevant participants should be annotated. For example, 'he and Bush' indicates two entities.",
+            "Entities can be referred to by their roles or titles, such as 'President' or 'Prime Minister', as well as by their names.",
+            "Unlike the 'place' argument, the 'entity' argument focuses on the people or organizations involved in the communication, not the location."
+        ],
+        "place": [
+            "Examples are 'Agartala'. This represents the location from which the phone communication is made or received.",
+            "The 'place' argument is important for providing context about the geographical location related to the PhoneWrite event.",
+            "In some cases, the place may be implied rather than explicitly stated. For instance, 'from his office' could be a valid 'place' argument if the office location is known.",
+            "Unlike the 'entity' argument, the 'place' argument does not refer to the participants but to the physical location associated with the event.",
+            "Edge cases include situations where the place is mentioned in a broader context, such as 'discussed issues of concern in France'. Here, 'France' would be the 'place' argument."
+        ]
+    }
+}

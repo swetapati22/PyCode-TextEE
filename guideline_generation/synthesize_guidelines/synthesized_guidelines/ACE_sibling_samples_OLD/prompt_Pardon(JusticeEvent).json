@@ -1,0 +1,35 @@
+{
+  "Pardon(JusticeEvent)": {
+    "description": [
+      "The event is triggered by an act of forgiveness or absolution granted by an adjudicator, typically nullifying or reducing the penalties imposed on a defendant. Examples of triggers include 'pardoned,' 'clear,' and 'forgive.'",
+      "This event focuses on the official or formal removal of legal penalties or convictions, often involving a defendant and an adjudicator authorized to grant clemency.",
+      "Unlike events such as Acquit, which focuses on declaring innocence, Pardon assumes guilt but mitigates or removes the consequences of the offense.",
+      "Triggers such as 'pardoned' and 'cleared' are indicative of this event, as opposed to 'convicted' or 'sentenced,' which emphasize the imposition of penalties rather than their removal.",
+      "This event highlights the authority of the adjudicator in granting relief to the defendant, often tied to specific geopolitical or judicial contexts."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "adjudicator": [
+      "Examples are individuals or entities with the authority to grant pardons, such as 'Abdullah II' or 'board of pardon and paroles'.",
+      "The adjudicator argument identifies the official or institutional body responsible for issuing the pardon, emphasizing their authoritative role.",
+      "Unlike defendants, adjudicators are not implicated in the offense but act as the arbiters or granters of clemency.",
+      "This argument is crucial for distinguishing Pardon from related events like ReleaseParole, where the focus is on the act of release rather than the granting of clemency.",
+      "In cases where multiple adjudicators are mentioned, annotate all entities explicitly involved in granting the pardon."
+    ],
+    "defendant": [
+      "Examples are individuals or entities receiving the pardon, such as 'legislator' or 'their' (multiple defendants).",
+      "The defendant argument focuses on the party benefiting from the pardon, whose penalties or convictions are being nullified or reduced.",
+      "This argument is central to the event, differentiating the Pardon event from others where the defendant's guilt or punishment is being debated or enacted.",
+      "Unlike adjudicators, defendants are the recipients of clemency, often mentioned in the context of prior offenses or convictions.",
+      "In cases involving multiple defendants, annotate all explicitly mentioned individuals who are granted clemency."
+    ],
+    "place": [
+      "Examples are locations where the pardon is granted or has jurisdictional relevance, such as 'Jordan'.",
+      "The place argument situates the event within a specific geopolitical or judicial context, enhancing the specificity of the event annotation.",
+      "Unlike the adjudicator argument, which identifies the granting authority, place refers to the broader geographical setting of the event.",
+      "This argument may be optional if the text does not explicitly mention a location; however, annotate it when present.",
+      "In cases where multiple places are mentioned, prioritize the one most directly tied to the adjudication or granting of the pardon."
+    ]
+  }
+}

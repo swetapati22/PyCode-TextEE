@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_TrialHearing(JusticeEvent)
+```json
+{
+    "TrialHearing(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal proceedings where a case is being heard or adjudicated, such as 'versus', 'v.', 'case', 'go to court', 'proven', and 'overruled'.",
+            "The event is characterized by the involvement of an adjudicator, a defendant, and often a prosecutor, and it takes place in a legal setting such as a court.",
+            "Unlike other JusticeEvents like 'Convict' or 'ArrestJail', this event focuses on the process of hearing and adjudicating a case rather than the outcome or enforcement of a legal decision.",
+            "Triggers such as 'convicted' or 'arrested' are indicative of 'Convict' or 'ArrestJail' events, not this event type, which is more about the trial or hearing process itself.",
+            "The outcome of a TrialHearing event is typically a legal decision or ruling, but the event itself is centered on the proceedings and arguments presented in court."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'judge', 'court', 'magistrate'. The adjudicator is the person or body responsible for overseeing the trial or hearing and making legal decisions.",
+            "The adjudicator plays a crucial role in ensuring the trial is conducted fairly and according to the law. They may be referred to as 'judge', 'court', or 'magistrate'.",
+            "In the context of a TrialHearing, the adjudicator is the authority figure who presides over the case, such as 'judge' or 'court'.",
+            "Unlike the prosecutor or defendant, the adjudicator is neutral and responsible for maintaining order and legality in the proceedings.",
+            "Edge cases include references to 'tribunal' or 'panel', which can also serve as adjudicators in certain legal contexts."
+        ],
+        "defendant": [
+            "Examples are 'Miller', 'Aymette', 'he', 'NBP'. The defendant is the individual or entity against whom the case is brought.",
+            "The defendant is a key participant in the trial, as they are the party being accused or sued. They may be referred to by name or pronoun.",
+            "In a TrialHearing, the defendant is the person or organization that must respond to the charges or claims made against them.",
+            "Unlike the prosecutor, who brings the case, the defendant is the one defending against the allegations.",
+            "Edge cases include situations where the defendant is an organization or group, such as 'NBP' or 'State'."
+        ],
+        "place": [
+            "Examples are 'Tennessee', 'Palermo', 'court'. The place is the location where the trial or hearing is taking place.",
+            "The place provides context for the legal proceedings, indicating where the trial is being held. It can be a city, state, or specific court.",
+            "In the context of a TrialHearing, the place is important for jurisdictional purposes and can affect the legal procedures followed.",
+            "Unlike other events where place might refer to a broader location, in a TrialHearing, it specifically refers to the venue of the legal proceedings.",
+            "Edge cases include references to specific courts or legal bodies, such as 'lower court' or 'higher court'."
+        ],
+        "prosecutor": [
+            "Examples are 'United States', 'State', 'magistrate'. The prosecutor is the individual or entity bringing the case against the defendant.",
+            "The prosecutor plays a critical role in presenting the case against the defendant, seeking to prove their guilt or liability.",
+            "In a TrialHearing, the prosecutor is the party responsible for initiating the legal action and presenting evidence and arguments.",
+            "Unlike the defendant, who is defending against the charges, the prosecutor is actively seeking a legal judgment against the defendant.",
+            "Edge cases include situations where the prosecutor is a government entity or official, such as 'State' or 'magistrate'."
+        ]
+    }
+}
+```

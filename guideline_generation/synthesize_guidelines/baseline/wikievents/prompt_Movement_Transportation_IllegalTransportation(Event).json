@@ -1,0 +1,42 @@
+{
+    "Movement_Transportation_IllegalTransportation(Event)": {
+        "description": [
+            "The event type 'Movement_Transportation_IllegalTransportation' refers to the illegal movement or transportation of people, goods, or artifacts from one place to another. The event can be triggered by verbs or phrases indicating movement or transportation such as 'drove into', 'passing through', 'gain entry', 'brought', 'took', 'carrying', 'smuggling', and 'entered'. This event type specifically focuses on the illegal aspect of the transportation, which may involve contraband, unauthorized entry, or other illicit activities.",
+            "The 'Movement_Transportation_IllegalTransportation' event involves the unlawful transportation of individuals, objects, or substances. It is typically indicated by actions that describe the act of moving something or someone illegally, such as 'drove into', 'passing through', 'gain entry', 'brought', 'took', 'carrying', 'smuggling', and 'entered'. The event captures the essence of illegal movement, often associated with criminal activities.",
+            "In the context of 'Movement_Transportation_IllegalTransportation', the event describes the illegal conveyance of people, items, or materials. This event is triggered by terms that denote the act of moving something unlawfully, such as 'drove into', 'passing through', 'gain entry', 'brought', 'took', 'carrying', 'smuggling', and 'entered'. The focus is on the illegality of the transportation process.",
+            "The 'Movement_Transportation_IllegalTransportation' event type pertains to the unauthorized and illegal movement of entities. It is triggered by verbs or phrases that imply illegal transportation, such as 'drove into', 'passing through', 'gain entry', 'brought', 'took', 'carrying', 'smuggling', and 'entered'. This event type highlights the unlawful nature of the transportation activity.",
+            "The event type 'Movement_Transportation_IllegalTransportation' involves the illegal transfer or movement of people, goods, or artifacts. It can be triggered by actions indicating illegal transportation, such as 'drove into', 'passing through', 'gain entry', 'brought', 'took', 'carrying', 'smuggling', and 'entered'. The event emphasizes the illicit aspect of the transportation."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "destination": [
+            "The 'destination' argument refers to the endpoint or target location where the illegal transportation is intended to reach. Examples are 'checkpoint', 'bases', 'high school', 'Pine View High School', and 'hotel'. This argument captures the final location involved in the illegal transportation event.",
+            "The 'destination' argument indicates the final place or location that the transported entity is meant to arrive at. Examples are 'checkpoint', 'bases', 'high school', 'Pine View High School', and 'hotel'. It represents the endpoint of the illegal transportation.",
+            "In the 'Movement_Transportation_IllegalTransportation' event, the 'destination' argument specifies the location where the transported item or person is intended to go. Examples are 'checkpoint', 'bases', 'high school', 'Pine View High School', and 'hotel'. This argument marks the target location of the illegal transport.",
+            "The 'destination' argument in this event type denotes the place where the illegal transportation is directed. Examples are 'checkpoint', 'bases', 'high school', 'Pine View High School', and 'hotel'. It identifies the endpoint of the transportation process.",
+            "The 'destination' argument refers to the location that the transported entity is supposed to reach in the context of illegal transportation. Examples are 'checkpoint', 'bases', 'high school', 'Pine View High School', and 'hotel'. This argument highlights the final target location."
+        ],
+        "passengerartifact": [
+            "The 'passengerartifact' argument refers to the item, object, or person being transported illegally. Examples are 'explosives', 'VBIEDs', 'bomb', 'explosive', and 'bombs'. This argument captures what is being moved in the illegal transportation event.",
+            "The 'passengerartifact' argument indicates the entity that is being transported in an illegal manner. Examples are 'explosives', 'VBIEDs', 'bomb', 'explosive', and 'bombs'. It represents the transported item or person in the event.",
+            "In the 'Movement_Transportation_IllegalTransportation' event, the 'passengerartifact' argument specifies the object or person that is being moved illegally. Examples are 'explosives', 'VBIEDs', 'bomb', 'explosive', and 'bombs'. This argument identifies the transported entity.",
+            "The 'passengerartifact' argument in this event type denotes the item or individual that is being transported unlawfully. Examples are 'explosives', 'VBIEDs', 'bomb', 'explosive', and 'bombs'. It highlights what is being moved in the illegal transportation.",
+            "The 'passengerartifact' argument refers to the object or person that is being transported in the context of illegal transportation. Examples are 'explosives', 'VBIEDs', 'bomb', 'explosive', and 'bombs'. This argument captures the transported entity."
+        ],
+        "transporter": [
+            "The 'transporter' argument refers to the individual or group responsible for carrying out the illegal transportation. Examples are 'bomber', 'the group', 'teen', 'who', and 'Farnsworth'. This argument identifies the entity performing the transportation.",
+            "The 'transporter' argument indicates the person or group that is conducting the illegal transportation. Examples are 'bomber', 'the group', 'teen', 'who', and 'Farnsworth'. It represents the transporter in the event.",
+            "In the 'Movement_Transportation_IllegalTransportation' event, the 'transporter' argument specifies the entity responsible for the illegal movement. Examples are 'bomber', 'the group', 'teen', 'who', and 'Farnsworth'. This argument identifies the transporter.",
+            "The 'transporter' argument in this event type denotes the individual or group carrying out the illegal transportation. Examples are 'bomber', 'the group', 'teen', 'who', and 'Farnsworth'. It highlights the entity performing the transportation.",
+            "The 'transporter' argument refers to the person or group that is responsible for the illegal transportation in the context of this event. Examples are 'bomber', 'the group', 'teen', 'who', and 'Farnsworth'. This argument captures the transporter."
+        ],
+        "vehicle": [
+            "The 'vehicle' argument refers to the mode of transportation used in the illegal movement. Examples are 'motorcycle' and 'device'. This argument identifies the means of transport in the illegal transportation event.",
+            "The 'vehicle' argument indicates the method or vehicle used to carry out the illegal transportation. Examples are 'motorcycle' and 'device'. It represents the mode of transport in the event.",
+            "In the 'Movement_Transportation_IllegalTransportation' event, the 'vehicle' argument specifies the means of transportation used for the illegal movement. Examples are 'motorcycle' and 'device'. This argument identifies the vehicle.",
+            "The 'vehicle' argument in this event type denotes the mode of transportation used in the illegal movement. Examples are 'motorcycle' and 'device'. It highlights the means of transport in the event.",
+            "The 'vehicle' argument refers to the method or vehicle used to transport the entity illegally in the context of this event. Examples are 'motorcycle' and 'device'. This argument captures the mode of transport."
+        ]
+    }
+}

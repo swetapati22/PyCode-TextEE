@@ -1,0 +1,353 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Die which is a child event type of super class LifeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Die which is a child event type of super class LifeEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> instrument
+Argument 3 -> place
+Argument 4 -> victim
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even the IRA failed to cause as many casualties on mainland Great Britain as Pakistani trained suicide bombers did in one day.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "agent" extracted spans ['bombers']
+For argument "victim" extracted spans ['bombers']
+For argument "place" extracted spans ['mainland']
+For argument "instrument" extracted spans ['bombers']
+
+Example 2
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Say what you want but that looks awfully close to murder and we're talking women and children here.
+### Event Trigger ###
+murder
+### Event Arguments ###
+
+Example 3
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+The facts suggest we all watched the federal government murder a bunch of people they didn't like.
+### Event Trigger ###
+murder
+### Event Arguments ###
+For argument "agent" extracted spans ['government']
+For argument "victim" extracted spans ['bunch']
+
+Example 4
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even if you wanted to arrest Koresh and others and think they are killers, what excuse is there for killing the children?
+### Event Trigger ###
+killing
+### Event Arguments ###
+For argument "victim" extracted spans ['children']
+
+Example 5
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Even if you wanted to arrest Koresh and others and think they are killers, what excuse is there for killing the children?
+### Event Trigger ###
+killers
+### Event Arguments ###
+For argument "agent" extracted spans ['killers']
+
+Example 6
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+He is like Giovanni Falcone, the magistrate from Palermo who was so successful in prosecuting Mafia guys in the Maxi Trials, and got blown up for it along with his family.
+### Event Trigger ###
+blown up
+### Event Arguments ###
+For argument "victim" extracted spans ['family', 'magistrate']
+
+Example 7
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Americans and foreigners of the muslim faith were murdered on 9/11.
+### Event Trigger ###
+murdered
+### Event Arguments ###
+For argument "victim" extracted spans ['foreigners', 'Americans']
+
+Example 8
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+These muslims are as much victims of the islamist terrorists as all the others, the Christians, the Jews, the Hindus, the Atheists.
+### Event Trigger ###
+victims
+### Event Arguments ###
+For argument "agent" extracted spans ['terrorists']
+For argument "victim" extracted spans ['victims']
+
+Example 9
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+When the planes crashed, when the towers fell, there were tens of thousands of muslim New Yorkers in downtown Manhattan, very nearly becoming victims of the atrocities.
+### Event Trigger ###
+victims
+### Event Arguments ###
+For argument "victim" extracted spans ['victims']
+
+Example 10
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+Now Chewy_Defense wants to make these New Yorkers, these victims of 9/11, victims again.
+### Event Trigger ###
+victims
+### Event Arguments ###
+For argument "victim" extracted spans ['victims']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Michigan is a no-fault divorce state, so had we have been married longer or if he was laid off before our divorce, could have been responsible for spousal support.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['our']
+For argument "place" extracted spans ['Michigan']
+
+Example 12
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+The last time something like this happened that I know of; was the republican convention in New York for the renomination of Bush Jr for a second term in office.
+### Event Trigger ###
+renomination
+### Event Arguments ###
+For argument "agent" extracted spans ['republican']
+For argument "person" extracted spans ['Bush Jr']
+For argument "place" extracted spans ['New York']
+
+Example 13
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Why is it only one of the identified groups is being barred from Civil Marriage (in most places).
+### Event Trigger ###
+Marriage
+### Event Arguments ###
+For argument "person" extracted spans ['groups']
+For argument "place" extracted spans ['places']
+
+Example 14
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "victim" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+For argument "place" extracted spans ['where']
+
+Example 15
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+His father having died, he returned to Australia in 1954 to take over his inheritance, the Sunday Mail and The News, both of Adelaide
+### Event Trigger ###
+inheritance
+### Event Arguments ###
+For argument "recipient" extracted spans ['his']
+For argument "giver" extracted spans ['father']
+For argument "thing" extracted spans ['Sunday Mail', 'News']
+For argument "place" extracted spans ['Adelaide']
+
+Example 16
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+And this while the country was receiving generous aid: by May of 2001, Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.
+### Event Trigger ###
+spent
+### Event Arguments ###
+For argument "giver" extracted spans ['E.U.']
+For argument "beneficiary" extracted spans ['country']
+For argument "place" extracted spans ['country']
+
+Example 17
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+I tried an alternative route once last year, taking Bluemound in from Goerkes Corner after meeting up with someone there, but it seemed longer and I didn't get out any quicker.
+### Event Trigger ###
+meeting
+### Event Arguments ###
+For argument "entity" extracted spans ['I', 'someone']
+For argument "place" extracted spans ['Goerkes Corner']
+
+Example 18
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Assange, the founder of the anti-secrecy group WikiLeaks, has been holed up for nearly a year in the tiny Ecuadorean Embassy here, stymying British attempts to extradite him to Sweden.
+### Event Trigger ###
+extradite
+### Event Arguments ###
+For argument "agent" extracted spans ['British']
+For argument "person" extracted spans ['him']
+For argument "origin" extracted spans ['Ecuadorean']
+For argument "destination" extracted spans ['Sweden']
+
+Example 19
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 20
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 21
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+President Barack Obama won Iowa Catholics, about a quarter of the electorate, by what the exit polls showed was an 18-percentage-point margin.
+### Event Trigger ###
+won
+### Event Arguments ###
+For argument "person" extracted spans ['Barack Obama']
+For argument "agent" extracted spans ['Catholics']
+For argument "place" extracted spans ['Iowa']
+
+Example 22
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 23
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+“The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities that Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague to discuss the case of Julian Assange,” the spokesman said.
+### Event Trigger ###
+meet
+### Event Arguments ###
+For argument "entity" extracted spans ['Patino', 'William Hague']
+For argument "place" extracted spans ['London']
+
+Example 24
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 25
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']

@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Marry(LifeEvent)
+```json
+{
+    "Marry(LifeEvent)": {
+        "description": [
+            "The event is triggered by the act of entering into a marriage or wedding ceremony. Examples include 'marry', 'wedding', 'marriage', 'wed', and 'married'.",
+            "The event is characterized by the formal union of two individuals in a recognized relationship. Key characteristics include the presence of a ceremony, legal recognition, and social acknowledgment.",
+            "Unlike the Divorce event, which signifies the dissolution of a marriage, the Marry event signifies the formation or celebration of a marriage. Triggers such as 'divorce' are indicative of the Divorce event, not the Marry event.",
+            "The Marry event can occur in various contexts, including traditional ceremonies, legal proceedings, and informal celebrations. The outcome is the establishment of a marital relationship.",
+            "Triggers and outcomes for the Marry event differ from related events like Engagement, which signifies the intention to marry, not the actual marriage. Triggers such as 'engaged' are indicative of the Engagement event, not the Marry event."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are individuals who are getting married. In the sentence 'Prison authorities have given the nod for Anwar to be taken home later in the afternoon to marry his eldest daughter, Nurul Izzah, to engineer Raja Ahmad Sharir Iskandar in a traditional Malay ceremony, he said.', the arguments 'daughter' and 'Raja Ahmad Sharir Iskandar' are the persons getting married.",
+            "The role of the 'person' argument is to identify the individuals involved in the marriage. It is crucial for understanding who the primary participants are in the event.",
+            "In the sentence 'Anne-Marie sued Crichton for divorce in September after their marriage broke down.', the argument 'their' refers to the persons involved in the marriage.",
+            "In the sentence 'Hunter, 34, filed for divorce in Los Angeles Superior Court, citing irreconcilable differences with the 58-year-old rock star to whom she has been married for nearly 13 years.', the arguments 'whom' and 'she' refer to the persons involved in the marriage.",
+            "Edge cases include references to individuals by pronouns or titles, such as 'he', 'she', 'the bride', or 'the groom'. These should be annotated as 'person' arguments when they clearly refer to individuals getting married."
+        ],
+        "place": [
+            "Examples are locations where the marriage or wedding ceremony takes place. In the sentence 'Prison authorities have given the nod for Anwar to be taken home later in the afternoon to marry his eldest daughter, Nurul Izzah, to engineer Raja Ahmad Sharir Iskandar in a traditional Malay ceremony, he said.', the argument 'home' is the place where the marriage occurs.",
+            "The role of the 'place' argument is to specify the location of the marriage event. It provides context and setting for the event.",
+            "In the sentence 'Rudolph Giuliani will wed his companion, Judith Nathan, on May 24 in the ex-mayor's old home, Gracie Mansion.', the argument 'home' refers to the place where the wedding will take place.",
+            "In the sentence 'Hunter, 34, filed for divorce in Los Angeles Superior Court, citing irreconcilable differences with the 58-year-old rock star to whom she has been married for nearly 13 years.', the argument 'Los Angeles' refers to the place where the marriage was legally recognized.",
+            "Edge cases include references to places by descriptive terms or specific locations, such as 'church', 'beach', 'city hall', or 'destination wedding'. These should be annotated as 'place' arguments when they clearly indicate the location of the marriage event."
+        ]
+    }
+}
+```

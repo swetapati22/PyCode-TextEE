@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Pardon(JusticeEvent)
+```json
+{
+    "Pardon(JusticeEvent)": {
+        "description": [
+            "The event is triggered by an official act of forgiving or excusing a person from a legal penalty or punishment. Example triggers include 'pardoned', 'cleared', and 'forgave'.",
+            "The event is characterized by the involvement of an adjudicator who has the authority to grant the pardon, and a defendant who is the recipient of the pardon. The place where the pardon occurs may also be specified.",
+            "Unlike the 'ChargeIndict' event, which involves formally accusing someone of a crime, the 'Pardon' event involves forgiving someone who has already been accused or convicted.",
+            "Triggers such as 'executed' are indicative of the 'Execute' event type, not the 'Pardon' event type, as the former involves carrying out a death sentence rather than forgiving a legal penalty.",
+            "The outcome of a 'Pardon' event is the removal or reduction of legal penalties for the defendant, which differs from events like 'Convict' or 'Sentence' where the outcome is the imposition of penalties."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'King Abdullah II', 'court', and 'board of pardon and paroles'. The adjudicator is the authority figure or body that grants the pardon.",
+            "The adjudicator plays a crucial role as they have the legal power to forgive the defendant. This can include individuals like judges, monarchs, or official boards.",
+            "In the context of a pardon, the adjudicator is responsible for making the decision to forgive the defendant, unlike in a 'Convict' event where the adjudicator decides on guilt.",
+            "Edge cases may include situations where the adjudicator is a collective body, such as a parole board, rather than a single individual.",
+            "The adjudicator's decision is final and authoritative, distinguishing it from advisory roles in other justice events."
+        ],
+        "defendant": [
+            "Examples are 'legislator', 'their', and 'client'. The defendant is the person who is being pardoned.",
+            "The defendant is the central figure in the pardon event, as they are the recipient of the forgiveness or legal relief.",
+            "In a 'Pardon' event, the defendant is typically someone who has been convicted or accused of a crime, unlike in a 'Sue' event where the defendant is being sued.",
+            "The role of the defendant is to receive the pardon, which absolves them of certain legal penalties or consequences.",
+            "Edge cases may include situations where the defendant is a group of people rather than an individual, such as 'prisoners' or 'convicts'."
+        ],
+        "place": [
+            "Examples are 'Jordan', 'court', and 'state'. The place is the location where the pardon is granted or takes effect.",
+            "The place provides context for where the pardon event occurs, which can be important for understanding jurisdiction and legal authority.",
+            "In a 'Pardon' event, the place is where the adjudicator has the authority to grant the pardon, unlike in an 'Extradite' event where the place involves the origin and destination of the person being extradited.",
+            "The place can be a specific country, state, or institution where the legal authority resides.",
+            "Edge cases may include situations where the place is not explicitly mentioned but can be inferred from the context, such as 'the court' or 'the board'."
+        ]
+    }
+}
+```

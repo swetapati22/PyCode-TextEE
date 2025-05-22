@@ -1,0 +1,42 @@
+{
+    "Sue(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal actions where one party initiates a lawsuit against another. Example triggers include 'sue', 'lawsuit', 'court', and 'civil suit'.",
+            "The event is characterized by the involvement of a plaintiff who brings the case, a defendant who is being sued, and sometimes an adjudicator who oversees the case. The place where the lawsuit occurs can also be specified.",
+            "Unlike other JusticeEvent types such as 'Execute' or 'ArrestJail', the 'Sue' event does not involve criminal prosecution or physical detention but focuses on civil legal disputes.",
+            "Triggers such as 'charged' or 'convicted' are indicative of criminal proceedings and are not related to the 'Sue' event type, which deals with civil litigation.",
+            "The outcome of a 'Sue' event typically involves a legal judgment or settlement, whereas events like 'Pardon' or 'ReleaseParole' involve decisions on criminal sentences or detentions."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', or 'jury'. The adjudicator is the entity responsible for overseeing the legal proceedings and making a judgment.",
+            "The adjudicator plays a crucial role in ensuring the legal process is fair and just. For instance, 'The court ruled in favor of the plaintiff'.",
+            "In some cases, the adjudicator may be a specific judge or a panel of judges. For example, 'Judge Smith presided over the case'.",
+            "Unlike the 'defendant' or 'plaintiff', the adjudicator is neutral and does not have a vested interest in the outcome of the case.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from the context, such as 'The lawsuit was settled in court'."
+        ],
+        "defendant": [
+            "Examples are 'the company', 'the individual', or 'the organization'. The defendant is the party being sued in the legal action.",
+            "The defendant is crucial as they are the target of the lawsuit and their actions or inactions are being challenged. For instance, 'The company was sued for breach of contract'.",
+            "In some cases, the defendant may be a group of individuals or entities. For example, 'The banks were sued for fraudulent practices'.",
+            "Unlike the 'plaintiff', the defendant is on the receiving end of the legal action and must respond to the allegations.",
+            "Edge cases include situations where the defendant is not explicitly named but can be inferred, such as 'They sued for damages'."
+        ],
+        "place": [
+            "Examples are 'England', 'New York', or 'the local court'. The place indicates the location where the lawsuit is filed or adjudicated.",
+            "The place is important as it can influence the legal jurisdiction and applicable laws. For instance, 'The lawsuit was filed in California'.",
+            "In some cases, the place may refer to a specific court or legal venue. For example, 'The case was heard in the Supreme Court'.",
+            "Unlike other arguments, the place provides geographical context and does not directly involve the parties in the lawsuit.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context, such as 'The lawsuit was filed locally'."
+        ],
+        "plaintiff": [
+            "Examples are 'the authors', 'the union', or 'the family'. The plaintiff is the party initiating the lawsuit.",
+            "The plaintiff is crucial as they are the ones bringing the legal action and seeking a remedy. For instance, 'The authors sued for copyright infringement'.",
+            "In some cases, the plaintiff may be a group of individuals or entities. For example, 'The union sued the company for unfair labor practices'.",
+            "Unlike the 'defendant', the plaintiff is the one making the allegations and seeking legal redress.",
+            "Edge cases include situations where the plaintiff is not explicitly named but can be inferred, such as 'They filed a lawsuit'."
+        ]
+    }
+}

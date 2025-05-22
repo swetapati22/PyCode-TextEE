@@ -1,0 +1,358 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Execute which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Execute which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> person
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 2
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+It is also an extreme hypocrisy that in Saudi Arabia, a man cannot be executed for killing his children or wife, but can face the death penalty for leaving Islam and becoming a Christian (or a member of any other religion).
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Saudi Arabia']
+
+Example 3
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+It is also an extreme hypocrisy that in Saudi Arabia, a man cannot be executed for killing his children or wife, but can face the death penalty for leaving Islam and becoming a Christian (or a member of any other religion).
+### Event Trigger ###
+death penalty
+### Event Arguments ###
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Saudi Arabia']
+
+Example 4
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+I am personally against the state killing the criminal deliberately, it denies the criminal from living the life, and prevents him from repenting his mistake.... and the blood money does not bring justice, compensation should be there to the victims, but that should be a part of whole punishment.
+### Event Trigger ###
+killing
+### Event Arguments ###
+For argument "agent" extracted spans ['state']
+For argument "person" extracted spans ['criminal']
+
+Example 5
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+China Executes Nine Uighurs - WSJ.com
+### Event Trigger ###
+Executes
+### Event Arguments ###
+For argument "agent" extracted spans ['China']
+For argument "person" extracted spans ['Uighurs']
+
+Example 6
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+They were executed for murder.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['They']
+
+Example 7
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+BBC NEWS | Asia-Pacific | Nine executed over Xinjiang riots
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['Nine']
+
+Example 8
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+Innocent people are on death row and have been executed
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "person" extracted spans ['people']
+
+Example 9
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+On the federal level, 3.5% of persons whom the Attorney General has attempted to execute have been innocent.
+### Event Trigger ###
+execute
+### Event Arguments ###
+For argument "agent" extracted spans ['Attorney']
+For argument "person" extracted spans ['3.5%']
+
+Example 10
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A study identified 23 instances in the last century in which a person with an extraordinarily strong case of innocence had been executed by the government.
+### Event Trigger ###
+executed
+### Event Arguments ###
+For argument "agent" extracted spans ['government']
+For argument "person" extracted spans ['person']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+The state of Alabama posthumously pardoned three black men Thursday who had been falsely convicted more than 80 years ago in the rapes of two white women, absolving the last of the so-called Scottsboro Boys.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['men']
+For argument "adjudicator" extracted spans ['Alabama']
+For argument "place" extracted spans ['Alabama']
+
+Example 12
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+charged
+### Event Arguments ###
+For argument "defendant" extracted spans ['man']
+For argument "adjudicator" extracted spans ['court']
+For argument "prosecutor" extracted spans ['country']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 13
+#### Event Type ####
+EndPosition(PersonnelEvent)
+### Input Text ###
+Loss of 2,400 jobs at Pfizer in Sandwich, Kent....massive impact on employment in local area...loss of confidence in UK...
+### Event Trigger ###
+Loss
+### Event Arguments ###
+For argument "entity" extracted spans ['Pfizer']
+For argument "place" extracted spans ['Sandwich']
+For argument "person" extracted spans ['2,400']
+
+Example 14
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+The last time something like this happened that I know of; was the republican convention in New York for the renomination of Bush Jr for a second term in office.
+### Event Trigger ###
+renomination
+### Event Arguments ###
+For argument "agent" extracted spans ['republican']
+For argument "person" extracted spans ['Bush Jr']
+For argument "place" extracted spans ['New York']
+
+Example 15
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot, 6 killed.
+### Event Trigger ###
+open
+### Event Arguments ###
+For argument "agent" extracted spans ['dealer']
+For argument "org" extracted spans ['store']
+For argument "place" extracted spans ['mall']
+
+Example 16
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+President Barack Obama won Iowa Catholics, about a quarter of the electorate, by what the exit polls showed was an 18-percentage-point margin.
+### Event Trigger ###
+won
+### Event Arguments ###
+For argument "person" extracted spans ['Barack Obama']
+For argument "agent" extracted spans ['Catholics']
+For argument "place" extracted spans ['Iowa']
+
+Example 17
+#### Event Type ####
+ReleaseParole(JusticeEvent)
+### Input Text ###
+In a joint motion, lawyers for the defense and prosecution asked Magistrate Judge Marianne B. Bowler of U.S. District Court in Massachusetts to release Phillipos, 19, on $100,000 bail on the condition that he stay under house arrest and wear an electronic tracking bracelet.
+### Event Trigger ###
+release
+### Event Arguments ###
+For argument "agent" extracted spans ['Marianne B. Bowler']
+For argument "person" extracted spans ['Phillipos']
+For argument "place" extracted spans ['Massachusetts']
+
+Example 18
+#### Event Type ####
+Artifact(ManufactureEvent)
+### Input Text ###
+In fact, lately in my country they've been building schools modularly so they can be turned into house when the families with young kids in the neighbourhood grow older and don't need them anymore.
+### Event Trigger ###
+building
+### Event Arguments ###
+For argument "artifact" extracted spans ['schools']
+For argument "agent" extracted spans ['they']
+For argument "place" extracted spans ['country']
+
+Example 19
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+“The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities that Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague to discuss the case of Julian Assange,” the spokesman said.
+### Event Trigger ###
+meet
+### Event Arguments ###
+For argument "entity" extracted spans ['Patino', 'William Hague']
+For argument "place" extracted spans ['London']
+
+Example 20
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+I was a Gamesmaker for the London 2012 games, and basically as a "Games Graduate" i went for a interview on Monday at a Jobcentre In London, Now i have a previous conviction which i was not convicted of, i was mistaken for someone but i was found guilty for 7 months until it was appealed at the high court; now they made me do a CRB check but will this come up on a Government CRB?
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "defendant" extracted spans ['i']
+For argument "adjudicator" extracted spans ['court']
+
+Example 21
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+The media seem to have mixed up the man responsible for the merge with ABN Amro with the man responsible for fixing the failure of RBS.
+### Event Trigger ###
+merge
+### Event Arguments ###
+For argument "org" extracted spans ['ABN Amro']
+
+Example 22
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+He took two small papers with declining circulation in a small city in South Australia and built a media empire and made himself on of the wealthiest men in the world.
+### Event Trigger ###
+took
+### Event Arguments ###
+For argument "person" extracted spans ['He']
+For argument "place" extracted spans ['city']
+For argument "entity" extracted spans ['papers']
+
+Example 23
+#### Event Type ####
+ArrestJail(JusticeEvent)
+### Input Text ###
+In Rapid City, SD they have arrested over 300 for DUI since the first of the year.
+### Event Trigger ###
+arrested
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "person" extracted spans ['300']
+For argument "place" extracted spans ['Rapid City']
+
+Example 24
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Why is it only one of the identified groups is being barred from Civil Marriage (in most places).
+### Event Trigger ###
+Marriage
+### Event Arguments ###
+For argument "person" extracted spans ['groups']
+For argument "place" extracted spans ['places']
+
+Example 25
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+His father having died, he returned to Australia in 1954 to take over his inheritance, the Sunday Mail and The News, both of Adelaide
+### Event Trigger ###
+inheritance
+### Event Arguments ###
+For argument "recipient" extracted spans ['his']
+For argument "giver" extracted spans ['father']
+For argument "thing" extracted spans ['Sunday Mail', 'News']
+For argument "place" extracted spans ['Adelaide']

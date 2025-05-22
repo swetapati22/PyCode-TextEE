@@ -1,0 +1,10 @@
+{
+    "BeBorn(LifeEvent)": {
+        "description": "The BeBorn event, a type of LifeEvent, is triggered by the birth or emergence of a person. It signifies the introduction of a new individual into the world, focusing on the beginning of life rather than its end or significant milestones like marriage. Example triggers include 'birth', 'born', 'cut out', 'removed', 'ripped', and 'having'. The outcome of this event is the existence of a new person, without covering the circumstances leading to or following the birth.",
+        "attributes": {
+            "mention": "The text span that triggers the BeBorn event.",
+            "person": "The 'person' argument identifies the individual(s) being born, such as 'babies', 'one', 'other', 'infant', 'Hunter', 'girl', 'baby', 'that', 'child', 'girls', 'boys'. It specifies who is being born, referring to a single individual or multiple individuals. This argument must always refer to a human being, and in cases where the gender or identity is not specified, terms like 'baby', 'infant', or 'child' may be used. Ambiguous references like 'that' or 'one' still indicate a person being born but lack specific details.",
+            "place": "The 'place' argument identifies the location where the birth occurs, providing context about the geographical or physical location of the event. Examples include 'home', 'New Zealand', 'nation'. This argument can refer to specific locations (e.g., 'home', 'hospital') or broader geographical areas (e.g., 'New Zealand', 'nation'). Unlike the 'person' argument, the 'place' argument is optional and may not always be present. Vague or general locations such as 'area' or 'region' still provide some context but lack specificity."
+        }
+    }
+}

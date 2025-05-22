@@ -1,0 +1,35 @@
+{
+    "Execute(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of carrying out a death sentence on an individual, typically as a result of a legal or judicial process. Example triggers include 'execute', 'executed', 'death penalty', and 'killing'.",
+            "The event is characterized by the involvement of an agent (such as a government or court) that enforces the execution, a person who is the subject of the execution, and often a place where the execution occurs.",
+            "Unlike other JusticeEvents such as 'Pardon' or 'ReleaseParole', this event specifically involves the termination of life as a form of punishment. Triggers such as 'pardoned' or 'released' are indicative of those events, not this event type.",
+            "The outcome of this event is the death of the person being executed, which differentiates it from events like 'ArrestJail' or 'ChargeIndict' where the person remains alive and may face imprisonment or legal charges instead.",
+            "This event type does not include non-lethal forms of punishment or legal actions that do not result in death. For example, 'charged' or 'arrested' are not triggers for this event type as they pertain to different stages of the legal process."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'court', 'state', 'government', 'Attorney'. The agent is the entity responsible for carrying out the execution. This could be a legal body, a government authority, or an individual acting on behalf of the state.",
+            "The agent plays a crucial role as they are the ones who enforce the death sentence. For instance, in 'China Executes Nine Uighurs', 'China' is the agent.",
+            "In cases where the agent is not explicitly mentioned, it is often implied by the context. For example, 'They were executed for murder' implies a legal authority as the agent.",
+            "The agent must be distinguished from other entities involved in the legal process but not responsible for the execution. For example, in 'A man in Afghanistan is being prosecuted in a Kabul court', 'court' is the agent for the execution, not the prosecution.",
+            "Edge cases include scenarios where the agent is a collective entity or an abstract concept, such as 'the state' or 'the government'. These should still be annotated as the agent."
+        ],
+        "person": [
+            "Examples are 'man', 'Uighurs', 'people', '3.5%'. The person is the individual or group of individuals who are subjected to the execution.",
+            "The person is the central figure in the event as they are the ones whose life is being terminated. For instance, in 'China Executes Nine Uighurs', 'Uighurs' is the person.",
+            "In some cases, the person may be referred to in a general or collective sense, such as 'people' or 'they'. These should still be annotated as the person.",
+            "The person must be distinguished from other participants in the event who are not being executed. For example, in 'A man in Afghanistan is being prosecuted in a Kabul court', 'man' is the person being executed, not the prosecutor or judge.",
+            "Edge cases include scenarios where the person is not explicitly named but referred to by a percentage or a group identifier, such as '3.5%' or 'Nine'. These should still be annotated as the person."
+        ],
+        "place": [
+            "Examples are 'Afghanistan', 'Saudi Arabia', 'Kabul', 'Massachusetts'. The place is the location where the execution takes place.",
+            "The place provides context to the event by indicating where the execution is carried out. For instance, in 'A man in Afghanistan is being prosecuted in a Kabul court', 'Afghanistan' is the place.",
+            "In some cases, the place may be a broader region or country rather than a specific location. For example, 'Saudi Arabia' in 'a man cannot be executed for killing his children or wife, but can face the death penalty for leaving Islam' is the place.",
+            "The place must be distinguished from other locations mentioned in the text that are not related to the execution. For example, in 'A study identified 23 instances in the last century in which a person with an extraordinarily strong case of innocence had been executed by the government', 'last century' is not a place.",
+            "Edge cases include scenarios where the place is implied or not explicitly mentioned but can be inferred from the context. For example, 'Innocent people are on death row and have been executed' implies a place where the death row is located."
+        ]
+    }
+}

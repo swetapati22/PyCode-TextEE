@@ -1,0 +1,10 @@
+{
+    "Meet(ContactEvent)": {
+        "description": "A 'Meet(ContactEvent)' is triggered by interactions where individuals or groups come together for a specific purpose, either physically or virtually. This event involves direct interaction, distinguishing it from remote communication events like 'PhoneWrite'. It encompasses formal and informal gatherings such as diplomatic talks, business meetings, press conferences, and forums, but excludes casual or unplanned encounters. Typical triggers include terms like 'talks', 'conference', 'forum', 'negotiations', 'meeting', 'brief', and 'discussed'. The outcomes often involve discussions, decisions, or agreements made during the interaction.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "Entities are individuals, groups, organizations, or countries participating in the meeting. They represent the participants involved in the event. Examples include 'Blair' and 'Bush' in 'Blair and Bush were to hold a joint press conference', or 'Washington' and 'Pyongyang' in 'Negotiations between Washington and Pyongyang'. Pronouns or collective nouns can also serve as entities when participants are not explicitly named, such as 'They' in 'They are scheduled to meet'. Entities are crucial for understanding who is involved in the event.",
+            "place": "The place is the location where the meeting occurs, providing context for the event. It can be a city, building, specific venue, or virtual platform. Examples include 'retreat' in 'Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat', or 'Beijing' in 'Negotiations between Washington and Pyongyang on their nuclear dispute have been set for April 23 in Beijing'. In virtual meetings, the place can be a platform or virtual space, such as 'forum' in 'Several top diplomacy experts told a Kremlin-run forum'. The place is important for understanding the context and setting of the event."
+        }
+    }
+}

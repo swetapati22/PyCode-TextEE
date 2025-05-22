@@ -1,0 +1,10 @@
+{
+    "Acquit(JusticeEvent)": {
+        "description": "The 'Acquit' event in the justice system is triggered by a formal decision from a court or legal authority declaring a defendant not guilty of the charges against them. This event involves the legal exoneration of the defendant, releasing them from all charges and associated penalties. It is distinct from other justice events such as 'Convict', 'ArrestJail', or 'Sentence', which result in a guilty verdict, arrest, or imposition of penalties, respectively. Common triggers for this event include terms like 'acquitted', 'walk free', and 'acquittal'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the legal authority or body responsible for delivering the acquittal verdict, such as judges, courts, or juries. They play a crucial role in determining the trial's outcome. Examples include 'court' in 'The court acquitted the defendant' and 'Judge Smith' in 'Judge Smith acquitted the defendant'. In cases with multiple adjudicators, each is considered an adjudicator. The adjudicator must be a formal legal entity or individual with the authority to deliver a verdict, and in some cases, they may be implied rather than explicitly mentioned.",
+            "defendant": "The defendant is the individual or entity being tried and subsequently acquitted. They are the central figure in the event, as the acquittal directly pertains to them. Examples include 'John Doe' in 'The court acquitted John Doe' and 'Jane Smith' in 'Jane Smith was acquitted of all charges'. The defendant can also be referred to by a role or title, such as 'the accused'. In scenarios where the defendant is part of a group, each member of the group is considered a defendant."
+        }
+    }
+}

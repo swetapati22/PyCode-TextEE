@@ -1,0 +1,43 @@
+{
+    "TransferMoney(TransactionEvent)": {
+      "description": [
+        "The event is triggered by an action involving the transfer of money from one entity to another. Examples of triggers include 'pay,' 'gives,' and 'payment.'",
+        "This event typically involves participants such as the giver, recipient, beneficiary, and possibly the place where the transaction occurs, emphasizing the flow of monetary resources.",
+        "Unlike TransferOwnership, which involves the transfer of ownership of artifacts, TransferMoney focuses on the transfer of monetary value without changing ownership of physical or intangible assets.",
+        "Triggers such as 'pay' indicate monetary transactions, whereas terms like 'sell' or 'provide' signify events related to ownership transfer or provision of goods/services.",
+        "This event explicitly deals with money as the central artifact being transferred, and the arguments capture the participants and context of this financial exchange."
+      ]
+    },
+    "attributes": {
+      "mention": "The text span that triggers the event.",
+      "beneficiary": [
+        "Examples are individuals or groups who benefit from the transfer of money, such as 'Democrats'.",
+        "Beneficiaries are the intended recipients of the advantage or benefit resulting from the financial transaction, even if they do not directly receive the funds.",
+        "This argument is critical for understanding the purpose or target of the monetary transfer, such as a charitable organization or specific group.",
+        "Unlike recipients, beneficiaries may not directly handle the money but are indirectly impacted or supported by the transfer.",
+        "In ambiguous cases, beneficiaries should be identified as those mentioned as the focus or purpose of the transfer, even if not explicitly named as receiving funds."
+      ],
+      "giver": [
+        "Examples are entities initiating the transfer of money, such as 'Planned Parenthood' or 'girls'.",
+        "The giver is often explicitly mentioned as the source of the monetary resources being transferred.",
+        "Givers can range from individuals to organizations and are identified by terms indicating who provides or pays the money.",
+        "Unlike beneficiaries, givers are actively involved in the act of transferring money rather than passively benefiting from it.",
+        "Edge cases include scenarios where multiple givers are involved; all should be annotated if clearly identified in the text."
+      ],
+      "place": [
+        "Examples are specific locations associated with the monetary transaction, such as 'Colorado'.",
+        "The place argument provides context about where the transaction occurs or is finalized, offering geographical or situational details.",
+        "Places are secondary to the transaction but essential for understanding the context, particularly in legal or logistical scenarios.",
+        "Unlike givers and recipients, the place does not indicate a participant but rather the environment or jurisdiction of the event.",
+        "In cases involving multiple places, prioritize the location most directly tied to the monetary transfer."
+      ],
+      "recipient": [
+        "Examples are individuals or entities directly receiving the money, such as 'neighbor'.",
+        "The recipient is the party to whom the money is explicitly transferred during the event, distinct from beneficiaries who may indirectly benefit.",
+        "Recipients are often identified by terms such as 'paid to,' 'given to,' or 'transferred to,' indicating direct handling of the funds.",
+        "Unlike givers, recipients are passive in the transaction, receiving funds without initiating the transfer.",
+        "Edge cases include unclear transactions; the recipient is inferred from context or explicitly identified as the receiving party."
+      ]
+    }
+}
+  

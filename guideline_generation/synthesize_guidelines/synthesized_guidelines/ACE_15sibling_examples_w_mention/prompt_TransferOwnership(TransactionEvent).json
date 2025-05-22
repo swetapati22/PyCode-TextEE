@@ -1,0 +1,55 @@
+{
+    "TransferOwnership(TransactionEvent)": {
+        "description": [
+            "The event is triggered by the transfer of ownership of an artifact from one entity to another. Example triggers include 'sale', 'sell', 'acquire', and 'providing'.",
+            "The event is characterized by the change in possession or control of an artifact, often involving a buyer and a seller. Key characteristics include the presence of an artifact and entities involved in the transaction.",
+            "Unlike TransferMoney, this event does not involve the transfer of monetary funds but rather the transfer of tangible or intangible assets. Triggers such as 'gives' are indicative of TransferMoney, not this event type.",
+            "The event scope includes any transaction where ownership of an artifact is transferred, regardless of the nature of the artifact or the entities involved. This can include real estate, intellectual property, or other assets.",
+            "Triggers and outcomes differ from similar event types in that TransferOwnership specifically involves the change of ownership of an artifact, whereas other events like TransferMoney focus on the transfer of funds without necessarily changing ownership of an asset."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the transfer of ownership. Examples include 'sale', 'sell', 'acquire', and 'providing'.",
+            "Triggers such as 'sale' and 'sell' are common indicators of this event type, as they directly imply a transaction involving the transfer of ownership.",
+            "Edge cases include phrases like 'hinted it may sell', where the potential for transfer is indicated but not confirmed. These still qualify as valid triggers.",
+            "Unlike TransferMoney, where triggers like 'gives' indicate the transfer of funds, TransferOwnership triggers focus on the transfer of an artifact.",
+            "Variations in triggers can include different tenses and forms of the verbs, such as 'sold', 'acquired', or 'provided', all of which indicate the transfer of ownership."
+        ],
+        "artifact": [
+            "Examples are 'apartment', 'operations', 'hotel', and 'them'. The artifact is the item or asset being transferred in the event.",
+            "The role of the artifact is central to the event, as it is the object whose ownership is changing. It can be tangible (e.g., real estate) or intangible (e.g., intellectual property).",
+            "In the context of the event, the artifact must be clearly identifiable and distinct from other entities involved in the transaction.",
+            "Edge cases include situations where the artifact is implied rather than explicitly stated, such as 'it' or 'them' referring to previously mentioned items.",
+            "Unlike TransferMoney, where the focus is on the transfer of funds, the artifact in TransferOwnership is a specific item or asset being transferred."
+        ],
+        "beneficiary": [
+            "Examples are 'nanny'. The beneficiary is the entity that benefits from the transfer of ownership, often receiving the artifact.",
+            "The role of the beneficiary is to highlight who gains from the transaction, which can be an individual or an organization.",
+            "In some cases, the beneficiary may not be explicitly stated but can be inferred from the context of the transaction.",
+            "Edge cases include situations where the beneficiary is a group or collective entity rather than a single individual.",
+            "Unlike the buyer, who actively participates in the transaction, the beneficiary may passively receive the benefits of the transfer."
+        ],
+        "buyer": [
+            "Examples are 'company', 'Andrew Harris'. The buyer is the entity that acquires the artifact in the transaction.",
+            "The role of the buyer is crucial as they are the ones who take ownership of the artifact from the seller.",
+            "In some cases, the buyer may be represented by an organization or a group rather than an individual.",
+            "Edge cases include situations where the buyer is implied through context rather than explicitly mentioned.",
+            "Unlike the seller, who relinquishes ownership, the buyer gains control and possession of the artifact."
+        ],
+        "place": [
+            "Examples are 'Belgrade'. The place is the location where the transfer of ownership occurs.",
+            "The role of the place is to provide context and specificity to the event, indicating where the transaction takes place.",
+            "In some cases, the place may be a broader region or area rather than a specific location.",
+            "Edge cases include virtual or online transactions where the place may not be a physical location.",
+            "Unlike other arguments, the place is not an entity involved in the transaction but rather the setting where it occurs."
+        ],
+        "seller": [
+            "Examples are 'Mirjana Markovic', 'USA Interactive', 'Vivendi'. The seller is the entity that transfers ownership of the artifact to the buyer.",
+            "The role of the seller is to relinquish control and possession of the artifact, often in exchange for compensation.",
+            "In some cases, the seller may be an organization or a group rather than an individual.",
+            "Edge cases include situations where the seller is implied through context rather than explicitly mentioned.",
+            "Unlike the buyer, who gains ownership, the seller loses control and possession of the artifact."
+        ]
+    }
+}

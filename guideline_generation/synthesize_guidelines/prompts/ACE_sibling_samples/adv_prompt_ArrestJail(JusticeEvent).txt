@@ -1,0 +1,98 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_ArrestJail(JusticeEvent)
+```json
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions where an individual or group is taken into custody by law enforcement or other authorities. Example triggers include 'arrested', 'detained', 'taken into custody', and 'held'.",
+            "The event is characterized by the deprivation of liberty of the person(s) involved, typically as a result of suspected or alleged criminal activity. It involves an agent (usually law enforcement) and a person (the individual or group being arrested).",
+            "Unlike the 'Execute' event type, which involves the carrying out of a death sentence, the 'ArrestJail' event does not result in the death of the person. Instead, it focuses on the initial act of taking someone into custody.",
+            "Triggers such as 'charged' or 'indicted' are indicative of the 'ChargeIndict' event type, not the 'ArrestJail' event type. The 'ArrestJail' event specifically involves the physical act of taking someone into custody.",
+            "The outcome of the 'ArrestJail' event is the person being held in a detention facility or jail, whereas similar events like 'ReleaseParole' involve the release of a person from custody. The 'ArrestJail' event marks the beginning of the legal process, not its conclusion."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are law enforcement officers, police, authorities, or any official entity responsible for making the arrest. The agent is the party that carries out the act of arresting or jailing the person.",
+            "The agent is crucial as it indicates who is enforcing the law and taking the person into custody. For instance, in 'Police arrested her', 'Police' is the agent.",
+            "In cases where multiple agents are involved, such as 'authorities arrested the suspect', 'authorities' is the agent. This can include various law enforcement bodies.",
+            "The agent can also be a specific individual, such as 'Detective John arrested the suspect'. Here, 'Detective John' is the agent.",
+            "Unlike the 'adjudicator' in events like 'TrialHearing', the agent in 'ArrestJail' is directly involved in the physical act of taking someone into custody, not in making judicial decisions."
+        ],
+        "person": [
+            "Examples are the individual or group being taken into custody, such as 'her', 'people', 'group', or specific names like 'Lisa M. Montgomery'. The person is the subject of the arrest or jailing.",
+            "The person is the key focus of the event, as they are the ones whose liberty is being deprived. For instance, in 'Police arrested her', 'her' is the person.",
+            "In cases involving multiple individuals, such as '70 people were arrested', 'people' is the person. This can include large groups or crowds.",
+            "The person can also be a specific individual, such as 'Lisa M. Montgomery was arrested'. Here, 'Lisa M. Montgomery' is the person.",
+            "Unlike the 'defendant' in events like 'ChargeIndict', the person in 'ArrestJail' is specifically the one being taken into custody, not necessarily the one being formally charged or tried."
+        ],
+        "place": [
+            "Examples are the location where the arrest or jailing takes place, such as 'Abilene', 'New York', 'San Francisco', or more general terms like 'here'. The place provides context to the event.",
+            "The place is important as it situates the event geographically, indicating where the person was taken into custody. For instance, in 'arrested her in Abilene', 'Abilene' is the place.",
+            "In cases where the location is less specific, such as 'arrested here', 'here' is the place. This can refer to the immediate vicinity or a broader area.",
+            "The place can also be a well-known city or region, such as 'arrested in New York'. Here, 'New York' is the place.",
+            "Unlike the 'origin' or 'destination' in events like 'Extradite', the place in 'ArrestJail' is specifically where the arrest or jailing occurs, not where the person is being moved from or to."
+        ]
+    }
+}
+```

@@ -1,0 +1,91 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Demonstrate(ConflictEvent)
+```json
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions or gatherings where people publicly express their opinions, often in opposition to something, such as 'rally', 'march', 'protests', or 'gathered'.",
+            "The event is characterized by a collective action or assembly of individuals, typically involving a public display of dissent or support for a cause.",
+            "Unlike an 'Attack' event, which involves physical violence or harm, a 'Demonstrate' event focuses on the act of public expression and assembly, even if it may lead to clashes or arrests.",
+            "Triggers such as 'rally' and 'march' are indicative of a 'Demonstrate' event, not an 'Attack' event, which would involve terms like 'killed' or 'assaulted'.",
+            "The outcomes of a 'Demonstrate' event include public visibility of the cause, potential clashes with authorities, and sometimes arrests, but not direct physical harm as seen in 'Attack' events."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'protesters', 'people', 'demonstrators', 'Liana Owen', 'parents', and 'woman'. This argument identifies the individuals or groups participating in the demonstration.",
+            "The 'entity' argument is crucial as it specifies who is involved in the demonstration, providing context to the event.",
+            "In cases where the entity is a group, such as 'protesters' or 'demonstrators', it highlights the collective nature of the event.",
+            "For individual participants, like 'Liana Owen' or 'woman', it personalizes the event, showing specific involvement.",
+            "Edge cases include ambiguous references like 'their' which need to be clearly linked to the demonstrators to avoid confusion."
+        ],
+        "place": [
+            "Examples are 'here', 'New York', 'city', 'Manhattan', 'White House', 'plazas', and 'streets'. This argument identifies the location where the demonstration takes place.",
+            "The 'place' argument is important as it situates the event geographically, providing a setting for the demonstration.",
+            "Locations can range from specific places like 'White House' to broader areas like 'city' or 'streets', indicating the scale of the event.",
+            "In some cases, the place might be implied or need to be inferred from context, such as 'here' referring to the current location mentioned in the text.",
+            "Edge cases include multiple locations like 'plazas' and 'streets', which should be annotated to reflect the spread of the demonstration."
+        ]
+    }
+}
+```

@@ -1,0 +1,214 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type StartOrg which is a child event type of super class BusinessEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+StartOrg which is a child event type of super class BusinessEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> org
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange, plans to follow up its May Day launching by opening a "sex Disneyland" here, the Melbourne-based bordello announced Wednesday.
+### Event Trigger ###
+opening
+### Event Arguments ###
+For argument "org" extracted spans ['Disneyland']
+For argument "agent" extracted spans ['Daily Planet Ltd']
+For argument "place" extracted spans ['here']
+
+Example 2
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The ruling Millennium Democratic Party (MDP), founded by former president Kim Dae-Jung, has suffered declining popularity since President Roh Moo-Hyun took office in February.
+### Event Trigger ###
+founded
+### Event Arguments ###
+For argument "org" extracted spans ['Millennium Democratic Party']
+For argument "agent" extracted spans ['Kim Dae-Jung']
+
+Example 3
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+A group of 18 reformist MDP lawmakers, mostly Roh's confidants, demanded late Wednesday that the party be "constructively dissolved" to create a new grouping, MDP officials said.
+### Event Trigger ###
+create
+### Event Arguments ###
+
+Example 4
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+Reformist MDP members, however, vowed to launch a preparatory committee next month and to make "tangible progress" in the process of forging a new party.
+### Event Trigger ###
+forging
+### Event Arguments ###
+For argument "org" extracted spans ['party']
+
+Example 5
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange, plans to follow up its May Day launching by opening a "sex Disneyland" here, the Melbourne-based bordello announced Wednesday.
+### Event Trigger ###
+launching
+### Event Arguments ###
+For argument "org" extracted spans ['Daily Planet Ltd']
+
+Example 6
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+"Prostitution is completely decriminalised in Sydney and we are going to build a monster," he said.
+### Event Trigger ###
+build
+### Event Arguments ###
+For argument "org" extracted spans ['monster']
+For argument "agent" extracted spans ['we']
+For argument "place" extracted spans ['Sydney']
+
+Example 7
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+"We want a complete one-stop adult venue -- we want a complete adult venue with adult cinemas, adult shops... we have found much bigger premises in a much better location to create a sex Disneyland."
+### Event Trigger ###
+create
+### Event Arguments ###
+For argument "org" extracted spans ['Disneyland']
+For argument "agent" extracted spans ['we']
+For argument "place" extracted spans ['premises']
+
+Example 8
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+"The acquisition of Banco Zaragozano builds on our existing business creating the sixth largest private sector banking group in Spain" by assets, added Jacobo Gonzalez-Robatto, chief executive of Barclays Spain.
+### Event Trigger ###
+creating
+### Event Arguments ###
+For argument "org" extracted spans ['group']
+
+Example 9
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+Major US insurance group AIG is in the final stage of talks to take over General Electric's Japanese life insurance arm in a deal to create Japan's sixth largest life insurer, reports said Wednesday.
+### Event Trigger ###
+create
+### Event Arguments ###
+For argument "org" extracted spans ['insurer']
+For argument "place" extracted spans ['Japan']
+For argument "agent" extracted spans ['AIG']
+
+Example 10
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+Diller has served as head of Paramount and Twentieth Century Fox, where he helped launch the Fox Television network.
+### Event Trigger ###
+launch
+### Event Arguments ###
+For argument "org" extracted spans ['network']
+For argument "agent" extracted spans ['Twentieth Century Fox', 'he']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+MergeOrg(BusinessEvent)
+### Input Text ###
+In the latest edition, staff writer Jeremy M. Lazarus reports that the Legislative Black Caucus celebrated killing a bill that would have merged the Department of Minority Business Enterprise (DMBE) with the Department of Business Assistance (DBA).
+### Event Trigger ###
+merged
+### Event Arguments ###
+For argument "org" extracted spans ['Department of Minority Business Enterprise', 'Department of Business Assistance']
+
+Example 12
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+knew saddam hussein's rej geemg is no more, the focus in iraq is turning from military action to rebuilding which means the coalition's role in the country will have to change.
+### Event Trigger ###
+is no more
+### Event Arguments ###
+For argument "place" extracted spans ['iraq']
+For argument "org" extracted spans ['rej geemg']
+
+Example 13
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "place" extracted spans ['united states']
+For argument "org" extracted spans ['worldcom']

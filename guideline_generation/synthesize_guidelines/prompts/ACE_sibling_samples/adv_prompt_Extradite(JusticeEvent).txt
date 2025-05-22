@@ -1,0 +1,105 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Extradite(JusticeEvent)
+```json
+{
+    "Extradite(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of transferring a person from one jurisdiction to another for legal proceedings or punishment. Example triggers include 'extradite', 'extradition', and 'extraditing'.",
+            "The event is characterized by the involvement of legal authorities and the movement of a person from an origin location to a destination location. It often involves formal agreements or legal processes between different jurisdictions.",
+            "Unlike the 'ArrestJail' event, which focuses on the act of taking someone into custody, the 'Extradite' event specifically involves the transfer of a person across jurisdictions for legal reasons.",
+            "Triggers such as 'release' or 'pardon' are indicative of 'ReleaseParole' or 'Pardon' events, not the 'Extradite' event type. The 'Extradite' event focuses on the legal transfer process rather than the outcome of freedom or clemency.",
+            "The outcome of the 'Extradite' event is the person being moved to a new jurisdiction where they will face legal proceedings or punishment. This differs from events like 'TrialHearing' or 'Convict', which focus on the legal proceedings and outcomes within a single jurisdiction."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'court', 'government', 'police department'. The agent is the entity responsible for initiating or carrying out the extradition process.",
+            "The agent plays a crucial role in the legal and logistical aspects of the extradition, ensuring that the person is transferred according to legal protocols.",
+            "In some cases, the agent may be a specific legal body or authority, such as a tribunal or a specific government department.",
+            "Unlike the 'adjudicator' in events like 'TrialHearing' or 'Sentence', the agent in the 'Extradite' event is focused on the transfer process rather than making legal judgments.",
+            "Edge cases may include international organizations or coalitions acting as agents in cross-border extraditions, such as the U.N. war crimes tribunal."
+        ],
+        "destination": [
+            "Examples are 'jurisdiction', 'Hague', 'state of Louisiana'. The destination is the location to which the person is being extradited.",
+            "The destination is important as it determines where the person will face legal proceedings or punishment.",
+            "In some cases, the destination may be a specific city, state, or country, depending on the legal agreements in place.",
+            "Unlike the 'place' argument in events like 'ArrestJail', which indicates where the arrest took place, the destination in the 'Extradite' event indicates where the person is being sent.",
+            "Edge cases may include situations where the destination is a temporary holding location before the final jurisdiction, such as an international detention center."
+        ],
+        "origin": [
+            "Examples are 'state', 'headquarters'. The origin is the location from which the person is being extradited.",
+            "The origin is significant as it indicates the starting point of the extradition process and the jurisdiction relinquishing custody.",
+            "In some cases, the origin may be a specific city, state, or country, depending on the legal context of the extradition.",
+            "Unlike the 'place' argument in events like 'ArrestJail', which indicates where the arrest took place, the origin in the 'Extradite' event indicates where the person is being transferred from.",
+            "Edge cases may include situations where the origin is a temporary holding location before the final jurisdiction, such as an international detention center."
+        ],
+        "person": [
+            "Examples are 'she', 'him', 'her'. The person is the individual being extradited.",
+            "The person is the central figure in the extradition process, as they are the subject of the legal transfer.",
+            "In some cases, the person may be referred to by name or by a pronoun, depending on the context of the text.",
+            "Unlike the 'defendant' in events like 'TrialHearing' or 'Convict', the person in the 'Extradite' event is specifically being transferred for legal proceedings or punishment.",
+            "Edge cases may include situations where the person is a high-profile individual or a group of individuals being extradited together."
+        ]
+    }
+}
+```

@@ -1,0 +1,11 @@
+{
+    "Appeal(JusticeEvent)": {
+        "description": "The Appeal event in the justice system is triggered when a party formally requests a higher authority to review and potentially change a decision made by a lower authority. This event involves a plaintiff seeking a review, an adjudicator who reviews the appeal, and possibly a specific place where the appeal is filed or heard. Unlike initiating a lawsuit, the Appeal event focuses on reviewing an existing decision, with outcomes that may uphold, modify, or overturn the original decision. This event can occur in various legal contexts, including criminal, civil, and administrative cases.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the authority or body, such as a court or a panel of judges, that reviews the appeal and makes a decision on it. Examples include 'Supreme Court', 'Federal Court', and 'pre-selected judges'. The adjudicator is distinct from the original decision-maker and has the power to uphold, modify, or overturn the original decision. In some cases, the adjudicator may not be explicitly mentioned but can be inferred from context.",
+            "place": "The place is the location where the appeal is filed or heard, providing context for the jurisdiction and venue of the appeal. Examples include 'Indonesia', 'court', and 'Federal Court'. The place is distinct from the location of the original decision and may sometimes be inferred from context if not explicitly mentioned.",
+            "plaintiff": "The plaintiff is the party who files the appeal seeking a review of the decision. This can be an individual or a group, such as 'five', 'offender', 'convict', or 'Anwar'. The plaintiff is central to the appeal process, challenging the original decision. In some cases, the plaintiff may not be explicitly mentioned but can be inferred from context."
+        }
+    }
+}

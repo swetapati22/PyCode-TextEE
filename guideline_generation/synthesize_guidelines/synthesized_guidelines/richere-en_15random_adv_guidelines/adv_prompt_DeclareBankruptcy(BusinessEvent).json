@@ -1,0 +1,9 @@
+{
+    "DeclareBankruptcy(BusinessEvent)": {
+        "description": "The DeclareBankruptcy event is triggered when a company or organization formally declares its inability to pay its debts, often leading to legal proceedings such as restructuring or liquidation. This event is characterized by financial failure and the involvement of legal or financial terms related to insolvency. It is distinct from other BusinessEvents like MergeOrg or EndOrg, which involve mergers or cessation of operations without insolvency. Triggers for this event include terms like 'bankruptcy', 'filed for bankruptcy', and 'entered bankruptcy reorganization', indicating financial distress and legal insolvency proceedings.",
+        "attributes": {
+            "mention": "The text span that triggers the DeclareBankruptcy event, such as 'bankruptcy' or 'filed for bankruptcy'.",
+            "org": "The 'org' argument identifies the organization declaring bankruptcy. It is crucial for understanding the scope and impact of the event. Examples include direct mentions like 'company' in 'the company slid into bankruptcy' and indirect references like 'which' in 'Patriot, which entered bankruptcy'. It can also refer to specific recipients of financial aid, as in 'Ener1, a recipient of Stimulus largesse, filed for bankruptcy'."
+        }
+    }
+}

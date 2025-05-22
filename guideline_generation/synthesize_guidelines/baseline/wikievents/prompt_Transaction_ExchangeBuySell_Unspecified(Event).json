@@ -1,0 +1,42 @@
+{
+    "Transaction_ExchangeBuySell_Unspecified(Event)": {
+        "description": [
+            "The event type 'Transaction_ExchangeBuySell_Unspecified' refers to any transaction where an entity acquires something from another entity, but the specific nature of the transaction (buying or selling) is not explicitly stated. The event can be triggered by verbs such as 'bought', 'purchased', 'procure', 'obtained', 'make an online purchase', and 'borrows'. This event type captures the exchange of goods, services, or other entities without specifying the exact nature of the transaction.",
+            "The 'Transaction_ExchangeBuySell_Unspecified' event involves an exchange where the details of whether it is a buying or selling action are not specified. It can be triggered by words like 'bought', 'purchased', 'procure', 'obtained', 'make an online purchase', and 'borrows'. This event type is used to annotate instances where an entity acquires something from another entity without clear indication of the transaction type.",
+            "In the 'Transaction_ExchangeBuySell_Unspecified' event, an entity acquires something from another entity, but it is not clear whether the action is buying or selling. Triggers for this event include 'bought', 'purchased', 'procure', 'obtained', 'make an online purchase', and 'borrows'. This event type is used when the nature of the transaction is ambiguous or unspecified.",
+            "The 'Transaction_ExchangeBuySell_Unspecified' event captures scenarios where an entity acquires something from another entity without specifying if it is a buying or selling action. Common triggers include 'bought', 'purchased', 'procure', 'obtained', 'make an online purchase', and 'borrows'. This event type is used to annotate exchanges where the transaction type is not explicitly mentioned.",
+            "The event type 'Transaction_ExchangeBuySell_Unspecified' refers to any instance where an entity acquires something from another entity, with the specific nature of the transaction (buying or selling) being unclear. Triggers for this event include 'bought', 'purchased', 'procure', 'obtained', 'make an online purchase', and 'borrows'. This event type is used when the transaction details are not explicitly stated."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "acquiredentity": [
+            "The 'acquiredentity' argument refers to the item or entity that is being acquired in the transaction. Examples are 'nitromethane', 'components', 'cell phones', 'weapons', 'supplies', 'a gun', 'Fager pressure-cookers', 'remote-controlled car set', 'batteries', 'transmitter', 'receiver', 'Ruger pistol'. This argument captures what is being obtained in the transaction.",
+            "The 'acquiredentity' argument identifies the item or entity that is obtained in the transaction. Examples include 'nitromethane', 'components', 'cell phones', 'weapons', 'supplies', 'a gun', 'Fager pressure-cookers', 'remote-controlled car set', 'batteries', 'transmitter', 'receiver', 'Ruger pistol'. This argument specifies what is being acquired.",
+            "In the 'Transaction_ExchangeBuySell_Unspecified' event, the 'acquiredentity' argument denotes the item or entity that is being acquired. Examples are 'nitromethane', 'components', 'cell phones', 'weapons', 'supplies', 'a gun', 'Fager pressure-cookers', 'remote-controlled car set', 'batteries', 'transmitter', 'receiver', 'Ruger pistol'. This argument captures the object of the transaction.",
+            "The 'acquiredentity' argument represents the item or entity that is being acquired in the transaction. Examples include 'nitromethane', 'components', 'cell phones', 'weapons', 'supplies', 'a gun', 'Fager pressure-cookers', 'remote-controlled car set', 'batteries', 'transmitter', 'receiver', 'Ruger pistol'. This argument identifies what is being obtained.",
+            "The 'acquiredentity' argument in the 'Transaction_ExchangeBuySell_Unspecified' event refers to the item or entity that is being acquired. Examples are 'nitromethane', 'components', 'cell phones', 'weapons', 'supplies', 'a gun', 'Fager pressure-cookers', 'remote-controlled car set', 'batteries', 'transmitter', 'receiver', 'Ruger pistol'. This argument specifies the object of the acquisition."
+        ],
+        "giver": [
+            "The 'giver' argument refers to the entity that provides or gives the acquired entity in the transaction. Examples are 'salesman', 'store', 'Silva'. This argument captures the source or provider of the acquired entity.",
+            "The 'giver' argument identifies the entity that gives or provides the acquired entity in the transaction. Examples include 'salesman', 'store', 'Silva'. This argument specifies the source of the acquired entity.",
+            "In the 'Transaction_ExchangeBuySell_Unspecified' event, the 'giver' argument denotes the entity that provides the acquired entity. Examples are 'salesman', 'store', 'Silva'. This argument captures who is giving the acquired entity.",
+            "The 'giver' argument represents the entity that gives or provides the acquired entity in the transaction. Examples include 'salesman', 'store', 'Silva'. This argument identifies the provider of the acquired entity.",
+            "The 'giver' argument in the 'Transaction_ExchangeBuySell_Unspecified' event refers to the entity that provides the acquired entity. Examples are 'salesman', 'store', 'Silva'. This argument specifies the source or provider of the acquired entity."
+        ],
+        "paymentbarter": [
+            "The 'paymentbarter' argument refers to the payment or barter involved in the transaction. Examples are '$925'. This argument captures the compensation or exchange value for the acquired entity.",
+            "The 'paymentbarter' argument identifies the payment or barter involved in the transaction. Examples include '$925'. This argument specifies the compensation or exchange value for the acquired entity.",
+            "In the 'Transaction_ExchangeBuySell_Unspecified' event, the 'paymentbarter' argument denotes the payment or barter involved. Examples are '$925'. This argument captures the exchange value for the acquired entity.",
+            "The 'paymentbarter' argument represents the payment or barter involved in the transaction. Examples include '$925'. This argument identifies the compensation or exchange value for the acquired entity.",
+            "The 'paymentbarter' argument in the 'Transaction_ExchangeBuySell_Unspecified' event refers to the payment or barter involved. Examples are '$925'. This argument specifies the exchange value for the acquired entity."
+        ],
+        "recipient": [
+            "The 'recipient' argument refers to the entity that receives the acquired entity in the transaction. Examples are 'customer', 'suspect', 'Rahami', 'the group', 'Silva', 'Tamerlan', 'Dzhokhar Tsarnaev'. This argument captures who is receiving the acquired entity.",
+            "The 'recipient' argument identifies the entity that receives the acquired entity in the transaction. Examples include 'customer', 'suspect', 'Rahami', 'the group', 'Silva', 'Tamerlan', 'Dzhokhar Tsarnaev'. This argument specifies who is receiving the acquired entity.",
+            "In the 'Transaction_ExchangeBuySell_Unspecified' event, the 'recipient' argument denotes the entity that receives the acquired entity. Examples are 'customer', 'suspect', 'Rahami', 'the group', 'Silva', 'Tamerlan', 'Dzhokhar Tsarnaev'. This argument captures the receiver of the acquired entity.",
+            "The 'recipient' argument represents the entity that receives the acquired entity in the transaction. Examples include 'customer', 'suspect', 'Rahami', 'the group', 'Silva', 'Tamerlan', 'Dzhokhar Tsarnaev'. This argument identifies the receiver of the acquired entity.",
+            "The 'recipient' argument in the 'Transaction_ExchangeBuySell_Unspecified' event refers to the entity that receives the acquired entity. Examples are 'customer', 'suspect', 'Rahami', 'the group', 'Silva', 'Tamerlan', 'Dzhokhar Tsarnaev'. This argument specifies who is receiving the acquired entity."
+        ]
+    }
+}

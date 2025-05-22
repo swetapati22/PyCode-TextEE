@@ -1,0 +1,354 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Appeal which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Appeal which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> adjudicator
+Argument 2 -> place
+Argument 3 -> plaintiff
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+Indonesia will delay the execution of six convicts including an Indian on death row after five of them appealed to the Supreme Court for a second review, prosecutors said Thursday.
+### Event Trigger ###
+appealed
+### Event Arguments ###
+For argument "place" extracted spans ['Indonesia']
+For argument "adjudicator" extracted spans ['Supreme Court']
+For argument "plaintiff" extracted spans ['five']
+
+Example 2
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+"If we execute them now we can't bring them to life again should their appeals for a review be granted," said Antasari Azhar, spokesman for the attorney general's office.
+### Event Trigger ###
+appeals
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['their']
+
+Example 3
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+The Supreme Court rejected earlier appeals for a case review from five of the convicts.
+### Event Trigger ###
+appeals
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Supreme Court']
+For argument "plaintiff" extracted spans ['five']
+
+Example 4
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+The sixth offender has only made one appeal for a review.
+### Event Trigger ###
+appeal
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['offender']
+
+Example 5
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+A convict can file a case review or appeal for presidential clemency only after the Supreme Court upholds a sentence imposed by a lower court.
+### Event Trigger ###
+appeal
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['convict']
+
+Example 6
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+The former heir-apparent to Prime Minister Mahathir Mohamad, who says he was framed for political reasons, told reporters after his appeal was rejected: "You must remember its pre-selected judges, most junior of the court of appeal, and its all scripted.
+### Event Trigger ###
+appeal
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['his']
+
+Example 7
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+The former heir-apparent to Prime Minister Mahathir Mohamad, who says he was framed for political reasons, told reporters after his appeal was rejected: "You must remember its pre-selected judges, most junior of the court of appeal, and its all scripted.
+### Event Trigger ###
+appeal
+### Event Arguments ###
+
+Example 8
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+Anwar will be taken to the appeal court early Friday for a bail application pending his appeal to the country's highest Federal Court againt his sodomy conviction, counsel Sankara Nair said.
+### Event Trigger ###
+appeal
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "plaintiff" extracted spans ['Anwar']
+
+Example 9
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+Anwar will be taken to the appeal court early Friday for a bail application pending his appeal to the country's highest Federal Court againt his sodomy conviction, counsel Sankara Nair said.
+### Event Trigger ###
+appeal
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Federal Court']
+For argument "plaintiff" extracted spans ['his']
+
+Example 10
+#### Event Type ####
+Appeal(JusticeEvent)
+### Input Text ###
+He lost an appeal case on his sodomy sentence on April 18.
+### Event Trigger ###
+appeal
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['He']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Prison authorities have given the nod for Anwar to be taken home later in the afternoon to marry his eldest daughter, Nurul Izzah, to engineer Raja Ahmad Sharir Iskandar in a traditional Malay ceremony, he said.
+### Event Trigger ###
+marry
+### Event Arguments ###
+For argument "person" extracted spans ['daughter', 'Raja Ahmad Sharir Iskandar']
+For argument "place" extracted spans ['home']
+
+Example 12
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+Kristin Scott, the mother, told police she gave birth secretly to both babies at her parents' home in Byrds Creek, Richland County, one of unknown sex in April 2001 and the other, a fullterm girl, January 14.
+### Event Trigger ###
+birth
+### Event Arguments ###
+For argument "person" extracted spans ['babies', 'one', 'other']
+For argument "place" extracted spans ['home']
+
+Example 13
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+Meanwhile Blair arrived in Washington late Wednesday for two days of talks with Bush at the Camp David presidential retreat.
+### Event Trigger ###
+talks
+### Event Arguments ###
+For argument "place" extracted spans ['retreat']
+For argument "entity" extracted spans ['Blair', 'Bush']
+
+Example 14
+#### Event Type ####
+Die(LifeEvent)
+### Input Text ###
+A suicide bomber detonated explosives at the entrance to a crowded mall in northern Israel on Monday, killing at least four shoppers and wounding 20 in the fifth such attack in two days.
+### Event Trigger ###
+suicide
+### Event Arguments ###
+For argument "instrument" extracted spans ['explosives']
+For argument "victim" extracted spans ['bomber']
+For argument "agent" extracted spans ['bomber']
+For argument "place" extracted spans ['mall']
+
+Example 15
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+Mirjana Markovic, the power behind the scenes during Milosevic's 13-year reign, is accused of illegally providing their grandson's nanny with a state-owned luxury apartment in Belgrade in 2000.
+### Event Trigger ###
+providing
+### Event Arguments ###
+For argument "beneficiary" extracted spans ['nanny']
+For argument "artifact" extracted spans ['apartment']
+For argument "seller" extracted spans ['Mirjana Markovic']
+For argument "place" extracted spans ['Belgrade']
+
+Example 16
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+Larry Klayman, chairman of Judicial Watch, which represent 14 survivors and victims' relatives who have filed a $1.5 billion federal lawsuit against Iraq in Washington, said his organization had served a subpoena on Al-Douri twice, on March 26 and March 28, but said he has not responded.
+### Event Trigger ###
+lawsuit
+### Event Arguments ###
+For argument "defendant" extracted spans ['Iraq']
+For argument "place" extracted spans ['Washington']
+For argument "plaintiff" extracted spans ['relatives', 'survivors']
+
+Example 17
+#### Event Type ####
+Pardon(JusticeEvent)
+### Input Text ###
+But after spending 40 days in prison, Jordan's King Abdullah II pardoned the former legislator known for her harsh criticism of the state.
+### Event Trigger ###
+pardoned
+### Event Arguments ###
+For argument "defendant" extracted spans ['legislator']
+For argument "place" extracted spans ['Jordan']
+For argument "adjudicator" extracted spans ['Abdullah II']
+
+Example 18
+#### Event Type ####
+DeclareBankruptcy(BusinessEvent)
+### Input Text ###
+worldcom once employed 80,000 people and went broke on the largest corporate bankruptcy in the united states.
+### Event Trigger ###
+bankruptcy
+### Event Arguments ###
+For argument "place" extracted spans ['united states']
+For argument "org" extracted spans ['worldcom']
+
+Example 19
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+Indonesian courts have increasingly handed out severe sentences, including death, for drug smugglers.
+### Event Trigger ###
+sentences
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['courts']
+For argument "defendant" extracted spans ['smugglers']
+For argument "place" extracted spans ['Indonesian']
+
+Example 20
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+The Pakistani supreme court last year aquitted Ayub Masih, who had denied uttering any word against Islam or the Prophet Mohammad.
+### Event Trigger ###
+aquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['Ayub Masih']
+For argument "adjudicator" extracted spans ['court']
+
+Example 21
+#### Event Type ####
+PhoneWrite(ContactEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+telephone
+### Event Arguments ###
+For argument "place" extracted spans ['Agartala']
+For argument "entity" extracted spans ['spokesman']
+
+Example 22
+#### Event Type ####
+Attack(ConflictEvent)
+### Input Text ###
+"The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area," the spokesman said by telephone from Agartala.
+### Event Trigger ###
+killed
+### Event Arguments ###
+For argument "attacker" extracted spans ['mob']
+For argument "place" extracted spans ['area']
+For argument "target" extracted spans ['them']
+For argument "instrument" extracted spans ['machetes', 'spears']
+
+Example 23
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+knew saddam hussein's rej geemg is no more, the focus in iraq is turning from military action to rebuilding which means the coalition's role in the country will have to change.
+### Event Trigger ###
+is no more
+### Event Arguments ###
+For argument "place" extracted spans ['iraq']
+For argument "org" extracted spans ['rej geemg']
+
+Example 24
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+The lawyer of former Zambian president Frederick Chiluba was reprimanded by a Lusaka magistrate when his client failed to appear in court on theft charges Friday.
+### Event Trigger ###
+charges
+### Event Arguments ###
+For argument "defendant" extracted spans ['client']
+For argument "prosecutor" extracted spans ['magistrate']
+For argument "place" extracted spans ['court']
+
+Example 25
+#### Event Type ####
+Transport(MovementEvent)
+### Input Text ###
+In last year's trial, the paper was convicted of defaming the government for publishing that trains running to and from southern Sudan were used to transport abducted women and children.
+### Event Trigger ###
+transport
+### Event Arguments ###
+For argument "vehicle" extracted spans ['trains']
+For argument "artifact" extracted spans ['women', 'children']
+For argument "destination" extracted spans ['Sudan']
+For argument "origin" extracted spans ['Sudan']

@@ -1,0 +1,16 @@
+{
+    "Convict(JusticeEvent)": {
+        "description": "The 'Convict' event in the realm of justice is triggered by a formal declaration of guilt for an individual or entity, issued by a legal authority such as a court. This event signifies that the accused has been found guilty after due legal process, distinct from mere charges or indictments. Examples of triggers include 'convicted', 'found guilty', and 'judgments'. The outcome typically leads to sentencing or other legal consequences, setting it apart from procedural events like 'TrialHearing'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator, such as a court, judge, or jury, is the authoritative figure or body responsible for declaring the guilt of the defendant. This role is pivotal in the 'Convict' event, determining the outcome of the legal process. Edge cases may include panels or groups like a board of judges.",
+            "defendant": "The defendant is the person or entity found guilty by the adjudicator. Central to the event, defendants may be referred to by various identifiers such as personal names, titles, or generic labels like 'the accused'. Situations may arise where the defendant is a minor or a non-individual entity, such as a corporation.",
+            "place": "Indicates the geographical location or setting where the conviction is pronounced or pertinent. This could be a specific city, a country, or a conceptual space like an online court. The place adds context to the event, distinguishing the setting of the conviction from other locations mentioned in related events."
+        }
+    }
+}
+
+
+
+
+  

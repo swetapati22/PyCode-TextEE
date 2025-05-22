@@ -1,0 +1,28 @@
+{
+  "PhoneWrite(ContactEvent)": {
+    "description": [
+      "The event is triggered by an act of verbal or written communication that occurs through a telephone or similar device. Examples of triggers include 'call,' 'telephone,' and 'told.'",
+      "This event captures interactions between individuals or entities facilitated by remote communication technology, focusing on the exchange of information or dialogue.",
+      "Unlike events such as Meet, which involve in-person interactions, PhoneWrite specifically focuses on remote communication, often mediated by devices like phones or telecommunication systems.",
+      "Triggers such as 'discussed' or 'said by telephone' indicate PhoneWrite, distinguishing it from events like Report, which emphasize the broadcast or dissemination of information to a broader audience.",
+      "This event involves at least one communicating entity (e.g., speaker or listener) and optionally a place, which situates the communication within a geographical or contextual setting."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "entity": [
+      "Examples are individuals or groups involved in the communication, such as 'spokesman', 'Bush' and 'Chretien', or 'leaders'.",
+      "The entity argument identifies the participants in the communication, whether as speakers, listeners, or both.",
+      "This argument is crucial for understanding the actors engaged in the PhoneWrite event, differentiating their roles from those of third-party observers or facilitators.",
+      "Unlike the place argument, which situates the event geographically, entity refers exclusively to the individuals or groups engaging in the communication.",
+      "In cases involving multiple entities, annotate all explicitly mentioned participants in the communication."
+    ],
+    "place": [
+      "Examples are locations associated with the communication, such as 'Agartala'.",
+      "The place argument provides contextual information about where the communication occurs or is referenced, enhancing the specificity of the event.",
+      "Unlike the entity argument, which focuses on the participants, place situates the event within a physical or geopolitical framework.",
+      "Places are optional and may not always be present; they should be annotated when explicitly mentioned in the text.",
+      "In cases with ambiguous or multiple locations, prioritize the one most directly tied to the context or participants of the communication."
+    ]
+  }
+}

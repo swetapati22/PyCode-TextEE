@@ -1,0 +1,42 @@
+{
+    "Injure(LifeEvent)": {
+        "description": [
+            "The event is triggered by actions or incidents that cause physical harm or injury to a person. Example triggers include 'burned', 'shootings', 'mutilation', 'throwing', 'hit', 'shot', 'injuries', and 'impale'.",
+            "The event is characterized by the involvement of an agent causing harm, a victim receiving the harm, and potentially an instrument used to inflict the injury. The location where the injury occurs can also be specified.",
+            "Unlike the 'Kill' event, the 'Injure' event does not result in the death of the victim. The focus is on non-fatal physical harm.",
+            "Triggers such as 'extradite', 'meeting', 'addressing', 'divorce', 'born', 'marriage', 'relocate', 'won', 'took', 'convicted', 'building', 'versus', 'bring', 'merge', and 'sued' are indicative of other event types, not the 'Injure' event type.",
+            "The outcomes of the 'Injure' event include physical harm or injury to the victim, which may require medical attention but does not result in death. This distinguishes it from events like 'Kill' or 'Murder'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'they' in 'they burned her with hot wires', 'One' in 'One by throwing himself under the wheels', and 'guy' in 'guy who just shot someone else'. The agent is the entity causing the injury.",
+            "The agent is responsible for the action that results in injury to the victim. This can be an individual or a group.",
+            "In some cases, the agent may be implied rather than explicitly stated, such as in passive constructions.",
+            "The agent is crucial for understanding who is responsible for the injury, which can be important for legal or medical contexts.",
+            "Unlike the 'victim', the agent is the perpetrator of the harm, not the recipient."
+        ],
+        "instrument": [
+            "Examples are 'hot wires' in 'they burned her with hot wires', 'metal spikes' in 'metal spikes to impale anyone'. The instrument is the object used to inflict the injury.",
+            "The instrument provides context on how the injury was caused, which can be important for understanding the severity and nature of the injury.",
+            "In some cases, the instrument may not be explicitly mentioned, but inferred from the context.",
+            "The instrument can vary widely, from weapons like guns and knives to everyday objects used in harmful ways.",
+            "Unlike the 'agent', the instrument is not a person but an object or tool used by the agent to cause harm."
+        ],
+        "place": [
+            "Examples are 'where' in 'where they burned her', 'AZ' in 'AZ shootings', and 'mall' in 'mall where the shootings occurred'. The place is the location where the injury event takes place.",
+            "The place provides geographical context, which can be important for legal, medical, or social reasons.",
+            "In some cases, the place may be a specific location, while in others it may be more general or implied.",
+            "The place can help in understanding the circumstances of the injury, such as whether it occurred in a public or private setting.",
+            "Unlike the 'agent' or 'instrument', the place is a location and not an entity or object involved in causing the injury."
+        ],
+        "victim": [
+            "Examples are 'her' in 'they burned her', 'female' in 'female genital mutilation', and 'someone' in 'guy who just shot someone else'. The victim is the entity receiving the injury.",
+            "The victim is the person who suffers the physical harm or injury as a result of the event.",
+            "In some cases, the victim may be a group of people rather than an individual.",
+            "The victim is crucial for understanding the impact of the injury event and may require medical or legal attention.",
+            "Unlike the 'agent', the victim is the recipient of the harm, not the perpetrator."
+        ]
+    }
+}

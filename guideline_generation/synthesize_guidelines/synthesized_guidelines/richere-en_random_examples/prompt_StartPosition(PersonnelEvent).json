@@ -1,0 +1,35 @@
+{
+    "StartPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by a person beginning a new role or position, often indicated by verbs such as 'start', 'begin', 'take', 'promoted', 'appointed', 'back at work', and 'get'.",
+            "The event is characterized by a transition into a new job, role, or position, typically involving a person and sometimes specifying the entity or place associated with the new role.",
+            "Unlike the EndPosition event, which marks the conclusion of a role, the StartPosition event signifies the commencement of a new role or position.",
+            "Triggers such as 'resigned', 'retired', or 'left' are indicative of the EndPosition event, not the StartPosition event.",
+            "The outcome of this event is the person assuming a new role or position, which can be contrasted with related events like Nominate, where the person is proposed for a role but has not yet assumed it."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'papers' in 'He took two small papers with declining circulation in a small city in South Australia and built a media empire.'",
+            "The entity argument refers to the organization, company, or specific role that the person is starting.",
+            "In the context of 'promoted Captains', the entity would be the rank or position of 'Captains'.",
+            "For 'appointed as his Attorney General', the entity is 'Attorney General'.",
+            "Unlike the person argument, which identifies the individual, the entity specifies the role or position being assumed."
+        ],
+        "person": [
+            "Examples are 'He' in 'He took two small papers with declining circulation in a small city in South Australia and built a media empire.'",
+            "The person argument identifies the individual who is starting the new role or position.",
+            "In 'promoted Captains', the person argument would be 'few', referring to the individuals promoted.",
+            "For 'appointed a man who couldn't figure out TurboTax as our Treasury Secretary', the person is 'man'.",
+            "Unlike the entity argument, which specifies the role, the person argument focuses on the individual assuming the role."
+        ],
+        "place": [
+            "Examples are 'city' in 'He took two small papers with declining circulation in a small city in South Australia and built a media empire.'",
+            "The place argument indicates the location where the new role or position is being assumed.",
+            "In 'back at work', if specified, the place could be the workplace or city where the person is returning to work.",
+            "For 'appointed as his Attorney General', if the location were specified, it would be included as the place argument.",
+            "Unlike the entity and person arguments, the place argument provides geographical context to the event."
+        ]
+    }
+}

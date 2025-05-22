@@ -1,0 +1,48 @@
+{
+    "Extradite(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the formal process of transferring a person from one jurisdiction to another for legal proceedings or punishment. Example triggers include 'extradition', 'extradited', and 'extradite'.",
+            "The event is characterized by the involvement of legal authorities and the movement of a person across borders or jurisdictions. It typically involves an agent (authority), a person being extradited, an origin, and a destination.",
+            "Unlike the 'ArrestJail' event, which involves the initial detention of a person, the 'Extradite' event specifically involves the transfer of a detained person to another jurisdiction.",
+            "Triggers such as 'extradition' are indicative of the 'Extradite' event type, not events like 'ArrestJail' or 'ReleaseParole', which involve different stages of the legal process.",
+            "The outcome of the 'Extradite' event is the physical relocation of the person to the jurisdiction requesting the extradition, which differs from events like 'Acquit' or 'Pardon' where the legal status of the person is changed without necessarily involving physical relocation."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of the extradition process. Examples include 'extradition', 'extradited', and 'extradite'.",
+            "Triggers such as 'extradition' are specific to the 'Extradite' event and should not be confused with terms like 'arrest' or 'release', which indicate different legal actions.",
+            "The trigger must clearly indicate the transfer of a person for legal reasons, as opposed to general movement or travel.",
+            "Edge cases include phrases like 'pending extradition' or 'waiver of extradition', which still indicate the process of extradition.",
+            "Triggers should be identified within the context of legal proceedings and not in casual or unrelated contexts."
+        ],
+        "agent": [
+            "Examples are 'court', 'government', 'police department'. The agent is the authority or entity responsible for initiating or carrying out the extradition.",
+            "The agent plays a crucial role in the extradition process, often being a legal or governmental body.",
+            "In cases where multiple entities are involved, the primary entity responsible for the extradition should be identified as the agent.",
+            "Unlike the 'ArrestJail' event, where the agent is typically the arresting officer or police, the 'Extradite' event involves higher-level authorities like courts or governments.",
+            "Edge cases include international bodies like the 'U.N. war crimes tribunal', which can also act as agents in extradition events."
+        ],
+        "destination": [
+            "Examples are 'jurisdiction', 'Hague', 'state of Louisiana'. The destination is the location to which the person is being extradited.",
+            "The destination is a key component of the extradition process, indicating where the legal proceedings or punishment will take place.",
+            "In cases where the destination is a broad region or country, the specific jurisdiction within that region should be identified if possible.",
+            "Unlike general travel events, the destination in an 'Extradite' event is always a legal jurisdiction or authority.",
+            "Edge cases include situations where the destination is implied but not explicitly stated, such as 'back to the state'."
+        ],
+        "origin": [
+            "Examples are 'state', 'headquarters'. The origin is the location from which the person is being extradited.",
+            "The origin provides context for the extradition, indicating where the person was initially detained or located.",
+            "In cases where the origin is a broad region or country, the specific jurisdiction within that region should be identified if possible.",
+            "Unlike general travel events, the origin in an 'Extradite' event is always a legal jurisdiction or authority.",
+            "Edge cases include situations where the origin is implied but not explicitly stated, such as 'from another state'."
+        ],
+        "person": [
+            "Examples are 'she', 'him', 'he'. The person is the individual being extradited.",
+            "The person is the central figure in the extradition process, being the subject of the legal transfer.",
+            "In cases where multiple individuals are involved, each person being extradited should be identified separately.",
+            "Unlike other legal events, the 'Extradite' event specifically involves the physical transfer of the person, not just a change in legal status.",
+            "Edge cases include situations where the person is referred to indirectly, such as 'the defendant' or 'the accused'."
+        ]
+    }
+}

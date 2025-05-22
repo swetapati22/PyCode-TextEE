@@ -1,0 +1,10 @@
+{
+    "Correspondence(ContactEvent)": {
+        "description": "The Correspondence (ContactEvent) is triggered by an act of communication between two or more entities, such as a phone call, email, or meeting. It involves the exchange of information or messages, typically between a sender and a receiver, and often includes direct interaction or response. This event is characterized by its personal and directed nature, unlike Broadcast events, and does not involve public displays or protests like Demonstrate events. The primary purpose is to convey or request information, and the outcomes include the successful exchange of information or the initiation of further communication. Unlike Transaction events, Correspondence does not involve the exchange of goods or services.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "Entities involved in the communication, such as individuals or organizations, can be the sender, receiver, or both. They can be explicitly mentioned or implied through pronouns and may include multiple participants. Identifying these entities is crucial for understanding who is involved in the communication and distinguishing Correspondence events from other ContactEvents.",
+            "place": "Locations where the correspondence takes place, either physical or virtual, provide context for the setting of the communication. These places can be specific or general and help differentiate Correspondence events from other events occurring in different settings. While not always present, the place argument adds valuable information about the context of the communication when included."
+        }
+    }
+}

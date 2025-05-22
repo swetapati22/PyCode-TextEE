@@ -1,0 +1,35 @@
+{
+    "Nominate(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the act of officially suggesting or appointing someone for a position or role. Example triggers include 'nominate', 'nominated', 'nomination', 'appoint', and 'renomination'.",
+            "The event is characterized by the involvement of an agent who proposes or supports the nomination, a person who is being nominated, and sometimes a place where the nomination occurs. For instance, 'The party nominated John for the position' involves the agent (party) and the person (John).",
+            "Unlike the 'Elect' event, which involves the final selection of a candidate through voting, the 'Nominate' event focuses on the proposal or recommendation stage. For example, 'nominated' indicates a proposal, whereas 'elected' indicates a final decision.",
+            "Triggers such as 'won' or 'elected' are indicative of the 'Elect' event type, not the 'Nominate' event type. The 'Nominate' event does not imply the final selection but rather the suggestion or recommendation for a role.",
+            "The outcome of the 'Nominate' event is the proposal of a candidate for a position, which may or may not lead to their final selection. This is different from the 'StartPosition' event, which indicates the beginning of a role or job."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "The agent is the entity that proposes or supports the nomination. Examples are 'The party nominated John', where 'party' is the agent.",
+            "In the context of political nominations, the agent could be a political party, a committee, or an individual with authority. For instance, 'The committee nominated Sarah' has 'committee' as the agent.",
+            "The agent is crucial as it indicates who is responsible for the nomination. Examples are 'Obama appointed a chairman', where 'Obama' is the agent.",
+            "In some cases, the agent might be implied rather than explicitly stated. For example, 'John was nominated for the award' implies an agent, even if not directly mentioned.",
+            "The agent can also be an organization or group, such as 'The board nominated the new CEO', where 'board' is the agent."
+        ],
+        "person": [
+            "The person is the individual being nominated for a position or role. Examples are 'The party nominated John', where 'John' is the person.",
+            "In political contexts, the person is often a candidate for an office or position. For instance, 'Kerry was nominated in 2004' has 'Kerry' as the person.",
+            "The person is the focus of the nomination event, as they are the one being proposed for a role. Examples are 'Mishaal would nominate himself', where 'Mishaal' is the person.",
+            "In some cases, the person might be referred to by their title or position. For example, 'The nominee for the position' refers to the person being nominated.",
+            "The person can also be a group of individuals, such as 'people' in 'people get nominated president'."
+        ],
+        "place": [
+            "The place is the location where the nomination event occurs. Examples are 'The convention in New York', where 'New York' is the place.",
+            "In political contexts, the place might be a city, state, or country where the nomination is announced or takes place. For instance, 'The nomination in Iowa' has 'Iowa' as the place.",
+            "The place provides context to the nomination event, indicating where it is happening. Examples are 'The nomination at the State House', where 'State House' is the place.",
+            "In some cases, the place might be implied rather than explicitly stated. For example, 'The nomination event' implies a location even if not directly mentioned.",
+            "The place can also be a specific venue or institution, such as 'The nomination at the Superior Court', where 'Superior Court' is the place."
+        ]
+    }
+}

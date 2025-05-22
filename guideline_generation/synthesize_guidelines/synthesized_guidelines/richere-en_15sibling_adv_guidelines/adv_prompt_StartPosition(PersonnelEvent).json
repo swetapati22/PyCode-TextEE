@@ -1,0 +1,11 @@
+{
+    "StartPosition(PersonnelEvent)": {
+        "description": "The 'StartPosition' event is triggered when an individual begins a new role or position, typically indicated by verbs such as 'took', 'promoted', 'appointed', 'started', 'back at work', 'get', and 'worked'. This event marks the initiation of new duties or responsibilities, distinguishing it from 'EndPosition' events, which signify the conclusion of a role, and 'Nominate' events, which involve the proposal of a candidate. The outcome of a 'StartPosition' event is the individual actively assuming the new role or responsibilities.",
+        "attributes": {
+            "mention": "The text span that triggers the event, often a verb or phrase indicating the start of a new role.",
+            "entity": "The 'entity' refers to the organization, company, role, project, or initiative that the person is starting. It specifies the new position being assumed, such as 'Captains' in 'Quite a few were promoted Captains'. In some cases, the entity might be implied by the context.",
+            "person": "The 'person' is the individual starting the new role, identified by nouns or pronouns such as 'He' in 'He took two small papers with declining circulation in a small city in South Australia and built a media empire'. It can also refer to groups or collectives, and may sometimes be implied through context.",
+            "place": "The 'place' indicates the location where the new role is being assumed, providing geographical context such as 'city' in 'He took two small papers with declining circulation in a small city in South Australia and built a media empire'. It can also refer to broader locations or institutions, and in some cases, might be implied or refer to virtual or non-physical places."
+        }
+    }
+}

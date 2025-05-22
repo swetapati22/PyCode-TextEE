@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_EndPosition(PersonnelEvent)
+```json
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the termination or conclusion of a person's role, job, or position. Example triggers include 'retired', 'fired', 'quit', 'lost job', and 'gave up work'.",
+            "The event is characterized by the end of an employment or position held by an individual, often marked by specific actions or decisions leading to the cessation. For instance, 'retirement' and 'firing' are common triggers.",
+            "Unlike the StartPosition event, which marks the beginning of a role or job, the EndPosition event signifies the conclusion of such roles. Triggers such as 'hired' or 'appointed' are indicative of StartPosition, not EndPosition.",
+            "The event encompasses various scenarios where an individual ceases to hold a position, whether voluntarily (e.g., 'resigned') or involuntarily (e.g., 'terminated').",
+            "The outcome of this event is the individual no longer holding the specified position or job. This differs from events like Nominate, which involve the selection or proposal of a candidate for a position."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are organizations or companies from which the person is departing. For instance, in 'Loss of 2,400 jobs at Pfizer', 'Pfizer' is the entity.",
+            "The entity represents the organization or institution associated with the person's position. In 'retirement was forced because PSU knew', 'PSU' is the entity.",
+            "In cases where the entity is not explicitly mentioned, it can be inferred from context. For example, 'got fired because of that' implies an entity like a company or organization.",
+            "The entity is crucial for understanding the context of the position's end. For example, 'DMV' in 'got fired because of that' provides context about the workplace.",
+            "Edge cases include scenarios where the entity is a broader category, such as 'government' or 'industry'. For instance, 'left the law' implies the legal industry as the entity."
+        ],
+        "person": [
+            "Examples are individuals whose positions are ending. For instance, 'mum' in 'My mum gave up work' is the person.",
+            "The person is the subject experiencing the end of their position. In 'Sandusky retired', 'Sandusky' is the person.",
+            "In cases where the person is referred to by pronouns, such as 'he' or 'she', the context must be used to identify the individual. For example, 'he' in 'retirement was forced because PSU knew' refers to the person.",
+            "The person is central to the event, as it revolves around their position ending. For instance, 'Paterno' in 'Paterno lost his job' is the person.",
+            "Edge cases include scenarios where the person is part of a group, such as '2,400' in 'Loss of 2,400 jobs at Pfizer'. Here, '2,400' represents the individuals affected."
+        ],
+        "place": [
+            "Examples are locations associated with the end of the position. For instance, 'Sandwich' in 'Loss of 2,400 jobs at Pfizer in Sandwich' is the place.",
+            "The place provides geographical context to the event. In 'lost his job because of what Sandusky did', if a location were mentioned, it would be the place.",
+            "In cases where the place is not explicitly mentioned, it can be inferred from context. For example, 'retired right after that incident' might imply a place if the incident location is known.",
+            "The place is important for understanding the broader impact of the position's end. For instance, 'Kent' in 'Loss of 2,400 jobs at Pfizer in Sandwich, Kent' provides additional context.",
+            "Edge cases include virtual or non-physical places, such as 'online' or 'remote work'. For example, 'left the remote job' implies a non-physical place."
+        ]
+    }
+}
+```

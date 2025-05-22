@@ -1,0 +1,56 @@
+{
+    "Movement_Transportation_PreventPassage(Event)": {
+        "description": [
+            "The event type 'Movement_Transportation_PreventPassage' refers to any action or situation where the movement or transportation of people, vehicles, or objects is intentionally obstructed or prevented. The event can be triggered by verbs such as 'blocked', 'closed down', 'stopped', 'refused', 'cordoned', or 'prevented'. This event type is often associated with security measures, accidents, or deliberate actions to restrict access or movement.",
+            "The event type 'Movement_Transportation_PreventPassage' involves scenarios where the passage or movement of entities is hindered or stopped. The event can be triggered by actions like 'blocked', 'closed down', 'stopped', 'refused', 'cordoned', or 'prevented'. It typically occurs in contexts such as security operations, traffic control, or emergency responses.",
+            "The 'Movement_Transportation_PreventPassage' event type captures instances where the movement or transportation of entities is deliberately obstructed. Triggers for this event include words like 'blocked', 'closed down', 'stopped', 'refused', 'cordoned', or 'prevented'. This event is common in situations involving security measures, traffic incidents, or intentional blockades.",
+            "The 'Movement_Transportation_PreventPassage' event type is defined by actions that prevent or obstruct the movement or transportation of entities. Common triggers for this event are 'blocked', 'closed down', 'stopped', 'refused', 'cordoned', or 'prevented'. This event type is relevant in contexts such as security enforcement, traffic management, or deliberate obstructions.",
+            "The 'Movement_Transportation_PreventPassage' event type refers to any action that stops or hinders the movement or transportation of entities. Triggers for this event include 'blocked', 'closed down', 'stopped', 'refused', 'cordoned', or 'prevented'. It is typically seen in scenarios involving security actions, traffic control, or intentional disruptions."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "destination": [
+            "The 'destination' argument refers to the endpoint or target location where the movement or transportation was intended to go but was prevented. Examples are 'Green Zone', 'Turkey', 'street', 'plaza'.",
+            "The 'destination' argument indicates the final location that the entity was trying to reach but was obstructed from doing so. Examples are 'Green Zone', 'Turkey', 'street', 'plaza'.",
+            "The 'destination' argument represents the place where the movement or transportation was supposed to end but was stopped. Examples are 'Green Zone', 'Turkey', 'street', 'plaza'.",
+            "The 'destination' argument is the intended endpoint of the movement or transportation that was prevented. Examples are 'Green Zone', 'Turkey', 'street', 'plaza'.",
+            "The 'destination' argument denotes the final location that the entity aimed to reach but was hindered from reaching. Examples are 'Green Zone', 'Turkey', 'street', 'plaza'."
+        ],
+        "origin": [
+            "The 'origin' argument refers to the starting point or initial location from where the movement or transportation began before being prevented. Examples are 'western side'.",
+            "The 'origin' argument indicates the place where the movement or transportation started before it was obstructed. Examples are 'western side'.",
+            "The 'origin' argument represents the initial location from which the movement or transportation commenced before being stopped. Examples are 'western side'.",
+            "The 'origin' argument is the starting point of the movement or transportation that was prevented. Examples are 'western side'.",
+            "The 'origin' argument denotes the initial location where the movement or transportation began before being hindered. Examples are 'western side'."
+        ],
+        "passengerartifact": [
+            "The 'passengerartifact' argument refers to the person or object that was being transported and whose movement was prevented. Examples are 'He', 'people'.",
+            "The 'passengerartifact' argument indicates the entity (person or object) that was in transit and was obstructed. Examples are 'He', 'people'.",
+            "The 'passengerartifact' argument represents the transported entity whose movement was stopped. Examples are 'He', 'people'.",
+            "The 'passengerartifact' argument is the person or object that was being moved and was prevented from continuing. Examples are 'He', 'people'.",
+            "The 'passengerartifact' argument denotes the entity in transit that was hindered. Examples are 'He', 'people'."
+        ],
+        "preventer": [
+            "The 'preventer' argument refers to the entity (person or group) that caused the obstruction or prevention of movement. Examples are 'forces', 'investigators', 'detectives'.",
+            "The 'preventer' argument indicates the person or group responsible for stopping the movement or transportation. Examples are 'forces', 'investigators', 'detectives'.",
+            "The 'preventer' argument represents the entity that took action to prevent the movement. Examples are 'forces', 'investigators', 'detectives'.",
+            "The 'preventer' argument is the person or group that obstructed the movement or transportation. Examples are 'forces', 'investigators', 'detectives'.",
+            "The 'preventer' argument denotes the entity responsible for hindering the movement. Examples are 'forces', 'investigators', 'detectives'."
+        ],
+        "transporter": [
+            "The 'transporter' argument refers to the entity (person or vehicle) that was carrying out the transportation before it was prevented. Examples are 'He'.",
+            "The 'transporter' argument indicates the person or vehicle involved in the transportation that was stopped. Examples are 'He'.",
+            "The 'transporter' argument represents the entity responsible for the transportation that was obstructed. Examples are 'He'.",
+            "The 'transporter' argument is the person or vehicle that was conducting the transportation before being hindered. Examples are 'He'.",
+            "The 'transporter' argument denotes the entity carrying out the transportation that was prevented. Examples are 'He'."
+        ],
+        "vehicle": [
+            "The 'vehicle' argument refers to the mode of transportation that was being used and was prevented from moving. Examples are 'flight', 'a car', 'vehicle'.",
+            "The 'vehicle' argument indicates the means of transport that was obstructed. Examples are 'flight', 'a car', 'vehicle'.",
+            "The 'vehicle' argument represents the transportation method that was stopped. Examples are 'flight', 'a car', 'vehicle'.",
+            "The 'vehicle' argument is the mode of transport that was being used and was hindered. Examples are 'flight', 'a car', 'vehicle'.",
+            "The 'vehicle' argument denotes the means of transportation that was prevented from moving. Examples are 'flight', 'a car', 'vehicle'."
+        ]
+    }
+}

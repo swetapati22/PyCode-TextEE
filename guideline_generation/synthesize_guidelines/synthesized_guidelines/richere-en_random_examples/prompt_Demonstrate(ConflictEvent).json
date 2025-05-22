@@ -1,0 +1,28 @@
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions or gatherings where individuals or groups express their opinions, grievances, or support for a cause, often in a public setting. Example triggers include 'protest', 'demonstration', 'crowded', and 'protesters'.",
+            "The event is characterized by the presence of an entity (individuals or groups) actively participating in the demonstration and a place where the demonstration occurs. It often involves public displays of dissent or support.",
+            "Unlike other ConflictEvent types such as 'Attack' or 'Injure', this event does not involve direct physical harm or violence as the primary focus. Instead, it centers on the act of demonstrating or protesting.",
+            "Triggers such as 'protesters' and 'demonstration' are indicative of this event type, whereas triggers like 'burned' or 'attacked' are indicative of more violent ConflictEvent types.",
+            "The outcomes of this event type typically include raising awareness, influencing public opinion, or prompting action from authorities, rather than causing physical harm or destruction."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'protesters', 'students', 'organization', 'we', 'crowd', 'trouble-makers'. The entity represents the individuals or groups actively participating in the demonstration.",
+            "The entity is crucial as it identifies who is involved in the demonstration. It can be a specific group, such as 'students', or a more general term like 'protesters'.",
+            "In some cases, the entity may be an organization or collective group, such as 'organization Meu Rio'. This highlights the organized nature of some demonstrations.",
+            "Edge cases include when the entity is referred to in a more abstract or collective sense, such as 'we' or 'crowd'. These still indicate the participants of the demonstration.",
+            "Unlike other event types where the entity might be a victim or perpetrator, in this event type, the entity is the active participant in the demonstration."
+        ],
+        "place": [
+            "Examples are 'Yemen/Syrian/Bahrain', 'Sabha', 'house', 'Montreal', 'Ipanema beach'. The place represents the location where the demonstration occurs.",
+            "The place is important as it provides context and situates the event geographically. It can be a specific location like 'house' or a broader area like 'Montreal'.",
+            "In some instances, the place may be a well-known public area or landmark, such as 'Ipanema beach', indicating the public nature of the demonstration.",
+            "Edge cases include when the place is mentioned in a more general sense, such as 'campus' or 'blocks from campus'. These still provide necessary context for the event.",
+            "Unlike other event types where the place might be a crime scene or a location of an incident, in this event type, the place is where the demonstration is held."
+        ]
+    }
+}

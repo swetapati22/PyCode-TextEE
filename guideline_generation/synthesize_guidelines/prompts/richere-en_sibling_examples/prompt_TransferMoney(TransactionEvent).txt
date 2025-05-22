@@ -1,0 +1,188 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type TransferMoney which is a child event type of super class TransactionEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+TransferMoney which is a child event type of super class TransactionEvent
+Arguments:
+Argument 1 -> beneficiary
+Argument 2 -> giver
+Argument 3 -> place
+Argument 4 -> recipient
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+And this while the country was receiving generous aid: by May of 2001, Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.
+### Event Trigger ###
+spent
+### Event Arguments ###
+For argument "giver" extracted spans ['E.U.']
+For argument "beneficiary" extracted spans ['country']
+For argument "place" extracted spans ['country']
+
+Example 2
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+The media condemning bankers is akin to a witch hunt, Stephen Hester was given just a £6.5M bonus in 2010 yet JPMorgan's top executive was paid $21M that year.
+### Event Trigger ###
+given
+### Event Arguments ###
+For argument "recipient" extracted spans ['Stephen Hester']
+
+Example 3
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+Ordered a 32" TV online, cheaper than Argos - who didn't have it in stock - but with the delivery charge the cost was the same.
+### Event Trigger ###
+Ordered
+### Event Arguments ###
+
+Example 4
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+I guess if you ignore the fact that he can't submit budgets...is the first American President to have our credit rating downgraded...ran up more debt in a shorter amount of time than anyone in history...has a "signature" piece of legislation, ObamaCare, that not only doesn't lower health care cost but is probably the most badly written law ever and will be ruled unconstitutional...appointed the same man who got Marc Rich off for a lump sum payment to the Clintons as his Attorney General...appointed a man who couldn't figure out TurboTax as our Treasury Secretary...fast tracked Solyndra and made it the "showcase" of his green jobs initiative...spent a trillion dollars on his "stimulus" only to see unemployment go from 8% to over 10...stonewalled drilling permits in the Gulf and the oil pipeline to placate his environmental base while throwing tens of thousands of jobless Americans under the bus...gave us expensive programs like Cash for Clunkers that ate up billions of taxpayer dollars and didn't jumpstart the economy...has deteriorated our relationship with Israel to it's worst state ever while he tried to "reason" with Iran...has no coherent energy policy...no coherent housing policy...no coherent trade policy...has shown absolutely no ability to forge a bipartisan approach to governing...and has spent the majority of his time campaigning for a second term rather than doing the actual job of President.
+### Event Trigger ###
+spent
+### Event Arguments ###
+For argument "giver" extracted spans ['his']
+
+Example 5
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+I guess if you ignore the fact that he can't submit budgets...is the first American President to have our credit rating downgraded...ran up more debt in a shorter amount of time than anyone in history...has a "signature" piece of legislation, ObamaCare, that not only doesn't lower health care cost but is probably the most badly written law ever and will be ruled unconstitutional...appointed the same man who got Marc Rich off for a lump sum payment to the Clintons as his Attorney General...appointed a man who couldn't figure out TurboTax as our Treasury Secretary...fast tracked Solyndra and made it the "showcase" of his green jobs initiative...spent a trillion dollars on his "stimulus" only to see unemployment go from 8% to over 10...stonewalled drilling permits in the Gulf and the oil pipeline to placate his environmental base while throwing tens of thousands of jobless Americans under the bus...gave us expensive programs like Cash for Clunkers that ate up billions of taxpayer dollars and didn't jumpstart the economy...has deteriorated our relationship with Israel to it's worst state ever while he tried to "reason" with Iran...has no coherent energy policy...no coherent housing policy...no coherent trade policy...has shown absolutely no ability to forge a bipartisan approach to governing...and has spent the majority of his time campaigning for a second term rather than doing the actual job of President.
+### Event Trigger ###
+payment
+### Event Arguments ###
+For argument "recipient" extracted spans ['Clintons']
+
+Example 6
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+My mum gets working tax credits, about £35 a week.
+### Event Trigger ###
+gets
+### Event Arguments ###
+For argument "recipient" extracted spans ['mum']
+
+Example 7
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+The problem I have is that I feel as though I am paying for everything now, I always felt like I had to spoil my parents, feeling so lucky to still have them and I would do anything for them but now I am financially struggling and I think they believe my money is endless.
+### Event Trigger ###
+paying
+### Event Arguments ###
+For argument "giver" extracted spans ['I']
+
+Example 8
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+I took out the loan about a year ago.
+### Event Trigger ###
+loan
+### Event Arguments ###
+For argument "recipient" extracted spans ['I']
+
+Example 9
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+I took out the loan about a year ago.
+### Event Trigger ###
+took out
+### Event Arguments ###
+For argument "recipient" extracted spans ['I']
+
+Example 10
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+So I paid them off for her.
+### Event Trigger ###
+paid
+### Event Arguments ###
+For argument "giver" extracted spans ['I']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+TransferOwnership(TransactionEvent)
+### Input Text ###
+His father having died, he returned to Australia in 1954 to take over his inheritance, the Sunday Mail and The News, both of Adelaide
+### Event Trigger ###
+inheritance
+### Event Arguments ###
+For argument "recipient" extracted spans ['his']
+For argument "giver" extracted spans ['father']
+For argument "thing" extracted spans ['Sunday Mail', 'News']
+For argument "place" extracted spans ['Adelaide']

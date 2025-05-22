@@ -1,0 +1,356 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Acquit which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Acquit which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> adjudicator
+Argument 2 -> defendant
+Argument 3 -> place
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']
+
+Example 2
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+Charges were dropped because of a bad search warrant, but I didn't get my guns and money back.
+### Event Trigger ###
+dropped
+### Event Arguments ###
+For argument "defendant" extracted spans ['I']
+
+Example 3
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+Charges were dropped because of a bad search warrant, but I didn't get my guns and money back.
+### Event Trigger ###
+dropped
+### Event Arguments ###
+For argument "defendant" extracted spans ['I']
+
+Example 4
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+He was still popular and the country was willing to forgive him and frankly, his being acquitted was a forgone conclusion.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['his']
+
+Example 5
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+I believe it would come up on a CRB enhanced check but that you would have nothing to worry about as the case was overturned.
+### Event Trigger ###
+overturned
+### Event Arguments ###
+For argument "defendant" extracted spans ['you']
+
+Example 6
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+Long as you wasn't acquited due to a technicality and it's just you who's claiming to be mistaken for someone else, then it's all good.
+### Event Trigger ###
+acquited
+### Event Arguments ###
+For argument "defendant" extracted spans ['you']
+
+Example 7
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+The Crime that i was found Guilty for, was Benefit Fraud so that's why im a bit worried working in a Jobcentre, but then it was someone who uses these forum's who set me up on my previous account, who managed to use all my Identity and then i got convicted but overturned by a high judge
+### Event Trigger ###
+overturned
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['judge']
+For argument "defendant" extracted spans ['i']
+
+Example 8
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+* More than 110 people have been exonerated from death row since 1972, including 22 from the state of Florida alone.
+### Event Trigger ###
+exonerated
+### Event Arguments ###
+For argument "defendant" extracted spans ['More', '22']
+
+Example 9
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+* Texasexecuted Robert Nelson Drew on August 2, 1994 after refusing to give him a new hearing after another man signed an affidavit in which he confessed to the murder, thereby exonerating Drew.
+### Event Trigger ###
+exonerating
+### Event Arguments ###
+For argument "defendant" extracted spans ['Drew']
+
+Example 10
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+he was cleared of all charges.
+### Event Trigger ###
+cleared of
+### Event Arguments ###
+For argument "defendant" extracted spans ['he']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 12
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+charged
+### Event Arguments ###
+For argument "defendant" extracted spans ['man']
+For argument "adjudicator" extracted spans ['court']
+For argument "prosecutor" extracted spans ['country']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 13
+#### Event Type ####
+TransferMoney(TransactionEvent)
+### Input Text ###
+And this while the country was receiving generous aid: by May of 2001, Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.
+### Event Trigger ###
+spent
+### Event Arguments ###
+For argument "giver" extracted spans ['E.U.']
+For argument "beneficiary" extracted spans ['country']
+For argument "place" extracted spans ['country']
+
+Example 14
+#### Event Type ####
+Injure(LifeEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "agent" extracted spans ['they']
+For argument "victim" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+For argument "place" extracted spans ['where']
+
+Example 15
+#### Event Type ####
+EndOrg(BusinessEvent)
+### Input Text ###
+To reduce costs last year, the district closed almost half the schools in the city.
+### Event Trigger ###
+closed
+### Event Arguments ###
+For argument "org" extracted spans ['half']
+For argument "place" extracted spans ['city']
+
+Example 16
+#### Event Type ####
+Broadcast(ContactEvent)
+### Input Text ###
+But it also drew protests, including at La Sapienza university, where Gadhafi was addressing a group of few hundred students.
+### Event Trigger ###
+addressing
+### Event Arguments ###
+For argument "entity" extracted spans ['Gadhafi']
+For argument "place" extracted spans ['La Sapienza university']
+For argument "audience" extracted spans ['group']
+
+Example 17
+#### Event Type ####
+Meet(ContactEvent)
+### Input Text ###
+I tried an alternative route once last year, taking Bluemound in from Goerkes Corner after meeting up with someone there, but it seemed longer and I didn't get out any quicker.
+### Event Trigger ###
+meeting
+### Event Arguments ###
+For argument "entity" extracted spans ['I', 'someone']
+For argument "place" extracted spans ['Goerkes Corner']
+
+Example 18
+#### Event Type ####
+TransportPerson(MovementEvent)
+### Input Text ###
+Another is that when the government orders a military member through Permanent Change of Station orders (PCS) to relocate from one place to another the military sponsors the spouse to travel and relocate to the new base with their spouse.
+### Event Trigger ###
+relocate
+### Event Arguments ###
+For argument "agent" extracted spans ['government']
+For argument "person" extracted spans ['member']
+For argument "origin" extracted spans ['place']
+For argument "destination" extracted spans ['another']
+
+Example 19
+#### Event Type ####
+Contact(Event)
+### Input Text ###
+(6) Obama stated in ISLAMIC COUNTRIES that the bond btw American and Israel is unshakable.
+### Event Trigger ###
+stated
+### Event Arguments ###
+For argument "entity" extracted spans ['Obama']
+For argument "place" extracted spans ['COUNTRIES']
+
+Example 20
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+In The United States versus Miller, the Court held:
+### Event Trigger ###
+versus
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Court']
+For argument "prosecutor" extracted spans ['United States']
+For argument "defendant" extracted spans ['Miller']
+
+Example 21
+#### Event Type ####
+Convict(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+convicted
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 22
+#### Event Type ####
+Attack(ConflictEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "attacker" extracted spans ['they']
+For argument "place" extracted spans ['where']
+For argument "target" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+
+Example 23
+#### Event Type ####
+Sue(JusticeEvent)
+### Input Text ###
+But I heard the authors sued him over it in England.
+### Event Trigger ###
+sued
+### Event Arguments ###
+For argument "plaintiff" extracted spans ['authors']
+For argument "defendant" extracted spans ['him']
+For argument "place" extracted spans ['England']
+
+Example 24
+#### Event Type ####
+Nominate(PersonnelEvent)
+### Input Text ###
+The last time something like this happened that I know of; was the republican convention in New York for the renomination of Bush Jr for a second term in office.
+### Event Trigger ###
+renomination
+### Event Arguments ###
+For argument "agent" extracted spans ['republican']
+For argument "person" extracted spans ['Bush Jr']
+For argument "place" extracted spans ['New York']
+
+Example 25
+#### Event Type ####
+StartPosition(PersonnelEvent)
+### Input Text ###
+He took two small papers with declining circulation in a small city in South Australia and built a media empire and made himself on of the wealthiest men in the world.
+### Event Trigger ###
+took
+### Event Arguments ###
+For argument "person" extracted spans ['He']
+For argument "place" extracted spans ['city']
+For argument "entity" extracted spans ['papers']

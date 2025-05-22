@@ -1,0 +1,41 @@
+{
+    "Elect(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the selection of an individual for a position or role through a voting process. Example triggers include 'elected', 're-election', and 'by-elections'.",
+            "The event is characterized by the formal process of choosing a person for a specific role, typically involving a vote or decision by a group or organization.",
+            "Unlike the 'Nominate' event, which involves proposing a candidate, the 'Elect' event signifies the final decision and selection of the candidate.",
+            "Triggers such as 'elected' and 're-election' indicate the completion of the selection process, whereas 'Nominate' involves the initial proposal stage.",
+            "The outcome of the 'Elect' event is the official appointment of a person to a position, distinguishing it from events like 'StartPosition' or 'EndPosition', which focus on the commencement or conclusion of a role."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of the election event. Examples include 'elected', 're-election', and 'by-elections'.",
+            "Triggers such as 'elected' and 're-election' are valid indicators of the 'Elect' event, as they denote the completion of the voting process.",
+            "Edge cases include phrases like 'face re-election', which still indicate the election process but may require context to confirm.",
+            "Unlike 'Nominate', which uses triggers like 'name' or 'propose', 'Elect' focuses on the final selection, as seen in 'elected' or 're-election'.",
+            "Triggers such as 'by-elections' are specific to the 'Elect' event and should not be confused with 'StartPosition' or 'EndPosition' events."
+        ],
+        "entity": [
+            "Examples are 'USCF' in 'Beatriz Marinello was elected USCF President'. The entity represents the organization or group conducting the election.",
+            "The entity is crucial as it provides context about who is conducting the election, such as 'USCF' or 'party'.",
+            "In cases where the entity is not explicitly mentioned, infer it from the context, like 'the ruling party' in political elections.",
+            "Unlike 'Nominate', where the entity might be proposing a candidate, in 'Elect', the entity is the one finalizing the selection.",
+            "Edge cases include scenarios where the entity is implied rather than stated, requiring careful contextual analysis."
+        ],
+        "person": [
+            "Examples are 'Beatriz Marinello' in 'Beatriz Marinello was elected USCF President'. The person is the individual being elected.",
+            "The person is the central figure in the 'Elect' event, as they are the one being chosen for the position.",
+            "In cases like 'Putin will face re-election', 'Putin' is the person involved in the election process.",
+            "Unlike 'Nominate', where the person is a candidate, in 'Elect', the person is the one who has been chosen.",
+            "Edge cases include scenarios where the person's name is not explicitly mentioned but can be inferred from the context."
+        ],
+        "place": [
+            "Examples are 'Los Angeles' in 'Beatriz Marinello was elected USCF President in Los Angeles'. The place indicates where the election took place.",
+            "The place provides geographical context for the election event, such as 'Los Angeles' or 'South Korea'.",
+            "In cases where the place is not explicitly mentioned, infer it from the context, like 'in March 2004' indicating a time rather than a place.",
+            "Unlike 'StartPosition' or 'EndPosition', where the place might indicate where a role begins or ends, in 'Elect', it indicates where the election occurred.",
+            "Edge cases include scenarios where the place is implied rather than stated, requiring careful contextual analysis."
+        ]
+    }
+}

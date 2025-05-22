@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_TransferMoney(TransactionEvent)
+```json
+{
+    "TransferMoney(TransactionEvent)": {
+        "description": [
+            "The event is triggered by the act of transferring money from one entity to another. Example triggers include 'spent', 'given', 'paid', and 'loan'.",
+            "The event is characterized by the movement of monetary value between parties, often involving a giver and a recipient. Unlike other TransactionEvents, this event specifically involves the transfer of money.",
+            "The event can occur in various contexts, such as aid distribution, bonuses, payments, and loans. It is distinct from TransferOwnership, which involves the transfer of ownership of physical or intangible assets rather than money.",
+            "Triggers such as 'inheritance' or 'gift' are indicative of TransferOwnership, not TransferMoney. The outcome of TransferMoney is the change in possession of monetary value, whereas TransferOwnership results in a change in ownership of an asset.",
+            "The event is not limited to physical cash transactions but includes digital and electronic transfers. Unlike other financial events like Fine or Sue, TransferMoney does not involve legal adjudication or penalties."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "beneficiary": [
+            "Examples are 'country' in 'Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.'",
+            "The beneficiary is the entity that ultimately benefits from the transfer of money, even if they are not the direct recipient. It is important to distinguish the beneficiary from the recipient, who directly receives the money.",
+            "In the context of aid or relief, the beneficiary is often a country or community. For example, 'The E.U. spent 200 million euros on relief for the country.'",
+            "Unlike the recipient, the beneficiary may not be directly involved in the transaction but is the intended target of the benefits. For instance, 'The charity spent millions on the homeless population.'",
+            "The beneficiary can be an individual, group, or organization that gains from the transaction. For example, 'The scholarship fund was set up to benefit underprivileged students.'"
+        ],
+        "giver": [
+            "Examples are 'E.U.' in 'Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.'",
+            "The giver is the entity that provides the money in the transaction. This role is crucial as it identifies the source of the funds being transferred.",
+            "In a corporate context, the giver could be a company or organization. For example, 'The company paid out bonuses to its employees.'",
+            "Unlike the recipient, the giver is the one initiating the transfer of money. For instance, 'The donor gave a large sum to the charity.'",
+            "The giver can be an individual, organization, or government entity. For example, 'The government provided financial aid to the disaster-stricken area.'"
+        ],
+        "place": [
+            "Examples are 'country' in 'Washington had delivered 100,000 metric tons of food and the E.U. had spent 200 million euros on relief.'",
+            "The place is the location where the transfer of money occurs or where the beneficiary is located. This argument helps contextualize the event geographically.",
+            "In international transactions, the place can be a country or region. For example, 'The funds were transferred to support development projects in Africa.'",
+            "Unlike the giver or recipient, the place is not an entity but a location. For instance, 'The relief funds were sent to the earthquake-affected area.'",
+            "The place can also refer to specific locations within a country, such as cities or towns. For example, 'The charity event raised money for schools in New York.'"
+        ],
+        "recipient": [
+            "Examples are 'Stephen Hester' in 'Stephen Hester was given just a \u00a36.5M bonus in 2010.'",
+            "The recipient is the entity that directly receives the money in the transaction. This role is essential as it identifies who gets the funds.",
+            "In personal transactions, the recipient could be an individual. For example, 'She received a large inheritance from her uncle.'",
+            "Unlike the beneficiary, the recipient is directly involved in the transaction and receives the money. For instance, 'The employee was paid a bonus.'",
+            "The recipient can be an individual, group, or organization. For example, 'The non-profit organization received a grant from the government.'"
+        ]
+    }
+}
+```

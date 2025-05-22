@@ -1,0 +1,69 @@
+{
+    "Transport(MovementEvent)": {
+        "description": [
+            "The event is triggered by the movement of people, objects, or entities from one location to another. Example triggers include 'transport', 'drove', 'carting', 'took', and 'back'.",
+            "The event is characterized by the involvement of an agent or vehicle facilitating the movement, and an artifact or victim being moved. It often includes a specified origin and destination.",
+            "Unlike other MovementEvent types, the Transport event specifically involves the conveyance of entities, often with a clear start and end point. For example, 'transport' indicates a deliberate action of moving something or someone.",
+            "Triggers such as 'arrived' or 'departed' are indicative of Arrival or Departure events, not Transport events, as they focus on the endpoints rather than the movement process.",
+            "The outcome of a Transport event is the successful relocation of the artifact or victim from the origin to the destination, often involving a vehicle or agent to facilitate the movement."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of the Transport event. Examples include 'transport', 'drove', 'carting', 'took', and 'back'.",
+            "Triggers must clearly indicate the action of moving something or someone. For instance, 'transport' in 'trains were used to transport abducted women' is a valid trigger.",
+            "Edge cases include words like 'moved' which can be ambiguous; context is necessary to determine if it indicates a Transport event.",
+            "Triggers such as 'arrived' or 'departed' are not valid for Transport events as they indicate the endpoints rather than the movement process.",
+            "In some cases, the trigger may be a phrasal verb or a compound word, such as 'carting away' or 'driving to'."
+        ],
+        "agent": [
+            "The agent is the entity that facilitates the transport. Examples are 'forces' in 'assisted by U.S. forces' and 'medical teams' in 'carting away dozens of wounded victims'.",
+            "The agent is often a person, group, or organization responsible for the movement. For instance, 'Liana Owen' in 'Liana Owen drove 10 hours'.",
+            "In some cases, the agent may be implied rather than explicitly stated, such as 'trains' in 'trains were used to transport'.",
+            "Unlike the artifact or victim, the agent is not the entity being moved but the one performing the action.",
+            "Edge cases include situations where the agent is a non-human entity, such as 'robot' or 'automated system'."
+        ],
+        "artifact": [
+            "The artifact is the object or entity being transported. Examples are 'women', 'children', 'victims', and 'protesters'.",
+            "Artifacts are typically tangible entities that can be moved from one place to another. For instance, 'Liana Owen' in 'Liana Owen drove 10 hours'.",
+            "In some contexts, the artifact may be a group of entities, such as 'teams' in 'carting away dozens of wounded victims'.",
+            "Unlike the agent, the artifact is the focus of the movement, being the entity that is relocated.",
+            "Edge cases include abstract entities or concepts, which are generally not considered artifacts in Transport events."
+        ],
+        "destination": [
+            "The destination is the endpoint of the transport. Examples are 'Sudan', 'streets', and 'Manhattan'.",
+            "The destination is where the artifact or victim is moved to. For instance, 'Manhattan' in 'drove 10 hours from Pennsylvania to Manhattan'.",
+            "In some cases, the destination may be implied rather than explicitly stated, such as 'back' indicating a return to a previous location.",
+            "Unlike the origin, the destination is the final point of the movement.",
+            "Edge cases include situations where the destination is a non-specific location, such as 'somewhere' or 'elsewhere'."
+        ],
+        "origin": [
+            "The origin is the starting point of the transport. Examples are 'Sudan' and 'Pennsylvania'.",
+            "The origin is where the artifact or victim is moved from. For instance, 'Pennsylvania' in 'drove 10 hours from Pennsylvania'.",
+            "In some cases, the origin may be implied rather than explicitly stated, such as 'back' indicating a return from a previous location.",
+            "Unlike the destination, the origin is the initial point of the movement.",
+            "Edge cases include situations where the origin is a non-specific location, such as 'somewhere' or 'elsewhere'."
+        ],
+        "place": [
+            "The place is a general location associated with the transport event. Examples are 'Iraq' in 'getting back into Iraq'.",
+            "The place may not be the specific origin or destination but a broader location context. For instance, 'Iraq' in 'assisted by U.S. forces in getting back into Iraq'.",
+            "In some cases, the place may overlap with the origin or destination but provides additional context.",
+            "Unlike the origin or destination, the place is not necessarily the start or end point but a relevant location.",
+            "Edge cases include situations where the place is a very broad or vague location, such as 'somewhere in the world'."
+        ],
+        "vehicle": [
+            "The vehicle is the means of transport used in the event. Examples are 'trains' in 'trains were used to transport'.",
+            "The vehicle is often a mode of transportation, such as a car, train, or airplane. For instance, 'trains' in 'trains were used to transport'.",
+            "In some cases, the vehicle may be implied rather than explicitly stated, such as 'drove' indicating the use of a car.",
+            "Unlike the agent, the vehicle is the tool or method used to facilitate the movement.",
+            "Edge cases include situations where the vehicle is a non-traditional mode of transport, such as 'drone' or 'robot'."
+        ],
+        "victim": [
+            "The victim is the person or entity being transported, often in a context of harm or distress. Examples are 'who' in 'who was assisted by U.S. forces'.",
+            "Victims are typically individuals or groups that are moved under duress or in emergency situations. For instance, 'victims' in 'carting away dozens of wounded victims'.",
+            "In some contexts, the victim may overlap with the artifact but is specifically highlighted due to their vulnerable status.",
+            "Unlike the artifact, the victim is often associated with a negative or distressing context of transport.",
+            "Edge cases include situations where the victim is not explicitly stated but implied through context, such as 'refugees' or 'evacuees'."
+        ]
+    }
+}

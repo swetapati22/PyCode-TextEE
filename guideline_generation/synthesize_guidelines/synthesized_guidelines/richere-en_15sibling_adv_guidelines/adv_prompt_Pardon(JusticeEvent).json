@@ -1,0 +1,11 @@
+{
+    "Pardon(JusticeEvent)": {
+        "description": "A Pardon event in the justice system is triggered by an official act of forgiving or excusing a person from a legal penalty or punishment. This event involves an adjudicator who grants the pardon and a defendant who receives it. Unlike the 'ReleaseParole' event, which involves conditional freedom, a Pardon event completely absolves the defendant of legal consequences. Triggers for this event include terms like 'pardoned', 'pardons', and 'pardon', while terms like 'commute' or 'release' indicate related but distinct events. The outcome of a Pardon event is the removal of legal penalties for the defendant, distinguishing it from events like 'Convict' or 'Sentence', which impose legal penalties.",
+        "attributes": {
+            "mention": "The text span that triggers the event, such as 'pardoned', 'pardons', or 'pardon'.",
+            "adjudicator": "The person or entity that grants the pardon, such as a governor, president, or state. For example, in 'The state of Alabama posthumously pardoned three black men', 'Alabama' is the adjudicator. The adjudicator can be an individual acting in an official capacity, a collective entity like a government or court, or implied from the context.",
+            "defendant": "The person or persons who receive the pardon, such as 'Nixon' in 'When Ford pardoned Nixon'. The defendant can be an individual or a collective group, and may be referred to by a pronoun or implied from the context.",
+            "place": "The location where the pardon is granted, such as 'Alabama' in 'The state of Alabama posthumously pardoned three black men'. The place provides geographical context and can be a city, region, country, or state. It may also be implied or inferred from the context."
+        }
+    }
+}

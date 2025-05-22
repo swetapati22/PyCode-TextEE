@@ -1,0 +1,35 @@
+{
+    "StartOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the establishment or creation of a new organization. Example triggers include 'founded', 'created', 'launched', 'opened', and 'built'.",
+            "The event is characterized by the initiation of a new business entity or organization, often involving an agent responsible for the creation and a specific location where the organization is established.",
+            "Unlike the MergeOrg event, which involves the combination of existing organizations, the StartOrg event focuses solely on the creation of a new, independent entity.",
+            "Triggers such as 'merged' or 'acquired' are indicative of MergeOrg or Acquisition events, not the StartOrg event type. The StartOrg event is specifically about the inception of a new organization.",
+            "The outcome of the StartOrg event is the existence of a new organization, which is distinct from events like EndOrg, where an organization ceases to exist, or DeclareBankruptcy, where an organization declares financial insolvency."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "The agent is the individual or entity responsible for initiating the creation of the new organization. Examples are 'Kim Dae-Jung' in 'The ruling Millennium Democratic Party (MDP), founded by former president Kim Dae-Jung'.",
+            "The agent plays a crucial role in the StartOrg event as they are the driving force behind the establishment of the new organization. Examples are 'Daily Planet Ltd' in 'The Daily Planet Ltd, about to become the first brothel to list on the Australian Stock Exchange'.",
+            "In some cases, the agent may be a group of individuals or a collective entity. Examples are 'we' in 'we are going to build a monster'.",
+            "The agent can also be an organization itself that is responsible for creating a subsidiary or a new branch. Examples are 'AIG' in 'AIG is in the final stage of talks to take over General Electric's Japanese life insurance arm in a deal to create Japan's sixth largest life insurer'.",
+            "Unlike the org argument, which refers to the new entity being created, the agent refers to the existing entity or individual responsible for the creation. Examples are 'Twentieth Century Fox' in 'he helped launch the Fox Television network'."
+        ],
+        "org": [
+            "The org is the new organization that is being created or established. Examples are 'Millennium Democratic Party' in 'The ruling Millennium Democratic Party (MDP), founded by former president Kim Dae-Jung'.",
+            "The org represents the outcome of the StartOrg event, which is the new entity that comes into existence. Examples are 'Disneyland' in 'plans to follow up its May Day launching by opening a 'sex Disneyland' here'.",
+            "In some cases, the org may be a new branch or subsidiary of an existing organization. Examples are 'network' in 'he helped launch the Fox Television network'.",
+            "The org can also be a conceptual or planned entity that is yet to be fully realized. Examples are 'party' in 'vowed to launch a preparatory committee next month and to make 'tangible progress' in the process of forging a new party'.",
+            "Unlike the agent, which refers to the entity responsible for the creation, the org refers to the new entity that is being created. Examples are 'group' in 'creating the sixth largest private sector banking group in Spain'."
+        ],
+        "place": [
+            "The place is the location where the new organization is being established. Examples are 'here' in 'plans to follow up its May Day launching by opening a 'sex Disneyland' here'.",
+            "The place provides context for the geographical setting of the StartOrg event. Examples are 'Sydney' in 'Prostitution is completely decriminalised in Sydney and we are going to build a monster'.",
+            "In some cases, the place may refer to a broader region or country where the new organization will operate. Examples are 'Japan' in 'AIG is in the final stage of talks to take over General Electric's Japanese life insurance arm in a deal to create Japan's sixth largest life insurer'.",
+            "The place can also be a specific venue or premises where the new organization is being set up. Examples are 'premises' in 'we have found much bigger premises in a much better location to create a sex Disneyland'.",
+            "Unlike the agent and org arguments, which refer to entities, the place argument provides the spatial context for the StartOrg event. Examples are 'Melbourne' in 'the Melbourne-based bordello announced Wednesday'."
+        ]
+    }
+}

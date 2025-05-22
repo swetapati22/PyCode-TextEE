@@ -1,0 +1,28 @@
+{
+    "Divorce(LifeEvent)": {
+        "description": [
+            "The event is triggered by the legal or formal dissolution of a marriage or marital union. Example triggers include 'divorce', 'divorced', 'separated', and 'Talaq'.",
+            "The event is characterized by the end of a marital relationship, often involving legal proceedings or mutual agreement. It typically involves two individuals who were previously married.",
+            "Unlike other LifeEvents such as 'Marriage' or 'Birth', this event signifies the termination of a marital relationship rather than its commencement or the addition of a family member.",
+            "Triggers such as 'divorce' and 'separated' are indicative of this event type, not events like 'ArrestJail' or 'Attack', which involve legal or physical conflict rather than the dissolution of a marriage.",
+            "The outcomes of this event often include changes in legal status, living arrangements, and financial responsibilities, distinguishing it from events like 'Sue' or 'DeclareBankruptcy', which involve legal disputes or financial insolvency."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'our' in 'our divorce', 'parents' in 'my parents divorced', and 'he' and 'mum' in 'he divorced your mum'. This argument identifies the individuals involved in the divorce.",
+            "The 'person' argument is crucial as it specifies the parties whose marital relationship is being dissolved. It can refer to one or both individuals in the marriage.",
+            "In cases where the text mentions multiple people, such as 'my ex' and 'I', both are considered 'person' arguments as they are directly involved in the divorce.",
+            "Edge cases include references to individuals by pronouns or possessive forms, such as 'your' in 'your divorce' or 'they' in 'they divorce'. These still qualify as 'person' arguments.",
+            "Unlike events like 'ArrestJail' where 'person' might refer to the arrested individual, in the 'Divorce' event, 'person' specifically refers to the individuals whose marriage is ending."
+        ],
+        "place": [
+            "Examples are 'Michigan' in 'Michigan is a no-fault divorce state' and 'England' in 'sued him over it in England'. This argument identifies the location where the divorce is taking place or relevant legal jurisdiction.",
+            "The 'place' argument is important as it provides context about the legal environment or geographical setting of the divorce, which can influence the proceedings.",
+            "In some cases, the 'place' might be implied rather than explicitly stated, such as 'in this state' or 'here'. These references still qualify as 'place' arguments if they indicate a location.",
+            "Edge cases include situations where the place is mentioned in relation to other events, such as 'divorced in Michigan' versus 'arrested in Michigan'. Only the former is relevant to the 'Divorce' event.",
+            "Unlike events like 'TransportArtifact' where 'place' might refer to a destination or origin, in the 'Divorce' event, 'place' specifically refers to the location of the divorce proceedings or relevant jurisdiction."
+        ]
+    }
+}

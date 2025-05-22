@@ -1,0 +1,63 @@
+{
+    "Transport(MovementEvent)": {
+        "description": [
+            "The event is triggered by actions or processes involving the movement of people, objects, or entities from one location to another. Example triggers include 'transport', 'drive', 'fly', 'bring', and 'head'.",
+            "The event is characterized by the involvement of an agent or vehicle facilitating the movement, and an artifact or victim being moved. The movement typically has a clear origin and destination.",
+            "Unlike other MovementEvents, the Transport event specifically involves the physical relocation of entities, often with a specified vehicle or agent. For example, 'carting away victims' is a Transport event, whereas 'walking' without a specified destination or vehicle is not.",
+            "Triggers such as 'deliver' or 'send' are indicative of Transport events, as they imply the movement of an artifact or person to a new location. In contrast, 'arrive' or 'reach' are more indicative of the completion of a movement rather than the process itself.",
+            "The outcome of a Transport event is the successful relocation of the artifact or victim to the destination. This differs from events like 'Attack' or 'Demonstrate', where the focus is on the action or conflict rather than the movement."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'forces', 'troops', 'parents'. The agent is the entity responsible for initiating or facilitating the transport. This can be a person, group, or organization.",
+            "The agent plays a crucial role in the event, as they are the ones who cause the movement to occur. For instance, 'U.S. forces' in 'assisted by U.S. forces in getting back into Iraq'.",
+            "In some cases, the agent may be implied rather than explicitly stated. For example, 'medical teams carting away victims' implies that the medical teams are the agents.",
+            "The agent is distinct from the vehicle, which is the means of transport. For example, 'parents drove' indicates the parents as the agents, while the car would be the vehicle.",
+            "Edge cases include situations where the agent is a non-human entity, such as 'the wind carried the seeds'. Here, 'wind' would be the agent."
+        ],
+        "artifact": [
+            "Examples are 'women', 'children', 'troops', 'tanks'. The artifact is the entity being transported. This can be a person, group, or object.",
+            "The artifact is central to the event, as the movement revolves around relocating this entity. For instance, 'troops headed for Iraq' identifies 'troops' as the artifact.",
+            "Artifacts can be animate or inanimate. For example, 'carting away victims' involves animate artifacts, while 'transporting goods' involves inanimate artifacts.",
+            "The artifact is distinct from the agent, who facilitates the movement. For example, 'parents drove Liana Owen' identifies 'Liana Owen' as the artifact and 'parents' as the agents.",
+            "In some cases, multiple artifacts may be involved, such as 'bringing in more troops and tanks'. Here, both 'troops' and 'tanks' are artifacts."
+        ],
+        "destination": [
+            "Examples are 'Sudan', 'Iraq', 'home'. The destination is the endpoint of the transport, where the artifact is being moved to.",
+            "The destination is crucial for defining the scope of the event, as it indicates the goal of the movement. For instance, 'headed for Iraq' specifies 'Iraq' as the destination.",
+            "Destinations can be specific locations or more general areas. For example, 'home' is a general destination, while 'Manhattan' is a specific one.",
+            "The destination is distinct from the origin, which is the starting point of the movement. For example, 'from Pennsylvania to Manhattan' identifies 'Manhattan' as the destination.",
+            "In some cases, the destination may be implied rather than explicitly stated. For example, 'bring them home' implies 'home' as the destination."
+        ],
+        "origin": [
+            "Examples are 'Sudan', 'Pennsylvania', 'Fort Hood'. The origin is the starting point of the transport, where the artifact begins its movement.",
+            "The origin is important for understanding the full context of the event, as it provides the initial location of the artifact. For instance, 'drove from Pennsylvania' specifies 'Pennsylvania' as the origin.",
+            "Origins can be specific locations or more general areas. For example, 'Fort Hood' is a specific origin, while 'a region' is more general.",
+            "The origin is distinct from the destination, which is the endpoint of the movement. For example, 'from Pennsylvania to Manhattan' identifies 'Pennsylvania' as the origin.",
+            "In some cases, the origin may be implied rather than explicitly stated. For example, 'headed for Iraq' implies that the origin is somewhere other than Iraq."
+        ],
+        "place": [
+            "Examples are 'Iraq', 'streets', 'airfield'. The place is a location relevant to the transport event, which may not necessarily be the origin or destination.",
+            "The place provides additional context for the event, indicating where the transport is occurring or being observed. For instance, 'in Iraq' specifies 'Iraq' as the place.",
+            "Places can be specific locations or more general areas. For example, 'airfield' is a specific place, while 'streets' is more general.",
+            "The place is distinct from the origin and destination, which are the starting and ending points of the movement. For example, 'in Iraq' is a place, while 'from Fort Hood to the region' specifies origin and destination.",
+            "In some cases, the place may overlap with the origin or destination, but it provides a broader context. For example, 'parachuted into an airfield in a Kurdish-controlled area' specifies both a place and a destination."
+        ],
+        "vehicle": [
+            "Examples are 'trains', 'car', 'airplane'. The vehicle is the means of transport used to move the artifact from the origin to the destination.",
+            "The vehicle is essential for understanding how the transport is being carried out. For instance, 'trains running to and from southern Sudan' specifies 'trains' as the vehicle.",
+            "Vehicles can be various modes of transport, including land, air, and sea. For example, 'drove' implies a car, while 'flew' implies an airplane.",
+            "The vehicle is distinct from the agent, who facilitates the movement. For example, 'parents drove' identifies 'parents' as the agents and 'car' as the vehicle.",
+            "In some cases, the vehicle may be implied rather than explicitly stated. For example, 'headed for Iraq' may imply the use of military vehicles."
+        ],
+        "victim": [
+            "Examples are 'who', 'victims', 'soldiers'. The victim is the entity being transported, often in a context where they are being moved against their will or in a vulnerable state.",
+            "The victim is central to the event, as the movement revolves around relocating this entity. For instance, 'carting away victims' identifies 'victims' as the transported entities.",
+            "Victims are typically animate entities, such as people or animals. For example, 'abducted women and children' involves human victims.",
+            "The victim is distinct from the agent, who facilitates the movement. For example, 'forces assisted who' identifies 'who' as the victim and 'forces' as the agents.",
+            "In some cases, the victim may be implied rather than explicitly stated. For example, 'bring them home' implies that 'them' are the victims being transported."
+        ]
+    }
+}

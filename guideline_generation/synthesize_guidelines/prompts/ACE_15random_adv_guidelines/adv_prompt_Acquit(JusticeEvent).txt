@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Acquit(JusticeEvent)
+```json
+{
+    "Acquit(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the formal decision of a court or legal authority to declare a defendant not guilty of the charges against them. Example triggers include 'acquitted', 'walk free', and 'acquittal'.",
+            "The event is characterized by the legal exoneration of a defendant, meaning they are released from the charges and any associated penalties. This event is specific to the legal context and involves a formal judicial process.",
+            "Unlike the 'Convict' event, which results in a guilty verdict, the 'Acquit' event results in a not guilty verdict. Triggers such as 'convicted' are indicative of the 'Convict' event type, not the 'Acquit' event type.",
+            "The outcome of the 'Acquit' event is the release of the defendant from legal charges, whereas similar events like 'Sentence' or 'Convict' result in the imposition of penalties or a guilty verdict.",
+            "The event is distinct from other JusticeEvents such as 'ArrestJail' or 'Sentence', as it specifically involves the exoneration of the defendant. Triggers like 'arrested' or 'sentenced' are not indicative of the 'Acquit' event type."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are the legal authority or body responsible for delivering the acquittal verdict. This can include judges, courts, or juries. For instance, in 'The court acquitted the defendant', 'court' is the adjudicator.",
+            "The adjudicator plays a crucial role in the event as they are the ones who determine the outcome of the trial. In 'Judge Smith acquitted the defendant', 'Judge Smith' is the adjudicator.",
+            "In cases where multiple adjudicators are involved, each can be considered an adjudicator. For example, 'The panel of judges acquitted the defendant' includes multiple adjudicators.",
+            "The adjudicator must be a formal legal entity or individual with the authority to deliver a verdict. Unlike a 'prosecutor' or 'defense attorney', the adjudicator has the final say in the verdict.",
+            "Edge cases include scenarios where the adjudicator is implied rather than explicitly mentioned. For example, in 'The defendant was acquitted', the adjudicator is implied to be the court or judge overseeing the case."
+        ],
+        "defendant": [
+            "Examples are the individuals or entities who are being tried and subsequently acquitted. For instance, in 'The court acquitted John Doe', 'John Doe' is the defendant.",
+            "The defendant is the central figure in the event, as the acquittal directly pertains to them. In 'Jane Smith was acquitted of all charges', 'Jane Smith' is the defendant.",
+            "In cases where the defendant is referred to by a role or title rather than a name, they are still considered the defendant. For example, 'The accused was acquitted' refers to the defendant.",
+            "The defendant must be the party against whom the charges were initially brought. Unlike a 'witness' or 'victim', the defendant is the one standing trial.",
+            "Edge cases include scenarios where the defendant is part of a group. For example, in 'Several defendants were acquitted', each member of the group is considered a defendant."
+        ]
+    }
+}
+```

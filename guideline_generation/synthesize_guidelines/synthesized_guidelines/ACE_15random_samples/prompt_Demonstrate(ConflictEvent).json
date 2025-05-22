@@ -1,0 +1,28 @@
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": [
+            "The event is triggered by public gatherings or actions where people express their opinions, often in opposition to something. Example triggers include 'rally', 'march', 'protest', 'gathered', and 'campaign'.",
+            "The event is characterized by collective actions such as marches, rallies, or protests, typically involving a significant number of participants. It often involves public displays of dissent or support for a cause.",
+            "Unlike other ConflictEvents, this event does not involve direct physical confrontations or violence as the primary focus, although such incidents may occur as a secondary outcome. For example, 'clash' or 'riot' would indicate a different event type.",
+            "Triggers such as 'meeting' or 'conference' are indicative of organized, formal gatherings and are not considered part of this event type. Demonstrate events are more spontaneous or grassroots in nature.",
+            "The outcomes of this event type often include public awareness, media coverage, and sometimes arrests or clashes with authorities, but the primary focus is on the act of demonstrating itself."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'protesters', 'demonstrators', 'people', 'group', 'individuals'. This argument identifies the participants involved in the demonstration.",
+            "The entity is crucial as it highlights who is taking part in the event, providing context to the scale and nature of the demonstration. For instance, 'students' or 'activists' can indicate the demographic involved.",
+            "In cases where the entity is a specific individual, such as 'Liana Owen', it personalizes the event and can provide insight into the motivations or background of the participants.",
+            "The entity can also be a collective term, such as 'crowd' or 'group', which emphasizes the collective nature of the event without specifying individual participants.",
+            "Edge cases include when the entity is implied but not explicitly stated, such as 'they' or 'their', which still refers to the participants of the demonstration."
+        ],
+        "place": [
+            "Examples are 'New York', 'city', 'Manhattan', 'White House', 'plazas', 'streets'. This argument specifies the location where the demonstration takes place.",
+            "The place is important as it provides geographical context and can indicate the scale and impact of the event. For example, 'Washington' or 'San Francisco' can suggest a large, urban demonstration.",
+            "In some cases, the place might be a specific landmark or building, such as 'White House', which can add significance to the event due to the symbolic nature of the location.",
+            "The place can also be described in more general terms, such as 'city' or 'streets', which still provide context but are less specific.",
+            "Edge cases include when the place is implied through context, such as 'here' or 'there', which still indicate the location of the demonstration."
+        ]
+    }
+}

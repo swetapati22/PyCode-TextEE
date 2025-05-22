@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Transaction(Event)
+```json
+{
+    "Transaction(Event)": {
+        "description": [
+            "The event is triggered by actions involving the transfer of assets, goods, or services from one party to another. Example triggers include 'owes', 'mugged', 'seized', 'sold', 'take', 'handing out', and 'compensation'.",
+            "The event is characterized by the involvement of at least two parties: a giver and a recipient. The giver is the entity that provides the asset, good, or service, while the recipient is the entity that receives it.",
+            "Unlike related events such as 'Injure' or 'Attack', which involve harm or damage, the 'Transaction' event focuses on the exchange or transfer of items of value, whether voluntarily or involuntarily.",
+            "Triggers such as 'burned' or 'convicted' are indicative of 'Injure' or 'Convict' events, not 'Transaction' events. The outcomes of 'Transaction' events typically involve a change in ownership or possession.",
+            "The event is not limited to financial transactions but can also include the transfer of physical goods, services, or other assets. The scope of the event includes both legal and illegal transactions, as well as voluntary and involuntary transfers."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "beneficiary": [
+            "Examples are 'they' in 'the government owes me', 'ex-sheriff' in 'seized in a drug bust'. The beneficiary is the entity that ultimately benefits from the transaction, even if they are not directly involved in the exchange.",
+            "The role of the beneficiary is crucial in understanding the broader impact of the transaction. For instance, in cases of asset forfeiture, the government may be the direct recipient, but the public or specific officials may be the beneficiaries.",
+            "In some cases, the beneficiary may not be explicitly mentioned but can be inferred from the context. For example, 'friends' in 'sold off to friends' implies that the friends are the beneficiaries of the transaction.",
+            "Unlike the recipient, the beneficiary may not always receive the asset directly. For example, in 'the government owes me', 'they' (the family) are the beneficiaries, not the direct recipients.",
+            "Edge cases include situations where the beneficiary is a group or an abstract entity, such as 'the public' or 'the community'. These cases require careful interpretation to identify the true beneficiary."
+        ],
+        "giver": [
+            "Examples are 'government' in 'the government owes me', 'someone' in 'someone on my campus is mugged'. The giver is the entity that provides or transfers the asset, good, or service in the transaction.",
+            "The giver's role is essential in identifying the source of the transaction. For instance, in asset forfeiture cases, the giver is often the entity from whom the assets are seized.",
+            "In some contexts, the giver may be an abstract or collective entity, such as 'the government' or 'the police'. These cases require understanding the broader context to accurately identify the giver.",
+            "Unlike the beneficiary, the giver is always directly involved in the transaction. For example, in 'handing out', 'they' are the givers, directly involved in the act of giving.",
+            "Edge cases include situations where the giver is not explicitly mentioned but can be inferred from the context. For example, in 'sold off to friends', the giver can be inferred to be the entity conducting the sale."
+        ],
+        "place": [
+            "Examples are 'campus' in 'someone on my campus is mugged', 'country' in 'the E.U. had spent 200 million euros on relief'. The place is the location where the transaction occurs or is relevant to the transaction.",
+            "The place provides context for the transaction, helping to understand where the exchange or transfer takes place. For instance, 'campus' indicates the location of the mugging incident.",
+            "In some cases, the place may be a broader geographical area, such as a country or city. For example, 'country' in 'the E.U. had spent 200 million euros on relief' indicates the location where the aid was received.",
+            "Unlike the giver or recipient, the place is not an entity but a location. It helps to situate the transaction within a specific physical or geographical context.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context. For example, in 'seized in a drug bust', the place can be inferred to be the location of the drug bust."
+        ],
+        "recipient": [
+            "Examples are 'me' in 'the government owes me', 'government' in 'assets seized and sold by the Federal government'. The recipient is the entity that receives the asset, good, or service in the transaction.",
+            "The recipient's role is crucial in identifying the endpoint of the transaction. For instance, in asset forfeiture cases, the government is often the recipient of the seized assets.",
+            "In some contexts, the recipient may be an abstract or collective entity, such as 'the government' or 'the public'. These cases require understanding the broader context to accurately identify the recipient.",
+            "Unlike the beneficiary, the recipient is always directly involved in the transaction. For example, in 'take all your stuff', 'they' are the recipients, directly involved in receiving the assets.",
+            "Edge cases include situations where the recipient is not explicitly mentioned but can be inferred from the context. For example, in 'sold off to friends', the recipient can be inferred to be the friends who receive the assets."
+        ]
+    }
+}
+```

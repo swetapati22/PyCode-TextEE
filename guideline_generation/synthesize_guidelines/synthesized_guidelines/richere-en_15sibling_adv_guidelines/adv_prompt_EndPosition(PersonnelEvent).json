@@ -1,0 +1,11 @@
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": "The EndPosition event is triggered by the termination or conclusion of a person's role, job, or position. This event is characterized by the end of an employment or position held by an individual, marked by specific actions or decisions such as 'retired', 'fired', 'quit', 'lost job', and 'gave up work'. Unlike the StartPosition event, which signifies the beginning of a role, the EndPosition event indicates the conclusion of such roles, whether voluntarily (e.g., 'resigned') or involuntarily (e.g., 'terminated'). The outcome is that the individual no longer holds the specified position or job, differing from events like Nominate, which involve the selection or proposal of a candidate for a position.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "The entity represents the organization or institution associated with the person's position. Examples include companies or organizations from which the person is departing, such as 'Pfizer' in 'Loss of 2,400 jobs at Pfizer'. In cases where the entity is not explicitly mentioned, it can be inferred from context, like 'got fired because of that' implying a company. Edge cases include broader categories like 'government' or 'industry', as in 'left the law' implying the legal industry.",
+            "person": "The person is the individual whose position is ending. Examples include 'mum' in 'My mum gave up work' and 'Sandusky' in 'Sandusky retired'. Pronouns such as 'he' or 'she' must be identified through context, like 'he' in 'retirement was forced because PSU knew'. Edge cases include groups of individuals, such as '2,400' in 'Loss of 2,400 jobs at Pfizer', representing the affected individuals.",
+            "place": "The place provides geographical context to the event. Examples include 'Sandwich' in 'Loss of 2,400 jobs at Pfizer in Sandwich'. If not explicitly mentioned, the place can be inferred from context, such as 'retired right after that incident' implying a known location. Edge cases include virtual or non-physical places, like 'online' or 'remote work', as in 'left the remote job'."
+        }
+    }
+}

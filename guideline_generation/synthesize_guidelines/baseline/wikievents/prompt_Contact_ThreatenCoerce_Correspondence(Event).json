@@ -1,0 +1,28 @@
+{
+    "Contact_ThreatenCoerce_Correspondence(Event)": {
+        "description": [
+            "The Contact_ThreatenCoerce_Correspondence event involves a communication where one party threatens or coerces another party through some form of correspondence. The event can be triggered by verbs such as 'sent', 'warning', 'threatened', 'coerced', or similar terms indicating a threatening or coercive communication. The event typically involves a communicator who sends the threat and a recipient who receives it.",
+            "Contact_ThreatenCoerce_Correspondence refers to an event where a threat or coercion is communicated from one entity to another through written or verbal correspondence. The event can be triggered by words like 'sent', 'warned', 'threatened', and 'coerced'. It involves identifying the communicator and the recipient of the threat.",
+            "This event type captures instances where a threat or coercion is conveyed through correspondence. Triggers for this event include terms like 'sent', 'warning', 'threatened', and 'coerced'. The event requires identifying the communicator who issues the threat and the recipient who receives it.",
+            "The Contact_ThreatenCoerce_Correspondence event involves the act of sending a threat or coercive message from one party to another. It can be triggered by words such as 'sent', 'warned', 'threatened', and 'coerced'. The key elements to identify are the communicator and the recipient.",
+            "This event type involves the communication of a threat or coercion through correspondence. Triggers include verbs like 'sent', 'warned', 'threatened', and 'coerced'. The event focuses on identifying the communicator who sends the threat and the recipient who receives it."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "communicator": [
+            "The communicator is the entity that sends the threatening or coercive message. Examples are 'an anonymous individual', 'the terrorist group', 'the suspect', 'the organization', and 'the sender'. The communicator can be a person, group, or organization responsible for issuing the threat.",
+            "The communicator refers to the person or group that issues the threat or coercive message. Examples are 'an individual', 'the group', 'the sender', 'the suspect', and 'the organization'. The communicator is the source of the threatening correspondence.",
+            "The communicator is the party responsible for sending the threat or coercive message. Examples are 'an anonymous individual', 'the terrorist group', 'the suspect', 'the organization', and 'the sender'. The communicator can be identified as the originator of the threat.",
+            "The communicator is the entity that communicates the threat or coercion. Examples are 'an individual', 'the group', 'the sender', 'the suspect', and 'the organization'. The communicator is the one who sends the threatening message.",
+            "The communicator is the source of the threatening or coercive correspondence. Examples are 'an anonymous individual', 'the terrorist group', 'the suspect', 'the organization', and 'the sender'. The communicator is the entity that issues the threat."
+        ],
+        "recipient": [
+            "The recipient is the entity that receives the threatening or coercive message. Examples are 'Buleleng district', 'the police', 'the authorities', 'the victim', and 'the organization'. The recipient can be a person, group, or organization targeted by the threat.",
+            "The recipient refers to the person or group that receives the threat or coercive message. Examples are 'the district', 'the police', 'the authorities', 'the victim', and 'the organization'. The recipient is the target of the threatening correspondence.",
+            "The recipient is the party that receives the threat or coercive message. Examples are 'Buleleng district', 'the police', 'the authorities', 'the victim', and 'the organization'. The recipient can be identified as the target of the threat.",
+            "The recipient is the entity that is targeted by the threatening or coercive message. Examples are 'the district', 'the police', 'the authorities', 'the victim', and 'the organization'. The recipient is the one who receives the threatening message.",
+            "The recipient is the target of the threatening or coercive correspondence. Examples are 'Buleleng district', 'the police', 'the authorities', 'the victim', and 'the organization'. The recipient is the entity that receives the threat."
+        ]
+    }
+}

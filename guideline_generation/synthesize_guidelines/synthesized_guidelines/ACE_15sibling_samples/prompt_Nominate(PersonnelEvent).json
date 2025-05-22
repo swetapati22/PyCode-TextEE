@@ -1,0 +1,28 @@
+{
+    "Nominate(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the act of officially naming or designating someone for a position or role. Example triggers include 'name', 'nominate', 'designate', and 'select'.",
+            "The event is characterized by the involvement of an agent who performs the act of nomination and a person who is being nominated. The scope of the event includes formal and informal contexts where a person is proposed for a role.",
+            "Unlike the 'Elect' event type, which involves a voting process, the 'Nominate' event type does not necessarily imply that the person will be chosen through an election. It focuses on the proposal or recommendation stage.",
+            "Triggers such as 'elected' or 'appointed' are indicative of the 'Elect' or 'StartPosition' event types, not the 'Nominate' event type. The 'Nominate' event is about the act of proposing a candidate, not the final selection or election.",
+            "The outcome of the 'Nominate' event is the identification of a candidate for a position, but it does not guarantee that the person will assume the role. This distinguishes it from events like 'StartPosition', where the person actually begins the role."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "The agent is the entity or individual who performs the act of nomination. Examples are 'the pope' in 'the pope will reportedly name a new head', and 'British Chancellor of the Exchequer Gordon Brown' in 'Gordon Brown on Tuesday named the current head'.",
+            "The agent is crucial as it indicates the authority or source behind the nomination. For instance, 'government' in 'named director of the SARS task force by the government' shows an official nomination.",
+            "In some cases, the agent can be implied or understood from context, such as 'you' in 'who you would name?' where the speaker is the agent.",
+            "The agent can be an individual or an organization, as seen in 'he's making an offer for the company, nominating his own board' where 'he' is the agent.",
+            "Edge cases include scenarios where the agent is not explicitly mentioned but can be inferred, such as 'Peterson, of course, is a candidate for the Lt. Governor nomination' where the nominating entity is implied."
+        ],
+        "person": [
+            "The person is the individual who is being nominated for a position or role. Examples are 'head' in 'name a new head of the troubled boston archdiocese', and 'candidate' in 'Peterson, of course, is a candidate for the Lt. Governor nomination'.",
+            "The person is the focus of the nomination and is the one proposed for the role. For instance, 'Chui Sai On' in 'named director of the SARS task force' is the person being nominated.",
+            "In some contexts, the person can be a group or a collective entity, such as 'board' in 'nominating his own board'.",
+            "The person can be referred to indirectly, such as 'who' in 'who you would name?' where the specific individual is not named but is the subject of the nomination.",
+            "Edge cases include scenarios where the person is not explicitly named but is understood from context, such as 'members' in 'selecting new Cabinet members' where the specific individuals are not listed but are the ones being nominated."
+        ]
+    }
+}

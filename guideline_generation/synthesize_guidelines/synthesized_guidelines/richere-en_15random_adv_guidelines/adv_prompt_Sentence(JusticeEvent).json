@@ -1,0 +1,11 @@
+{
+    "Sentence(JusticeEvent)": {
+        "description": "The Sentence event in the context of justice is triggered by the imposition of a judicial punishment or penalty on a defendant. This event is characterized by a formal declaration of punishment by an adjudicator, such as a court or judge, following a conviction. The punishment can include imprisonment, fines, or other penalties. It is distinct from the Convict event, which focuses on the determination of guilt, and the ChargeIndict event, which involves the formal accusation of a crime. The outcome of the Sentence event is the imposition of a specific penalty on the defendant, excluding processes like appealing or overturning the sentence, which are covered by the Appeal event. Example triggers include 'sentence', 'got', 'served', 'punishment', and 'sentenced'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the legal authority responsible for issuing the sentence, such as a court or judge. This entity plays a crucial role in determining the appropriate punishment for the defendant. For example, in 'The court sentenced him to 10 years in prison', 'court' is the adjudicator. Even if not explicitly mentioned, the adjudicator can often be inferred from the context.",
+            "defendant": "The defendant is the individual who is receiving the sentence. This person has been found guilty and is now facing the consequences of their actions. For instance, in 'The defendant was sentenced to 3 years in prison', 'defendant' is the person being sentenced. The defendant can be referred to by a pronoun or a descriptive term, such as 'he' or 'the man'.",
+            "place": "The place refers to the location where the sentencing takes place, such as a city, country, or specific court. This provides context for the judicial event. For example, in 'The court in New York sentenced him to 5 years', 'New York' is the place. The place is important for understanding the legal context and jurisdiction of the sentence."
+        }
+    }
+}

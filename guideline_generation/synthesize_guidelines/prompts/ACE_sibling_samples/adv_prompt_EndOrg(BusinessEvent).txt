@@ -1,0 +1,91 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_EndOrg(BusinessEvent)
+```json
+{
+    "EndOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the termination or dissolution of an organization. Example triggers include 'is no more', 'dissolving', 'dismantling', 'crumbled', 'collapsed', and 'is over'.",
+            "The event is characterized by the end of an organization's existence or its functional operations. This can include political regimes, companies, or other formal groups.",
+            "Unlike the StartOrg event, which marks the beginning of an organization, the EndOrg event signifies the cessation of its activities or existence.",
+            "Triggers such as 'merging' or 'opening' are indicative of MergeOrg or StartOrg events, not the EndOrg event type. The EndOrg event specifically involves the conclusion of an organization's operations.",
+            "The outcomes of the EndOrg event include the complete cessation of the organization's activities, often leading to significant changes in the related social, political, or economic landscape."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'rej geemg', 'party', 'empire', 'regime', and 'Baath Party'. The 'org' argument identifies the organization that is ending.",
+            "The 'org' argument is crucial as it specifies the entity whose operations or existence are ceasing. This can include political parties, regimes, companies, or other formal groups.",
+            "In the context of the EndOrg event, the 'org' argument helps to pinpoint the exact organization affected by the event. For instance, 'Saddam Hussein's regime' in the example 'is no more'.",
+            "The 'org' argument distinguishes the specific organization from other entities that might be mentioned in the text. For example, in 'dissolving the Baath Party', 'Baath Party' is the 'org'.",
+            "Edge cases include scenarios where the organization is part of a larger entity. For example, 'dismantling its entertainment empire' refers to 'empire' as the 'org', even though it is part of Vivendi Universal."
+        ],
+        "place": [
+            "Examples are 'iraq'. The 'place' argument identifies the location where the organization is ending.",
+            "The 'place' argument is important as it provides geographical context to the EndOrg event. This can help in understanding the regional impact of the organization's dissolution.",
+            "In the context of the EndOrg event, the 'place' argument helps to specify where the event is taking place. For instance, 'iraq' in the example 'is no more'.",
+            "The 'place' argument can distinguish between different locations that might be mentioned in the text. For example, in 'dissolving Saddam's Baath Party', if the location is specified, it would be the 'place'.",
+            "Edge cases include scenarios where the location is implied rather than explicitly stated. For example, 'the regime collapsed' might imply a specific country or region without directly mentioning it."
+        ]
+    }
+}
+```

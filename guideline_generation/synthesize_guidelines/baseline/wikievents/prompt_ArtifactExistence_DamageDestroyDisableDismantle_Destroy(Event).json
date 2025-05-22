@@ -1,0 +1,42 @@
+{
+    "ArtifactExistence_DamageDestroyDisableDismantle_Destroy(Event)": {
+        "description": [
+            "The ArtifactExistence_DamageDestroyDisableDismantle_Destroy event refers to the complete destruction or significant damage of an artifact, rendering it unusable or non-existent. The event can be triggered by verbs such as 'destroy', 'demolish', 'obliterate', 'annihilate', 'wreck', 'smash', 'explode', 'shot down', 'brought down', etc. This event type captures scenarios where an artifact is intentionally or unintentionally destroyed by a destroyer, often using an instrument, and possibly at a specific place.",
+            "ArtifactExistence_DamageDestroyDisableDismantle_Destroy is an event that captures the act of destroying or severely damaging an artifact. The event can be triggered by words like 'destroy', 'demolish', 'obliterate', 'annihilate', 'wreck', 'smash', 'explode', 'shot down', 'brought down', etc. It involves a destroyer who causes the destruction, potentially using an instrument, and the event may occur at a specific place.",
+            "The ArtifactExistence_DamageDestroyDisableDismantle_Destroy event type involves the destruction or severe damage of an artifact, making it unusable or non-existent. This event can be triggered by terms such as 'destroy', 'demolish', 'obliterate', 'annihilate', 'wreck', 'smash', 'explode', 'shot down', 'brought down', etc. It includes a destroyer, an artifact, and may involve an instrument and a place where the destruction occurs.",
+            "ArtifactExistence_DamageDestroyDisableDismantle_Destroy refers to events where an artifact is completely destroyed or significantly damaged. The event can be triggered by verbs like 'destroy', 'demolish', 'obliterate', 'annihilate', 'wreck', 'smash', 'explode', 'shot down', 'brought down', etc. It typically involves a destroyer, an artifact, and may include an instrument and a specific place.",
+            "The ArtifactExistence_DamageDestroyDisableDismantle_Destroy event captures the act of destroying or severely damaging an artifact, rendering it unusable or non-existent. This event can be triggered by words such as 'destroy', 'demolish', 'obliterate', 'annihilate', 'wreck', 'smash', 'explode', 'shot down', 'brought down', etc. It involves a destroyer, an artifact, and may include an instrument and a place where the destruction occurs."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifact": [
+            "The artifact is the object that is being destroyed or significantly damaged in the event. Examples are 'cache', 'windows', 'drone', 'aircraft', 'vehicle', etc. The artifact is the primary focus of the destruction and can be any tangible object.",
+            "The artifact refers to the item that is destroyed or severely damaged in the event. Examples are 'cache', 'windows', 'drone', 'aircraft', 'vehicle', etc. It is the object that undergoes destruction and can be any physical entity.",
+            "The artifact is the entity that is destroyed or significantly damaged in the event. Examples are 'cache', 'windows', 'drone', 'aircraft', 'vehicle', etc. It is the main object affected by the destruction.",
+            "The artifact is the object that is subject to destruction or severe damage in the event. Examples are 'cache', 'windows', 'drone', 'aircraft', 'vehicle', etc. It represents the item that is being destroyed.",
+            "The artifact is the item that is destroyed or significantly damaged in the event. Examples are 'cache', 'windows', 'drone', 'aircraft', 'vehicle', etc. It is the primary object of the destruction."
+        ],
+        "destroyer": [
+            "The destroyer is the entity (person, group, or organization) that causes the destruction of the artifact. Examples are 'squad', 'He', 'police', etc. The destroyer is responsible for the act of destruction.",
+            "The destroyer refers to the person, group, or organization that initiates the destruction of the artifact. Examples are 'squad', 'He', 'police', etc. It is the entity that performs the destructive action.",
+            "The destroyer is the agent (individual or collective) that carries out the destruction of the artifact. Examples are 'squad', 'He', 'police', etc. The destroyer is the one who causes the artifact to be destroyed.",
+            "The destroyer is the entity responsible for the destruction of the artifact. Examples are 'squad', 'He', 'police', etc. It is the person or group that executes the act of destruction.",
+            "The destroyer is the person, group, or organization that causes the artifact to be destroyed. Examples are 'squad', 'He', 'police', etc. The destroyer is the one who performs the destructive action."
+        ],
+        "instrument": [
+            "The instrument is the tool or means used by the destroyer to cause the destruction of the artifact. Examples are 'weapons', 'explosives', etc. The instrument facilitates the act of destruction.",
+            "The instrument refers to the device or method used by the destroyer to destroy the artifact. Examples are 'weapons', 'explosives', etc. It is the means through which the destruction is carried out.",
+            "The instrument is the object or method employed by the destroyer to cause the destruction of the artifact. Examples are 'weapons', 'explosives', etc. It is the tool or technique used in the destruction.",
+            "The instrument is the means or tool used by the destroyer to effect the destruction of the artifact. Examples are 'weapons', 'explosives', etc. It is what the destroyer uses to destroy the artifact.",
+            "The instrument is the method or device used by the destroyer to destroy the artifact. Examples are 'weapons', 'explosives', etc. It is the means by which the destruction is achieved."
+        ],
+        "place": [
+            "The place is the location where the destruction of the artifact occurs. Examples are 'Boylston Street', etc. The place provides the geographical context for the destruction event.",
+            "The place refers to the specific location where the artifact is destroyed. Examples are 'Boylston Street', etc. It is the site where the destruction takes place.",
+            "The place is the geographical location where the destruction of the artifact happens. Examples are 'Boylston Street', etc. It indicates where the event of destruction occurs.",
+            "The place is the area or location where the artifact is destroyed. Examples are 'Boylston Street', etc. It provides the setting for the destruction event.",
+            "The place is the specific site where the destruction of the artifact takes place. Examples are 'Boylston Street', etc. It is the location of the destruction."
+        ]
+    }
+}

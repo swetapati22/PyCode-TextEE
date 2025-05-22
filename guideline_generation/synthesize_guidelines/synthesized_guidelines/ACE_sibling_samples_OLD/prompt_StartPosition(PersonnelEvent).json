@@ -1,0 +1,35 @@
+{
+  "StartPosition(PersonnelEvent)": {
+    "description": [
+      "The event is triggered by an action or occurrence where an individual begins a new role, job, or position within an organization, institution, or other entity. Examples of triggers include 'replace,' 'took on,' and 'begins.'",
+      "This event captures the moment an individual formally assumes a new position, typically within a specified organizational or geographical context.",
+      "Unlike related events such as Nominate or Elect, StartPosition focuses on the start of a role rather than the process leading up to the selection or the termination of a previous position.",
+      "Triggers such as 'becomes' or 'takes office' signify the commencement of a position, as opposed to terms like 'resigns' or 'steps down,' which indicate EndPosition events.",
+      "The event involves identifying the individual (person) taking the position, the position or organization (entity) involved, and optionally, the geographical location (place) where the position is assumed."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "entity": [
+      "Examples are organizations, institutions, or specific positions associated with the new role being assumed, such as 'unit' or 'London School of Economics'.",
+      "This argument highlights the context or domain of the new role, often specifying the organization or entity the individual is joining or leading.",
+      "Entities are crucial for distinguishing the type and scope of the position, whether it pertains to leadership, administrative, or specialized roles.",
+      "Unlike the person argument, which identifies the individual assuming the role, entities refer to the broader organizational or institutional context.",
+      "In ambiguous cases, entities may be inferred from descriptions of the role or organization mentioned in the same context as the event trigger."
+    ],
+    "person": [
+      "Examples are individuals beginning a new position, such as 'Jean-Rene Fourtou' or 'Roh Moo-Hyun'.",
+      "The person is the central figure in the event, described as assuming, taking on, or beginning a specified role.",
+      "This argument is critical for understanding the agent of the event, differentiating StartPosition from other PersonnelEvents where the role or position itself might take precedence.",
+      "Unlike entities or places, the person argument focuses solely on the individual taking the role, irrespective of the organizational or geographical context.",
+      "In cases where multiple individuals are involved, annotate all explicitly mentioned individuals assuming distinct roles or positions."
+    ],
+    "place": [
+      "Examples are specific locations where the position is assumed or where the individual begins their new role, such as 'Paris'.",
+      "The place argument situates the event geographically, providing context about where the position or role is being assumed.",
+      "Unlike the entity argument, which specifies the organizational context, place focuses on the physical or geopolitical location of the event.",
+      "Places are optional and may not be present if the text does not specify a location; however, they should be annotated when explicitly mentioned.",
+      "In cases where multiple locations are mentioned, prioritize the one most closely tied to the start of the position."
+    ]
+  }
+}

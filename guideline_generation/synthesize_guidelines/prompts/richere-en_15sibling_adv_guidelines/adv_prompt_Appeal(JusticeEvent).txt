@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Appeal(JusticeEvent)
+```json
+{
+    "Appeal(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of formally requesting a higher court to review and change the decision of a lower court. Example triggers include 'appeal', 'appealed', and 'appellate'.",
+            "The event is characterized by the involvement of a defendant who seeks to overturn a previous judgment, often involving legal representatives and adjudicators. Key characteristics include the formal process and the legal context.",
+            "Unlike the Convict event, which finalizes a judgment, the Appeal event seeks to challenge and potentially reverse a judgment. Triggers such as 'convicted' are indicative of the Convict event, not the Appeal event.",
+            "The Appeal event often results in a higher court's review of the case, which can lead to various outcomes such as upholding, reversing, or modifying the original decision. This differs from the Acquit event, where the defendant is declared not guilty.",
+            "Triggers and outcomes for the Appeal event differ from the Sentence event, where the focus is on the punishment given. In the Appeal event, the focus is on challenging the validity of the previous judgment rather than the punishment itself."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'Supreme court', 'bench', 'court'. The adjudicator is the authority or body that reviews the appeal and makes a decision on it.",
+            "The adjudicator plays a crucial role in the Appeal event as they have the power to uphold, reverse, or modify the original decision. For instance, 'Supreme court' in 'an appeal was made to the Supreme court'.",
+            "In some cases, the adjudicator can be a specific judge or a panel of judges. For example, 'He will arbitrate Alex Rodriguez\u2019s appeal'.",
+            "The adjudicator is distinct from the prosecutor, who represents the state or the public in the case. Unlike the prosecutor, the adjudicator remains neutral and makes decisions based on the law.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from the context, such as 'the appeal worked its way through the courts'."
+        ],
+        "defendant": [
+            "Examples are 'i', 'his', 'Rodriguez'. The defendant is the individual or entity that is appealing the previous judgment.",
+            "The defendant is central to the Appeal event as they are the ones seeking to overturn the decision. For instance, 'Rodriguez has appealed his 211-game suspension'.",
+            "In some cases, the defendant may be represented by legal counsel or another representative. For example, 'an appeal was made to the Supreme court by a representative of the Justice Department'.",
+            "The defendant is distinct from the adjudicator and prosecutor, as they are the party challenging the decision rather than making or defending it.",
+            "Edge cases include situations where the defendant is not explicitly mentioned but can be inferred from the context, such as 'his appeal worked its way through the courts'."
+        ],
+        "place": [
+            "Examples are 'U.S.', 'London', 'Supreme court'. The place is the location where the appeal is being heard or processed.",
+            "The place is important as it provides context for the jurisdiction and legal framework under which the appeal is being considered. For instance, 'an appeal was made to the Supreme court'.",
+            "In some cases, the place may refer to the specific court or city where the appeal is taking place. For example, 'a Jobcentre In London'.",
+            "The place is distinct from the adjudicator and defendant, as it refers to the location rather than the individuals involved in the appeal.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from the context, such as 'the appeal worked its way through the courts'."
+        ],
+        "prosecutor": [
+            "Examples are 'representative', 'he'. The prosecutor is the individual or entity representing the state or public in the appeal process.",
+            "The prosecutor plays a key role in the Appeal event as they defend the original judgment and argue against the appeal. For instance, 'an appeal was made to the Supreme court by a representative of the Justice Department'.",
+            "In some cases, the prosecutor may be a specific individual or a representative of a larger entity. For example, 'he said he planned to appeal the sentence'.",
+            "The prosecutor is distinct from the adjudicator and defendant, as they are the party defending the original decision rather than making or challenging it.",
+            "Edge cases include situations where the prosecutor is not explicitly mentioned but can be inferred from the context, such as 'prosecutors, long before trial, had offered her a plea deal'."
+        ]
+    }
+}
+```

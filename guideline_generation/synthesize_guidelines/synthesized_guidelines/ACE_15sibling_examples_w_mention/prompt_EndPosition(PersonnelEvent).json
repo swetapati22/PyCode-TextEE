@@ -1,0 +1,41 @@
+{
+    "EndPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the termination or conclusion of a person's role or position within an organization or entity. Example triggers include 'quit', 'ending', 'removal', 'leave', and 'former'.",
+            "The event is characterized by a person ceasing to hold a specific position or title, often accompanied by a change in their professional status. This can be voluntary or involuntary.",
+            "Unlike the StartPosition event, which marks the beginning of a role, the EndPosition event signifies the end of a person's tenure in a particular role. For example, 'quit' indicates an EndPosition event, whereas 'appointed' would indicate a StartPosition event.",
+            "Triggers such as 'resigned', 'stepped down', and 'terminated' are indicative of the EndPosition event type, not the Nominate or Elect event types, which involve the selection or election of individuals to new roles.",
+            "The outcome of the EndPosition event is the vacancy of the position previously held by the person, which may lead to subsequent events such as Nominate or StartPosition to fill the vacancy."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger (mention) is the word or phrase that indicates the end of a person's role. Examples include 'quit', 'ending', 'removal', 'leave', and 'former'.",
+            "Triggers such as 'resigned', 'stepped down', and 'terminated' are valid for this event type. For instance, 'Barry Diller quit' uses 'quit' as the trigger.",
+            "Edge cases include phrases like 'no longer' or 'ceased to be', which also indicate the end of a position. For example, 'He is no longer the CEO' uses 'no longer' as the trigger.",
+            "Unlike the StartPosition event, which might use triggers like 'appointed' or 'hired', the EndPosition event uses triggers that denote the conclusion of a role.",
+            "Triggers such as 'former' and 'ex-' are also valid, as they indicate that the person previously held the position but no longer does. For example, 'former president' uses 'former' as the trigger."
+        ],
+        "entity": [
+            "Examples are 'Vivendi Universal Entertainment', 'Chinese', and 'Vivendi Universal'. The entity argument refers to the organization or entity from which the person is ending their position.",
+            "The entity is crucial as it provides context about where the person held their position. For instance, 'Barry Diller quit as chief of Vivendi Universal Entertainment' uses 'Vivendi Universal Entertainment' as the entity.",
+            "In cases where the entity is not explicitly mentioned, it can often be inferred from the context. For example, 'He ended his role as CEO' might imply the entity if previously mentioned.",
+            "Unlike the place argument, which refers to a geographical location, the entity argument refers to an organization or company. For example, 'Vivendi Universal' is an entity, not a place.",
+            "Edge cases include situations where the entity is a broader term, such as 'government' or 'administration'. For example, 'He left his position in the government' uses 'government' as the entity."
+        ],
+        "person": [
+            "Examples are 'Barry Diller', 'Jean-Marie Messier', and 'he'. The person argument refers to the individual whose position is ending.",
+            "The person is the central figure in the event, as their role or position is the one being terminated. For instance, 'Barry Diller quit' uses 'Barry Diller' as the person.",
+            "In cases where the person's name is not explicitly mentioned, pronouns like 'he' or 'she' can be used. For example, 'He ended his role' uses 'he' as the person.",
+            "Unlike the entity argument, which refers to an organization, the person argument specifically identifies the individual. For example, 'Jean-Marie Messier' is a person, not an entity.",
+            "Edge cases include titles or roles that imply a person, such as 'the president' or 'the CEO'. For example, 'The president stepped down' uses 'the president' as the person."
+        ],
+        "place": [
+            "Examples are 'Chinese' and 'Paris'. The place argument refers to the geographical location associated with the end of the position.",
+            "The place provides additional context about where the event is taking place. For instance, 'He was the first world leader to go to Beijing' uses 'Beijing' as the place.",
+            "In cases where the place is not explicitly mentioned, it can often be inferred from the context. For example, 'He left his position in the company' might imply a place if previously mentioned.",
+            "Unlike the entity argument, which refers to an organization, the place argument refers to a geographical location. For example, 'Paris' is a place, not an entity.",
+            "Edge cases include broader terms like 'country' or 'region'. For example, 'He left his position in the country' uses 'country' as the place."
+        ]
+    }
+}

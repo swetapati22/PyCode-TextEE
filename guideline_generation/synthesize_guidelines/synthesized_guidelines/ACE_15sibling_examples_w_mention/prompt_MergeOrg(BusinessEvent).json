@@ -1,0 +1,27 @@
+{
+    "MergeOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the merging of two or more organizations into a single entity. Example triggers include 'merged', 'merger', and 'consolidation'.",
+            "The event is characterized by the combination of separate organizations into one, often to increase efficiency, market share, or resources. Key characteristics include the involvement of multiple organizations and the creation of a unified entity.",
+            "Unlike the StartOrg event, which involves the creation of a new organization, the MergeOrg event involves the unification of existing organizations. For example, 'opening' is indicative of StartOrg, not MergeOrg.",
+            "Triggers such as 'bankruptcy' are indicative of the DeclareBankruptcy event, not the MergeOrg event. The MergeOrg event focuses on the unification process rather than financial failure.",
+            "The outcome of the MergeOrg event is a single, combined organization, which differentiates it from the EndOrg event, where an organization ceases to exist. For example, 'is no more' is indicative of EndOrg, not MergeOrg."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger (mention) is the word or phrase that indicates the merging of organizations. Examples include 'merged', 'merger', and 'consolidation'.",
+            "Valid triggers for the MergeOrg event include terms that explicitly state or imply the unification of organizations. For instance, 'merged' in 'the companies merged' is a valid trigger.",
+            "Edge cases include phrases like 'combined forces' or 'joined together', which may imply a merger but need context to confirm. For example, 'joined forces' in a military context is not a valid trigger.",
+            "Triggers should be distinguished from similar terms used in different contexts. For example, 'merger' in 'merger of ideas' is not a valid trigger for the MergeOrg event.",
+            "The trigger must indicate a formal or official merging process. Informal or metaphorical uses, such as 'merged their efforts', are not valid triggers for this event type."
+        ],
+        "org": [
+            "Examples are the names of the organizations involved in the merger. For instance, 'Department of Minority Business Enterprise' and 'Department of Business Assistance' in 'merged the Department of Minority Business Enterprise with the Department of Business Assistance'.",
+            "The role of the 'org' argument is to specify the entities being unified. It is crucial for identifying the participants in the MergeOrg event.",
+            "In cases where only one organization is mentioned, it should be clear that it is part of a merger. For example, 'Warner Communications' in 'started as a merger between business in the three most mob-influenced industries around'.",
+            "The 'org' argument should not include entities that are not part of the merger. For example, 'competitors' in 'buying out their bankrupt competitors' is not a valid 'org' argument.",
+            "The 'org' argument must refer to actual organizations, not abstract concepts or non-business entities. For example, 'industries' in 'merger between business in the three most mob-influenced industries' is not a valid 'org' argument."
+        ]
+    }
+}

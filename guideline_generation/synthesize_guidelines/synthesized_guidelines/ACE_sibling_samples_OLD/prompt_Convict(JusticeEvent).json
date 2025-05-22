@@ -1,0 +1,35 @@
+{
+    "Convict(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the formal declaration of a defendant's guilt in a court of law. Example triggers include 'convicted', 'found guilty', and 'declared guilty'.",
+            "The event is characterized by the legal determination that an individual or group has committed a crime, typically following a trial or legal proceeding.",
+            "Unlike the 'Sentence' event, which focuses on the punishment assigned, the 'Convict' event centers on the determination of guilt. For example, 'sentenced to 10 years' is indicative of a 'Sentence' event, not a 'Convict' event.",
+            "Triggers such as 'extradition' or 'hearing' are indicative of 'Extradite' or 'TrialHearing' events, respectively, not the 'Convict' event type.",
+            "The outcome of the 'Convict' event is the formal recognition of guilt, which may lead to subsequent events such as sentencing or appeals."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'jury', 'judge', or 'court'. The adjudicator is the entity responsible for determining the guilt of the defendant.",
+            "The adjudicator plays a crucial role in the legal process, as they are the authority that delivers the verdict. For instance, 'a Manhattan jury' in the example 'a Manhattan jury convicted Alfred Taubman'.",
+            "In some cases, the adjudicator may be a collective body, such as a 'panel of judges' or 'tribunal'.",
+            "Unlike the 'defendant', the adjudicator is not the one being judged but the one making the judgment.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but can be inferred from context, such as 'the court found him guilty'."
+        ],
+        "defendant": [
+            "Examples are 'Alfred Taubman', 'offenders', or 'those'. The defendant is the individual or group being judged for committing a crime.",
+            "The defendant is the central figure in the 'Convict' event, as the event revolves around their guilt. For example, 'Five of them are Indonesians convicted of murders'.",
+            "In some cases, the defendant may be referred to collectively, such as 'the accused' or 'the defendants'.",
+            "Unlike the 'adjudicator', the defendant is the one whose actions are being judged.",
+            "Edge cases include situations where the defendant is not explicitly named but can be inferred from context, such as 'the man convicted of the crime'."
+        ],
+        "place": [
+            "Examples are 'Manhattan', 'Indonesia', or 'court'. The place is the location where the conviction occurs or is relevant to the event.",
+            "The place provides context for the 'Convict' event, indicating where the legal proceedings took place. For instance, 'convicted in Manhattan'.",
+            "In some cases, the place may refer to the jurisdiction or legal authority, such as 'federal court' or 'state court'.",
+            "Unlike the 'adjudicator' or 'defendant', the place is a location rather than a person or entity.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred from context, such as 'convicted in a high-profile case'."
+        ]
+    }
+}

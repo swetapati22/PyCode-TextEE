@@ -1,0 +1,34 @@
+{
+    "Divorce(LifeEvent)": {
+        "description": [
+            "The event is triggered by the legal dissolution of a marriage, often indicated by terms such as 'divorce', 'filed for divorce', or 'divorce settlement'.",
+            "The event is characterized by the formal ending of a marital relationship, typically involving legal proceedings or agreements.",
+            "Unlike the 'Marry' event, which signifies the beginning of a marital relationship, the 'Divorce' event marks its termination.",
+            "Triggers such as 'divorce' or 'filed for divorce' are indicative of the 'Divorce' event type, not events like 'Marry' or 'Injure'.",
+            "The event outcomes include the separation of the individuals involved and potential legal settlements, distinguishing it from other LifeEvents like 'BeBorn' or 'Die'."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the specific term or phrase that indicates the occurrence of a divorce, such as 'divorce', 'filed for divorce', or 'divorce settlement'.",
+            "Examples of valid triggers include 'divorce', 'filed for divorce', and 'divorce settlement'.",
+            "Variations of the trigger can include phrases like 'sued for divorce' or 'agreed to divorce'.",
+            "Edge cases might involve terms like 'separation' which do not necessarily indicate a legal divorce.",
+            "Triggers such as 'marriage' or 'wedding' are indicative of the 'Marry' event type, not the 'Divorce' event type."
+        ],
+        "person": [
+            "Examples are 'Hunter', 'star', 'Rachel Hunter', 'husband', 'Anne-Marie', and 'Crichton'.",
+            "The 'person' argument refers to the individuals involved in the divorce, typically the spouses.",
+            "This argument is crucial as it identifies the parties whose marital relationship is being dissolved.",
+            "In cases where multiple individuals are mentioned, all relevant persons should be annotated.",
+            "Unlike the 'victim' argument in the 'Injure' event, the 'person' argument in the 'Divorce' event does not imply harm but rather the end of a marital relationship."
+        ],
+        "place": [
+            "Examples are 'Los Angeles', 'court', and 'Los Angeles Superior Court'.",
+            "The 'place' argument indicates the location where the divorce proceedings or filings occur.",
+            "This argument is important as it provides context about the jurisdiction or venue of the divorce.",
+            "In some cases, the place might be implied rather than explicitly stated, such as 'court' or 'city'.",
+            "Unlike the 'place' argument in the 'Injure' event, which indicates where the injury occurred, the 'place' in the 'Divorce' event refers to the legal setting of the divorce."
+        ]
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "Attack(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions or incidents where one party inflicts harm or damage on another, often involving physical violence or destruction. Example triggers include 'killed', 'raping', 'drugging', 'blast', 'tore', 'explosion', 'clashed', 'war'.",
+            "The event is characterized by the presence of an aggressor (attacker) and a recipient of the aggression (victim or target). It often involves the use of instruments or weapons and occurs in specific locations. Example: 'The mob dragged out three members of a family and killed them with machetes and spears'.",
+            "Unlike other ConflictEvents such as Demonstrate, which involve public displays of protest without necessarily causing harm, Attack events specifically involve harm or the intent to harm. Example: 'clashed' in the context of demonstrators and police.",
+            "Triggers such as 'charges' or 'lawsuit' are indicative of JusticeEvents, not Attack events. Attack events focus on physical or psychological harm rather than legal actions or proceedings.",
+            "The outcomes of Attack events typically include injury, death, or significant damage to property or individuals, distinguishing them from events like Transport or TransferOwnership, which involve movement or change of possession without harm. Example: 'A powerful bomb tore through a waiting shed'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are individuals or groups initiating the attack, such as 'luster' in 'luster skipped bail during his trial in January for raping and drugging three women'.",
+            "The agent is the entity responsible for carrying out the attack, often synonymous with the attacker. Example: 'bomber' in 'A suicide bomber detonated explosives'.",
+            "In some cases, the agent may be an organization or collective group. Example: 'mob' in 'The mob dragged out three members of a family'.",
+            "The agent can also be a single individual acting alone. Example: 'luster' in 'luster skipped bail'.",
+            "The agent is crucial for identifying the source of the attack, distinguishing it from other involved parties. Example: 'demonstrators' in 'demonstrators clashed with police'."
+        ],
+        "attacker": [
+            "Examples are the entities directly involved in executing the attack, such as 'mob' in 'The mob dragged out three members of a family'.",
+            "The attacker is the party that initiates the harmful action. Example: 'demonstrators' in 'demonstrators clashed with police'.",
+            "The attacker can be a group or an individual. Example: 'police' in 'demonstrators clashed with police'.",
+            "The attacker is distinct from the agent in that it specifically refers to those causing harm. Example: 'demonstrators' in 'the ensuing clashes'.",
+            "The attacker is essential for understanding the dynamics of the attack, identifying who is responsible for the aggression. Example: 'mob' in 'The mob dragged out three members of a family'."
+        ],
+        "instrument": [
+            "Examples are objects or means used to carry out the attack, such as 'machetes' and 'spears' in 'killed them with machetes and spears'.",
+            "The instrument is the tool or method employed in the attack. Example: 'bomb' in 'A powerful bomb tore through a waiting shed'.",
+            "Instruments can be weapons, devices, or any means of causing harm. Example: 'devices' in 'the demonstrators using self-defence devices'.",
+            "The instrument is crucial for understanding the nature and severity of the attack. Example: 'explosives' in 'A suicide bomber detonated explosives'.",
+            "Instruments help distinguish the type of attack, such as a bombing versus a stabbing. Example: 'machetes' in 'killed them with machetes'."
+        ],
+        "place": [
+            "Examples are locations where the attack occurs, such as 'area' in 'before fleeing the area'.",
+            "The place is the specific site of the attack. Example: 'airport' in 'southern Philippines airport blast'.",
+            "Places can range from broad regions to specific buildings or areas. Example: 'shed' in 'A powerful bomb tore through a waiting shed'.",
+            "The place is important for contextualizing the event and understanding its impact. Example: 'city' in 'another explosion hit a bus terminal at the city'.",
+            "Places help identify the scope and potential collateral damage of the attack. Example: 'Iraq' in 'opposition to military intervention in Iraq'."
+        ],
+        "target": [
+            "Examples are the direct recipients of the attack, such as 'them' in 'killed them with machetes and spears'.",
+            "The target is the entity or object that the attack is directed at. Example: 'terminal' in 'another explosion hit a bus terminal'.",
+            "Targets can be individuals, groups, or physical structures. Example: 'shed' in 'The waiting shed literally exploded'.",
+            "The target is distinct from the victim in that it may not always be harmed but is the intended focus of the attack. Example: 'officers' in 'the ensuing clashes'.",
+            "Identifying the target helps clarify the intent and potential consequences of the attack. Example: 'terminal' in 'another explosion hit a bus terminal'."
+        ],
+        "victim": [
+            "Examples are individuals or groups harmed by the attack, such as 'women' in 'raping and drugging three women'.",
+            "The victim is the party that suffers the consequences of the attack. Example: 'officers' in 'the ensuing clashes'.",
+            "Victims can be directly injured or killed, or they can suffer psychological or emotional harm. Example: 'bomber' in 'A suicide bomber detonated explosives'.",
+            "The victim is crucial for understanding the human impact of the attack. Example: 'family' in 'The mob dragged out three members of a family'.",
+            "Identifying victims helps in assessing the severity and aftermath of the attack. Example: 'women' in 'raping and drugging three women'."
+        ]
+    }
+}

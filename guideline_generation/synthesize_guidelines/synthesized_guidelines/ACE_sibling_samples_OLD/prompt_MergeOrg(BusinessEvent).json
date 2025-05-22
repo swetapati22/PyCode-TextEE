@@ -1,0 +1,21 @@
+{
+  "MergeOrg(BusinessEvent)": {
+    "description": [
+      "The event is triggered by the union or consolidation of two or more organizations, entities, or businesses into a single entity. Examples of triggers include 'merger,' 'merged,' and 'tying the knot.'",
+      "This event captures the process of combining separate entities, often for operational, financial, or strategic reasons, with emphasis on the organizations involved.",
+      "Unlike StartOrg, which focuses on the creation of a new organization, MergeOrg emphasizes the combination of pre-existing entities.",
+      "Triggers such as 'remerger' and 'create larger conglomerates' distinguish MergeOrg from EndOrg, which marks the dissolution or cessation of an organization.",
+      "The event involves identifying the organizations being merged (org), which are central to understanding the scope and impact of the merger."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "org": [
+      "Examples are the organizations involved in the merger, such as 'Department of Minority Business Enterprise' and 'Department of Business Assistance', or 'Oracle' and 'Peoplesoft'.",
+      "The org argument identifies the entities being merged, emphasizing their roles as the primary participants in the event.",
+      "This argument is critical for understanding the dynamics of the event, as it focuses on the entities affected by the consolidation process.",
+      "Unlike related arguments in other BusinessEvent types, such as agent in StartOrg, the org argument refers exclusively to pre-existing entities being unified.",
+      "In cases where multiple organizations are involved, annotate all explicitly mentioned entities to provide a comprehensive representation of the merger."
+    ]
+  }
+}

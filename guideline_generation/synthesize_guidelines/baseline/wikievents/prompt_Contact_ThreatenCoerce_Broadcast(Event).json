@@ -1,0 +1,28 @@
+{
+    "Contact_ThreatenCoerce_Broadcast(Event)": {
+        "description": [
+            "The Contact_ThreatenCoerce_Broadcast event involves a situation where a communicator makes threats or attempts to coerce a recipient through public or broadcasted means. The event can be triggered by words like 'threats', 'threatened', 'pressuring', or similar terms indicating an attempt to intimidate or coerce.",
+            "The Contact_ThreatenCoerce_Broadcast event is characterized by a communicator issuing threats or coercive statements to a recipient, typically in a public or widely disseminated manner. The event can be triggered by terms such as 'threats', 'threatened', 'pressuring', and involves the intent to intimidate or force compliance.",
+            "Contact_ThreatenCoerce_Broadcast refers to an event where a communicator publicly threatens or coerces a recipient. This event can be identified by triggers like 'threats', 'threatened', 'pressuring', indicating an attempt to intimidate or coerce the recipient.",
+            "The Contact_ThreatenCoerce_Broadcast event occurs when a communicator makes threats or coercive statements towards a recipient in a public or broadcasted manner. Triggers for this event include words like 'threats', 'threatened', 'pressuring', which signify an attempt to intimidate or coerce.",
+            "In the Contact_ThreatenCoerce_Broadcast event, a communicator issues threats or coercive statements to a recipient through public or broadcasted means. This event can be triggered by terms such as 'threats', 'threatened', 'pressuring', indicating an effort to intimidate or coerce the recipient."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "communicator": [
+            "The communicator is the individual or entity that issues the threats or coercive statements. Examples are 'Abdo', 'the government', 'opposition'.",
+            "The communicator refers to the person or group making the threats or coercive statements. Examples include 'Abdo', 'the government', 'opposition'.",
+            "The communicator is the source of the threats or coercive statements. Examples are 'Abdo', 'the government', 'opposition'.",
+            "The communicator is the party responsible for making the threats or coercive statements. Examples include 'Abdo', 'the government', 'opposition'.",
+            "The communicator is the entity or individual that delivers the threats or coercive statements. Examples are 'Abdo', 'the government', 'opposition'."
+        ],
+        "recipient": [
+            "The recipient is the individual or group targeted by the threats or coercive statements. Examples are 'military', 'employees', 'they'.",
+            "The recipient refers to the person or group that the threats or coercive statements are directed towards. Examples include 'military', 'employees', 'they'.",
+            "The recipient is the target of the threats or coercive statements. Examples are 'military', 'employees', 'they'.",
+            "The recipient is the party that the threats or coercive statements are aimed at. Examples include 'military', 'employees', 'they'.",
+            "The recipient is the individual or group that receives the threats or coercive statements. Examples are 'military', 'employees', 'they'."
+        ]
+    }
+}

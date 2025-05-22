@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_ArrestJail(JusticeEvent)
+```json
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": [
+            "The event is triggered by actions that result in the detention or imprisonment of an individual. Example triggers include 'arrested', 'busted', 'locked away', and 'jail'.",
+            "The event is characterized by the involvement of law enforcement or other authorities detaining a person. It typically involves a person being taken into custody or confined to a specific place.",
+            "Unlike the 'TrialHearing' event, which involves legal proceedings, the 'ArrestJail' event focuses on the act of detaining or imprisoning an individual. For example, 'arrested' indicates 'ArrestJail', not 'TrialHearing'.",
+            "Triggers such as 'arrested' and 'busted' are indicative of 'ArrestJail', not events like 'Execute' or 'Extradite', which involve different legal outcomes or processes.",
+            "The event outcomes include the person being held in custody or confined to a jail or prison. This differs from 'Acquit', where the person is found not guilty and released, or 'Appeal', which involves challenging a legal decision."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are law enforcement officers or authorities responsible for the arrest or imprisonment. For instance, 'they' in 'they have arrested over 300' refers to the police or authorities.",
+            "The agent is crucial as it identifies who is carrying out the arrest or imprisonment. In 'the mounties busted the cell', 'mounties' is the agent.",
+            "In some cases, the agent may be implied rather than explicitly stated. For example, 'busted' in 'the sheriff just got busted' implies law enforcement as the agent.",
+            "The agent can be a specific organization or group, such as 'the police', 'FBI', or 'mounties'. In 'the mounties busted the cell', 'mounties' is the agent.",
+            "Unlike 'Execute' where the agent might be a court or executioner, in 'ArrestJail', the agent is typically law enforcement or similar authorities."
+        ],
+        "person": [
+            "Examples are individuals or groups who are being arrested or jailed. For instance, '300' in 'they have arrested over 300' refers to the people arrested.",
+            "The person is the central figure in the event, as they are the ones being detained or imprisoned. In 'arrest Koresh and others', 'Koresh' and 'others' are the persons.",
+            "In some cases, the person may be a group or collective entity, such as 'a bunch of hacks' or 'the terrorist cell'.",
+            "The person can be identified by their role or identity, such as 'sheriff' in 'the sheriff just got busted'.",
+            "Unlike 'Execute' where the person might be sentenced to death, in 'ArrestJail', the person is detained or imprisoned."
+        ],
+        "place": [
+            "Examples are locations where the arrest or imprisonment takes place. For instance, 'Rapid City' in 'arrested over 300 in Rapid City' refers to the place of arrest.",
+            "The place is important as it provides context for where the event occurs. In 'locked away in prison', 'prison' is the place.",
+            "In some cases, the place may be a broader location, such as 'county' in 'the sheriff just got busted in the county'.",
+            "The place can be a specific facility or general area, such as 'jail', 'prison', or 'city'. In 'arrested in Rapid City', 'Rapid City' is the place.",
+            "Unlike 'Extradite' where the place might involve origin and destination, in 'ArrestJail', the place is where the arrest or imprisonment happens."
+        ]
+    }
+}
+```

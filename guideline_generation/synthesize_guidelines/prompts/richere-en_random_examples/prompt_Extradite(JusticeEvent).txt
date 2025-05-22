@@ -1,0 +1,362 @@
+You are an expert in annotating NLP datasets for event extraction.Your task is to generate precise and detailed annotation guidelines for the event type Extradite which is a child event type of super class JusticeEvent
+
+### Input Format ###
+```
+Event Schema:
+Event Name and its parent class
+Arguments:
+Arguments separated by new lines. If there are no arguments None will be given.
+
+Examples:
+Examples provided to illustrate the event type and arguments.
+```
+
+### Instructions ###
+1. Identify and List All Unique Arguments: 
+   - Carefully review the schema to identify all arguments relevant to the event type.
+   - Please remember that the examples may not cover all the arguments in the list. In some cases, you may not have arguments at all, in such cases, you can have an empty list for arguments. 
+2. Define the Event Type: Write 5 clear and specific definitions, starting with "The event is triggered by ...":
+   - Include example triggers.
+   - Highlight key characteristics and scope of the event.
+   - Compare and contrast with closely related events using provided negative examples.
+   - Explain how triggers and outcomes differ for similar event types.
+3. Define Each Argument:** For each argument, provide 5 definitions with detailed examples, starting with "Examples are ...":
+   - Explain the role and importance of each argument.
+   - Include domain knowledge and address edge cases to clarify ambiguities.
+4. Focus on Distinctions: Use positive examples to describe the event, and negative examples to clarify what the event is not. Explicitly state differences using phrases like:
+   - "Unlike [Related Event Type], this event does not ..."
+   - "Triggers such as [Trigger] are indicative of [Related Event Type], not this event type."
+5. Structured Output: Present the output in the following JSON format:
+   ```json
+   {
+     "Event Definition": [
+       "Definition 1",
+       "Definition 2",
+       "Definition 3",
+       "Definition 4",
+       "Definition 5"
+     ],
+     "Arguments Definitions": {
+       "Argument1": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ],
+       "Argument2": [
+         "Definition 1",
+         "Definition 2",
+         "Definition 3",
+         "Definition 4",
+         "Definition 5"
+       ]
+       // Add more arguments if applicable
+     }
+   }
+   ```
+
+### Output Requirements ###
+- Use detailed yet concise language for event and argument definitions.
+- Incorporate diverse and domain-relevant examples for each definition.
+- Avoid copying examples directly from provided data, create unique variations.
+
+Event Schema:
+Extradite which is a child event type of super class JusticeEvent
+Arguments:
+Argument 1 -> agent
+Argument 2 -> destination
+Argument 3 -> origin
+Argument 4 -> person
+
+### The below examples are positive examples, as they match the Event Type being annotated: ###
+
+Example 1
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Assange, the founder of the anti-secrecy group WikiLeaks, has been holed up for nearly a year in the tiny Ecuadorean Embassy here, stymying British attempts to extradite him to Sweden.
+### Event Trigger ###
+extradite
+### Event Arguments ###
+For argument "agent" extracted spans ['British']
+For argument "person" extracted spans ['him']
+For argument "origin" extracted spans ['Ecuadorean']
+For argument "destination" extracted spans ['Sweden']
+
+Example 2
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+A Colombian who has been described by his country’s president as “the last of the great kingpins” was extradited to the United States from Colombia on Tuesday to face charges that he manufactured large quantities of cocaine that he then trafficked to the U.S. and elsewhere.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['Colombian']
+For argument "origin" extracted spans ['Colombia']
+For argument "destination" extracted spans ['United States']
+
+Example 3
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+He was later sent to Colombia, and his extradition was announced by the U.S. attorneys in the three jurisdictions and other officials, including Raymond W. Kelly, the police commissioner of New York; and Michele M. Leonhart, the head of the DEA.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['his']
+For argument "agent" extracted spans ['U.S.']
+
+Example 4
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+MOSCOW - Edward J. Snowden, the former intelligence contractor on the run from U.S. authorities, formally applied Tuesday for temporary asylum in Russia, citing fears that he could face torture or the death penalty if extradited to the United States, according to a Russian official who assisted in preparing the documents.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+
+Example 5
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+But Snowden and his supporters in and outside of Russia have cited the existence of the death penalty in the United States as a reason he should not be extradited, noting that U.S. officials have said he could face additional charges.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['he']
+For argument "agent" extracted spans ['United States']
+For argument "origin" extracted spans ['Russia']
+For argument "destination" extracted spans ['United States']
+
+Example 6
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+He was eventually extradited to the United States, and in 2003 was convicted of two counts of drug conspiracy.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['He']
+For argument "destination" extracted spans ['United States']
+
+Example 7
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+The family fought Fabio’s extradition with an aggressive but unsuccessful legal and public relations campaign.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['Fabio']
+
+Example 8
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Juan David and Jorge Luis avoided extradition, but other governments found at least some ways to punish them.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['Juan David', 'Jorge Luis']
+
+Example 9
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+“Everyone loves us; the doors open for us all over,” Juan David Ochoa said in an interview with The Times on the day his brother was extradited.
+### Event Trigger ###
+extradited
+### Event Arguments ###
+For argument "person" extracted spans ['brother']
+
+Example 10
+#### Event Type ####
+Extradite(JusticeEvent)
+### Input Text ###
+Weeks after the U.S. government charged Javier Martin-Artajo, a former JPMorgan Chase employee, with hiding trading losses that ultimately reached more than $6 billion, he had his first day in court Tuesday as he surrendered to Spanish authorities and kicked off what could be a lengthy extradition process.
+### Event Trigger ###
+extradition
+### Event Arguments ###
+For argument "person" extracted spans ['he']
+For argument "agent" extracted spans ['authorities']
+
+### The following examples are negative examples, as they illustrate different event types provided for contrast and differentiation: ###
+
+Example 11
+#### Event Type ####
+Acquit(JusticeEvent)
+### Input Text ###
+LONDON - Two Italians sisters who spent more than $1 million on celebrity chef Nigella Lawson’s credit cards were acquitted of fraud charges Friday by a London jury.
+### Event Trigger ###
+acquitted
+### Event Arguments ###
+For argument "defendant" extracted spans ['sisters']
+For argument "adjudicator" extracted spans ['jury']
+For argument "place" extracted spans ['London']
+
+Example 12
+#### Event Type ####
+TrialHearing(JusticeEvent)
+### Input Text ###
+In The United States versus Miller, the Court held:
+### Event Trigger ###
+versus
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['Court']
+For argument "prosecutor" extracted spans ['United States']
+For argument "defendant" extracted spans ['Miller']
+
+Example 13
+#### Event Type ####
+Correspondence(ContactEvent)
+### Input Text ###
+“The Ministry of Foreign Affairs of Ecuador has informed U.K. authorities that Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague to discuss the case of Julian Assange,” the spokesman said.
+### Event Trigger ###
+meet
+### Event Arguments ###
+For argument "entity" extracted spans ['Patino', 'William Hague']
+For argument "place" extracted spans ['London']
+
+Example 14
+#### Event Type ####
+Execute(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+death
+### Event Arguments ###
+For argument "agent" extracted spans ['court']
+For argument "person" extracted spans ['man']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 15
+#### Event Type ####
+Sentence(JusticeEvent)
+### Input Text ###
+In an unusually severe sentence in February, a court in Salonika, Greece’s second-largest city, convicted the former mayor, Vassilis Papageorgopoulos, to life in prison for embezzling at least 18 million euros from city coffers.
+### Event Trigger ###
+sentence
+### Event Arguments ###
+For argument "adjudicator" extracted spans ['court']
+For argument "defendant" extracted spans ['mayor']
+For argument "place" extracted spans ['Salonika']
+
+Example 16
+#### Event Type ####
+Marry(LifeEvent)
+### Input Text ###
+Why is it only one of the identified groups is being barred from Civil Marriage (in most places).
+### Event Trigger ###
+Marriage
+### Event Arguments ###
+For argument "person" extracted spans ['groups']
+For argument "place" extracted spans ['places']
+
+Example 17
+#### Event Type ####
+Divorce(LifeEvent)
+### Input Text ###
+Michigan is a no-fault divorce state, so had we have been married longer or if he was laid off before our divorce, could have been responsible for spousal support.
+### Event Trigger ###
+divorce
+### Event Arguments ###
+For argument "person" extracted spans ['our']
+For argument "place" extracted spans ['Michigan']
+
+Example 18
+#### Event Type ####
+Attack(ConflictEvent)
+### Input Text ###
+When she refused to consummate the marriage, her in-laws locked her in a basement, where they burned her with hot wires, pulled out her fingernails and twisted her skin with pliers for months.
+### Event Trigger ###
+burned
+### Event Arguments ###
+For argument "attacker" extracted spans ['they']
+For argument "place" extracted spans ['where']
+For argument "target" extracted spans ['her']
+For argument "instrument" extracted spans ['hot wires']
+
+Example 19
+#### Event Type ####
+Artifact(ManufactureEvent)
+### Input Text ###
+In fact, lately in my country they've been building schools modularly so they can be turned into house when the families with young kids in the neighbourhood grow older and don't need them anymore.
+### Event Trigger ###
+building
+### Event Arguments ###
+For argument "artifact" extracted spans ['schools']
+For argument "agent" extracted spans ['they']
+For argument "place" extracted spans ['country']
+
+Example 20
+#### Event Type ####
+BeBorn(LifeEvent)
+### Input Text ###
+I'm a British Pakistani, born and brought up in London, however I would say I am very much in touch with my roots and my views lean more towards the traditional and conservative side.
+### Event Trigger ###
+born
+### Event Arguments ###
+For argument "person" extracted spans ['I']
+For argument "place" extracted spans ['London']
+
+Example 21
+#### Event Type ####
+Transaction(Event)
+### Input Text ###
+Nor should my family have to deal with the government in any way other than maybe to prove they exist if the government owes me.
+### Event Trigger ###
+owes
+### Event Arguments ###
+For argument "giver" extracted spans ['government']
+For argument "recipient" extracted spans ['me']
+For argument "beneficiary" extracted spans ['they']
+
+Example 22
+#### Event Type ####
+StartOrg(BusinessEvent)
+### Input Text ###
+For the same reason the local Glock dealer would not open up a store in the same strip mall where 20 people got shot, 6 killed.
+### Event Trigger ###
+open
+### Event Arguments ###
+For argument "agent" extracted spans ['dealer']
+For argument "org" extracted spans ['store']
+For argument "place" extracted spans ['mall']
+
+Example 23
+#### Event Type ####
+ChargeIndict(JusticeEvent)
+### Input Text ###
+A man in Afghanistan is being prosecuted in a Kabul court and could be sentenced to death after being charged with converting from Islam to Christianity, a crime under the country's Islamic sharia laws, a judge said Sunday.
+### Event Trigger ###
+charged
+### Event Arguments ###
+For argument "defendant" extracted spans ['man']
+For argument "adjudicator" extracted spans ['court']
+For argument "prosecutor" extracted spans ['country']
+For argument "place" extracted spans ['Afghanistan']
+
+Example 24
+#### Event Type ####
+Elect(PersonnelEvent)
+### Input Text ###
+President Barack Obama won Iowa Catholics, about a quarter of the electorate, by what the exit polls showed was an 18-percentage-point margin.
+### Event Trigger ###
+won
+### Event Arguments ###
+For argument "person" extracted spans ['Barack Obama']
+For argument "agent" extracted spans ['Catholics']
+For argument "place" extracted spans ['Iowa']
+
+Example 25
+#### Event Type ####
+TransportArtifact(MovementEvent)
+### Input Text ###
+In some places STUDENTS can bring GUNS to school (rifle clubs).
+### Event Trigger ###
+bring
+### Event Arguments ###
+For argument "agent" extracted spans ['STUDENTS']
+For argument "artifact" extracted spans ['GUNS']
+For argument "destination" extracted spans ['school']

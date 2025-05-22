@@ -1,0 +1,34 @@
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": [
+            "The event is triggered by public gatherings or actions where people express their opinions or protest against something. Example triggers include 'rally', 'march', and 'protest'.",
+            "The event is characterized by a collective action or demonstration, often involving a significant number of participants. It typically occurs in public spaces and aims to draw attention to a cause or issue.",
+            "Unlike an 'Attack' event, a 'Demonstrate' event does not involve direct physical violence or harm as its primary characteristic. Instead, it focuses on the act of public expression and assembly.",
+            "Triggers such as 'rally' and 'march' are indicative of a 'Demonstrate' event, not an 'Attack' event, which would involve terms like 'assault' or 'killed'.",
+            "The outcomes of a 'Demonstrate' event include public awareness, media coverage, and potential clashes with authorities, but not the intentional infliction of harm as seen in 'Attack' events."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that indicates the occurrence of a demonstration. Examples include 'rally', 'march', and 'protest'.",
+            "Triggers for this event type often involve terms related to public gatherings or collective actions. For instance, 'demonstration' and 'sit-in' are valid triggers.",
+            "Edge cases include terms like 'assembly' or 'gathering', which may not always indicate a demonstration unless contextually linked to a protest or public expression.",
+            "Unlike terms like 'riot' or 'attack', which imply violence, triggers for 'Demonstrate' events focus on the act of public expression without inherent violence.",
+            "Examples of valid triggers include 'peaceful protest', 'anti-war rally', and 'climate march', which all indicate organized public demonstrations."
+        ],
+        "entity": [
+            "Examples are 'protesters', 'demonstrators', and 'activists', referring to the individuals or groups participating in the demonstration.",
+            "The entity argument identifies the participants in the demonstration, highlighting who is involved in the event.",
+            "In cases where the participants are not explicitly named, terms like 'people' or 'crowd' can serve as the entity argument.",
+            "Unlike an 'attacker' in an 'Attack' event, the entity in a 'Demonstrate' event does not imply aggression but rather participation in a public expression.",
+            "Examples include 'students', 'workers', and 'citizens', indicating the specific groups involved in the demonstration."
+        ],
+        "place": [
+            "Examples are 'New York', 'city', and 'here', referring to the location where the demonstration takes place.",
+            "The place argument specifies the geographical location of the demonstration, providing context for where the event occurs.",
+            "In cases where the location is not explicitly named, terms like 'downtown' or 'square' can serve as the place argument.",
+            "Unlike the 'place' in an 'Attack' event, which may indicate a site of violence, the place in a 'Demonstrate' event is typically a public space used for assembly.",
+            "Examples include 'Washington D.C.', 'central park', and 'main street', indicating specific locations where demonstrations are held."
+        ]
+    }
+}

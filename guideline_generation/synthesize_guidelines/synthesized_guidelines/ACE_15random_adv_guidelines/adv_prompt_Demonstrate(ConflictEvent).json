@@ -1,0 +1,10 @@
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": "The Demonstrate(ConflictEvent) is characterized by public gatherings or actions where people express their opinions, often in opposition to something. These events typically involve collective actions such as marches, rallies, or protests, with a significant number of participants. Unlike other ConflictEvents, the primary focus is not on direct physical confrontations or violence, although such incidents may occur as secondary outcomes. Triggers for this event include terms like 'rally', 'march', 'protest', 'gathered', and 'campaign', while organized, formal gatherings like 'meeting' or 'conference' are not included. The outcomes often include public awareness, media coverage, and sometimes arrests or clashes with authorities, but the main emphasis is on the act of demonstrating itself.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "This argument identifies the participants involved in the demonstration, such as 'protesters', 'demonstrators', 'people', 'group', or 'individuals'. It highlights who is taking part, providing context to the scale and nature of the event. Specific individuals, like 'Liana Owen', can personalize the event, while collective terms like 'crowd' or 'group' emphasize its collective nature. Edge cases include implied entities, such as 'they' or 'their'.",
+            "place": "This argument specifies the location where the demonstration takes place, with examples including 'New York', 'city', 'Manhattan', 'White House', 'plazas', and 'streets'. The place provides geographical context and can indicate the scale and impact of the event. Specific landmarks or buildings, like 'White House', add significance due to their symbolic nature. General terms like 'city' or 'streets' also provide context. Edge cases include implied locations, such as 'here' or 'there'."
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "EndOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the termination or dissolution of an organization. Example triggers include 'is no more', 'dissolving', 'dismantling', 'crumbled', and 'collapsed'.",
+            "The event is characterized by the end of an organization's existence or its functional operations. This can include political regimes, companies, or other formal groups.",
+            "Unlike the StartOrg event, which marks the beginning of an organization, the EndOrg event signifies the cessation of its activities or existence.",
+            "Triggers such as 'opening' or 'launching' are indicative of the StartOrg event, not the EndOrg event. Similarly, 'merging' is related to the MergeOrg event, not the EndOrg event.",
+            "The outcomes of the EndOrg event include the complete cessation of the organization's activities, often leading to significant changes in the associated domain, such as political shifts or market changes."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "org": [
+            "Examples are 'rej geemg', 'party', 'empire', 'regime', and 'Baath Party'. The 'org' argument identifies the organization that is ending.",
+            "The 'org' argument is crucial as it specifies the entity that is ceasing to exist or function. This can be a political party, a company, or any formal group.",
+            "In the context of the EndOrg event, the 'org' argument helps to pinpoint the exact organization affected by the event. For instance, 'Saddam Hussein's regime' in the example 'is no more'.",
+            "Unlike the 'agent' argument in the StartOrg event, which identifies the entity initiating the organization, the 'org' argument in the EndOrg event identifies the entity that is ending.",
+            "Edge cases include scenarios where the organization is part of a larger entity. For example, 'Vivendi Universal's theme parks' in the context of dismantling its entertainment empire."
+        ],
+        "place": [
+            "Examples are 'iraq' and 'united states'. The 'place' argument identifies the location where the organization is ending.",
+            "The 'place' argument is important as it provides geographical context to the EndOrg event, indicating where the dissolution or termination is taking place.",
+            "In the EndOrg event, the 'place' argument helps to understand the regional impact of the organization's end. For instance, 'iraq' in the example 'is no more'.",
+            "Unlike the 'place' argument in the StartOrg event, which indicates where an organization is being established, the 'place' argument in the EndOrg event indicates where it is ceasing to exist.",
+            "Edge cases include situations where the place is implied rather than explicitly stated. For example, 'the regime collapsed' might imply a specific country or region without directly mentioning it."
+        ]
+    }
+}

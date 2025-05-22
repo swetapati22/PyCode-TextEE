@@ -1,0 +1,98 @@
+You are an expert in synthesizing and summarizing detailed guidelines for NLP event extraction tasks. 
+Your goal is to consolidate multiple detailed descriptions into one single, concise, and comprehensive "Advanced" guideline.
+
+### Input ###
+This is the input format:
+
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the five provided definitions under "Event Definition" into a single "Advanced" definition:
+   - Combine all key points from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear.
+   - Use formal language that non-experts can understand.
+
+2. Consolidate the five provided definitions for each argument under "Arguments Definitions" into a single "Advanced" definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Maintain clarity and precision.
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Sentence(JusticeEvent)
+```json
+{
+    "Sentence(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the imposition of a judicial sentence on a defendant by an adjudicator. Example triggers include 'sentenced', 'sentence', and 'handed out sentences'.",
+            "The event is characterized by the formal declaration of a punishment or penalty by a court or judge. It involves the adjudicator (e.g., court, judge) and the defendant (e.g., individual, group) who is being sentenced.",
+            "The scope of the event includes any legal context where a sentence is imposed, such as criminal cases, civil penalties, and administrative rulings. It does not include events where the sentence is merely discussed or anticipated without formal imposition.",
+            "Unlike related events such as 'Acquit' or 'Appeal', the 'Sentence' event specifically involves the final decision to impose a penalty. Triggers like 'acquitted' or 'appealed' indicate different stages or outcomes in the judicial process.",
+            "Triggers and outcomes for the 'Sentence' event differ from events like 'Fine' or 'ReleaseParole'. For instance, 'fine' involves a monetary penalty without necessarily involving imprisonment, while 'release' involves freeing a person from custody, not imposing a new penalty."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', 'Supreme Court'. The adjudicator is the authority that imposes the sentence. It is crucial as it represents the legal body making the decision.",
+            "The adjudicator can be a specific judge or a collective body like a jury or a court. For instance, 'the jury' in 'the jury sentenced the defendant' is the adjudicator.",
+            "In some cases, the adjudicator might be implied rather than explicitly stated. For example, 'he was sentenced to life imprisonment' implies a judicial authority.",
+            "Edge cases include situations where the adjudicator is a higher court upholding a lower court's sentence, such as 'the Supreme Court upheld the sentence'.",
+            "Unlike the 'prosecutor' or 'defense attorney', the adjudicator is neutral and authoritative, making the final decision on the sentence."
+        ],
+        "defendant": [
+            "Examples are 'smugglers', 'billionaire', 'convict', 'Anwar Ibrahim'. The defendant is the individual or group being sentenced. This argument is essential as it identifies who is receiving the sentence.",
+            "The defendant can be a person or an entity, such as a corporation. For instance, 'the company was sentenced to pay a fine' identifies the defendant as the company.",
+            "In some contexts, the defendant might be referred to by a pronoun, such as 'he' or 'they'. For example, 'he was sentenced to five years' refers to the defendant.",
+            "Edge cases include situations where the defendant is part of a larger group, such as 'the members of the gang were sentenced'. Each member is a defendant.",
+            "Unlike the 'plaintiff' or 'victim', the defendant is the party against whom the sentence is imposed, often following a conviction or guilty plea."
+        ],
+        "place": [
+            "Examples are 'Indonesian', 'province', 'court'. The place indicates the location where the sentence is imposed. It is important as it provides context and jurisdiction.",
+            "The place can be a country, city, or specific court. For instance, 'the New York court' specifies the place as New York.",
+            "In some cases, the place might be implied through context, such as 'the local court sentenced him', where 'local' implies a specific but unnamed place.",
+            "Edge cases include situations where the place is a higher court reviewing a sentence from a lower court, such as 'the federal court upheld the sentence from the state court'.",
+            "Unlike the 'origin' or 'destination' in events like 'Extradite', the place in a 'Sentence' event is where the judicial decision is made, not where the defendant is moved to or from."
+        ]
+    }
+}
+```

@@ -1,0 +1,49 @@
+{
+    "TransferOwnership(TransactionEvent)": {
+        "description": [
+            "The event is triggered by the transfer of ownership of an artifact from one entity to another. Example triggers include 'sell', 'buy', 'acquire', and 'provide'.",
+            "The event is characterized by the change in possession or control of an artifact, typically involving a seller and a buyer. Unlike TransferMoney, this event involves physical or intellectual property rather than monetary transactions.",
+            "The event scope includes any transaction where an artifact is transferred, regardless of the medium or context. For instance, 'selling a business' or 'acquiring a property' are within scope.",
+            "Triggers such as 'donate' or 'gift' are indicative of TransferOwnership, not TransferMoney, as they involve the transfer of tangible or intangible assets rather than funds.",
+            "The outcome of this event type is the change in ownership of the artifact, distinguishing it from events like TransferMoney where the primary outcome is the transfer of funds."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "artifact": [
+            "Examples are 'apartment', 'operations', 'hotel', 'property', 'business', 'parks', 'division'. The artifact is the item or entity being transferred in the event.",
+            "The artifact is crucial as it represents the object of the transaction. It can be tangible like 'property' or intangible like 'operations'.",
+            "In domain-specific contexts, the artifact could be specialized, such as 'nuclear weapons' in a geopolitical scenario or 'shares' in a financial transaction.",
+            "Edge cases include scenarios where the artifact is not explicitly mentioned but implied, such as 'selling everything' where 'everything' needs to be inferred.",
+            "Unlike TransferMoney, where the focus is on the amount, TransferOwnership focuses on the specific item or entity being transferred."
+        ],
+        "beneficiary": [
+            "Examples are 'nanny'. The beneficiary is the entity that benefits from the transfer, often receiving the artifact.",
+            "The beneficiary is important as it identifies who gains from the transaction, which can be an individual or an organization.",
+            "In some cases, the beneficiary might not be directly involved in the transaction but still receives the benefits, such as 'a charity' receiving a donated artifact.",
+            "Edge cases include scenarios where the beneficiary is a group or community, such as 'residents' benefiting from a transferred public asset.",
+            "Unlike the buyer, the beneficiary does not necessarily provide compensation for the artifact; they simply receive the benefits."
+        ],
+        "buyer": [
+            "Examples are 'company', 'Andrew Harris', 'firm', 'Blackstone Group'. The buyer is the entity that acquires the artifact in exchange for compensation.",
+            "The buyer is essential as it represents the party gaining ownership of the artifact, often providing monetary or other forms of compensation.",
+            "In domain-specific contexts, the buyer could be a corporate entity, an individual, or a government body, depending on the nature of the transaction.",
+            "Edge cases include scenarios where the buyer is a consortium or partnership, such as 'a group of investors' acquiring a business.",
+            "Unlike the beneficiary, the buyer is actively involved in the transaction and provides compensation for the artifact."
+        ],
+        "place": [
+            "Examples are 'Belgrade'. The place is the location where the transfer of ownership occurs or where the artifact is situated.",
+            "The place is significant as it provides context to the transaction, indicating where the transfer is taking place or where the artifact is located.",
+            "In domain-specific contexts, the place could be a specific address, a city, or even a virtual location in the case of digital assets.",
+            "Edge cases include scenarios where the place is not explicitly mentioned but can be inferred from the context, such as 'the headquarters' implying the company's main office.",
+            "Unlike the artifact, which is the item being transferred, the place provides the geographical or situational context of the transfer."
+        ],
+        "seller": [
+            "Examples are 'Mirjana Markovic', 'USA Interactive', 'Vivendi', 'group'. The seller is the entity that transfers ownership of the artifact in exchange for compensation.",
+            "The seller is crucial as it represents the party relinquishing ownership of the artifact, often receiving monetary or other forms of compensation.",
+            "In domain-specific contexts, the seller could be an individual, a corporation, or a government entity, depending on the nature of the transaction.",
+            "Edge cases include scenarios where the seller is a consortium or partnership, such as 'a group of shareholders' selling their stakes.",
+            "Unlike the buyer, the seller is the party that initiates the transfer of ownership and receives compensation for the artifact."
+        ]
+    }
+}

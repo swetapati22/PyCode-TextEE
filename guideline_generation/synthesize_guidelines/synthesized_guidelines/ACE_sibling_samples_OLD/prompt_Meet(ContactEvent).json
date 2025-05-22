@@ -1,0 +1,28 @@
+{
+  "Meet(ContactEvent)": {
+    "description": [
+      "The event is triggered by an in-person interaction or gathering of individuals or entities for the purpose of discussion, negotiation, or exchange of information. Examples of triggers include 'meeting,' 'talks,' and 'conference.'",
+      "This event captures formal or informal interactions between entities, often occurring at specific places and involving exchanges of ideas or decisions.",
+      "Unlike PhoneWrite, which focuses on remote communication, Meet emphasizes physical gatherings or face-to-face interactions.",
+      "Triggers such as 'negotiations' and 'briefing' signify Meet, whereas terms like 'telephone' or 'call' indicate PhoneWrite events.",
+      "This event highlights the interaction and location of the meeting, identifying the participating entities and optionally the place where the meeting occurs."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "entity": [
+      "Examples are individuals or groups participating in the meeting, such as 'Blair' and 'Bush' or 'Kelly' and 'Yoon'.",
+      "The entity argument identifies the participants actively involved in the meeting, emphasizing their roles in the interaction.",
+      "This argument is crucial for distinguishing Meet from related events where entities are not directly engaging in face-to-face interaction.",
+      "Unlike the place argument, which identifies the location, the entity argument focuses on the participants of the event.",
+      "In cases involving multiple entities, annotate all explicitly mentioned individuals or groups present at the meeting."
+    ],
+    "place": [
+      "Examples are locations where the meeting occurs, such as 'Bejing' or 'city'.",
+      "The place argument situates the event within a specific geographical or institutional context, adding clarity to the interaction.",
+      "Unlike the entity argument, which identifies the participants, the place provides spatial or contextual information about where the event takes place.",
+      "Places are optional and may not always be mentioned; however, they should be annotated when explicitly provided in the text.",
+      "In cases where multiple places are mentioned, prioritize the one most directly tied to the event of the meeting."
+    ]
+  }
+}

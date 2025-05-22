@@ -1,0 +1,12 @@
+{
+    "Sue(JusticeEvent)": {
+        "description": "The 'Sue' event, a type of JusticeEvent, is triggered by legal actions where one party initiates a civil lawsuit against another. This event involves a plaintiff seeking legal remedy or compensation from a defendant through a formal legal process, often overseen by an adjudicator such as a court or judge. Unlike criminal proceedings, the 'Sue' event pertains to civil disputes and claims, with outcomes typically involving financial compensation or other civil remedies rather than criminal penalties. Examples of triggers include 'sue', 'lawsuit', 'court', and 'civil suit'. The scope of this event includes various types of civil lawsuits, such as wrongful dismissal, harassment, or breach of contract, but excludes criminal prosecutions or administrative actions.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator, such as a court, judge, or jury, is the entity responsible for overseeing the legal proceedings and making a judgment or ruling. They ensure the legal process is fair and just, focusing solely on civil matters in the context of a 'Sue' event. Examples include 'court', 'judge', or 'jury'.",
+            "defendant": "The defendant is the party against whom the lawsuit is filed, such as 'him', 'Peabody\u2019s', 'banks', or 'them'. They are accused or held responsible for the alleged wrongdoing and face civil claims and potential financial liabilities. Examples include 'The company was sued for negligence'.",
+            "place": "The place is the location where the lawsuit is filed or where the legal proceedings take place, providing context for the jurisdiction and legal framework. Examples include 'England', 'court', or 'London'. It can be a specific court, city, or country, such as 'The case was heard in a federal court in California'.",
+            "plaintiff": "The plaintiff is the party initiating the lawsuit, seeking legal remedy or compensation. Examples include 'authors', 'union', 'family', 'Churchill', or 'malingerers'. They are distinct from the defendant and are typically directly affected by the alleged wrongdoing. For instance, 'The plaintiff filed a lawsuit for breach of contract'."
+        }
+    }
+}

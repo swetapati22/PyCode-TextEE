@@ -1,0 +1,41 @@
+{
+    "Execute(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the act of carrying out a death sentence on an individual, typically as a result of a legal or judicial process. Example triggers include 'execute', 'execution', and 'executed'.",
+            "The event is characterized by the finality of the death penalty being administered, often following a legal conviction. It involves the deliberate and official act of ending a person's life as a form of punishment.",
+            "Unlike other JusticeEvent types such as 'ArrestJail' or 'Convict', the 'Execute' event specifically involves the culmination of a legal process where the death penalty is enforced. Triggers such as 'arrested' or 'convicted' indicate different stages of the legal process.",
+            "The 'Execute' event differs from events like 'Pardon' or 'ReleaseParole', where the outcome is the release or forgiveness of the individual. In 'Execute', the outcome is the irreversible act of execution.",
+            "Triggers such as 'execution' and 'executed' are indicative of the 'Execute' event type, not events like 'TrialHearing' or 'Appeal', which involve legal proceedings without the finality of a death sentence being carried out."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger 'mention' is the word or phrase that indicates the execution is taking place. Examples include 'execute', 'execution', and 'executed'.",
+            "Valid triggers for the 'Execute' event include terms that explicitly denote the act of carrying out a death sentence, such as 'executed' in 'the prisoner was executed'.",
+            "Edge cases include phrases like 'scheduled for execution', which indicate a planned execution but not the act itself. The trigger must denote the actual carrying out of the death sentence.",
+            "Triggers such as 'execution' in 'the execution was carried out' are valid, whereas 'execution' in 'the execution of the plan' is not, as it does not refer to a death sentence.",
+            "The trigger must be contextually linked to the act of execution, distinguishing it from similar terms used in different contexts, such as 'execute' in 'execute the plan'."
+        ],
+        "agent": [
+            "The 'agent' argument refers to the entity responsible for carrying out the execution. Examples are 'Indonesia' in 'Indonesia will delay the execution' and 'texas' in 'executed in the state of Texas'.",
+            "The 'agent' can be a country, state, or specific authority responsible for the execution. For instance, 'we' in 'If we execute them now' refers to the executing authority.",
+            "In cases where the agent is implied but not explicitly stated, the context should clearly indicate the responsible entity. For example, 'the state' in 'executed by the state'.",
+            "The 'agent' is distinct from the 'adjudicator' in events like 'Convict' or 'Sentence', where the focus is on the entity making the legal decision rather than carrying out the execution.",
+            "Examples include 'prosecutors' in 'prosecutors said Thursday' when they are the ones overseeing the execution process."
+        ],
+        "person": [
+            "The 'person' argument refers to the individual who is being executed. Examples include 'person' in 'the 300th person executed' and 'convicts' in 'execution of six convicts'.",
+            "The 'person' can be a single individual or a group of individuals, such as 'men' in 'the last execution was carried out in May 2001 of two men'.",
+            "In cases where the person is referred to by a pronoun, the context should clearly indicate the individual(s) being executed, such as 'them' in 'If we execute them now'.",
+            "The 'person' argument is distinct from the 'defendant' in events like 'Convict' or 'Sentence', where the focus is on the legal status rather than the execution.",
+            "Examples include 'six' in 'refused clemency for the six and asked for a speedy execution', where 'six' refers to the individuals being executed."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the execution is taking place. Examples include 'state' in 'executed in the state of Texas' and 'Indonesia' in 'the last execution was carried out in Indonesia'.",
+            "The 'place' can be a country, state, or specific location where the execution is administered. For instance, 'Indonesia' in 'Use of the death penalty is rare in Indonesia'.",
+            "In cases where the place is implied but not explicitly stated, the context should clearly indicate the location of the execution, such as 'in the state' in 'executed in the state'.",
+            "The 'place' argument is distinct from the 'place' in events like 'ArrestJail' or 'Convict', where the focus is on the location of the arrest or conviction rather than the execution.",
+            "Examples include 'state' in 'executed in the state of Texas', where 'state' refers to the location of the execution."
+        ]
+    }
+}

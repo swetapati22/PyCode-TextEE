@@ -1,0 +1,28 @@
+{
+    "Control_ImpedeInterfereWith_Unspecified(Event)": {
+        "description": [
+            "The event type 'Control_ImpedeInterfereWith_Unspecified' refers to actions taken to hinder, obstruct, or interfere with an entity or process. The event can be triggered by verbs such as 'embargo', 'disrupted', 'combat', 'stop', 'banned', 'blocks', 'curfew', 'stopping', 'resistance', and 'repel'. This event type is used when the specific nature of the control or interference is not specified.",
+            "The event type 'Control_ImpedeInterfereWith_Unspecified' involves actions aimed at preventing or obstructing an activity or entity. Triggers for this event include words like 'embargo', 'disrupted', 'combat', 'stop', 'banned', 'blocks', 'curfew', 'stopping', 'resistance', and 'repel'. This event is used when the exact method of control or interference is not detailed.",
+            "The 'Control_ImpedeInterfereWith_Unspecified' event type captures instances where an action is taken to impede or interfere with something, without specifying the exact nature of the interference. Common triggers include 'embargo', 'disrupted', 'combat', 'stop', 'banned', 'blocks', 'curfew', 'stopping', 'resistance', and 'repel'. This event is applicable when the specifics of the control or interference are not provided.",
+            "The 'Control_ImpedeInterfereWith_Unspecified' event type is used to annotate actions that aim to hinder or obstruct an entity or process, where the specific details of the interference are not given. Triggers for this event include 'embargo', 'disrupted', 'combat', 'stop', 'banned', 'blocks', 'curfew', 'stopping', 'resistance', and 'repel'. This event is relevant when the nature of the control or interference is not explicitly mentioned.",
+            "The 'Control_ImpedeInterfereWith_Unspecified' event type refers to actions taken to obstruct or interfere with an entity or process, without specifying the exact nature of the interference. Triggers for this event include 'embargo', 'disrupted', 'combat', 'stop', 'banned', 'blocks', 'curfew', 'stopping', 'resistance', and 'repel'. This event is used when the specific method of control or interference is not detailed."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "impeder": [
+            "The 'impeder' argument refers to the entity that is performing the action to impede or interfere. Examples are 'Azerbaijan' in the context of an embargo, 'they' in the context of disrupting plans, and 'Government' in the context of blocking social media. The impeder can be an individual, group, organization, or country.",
+            "The 'impeder' argument identifies the actor responsible for the action of impeding or interfering. Examples include 'Azerbaijan' for an embargo, 'they' for disrupting plans, and 'Government' for blocking social media. The impeder can be any entity such as a person, group, organization, or nation.",
+            "The 'impeder' argument denotes the entity that carries out the action to hinder or obstruct. Examples are 'Azerbaijan' in an embargo scenario, 'they' in disrupting plans, and 'Government' in blocking social media. The impeder can be a person, group, organization, or country.",
+            "The 'impeder' argument specifies the entity that is taking action to impede or interfere. Examples include 'Azerbaijan' in the case of an embargo, 'they' in the case of disrupting plans, and 'Government' in the case of blocking social media. The impeder can be an individual, group, organization, or country.",
+            "The 'impeder' argument refers to the actor that performs the action to impede or interfere. Examples are 'Azerbaijan' in the context of an embargo, 'they' in the context of disrupting plans, and 'Government' in the context of blocking social media. The impeder can be any entity such as a person, group, organization, or nation."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the impeding or interfering action takes place. Examples are 'Armenia' in the context of an embargo. The place can be a country, city, region, or any specific location.",
+            "The 'place' argument identifies the location affected by the impeding or interfering action. Examples include 'Armenia' in the context of an embargo. The place can be any geographical location such as a country, city, or region.",
+            "The 'place' argument denotes the geographical location where the action of impeding or interfering occurs. Examples are 'Armenia' in the context of an embargo. The place can be a country, city, region, or any specific area.",
+            "The 'place' argument specifies the location where the impeding or interfering action is carried out. Examples include 'Armenia' in the case of an embargo. The place can be any geographical area such as a country, city, or region.",
+            "The 'place' argument refers to the geographical location impacted by the impeding or interfering action. Examples are 'Armenia' in the context of an embargo. The place can be a country, city, region, or any specific location."
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "StartPosition(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by instances where an individual begins a new role, position, or title, as indicated by triggers such as 'replace', 'took on', 'begins', or 'become'.",
+            "This event involves the transition or assumption of a specific position or role by a person, often associated with a defined entity and sometimes a geographical location.",
+            "Unlike the Elect event, which involves a formal selection process, this event focuses on the initiation of a role, not the process of being chosen or nominated.",
+            "Triggers like 'replace', 'assume', 'begin', and 'take office' indicate StartPosition, while terms like 'former', 'step down', or 'nominate' suggest related but distinct events.",
+            "The outcome of this event is the initiation of responsibilities in a specific position, making it distinct from events such as EndPosition, which indicates the conclusion of such responsibilities."
+        ]
+    },
+    "attributes": {
+        "mention": [
+            "The event trigger is the word or phrase that explicitly indicates the beginning of a role or position. Examples include 'replace', 'took on', 'begins', and 'become'.",
+            "Valid triggers must denote the act of starting or assuming a position; phrases like 'started as' or 'took office' are examples.",
+            "Triggers should relate directly to the individual and their new role, such as 'stepped into', while avoiding terms that imply the end of a role, such as 'retired'.",
+            "Edge cases include phrases like 'begins a term' or 'took over as', which are valid as long as they clearly indicate the initiation of a position.",
+            "Triggers must be explicitly stated; inferred actions, such as 'was appointed as', do not qualify unless they directly reference the assumption of responsibilities."
+        ],
+        "entity": [
+            "Examples are the roles or positions being assumed, such as 'CEO', 'director', or 'team leader' in specific contexts.",
+            "Entities should represent a concrete role, title, or position within an organization or field, such as 'chairman' or 'operations manager'.",
+            "The entity argument is essential to define the specific nature of the new position being started by the person.",
+            "Ambiguities arise when roles are vaguely described, such as 'position' or 'job'; annotations should focus on explicitly defined roles.",
+            "Examples include 'head of operations' in 'assumed the role of head of operations' or 'chief of staff' in 'begins as chief of staff'."
+        ],
+        "person": [
+            "Examples are individuals such as 'Jean-Rene Fourtou', 'Diller', or 'Callum McCarthy' who are assuming the new position.",
+            "The person argument is central to the event and must refer to the specific individual beginning the role, often mentioned explicitly in the text.",
+            "Pronouns like 'he' or 'she' can serve as person arguments when their antecedents are clear and unambiguous in the context of the event.",
+            "Negative examples include unnamed groups or entities that are not directly tied to the initiation of a role, such as 'the board'.",
+            "Examples include 'Davies' in 'Davies took office' or 'Roh Moo-Hyun' in 'President Roh Moo-Hyun began his term in February'."
+        ],
+        "place": [
+            "Examples include specific locations such as 'Paris', 'London', or institutions like 'University of London' mentioned in relation to the StartPosition event.",
+            "The place argument indicates where the new position is being started, providing geographical or institutional context.",
+            "Places can be broad, like countries ('France'), or specific, like 'headquarters' or 'branch office', as long as they are directly linked to the event.",
+            "Negative examples include unrelated locations mentioned in passing that are not directly tied to the position, such as 'vacation spots'.",
+            "Examples include 'Paris' in 'began his position in Paris' or 'headquarters' in 'assumed the role at company headquarters'."
+        ]
+    }
+}

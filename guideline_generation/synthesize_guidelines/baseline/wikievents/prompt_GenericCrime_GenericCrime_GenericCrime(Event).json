@@ -1,0 +1,35 @@
+{
+    "GenericCrime_GenericCrime_GenericCrime(Event)": {
+        "description": [
+            "The event type 'GenericCrime_GenericCrime_GenericCrime' refers to any criminal activity that does not fall under a more specific category of crime. This can include a wide range of illegal actions such as theft, assault, vandalism, and more. The event can be triggered by words or phrases that indicate a crime has occurred, such as 'robbery', 'murder', 'assault', 'theft', 'vandalism', etc.",
+            "The event type 'GenericCrime_GenericCrime_GenericCrime' encompasses various criminal activities that are not specifically categorized. It includes actions like burglary, fraud, kidnapping, and other unlawful acts. The event can be triggered by terms like 'crime', 'illegal activity', 'offense', 'felony', and similar expressions.",
+            "The 'GenericCrime_GenericCrime_GenericCrime' event type is used to annotate instances of general criminal behavior. This includes any act that violates the law and is punishable by the state, such as arson, embezzlement, extortion, and so on. The event can be triggered by words such as 'criminal act', 'lawbreaking', 'misdemeanor', 'infraction', etc.",
+            "The 'GenericCrime_GenericCrime_GenericCrime' event type captures a broad spectrum of criminal activities that are not otherwise specified. This can involve crimes like shoplifting, drug trafficking, cybercrime, and other illicit activities. The event can be triggered by phrases like 'unlawful act', 'criminal offense', 'breach of law', 'transgression', etc.",
+            "The 'GenericCrime_GenericCrime_GenericCrime' event type is a catch-all category for various types of crimes that do not fit into more specific classifications. This includes activities such as bribery, forgery, human trafficking, and other illegal actions. The event can be triggered by terms like 'crime', 'offense', 'violation', 'delinquency', and similar words."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "perpetrator": [
+            "The 'perpetrator' argument refers to the individual or group responsible for committing the crime. This can include a single person, multiple people, or an organization. Examples are 'ABDULLAH AHMED ABDULLAH', 'Ahmad Khan Rahami', 'men', 'brothers', 'Robel Phillipos'.",
+            "The 'perpetrator' argument identifies the entity that carried out the criminal act. It can be a named individual, an unnamed suspect, or a collective group. Examples are 'John Doe', 'the gang', 'the suspect', 'the thieves', 'the organization'.",
+            "The 'perpetrator' argument denotes the person or persons who executed the crime. This can be a known criminal, an anonymous individual, or a group of people. Examples are 'Jane Smith', 'the assailants', 'the robbers', 'the hackers', 'the cartel'.",
+            "The 'perpetrator' argument specifies the actor behind the crime. This can be a specific person, a group of individuals, or an entity. Examples are 'Michael Johnson', 'the attackers', 'the burglars', 'the fraudsters', 'the syndicate'.",
+            "The 'perpetrator' argument points to the party responsible for the criminal activity. This can be an identified person, a group, or an organization. Examples are 'Alice Brown', 'the criminals', 'the kidnappers', 'the smugglers', 'the ring'."
+        ],
+        "place": [
+            "The 'place' argument refers to the location where the crime occurred. This can be a specific address, a general area, or a broader region. Examples are 'U.S.', 'store', 'room', 'Cambridge', 'New York'.",
+            "The 'place' argument identifies the site of the criminal activity. It can be a precise location, a neighborhood, or a city. Examples are 'the bank', 'the park', 'the warehouse', 'the street', 'the city'.",
+            "The 'place' argument denotes the venue where the crime took place. This can be a particular building, an outdoor area, or a geographical location. Examples are 'the mall', 'the office', 'the alley', 'the town', 'the country'.",
+            "The 'place' argument specifies the setting of the crime. This can be an exact spot, a district, or a larger area. Examples are 'the house', 'the school', 'the parking lot', 'the village', 'the state'.",
+            "The 'place' argument points to the location of the criminal event. This can be a detailed address, a locality, or a region. Examples are 'the apartment', 'the beach', 'the factory', 'the suburb', 'the province'."
+        ],
+        "victim": [
+            "The 'victim' argument refers to the individual or group that suffered harm or loss due to the crime. This can include people, organizations, or entities. Examples are 'Nationals', 'the store owner', 'the police officer', 'the residents', 'the company'.",
+            "The 'victim' argument identifies the party that was affected by the criminal act. It can be a person, a group of people, or an institution. Examples are 'the victim', 'the family', 'the employees', 'the community', 'the business'.",
+            "The 'victim' argument denotes the entity that experienced the negative impact of the crime. This can be an individual, a collective group, or an organization. Examples are 'the individual', 'the citizens', 'the staff', 'the neighborhood', 'the corporation'.",
+            "The 'victim' argument specifies the party that was targeted or harmed by the crime. This can be a specific person, a group, or an entity. Examples are 'the person', 'the group', 'the workers', 'the population', 'the firm'.",
+            "The 'victim' argument points to the entity that was victimized by the criminal activity. This can be an identified individual, a collective, or an organization. Examples are 'the man', 'the people', 'the officers', 'the inhabitants', 'the enterprise'."
+        ]
+    }
+}

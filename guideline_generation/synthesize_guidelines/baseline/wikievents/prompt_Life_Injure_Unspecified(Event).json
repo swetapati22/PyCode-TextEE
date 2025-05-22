@@ -1,0 +1,42 @@
+{
+    "Life_Injure_Unspecified(Event)": {
+        "description": [
+            "The Life_Injure_Unspecified event refers to any incident where an individual or group of individuals suffer physical harm or injury. The event can be triggered by words such as 'injure', 'wound', 'hurt', 'injuring', 'wounded', 'injured', etc. The event can occur in various contexts, including accidents, attacks, natural disasters, and more. It is important to identify the context to accurately annotate the event.",
+            "The Life_Injure_Unspecified event captures instances where physical harm is inflicted on a person or persons. This event can be triggered by terms like 'injure', 'wound', 'hurt', and similar verbs. The event can be part of a larger narrative involving violence, accidents, or other harmful situations. Annotators should look for explicit mentions of physical harm.",
+            "The Life_Injure_Unspecified event involves any scenario where an individual or group experiences physical injury. Triggers for this event include words such as 'injure', 'wound', 'hurt', and their variations. This event can be found in contexts ranging from violent attacks to accidents. Annotators should ensure that the injury is physical and not metaphorical.",
+            "The Life_Injure_Unspecified event is defined as any occurrence where physical harm is caused to a person or group. Common triggers include 'injure', 'wound', 'hurt', and similar terms. This event can be identified in various situations, including but not limited to, violent incidents, accidents, and natural disasters. The focus should be on physical injuries.",
+            "The Life_Injure_Unspecified event pertains to instances of physical injury to individuals. Triggers for this event include verbs like 'injure', 'wound', 'hurt', and their derivatives. This event can occur in diverse contexts such as accidents, violent acts, and other harmful events. Annotators should confirm that the injury is physical and not figurative."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "bodypart": [
+            "The 'bodypart' argument specifies the part of the body that was injured. Examples are 'throat', 'leg', 'arm', etc. Annotators should identify the specific body part mentioned in the text. If multiple body parts are mentioned, all should be annotated. In cases where the body part is not explicitly mentioned, this argument should be left empty.",
+            "The 'bodypart' argument refers to the specific area of the body that sustained injury. Examples include 'head', 'chest', 'back', etc. Annotators should look for explicit mentions of body parts in the text. If the text does not specify a body part, this argument should not be annotated.",
+            "The 'bodypart' argument identifies the specific location on the body that was harmed. Examples are 'hand', 'foot', 'eye', etc. Annotators should extract the exact body part mentioned. If no body part is specified, this argument should be omitted.",
+            "The 'bodypart' argument denotes the particular part of the body that was injured. Examples include 'shoulder', 'knee', 'face', etc. Annotators should ensure they capture the specific body part mentioned in the text. If the body part is not mentioned, this argument should be left blank.",
+            "The 'bodypart' argument specifies the injured area on the body. Examples are 'neck', 'stomach', 'ear', etc. Annotators should identify and annotate the specific body part mentioned. If the text does not mention a body part, this argument should be left empty."
+        ],
+        "injurer": [
+            "The 'injurer' argument identifies the person or entity responsible for causing the injury. Examples are 'brothers', 'attacker', 'suspect', etc. Annotators should look for the individual or group directly responsible for the injury. If the injurer is not mentioned, this argument should be left empty.",
+            "The 'injurer' argument refers to the person or entity that inflicted the injury. Examples include 'assailant', 'perpetrator', 'shooter', etc. Annotators should extract the responsible party mentioned in the text. If no injurer is specified, this argument should not be annotated.",
+            "The 'injurer' argument identifies who or what caused the injury. Examples are 'terrorist', 'criminal', 'offender', etc. Annotators should find and annotate the entity responsible for the injury. If the injurer is not mentioned, this argument should be omitted.",
+            "The 'injurer' argument denotes the individual or group that caused the injury. Examples include 'attacker', 'culprit', 'aggressor', etc. Annotators should ensure they capture the responsible party mentioned in the text. If no injurer is specified, this argument should be left blank.",
+            "The 'injurer' argument specifies the person or entity that caused the injury. Examples are 'suspect', 'enemy', 'assailant', etc. Annotators should identify and annotate the responsible party mentioned. If the text does not mention an injurer, this argument should be left empty."
+        ],
+        "instrument": [
+            "The 'instrument' argument specifies the tool or means used to cause the injury. Examples are 'bombs', 'gun', 'knife', etc. Annotators should look for the specific instrument mentioned in the text. If no instrument is mentioned, this argument should be left empty.",
+            "The 'instrument' argument refers to the object or method used to inflict the injury. Examples include 'explosive', 'weapon', 'vehicle', etc. Annotators should extract the instrument mentioned in the text. If no instrument is specified, this argument should not be annotated.",
+            "The 'instrument' argument identifies the means by which the injury was caused. Examples are 'firearm', 'blade', 'chemical', etc. Annotators should find and annotate the specific instrument mentioned. If no instrument is mentioned, this argument should be omitted.",
+            "The 'instrument' argument denotes the tool or method used to cause the injury. Examples include 'bomb', 'gun', 'poison', etc. Annotators should ensure they capture the specific instrument mentioned in the text. If no instrument is specified, this argument should be left blank.",
+            "The 'instrument' argument specifies the means or tool used to inflict the injury. Examples are 'explosive device', 'knife', 'acid', etc. Annotators should identify and annotate the specific instrument mentioned. If the text does not mention an instrument, this argument should be left empty."
+        ],
+        "victim": [
+            "The 'victim' argument identifies the person or group who suffered the injury. Examples are '264', 'He', 'people', etc. Annotators should look for the individual or group mentioned as being injured. If multiple victims are mentioned, all should be annotated. If no victim is specified, this argument should be left empty.",
+            "The 'victim' argument refers to the person or group that was injured. Examples include 'him', 'officers', 'No one', etc. Annotators should extract the victims mentioned in the text. If no victim is specified, this argument should not be annotated.",
+            "The 'victim' argument identifies who was harmed in the event. Examples are '176', 'officer', 'people', etc. Annotators should find and annotate the victims mentioned. If no victim is mentioned, this argument should be omitted.",
+            "The 'victim' argument denotes the individual or group that suffered the injury. Examples include 'individuals', 'citizens', 'bystanders', etc. Annotators should ensure they capture the victims mentioned in the text. If no victim is specified, this argument should be left blank.",
+            "The 'victim' argument specifies the person or group who was injured. Examples are 'residents', 'children', 'workers', etc. Annotators should identify and annotate the victims mentioned. If the text does not mention a victim, this argument should be left empty."
+        ]
+    }
+}

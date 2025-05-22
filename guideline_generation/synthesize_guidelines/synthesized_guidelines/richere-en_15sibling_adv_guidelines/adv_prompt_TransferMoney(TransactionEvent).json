@@ -1,0 +1,12 @@
+{
+    "TransferMoney(TransactionEvent)": {
+        "description": "The TransferMoney event is triggered by the act of transferring money from one entity to another, characterized by the movement of monetary value between parties, typically involving a giver and a recipient. This event is strictly related to monetary transactions and does not involve the transfer of physical or intellectual property. Common triggers include terms like 'spent', 'given', 'paid', 'gets', and 'loan'. The successful transfer of money is indicated by the presence of a giver, recipient, and sometimes a location where the transaction occurs. It is important to distinguish this event from TransferOwnership, which involves the transfer of ownership of assets rather than money.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "beneficiary": "The beneficiary is the entity that ultimately benefits from the transferred money, even if they are not the direct recipient. Examples include a country receiving aid or an organization benefiting from funds. Unlike the recipient, the beneficiary may not directly receive the money but gains from its use or distribution. Edge cases include abstract entities like 'the economy' or 'the public'.",
+            "giver": "The giver is the entity that provides or transfers the money to another party. Examples include an individual, organization, government, or financial institution. The giver is the source of the funds being transferred, and in some cases, the giver may not be explicitly mentioned but can be inferred from context.",
+            "place": "The place is the location where the transfer of money occurs or where the beneficiary is situated. Examples include a country or region receiving international aid. The place is a geographical location associated with the transaction, and in virtual or online transactions, it may not be explicitly mentioned but can be inferred from context.",
+            "recipient": "The recipient is the entity that directly receives the transferred money. Examples include an individual, organization, or government entity. The recipient is the direct receiver of the funds, and in some cases, the recipient may not be explicitly mentioned but can be inferred from context."
+        }
+    }
+}

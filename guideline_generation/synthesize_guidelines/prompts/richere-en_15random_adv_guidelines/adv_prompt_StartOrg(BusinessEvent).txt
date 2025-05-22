@@ -1,0 +1,92 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_StartOrg(BusinessEvent)
+```json
+{
+    "StartOrg(BusinessEvent)": {
+        "description": [
+            "The event is triggered by the initiation or establishment of an organization or business entity. Example triggers include 'open', 'set up', 'create', 'launches', 'founders', 'established', and 'creation'.",
+            "The event is characterized by the creation of a new organizational entity, often involving an agent who initiates the process, the organization being created, and sometimes the place where the organization is established.",
+            "Unlike the EndOrg event, which signifies the termination or closure of an organization, the StartOrg event focuses on the beginning or establishment of an organization.",
+            "Triggers such as 'closed' or 'shut down' are indicative of the EndOrg event type, not the StartOrg event type. The StartOrg event is concerned with the inception and not the cessation of an organization.",
+            "The outcomes of the StartOrg event include the formation of a new entity that can operate in various domains such as business, non-profit, or governmental sectors. This event does not cover the operational activities post-establishment, which may fall under other event types like BusinessOperation or Expansion."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "The agent is the individual or entity responsible for initiating the creation of the organization. Examples are 'dealer', 'people', 'he', 'Blair', 'one', 'founders', 'states'.",
+            "The agent plays a crucial role in the StartOrg event as they are the driving force behind the establishment of the organization. For instance, 'Blair' in 'Blair launches faith foundation'.",
+            "In some cases, the agent may be a collective entity such as 'states' in 'states set up militia'.",
+            "The agent can also be a group of individuals, as seen in 'one of the founders of Mad City Rollers'.",
+            "Edge cases include scenarios where the agent is implied but not explicitly mentioned, such as 'a new faith foundation was set up' where the agent might be inferred from context."
+        ],
+        "org": [
+            "The org is the organization or business entity being created. Examples are 'store', 'businesses', 'foundation', 'Mad City Rollers', 'militia', 'World Zionist Organization', 'UNSCOP'.",
+            "The org is the primary focus of the StartOrg event, representing the new entity that comes into existence. For example, 'foundation' in 'Blair launches faith foundation'.",
+            "The org can vary widely in nature, from commercial enterprises like 'store' to non-profit organizations like 'foundation'.",
+            "In some cases, the org may be a governmental or quasi-governmental entity, such as 'UNSCOP' in 'The UN then established UNSCOP'.",
+            "Edge cases include scenarios where the org is a concept or movement rather than a formal entity, such as 'militia' in 'states set up militia'."
+        ],
+        "place": [
+            "The place is the location where the organization is established. Examples are 'mall', 'property', 'city'.",
+            "The place provides context for the StartOrg event, indicating where the new organization is being set up. For instance, 'mall' in 'open up a store in the same strip mall'.",
+            "The place can be a specific physical location, such as 'property' in 'set up private businesses on their property'.",
+            "In some cases, the place may be a broader geographical area, such as 'city' in 'closed almost half the schools in the city'.",
+            "Edge cases include scenarios where the place is implied or not explicitly mentioned, such as 'a new faith foundation was set up' where the place might be inferred from context."
+        ]
+    }
+}
+```

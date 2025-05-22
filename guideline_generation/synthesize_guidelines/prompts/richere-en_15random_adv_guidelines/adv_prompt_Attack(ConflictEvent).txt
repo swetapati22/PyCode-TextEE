@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Attack(ConflictEvent)
+```json
+{
+    "Attack(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions that involve physical harm or violence directed towards individuals or groups. Example triggers include 'burned', 'spraying', 'murder', 'fired', and 'killers'.",
+            "The event is characterized by the presence of an attacker, a target, and often an instrument used to carry out the attack. The scope includes any act of aggression or violence, regardless of scale.",
+            "Unlike other ConflictEvents, the Attack event specifically involves direct physical harm or the threat of such harm. For instance, 'burned' and 'murder' are indicative of an Attack event, whereas 'closed' (EndOrg) or 'born' (BeBorn) are not.",
+            "Triggers such as 'burned' and 'murder' are indicative of an Attack event, not events like 'sued' (Sue) or 'merge' (MergeOrg), which do not involve physical violence.",
+            "The outcomes of an Attack event typically include injury, death, or significant physical or psychological harm to the target. This differentiates it from events like 'arrested' (ArrestJail) or 'spent' (TransferMoney), which do not result in direct physical harm."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "attacker": [
+            "Examples are 'they' in 'they burned her with hot wires', 'terrorists' in 'victims of the islamist terrorists', and 'killers' in 'think they are killers'. The attacker is the entity that initiates the attack.",
+            "The attacker is crucial as it identifies the source of the aggression. It can be an individual, group, or organization responsible for the attack.",
+            "In some cases, the attacker may be implicit or inferred from context, such as 'they' in 'they also fired flash-bang devices'.",
+            "Unlike the 'agent' in events like 'arrested' (ArrestJail), the attacker in an Attack event is the perpetrator of violence, not an enforcer of law.",
+            "Edge cases include situations where the attacker is not explicitly mentioned but can be inferred, such as 'murdered on 9/11' where the attackers are implied to be the terrorists involved in the 9/11 attacks."
+        ],
+        "instrument": [
+            "Examples are 'hot wires' in 'burned her with hot wires', 'CS gas' in 'spraying 9 times the lethal dosage of CS gas', and 'flash-bang devices' in 'fired flash-bang devices'. The instrument is the tool or method used to carry out the attack.",
+            "The instrument is important as it provides details on how the attack was executed, which can be critical for understanding the nature and severity of the attack.",
+            "In some cases, the instrument may be a substance or a weapon, such as 'CS gas' or 'flash-bang devices'.",
+            "Unlike the 'instrument' in events like 'suicide' (Die), where the instrument may be the means of death, in an Attack event, the instrument is used to inflict harm on others.",
+            "Edge cases include situations where the instrument is not a physical object but a method, such as 'spraying' in 'spraying 9 times the lethal dosage'."
+        ],
+        "place": [
+            "Examples are 'where' in 'locked her in a basement, where they burned her', and 'downtown Manhattan' in 'muslim New Yorkers in downtown Manhattan'. The place is the location where the attack occurs.",
+            "The place is significant as it provides context and can help in understanding the scope and impact of the attack.",
+            "In some cases, the place may be a specific location, such as 'downtown Manhattan', or a more general area, such as 'where' in a basement.",
+            "Unlike the 'place' in events like 'born' (BeBorn) or 'closed' (EndOrg), the place in an Attack event is where the violence or harm takes place.",
+            "Edge cases include situations where the place is implied or not explicitly mentioned but can be inferred from context, such as 'on 9/11' implying the World Trade Center."
+        ],
+        "target": [
+            "Examples are 'her' in 'burned her with hot wires', 'women' and 'children' in 'murder and we're talking women and children', and 'victims' in 'victims of the islamist terrorists'. The target is the entity that suffers the attack.",
+            "The target is crucial as it identifies who or what is affected by the attack. It can be an individual, group, or even an abstract entity like 'victims'.",
+            "In some cases, the target may be multiple entities, such as 'women' and 'children', or a collective group, such as 'victims'.",
+            "Unlike the 'victim' in events like 'suicide' (Die), where the victim is the one who dies, in an Attack event, the target is the one who suffers harm from the attack.",
+            "Edge cases include situations where the target is not explicitly mentioned but can be inferred, such as 'murdered on 9/11' where the targets are the people who died in the attacks."
+        ]
+    }
+}
+```

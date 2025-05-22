@@ -1,0 +1,11 @@
+{
+    "Pardon(JusticeEvent)": {
+        "description": "The Pardon event in the context of justice is triggered by an official act of forgiving or excusing a person from punishment or legal consequences. This event involves an adjudicator who grants the pardon and a defendant who receives it. It is distinct from events like Convict, which involves a legal judgment of guilt, and Execute or Fine, which impose penalties. Example triggers include terms like 'pardoned', 'cleared', and 'forgiven'. The outcome of a Pardon event is the release or forgiveness of the defendant from legal penalties.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the authority or official body that grants the pardon, such as a king, court, or parole board. This role is crucial as it holds the power to forgive or excuse the defendant from legal consequences. The adjudicator can be a single individual, like a president or governor, or a collective body. It must be distinguished from other legal authorities in different justice events. In some cases, the adjudicator may not be explicitly mentioned but can be inferred from context.",
+            "defendant": "The defendant is the person who is being pardoned, benefiting from the release from legal penalties or forgiveness for their actions. This role can be filled by a well-known public figure or a less prominent individual. The defendant must be distinguished from other roles in justice events, such as the plaintiff in an Appeal event or the victim in a Die event. In some cases, the defendant may be a group of people.",
+            "place": "The place is the location where the pardon is issued or takes effect, providing context for the event. It indicates where the legal authority has jurisdiction or where the defendant is located. The place can be a specific city, country, or a more general region. It must be distinguished from other locations involved in different events, such as the place of arrest in an ArrestJail event or the place of execution in an Execute event. In some cases, the place may not be explicitly mentioned but can be inferred from context."
+        }
+    }
+}

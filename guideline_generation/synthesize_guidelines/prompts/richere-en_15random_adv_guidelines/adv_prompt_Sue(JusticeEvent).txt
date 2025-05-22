@@ -1,0 +1,99 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Sue(JusticeEvent)
+```json
+{
+    "Sue(JusticeEvent)": {
+        "description": [
+            "The event is triggered by legal actions where one party initiates a lawsuit against another. Example triggers include 'sue', 'lawsuit', 'court', and 'civil suit'.",
+            "The event is characterized by the involvement of a plaintiff and a defendant, where the plaintiff seeks legal remedy or compensation from the defendant. Key characteristics include the formal legal process and the presence of an adjudicator in some cases.",
+            "Unlike other JusticeEvents such as 'ChargeIndict' or 'Convict', the 'Sue' event does not involve criminal charges or sentencing but rather civil disputes and claims. Triggers such as 'charged' or 'convicted' are indicative of criminal proceedings, not this event type.",
+            "The outcomes of the 'Sue' event typically involve financial compensation, injunctions, or other civil remedies, as opposed to criminal penalties like imprisonment. This distinguishes it from events like 'Acquit' or 'Convict'.",
+            "The scope of the 'Sue' event includes various types of civil lawsuits, such as wrongful dismissal, harassment, or breach of contract. It does not cover criminal prosecutions or administrative actions."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'court', 'judge', or 'jury'. The adjudicator is the entity responsible for overseeing the legal proceedings and making a judgment or ruling.",
+            "The adjudicator plays a crucial role in ensuring the legal process is fair and just. In some cases, the adjudicator may be a specific court or judge mentioned in the text.",
+            "In the context of a 'Sue' event, the adjudicator is not the party initiating or defending the lawsuit but rather the neutral party making the decision. For example, 'The court ruled in favor of the plaintiff'.",
+            "Unlike the 'ChargeIndict' event where the adjudicator may also be involved in criminal charges, in the 'Sue' event, the adjudicator is solely focused on civil matters.",
+            "Edge cases include situations where the adjudicator is implied but not explicitly mentioned, such as 'The lawsuit was settled in court'. Here, 'court' is the adjudicator."
+        ],
+        "defendant": [
+            "Examples are 'him', 'Peabody\u2019s', 'banks', or 'them'. The defendant is the party against whom the lawsuit is filed.",
+            "The defendant is crucial as they are the party being accused or held responsible for the alleged wrongdoing. For instance, 'The company was sued for negligence'.",
+            "In the 'Sue' event, the defendant is distinct from the plaintiff, who is the party initiating the lawsuit. For example, 'The plaintiff sued the defendant for damages'.",
+            "Unlike in criminal events like 'ChargeIndict', where the defendant faces criminal charges, in the 'Sue' event, the defendant faces civil claims and potential financial liabilities.",
+            "Edge cases include situations where the defendant is a group or entity rather than an individual, such as 'The union sued the corporation'. Here, 'corporation' is the defendant."
+        ],
+        "place": [
+            "Examples are 'England', 'court', or 'London'. The place is the location where the lawsuit is filed or where the legal proceedings take place.",
+            "The place is important as it provides context for the jurisdiction and legal framework under which the lawsuit is being conducted. For instance, 'The lawsuit was filed in New York'.",
+            "In the 'Sue' event, the place can be a specific court, city, or country. For example, 'The case was heard in a federal court in California'.",
+            "Unlike events like 'TransportArtifact', where the place indicates the destination, in the 'Sue' event, the place indicates the legal venue or jurisdiction.",
+            "Edge cases include situations where the place is implied but not explicitly mentioned, such as 'The lawsuit proceeded in the local court'. Here, 'local court' is the place."
+        ],
+        "plaintiff": [
+            "Examples are 'authors', 'union', 'family', 'Churchill', or 'malingerers'. The plaintiff is the party initiating the lawsuit.",
+            "The plaintiff is crucial as they are the party seeking legal remedy or compensation. For instance, 'The plaintiff filed a lawsuit for breach of contract'.",
+            "In the 'Sue' event, the plaintiff is distinct from the defendant, who is the party being sued. For example, 'The plaintiff sued the defendant for damages'.",
+            "Unlike in criminal events like 'ChargeIndict', where the prosecutor represents the state, in the 'Sue' event, the plaintiff is typically an individual or entity directly affected by the alleged wrongdoing.",
+            "Edge cases include situations where the plaintiff is a group or organization rather than an individual, such as 'The union sued the company'. Here, 'union' is the plaintiff."
+        ]
+    }
+}
+```

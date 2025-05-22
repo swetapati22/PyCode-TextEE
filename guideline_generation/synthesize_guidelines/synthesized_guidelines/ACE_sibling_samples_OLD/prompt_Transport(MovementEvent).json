@@ -1,0 +1,64 @@
+{
+    "Transport(MovementEvent)": {
+        "description": [
+            "The event is triggered by an action that involves moving entities (people, vehicles, or objects) from one place to another. Example triggers include 'transport', 'drove', and 'carting'.",
+            "The event is characterized by the relocation of artifacts, people, or vehicles, where the movement is from a defined origin to a specific destination, often involving an agent who facilitates this movement.",
+            "Unlike general MovementEvent where any movement is involved, Transport specifically focuses on the purposeful, directed movement of entities from one location to another for a particular reason, often involving a vehicle.",
+            "This event type differs from events like TransferOwnership in that it pertains to physical movement rather than changes in ownership or control, even though both may involve moving items.",
+            "Triggers such as 'took' in the context of moving to locations, or 'drove' related to vehicle use, specifically indicate Transport, not other types of MovementEvents such as 'walking' or 'running'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are instances where an entity initiates or is responsible for the transportation action. In 'forces assisted by getting back into Iraq', 'forces' is the agent.",
+            "This argument identifies who is orchestrating or carrying out the transport, crucial in scenarios involving organized movements or operations.",
+            "In cases where transportation involves coordination or security, the agent is typically a group or individual with the capability or authority to manage such movements, like 'medical teams' in emergency situations.",
+            "The agent's role is especially prominent when the transport requires special arrangements or authorizations, highlighting their authority or logistical role.",
+            "Agents are not always human; they can be organizations, forces, or other entities capable of directing or facilitating movement."
+        ],
+        "artifact": [
+            "Examples are physical objects or individuals being moved as part of the event, such as 'women', 'children', or 'teams' in disaster response scenarios.",
+            "This argument is central to defining what is being transported, from individuals in a rescue operation to items in a shipment.",
+            "Artifacts can vary widely, from animate to inanimate; understanding the nature of the artifact helps clarify the purpose and method of transport.",
+            "In some contexts, artifacts may also include abstract entities or groups moved en masse, such as 'protesters' during demonstrations.",
+            "The distinction of an artifact from other arguments like 'victim' lies in its role as the primary object of the transport, irrespective of its own agency."
+        ],
+        "destination": [
+            "Examples are the intended final location to which the artifacts are being transported, like 'Manhattan' in a travel scenario, or 'Sudan' for refugees.",
+            "This argument specifies where the transported entities are meant to end up, which can be as broad as a country or as specific as a building.",
+            "In scenarios involving multiple stops or complex routes, the destination is typically the final stop or primary target location.",
+            "Understanding the destination is crucial for determining the scope and intent of the transportation, affecting logistical and strategic planning.",
+            "Destinations can sometimes be symbolic or strategic, such as 'streets' during protests or rallies, highlighting broader socio-political objectives."
+
+        ],
+        "origin": [
+            "Examples are the starting point of the transport, such as 'Pennsylvania' from where someone drove to an event, or 'Sudan' from where refugees were moved.",
+            "This argument details the initial location from which the transport begins, setting the context for the journey or movement.",
+            "Origins can be as diverse as destinations and provide critical information about the route, distance, and potential challenges involved.",
+            "The origin can also imply reasons for the transport, such as evacuation from a disaster zone or departure for a significant event.",
+            "In contrast to destinations, origins often carry implications about the conditions or situations prompting the transport."
+        ],
+        "place": [
+            "Examples are specific locations associated with the transport event but not necessarily origins or destinations, like 'Iraq' in the context of a military operation.",
+            "This argument captures the broader geographical or contextual setting of the transport, which may encompass multiple areas or points of interest.",
+            "Places can be transit points, areas of conflict, or regions affected by the transport, providing a backdrop to the event.",
+            "In documentation, distinguishing 'place' from 'origin' and 'destination' is key for clarity, especially in complex logistical operations.",
+            "Places add depth to the narrative of transport, illustrating the environment, challenges, or scope of the movement involved."
+        ],
+        "vehicle": [
+            "Examples are means of transport used in the event, such as 'trains' for moving large numbers of people or goods, or cars in individual travel cases.",
+            "This argument defines the physical means by which transport is accomplished, highlighting the mode and capacity of the transport.",
+            "Vehicles can range from standard cars and buses to specialized machinery like ambulances or military transports, depending on the event.",
+            "The choice of vehicle often reflects the nature of the artifact being transported and the conditions of the journey.",
+            "In many scenarios, the vehicle itself can be a critical factor in the event's feasibility and success, such as in evacuations or critical deliveries."
+        ],
+        "victim": [
+            "Examples are individuals or entities that are involuntarily moved or impacted by the transport, such as 'who' in the context of forced relocations or evacuations.",
+            "This argument highlights those who are transported not by their own volition but due to external circumstances or emergencies.",
+            "Victims are often central to humanitarian transport events, where the focus is on rescue, relief, or escape from danger.",
+            "Distinguishing victims from artifacts is crucial; victims are specifically those affected adversely by the transport scenario.",
+            "In some cases, the term 'victim' can also reflect broader socio-political dynamics, as in the displacement of populations during conflicts."
+        ]
+    }
+}

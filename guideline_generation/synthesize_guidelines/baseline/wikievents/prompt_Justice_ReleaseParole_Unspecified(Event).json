@@ -1,0 +1,28 @@
+{
+    "Justice_ReleaseParole_Unspecified(Event)": {
+        "description": [
+            "The event 'Justice_ReleaseParole_Unspecified' refers to the act of releasing an individual from custody, parole, or any form of detention without specifying the conditions or reasons for the release. The event can be triggered by terms such as 'release', 'parole', 'relief', 'releasing', etc. This event typically involves a legal or judicial context where a defendant is set free by a judge, court, or other legal authority.",
+            "The 'Justice_ReleaseParole_Unspecified' event involves the act of setting an individual free from legal custody or parole without detailed conditions. The event can be triggered by words like 'release', 'parole', 'relief', and similar terms. It usually occurs in a legal setting where a defendant is released by a judicial authority.",
+            "In the 'Justice_ReleaseParole_Unspecified' event, an individual is freed from detention or parole without specific conditions being mentioned. This event can be triggered by terms such as 'release', 'parole', 'relief', etc. It generally involves a legal process where a defendant is released by a judge or court.",
+            "The 'Justice_ReleaseParole_Unspecified' event describes the act of releasing someone from custody or parole without specifying the terms. The event can be triggered by words like 'release', 'parole', 'relief', and others. It typically takes place in a judicial context where a defendant is set free by a legal authority.",
+            "The event 'Justice_ReleaseParole_Unspecified' refers to the release of an individual from legal custody or parole without detailed conditions. This event can be triggered by terms such as 'release', 'parole', 'relief', etc. It usually involves a legal scenario where a defendant is released by a judge or court."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "defendant": [
+            "The 'defendant' argument refers to the individual who is being released from custody, parole, or detention. Examples are 'he', 'five', 'him', 'his', 'who', 'men', 'Both', 'Schneck'. This argument identifies the person who was previously under legal restraint and is now being set free.",
+            "In the context of the 'Justice_ReleaseParole_Unspecified' event, the 'defendant' is the person who is being released from legal custody or parole. Examples are 'he', 'five', 'him', 'his', 'who', 'men', 'Both', 'Schneck'. This argument specifies the individual who was detained and is now being freed.",
+            "The 'defendant' argument in the 'Justice_ReleaseParole_Unspecified' event identifies the person who is being set free from detention or parole. Examples are 'he', 'five', 'him', 'his', 'who', 'men', 'Both', 'Schneck'. This argument points to the individual who was under legal restraint and is now released.",
+            "For the 'Justice_ReleaseParole_Unspecified' event, the 'defendant' refers to the individual being released from custody or parole. Examples are 'he', 'five', 'him', 'his', 'who', 'men', 'Both', 'Schneck'. This argument denotes the person who was previously detained and is now being set free.",
+            "The 'defendant' argument in the 'Justice_ReleaseParole_Unspecified' event pertains to the person being released from legal custody or parole. Examples are 'he', 'five', 'him', 'his', 'who', 'men', 'Both', 'Schneck'. This argument identifies the individual who was under legal restraint and is now being released."
+        ],
+        "judgecourt": [
+            "The 'judgecourt' argument refers to the legal authority, such as a judge or court, responsible for the release of the defendant. Examples are 'jury', 'Ewing Werlein Jr.'. This argument identifies the entity that has the legal power to release the defendant from custody or parole.",
+            "In the 'Justice_ReleaseParole_Unspecified' event, the 'judgecourt' argument denotes the judicial authority that orders the release of the defendant. Examples are 'jury', 'Ewing Werlein Jr.'. This argument specifies the legal body or individual responsible for the release.",
+            "The 'judgecourt' argument in the 'Justice_ReleaseParole_Unspecified' event identifies the legal authority, such as a judge or court, that authorizes the release of the defendant. Examples are 'jury', 'Ewing Werlein Jr.'. This argument points to the entity with the legal power to set the defendant free.",
+            "For the 'Justice_ReleaseParole_Unspecified' event, the 'judgecourt' refers to the judicial authority responsible for the release of the defendant. Examples are 'jury', 'Ewing Werlein Jr.'. This argument denotes the legal body or individual that has the authority to release the defendant.",
+            "The 'judgecourt' argument in the 'Justice_ReleaseParole_Unspecified' event pertains to the legal authority, such as a judge or court, that orders the release of the defendant. Examples are 'jury', 'Ewing Werlein Jr.'. This argument identifies the entity with the legal power to release the defendant from custody or parole."
+        ]
+    }
+}

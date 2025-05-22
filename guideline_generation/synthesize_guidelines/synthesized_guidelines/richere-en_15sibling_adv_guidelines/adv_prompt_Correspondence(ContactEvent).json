@@ -1,0 +1,10 @@
+{
+    "Correspondence(ContactEvent)": {
+        "description": "The Correspondence(ContactEvent) event is triggered by actions or communications involving the exchange of information between entities. This can occur through various mediums such as phone calls, emails, letters, or in-person meetings. Unlike the 'Meet' event type, which focuses on physical gatherings, the 'Correspondence' event type emphasizes the exchange of information, regardless of physical presence. Triggers include terms like 'meet', 'phoned', 'answer', 'asked', 'accused', and 'responding'. It is distinct from the 'Broadcast' event type, which involves one entity communicating to a larger audience. The primary outcome of a 'Correspondence' event is the transfer of information or a response to a query.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "Entities are individuals or organizations involved in the communication. Examples include 'Amtrak' in 'Phoned Amtrak on Wednesday' and 'you' and 'I' in 'Let's see, you quoted my post'. Entities can be explicitly mentioned or implied, such as 'company' in 'Phoned online company and got it'. Pronouns like 'you' and 'me' in 'Do you recall in YOUR thread where you accused me' also qualify as entities.",
+            "place": "The place is the location where the correspondence occurs. Examples include 'London' in 'Mr. Patino will be in London and has offered to meet with Foreign Secretary William Hague'. Places can be specific or general, such as 'at the office' or 'in the city'. Sometimes, the place may be inferred from context, as in 'Phoned online company'. Unlike the 'Broadcast' event type, where the place might be a venue for a speech, the 'Correspondence' event type's place is where the communication occurs or is directed to."
+        }
+    }
+}

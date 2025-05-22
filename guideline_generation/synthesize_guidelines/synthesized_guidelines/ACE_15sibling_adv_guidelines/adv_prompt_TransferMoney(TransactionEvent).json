@@ -1,0 +1,12 @@
+{
+    "TransferMoney(TransactionEvent)": {
+        "description": "The TransferMoney event is triggered by actions involving the transfer of money from one entity to another, characterized by the movement of monetary value. It typically involves a giver and a recipient and is distinct from events involving the transfer of goods or services. Common triggers include 'pay', 'give', 'settle', 'funded', and 'cost'. This event often occurs in contexts such as legal settlements, donations, or commercial transactions, and results in the successful transfer of money, identifiable by monetary amounts and the entities involved.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "beneficiary": "The beneficiary is the entity that ultimately benefits from the transfer of money, which may not always be the direct recipient. Examples include 'Democrats' in donations or 'neighbor' in compensation cases. The beneficiary can be an individual, organization, or group, such as a 'research center' funded by a donation or 'clients' in a settlement case.",
+            "giver": "The giver is the entity that provides the money in the transaction, initiating the transfer either voluntarily or due to a legal obligation. Examples include 'Planned Parenthood' in a donation or 'Sotheby's' in a settlement. The giver can be an individual, organization, or group, such as 'Christie's' in a settlement or 'clients' paying a fine.",
+            "place": "The place is the location where the transaction occurs or is relevant, providing geographical context. Examples include 'Colorado' in a legal ruling or 'United States' in an auction settlement. The place can refer to the jurisdiction or area associated with the transaction, such as 'Belgrade' in a property transfer case.",
+            "recipient": "The recipient is the entity that directly receives the money in the transaction, which may or may not be the ultimate beneficiary. Examples include 'Democrats' in a donation or 'neighbor' in a compensation case. The recipient can be an individual, organization, or group, such as 'firms' receiving a fine payment or a 'center' funded by a donation."
+        }
+    }
+}

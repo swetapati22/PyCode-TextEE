@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Nominate(PersonnelEvent)
+```json
+{
+    "Nominate(PersonnelEvent)": {
+        "description": [
+            "The event is triggered by the act of officially naming or designating someone for a position or role. Example triggers include 'name', 'nominate', 'select', and 'appoint'.",
+            "The event is characterized by an agent (the nominator) and a person (the nominee) who is being nominated for a specific role or position. The scope of the event includes any formal or informal nomination process.",
+            "Unlike the 'Elect' event type, which involves a voting process, the 'Nominate' event type does not necessarily involve a vote but rather a designation or selection by an individual or group.",
+            "Triggers such as 'elected' are indicative of the 'Elect' event type, not the 'Nominate' event type. The 'Nominate' event focuses on the act of naming or proposing someone for a role, not the final selection through voting.",
+            "The outcome of the 'Nominate' event is the proposal or designation of a person for a role, whereas the 'Elect' event results in the final selection of a person through a voting process."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "The agent is the entity (person or organization) that performs the act of nominating. Examples are 'pope' in 'the pope will reportedly name a new head', 'British Chancellor of the Exchequer Gordon Brown' in 'Gordon Brown on Tuesday named the current head'.",
+            "The agent is crucial as it indicates who is responsible for the nomination. In the sentence 'Secretary for Social Affairs and Culture Chui Sai On, who has been named director by the government', 'government' is the agent.",
+            "In cases where the agent is implied but not explicitly mentioned, context can help identify the agent. For example, in 'I'd love to call it a classic raid -- he's making an offer for the company, nominating his own board', 'he' is the agent.",
+            "The agent can be an individual or a collective entity. For instance, 'Bush' in 'Bush has been selecting new Cabinet members' is an individual agent, while 'the government' in 'named director by the government' is a collective entity.",
+            "In some contexts, the agent may be a pronoun, such as 'you' in 'So any thoughts on who you uh you would name?' or 'I' in 'You know who I would name?'."
+        ],
+        "person": [
+            "The person is the individual who is being nominated for a position or role. Examples are 'head' in 'the pope will reportedly name a new head', 'current head' in 'named the current head'.",
+            "The person is the focus of the nomination and is the one being proposed for a role. In 'Peterson, of course, is a candidate for the Lt. Governor nomination', 'candidate' is the person.",
+            "In some cases, the person may be referred to by a pronoun or a general term. For example, 'who' in 'So any thoughts on who you uh you would name?' or 'who' in 'You know who I would name?'.",
+            "The person can be identified by their role or title, such as 'board' in 'nominating his own board' or 'Chui Sai On' in 'named director of the SARS task force'.",
+            "In contexts where multiple individuals are being nominated, the person argument can refer to a group, such as 'members' in 'selecting new Cabinet members'."
+        ]
+    }
+}
+```

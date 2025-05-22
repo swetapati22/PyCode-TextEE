@@ -1,0 +1,28 @@
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": [
+            "The event is triggered by actions or gatherings where people publicly express their opinions, often in opposition to something, such as 'rally', 'march', or 'protest'.",
+            "The event is characterized by a collective action where a group of individuals come together to voice their stance on a particular issue, often in a public space.",
+            "Unlike an 'Attack' event, which involves physical violence or harm, a 'Demonstrate' event focuses on the act of public expression and assembly, even if it may lead to clashes with authorities.",
+            "Triggers such as 'rally' and 'march' are indicative of a 'Demonstrate' event, not an 'Attack' event, which would involve terms like 'assault' or 'killed'.",
+            "The outcomes of a 'Demonstrate' event typically involve public visibility and potential arrests, rather than physical harm or destruction, which are outcomes of an 'Attack' event."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "entity": [
+            "Examples are 'protesters', 'demonstrators', 'people', or any group of individuals participating in the demonstration.",
+            "The entity represents the participants of the demonstration, who are actively involved in expressing their opinions.",
+            "In the context of a demonstration, the entity is crucial as it highlights the collective nature of the event.",
+            "Unlike an 'Attack' event where the entity might be an 'attacker' or 'victim', in a 'Demonstrate' event, the entity is the group expressing their stance.",
+            "Edge cases include situations where the entity might be implied rather than explicitly stated, such as 'their' in 'their rally'."
+        ],
+        "place": [
+            "Examples are 'New York', 'city', 'here', or any specific location where the demonstration takes place.",
+            "The place indicates the geographical location of the demonstration, providing context to the event.",
+            "In a 'Demonstrate' event, the place is important as it situates the event in a physical space, often a public area.",
+            "Unlike an 'Attack' event where the place might be a specific target location, in a 'Demonstrate' event, the place is where the public assembly occurs.",
+            "Edge cases include situations where the place might be a broader area rather than a specific point, such as 'across the United States and Canada'."
+        ]
+    }
+}

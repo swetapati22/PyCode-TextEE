@@ -1,0 +1,42 @@
+{
+  "Sue(JusticeEvent)": {
+    "description": [
+      "The event is triggered by legal actions initiated by one party (plaintiff) against another party (defendant) in a court or similar adjudicating authority. Example triggers include 'sued,' 'lawsuit,' and 'litigation.'",
+      "This event involves the formal filing of legal complaints or cases, often requiring the presence of a plaintiff, defendant, and sometimes an adjudicator, alongside the legal context or place of filing.",
+      "Unlike other JusticeEvents such as Appeal or Acquit, Sue focuses on the initiation of a legal process rather than a response to a prior ruling or an outcome of a trial.",
+      "Triggers like 'filed a case' or 'brought to court' indicate Sue, as opposed to terms like 'appealed' or 'pardoned,' which are related to other JusticeEvent types.",
+      "This event captures the dynamic of one party seeking legal remedies or damages against another through formal judicial processes, often tied to specific legal or geographical jurisdictions."
+    ]
+  },
+  "attributes": {
+    "mention": "The text span that triggers the event.",
+    "adjudicator": [
+      "Examples are courts or legal bodies involved in adjudicating the lawsuit, such as 'courts'.",
+      "Adjudicators represent the judicial or administrative authority presiding over the legal dispute between the plaintiff and defendant.",
+      "This argument is crucial in providing the institutional context within which the lawsuit occurs, differentiating Sue from extrajudicial conflicts.",
+      "Unlike plaintiffs or defendants, adjudicators are neutral entities responsible for resolving disputes rather than initiating or defending claims.",
+      "In ambiguous scenarios, the adjudicator may be inferred from references to legal proceedings, such as 'judicial system' or specific courts."
+    ],
+    "defendant": [
+      "Examples are individuals or entities against whom the lawsuit is filed, such as 'Iraq' or 'Crichton'.",
+      "Defendants are typically mentioned as the party accused or held liable in the legal context of the event.",
+      "This argument helps identify the opposing side to the plaintiff in the legal action, a key feature distinguishing Sue from other event types.",
+      "Unlike plaintiffs, defendants are reactive participants, often described in the context of allegations or demands made against them.",
+      "In cases involving multiple defendants, all identifiable parties should be annotated, providing a comprehensive understanding of the lawsuit."
+    ],
+    "place": [
+      "Examples are geographical locations where the legal action is filed or conducted, such as 'Washington'.",
+      "The place argument situates the legal action within a specific jurisdiction, which can impact the legal processes and outcomes.",
+      "Unlike adjudicators, the place is not an institution but a physical or geopolitical setting, such as a city, state, or country.",
+      "Place adds context to the event, especially when the legal action spans multiple jurisdictions or involves international parties.",
+      "Edge cases include references to overarching regions (e.g., 'United States') when a more specific location is unavailable or unclear."
+    ],
+    "plaintiff": [
+      "Examples are individuals or entities initiating the lawsuit, such as 'relatives,' 'survivors', or 'Anne-Marie'.",
+      "Plaintiffs are active participants in the event, described as seeking legal remedies, compensation, or justice against the defendant.",
+      "This argument distinguishes Sue from events where the roles are reversed, such as Appeal, where the defendant often takes proactive action.",
+      "Unlike defendants, plaintiffs are characterized by agency and initiative in the legal process, often described in terms of filing or bringing claims.",
+      "In scenarios involving collective plaintiffs, all explicitly mentioned participants should be annotated, reflecting the full scope of the legal action."
+    ]
+  }
+}

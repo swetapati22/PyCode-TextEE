@@ -1,0 +1,11 @@
+{
+    "Fine(JusticeEvent)": {
+        "description": "The Fine event is triggered by the imposition of a monetary penalty on an individual or entity as a result of a legal or regulatory decision. This event is characterized by the requirement for the entity to pay a specified amount of money as a penalty, distinguishing it from other JusticeEvents like 'ArrestJail' or 'Convict', which involve different forms of punishment. The outcome of the Fine event is the payment of a monetary penalty, unlike events such as 'Pardon' or 'Acquit', which result in the removal or reduction of legal penalties. The Fine event can be imposed by various adjudicators such as judges, regulatory bodies, or other authorities, and does not involve the physical transfer of individuals, unlike 'Extradite' or 'ReleaseParole'. Example triggers include 'fine', 'fined', and 'pay a fine'.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "adjudicator": "The adjudicator is the authority or body that imposes the fine, such as a judge, regulatory body, or court. This argument is crucial as it identifies the source of the legal or regulatory decision. Examples include 'judge' in 'the judge ordered a fine' or 'SEC' in 'the SEC imposed a fine'. The adjudicator can be a person or an organization and is distinct from the entity being fined.",
+            "entity": "The entity is the individual or organization required to pay the fine. This argument is essential as it identifies who is being penalized. Examples include 'Ranjha' in 'Ranjha was fined' or 'MCI' in 'MCI agreed to pay a fine'. The entity can be a person, company, or organization and is distinct from the adjudicator.",
+            "place": "The place is the location where the fine is imposed or where the entity is required to pay the fine. This argument provides context about the setting of the event. Examples include 'offices' in 'the fine was imposed at the offices' or 'court' in 'the court imposed a fine'. The place is distinct from the adjudicator and the entity."
+        }
+    }
+}

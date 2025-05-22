@@ -1,0 +1,28 @@
+{
+    "BeBorn(LifeEvent)": {
+        "description": [
+            "The event is triggered by the birth or emergence of a person. Example triggers include 'birth', 'born', 'cut out', 'removed', 'ripped', and 'having'.",
+            "The event is characterized by the introduction of a new individual into the world. It typically involves a person being born and may include details about the place of birth.",
+            "Unlike other LifeEvent types such as 'Die' or 'Marry', the BeBorn event specifically focuses on the beginning of life rather than its end or a significant life milestone.",
+            "Triggers such as 'killed' or 'marry' are indicative of 'Attack' or 'Marry' events, not the BeBorn event type. The BeBorn event is solely concerned with the act of being born.",
+            "The outcome of the BeBorn event is the existence of a new person. This event does not cover the circumstances leading to or following the birth, which may be covered by other event types."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'babies', 'one', 'other', 'infant', 'Hunter', 'girl', 'baby', 'that', 'child', 'girls', 'boys'. The 'person' argument identifies the individual(s) being born.",
+            "The 'person' argument is crucial as it specifies who is being born. It can refer to a single individual or multiple individuals.",
+            "In cases where the gender or identity of the person is not specified, terms like 'baby', 'infant', or 'child' may be used.",
+            "Unlike other arguments, the 'person' argument must always refer to a human being. Non-human entities or objects are not applicable.",
+            "Edge cases include ambiguous references such as 'that' or 'one', which still indicate a person being born but lack specific details."
+        ],
+        "place": [
+            "Examples are 'home', 'New Zealand', 'nation'. The 'place' argument identifies the location where the birth occurs.",
+            "The 'place' argument is important as it provides context about the geographical or physical location of the birth event.",
+            "This argument can refer to a specific location (e.g., 'home', 'hospital') or a broader geographical area (e.g., 'New Zealand', 'nation').",
+            "Unlike the 'person' argument, the 'place' argument is optional and may not always be present in the event description.",
+            "Edge cases include vague or general locations such as 'area' or 'region', which still provide some context but lack specificity."
+        ]
+    }
+}

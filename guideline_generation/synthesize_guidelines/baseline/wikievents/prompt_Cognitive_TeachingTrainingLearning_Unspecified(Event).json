@@ -1,0 +1,28 @@
+{
+    "Cognitive_TeachingTrainingLearning_Unspecified(Event)": {
+        "description": [
+            "The Cognitive_TeachingTrainingLearning_Unspecified event involves any activity where knowledge, skills, or information are imparted or acquired. This can include formal education, training sessions, or informal learning experiences. The event can be triggered by verbs such as 'teach', 'train', 'learn', 'instruct', 'educate', and similar terms.",
+            "Cognitive_TeachingTrainingLearning_Unspecified refers to events where an individual or group is involved in the process of teaching, training, or learning without specifying the exact nature of the activity. The event can be triggered by words like 'taught', 'trained', 'learned', 'instructed', and 'educated'.",
+            "This event type captures instances where teaching, training, or learning activities occur, but the specific details of the activity are not provided. Triggers for this event include terms like 'teaching', 'training', 'learning', 'instruction', and 'education'.",
+            "Cognitive_TeachingTrainingLearning_Unspecified encompasses events where there is a transfer or acquisition of knowledge or skills, without detailed context. Common triggers include 'teach', 'train', 'learn', 'instruct', and 'educate'.",
+            "The event type Cognitive_TeachingTrainingLearning_Unspecified involves any form of teaching, training, or learning activity that is not further specified. It can be triggered by verbs such as 'teach', 'train', 'learn', 'instruct', and 'educate'."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "learner": [
+            "The 'learner' argument refers to the individual or group receiving knowledge, skills, or information during the event. Examples are 'students', 'trainees', 'new recruits', 'participants', and 'apprentices'.",
+            "In the context of this event, 'learner' denotes the person or group being taught or trained. Examples include 'students', 'trainees', 'novices', 'pupils', and 'learners'.",
+            "The 'learner' is the recipient of the teaching or training in the event. Examples are 'students', 'trainees', 'new hires', 'participants', and 'apprentices'.",
+            "For this event type, 'learner' identifies the individual or group gaining knowledge or skills. Examples include 'students', 'trainees', 'new recruits', 'attendees', and 'apprentices'.",
+            "The 'learner' argument represents those who are learning or being trained in the event. Examples are 'students', 'trainees', 'novices', 'participants', and 'apprentices'."
+        ],
+        "teachertrainer": [
+            "The 'teachertrainer' argument refers to the individual or group imparting knowledge, skills, or information during the event. Examples are 'instructors', 'trainers', 'teachers', 'mentors', and 'educators'.",
+            "In this event, 'teachertrainer' denotes the person or group providing the teaching or training. Examples include 'instructors', 'trainers', 'teachers', 'coaches', and 'educators'.",
+            "The 'teachertrainer' is the source of the knowledge or skills being imparted in the event. Examples are 'instructors', 'trainers', 'teachers', 'mentors', and 'educators'.",
+            "For this event type, 'teachertrainer' identifies the individual or group delivering the teaching or training. Examples include 'instructors', 'trainers', 'teachers', 'coaches', and 'educators'.",
+            "The 'teachertrainer' argument represents those who are teaching or training in the event. Examples are 'instructors', 'trainers', 'teachers', 'mentors', and 'educators'."
+        ]
+    }
+}

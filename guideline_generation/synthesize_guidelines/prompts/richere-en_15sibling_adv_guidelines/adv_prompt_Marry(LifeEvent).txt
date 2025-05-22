@@ -1,0 +1,85 @@
+You are an expert in summarizing NLP event extraction guidelines. Your goal is to consolidate multiple detailed descriptions into a single concise, comprehensive "Advanced" guideline.
+
+### Input Format ###
+Event Type: Event Type Name
+```json
+{
+  "Event Definition": [
+    "Definition 1",
+    "Definition 2",
+    "Definition 3",
+    "Definition 4",
+    "Definition 5"
+  ],
+  "Arguments Definitions": {
+    "mention": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    "Argument1": [
+      "Definition 1",
+      "Definition 2",
+      "Definition 3",
+      "Definition 4",
+      "Definition 5"
+    ],
+    // Add additional arguments as necessary
+  }
+}
+```
+
+### Task ###
+1. Consolidate the 5 definitions under "Event Definition" into a single definition:
+   - Highlight all critical points and examples from the five definitions.
+   - Ensure the description is concise, comprehensive, and clear, using formal language that non-experts can understand.
+
+2. Do the same for each argument under "Arguments Definitions," producing a single advanced definition for each. 
+
+### Output Format ###
+```json
+{
+  "Event Definition": "Consolidated advanced guideline for the event type.",
+  "Arguments Definitions": {
+    "mention": "Consolidated advanced guideline for the mention argument.",
+    "Argument1": "Consolidated advanced guideline for Argument1.",
+    "Argument2": "Consolidated advanced guideline for Argument2."
+    // Add additional arguments as applicable
+  }
+}
+```
+
+### Guidelines to Summarize ###
+Event Type: prompt_Marry(LifeEvent)
+```json
+{
+    "Marry(LifeEvent)": {
+        "description": [
+            "The event is triggered by the act of entering into a legally or culturally recognized union between two individuals, typically referred to as marriage. Example triggers include 'married', 'marriage', and 'remarried'.",
+            "The event is characterized by the formalization of a relationship between two people, often involving a ceremony and legal documentation. It is a significant life event that marks the beginning of a marital relationship.",
+            "Unlike the Divorce event, which signifies the dissolution of a marriage, the Marry event signifies the commencement of a marital union. Triggers such as 'divorce' are indicative of the Divorce event, not the Marry event.",
+            "The Marry event can occur in various cultural and legal contexts, and the specifics of the event may vary accordingly. However, the core aspect remains the formal union of two individuals.",
+            "The outcomes of the Marry event include the establishment of a legally or socially recognized partnership, often accompanied by changes in legal status, living arrangements, and social roles."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "person": [
+            "Examples are 'bride', 'groom', 'spouse', 'partner', 'husband', 'wife', 'couple'. This argument identifies the individuals who are entering into the marriage.",
+            "The 'person' argument is crucial as it specifies the participants in the marriage event. For instance, in the sentence 'John and Mary got married', 'John' and 'Mary' are the 'person' arguments.",
+            "In cases where the text refers to groups or multiple individuals, such as 'couples' or 'partners', these can also be annotated as 'person'. For example, 'Many couples got married last year' would have 'couples' as the 'person' argument.",
+            "Edge cases include references to individuals in a non-specific manner, such as 'someone' or 'they'. These should still be annotated as 'person' if they are clearly participants in the marriage event.",
+            "The 'person' argument can also include individuals mentioned in a possessive form, such as 'her husband' or 'his wife'. These possessive forms still identify the participants in the marriage."
+        ],
+        "place": [
+            "Examples are 'church', 'city hall', 'beach', 'Las Vegas', 'New York'. This argument identifies the location where the marriage event takes place.",
+            "The 'place' argument is important as it provides context about the setting of the marriage event. For instance, in the sentence 'They got married in Paris', 'Paris' is the 'place' argument.",
+            "In cases where the location is mentioned in a more general sense, such as 'in most places' or 'in their hometown', these should still be annotated as 'place'.",
+            "Edge cases include references to locations that are not explicitly named but implied, such as 'at the venue' or 'there'. These should be annotated as 'place' if the context clearly indicates a location related to the marriage event.",
+            "The 'place' argument can also include broader geographical references, such as 'country' or 'state', if they are relevant to the marriage event. For example, 'They got married in the United States' would have 'United States' as the 'place' argument."
+        ]
+    }
+}
+```

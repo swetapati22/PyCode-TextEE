@@ -1,0 +1,10 @@
+{
+    "Demonstrate(ConflictEvent)": {
+        "description": "A 'Demonstrate' event involves actions or gatherings where individuals publicly express their opinions, often in opposition to something. This event is characterized by collective action or assembly, typically involving public displays of dissent or support for a cause. Unlike 'Attack' events, which involve physical violence or harm, 'Demonstrate' events focus on public expression and assembly, even if they may lead to clashes or arrests. Triggers for this event include terms like 'rally', 'march', 'protests', or 'gathered'. The outcomes include public visibility of the cause, potential clashes with authorities, and sometimes arrests, but not direct physical harm as seen in 'Attack' events.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "entity": "This argument identifies the individuals or groups participating in the demonstration, such as 'protesters', 'people', 'demonstrators', 'Liana Owen', 'parents', and 'woman'. It specifies who is involved, providing context to the event. For groups, it highlights the collective nature, while for individuals, it personalizes the event. Ambiguous references like 'their' should be clearly linked to the demonstrators to avoid confusion.",
+            "place": "This argument identifies the location where the demonstration takes place, such as 'here', 'New York', 'city', 'Manhattan', 'White House', 'plazas', and 'streets'. It situates the event geographically, providing a setting for the demonstration. Locations can range from specific places to broader areas, indicating the scale of the event. Sometimes, the place might be implied or inferred from context. Multiple locations should be annotated to reflect the spread of the demonstration."
+        }
+    }
+}

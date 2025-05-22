@@ -1,0 +1,11 @@
+{
+    "ArrestJail(JusticeEvent)": {
+        "description": "The 'ArrestJail' event is triggered by actions where an individual or group is taken into custody by law enforcement or other authorities. This event involves the deprivation of liberty of the person(s) involved, typically due to suspected or alleged criminal activity. It includes an agent (usually law enforcement) and a person (the individual or group being arrested). Unlike the 'Execute' event, which involves carrying out a death sentence, 'ArrestJail' focuses on the initial act of taking someone into custody. Triggers such as 'charged' or 'indicted' are not part of this event type. The outcome is the person being held in a detention facility or jail, marking the beginning of the legal process, not its conclusion.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "agent": "The agent is the party responsible for making the arrest, such as law enforcement officers, police, authorities, or any official entity. Examples include 'Police' in 'Police arrested her' or 'Detective John' in 'Detective John arrested the suspect'. The agent is directly involved in the physical act of taking someone into custody, unlike the 'adjudicator' in events like 'TrialHearing'.",
+            "person": "The person is the individual or group being taken into custody, such as 'her', 'people', 'group', or specific names like 'Lisa M. Montgomery'. The person is the subject of the arrest or jailing, whose liberty is being deprived. For instance, in 'Police arrested her', 'her' is the person. This can include large groups or crowds, unlike the 'defendant' in events like 'ChargeIndict'.",
+            "place": "The place is the location where the arrest or jailing occurs, such as 'Abilene', 'New York', 'San Francisco', or general terms like 'here'. It situates the event geographically, indicating where the person was taken into custody. For example, in 'arrested her in Abilene', 'Abilene' is the place. Unlike the 'origin' or 'destination' in events like 'Extradite', the place in 'ArrestJail' is specifically where the arrest or jailing happens."
+        }
+    }
+}

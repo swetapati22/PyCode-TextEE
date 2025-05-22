@@ -1,0 +1,42 @@
+{
+    "TransferMoney(TransactionEvent)": {
+        "description": [
+            "The event is triggered by the act of transferring money from one entity to another. Example triggers include 'spent', 'given', 'paid', 'gets', and 'loan'.",
+            "The event is characterized by the movement of monetary value between parties, often involving a giver and a recipient. It can occur in various contexts such as aid, bonuses, payments, and loans.",
+            "Unlike TransferOwnership, this event does not involve the transfer of physical or intellectual property but strictly pertains to monetary transactions.",
+            "Triggers such as 'inheritance' are indicative of TransferOwnership, not this event type, as they involve the transfer of ownership of assets rather than money.",
+            "The outcome of this event is the successful transfer of money, which can be identified by the presence of a giver, recipient, and sometimes a place where the transaction occurs."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "beneficiary": [
+            "Examples are 'country' in the context of receiving aid or relief funds.",
+            "The beneficiary is the entity that ultimately benefits from the transferred money, even if they are not the direct recipient.",
+            "In cases where aid is provided, the beneficiary could be a country, organization, or community.",
+            "Unlike the recipient, the beneficiary may not directly receive the money but gains from its use or distribution.",
+            "Edge cases include situations where the beneficiary is an abstract entity, such as 'the economy' or 'the public'."
+        ],
+        "giver": [
+            "Examples are 'E.U.' in the context of spending money on relief efforts.",
+            "The giver is the entity that provides or transfers the money to another party.",
+            "In financial transactions, the giver could be an individual, organization, government, or financial institution.",
+            "Unlike the recipient, the giver is the source of the funds being transferred.",
+            "Edge cases include situations where the giver is not explicitly mentioned but can be inferred from context, such as 'his' in 'spent a trillion dollars on his stimulus'."
+        ],
+        "place": [
+            "Examples are 'country' in the context of receiving aid or relief funds.",
+            "The place is the location where the transfer of money occurs or where the beneficiary is situated.",
+            "In international aid, the place could be a country or region receiving the funds.",
+            "Unlike the giver or recipient, the place is a geographical location associated with the transaction.",
+            "Edge cases include virtual or online transactions where the place may not be explicitly mentioned but can be inferred from context."
+        ],
+        "recipient": [
+            "Examples are 'Stephen Hester' in the context of receiving a bonus.",
+            "The recipient is the entity that directly receives the transferred money.",
+            "In financial transactions, the recipient could be an individual, organization, or government entity.",
+            "Unlike the beneficiary, the recipient is the direct receiver of the funds.",
+            "Edge cases include situations where the recipient is not explicitly mentioned but can be inferred from context, such as 'I' in 'I took out the loan'."
+        ]
+    }
+}

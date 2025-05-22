@@ -1,0 +1,42 @@
+{
+    "Die(LifeEvent)": {
+        "description": [
+            "The event is triggered by the occurrence of a death, whether it is natural, accidental, or intentional. Example triggers include 'murder', 'killing', 'suicide', and 'blown up'.",
+            "The event is characterized by the end of life of one or more individuals. It encompasses various causes and methods of death, such as homicide, suicide, and accidents.",
+            "Unlike the Injure event, which involves harm but not necessarily death, the Die event specifically involves the cessation of life. For example, 'burned' in the context of injury does not trigger the Die event unless it results in death.",
+            "Triggers such as 'divorce' or 'born' are indicative of other LifeEvent types, not the Die event type. The Die event is strictly related to the end of life.",
+            "The event outcomes include the death of the victim(s) and may involve agents responsible for the death, instruments used, and the place where the death occurred. For instance, 'murdered' indicates a Die event with a clear victim and possibly an agent and instrument involved."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "agent": [
+            "Examples are 'bombers', 'government', 'terrorists', and 'killers'. The agent is the entity responsible for causing the death. It is crucial in identifying the perpetrator in cases of homicide or other intentional deaths.",
+            "The agent can be an individual, group, or organization. For instance, 'government' in the context of 'murder' indicates the government as the responsible entity.",
+            "In cases of suicide, the agent and victim may be the same entity, such as 'bombers' in a suicide bombing scenario.",
+            "The agent is not always present in natural death cases. It is more relevant in intentional or accidental deaths where responsibility can be attributed.",
+            "Unlike the Injure event, where the agent causes harm, the agent in the Die event causes death. For example, 'terrorists' causing 'victims' to die is a Die event."
+        ],
+        "instrument": [
+            "Examples are 'bombers', 'hot wires', and 'explosives'. The instrument is the means or tool used to cause the death. It helps in understanding the method of death.",
+            "The instrument can be a weapon, tool, or any object used to inflict fatal harm. For instance, 'hot wires' used to burn someone to death.",
+            "In cases of natural death, the instrument may not be applicable. It is more relevant in homicides, suicides, and accidents.",
+            "The instrument provides context to the nature of the death. For example, 'explosives' in 'blown up' indicate a violent death caused by an explosion.",
+            "Unlike the BeBorn event, where instruments are irrelevant, the Die event often involves instruments that directly contribute to the death."
+        ],
+        "place": [
+            "Examples are 'mainland', 'downtown Manhattan', and 'Palermo'. The place is the location where the death occurred. It provides geographical context to the event.",
+            "The place can be a specific location, city, or broader geographical area. For instance, 'downtown Manhattan' during the 9/11 attacks.",
+            "In some cases, the place may be implied rather than explicitly stated. For example, 'mainland' in the context of a bombing.",
+            "The place helps in understanding the scope and impact of the death event. For example, 'Palermo' in the context of a Mafia-related death.",
+            "Unlike the Marry event, where the place is where the marriage occurs, the place in the Die event is where the death happens."
+        ],
+        "victim": [
+            "Examples are 'bombers', 'bunch', 'children', 'family', 'magistrate', 'foreigners', 'Americans', and 'victims'. The victim is the individual or group who died. It is central to identifying the affected parties in the event.",
+            "The victim can be a single person or multiple individuals. For instance, 'family' and 'magistrate' in a bombing incident.",
+            "In cases of mass casualties, the victim may refer to a large group, such as 'foreigners' and 'Americans' in the 9/11 attacks.",
+            "The victim is not always the same as the agent. For example, 'bombers' as both agent and victim in a suicide bombing.",
+            "Unlike the Injure event, where the victim is harmed but not necessarily dead, the victim in the Die event is deceased. For example, 'children' in 'killing the children' indicates a Die event."
+        ]
+    }
+}

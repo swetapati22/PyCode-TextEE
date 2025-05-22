@@ -1,0 +1,35 @@
+{
+    "Fine(JusticeEvent)": {
+        "description": [
+            "The event is triggered by the imposition of a monetary penalty on an individual or entity as a result of a legal or regulatory decision. Example triggers include 'fine', 'fined', and 'pay a fine'.",
+            "The event is characterized by the requirement for the entity to pay a specified amount of money, often as a result of a legal judgment or regulatory action. Key characteristics include the presence of an adjudicator and the entity being fined.",
+            "Unlike other JusticeEvent types such as 'Convict' or 'ChargeIndict', the Fine event specifically involves a financial penalty rather than a criminal charge or conviction. Triggers such as 'convicted' or 'charged' are indicative of those events, not the Fine event.",
+            "The Fine event often involves a legal or regulatory authority (adjudicator) imposing the penalty on the entity. The outcome is the payment of a fine, which distinguishes it from events like 'Extradite' or 'TrialHearing' where the outcomes involve legal proceedings or hearings.",
+            "The event is triggered by actions that result in a financial penalty being imposed, such as 'ordered to pay a fine' or 'slapped with a fine'. The scope of the event includes the imposition and payment of the fine, but not the underlying legal proceedings that led to the fine."
+        ]
+    },
+    "attributes": {
+        "mention": "The text span that triggers the event.",
+        "adjudicator": [
+            "Examples are 'judge', 'court', 'SEC'. The adjudicator is the authority or body that imposes the fine. This can be a judge, a regulatory body, or any official entity with the power to levy fines.",
+            "The adjudicator plays a crucial role in the Fine event as they are responsible for determining and imposing the fine. For instance, 'The judge ordered the company to pay a fine'.",
+            "In some cases, multiple adjudicators may be involved, such as 'The judge and the SEC imposed a fine'. This highlights the collaborative nature of some regulatory actions.",
+            "Unlike the 'entity' argument, the adjudicator is not the recipient of the fine but the imposer. For example, 'The court fined the company' clearly distinguishes the roles.",
+            "Edge cases include situations where the adjudicator is not explicitly mentioned but implied, such as 'The company was fined' where the adjudicator is understood to be a regulatory body or court."
+        ],
+        "entity": [
+            "Examples are 'Ranjha', 'Monitor', 'MCI'. The entity is the individual or organization that is required to pay the fine. This can be a person, a company, or any other legal entity.",
+            "The entity is the subject of the Fine event, as they are the ones penalized. For example, 'The company was fined $1 million' identifies the company as the entity.",
+            "In some cases, the entity may be a collective group, such as 'The brokerages were fined'. This indicates that multiple entities are being fined together.",
+            "Unlike the 'adjudicator', the entity is the recipient of the penalty, not the imposer. For instance, 'The judge fined the company' clearly separates the roles.",
+            "Edge cases include situations where the entity is not explicitly named but can be inferred, such as 'He was fined' where 'he' refers to a previously mentioned individual."
+        ],
+        "place": [
+            "Examples are 'offices', 'court', 'New York'. The place is the location where the fine is imposed or where the entity is required to pay the fine. This can be a physical location or a jurisdiction.",
+            "The place provides context for the Fine event, indicating where the legal or regulatory action is taking place. For example, 'The fine was imposed in New York' specifies the jurisdiction.",
+            "In some cases, the place may refer to the location of the entity being fined, such as 'The company was fined at its headquarters'. This highlights the relevance of the location to the event.",
+            "Unlike the 'entity' and 'adjudicator', the place is not a participant in the event but provides contextual information. For instance, 'The court in New York fined the company' specifies the location of the court.",
+            "Edge cases include situations where the place is not explicitly mentioned but can be inferred, such as 'The fine was imposed' where the location is understood to be the jurisdiction of the adjudicator."
+        ]
+    }
+}

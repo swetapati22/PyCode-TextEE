@@ -1,0 +1,11 @@
+{
+    "Broadcast(ContactEvent)": {
+        "description": "A Broadcast(ContactEvent) is triggered by a public or semi-public communication from an entity to an audience, characterized by the dissemination of information, opinions, or directives in a one-to-many format. Unlike Correspondence events, which involve direct communication between specific individuals or entities, Broadcast events target a broader audience and do not require a direct response. Triggers include terms like 'addressing', 'call', 'report', 'declared', 'said', 'speak', and 'edicts', but not 'meet' or 'meeting', which imply two-way interactions. The outcome is the spread of information or directives to a wider audience, distinguishing it from Correspondence or Meet events that focus on direct, often private exchanges.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "audience": "The audience is the group of people who receive the broadcasted message, which can be specific (e.g., 'students', 'group') or general (e.g., 'the public'). It defines the target of the communication and may sometimes be implied rather than explicitly stated. For example, 'the press' implies the general public. Unlike the entity, which is the source of the message, the audience is the recipient.",
+            "entity": "The entity is the source or originator of the broadcasted message, which can be an individual (e.g., 'Gadhafi'), a group (e.g., 'globalists'), or an organization (e.g., 'the press'). The entity is responsible for the content of the broadcast and is distinct from the audience, which receives the message. Edge cases include collective or abstract groups, such as 'leaders'.",
+            "place": "The place is the location where the broadcast event occurs or is relevant to, which can be a physical location (e.g., 'La Sapienza university', 'London') or inferred from context (e.g., 'at a GUN SHOW'). Unlike the entity and audience, which are people or groups, the place is a geographical or physical setting. Edge cases include virtual or non-physical places, such as online platforms or broadcast studios."
+        }
+    }
+}

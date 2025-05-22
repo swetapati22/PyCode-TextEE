@@ -1,0 +1,11 @@
+{
+    "Broadcast(ContactEvent)": {
+        "description": "A Broadcast(ContactEvent) is triggered when an entity publicly communicates information to an audience. This event involves the dissemination of information or opinions in a formal or public setting, such as speeches, announcements, reports, and declarations. Unlike general Contact events, Broadcast events specifically involve conveying information to a broader audience rather than one-on-one interactions. Example triggers include 'addressing', 'call', 'report', 'declared', 'said', 'speak', and 'edicts'. The outcome of a Broadcast event is the dissemination of information to an audience, which can influence public opinion, inform, or persuade.",
+        "attributes": {
+            "mention": "The text span that triggers the event.",
+            "audience": "The audience refers to the recipients of the broadcasted information. It can be a specific group of people or the general public, such as 'group', 'students', 'king', or 'the public'. The audience is crucial as it defines who the information is intended for and helps determine the scope and impact of the broadcast. In some cases, the audience may not be explicitly mentioned but can be inferred from the context.",
+            "entity": "The entity is the person or group making the broadcast, such as 'Gadhafi', 'globalists', 'press', 'head', 'Palin', 'OBL', or 'leaders'. It can be an individual, a group, or an organization. The entity provides the source and credibility of the broadcast. In some cases, the entity may be a collective group or inferred from the context.",
+            "place": "The place indicates the location where the broadcast takes place, providing context and setting for the event. It can be a specific location, such as 'La Sapienza university', a city, or a country. The place helps situate the broadcast event in a physical context, which can influence its interpretation and impact. In some cases, the place may not be explicitly mentioned but can be inferred from the context."
+        }
+    }
+}
