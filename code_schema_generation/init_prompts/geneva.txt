@@ -1,0 +1,917 @@
+@dataclass
+class Manufacturing(Event):
+    mention: str
+    resource: List
+    producer: List
+    product: List
+    instrument: List
+    factory: List
+
+@dataclass
+class Arranging(Event):
+    mention: str
+    configuration: List
+    location: List
+    theme: List
+    agent: List
+
+@dataclass
+class Confronting_problem(Event):
+    mention: str
+    activity: List
+    experiencer: List
+
+@dataclass
+class Causation(Event):
+    mention: str
+    effect: List
+    means: List
+    actor: List
+    affected: List
+    cause: List
+
+@dataclass
+class Action(Event):
+    mention: str
+    domain: List
+    act: List
+    manner: List
+    agent: List
+
+@dataclass
+class Cause_change_of_position_on_a_scale(Event):
+    mention: str
+    attribute: List
+    value_2: List
+    item: List
+    cause: List
+    value_1: List
+    difference: List
+    agent: List
+
+@dataclass
+class Sending(Event):
+    mention: str
+    means: List
+    goal: List
+    transferors: List
+    source: List
+    recipient: List
+    vehicle: List
+    theme: List
+    sender: List
+
+@dataclass
+class Getting(Event):
+    mention: str
+    means: List
+    source: List
+    recipient: List
+    theme: List
+
+@dataclass
+class Research(Event):
+    mention: str
+    field: List
+    researcher: List
+    topic: List
+
+@dataclass
+class Legality(Event):
+    mention: str
+    action: List
+    object: List
+
+@dataclass
+class Statement(Event):
+    mention: str
+    speaker: List
+    message: List
+    medium: List
+    addressee: List
+
+@dataclass
+class Using(Event):
+    mention: str
+    means: List
+    purpose: List
+    instrument: List
+    agent: List
+
+@dataclass
+class Cost(Event):
+    mention: str
+    goods: List
+    intended_event: List
+    payer: List
+    rate: List
+    asset: List
+
+@dataclass
+class Traveling(Event):
+    mention: str
+    means: List
+    traveler: List
+    goal: List
+    purpose: List
+    entity: List
+    distance: List
+    area: List
+    path: List
+
+@dataclass
+class Know(Event):
+    mention: str
+    means: List
+    evidence: List
+    instrument: List
+    phenomenon: List
+    cognizer: List
+    topic: List
+
+@dataclass
+class Self_motion(Event):
+    mention: str
+    goal: List
+    self_mover: List
+    source: List
+    distance: List
+    direction: List
+    path: List
+
+@dataclass
+class Destroying(Event):
+    mention: str
+    means: List
+    patient: List
+    destroyer: List
+    cause: List
+
+@dataclass
+class Testing(Event):
+    mention: str
+    means: List
+    result: List
+    tested_property: List
+    circumstances: List
+    tester: List
+    product: List
+
+@dataclass
+class Creating(Event):
+    mention: str
+    cause: List
+    creator: List
+    created_entity: List
+
+@dataclass
+class Dispersal(Event):
+    mention: str
+    individuals: List
+    goal_area: List
+    cause: List
+    agent: List
+
+@dataclass
+class Supply(Event):
+    mention: str
+    recipient: List
+    imposed_purpose: List
+    supplier: List
+    theme: List
+
+@dataclass
+class Process_end(Event):
+    mention: str
+    state: List
+    final_subevent: List
+    time: List
+    cause: List
+    agent: List
+    process: List
+
+@dataclass
+class Resolve_problem(Event):
+    mention: str
+    means: List
+    problem: List
+    cause: List
+    agent: List
+
+@dataclass
+class Cause_to_make_progress(Event):
+    mention: str
+    project: List
+    agent: List
+
+@dataclass
+class Assistance(Event):
+    mention: str
+    means: List
+    goal: List
+    benefited_party: List
+    focal_entity: List
+    helper: List
+
+@dataclass
+class Arriving(Event):
+    mention: str
+    means: List
+    goal: List
+    source: List
+    purpose: List
+    theme: List
+    place: List
+    path: List
+
+@dataclass
+class Departing(Event):
+    mention: str
+    traveller: List
+    goal: List
+    source: List
+    path: List
+
+@dataclass
+class Building(Event):
+    mention: str
+    components: List
+    created_entity: List
+    place: List
+    agent: List
+
+@dataclass
+class Presence(Event):
+    mention: str
+    inherent_purpose: List
+    time: List
+    entity: List
+    circumstances: List
+    duration: List
+    place: List
+
+@dataclass
+class Defending(Event):
+    mention: str
+    defender: List
+    assailant: List
+    instrument: List
+    victim: List
+
+@dataclass
+class Attack(Event):
+    mention: str
+    means: List
+    weapon: List
+    assailant: List
+    victim: List
+
+@dataclass
+class Request(Event):
+    mention: str
+    speaker: List
+    message: List
+    medium: List
+    addressee: List
+
+@dataclass
+class Death(Event):
+    mention: str
+    deceased: List
+
+@dataclass
+class Becoming(Event):
+    mention: str
+    final_category: List
+    final_quality: List
+    entity: List
+
+@dataclass
+class Change_of_leadership(Event):
+    mention: str
+    role: List
+    selector: List
+    new_leader: List
+    body: List
+    old_leader: List
+    old_order: List
+
+@dataclass
+class Process_start(Event):
+    mention: str
+    event: List
+    initial_subevent: List
+    time: List
+    agent: List
+
+@dataclass
+class Influence(Event):
+    mention: str
+    situation: List
+    action: List
+    behavior: List
+    cognizer: List
+    agent: List
+    product: List
+
+@dataclass
+class Bringing(Event):
+    mention: str
+    goal: List
+    source: List
+    carrier: List
+    area: List
+    theme: List
+    agent: List
+
+@dataclass
+class Practice(Event):
+    mention: str
+    agent: List
+    action: List
+    occasion: List
+
+@dataclass
+class Education_teaching(Event):
+    mention: str
+    skill: List
+    fact: List
+    student: List
+    teacher: List
+    role: List
+    subject: List
+    course: List
+
+@dataclass
+class Convincing(Event):
+    mention: str
+    content: List
+    speaker: List
+    addressee: List
+    topic: List
+
+@dataclass
+class Scrutiny(Event):
+    mention: str
+    phenomenon: List
+    ground: List
+    instrument: List
+    unwanted_entity: List
+    cognizer: List
+
+@dataclass
+class Expansion(Event):
+    mention: str
+    dimension: List
+    item: List
+    initial_size: List
+    result_size: List
+    agent: List
+
+@dataclass
+class Employment(Event):
+    mention: str
+    place_of_employment: List
+    type: List
+    task: List
+    employer: List
+    position: List
+    field: List
+    employee: List
+
+@dataclass
+class Change(Event):
+    mention: str
+    final_category: List
+    attribute: List
+    initial_category: List
+    entity: List
+    final_value: List
+    cause: List
+    agent: List
+
+@dataclass
+class Hostile_encounter(Event):
+    mention: str
+    purpose: List
+    sides: List
+    side_1: List
+    side_2: List
+    instrument: List
+    issue: List
+
+@dataclass
+class Commerce_pay(Event):
+    mention: str
+    goods: List
+    money: List
+    buyer: List
+    seller: List
+
+@dataclass
+class Collaboration(Event):
+    mention: str
+    partners: List
+    undertaking: List
+
+@dataclass
+class Arrest(Event):
+    mention: str
+    authorities: List
+    charges: List
+    suspect: List
+    offense: List
+
+@dataclass
+class Bodily_harm(Event):
+    mention: str
+    body_part: List
+    instrument: List
+    cause: List
+    victim: List
+    agent: List
+
+@dataclass
+class Motion(Event):
+    mention: str
+    means: List
+    goal: List
+    source: List
+    speed: List
+    distance: List
+    area: List
+    theme: List
+    cause: List
+    agent: List
+    path: List
+
+@dataclass
+class Catastrophe(Event):
+    mention: str
+    patient: List
+    cause: List
+    place: List
+    undesirable_event: List
+
+@dataclass
+class Bearing_arms(Event):
+    mention: str
+    protagonist: List
+    weapon: List
+
+@dataclass
+class Participation(Event):
+    mention: str
+    event: List
+    participants: List
+
+@dataclass
+class Communication(Event):
+    mention: str
+    trigger: List
+    speaker: List
+    interlocutors: List
+    message: List
+    addressee: List
+    topic: List
+
+@dataclass
+class Telling(Event):
+    mention: str
+    speaker: List
+    message: List
+    addressee: List
+
+@dataclass
+class Wearing(Event):
+    mention: str
+    wearer: List
+    clothing: List
+    body_location: List
+
+@dataclass
+class Damaging(Event):
+    mention: str
+    patient: List
+    cause: List
+    agent: List
+
+@dataclass
+class Motion_directional(Event):
+    mention: str
+    goal: List
+    source: List
+    direction: List
+    area: List
+    theme: List
+    path: List
+
+@dataclass
+class Placing(Event):
+    mention: str
+    location: List
+    theme: List
+    cause: List
+    agent: List
+
+@dataclass
+class Reveal_secret(Event):
+    mention: str
+    speaker: List
+    topic: List
+    addressee: List
+    information: List
+
+@dataclass
+class Commerce_buy(Event):
+    mention: str
+    buyer: List
+    goods: List
+    seller: List
+
+@dataclass
+class Deciding(Event):
+    mention: str
+    decision: List
+    cognizer: List
+
+@dataclass
+class Come_together(Event):
+    mention: str
+    individuals: List
+    configuration: List
+    place: List
+
+@dataclass
+class Earnings_and_losses(Event):
+    mention: str
+    earner: List
+    goods: List
+    earnings: List
+
+@dataclass
+class Create_artwork(Event):
+    mention: str
+    activity: List
+    culture: List
+
+@dataclass
+class Judgment_communication(Event):
+    mention: str
+    reason: List
+    evaluee: List
+    communicator: List
+    topic: List
+    medium: List
+    addressee: List
+
+@dataclass
+class Exchange(Event):
+    mention: str
+    themes: List
+    theme_2: List
+    exchanger_1: List
+    exchanger_2: List
+    theme_1: List
+    exchangers: List
+
+@dataclass
+class Revenge(Event):
+    mention: str
+    injury: List
+    punishment: List
+    avenger: List
+    injured_party: List
+    offender: List
+
+@dataclass
+class Labeling(Event):
+    mention: str
+    label: List
+    speaker: List
+    entity: List
+
+@dataclass
+class Cure(Event):
+    mention: str
+    patient: List
+    affliction: List
+    treatment: List
+    medication: List
+
+@dataclass
+class Social_event(Event):
+    mention: str
+    attendees: List
+    host: List
+    social_event: List
+    occasion: List
+    beneficiary: List
+
+@dataclass
+class Commitment(Event):
+    mention: str
+    speaker: List
+    message: List
+    addressee: List
+
+@dataclass
+class Commerce_sell(Event):
+    mention: str
+    goods: List
+    money: List
+    buyer: List
+    seller: List
+
+@dataclass
+class Coming_to_believe(Event):
+    mention: str
+    cognizer: List
+    content: List
+    means: List
+
+@dataclass
+class Protest(Event):
+    mention: str
+    arguer: List
+    content: List
+    addressee: List
+
+@dataclass
+class Terrorism(Event):
+    mention: str
+    terrorist: List
+    act: List
+    instrument: List
+    victim: List
+
+@dataclass
+class Giving(Event):
+    mention: str
+    offerer: List
+    theme: List
+    recipient: List
+
+@dataclass
+class Recovering(Event):
+    mention: str
+    means: List
+    entity: List
+    agent: List
+
+@dataclass
+class Receiving(Event):
+    mention: str
+    theme: List
+    donor: List
+    recipient: List
+
+@dataclass
+class Control(Event):
+    mention: str
+    dependent_variable: List
+    controlling_variable: List
+
+@dataclass
+class Killing(Event):
+    mention: str
+    means: List
+    killer: List
+    instrument: List
+    cause: List
+    victim: List
+
+@dataclass
+class Theft(Event):
+    mention: str
+    means: List
+    goods: List
+    perpetrator: List
+    source: List
+    instrument: List
+    victim: List
+
+@dataclass
+class Rite(Event):
+    mention: str
+    type: List
+    member: List
+    object: List
+
+@dataclass
+class Quarreling(Event):
+    mention: str
+    arguer2: List
+    issue: List
+    arguers: List
+
+@dataclass
+class Preventing_or_letting(Event):
+    mention: str
+    event: List
+    means: List
+    potential_hindrance: List
+    agent: List
+
+@dataclass
+class Openness(Event):
+    mention: str
+    theme: List
+    barrier: List
+    useful_location: List
+
+@dataclass
+class Connect(Event):
+    mention: str
+    figures: List
+    ground: List
+
+@dataclass
+class Conquering(Event):
+    mention: str
+    theme: List
+    conqueror: List
+    means: List
+
+@dataclass
+class Becoming_a_member(Event):
+    mention: str
+    group: List
+    new_member: List
+
+@dataclass
+class Ratification(Event):
+    mention: str
+    ratifier: List
+    proposal: List
+
+@dataclass
+class Adducing(Event):
+    mention: str
+    speaker: List
+    role: List
+    medium: List
+    specified_entity: List
+
+@dataclass
+class Sign_agreement(Event):
+    mention: str
+    signatory: List
+    agreement: List
+
+@dataclass
+class Coming_to_be(Event):
+    mention: str
+    components: List
+    time: List
+    entity: List
+    place: List
+
+@dataclass
+class Perception_active(Event):
+    mention: str
+    perceiver_agentive: List
+    phenomenon: List
+    direction: List
+
+@dataclass
+class Committing_crime(Event):
+    mention: str
+    instrument: List
+    perpetrator: List
+    crime: List
+
+@dataclass
+class Supporting(Event):
+    mention: str
+    supported: List
+    supporter: List
+
+@dataclass
+class Containing(Event):
+    mention: str
+    container: List
+    contents: List
+
+@dataclass
+class Hold(Event):
+    mention: str
+    entity: List
+    manipulator: List
+
+@dataclass
+class Emergency(Event):
+    mention: str
+    place: List
+    undesirable_event: List
+
+@dataclass
+class Choosing(Event):
+    mention: str
+    possibilities: List
+    cognizer: List
+    chosen: List
+
+@dataclass
+class Hindering(Event):
+    mention: str
+    protagonist: List
+    hindrance: List
+    action: List
+
+@dataclass
+class Removing(Event):
+    mention: str
+    goal: List
+    source: List
+    theme: List
+    cause: List
+    agent: List
+
+@dataclass
+class Cause_to_amalgamate(Event):
+    mention: str
+    parts: List
+    part_2: List
+    whole: List
+    part_1: List
+    agent: List
+
+@dataclass
+class Agree_or_refuse_to_act(Event):
+    mention: str
+    proposed_action: List
+    speaker: List
+
+@dataclass
+class Achieve(Event):
+    mention: str
+    agent: List
+    goal: List
+    means: List
+
+@dataclass
+class Check(Event):
+    mention: str
+    means: List
+    inspector: List
+    unconfirmed_content: List
+
+@dataclass
+class Writing(Event):
+    mention: str
+    author: List
+    instrument: List
+    text: List
+    addressee: List
+
+@dataclass
+class Emptying(Event):
+    mention: str
+    source: List
+    theme: List
+    cause: List
+    agent: List
+
+@dataclass
+class GetReady(Event):
+    mention: str
+    activity: List
+    protagonist: List
+
+@dataclass
+class Filling(Event):
+    mention: str
+    goal: List
+    theme: List
+    cause: List
+    agent: List
+
+@dataclass
+class Ingestion(Event):
+    mention: str
+    ingestor: List
+    ingestibles: List
+
+@dataclass
+class Response(Event):
+    mention: str
+    response: List
+    trigger: List
+    responding_entity: List
+    agent: List
+
+@dataclass
+class Criminal_investigation(Event):
+    mention: str
+    suspect: List
+    investigator: List
+    incident: List
+
+@dataclass
+class Competition(Event):
+    mention: str
+    venue: List
+    participants: List
+    competition: List
+
