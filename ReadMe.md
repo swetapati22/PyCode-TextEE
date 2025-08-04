@@ -1,4 +1,4 @@
-# 🧠 Instruction Tuning with Annotation Guidelines 
+# 🧠 Instruction Tuning with Annotation Guidelines for Event Extraction (Findings of ACL 2025)
 > Efficient and extensible Event Extraction with Code Prompts and Annotation Guidelines — built on top of [TextEE](https://github.com/ej0cl6/TextEE). 
 
 This repository includes code for:
@@ -7,11 +7,24 @@ This repository includes code for:
 
 If you find our work helpful, please cite our work:
 ```
-@article{srivastava2025instruction,
-  title={Instruction-Tuning LLMs for Event Extraction with Annotation Guidelines},
-  author={Srivastava, Saurabh and Pati, Sweta and Yao, Ziyu},
-  journal={arXiv preprint arXiv:2502.16377},
-  year={2025}
+@inproceedings{srivastava-etal-2025-instruction,
+    title = "Instruction-Tuning {LLM}s for Event Extraction with Annotation Guidelines",
+    author = "Srivastava, Saurabh  and
+      Pati, Sweta  and
+      Yao, Ziyu",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.677/",
+    pages = "13055--13071",
+    ISBN = "979-8-89176-256-5",
+    abstract = "In this work, we study the effect of annotation guidelines{--}textual descriptions of event types and arguments, when instruction-tuning large language models for event extraction. We conducted a series of experiments with both human-provided and machine-generated guidelines in both full- and low-data settings. Our results demonstrate the promise of annotation guidelines when there is a decent amount of training data and highlight its effectiveness in improving cross-schema generalization and low-frequency event-type performance."
 }
 ```
 ---
