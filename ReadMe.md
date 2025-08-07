@@ -349,7 +349,7 @@ respectively.
 To generate the guidelines, please run the following command:
 ```bash
 cd guideline_generation
-python synthesize_guidelines/create_dictionaries.py --dataset_anem <dataset_name>
+python synthesize_guidelines/create_dictionaries.py --dataset_name <dataset_name>
 python prompting/prompt_llms.py #generates guidelines P, PN, PS
 python prompting/prompt_llm_adv_guidelines.py #generates Int- guidelines
 cd .. # to navigate to home directory
