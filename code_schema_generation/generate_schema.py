@@ -80,8 +80,8 @@ def process_dataset(dataset):
             if event_type not in cur_schema:
                 cur_schema[event_type] = set()
             # get the attributes
-            arguments = [x.replace("-", "_") for x in event["arguments"]]
-            for argument in arguments:
+            # arguments = [x.replace("-", "_") for x in event["arguments"]]
+            for argument in event["arguments"]:
                 role = argument["role"].lower().replace("-", "_")
                 cur_schema[event_type].add(role)
             cur_schema[event_type].add("mention")
